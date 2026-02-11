@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EMIR Regulation Explorer</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="page-header">
+    <div class="hero">
+      <h1>EMIR Regulation Explorer</h1>
+      <p>Browse consolidated articles and concise summaries from Regulation (EU) No 648/2012.</p>
+    </div>
+  </header>
+
+  <main class="page-content">
+    <div class="layout">
+      <aside class="side-panel" aria-label="Article navigation">
+        <div class="side-panel-inner">
+          <div class="search-wrapper">
+            <label for="searchInput" class="sr-only">Search articles</label>
+            <input id="searchInput" type="search" placeholder="Search articles or keywords..." autocomplete="off" />
+            <button id="clearSearch" type="button" aria-label="Clear search input">Clear</button>
+          </div>
+          <p id="listMessage" class="list-message"></p>
+          <nav class="article-list" aria-label="Articles">
+            <ul id="articleList"></ul>
+          </nav>
+        </div>
+      </aside>
+
+      <section class="article-content">
+        <div id="statusMessage" class="status-message" role="status" aria-live="polite"></div>
+        <header class="article-header">
+          <span id="articleNumber" class="article-number-chip"></span>
+          <h2 id="articleTitle" class="article-title" tabindex="-1"></h2>
+          <p id="articleSubtitle" class="article-subtitle"></p>
+        </header>
+        <div id="paragraphsContainer" class="paragraphs"></div>
+        <nav class="article-navigation" aria-label="Article pagination">
+          <button id="prevArticle" type="button" class="nav-button" aria-label="View previous article">Previous</button>
+          <button id="nextArticle" type="button" class="nav-button" aria-label="View next article">Next</button>
+        </nav>
+      </section>
+    </div>
+  </main>
+
+  <footer class="page-footer">
+    <p>Data sourced from the consolidated <a href="https://eur-lex.europa.eu/eli/reg/2012/648/oj/eng" target="_blank">EMIR Regulation (EU) No 648/2012</a>.</p>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
