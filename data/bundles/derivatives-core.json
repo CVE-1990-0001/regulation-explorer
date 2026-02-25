@@ -1,0 +1,11 @@
+{
+  "type": "bundle",
+  "id": "bundle_derivatives_core",
+  "title": "Example: Derivatives Core Package",
+  "description": "Key EU acts impacting derivatives and reporting.",
+  "members": [
+    { "ref": "act_emir_2012", "label": "EMIR (2012)" },
+    { "ref": "act_gen_001", "label": "General Act Example" }
+  ],
+  "meta": { "tags": ["derivatives", "reporting"], "updated": "2026-02-23" }
+}

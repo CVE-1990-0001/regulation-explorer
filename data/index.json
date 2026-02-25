@@ -1,0 +1,9 @@
+{
+  "acts": [
+    { "id": "act_emir_2012", "path": "emir-regulation.json", "label": "EMIR Regulation" },
+    { "id": "act_gen_001", "path": "data/acts/general-act-001.json", "label": "General Act Example" }
+  ],
+  "bundles": [
+    { "id": "bundle_derivatives_core", "path": "data/bundles/derivatives-core.json", "label": "Derivatives Core Package" }
+  ]
+}

@@ -1,4 +1,11 @@
-[
+{
+  "type": "act",
+  "id": "act_emir_2012",
+  "title": "EMIR Regulation (EU) No 648/2012",
+  "heading": "Consolidated",
+  "source": { "uri": "https://eur-lex.europa.eu/eli/reg/2012/648/oj/eng", "label": "EUR-Lex" },
+  "meta": { "jurisdiction": "EU", "year": 2012, "tags": ["EMIR", "derivatives", "reporting"] },
+  "articles": [
   {
     "id": "art_1",
     "title": "Article 1",
@@ -4671,4 +4678,5 @@
       }
     ]
   }
-]
+  ]
+}

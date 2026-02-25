@@ -549,3 +549,129 @@ body {
     font-size: 0.68rem;
   }
 }
+
+/* Sidebar type chips (small labels before item titles) */
+.chip,
+.item-chip {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 0.18rem 0.55rem;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-right: 0.6rem;
+  vertical-align: middle;
+}
+
+.chip.act,
+.item-chip.act {
+  background: rgba(31, 60, 136, 0.12);
+  color: #1f3c88;
+  border: 1px solid rgba(31, 60, 136, 0.07);
+}
+
+.chip.bundle,
+.item-chip.bundle {
+  background: rgba(66, 165, 179, 0.12);
+  color: #2a8f8f;
+  border: 1px solid rgba(66, 165, 179, 0.07);
+}
+
+/* UI polish: variables, subtle animations and hover polish */
+:root {
+  --accent-1: #1f3c88;
+  --accent-2: #3a6ea5;
+  --accent-3: #42a5b3;
+  --muted: #4f5a7d;
+  --bg: #f5f7fb;
+  --card-shadow: 0 18px 45px -25px rgba(15, 35, 95, 0.35);
+  --glass: rgba(255,255,255,0.85);
+}
+
+/* animated header gradient */
+.page-header {
+  background-size: 200% 200%;
+  animation: headerGradient 10s ease-in-out infinite;
+}
+
+@keyframes headerGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* article-link hover/active polish */
+.article-link {
+  transition: transform 240ms cubic-bezier(.2,.9,.2,1),
+              box-shadow 240ms ease, background 160ms ease, color 160ms ease;
+  will-change: transform, box-shadow;
+}
+
+.article-link:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 18px 40px -20px rgba(31,60,136,0.14);
+}
+
+.article-link.is-active {
+  transform: translateY(-4px) scale(1.01);
+}
+
+/* list item entrance (staggered using nth-child for 12 items) */
+.article-list-item {
+  opacity: 0;
+  transform: translateY(6px);
+  animation: listItemIn 380ms cubic-bezier(.2,.9,.2,1) forwards;
+}
+.article-list-item:nth-child(1) { animation-delay: 0s; }
+.article-list-item:nth-child(2) { animation-delay: 0.04s; }
+.article-list-item:nth-child(3) { animation-delay: 0.08s; }
+.article-list-item:nth-child(4) { animation-delay: 0.12s; }
+.article-list-item:nth-child(5) { animation-delay: 0.16s; }
+.article-list-item:nth-child(6) { animation-delay: 0.20s; }
+.article-list-item:nth-child(7) { animation-delay: 0.24s; }
+.article-list-item:nth-child(8) { animation-delay: 0.28s; }
+.article-list-item:nth-child(9) { animation-delay: 0.32s; }
+.article-list-item:nth-child(10) { animation-delay: 0.36s; }
+.article-list-item:nth-child(11) { animation-delay: 0.40s; }
+.article-list-item:nth-child(12) { animation-delay: 0.44s; }
+
+@keyframes listItemIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* content fade-in */
+.article-content {
+  opacity: 0;
+  transform: translateY(6px);
+  animation: contentIn 320ms cubic-bezier(.2,.9,.2,1) 180ms forwards;
+}
+
+@keyframes contentIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* paragraph subtle hover and smoother highlight */
+.article-paragraph {
+  transition: background-color 180ms ease, outline 180ms ease, transform 180ms ease;
+}
+
+.article-paragraph:hover {
+  transform: translateY(-2px);
+}
+
+/* legal tooltip smoother transform already present — increase ease */
+.legal-tooltip {
+  transition: opacity 160ms cubic-bezier(.2,.9,.2,1), transform 160ms cubic-bezier(.2,.9,.2,1);
+}
+
+/* reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  .article-list-item,
+  .article-content,
+  .page-header {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+}

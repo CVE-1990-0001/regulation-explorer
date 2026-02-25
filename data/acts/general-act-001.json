@@ -1,0 +1,11 @@
+{
+  "type": "act",
+  "id": "act_gen_001",
+  "title": "Example: General Act Title",
+  "heading": "Optional subheading",
+  "source": { "uri": "https://example", "label": "EUR-Lex" },
+  "meta": { "jurisdiction": "EU", "year": 2026, "tags": ["example"] },
+  "paragraphs": [
+    { "id": "p1", "text": "Paragraph 1", "class": "" }
+  ]
+}

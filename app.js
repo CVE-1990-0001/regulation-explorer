@@ -16,6 +16,9 @@ let articleButtons = new Map();
 let currentArticleId = null;
 let isUpdatingHash = false;
 let currentHighlightedParagraphId = null;
+let allActs = [];
+let allBundles = [];
+let lastSearchQuery = '';
 
 const legalTooltipSelectors = '.legal-reference, .legal-link';
 let legalTooltipElement = null;
@@ -498,34 +501,168 @@ const renderArticleDetail = (article) => {
   });
 
   paragraphsContainer.appendChild(fragment);
+  // Apply search highlighting for the current query
+  highlightSearchMatches(lastSearchQuery);
+};
+
+// Render an item by type (act or bundle)
+const renderItem = (item) => {
+  if (!item) {
+    renderArticleDetail(null);
+    return;
+  }
+
+  if (item.type === 'bundle') {
+    renderBundle(item);
+    return;
+  }
+
+  if (item.type === 'act') {
+    renderAct(item);
+    return;
+  }
+
+  // Fallback: if item looks like an article, render it
+  renderArticleDetail(item);
+};
+
+// Render an act-level object (may contain `articles` or `paragraphs`)
+const renderAct = (act) => {
+  hideLegalTooltipImmediate();
+
+  if (!act) {
+    renderArticleDetail(null);
+    return;
+  }
+
+  articleNumberElement.textContent = act.id || '';
+  articleTitleElement.textContent = act.title || act.id || '';
+  articleSubtitleElement.textContent = act.heading || '';
+
+  paragraphsContainer.innerHTML = '';
+  const fragment = document.createDocumentFragment();
+
+  // If act has articles, render each with heading then paragraphs
+  if (Array.isArray(act.articles)) {
+    act.articles.forEach((article) => {
+      const h = document.createElement('h3');
+      h.className = 'act-article-title';
+      h.textContent = article.title || article.id || '';
+      fragment.appendChild(h);
+
+      (article.paragraphs || []).forEach((p) => {
+        const paragraphElement = createParagraphElement(p, article);
+        if (paragraphElement) {
+          fragment.appendChild(paragraphElement);
+        }
+      });
+    });
+  } else if (Array.isArray(act.paragraphs)) {
+    (act.paragraphs || []).forEach((p) => {
+      const paragraphElement = createParagraphElement(p, act);
+      if (paragraphElement) {
+        fragment.appendChild(paragraphElement);
+      }
+    });
+  }
+
+  paragraphsContainer.appendChild(fragment);
+  // Highlight search matches inside the act view as well
+  highlightSearchMatches(lastSearchQuery);
+};
+
+// Render a bundle: title, description, and member list linking to acts
+const renderBundle = (bundle) => {
+  hideLegalTooltipImmediate();
+
+  if (!bundle) {
+    renderArticleDetail(null);
+    return;
+  }
+
+  articleNumberElement.textContent = bundle.id || '';
+  articleTitleElement.textContent = bundle.title || bundle.id || '';
+  articleSubtitleElement.textContent = '';
+
+  paragraphsContainer.innerHTML = '';
+  const fragment = document.createDocumentFragment();
+
+  if (bundle.description) {
+    const p = document.createElement('p');
+    p.className = 'bundle-description';
+    p.textContent = bundle.description;
+    fragment.appendChild(p);
+  }
+
+  if (Array.isArray(bundle.members) && bundle.members.length) {
+    const list = document.createElement('ul');
+    list.className = 'bundle-members';
+    bundle.members.forEach((m) => {
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      a.href = `#act:${m.ref}`;
+      a.textContent = m.label || m.ref;
+      a.addEventListener('click', (ev) => {
+        // set hash to act:<ID> and allow route handler to pick up
+        ev.preventDefault();
+        try {
+          window.location.hash = `act:${m.ref}`;
+        } catch (e) {
+          window.location.href = `${window.location.pathname}${window.location.search}#act:${m.ref}`;
+        }
+      });
+      li.appendChild(a);
+      list.appendChild(li);
+    });
+    fragment.appendChild(list);
+  }
+
+  paragraphsContainer.appendChild(fragment);
+  // highlight any query terms in the bundle view (applies to description)
+  highlightSearchMatches(lastSearchQuery);
 };
 
 const renderArticleList = () => {
+  // Always show both articles and bundles in the sidebar
+  const bundleItems = Array.isArray(allBundles) ? allBundles : [];
+  const articleItems = Array.isArray(allArticles) ? allArticles : [];
+  renderSidebarList([...articleItems, ...bundleItems]);
+};
+
+// Render the sidebar list with a small type chip and hash-based routing
+const renderSidebarList = (items = []) => {
   articleButtons = new Map();
   articleListElement.innerHTML = '';
 
-  if (!visibleArticles.length) {
+  if (!items.length) {
     updateListMessage();
     return;
   }
 
   const fragment = document.createDocumentFragment();
 
-  visibleArticles.forEach((article) => {
+  items.forEach((item) => {
     const listItem = document.createElement('li');
     listItem.className = 'article-list-item';
 
     const button = document.createElement('button');
     button.type = 'button';
     button.className = 'article-link';
-    button.dataset.articleId = article.id;
+
+    // Determine kind for chip and target hash
+    const kind = item.type === 'bundle' ? 'BUNDLE' : 'ACT';
+
+    const chip = document.createElement('span');
+    chip.className = 'item-chip';
+    chip.textContent = kind;
+    button.appendChild(chip);
 
     const numberSpan = document.createElement('span');
     numberSpan.className = 'list-article-number';
-    numberSpan.textContent = article.title || article.id;
+    numberSpan.textContent = item.title || item.id;
     button.appendChild(numberSpan);
 
-    const headingText = getHeadingText(article);
+    const headingText = getHeadingText(item);
     if (headingText) {
       const headingSpan = document.createElement('span');
       headingSpan.className = 'list-article-heading';
@@ -533,13 +670,37 @@ const renderArticleList = () => {
       button.appendChild(headingSpan);
     }
 
+    // Clicking updates the view: select a single article or open a bundle
     button.addEventListener('click', () => {
-      selectArticle(article.id);
+      if (item.type === 'bundle') {
+        try {
+          window.location.hash = `bundle:${item.id}`;
+        } catch (e) {
+          window.location.href = `${window.location.pathname}${window.location.search}#bundle:${item.id}`;
+        }
+        return;
+      }
+
+      // If the item looks like an article (has paragraphs), select that article only
+      if (Array.isArray(item.paragraphs) || allArticles.some((a) => a.id === item.id)) {
+        selectArticle(item.id, { updateHash: true, focus: false });
+        return;
+      }
+
+      // Fallback: navigate to the parent act if present
+      const actId = item._actId || item.id;
+      try {
+        window.location.hash = `act:${actId}`;
+      } catch (e) {
+        window.location.href = `${window.location.pathname}${window.location.search}#act:${actId}`;
+      }
     });
 
     listItem.appendChild(button);
     fragment.appendChild(listItem);
-    articleButtons.set(article.id, button);
+
+    // Keep reference for potential highlighting (legacy behavior)
+    articleButtons.set(item.id, button);
   });
 
   articleListElement.appendChild(fragment);
@@ -637,6 +798,50 @@ const handleHashNavigation = (hashId, options = {}) => {
   return true;
 };
 
+// Unified route handler: supports `act:<ID>`, `bundle:<ID>`, and legacy article ids
+const handleRoute = (hashId) => {
+  const raw = `${hashId || ''}`.trim();
+
+  if (!raw) {
+    return false;
+  }
+
+  // act:<ID>
+  if (raw.startsWith('act:')) {
+    const id = raw.slice(4);
+    const act = allActs.find((a) => a.id === id);
+    if (!act) {
+      statusMessage.textContent = `Act ${id} not found.`;
+      return true;
+    }
+    // render act-level view
+    renderItem(act);
+    // clear article selection state
+    currentArticleId = null;
+    updateNavigationButtons();
+    updateStatus();
+    return true;
+  }
+
+  // bundle:<ID>
+  if (raw.startsWith('bundle:')) {
+    const id = raw.slice(7);
+    const bundle = allBundles.find((b) => b.id === id);
+    if (!bundle) {
+      statusMessage.textContent = `Bundle ${id} not found.`;
+      return true;
+    }
+    renderItem(bundle);
+    currentArticleId = null;
+    updateNavigationButtons();
+    updateStatus();
+    return true;
+  }
+
+  // Fallback to legacy article/paragraph handling
+  return handleHashNavigation(raw, { behavior: 'auto', scrollIntoView: true, focusParagraph: false });
+};
+
 const handleInternalLinkClick = (event) => {
   const link = event.target.closest('a.internal-article-link');
   if (!link) {
@@ -686,38 +891,51 @@ const goToNext = () => {
   }
 };
 
-const applyFilter = (query) => {
-  const normalisedQuery = query.trim().toLowerCase();
+// Returns true if the given item (article-like or bundle) matches the query
+const matchesItem = (item, query) => {
+  const q = `${query || ''}`.trim().toLowerCase();
+  if (!q) return true;
 
-  if (!allArticles.length) {
-    return;
+  if (item && item.type === 'bundle') {
+    const title = (item.title || '').toLowerCase();
+    const desc = (item.description || '').toLowerCase();
+    const membersText = (item.members || [])
+      .map((m) => ((m && (m.label || m.ref)) || ''))
+      .join(' ')
+      .toLowerCase();
+
+    return title.includes(q) || desc.includes(q) || membersText.includes(q);
   }
 
-  if (!normalisedQuery) {
-    visibleArticles = [...allArticles];
-  } else {
-    visibleArticles = allArticles.filter((article) => {
-      const title = (article.title || '').toLowerCase();
-      const heading = getHeadingText(article).toLowerCase();
-      const summary = getSummaryText(article).toLowerCase();
-      const paragraphs = (article.paragraphs || [])
-        .map((paragraph) => {
-          if (!paragraph) {
-            return '';
-          }
-          if (typeof paragraph === 'string') {
-            return stripHtml(paragraph);
-          }
-          return stripHtml(paragraph.text || '');
-        })
-        .join(' ')
-        .toLowerCase();
+  // Treat as article-like
+  const title = (item.title || '').toLowerCase();
+  const heading = getHeadingText(item).toLowerCase();
+  const summary = getSummaryText(item).toLowerCase();
+  const paragraphs = (item.paragraphs || [])
+    .map((paragraph) => {
+      if (!paragraph) return '';
+      if (typeof paragraph === 'string') return stripHtml(paragraph);
+      return stripHtml(paragraph.text || '');
+    })
+    .join(' ')
+    .toLowerCase();
 
-      return title.includes(normalisedQuery)
-        || heading.includes(normalisedQuery)
-        || summary.includes(normalisedQuery)
-        || paragraphs.includes(normalisedQuery);
-    });
+  return title.includes(q) || heading.includes(q) || summary.includes(q) || paragraphs.includes(q);
+};
+
+const applyFilter = (query) => {
+  const normalisedQuery = `${query || ''}`.trim().toLowerCase();
+  lastSearchQuery = normalisedQuery;
+
+  // Combine searchable items: flattened articles and bundles
+  const bundleItems = Array.isArray(allBundles) ? allBundles : [];
+  const articleItems = Array.isArray(allArticles) ? allArticles : [];
+  const combined = [...articleItems, ...bundleItems];
+
+  if (!normalisedQuery) {
+    visibleArticles = combined.slice();
+  } else {
+    visibleArticles = combined.filter((item) => matchesItem(item, normalisedQuery));
   }
 
   renderArticleList();
@@ -731,11 +949,25 @@ const applyFilter = (query) => {
   }
 
   if (!currentArticleId || !visibleArticles.some((article) => article.id === currentArticleId)) {
-    selectArticle(visibleArticles[0].id, { updateHash: true, focus: false });
+    // If the first visible item is an article-like, select it; otherwise navigate to its act/bundle
+    const first = visibleArticles[0];
+    if (first.type === 'bundle') {
+      try {
+        window.location.hash = `bundle:${first.id}`;
+      } catch (e) {
+        window.location.href = `${window.location.pathname}${window.location.search}#bundle:${first.id}`;
+      }
+    } else {
+      selectArticle(first.id, { updateHash: true, focus: false });
+    }
   } else {
     updateNavigationButtons();
     updateStatus();
   }
+
+  // Always refresh highlights in the currently rendered view so typing
+  // or deleting characters updates visible highlights immediately.
+  highlightSearchMatches(lastSearchQuery);
 };
 
 const handleSearchInput = (event) => {
@@ -750,19 +982,91 @@ const clearSearch = () => {
   searchInput.focus();
 };
 
+// Load registry listing acts and bundles
+const loadRegistry = async () => {
+  const res = await fetch('data/index.json');
+  if (!res.ok) {
+    throw new Error(`Failed to load registry: ${res.status}`);
+  }
+  return res.json();
+};
+
+// Load each act and bundle referenced by the registry. Returns { acts, bundles }.
+const loadAllData = async () => {
+  const registry = await loadRegistry();
+
+  const acts = [];
+  const bundles = [];
+
+  const actFetches = (registry.acts || []).map(async (entry) => {
+    const res = await fetch(entry.path);
+    if (!res.ok) {
+      throw new Error(`Failed to fetch act ${entry.id} (${entry.path}): ${res.status}`);
+    }
+    const json = await res.json();
+    if (!json || json.type !== 'act') {
+      console.warn('Skipped non-act file', entry);
+      return;
+    }
+
+    // Keep the raw act-level object for renderAct
+    acts.push(json);
+  });
+
+  const bundleFetches = (registry.bundles || []).map(async (entry) => {
+    const res = await fetch(entry.path);
+    if (!res.ok) {
+      throw new Error(`Failed to fetch bundle ${entry.id} (${entry.path}): ${res.status}`);
+    }
+    const json = await res.json();
+    if (!json || json.type !== 'bundle') {
+      console.warn('Skipped non-bundle file', entry);
+      return;
+    }
+    bundles.push(json);
+  });
+
+  await Promise.all([...actFetches, ...bundleFetches]);
+
+  // Flatten acts into article-level entries for the sidebar/list UI
+  const flattenedArticles = [];
+  acts.forEach((act) => {
+    if (Array.isArray(act.articles)) {
+      act.articles.forEach((a) => {
+        const article = Object.assign({}, a);
+        // link back to parent act
+        article._actId = act.id || null;
+        article._actTitle = act.title || '';
+        flattenedArticles.push(article);
+      });
+    } else if (Array.isArray(act.paragraphs)) {
+      const article = {
+        id: act.id,
+        title: act.title || act.id,
+        heading: act.heading || '',
+        paragraphs: act.paragraphs,
+        _actId: act.id,
+        _actTitle: act.title || '',
+      };
+      flattenedArticles.push(article);
+    }
+  });
+
+  return { acts, bundles, articles: flattenedArticles };
+};
+
 const fetchArticles = async () => {
   statusMessage.textContent = 'Loading articles...';
   listMessage.textContent = 'Loading articles...';
 
   try {
-    const response = await fetch('emir-regulation.json');
+    const { acts, bundles, articles } = await loadAllData();
 
-    if (!response.ok) {
-      throw new Error(`Request failed with status ${response.status}`);
-    }
+    allActs = acts;
+    allBundles = bundles;
 
-    const data = await response.json();
-    allArticles = Array.isArray(data) ? data : [];
+    // Maintain the old `allArticles` array used by the UI by using the flattened articles
+    allArticles = Array.isArray(articles) ? articles : [];
 
     if (!allArticles.length) {
       statusMessage.textContent = 'No articles available at this time.';
@@ -776,26 +1080,33 @@ const fetchArticles = async () => {
     renderArticleList();
 
     const hashId = window.location.hash ? window.location.hash.replace('#', '') : '';
-    const handledByHash = handleHashNavigation(hashId, {
-      behavior: 'auto',
-      scrollIntoView: Boolean(hashId),
-      focusParagraph: false,
-    });
+    const handled = handleRoute(hashId);
 
-    if (!handledByHash) {
-      const fallbackId = visibleArticles[0]?.id;
-      if (fallbackId) {
-        selectArticle(fallbackId, {
-          updateHash: false,
-          focus: false,
-        });
+    if (!handled) {
+      // Default to first act if available
+      const firstActId = allActs?.[0]?.id;
+      if (firstActId) {
+        try {
+          window.location.hash = `act:${firstActId}`;
+        } catch (e) {
+          window.location.href = `${window.location.pathname}${window.location.search}#act:${firstActId}`;
+        }
+      } else {
+        // Fallback: select first flattened article
+        const fallbackId = visibleArticles[0]?.id;
+        if (fallbackId) {
+          selectArticle(fallbackId, {
+            updateHash: false,
+            focus: false,
+          });
+        }
       }
     }
 
     updateStatus();
   } catch (error) {
-    console.error('Failed to load articles', error);
-    statusMessage.textContent = 'We were unable to load the articles. Please try again later.';
+    console.error('Failed to load data', error);
+    statusMessage.textContent = 'We were unable to load the data. Please try again later.';
     listMessage.textContent = 'Unable to load articles.';
     renderArticleDetail(null);
     updateNavigationButtons();
@@ -814,11 +1125,8 @@ window.addEventListener('hashchange', () => {
   }
 
   const hashId = window.location.hash ? window.location.hash.replace('#', '') : '';
-  if (!hashId) {
-    return;
-  }
-
-  handleHashNavigation(hashId);
+  // delegate to unified route handler
+  handleRoute(hashId);
 });
 
 document.addEventListener('DOMContentLoaded', fetchArticles);
@@ -985,6 +1293,95 @@ const getParagraphPermalink = (paragraphId) => {
   } catch (error) {
     return `${window.location.origin}${window.location.pathname}${window.location.search}#${paragraphId}`;
   }
+};
+
+// --- Search highlighting helpers ---
+const escapeRegExp = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+const removeExistingHighlights = (container) => {
+  if (!container) return;
+  const marks = container.querySelectorAll('mark.search-hit');
+  marks.forEach((mark) => {
+    const parent = mark.parentNode;
+    if (!parent) return;
+    parent.replaceChild(document.createTextNode(mark.textContent), mark);
+    parent.normalize();
+  });
+};
+
+const highlightMatchesInNode = (node, regex) => {
+  if (!node || node.nodeType === Node.COMMENT_NODE) return;
+
+  if (node.nodeType === Node.TEXT_NODE) {
+    const text = node.nodeValue;
+    const match = regex.exec(text);
+    if (!match) return;
+
+    const frag = document.createDocumentFragment();
+    let lastIndex = 0;
+    regex.lastIndex = 0;
+    let m;
+    while ((m = regex.exec(text)) !== null) {
+      const before = text.slice(lastIndex, m.index);
+      if (before) frag.appendChild(document.createTextNode(before));
+      const mark = document.createElement('mark');
+      mark.className = 'search-hit';
+      mark.textContent = m[0];
+      frag.appendChild(mark);
+      lastIndex = m.index + m[0].length;
+      if (m[0].length === 0) break; // avoid infinite loop
+    }
+    const after = text.slice(lastIndex);
+    if (after) frag.appendChild(document.createTextNode(after));
+    node.parentNode.replaceChild(frag, node);
+    return;
+  }
+
+  // Do not descend into paragraph tools or existing marks
+  if (node.nodeType === Node.ELEMENT_NODE) {
+    const tag = node.tagName.toLowerCase();
+    if (tag === 'mark' || node.classList.contains('paragraph-tools')) return;
+    // copy childNodes into array because live NodeList will change
+    const children = Array.from(node.childNodes);
+    children.forEach((child) => highlightMatchesInNode(child, regex));
+  }
+};
+
+const highlightSearchMatches = (query) => {
+  const container = paragraphsContainer;
+  if (!container) return;
+  removeExistingHighlights(container);
+
+  const q = `${query || ''}`.trim();
+  if (!q) return;
+
+  // Use the whole query as a contiguous phrase so typing/removing letters
+  // updates highlights exactly for the current input string.
+  const phrase = q; // already trimmed
+  if (!phrase) return;
+
+  const pattern = escapeRegExp(phrase);
+  let regex;
+  try {
+    regex = new RegExp(pattern, 'gi');
+  } catch (e) {
+    return;
+  }
+
+  // Highlight in paragraphs and bundle descriptions
+  const paragraphs = container.querySelectorAll('.article-paragraph, .bundle-description');
+  paragraphs.forEach((p) => {
+    highlightMatchesInNode(p, regex);
+  });
+
+  // Highlight in article number, title, and subtitle
+  [articleNumberElement, articleTitleElement, articleSubtitleElement].forEach((el) => {
+    if (el && el.textContent) {
+      // Remove previous highlights
+      removeExistingHighlights(el);
+      highlightMatchesInNode(el, regex);
+    }
+  });
 };
 
 const attachParagraphTools = (paragraphElement, article, paragraphData) => {
