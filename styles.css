@@ -193,6 +193,13 @@ body {
   color: #ffffff;
 }
 
+.article-link.is-active .item-chip.act,
+.article-link.is-active .item-chip.bundle {
+  background: rgba(255, 255, 255, 0.24);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.38);
+}
+
 .list-article-number {
   font-weight: 600;
   letter-spacing: 0.01em;
