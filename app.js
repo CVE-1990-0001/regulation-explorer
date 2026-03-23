@@ -326,9 +326,13 @@ const parseHashTarget = (hashValue) => {
   const scopedArticleMatch = rawValue.match(/^a:([^:]+):(.+)$/);
   if (scopedArticleMatch) {
     const parentActId = scopedArticleMatch[1];
-    const articleId = scopedArticleMatch[2];
+    const scopedTarget = scopedArticleMatch[2];
+    const separatorIndex = scopedTarget.indexOf('__');
+    const articleId = separatorIndex === -1 ? scopedTarget : scopedTarget.slice(0, separatorIndex);
+    const paragraphId = separatorIndex === -1 ? null : scopedTarget;
+
     if (allArticles.some((article) => article.id === articleId && article._actId === parentActId)) {
-      return { articleId, paragraphId: null, parentActId };
+      return { articleId, paragraphId, parentActId };
     }
   }
 
@@ -974,11 +978,6 @@ const handleInternalLinkClick = (event) => {
     return;
   }
 
-  const target = (link.getAttribute('target') || '').toLowerCase();
-  if (target === '_blank') {
-    return;
-  }
-
   const href = link.getAttribute('href') || '';
   if (!href.startsWith('#')) {
     return;
@@ -987,19 +986,27 @@ const handleInternalLinkClick = (event) => {
   event.preventDefault();
 
   const targetId = href.slice(1);
-  const { articleId, paragraphId } = parseHashTarget(targetId);
+  const { articleId, paragraphId, parentActId } = parseHashTarget(targetId);
 
   if (!articleId) {
     return;
   }
 
+  const currentActId = currentSidebarSelectionKey && currentSidebarSelectionKey.startsWith('act:')
+    ? currentSidebarSelectionKey.slice(4)
+    : null;
+  const scopedParentActId = parentActId || currentActId;
+
   selectArticle(articleId, {
     updateHash: false,
     focus: !paragraphId,
     targetParagraphId: paragraphId,
+    parentActId: scopedParentActId,
   });
 
-  const hashTarget = paragraphId || articleId;
+  const hashTarget = scopedParentActId
+    ? `a:${scopedParentActId}:${paragraphId || articleId}`
+    : (paragraphId || articleId);
   updateLocationHash(hashTarget);
 };
 

@@ -30,6 +30,88 @@ const getArticleIdFromTitle = (titleText, fallbackIndex) => {
   return `art_${match[1].toLowerCase()}`;
 };
 
+const articleNumberToId = new Map();
+
+const registerArticleNumber = (titleText, articleId) => {
+  const match = normaliseWhitespace(titleText).match(/^Article\s+([0-9]+[a-z]?)/i);
+  if (!match || !articleId) {
+    return;
+  }
+  articleNumberToId.set(match[1].toLowerCase(), articleId);
+};
+
+const escapeHtml = (value) => `${value || ''}`
+  .replace(/&/g, '&amp;')
+  .replace(/</g, '&lt;')
+  .replace(/>/g, '&gt;')
+  .replace(/"/g, '&quot;')
+  .replace(/'/g, '&#39;');
+
+const buildInternalLink = (displayText, articleNumberToken) => {
+  const key = `${articleNumberToken || ''}`.toLowerCase();
+  const articleId = articleNumberToId.get(key);
+  if (!articleId) {
+    return escapeHtml(displayText);
+  }
+  const safeText = escapeHtml(displayText);
+  return `<a href="#${articleId}" class="internal-article-link" target="_blank" rel="noopener">${safeText}</a>`;
+};
+
+const padNumber = (value) => `${value || ''}`.replace(/\D/g, '').padStart(4, '0');
+
+const buildEurLexUrlFromCelex = (celexId) => `https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:${celexId}`;
+
+const buildDirectiveCelex = (year, number) => `3${year}L${padNumber(number)}`;
+
+const buildRegulationCelex = (year, number) => `3${year}R${padNumber(number)}`;
+
+const wrapLegalLink = (displayText, celexId, previewLabel) => {
+  const href = buildEurLexUrlFromCelex(celexId);
+  const safeText = displayText;
+  const safePreview = escapeHtml(`${previewLabel} – opens on EUR-Lex`);
+  return `<a href="${href}" class="legal-link" target="_blank" rel="noopener noreferrer" data-preview="${safePreview}">${safeText}</a>`;
+};
+
+const linkExternalLegalReferences = (text) => {
+  let output = text;
+
+  output = output.replace(/\bDirective\s+(\d{4})\/(\d{2,4})\/(EU|EC)\b/g, (match, year, number, region) => {
+    const celexId = buildDirectiveCelex(year, number);
+    return wrapLegalLink(match, celexId, `Directive ${year}/${number}/${region}`);
+  });
+
+  output = output.replace(/\bRegulation\s*\((EU|EC)\)\s*(?:No\s*)?(\d{1,4})\/(\d{4})\b/g, (match, region, number, year) => {
+    const celexId = buildRegulationCelex(year, number);
+    return wrapLegalLink(match, celexId, `Regulation (${region}) ${number}/${year}`);
+  });
+
+  return output;
+};
+
+const linkInternalArticleReferences = (text) => {
+  if (!text) {
+    return '';
+  }
+
+  const escaped = escapeHtml(text);
+
+  const replaceArticleList = (value) => {
+    const numberTokenPattern = /\b[0-9]+[a-z]?\b/gi;
+    return value.replace(numberTokenPattern, (token) => buildInternalLink(token, token));
+  };
+
+  let linked = escaped.replace(/\bArticles\s+([0-9a-z\s,\-–toandor]+)/gi, (fullMatch, listPart) => {
+    const replacedList = replaceArticleList(listPart);
+    return fullMatch.replace(listPart, replacedList);
+  });
+
+  linked = linked.replace(/\bArticle\s+([0-9]+[a-z]?)(\([0-9]+\))?/gi, (fullMatch, articleNumber) => {
+    return fullMatch.replace(articleNumber, buildInternalLink(articleNumber, articleNumber));
+  });
+
+  return linkExternalLegalReferences(linked);
+};
+
 const shouldCaptureParagraphNode = (node) => {
   if (!node || node.type !== 'tag') {
     return false;
@@ -79,6 +161,12 @@ const articles = [];
 articleTitleNodes.forEach((titleNode, index) => {
   const titleText = normaliseWhitespace($(titleNode).text());
   const articleId = getArticleIdFromTitle(titleText, index);
+  registerArticleNumber(titleText, articleId);
+});
+
+articleTitleNodes.forEach((titleNode, index) => {
+  const titleText = normaliseWhitespace($(titleNode).text());
+  const articleId = getArticleIdFromTitle(titleText, index);
 
   let heading = '';
   const paragraphs = [];
@@ -103,7 +191,7 @@ articleTitleNodes.forEach((titleNode, index) => {
           paragraphCounter += 1;
           paragraphs.push({
             id: `${articleId}__${paragraphCounter}`,
-            text,
+            text: linkInternalArticleReferences(text),
             class: paragraphClassFromNode(current, normaliseWhitespace($(current).text())),
           });
         }
