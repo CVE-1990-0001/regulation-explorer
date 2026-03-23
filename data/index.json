@@ -1,9 +1,10 @@
 {
   "acts": [
     { "id": "act_emir_2012", "path": "emir-regulation.json", "label": "EMIR Regulation" },
-    { "id": "act_csdr_2014", "path": "emir-data/32014R0909.json", "label": "CSDR Regulation (EU) No 909/2014" }
+    { "id": "act_csdr_2014", "path": "emir-data/32014R0909.json", "label": "CSDR Regulation (EU) No 909/2014" },
+    { "id": "act_mifid2_2014", "path": "emir-data/02014L0065.json", "label": "MiFID II Directive 2014/65/EU" }
   ],
   "bundles": [
-    { "id": "bundle_derivatives_core", "path": "data/bundles/derivatives-core.json", "label": "Derivatives Core Package" }
+    { "id": "bundle_all_regulations", "path": "data/bundles/all-regulations.json", "label": "All Available Regulations" }
   ]
 }

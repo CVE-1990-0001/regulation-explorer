@@ -16,6 +16,7 @@ let allSidebarItems = [];
 let visibleSidebarItems = [];
 let articleButtons = new Map();
 let currentArticleId = null;
+let currentArticleSelectionKey = null;
 let currentSidebarSelectionKey = null;
 let expandedActIds = new Set();
 let isUpdatingHash = false;
@@ -284,6 +285,9 @@ const getSummaryText = (article) => (article?.summary || article?.summaryTitle |
 const getHeadingText = (article) => (article?.heading || '').trim();
 const stripHtml = (value) => (value || '').replace(/<[^>]*>/g, ' ');
 const getSidebarItemKey = (item) => `${item?.type || 'article'}:${item?.id || ''}`;
+const getArticleSelectionKey = (articleId, parentActId = null) => (
+  parentActId ? `article:${parentActId}:${articleId}` : `article:${articleId}`
+);
 
 const setExpandedAct = (actId, { allowCollapse = false } = {}) => {
   if (!actId) {
@@ -316,22 +320,31 @@ const updateLocationHash = (targetId) => {
 const parseHashTarget = (hashValue) => {
   const rawValue = `${hashValue || ''}`.trim();
   if (!rawValue) {
-    return { articleId: null, paragraphId: null };
+    return { articleId: null, paragraphId: null, parentActId: null };
+  }
+
+  const scopedArticleMatch = rawValue.match(/^a:([^:]+):(.+)$/);
+  if (scopedArticleMatch) {
+    const parentActId = scopedArticleMatch[1];
+    const articleId = scopedArticleMatch[2];
+    if (allArticles.some((article) => article.id === articleId && article._actId === parentActId)) {
+      return { articleId, paragraphId: null, parentActId };
+    }
   }
 
   if (allArticles.some((article) => article.id === rawValue)) {
-    return { articleId: rawValue, paragraphId: null };
+    return { articleId: rawValue, paragraphId: null, parentActId: null };
   }
 
   const separatorIndex = rawValue.indexOf('__');
   if (separatorIndex !== -1) {
     const candidateArticleId = rawValue.slice(0, separatorIndex);
     if (allArticles.some((article) => article.id === candidateArticleId)) {
-      return { articleId: candidateArticleId, paragraphId: rawValue };
+      return { articleId: candidateArticleId, paragraphId: rawValue, parentActId: null };
     }
   }
 
-  return { articleId: null, paragraphId: null };
+  return { articleId: null, paragraphId: null, parentActId: null };
 };
 
 const clearParagraphHighlight = () => {
@@ -439,7 +452,7 @@ const updateListMessage = () => {
 
 const highlightActiveLink = () => {
   articleButtons.forEach((button, id) => {
-    const isActive = id === currentSidebarSelectionKey || (currentArticleId && id === `article:${currentArticleId}`);
+    const isActive = id === currentSidebarSelectionKey || (currentArticleSelectionKey && id === currentArticleSelectionKey);
     button.classList.toggle('is-active', isActive);
     if (isActive) {
       button.setAttribute('aria-current', 'true');
@@ -484,21 +497,35 @@ const updateStatus = () => {
     return;
   }
 
-  const total = visibleSidebarItems.length;
-  const filteredSuffix = visibleSidebarItems.length !== allSidebarItems.length
-    ? ` (filtered from ${allSidebarItems.length})`
-    : '';
-
   const selectedItem = visibleSidebarItems[index];
   const itemKind = selectedItem?.type === 'bundle' ? 'Bundle' : 'Act';
+  const selectedType = selectedItem?.type === 'bundle' ? 'bundle' : 'act';
 
-  statusMessage.textContent = `${itemKind} ${index + 1} of ${total}${filteredSuffix}`;
+  const visibleOfType = visibleSidebarItems.filter((item) => (item?.type || 'act') === selectedType);
+  const allOfType = allSidebarItems.filter((item) => (item?.type || 'act') === selectedType);
+
+  const indexWithinType = visibleOfType.findIndex((item) => getSidebarItemKey(item) === currentSidebarSelectionKey);
+  const total = visibleOfType.length;
+  const filteredSuffix = visibleOfType.length !== allOfType.length
+    ? ` (filtered from ${allOfType.length})`
+    : '';
+
+  statusMessage.textContent = `${itemKind} ${indexWithinType + 1} of ${total}${filteredSuffix}`;
 };
 
 const renderArticleDetail = (article) => {
   hideLegalTooltipImmediate();
 
   if (!article) {
+    if (currentSidebarSelectionKey && currentSidebarSelectionKey.startsWith('act:')) {
+      const selectedActId = currentSidebarSelectionKey.slice(4);
+      const selectedAct = allActs.find((item) => item.id === selectedActId);
+      if (selectedAct) {
+        renderAct(selectedAct);
+        return;
+      }
+    }
+
     articleNumberElement.textContent = '';
     articleTitleElement.textContent = '';
     articleSubtitleElement.textContent = '';
@@ -558,7 +585,7 @@ const renderAct = (act) => {
     return;
   }
 
-  articleNumberElement.textContent = act.id || '';
+  articleNumberElement.textContent = 'Act';
   articleTitleElement.textContent = act.title || act.id || '';
   articleSubtitleElement.textContent = act.heading || '';
 
@@ -703,14 +730,11 @@ const renderSidebarList = (items = []) => {
       }
 
       const actId = item.id;
-      setExpandedAct(actId, { allowCollapse: true });
+      const hasActiveSearch = Boolean(lastSearchQuery && lastSearchQuery.trim());
+      setExpandedAct(actId, { allowCollapse: !hasActiveSearch });
       renderArticleList();
-
-      try {
-        window.location.hash = `act:${actId}`;
-      } catch (e) {
-        window.location.href = `${window.location.pathname}${window.location.search}#act:${actId}`;
-      }
+      handleRoute(`act:${actId}`);
+      updateLocationHash(`act:${actId}`);
     });
 
     listItem.appendChild(button);
@@ -719,7 +743,9 @@ const renderSidebarList = (items = []) => {
       ? item.articles.filter((article) => (!lastSearchQuery || matchesItem(article, lastSearchQuery)))
       : [];
 
-    if (item.type === 'act' && visibleChildArticles.length && expandedActIds.has(item.id)) {
+    const showChildren = expandedActIds.has(item.id) || Boolean(lastSearchQuery && lastSearchQuery.trim());
+
+    if (item.type === 'act' && visibleChildArticles.length && showChildren) {
       const childList = document.createElement('ul');
       childList.className = 'act-article-list';
 
@@ -751,14 +777,25 @@ const renderSidebarList = (items = []) => {
         childButton.addEventListener('click', (event) => {
           event.preventDefault();
           event.stopPropagation();
-          setExpandedAct(item.id);
-          renderArticleList();
-          selectArticle(article.id, { updateHash: true, focus: false });
+
+          const parentActId = item.id;
+          const wasExpanded = expandedActIds.has(parentActId);
+          setExpandedAct(parentActId);
+          if (!wasExpanded) {
+            renderArticleList();
+          }
+
+          selectArticle(article.id, {
+            updateHash: true,
+            focus: false,
+            parentActId,
+            hashTarget: `a:${parentActId}:${article.id}`,
+          });
         });
 
         childItem.appendChild(childButton);
         childList.appendChild(childItem);
-        articleButtons.set(`article:${article.id}`, childButton);
+        articleButtons.set(getArticleSelectionKey(article.id, item.id), childButton);
       });
 
       listItem.appendChild(childList);
@@ -778,6 +815,7 @@ const renderSidebarList = (items = []) => {
 const selectArticle = (articleId, options = {}) => {
   if (!articleId) {
     currentArticleId = null;
+    currentArticleSelectionKey = null;
     currentSidebarSelectionKey = null;
     renderArticleDetail(null);
     clearParagraphHighlight();
@@ -787,17 +825,24 @@ const selectArticle = (articleId, options = {}) => {
     return;
   }
 
-  const article = allArticles.find((item) => item.id === articleId);
+  const preferredParentActId = options.parentActId || null;
+  const article = preferredParentActId
+    ? allArticles.find((item) => item.id === articleId && item._actId === preferredParentActId)
+    : allArticles.find((item) => item.id === articleId);
   if (!article) {
     return;
   }
 
-  const parentActId = article._actId || article.id;
+  const parentActId = preferredParentActId || article._actId || article.id;
+  currentArticleSelectionKey = getArticleSelectionKey(article.id, parentActId);
   const hasParentAct = allActs.some((act) => act.id === parentActId);
   currentSidebarSelectionKey = hasParentAct ? `act:${parentActId}` : null;
-  if (hasParentAct && !expandedActIds.has(parentActId)) {
+  if (hasParentAct) {
+    const wasExpanded = expandedActIds.has(parentActId);
     setExpandedAct(parentActId);
-    renderArticleList();
+    if (!wasExpanded) {
+      renderArticleList();
+    }
   }
 
   if (!visibleArticles.some((item) => item.id === articleId)) {
@@ -832,7 +877,7 @@ const selectArticle = (articleId, options = {}) => {
   updateNavigationButtons();
   updateStatus();
 
-  const button = articleButtons.get(articleId);
+  const button = articleButtons.get(currentArticleSelectionKey) || articleButtons.get(getArticleSelectionKey(articleId));
   if (button && options.scrollIntoView !== false) {
     button.scrollIntoView({ block: 'nearest' });
   }
@@ -856,7 +901,7 @@ const handleHashNavigation = (hashId, options = {}) => {
   }
 
   const { behavior = 'smooth', scrollIntoView = true, focusParagraph = true } = options;
-  const { articleId, paragraphId } = parseHashTarget(hashId);
+  const { articleId, paragraphId, parentActId } = parseHashTarget(hashId);
 
   if (!articleId) {
     return false;
@@ -869,6 +914,7 @@ const handleHashNavigation = (hashId, options = {}) => {
     targetParagraphId: paragraphId,
     highlightBehavior: behavior,
     focusParagraph,
+    parentActId,
   });
 
   return true;
@@ -1125,7 +1171,7 @@ const loadAllData = async () => {
         type: 'act',
         id: entry.id,
         title: entry.label || entry.id,
-        heading: '',
+        heading: 'Consolidated',
         source: {
           uri: '',
           label: 'EUR-Lex',

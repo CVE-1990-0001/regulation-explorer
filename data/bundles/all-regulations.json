@@ -1,0 +1,12 @@
+{
+  "type": "bundle",
+  "id": "bundle_all_regulations",
+  "title": "All Available Regulations",
+  "description": "Collection of all regulations currently available in this app.",
+  "members": [
+    { "ref": "act_emir_2012", "label": "EMIR (2012)" },
+    { "ref": "act_csdr_2014", "label": "CSDR (2014)" },
+    { "ref": "act_mifid2_2014", "label": "MiFID II (2014/65/EU)" }
+  ],
+  "meta": { "tags": ["all", "regulations"], "updated": "2026-03-23" }
+}
