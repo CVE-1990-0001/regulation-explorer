@@ -12,8 +12,12 @@ const nextButton = document.getElementById('nextArticle');
 
 let allArticles = [];
 let visibleArticles = [];
+let allSidebarItems = [];
+let visibleSidebarItems = [];
 let articleButtons = new Map();
 let currentArticleId = null;
+let currentSidebarSelectionKey = null;
+let expandedActIds = new Set();
 let isUpdatingHash = false;
 let currentHighlightedParagraphId = null;
 let allActs = [];
@@ -279,6 +283,22 @@ const initialiseLegalTooltips = () => {
 const getSummaryText = (article) => (article?.summary || article?.summaryTitle || '').trim();
 const getHeadingText = (article) => (article?.heading || '').trim();
 const stripHtml = (value) => (value || '').replace(/<[^>]*>/g, ' ');
+const getSidebarItemKey = (item) => `${item?.type || 'article'}:${item?.id || ''}`;
+
+const setExpandedAct = (actId, { allowCollapse = false } = {}) => {
+  if (!actId) {
+    expandedActIds = new Set();
+    return;
+  }
+
+  const isAlreadyExpanded = expandedActIds.has(actId);
+  if (isAlreadyExpanded && allowCollapse) {
+    expandedActIds = new Set();
+    return;
+  }
+
+  expandedActIds = new Set([actId]);
+};
 
 const updateLocationHash = (targetId) => {
   const targetHash = targetId ? `#${targetId}` : '';
@@ -399,27 +419,27 @@ const createParagraphElement = (paragraphData, article) => {
 const getCurrentIndex = () => visibleArticles.findIndex((article) => article.id === currentArticleId);
 
 const updateListMessage = () => {
-  if (!allArticles.length) {
+  if (!allSidebarItems.length) {
     listMessage.textContent = '';
     return;
   }
 
-  if (!visibleArticles.length) {
-    listMessage.textContent = 'No articles match your search.';
+  if (!visibleSidebarItems.length) {
+    listMessage.textContent = 'No items match your search.';
     return;
   }
 
   if (!searchInput.value.trim()) {
-    listMessage.textContent = `${visibleArticles.length} articles`;
+    listMessage.textContent = `${visibleSidebarItems.length} items`;
     return;
   }
 
-  listMessage.textContent = `${visibleArticles.length} of ${allArticles.length} articles`;
+  listMessage.textContent = `${visibleSidebarItems.length} of ${allSidebarItems.length} items`;
 };
 
 const highlightActiveLink = () => {
   articleButtons.forEach((button, id) => {
-    const isActive = id === currentArticleId;
+    const isActive = id === currentSidebarSelectionKey || (currentArticleId && id === `article:${currentArticleId}`);
     button.classList.toggle('is-active', isActive);
     if (isActive) {
       button.setAttribute('aria-current', 'true');
@@ -443,33 +463,36 @@ const updateNavigationButtons = () => {
 };
 
 const updateStatus = () => {
-  if (!allArticles.length) {
+  if (!allSidebarItems.length) {
     statusMessage.textContent = '';
     return;
   }
 
-  if (!visibleArticles.length) {
-    statusMessage.textContent = 'No articles match your search.';
+  if (!visibleSidebarItems.length) {
+    statusMessage.textContent = 'No items match your search.';
     return;
   }
 
-  if (!currentArticleId) {
-    statusMessage.textContent = 'Select an article from the navigation.';
+  if (!currentSidebarSelectionKey) {
+    statusMessage.textContent = 'Select an act or bundle from the navigation.';
     return;
   }
 
-  const index = getCurrentIndex();
+  const index = visibleSidebarItems.findIndex((item) => getSidebarItemKey(item) === currentSidebarSelectionKey);
   if (index === -1) {
-    statusMessage.textContent = 'Select an article from the navigation.';
+    statusMessage.textContent = 'Viewing selected item.';
     return;
   }
 
-  const total = visibleArticles.length;
-  const filteredSuffix = visibleArticles.length !== allArticles.length
-    ? ` (filtered from ${allArticles.length})`
+  const total = visibleSidebarItems.length;
+  const filteredSuffix = visibleSidebarItems.length !== allSidebarItems.length
+    ? ` (filtered from ${allSidebarItems.length})`
     : '';
 
-  statusMessage.textContent = `Article ${index + 1} of ${total}${filteredSuffix}`;
+  const selectedItem = visibleSidebarItems[index];
+  const itemKind = selectedItem?.type === 'bundle' ? 'Bundle' : 'Act';
+
+  statusMessage.textContent = `${itemKind} ${index + 1} of ${total}${filteredSuffix}`;
 };
 
 const renderArticleDetail = (article) => {
@@ -623,10 +646,7 @@ const renderBundle = (bundle) => {
 };
 
 const renderArticleList = () => {
-  // Always show both articles and bundles in the sidebar
-  const bundleItems = Array.isArray(allBundles) ? allBundles : [];
-  const articleItems = Array.isArray(allArticles) ? allArticles : [];
-  renderSidebarList([...articleItems, ...bundleItems]);
+  renderSidebarList(visibleSidebarItems);
 };
 
 // Render the sidebar list with a small type chip and hash-based routing
@@ -650,10 +670,11 @@ const renderSidebarList = (items = []) => {
     button.className = 'article-link';
 
     // Determine kind for chip and target hash
-    const kind = item.type === 'bundle' ? 'BUNDLE' : 'ACT';
+    const kind = item.type === 'bundle' ? 'bundle' : 'act';
 
     const chip = document.createElement('span');
     chip.className = 'item-chip';
+    chip.classList.add(kind);
     chip.textContent = kind;
     button.appendChild(chip);
 
@@ -670,7 +691,7 @@ const renderSidebarList = (items = []) => {
       button.appendChild(headingSpan);
     }
 
-    // Clicking updates the view: select a single article or open a bundle
+    // Clicking updates the view: toggle expand/collapse and open act, or open bundle
     button.addEventListener('click', () => {
       if (item.type === 'bundle') {
         try {
@@ -681,14 +702,10 @@ const renderSidebarList = (items = []) => {
         return;
       }
 
-      // If the item looks like an article (has paragraphs), select that article only
-      if (Array.isArray(item.paragraphs) || allArticles.some((a) => a.id === item.id)) {
-        selectArticle(item.id, { updateHash: true, focus: false });
-        return;
-      }
+      const actId = item.id;
+      setExpandedAct(actId, { allowCollapse: true });
+      renderArticleList();
 
-      // Fallback: navigate to the parent act if present
-      const actId = item._actId || item.id;
       try {
         window.location.hash = `act:${actId}`;
       } catch (e) {
@@ -697,10 +714,60 @@ const renderSidebarList = (items = []) => {
     });
 
     listItem.appendChild(button);
+
+    const visibleChildArticles = Array.isArray(item.articles)
+      ? item.articles.filter((article) => (!lastSearchQuery || matchesItem(article, lastSearchQuery)))
+      : [];
+
+    if (item.type === 'act' && visibleChildArticles.length && expandedActIds.has(item.id)) {
+      const childList = document.createElement('ul');
+      childList.className = 'act-article-list';
+
+      visibleChildArticles.forEach((article) => {
+        if (!article || !article.id) {
+          return;
+        }
+
+        const childItem = document.createElement('li');
+        childItem.className = 'act-article-list-item';
+
+        const childButton = document.createElement('button');
+        childButton.type = 'button';
+        childButton.className = 'article-link article-child-link';
+
+        const childTitle = document.createElement('span');
+        childTitle.className = 'list-article-number';
+        childTitle.textContent = article.title || article.id;
+        childButton.appendChild(childTitle);
+
+        const childHeading = getHeadingText(article);
+        if (childHeading) {
+          const childHeadingSpan = document.createElement('span');
+          childHeadingSpan.className = 'list-article-heading';
+          childHeadingSpan.textContent = childHeading;
+          childButton.appendChild(childHeadingSpan);
+        }
+
+        childButton.addEventListener('click', (event) => {
+          event.preventDefault();
+          event.stopPropagation();
+          setExpandedAct(item.id);
+          renderArticleList();
+          selectArticle(article.id, { updateHash: true, focus: false });
+        });
+
+        childItem.appendChild(childButton);
+        childList.appendChild(childItem);
+        articleButtons.set(`article:${article.id}`, childButton);
+      });
+
+      listItem.appendChild(childList);
+    }
+
     fragment.appendChild(listItem);
 
     // Keep reference for potential highlighting (legacy behavior)
-    articleButtons.set(item.id, button);
+    articleButtons.set(getSidebarItemKey(item), button);
   });
 
   articleListElement.appendChild(fragment);
@@ -711,6 +778,7 @@ const renderSidebarList = (items = []) => {
 const selectArticle = (articleId, options = {}) => {
   if (!articleId) {
     currentArticleId = null;
+    currentSidebarSelectionKey = null;
     renderArticleDetail(null);
     clearParagraphHighlight();
     updateNavigationButtons();
@@ -722,6 +790,14 @@ const selectArticle = (articleId, options = {}) => {
   const article = allArticles.find((item) => item.id === articleId);
   if (!article) {
     return;
+  }
+
+  const parentActId = article._actId || article.id;
+  const hasParentAct = allActs.some((act) => act.id === parentActId);
+  currentSidebarSelectionKey = hasParentAct ? `act:${parentActId}` : null;
+  if (hasParentAct && !expandedActIds.has(parentActId)) {
+    setExpandedAct(parentActId);
+    renderArticleList();
   }
 
   if (!visibleArticles.some((item) => item.id === articleId)) {
@@ -816,6 +892,8 @@ const handleRoute = (hashId) => {
     }
     // render act-level view
     renderItem(act);
+    currentSidebarSelectionKey = `act:${id}`;
+    highlightActiveLink();
     // clear article selection state
     currentArticleId = null;
     updateNavigationButtons();
@@ -832,6 +910,8 @@ const handleRoute = (hashId) => {
       return true;
     }
     renderItem(bundle);
+    currentSidebarSelectionKey = `bundle:${id}`;
+    highlightActiveLink();
     currentArticleId = null;
     updateNavigationButtons();
     updateStatus();
@@ -907,6 +987,37 @@ const matchesItem = (item, query) => {
     return title.includes(q) || desc.includes(q) || membersText.includes(q);
   }
 
+  if (item && item.type === 'act') {
+    const title = (item.title || '').toLowerCase();
+    const heading = getHeadingText(item).toLowerCase();
+    const articleText = (item.articles || [])
+      .map((article) => {
+        const articleTitle = (article?.title || '').toLowerCase();
+        const paragraphs = (article?.paragraphs || [])
+          .map((paragraph) => {
+            if (!paragraph) return '';
+            if (typeof paragraph === 'string') return stripHtml(paragraph);
+            return stripHtml(paragraph.text || '');
+          })
+          .join(' ')
+          .toLowerCase();
+        return `${articleTitle} ${paragraphs}`;
+      })
+      .join(' ')
+      .toLowerCase();
+
+    const paragraphs = (item.paragraphs || [])
+      .map((paragraph) => {
+        if (!paragraph) return '';
+        if (typeof paragraph === 'string') return stripHtml(paragraph);
+        return stripHtml(paragraph.text || '');
+      })
+      .join(' ')
+      .toLowerCase();
+
+    return title.includes(q) || heading.includes(q) || articleText.includes(q) || paragraphs.includes(q);
+  }
+
   // Treat as article-like
   const title = (item.title || '').toLowerCase();
   const heading = getHeadingText(item).toLowerCase();
@@ -927,35 +1038,39 @@ const applyFilter = (query) => {
   const normalisedQuery = `${query || ''}`.trim().toLowerCase();
   lastSearchQuery = normalisedQuery;
 
-  // Combine searchable items: flattened articles and bundles
-  const bundleItems = Array.isArray(allBundles) ? allBundles : [];
-  const articleItems = Array.isArray(allArticles) ? allArticles : [];
-  const combined = [...articleItems, ...bundleItems];
-
   if (!normalisedQuery) {
-    visibleArticles = combined.slice();
+    visibleSidebarItems = allSidebarItems.slice();
   } else {
-    visibleArticles = combined.filter((item) => matchesItem(item, normalisedQuery));
+    visibleSidebarItems = allActs.filter((item) => matchesItem(item, normalisedQuery));
   }
 
   renderArticleList();
 
-  if (!visibleArticles.length) {
+  if (!visibleSidebarItems.length) {
     currentArticleId = null;
+    currentSidebarSelectionKey = null;
     renderArticleDetail(null);
     updateNavigationButtons();
     updateStatus();
+    highlightActiveLink();
     return;
   }
 
-  if (!currentArticleId || !visibleArticles.some((article) => article.id === currentArticleId)) {
-    // If the first visible item is an article-like, select it; otherwise navigate to its act/bundle
-    const first = visibleArticles[0];
+  const hasVisibleSelectedSidebarItem = visibleSidebarItems.some((item) => getSidebarItemKey(item) === currentSidebarSelectionKey);
+
+  if (!hasVisibleSelectedSidebarItem) {
+    const first = visibleSidebarItems[0];
     if (first.type === 'bundle') {
       try {
         window.location.hash = `bundle:${first.id}`;
       } catch (e) {
         window.location.href = `${window.location.pathname}${window.location.search}#bundle:${first.id}`;
+      }
+    } else if (first.type === 'act') {
+      try {
+        window.location.hash = `act:${first.id}`;
+      } catch (e) {
+        window.location.href = `${window.location.pathname}${window.location.search}#act:${first.id}`;
       }
     } else {
       selectArticle(first.id, { updateHash: true, focus: false });
@@ -1004,6 +1119,25 @@ const loadAllData = async () => {
       throw new Error(`Failed to fetch act ${entry.id} (${entry.path}): ${res.status}`);
     }
     const json = await res.json();
+
+    if (Array.isArray(json)) {
+      acts.push({
+        type: 'act',
+        id: entry.id,
+        title: entry.label || entry.id,
+        heading: '',
+        source: {
+          uri: '',
+          label: 'EUR-Lex',
+        },
+        meta: {
+          jurisdiction: 'EU',
+        },
+        articles: json,
+      });
+      return;
+    }
+
     if (!json || json.type !== 'act') {
       console.warn('Skipped non-act file', entry);
       return;
@@ -1068,15 +1202,19 @@ const fetchArticles = async () => {
     // Maintain the old `allArticles` array used by the UI by using the flattened articles
     allArticles = Array.isArray(articles) ? articles : [];
 
-    if (!allArticles.length) {
-      statusMessage.textContent = 'No articles available at this time.';
-      listMessage.textContent = 'No articles available at this time.';
+    allSidebarItems = [...allActs, ...allBundles];
+    expandedActIds = new Set();
+
+    if (!allSidebarItems.length) {
+      statusMessage.textContent = 'No acts available at this time.';
+      listMessage.textContent = 'No acts available at this time.';
       renderArticleDetail(null);
       updateNavigationButtons();
       return;
     }
 
     visibleArticles = [...allArticles];
+    visibleSidebarItems = [...allSidebarItems];
     renderArticleList();
 
     const hashId = window.location.hash ? window.location.hash.replace('#', '') : '';

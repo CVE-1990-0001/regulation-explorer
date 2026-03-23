@@ -134,6 +134,31 @@ body {
   margin: 0;
 }
 
+.act-article-list {
+  list-style: none;
+  margin: 0.45rem 0 0.15rem 0;
+  padding: 0 0 0 1rem;
+  border-left: 2px solid rgba(31, 60, 136, 0.12);
+}
+
+.act-article-list-item {
+  margin: 0.35rem 0;
+}
+
+.article-child-link {
+  padding: 0.5rem 0.7rem;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.article-child-link .list-article-number {
+  font-size: 0.9rem;
+}
+
+.article-child-link .list-article-heading {
+  font-size: 0.78rem;
+}
+
 .article-link {
   width: 100%;
   border: none;

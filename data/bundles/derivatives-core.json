@@ -5,7 +5,7 @@
   "description": "Key EU acts impacting derivatives and reporting.",
   "members": [
     { "ref": "act_emir_2012", "label": "EMIR (2012)" },
-    { "ref": "act_gen_001", "label": "General Act Example" }
+    { "ref": "act_csdr_2014", "label": "CSDR (2014)" }
   ],
   "meta": { "tags": ["derivatives", "reporting"], "updated": "2026-02-23" }
 }
