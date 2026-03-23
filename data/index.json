@@ -1,7 +1,7 @@
 {
   "acts": [
     { "id": "act_emir_2012", "path": "emir-regulation.json", "label": "EMIR Regulation" },
-    { "id": "act_gen_001", "path": "data/acts/general-act-001.json", "label": "General Act Example" }
+    { "id": "act_csdr_2014", "path": "emir-data/32014R0909.json", "label": "CSDR Regulation (EU) No 909/2014" }
   ],
   "bundles": [
     { "id": "bundle_derivatives_core", "path": "data/bundles/derivatives-core.json", "label": "Derivatives Core Package" }
