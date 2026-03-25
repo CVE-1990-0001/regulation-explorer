@@ -6,7 +6,8 @@
   "members": [
     { "ref": "act_emir_2012", "label": "EMIR (2012)" },
     { "ref": "act_csdr_2014", "label": "CSDR (2014)" },
-    { "ref": "act_mifid2_2014", "label": "MiFID II (2014/65/EU)" }
+    { "ref": "act_mifid2_2014", "label": "MiFID II (2014/65/EU)" },
+    { "ref": "act_boersg_2007", "label": "Börsengesetz (BörsG)" }
   ],
-  "meta": { "tags": ["all", "regulations"], "updated": "2026-03-23" }
+  "meta": { "tags": ["all", "regulations"], "updated": "2026-03-25" }
 }

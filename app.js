@@ -284,6 +284,13 @@ const initialiseLegalTooltips = () => {
 const getSummaryText = (article) => (article?.summary || article?.summaryTitle || '').trim();
 const getHeadingText = (article) => (article?.heading || '').trim();
 const stripHtml = (value) => (value || '').replace(/<[^>]*>/g, ' ');
+const normaliseForSearch = (value) => (
+  `${value || ''}`
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/ß/g, 'ss')
+);
 const getSidebarItemKey = (item) => `${item?.type || 'article'}:${item?.id || ''}`;
 const getArticleSelectionKey = (articleId, parentActId = null) => (
   parentActId ? `article:${parentActId}:${articleId}` : `article:${articleId}`
@@ -1026,26 +1033,27 @@ const goToNext = () => {
 
 // Returns true if the given item (article-like or bundle) matches the query
 const matchesItem = (item, query) => {
-  const q = `${query || ''}`.trim().toLowerCase();
+  const q = normaliseForSearch(`${query || ''}`.trim());
   if (!q) return true;
 
   if (item && item.type === 'bundle') {
-    const title = (item.title || '').toLowerCase();
-    const desc = (item.description || '').toLowerCase();
+    const title = normaliseForSearch(item.title || '');
+    const desc = normaliseForSearch(item.description || '');
     const membersText = (item.members || [])
       .map((m) => ((m && (m.label || m.ref)) || ''))
       .join(' ')
-      .toLowerCase();
+      .replace(/<[^>]*>/g, ' ');
+    const normalisedMembersText = normaliseForSearch(membersText);
 
-    return title.includes(q) || desc.includes(q) || membersText.includes(q);
+    return title.includes(q) || desc.includes(q) || normalisedMembersText.includes(q);
   }
 
   if (item && item.type === 'act') {
-    const title = (item.title || '').toLowerCase();
-    const heading = getHeadingText(item).toLowerCase();
+    const title = normaliseForSearch(item.title || '');
+    const heading = normaliseForSearch(getHeadingText(item));
     const articleText = (item.articles || [])
       .map((article) => {
-        const articleTitle = (article?.title || '').toLowerCase();
+        const articleTitle = normaliseForSearch(article?.title || '');
         const paragraphs = (article?.paragraphs || [])
           .map((paragraph) => {
             if (!paragraph) return '';
@@ -1053,11 +1061,13 @@ const matchesItem = (item, query) => {
             return stripHtml(paragraph.text || '');
           })
           .join(' ')
-          .toLowerCase();
-        return `${articleTitle} ${paragraphs}`;
+          .replace(/\s+/g, ' ');
+        const normalisedParagraphs = normaliseForSearch(paragraphs);
+        return `${articleTitle} ${normalisedParagraphs}`;
       })
       .join(' ')
-      .toLowerCase();
+      .replace(/\s+/g, ' ');
+    const normalisedArticleText = normaliseForSearch(articleText);
 
     const paragraphs = (item.paragraphs || [])
       .map((paragraph) => {
@@ -1066,15 +1076,16 @@ const matchesItem = (item, query) => {
         return stripHtml(paragraph.text || '');
       })
       .join(' ')
-      .toLowerCase();
+      .replace(/\s+/g, ' ');
+    const normalisedParagraphs = normaliseForSearch(paragraphs);
 
-    return title.includes(q) || heading.includes(q) || articleText.includes(q) || paragraphs.includes(q);
+    return title.includes(q) || heading.includes(q) || normalisedArticleText.includes(q) || normalisedParagraphs.includes(q);
   }
 
   // Treat as article-like
-  const title = (item.title || '').toLowerCase();
-  const heading = getHeadingText(item).toLowerCase();
-  const summary = getSummaryText(item).toLowerCase();
+  const title = normaliseForSearch(item.title || '');
+  const heading = normaliseForSearch(getHeadingText(item));
+  const summary = normaliseForSearch(getSummaryText(item));
   const paragraphs = (item.paragraphs || [])
     .map((paragraph) => {
       if (!paragraph) return '';
@@ -1082,9 +1093,10 @@ const matchesItem = (item, query) => {
       return stripHtml(paragraph.text || '');
     })
     .join(' ')
-    .toLowerCase();
+    .replace(/\s+/g, ' ');
+  const normalisedParagraphs = normaliseForSearch(paragraphs);
 
-  return title.includes(q) || heading.includes(q) || summary.includes(q) || paragraphs.includes(q);
+  return title.includes(q) || heading.includes(q) || summary.includes(q) || normalisedParagraphs.includes(q);
 };
 
 const applyFilter = (query) => {
@@ -1152,7 +1164,7 @@ const clearSearch = () => {
 
 // Load registry listing acts and bundles
 const loadRegistry = async () => {
-  const res = await fetch('data/index.json');
+  const res = await fetch('data/index.json', { cache: 'no-store' });
   if (!res.ok) {
     throw new Error(`Failed to load registry: ${res.status}`);
   }
@@ -1167,7 +1179,7 @@ const loadAllData = async () => {
   const bundles = [];
 
   const actFetches = (registry.acts || []).map(async (entry) => {
-    const res = await fetch(entry.path);
+    const res = await fetch(entry.path, { cache: 'no-store' });
     if (!res.ok) {
       throw new Error(`Failed to fetch act ${entry.id} (${entry.path}): ${res.status}`);
     }
@@ -1201,7 +1213,7 @@ const loadAllData = async () => {
   });
 
   const bundleFetches = (registry.bundles || []).map(async (entry) => {
-    const res = await fetch(entry.path);
+    const res = await fetch(entry.path, { cache: 'no-store' });
     if (!res.ok) {
       throw new Error(`Failed to fetch bundle ${entry.id} (${entry.path}): ${res.status}`);
     }

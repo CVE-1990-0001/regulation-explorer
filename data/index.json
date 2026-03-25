@@ -2,7 +2,8 @@
   "acts": [
     { "id": "act_emir_2012", "path": "emir-regulation.json", "label": "EMIR Regulation" },
     { "id": "act_csdr_2014", "path": "emir-data/32014R0909.json", "label": "CSDR Regulation (EU) No 909/2014" },
-    { "id": "act_mifid2_2014", "path": "emir-data/02014L0065.json", "label": "MiFID II Directive 2014/65/EU" }
+    { "id": "act_mifid2_2014", "path": "emir-data/02014L0065.json", "label": "MiFID II Directive 2014/65/EU" },
+    { "id": "act_boersg_2007", "path": "emir-data/boersengesetz.json", "label": "Börsengesetz (BörsG)" }
   ],
   "bundles": [
     { "id": "bundle_all_regulations", "path": "data/bundles/all-regulations.json", "label": "All Available Regulations" }
