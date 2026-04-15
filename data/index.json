@@ -1,10 +1,10 @@
 {
   "acts": [
     { "id": "act_emir_2012", "path": "emir-regulation.json", "label": "EMIR Regulation" },
-    { "id": "act_csdr_2014", "path": "emir-data/32014R0909.json", "label": "CSDR Regulation (EU) No 909/2014" },
-    { "id": "act_mifid2_2014", "path": "emir-data/02014L0065.json", "label": "MiFID II Directive 2014/65/EU" },
-    { "id": "act_eu_ai_act_2024", "path": "emir-data/202401689.json", "label": "EU AI Act (Regulation 2024/1689)" },
-    { "id": "act_boersg_2007", "path": "emir-data/boersengesetz.json", "label": "Börsengesetz (BörsG)" }
+    { "id": "act_csdr_2014", "path": "regulations-data/32014R0909.json", "label": "CSDR Regulation (EU) No 909/2014" },
+    { "id": "act_mifid2_2014", "path": "regulations-data/02014L0065.json", "label": "MiFID II Directive 2014/65/EU" },
+    { "id": "act_eu_ai_act_2024", "path": "regulations-data/202401689.json", "label": "EU AI Act (Regulation 2024/1689)" },
+    { "id": "act_boersg_2007", "path": "regulations-data/boersengesetz.json", "label": "Börsengesetz (BörsG)" }
   ],
   "bundles": [
     { "id": "bundle_all_regulations", "path": "data/bundles/all-regulations.json", "label": "All Available Regulations" }
