@@ -9,6 +9,7 @@ const articleSubtitleElement = document.getElementById('articleSubtitle');
 const paragraphsContainer = document.getElementById('paragraphsContainer');
 const prevButton = document.getElementById('prevArticle');
 const nextButton = document.getElementById('nextArticle');
+const sidePanel = document.querySelector('.side-panel');
 
 let allArticles = [];
 let visibleArticles = [];
@@ -19,8 +20,11 @@ let currentArticleId = null;
 let currentArticleSelectionKey = null;
 let currentSidebarSelectionKey = null;
 let expandedActIds = new Set();
+let expandedBundleIds = new Set();
+let expandedBundleActIds = new Set(); // composite keys: "bundleId::actId"
 let isUpdatingHash = false;
 let currentHighlightedParagraphId = null;
+let sidePanelScrollPosition = 0;
 let allActs = [];
 let allBundles = [];
 let lastSearchQuery = '';
@@ -690,6 +694,10 @@ const renderArticleList = () => {
 // Render the sidebar list with a small type chip and hash-based routing
 const renderSidebarList = (items = []) => {
   articleButtons = new Map();
+  
+  // Save current scroll position
+  const savedScrollPosition = sidePanel ? sidePanel.scrollTop : 0;
+  
   articleListElement.innerHTML = '';
 
   if (!items.length) {
@@ -729,14 +737,17 @@ const renderSidebarList = (items = []) => {
       button.appendChild(headingSpan);
     }
 
-    // Clicking updates the view: toggle expand/collapse and open act, or open bundle
+    // Clicking updates the view: toggle expand/collapse and open act, or expand bundle
     button.addEventListener('click', () => {
       if (item.type === 'bundle') {
-        try {
-          window.location.hash = `bundle:${item.id}`;
-        } catch (e) {
-          window.location.href = `${window.location.pathname}${window.location.search}#bundle:${item.id}`;
+        if (expandedBundleIds.has(item.id)) {
+          expandedBundleIds.delete(item.id);
+        } else {
+          expandedBundleIds.add(item.id);
         }
+        renderArticleList();
+        handleRoute(`bundle:${item.id}`);
+        updateLocationHash(`bundle:${item.id}`);
         return;
       }
 
@@ -749,6 +760,110 @@ const renderSidebarList = (items = []) => {
     });
 
     listItem.appendChild(button);
+
+    // Bundle: render member acts as expandable children
+    if (item.type === 'bundle' && expandedBundleIds.has(item.id)) {
+      const memberActs = (item.members || [])
+        .map((m) => allActs.find((a) => a.id === m.ref))
+        .filter(Boolean);
+
+      if (memberActs.length) {
+        const bundleActList = document.createElement('ul');
+        bundleActList.className = 'act-article-list bundle-child-acts';
+
+        memberActs.forEach((act) => {
+          const actItem = document.createElement('li');
+          actItem.className = 'act-article-list-item';
+
+          const actButton = document.createElement('button');
+          actButton.type = 'button';
+          actButton.className = 'article-link article-child-link';
+
+          const actTitle = document.createElement('span');
+          actTitle.className = 'list-article-number';
+          actTitle.textContent = act.title || act.id;
+          actButton.appendChild(actTitle);
+
+          const actHeadingText = getHeadingText(act);
+          if (actHeadingText) {
+            const actHeadingSpan = document.createElement('span');
+            actHeadingSpan.className = 'list-article-heading';
+            actHeadingSpan.textContent = actHeadingText;
+            actButton.appendChild(actHeadingSpan);
+          }
+
+          const bundleActKey = `${item.id}::${act.id}`;
+          actButton.addEventListener('click', (ev) => {
+            ev.preventDefault();
+            ev.stopPropagation();
+            if (expandedBundleActIds.has(bundleActKey)) {
+              expandedBundleActIds.delete(bundleActKey);
+            } else {
+              expandedBundleActIds.add(bundleActKey);
+            }
+            renderArticleList();
+            handleRoute(`act:${act.id}`);
+            updateLocationHash(`act:${act.id}`);
+          });
+
+          actItem.appendChild(actButton);
+          articleButtons.set(`act:${act.id}`, actButton);
+
+          // If this act is expanded within the bundle, render its articles
+          if (expandedBundleActIds.has(bundleActKey) && Array.isArray(act.articles)) {
+            const childList = document.createElement('ul');
+            childList.className = 'act-article-list';
+
+            act.articles.forEach((article) => {
+              if (!article || !article.id) {
+                return;
+              }
+
+              const childItem = document.createElement('li');
+              childItem.className = 'act-article-list-item';
+
+              const childButton = document.createElement('button');
+              childButton.type = 'button';
+              childButton.className = 'article-link article-child-link';
+
+              const childTitle = document.createElement('span');
+              childTitle.className = 'list-article-number';
+              childTitle.textContent = article.title || article.id;
+              childButton.appendChild(childTitle);
+
+              const childHeading = getHeadingText(article);
+              if (childHeading) {
+                const childHeadingSpan = document.createElement('span');
+                childHeadingSpan.className = 'list-article-heading';
+                childHeadingSpan.textContent = childHeading;
+                childButton.appendChild(childHeadingSpan);
+              }
+
+              childButton.addEventListener('click', (event) => {
+                event.preventDefault();
+                event.stopPropagation();
+                selectArticle(article.id, {
+                  updateHash: true,
+                  focus: false,
+                  parentActId: act.id,
+                  hashTarget: `a:${act.id}:${article.id}`,
+                });
+              });
+
+              childItem.appendChild(childButton);
+              childList.appendChild(childItem);
+              articleButtons.set(getArticleSelectionKey(article.id, act.id), childButton);
+            });
+
+            actItem.appendChild(childList);
+          }
+
+          bundleActList.appendChild(actItem);
+        });
+
+        listItem.appendChild(bundleActList);
+      }
+    }
 
     const visibleChildArticles = Array.isArray(item.articles)
       ? item.articles.filter((article) => (!lastSearchQuery || matchesItem(article, lastSearchQuery)))
@@ -821,6 +936,25 @@ const renderSidebarList = (items = []) => {
   articleListElement.appendChild(fragment);
   updateListMessage();
   highlightActiveLink();
+  
+  // Restore scroll position gently or scroll active item into view
+  if (sidePanel) {
+    // Postpone scroll restoration to allow DOM to settle
+    requestAnimationFrame(() => {
+      // If there's an active selection, scroll it into view
+      if (currentSidebarSelectionKey) {
+        const activeButton = articleButtons.get(currentSidebarSelectionKey);
+        if (activeButton) {
+          // Use scrollIntoView with minimal block to prevent jarring jumps
+          activeButton.scrollIntoView({ block: 'nearest', behavior: 'auto' });
+          return;
+        }
+      }
+      
+      // Otherwise restore saved scroll position
+      sidePanel.scrollTop = savedScrollPosition;
+    });
+  }
 };
 
 const selectArticle = (articleId, options = {}) => {
@@ -950,6 +1084,7 @@ const handleRoute = (hashId) => {
     // render act-level view
     renderItem(act);
     currentSidebarSelectionKey = `act:${id}`;
+    currentArticleSelectionKey = null;
     highlightActiveLink();
     // clear article selection state
     currentArticleId = null;
@@ -968,6 +1103,7 @@ const handleRoute = (hashId) => {
     }
     renderItem(bundle);
     currentSidebarSelectionKey = `bundle:${id}`;
+    currentArticleSelectionKey = null;
     highlightActiveLink();
     currentArticleId = null;
     updateNavigationButtons();
@@ -1269,6 +1405,8 @@ const fetchArticles = async () => {
 
     allSidebarItems = [...allActs, ...allBundles];
     expandedActIds = new Set();
+    expandedBundleIds = new Set();
+    expandedBundleActIds = new Set();
 
     if (!allSidebarItems.length) {
       statusMessage.textContent = 'No acts available at this time.';
