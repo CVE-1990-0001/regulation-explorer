@@ -1,4 +1,4 @@
-# Regulation Explorer
+# Regulation Browser (RegBro)
 
 ## Local Development
 
