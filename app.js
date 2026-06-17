@@ -1459,6 +1459,16 @@ clearSearchButton.addEventListener('click', clearSearch);
 prevButton.addEventListener('click', goToPrevious);
 nextButton.addEventListener('click', goToNext);
 
+const pageHeader = document.getElementById('pageHeader');
+const headerToggle = document.getElementById('headerToggle');
+if (pageHeader && headerToggle) {
+  headerToggle.addEventListener('click', () => {
+    const collapsed = pageHeader.classList.toggle('is-collapsed');
+    headerToggle.setAttribute('aria-expanded', String(!collapsed));
+    headerToggle.setAttribute('aria-label', collapsed ? 'Expand header' : 'Collapse header');
+  });
+}
+
 window.addEventListener('hashchange', () => {
   if (isUpdatingHash) {
     isUpdatingHash = false;

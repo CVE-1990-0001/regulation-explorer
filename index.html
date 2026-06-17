@@ -3,26 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Regulation Explorer</title>
+  <title>Regulation Browser (RegBro)</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="page-header">
+  <header class="page-header" id="pageHeader">
     <div class="hero">
-      <h1>Regulation Explorer</h1>
+      <h1>Regulation Browser</h1>
       <p>Browse consolidated articles and concise summaries across available EU regulations and directives.</p>
     </div>
+    <button id="headerToggle" type="button" class="header-toggle" aria-expanded="true" aria-controls="pageHeader" aria-label="Collapse header">
+      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
+        <path d="M6 15l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
   </header>
+
+  <div class="search-bar">
+    <div class="search-wrapper">
+      <label for="searchInput" class="sr-only">Search articles</label>
+      <input id="searchInput" type="search" placeholder="Search articles or keywords..." autocomplete="off" />
+      <button id="clearSearch" type="button" aria-label="Clear search input">Clear</button>
+    </div>
+  </div>
 
   <main class="page-content">
     <div class="layout">
       <aside class="side-panel" aria-label="Article navigation">
         <div class="side-panel-inner">
-          <div class="search-wrapper">
-            <label for="searchInput" class="sr-only">Search articles</label>
-            <input id="searchInput" type="search" placeholder="Search articles or keywords..." autocomplete="off" />
-            <button id="clearSearch" type="button" aria-label="Clear search input">Clear</button>
-          </div>
           <p id="listMessage" class="list-message"></p>
           <nav class="article-list" aria-label="Articles">
             <ul id="articleList"></ul>
