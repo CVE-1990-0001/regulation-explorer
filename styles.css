@@ -7,6 +7,8 @@
   --primary-dark: #0f1419;
   --primary-navy: #1a2332;
   --accent-blue: #2563eb;
+  --accent-orange: #ea7a1f;
+  --accent-orange-hover: #c25f0b;
   --accent-teal: #0d9488;
   --surface-light: #f8f9fc;
   --surface-elevated: #ffffff;
@@ -107,17 +109,21 @@ body {
 }
 
 .hero {
-  max-width: none;
-  margin: 0;
+  width: min(1100px, 100%);
+  margin: 0 auto;
   text-align: center;
   transition: opacity var(--transition-base);
 }
 
 .ciso-logo {
   display: block;
-  width: min(220px, 60vw);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: min(190px, 20vw);
   height: auto;
-  margin: 0 auto 1.25rem;
+  margin: 0;
 }
 
 .hero h1 {
@@ -592,7 +598,6 @@ body {
 }
 
 /* Links */
-.legal-link,
 .internal-article-link {
   color: var(--accent-blue);
   text-decoration: none;
@@ -602,12 +607,31 @@ body {
   transition: all var(--transition-fast);
 }
 
-.legal-link:hover,
-.legal-link:focus,
 .internal-article-link:hover,
 .internal-article-link:focus {
   color: #1d4ed8;
   border-bottom-color: var(--accent-blue);
+}
+
+.legal-link,
+a[href^="http://"],
+a[href^="https://"] {
+  color: var(--accent-orange);
+  text-decoration: none;
+  position: relative;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(234, 122, 31, 0.35);
+  transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.legal-link:hover,
+.legal-link:focus,
+a[href^="http://"]:hover,
+a[href^="http://"]:focus,
+a[href^="https://"]:hover,
+a[href^="https://"]:focus {
+  color: var(--accent-orange-hover);
+  border-bottom-color: var(--accent-orange);
 }
 
 a[target="_blank"][href^="http"]:not([href*="regbro" i])::before {
@@ -617,7 +641,7 @@ a[target="_blank"][href^="http"]:not([href*="regbro" i])::before {
   height: 0.65em;
   margin-right: 0.3em;
   border-radius: 2px;
-  background: var(--accent-blue);
+  background: var(--accent-orange);
   vertical-align: -0.05em;
 }
 
@@ -831,13 +855,13 @@ a[target="_blank"][href^="http"]:not([href*="regbro" i])::before {
 }
 
 .page-footer a {
-  color: var(--accent-blue);
+  color: var(--accent-orange);
   text-decoration: none;
   transition: color var(--transition-fast);
 }
 
 .page-footer a:hover {
-  color: #1d4ed8;
+  color: var(--accent-orange-hover);
   text-decoration: underline;
 }
 
@@ -954,6 +978,22 @@ a[target="_blank"][href^="http"]:not([href*="regbro" i])::before {
 @media (max-width: 720px) {
   .page-header {
     padding: 2.5rem 1.5rem 2rem;
+  }
+
+  .hero {
+    text-align: center;
+  }
+
+  .ciso-logo {
+    position: static;
+    transform: none;
+    width: min(210px, 65vw);
+    margin: 0 auto 1rem;
+  }
+
+  .hero p {
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .hero h1 {
