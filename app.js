@@ -30,6 +30,7 @@ let allBundles = [];
 let lastSearchQuery = '';
 
 const legalTooltipSelectors = '.legal-reference, .legal-link';
+const legalTooltipTextLimit = 1000;
 let legalTooltipElement = null;
 let legalTooltipContent = null;
 let legalTooltipTarget = null;
@@ -79,10 +80,15 @@ const getLegalTooltipText = (element) => {
     return '';
   }
   const preview = element.getAttribute('data-preview');
-  if (preview && preview.trim()) {
-    return preview.trim();
+  const text = preview && preview.trim()
+    ? preview.trim()
+    : (element.textContent ? element.textContent.trim() : '');
+
+  if (text.length <= legalTooltipTextLimit) {
+    return text;
   }
-  return element.textContent ? element.textContent.trim() : '';
+
+  return `${text.slice(0, legalTooltipTextLimit).trimEnd()} ...`;
 };
 
 const positionLegalTooltip = () => {

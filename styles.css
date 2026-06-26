@@ -113,6 +113,13 @@ body {
   transition: opacity var(--transition-base);
 }
 
+.ciso-logo {
+  display: block;
+  width: min(220px, 60vw);
+  height: auto;
+  margin: 0 auto 1.25rem;
+}
+
 .hero h1 {
   margin: 0 0 1rem;
   font-size: clamp(1.75rem, 5vw, 2.75rem);
@@ -601,6 +608,17 @@ body {
 .internal-article-link:focus {
   color: #1d4ed8;
   border-bottom-color: var(--accent-blue);
+}
+
+a[target="_blank"][href^="http"]:not([href*="regbro" i])::before {
+  content: "";
+  display: inline-block;
+  width: 0.65em;
+  height: 0.65em;
+  margin-right: 0.3em;
+  border-radius: 2px;
+  background: var(--accent-blue);
+  vertical-align: -0.05em;
 }
 
 /* Act/Bundle viewer */
