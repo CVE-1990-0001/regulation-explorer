@@ -2,14 +2,15 @@ const articleListElement = document.getElementById('articleList');
 const listMessage = document.getElementById('listMessage');
 const statusMessage = document.getElementById('statusMessage');
 const searchInput = document.getElementById('searchInput');
-const clearSearchButton = document.getElementById('clearSearch');
 const articleNumberElement = document.getElementById('articleNumber');
+const articleActNameElement = document.getElementById('articleActName');
 const articleTitleElement = document.getElementById('articleTitle');
 const articleSubtitleElement = document.getElementById('articleSubtitle');
 const paragraphsContainer = document.getElementById('paragraphsContainer');
 const prevButton = document.getElementById('prevArticle');
 const nextButton = document.getElementById('nextArticle');
 const sidePanel = document.querySelector('.side-panel');
+const collapseAllButton = document.getElementById('collapseAllButton');
 
 let allArticles = [];
 let visibleArticles = [];
@@ -29,7 +30,8 @@ let allActs = [];
 let allBundles = [];
 let lastSearchQuery = '';
 
-const legalTooltipSelectors = '.legal-reference, .legal-link';
+const legalTooltipSelectors = '.legal-reference, .legal-link, .internal-article-link';
+const LEGAL_TOOLTIP_MAX_CHARS = 1000;
 let legalTooltipElement = null;
 let legalTooltipContent = null;
 let legalTooltipTarget = null;
@@ -78,11 +80,77 @@ const getLegalTooltipText = (element) => {
   if (!element) {
     return '';
   }
+  let text;
   const preview = element.getAttribute('data-preview');
   if (preview && preview.trim()) {
-    return preview.trim();
+    text = preview.trim();
+  } else if (element.matches && element.matches('.internal-article-link')) {
+    text = getInternalReferencePreview(element);
+  } else {
+    text = element.textContent ? element.textContent.trim() : '';
   }
-  return element.textContent ? element.textContent.trim() : '';
+  if (text.length > LEGAL_TOOLTIP_MAX_CHARS) {
+    text = `${text.slice(0, LEGAL_TOOLTIP_MAX_CHARS).trimEnd()}...`;
+  }
+  return text;
+};
+
+// Convert an HTML fragment to readable plain text (strips tags, decodes entities).
+const htmlToPlainText = (html) => {
+  const tmp = document.createElement('div');
+  tmp.innerHTML = html || '';
+  return (tmp.textContent || '').replace(/\u00a0/g, ' ').replace(/[ \t]+\n/g, '\n').trim();
+};
+
+// Build a preview from an internal cross-reference (#art_x or #art_x__n).
+const getInternalReferencePreview = (element) => {
+  const href = element.getAttribute('href') || '';
+  if (!href.startsWith('#')) {
+    return element.textContent ? element.textContent.trim() : '';
+  }
+
+  const { articleId, paragraphId } = parseHashTarget(href.slice(1));
+  if (!articleId) {
+    return element.textContent ? element.textContent.trim() : '';
+  }
+
+  // The same article id can exist across several acts, so resolve within the
+  // currently open act first to avoid showing a preview from the wrong regulation.
+  const currentActId = currentSidebarSelectionKey && currentSidebarSelectionKey.startsWith('act:')
+    ? currentSidebarSelectionKey.slice(4)
+    : null;
+
+  const article = (currentActId
+    ? allArticles.find((item) => item.id === articleId && item._actId === currentActId)
+    : null) || allArticles.find((item) => item.id === articleId);
+  if (!article) {
+    return element.textContent ? element.textContent.trim() : '';
+  }
+
+  const titleLine = [article.title, getHeadingText(article)].filter(Boolean).join(' — ');
+
+  let body = '';
+  const paragraphs = Array.isArray(article.paragraphs) ? article.paragraphs : [];
+
+  if (paragraphId) {
+    const para = paragraphs.find((p) => p && p.id === paragraphId);
+    if (para) {
+      body = htmlToPlainText(para.text || '');
+    }
+  }
+
+  if (!body) {
+    body = paragraphs
+      .map((p) => htmlToPlainText((p && p.text) || ''))
+      .filter(Boolean)
+      .join('\n\n');
+  }
+
+  if (!body) {
+    body = htmlToPlainText(getSummaryText(article));
+  }
+
+  return [titleLine, body].filter(Boolean).join('\n\n').trim();
 };
 
 const positionLegalTooltip = () => {
@@ -458,7 +526,7 @@ const updateListMessage = () => {
   }
 
   if (!searchInput.value.trim()) {
-    listMessage.textContent = `${visibleSidebarItems.length} items`;
+    listMessage.textContent = '';
     return;
   }
 
@@ -502,7 +570,7 @@ const updateStatus = () => {
   }
 
   if (!currentSidebarSelectionKey) {
-    statusMessage.textContent = 'Select an act or bundle from the navigation.';
+    statusMessage.textContent = 'Select an act or folder from the navigation.';
     return;
   }
 
@@ -513,19 +581,30 @@ const updateStatus = () => {
   }
 
   const selectedItem = visibleSidebarItems[index];
-  const itemKind = selectedItem?.type === 'bundle' ? 'Bundle' : 'Act';
-  const selectedType = selectedItem?.type === 'bundle' ? 'bundle' : 'act';
+  if (!selectedItem) {
+    statusMessage.textContent = '';
+    return;
+  }
 
-  const visibleOfType = visibleSidebarItems.filter((item) => (item?.type || 'act') === selectedType);
-  const allOfType = allSidebarItems.filter((item) => (item?.type || 'act') === selectedType);
+  statusMessage.textContent = '';
+};
 
-  const indexWithinType = visibleOfType.findIndex((item) => getSidebarItemKey(item) === currentSidebarSelectionKey);
-  const total = visibleOfType.length;
-  const filteredSuffix = visibleOfType.length !== allOfType.length
-    ? ` (filtered from ${allOfType.length})`
-    : '';
+const buildEmptyState = () => {
+  const wrap = document.createElement('div');
+  wrap.className = 'empty-state';
 
-  statusMessage.textContent = `${itemKind} ${indexWithinType + 1} of ${total}${filteredSuffix}`;
+  const logo = document.createElement('img');
+  logo.src = 'ciso.png';
+  logo.alt = '';
+  logo.className = 'empty-state-logo';
+  wrap.appendChild(logo);
+
+  const text = document.createElement('p');
+  text.className = 'empty-state-text';
+  text.textContent = 'Select a regulation to begin';
+  wrap.appendChild(text);
+
+  return wrap;
 };
 
 const renderArticleDetail = (article) => {
@@ -542,9 +621,11 @@ const renderArticleDetail = (article) => {
     }
 
     articleNumberElement.textContent = '';
+    if (articleActNameElement) articleActNameElement.textContent = '';
     articleTitleElement.textContent = '';
     articleSubtitleElement.textContent = '';
     paragraphsContainer.innerHTML = '';
+    paragraphsContainer.appendChild(buildEmptyState());
     return;
   }
 
@@ -552,6 +633,10 @@ const renderArticleDetail = (article) => {
   const numberText = (article.title || article.id || '').trim();
 
   articleNumberElement.textContent = numberText;
+  if (articleActNameElement) {
+    const parentAct = allActs.find((item) => item.id === article._actId);
+    articleActNameElement.textContent = parentAct ? (parentAct.title || parentAct.id || '') : '';
+  }
   articleTitleElement.textContent = headingText || numberText;
   articleSubtitleElement.textContent = '';
 
@@ -601,6 +686,7 @@ const renderAct = (act) => {
   }
 
   articleNumberElement.textContent = 'Act';
+  if (articleActNameElement) articleActNameElement.textContent = '';
   articleTitleElement.textContent = act.title || act.id || '';
   articleSubtitleElement.textContent = act.heading || '';
 
@@ -646,6 +732,7 @@ const renderBundle = (bundle) => {
   }
 
   articleNumberElement.textContent = bundle.id || '';
+  if (articleActNameElement) articleActNameElement.textContent = '';
   articleTitleElement.textContent = bundle.title || bundle.id || '';
   articleSubtitleElement.textContent = '';
 
@@ -691,10 +778,40 @@ const renderArticleList = () => {
   renderSidebarList(visibleSidebarItems);
 };
 
+// Show the collapse-all control only when something is manually expanded
+// (during an active search expansion is forced, so the control is hidden).
+const updateCollapseAllButton = () => {
+  if (!collapseAllButton) return;
+  const searchActive = Boolean(lastSearchQuery && lastSearchQuery.trim());
+  const anyExpanded = expandedActIds.size > 0
+    || expandedBundleIds.size > 0
+    || expandedBundleActIds.size > 0;
+  collapseAllButton.hidden = searchActive || !anyExpanded;
+};
+
+// Collapse every expanded folder and act, then re-render the sidebar
+const collapseAll = () => {
+  expandedActIds.clear();
+  expandedBundleIds.clear();
+  expandedBundleActIds.clear();
+  renderArticleList();
+};
+
 // Render the sidebar list with a small type chip and hash-based routing
 const renderSidebarList = (items = []) => {
   articleButtons = new Map();
-  
+
+  // Adds a rotating disclosure chevron to expandable rows (folders / acts)
+  const appendDisclosure = (btn, expanded) => {
+    const chev = document.createElement('span');
+    chev.className = 'disclosure';
+    chev.setAttribute('aria-hidden', 'true');
+    if (expanded) {
+      btn.classList.add('is-expanded');
+    }
+    btn.appendChild(chev);
+  };
+
   // Save current scroll position
   const savedScrollPosition = sidePanel ? sidePanel.scrollTop : 0;
   
@@ -721,7 +838,7 @@ const renderSidebarList = (items = []) => {
     const chip = document.createElement('span');
     chip.className = 'item-chip';
     chip.classList.add(kind);
-    chip.textContent = kind;
+    chip.textContent = kind === 'bundle' ? 'folder' : kind;
     button.appendChild(chip);
 
     const numberSpan = document.createElement('span');
@@ -735,6 +852,13 @@ const renderSidebarList = (items = []) => {
       headingSpan.className = 'list-article-heading';
       headingSpan.textContent = headingText;
       button.appendChild(headingSpan);
+    }
+
+    if (item.type === 'bundle') {
+      appendDisclosure(button, expandedBundleIds.has(item.id));
+    } else if (Array.isArray(item.articles) && item.articles.length) {
+      const actExpanded = expandedActIds.has(item.id) || Boolean(lastSearchQuery && lastSearchQuery.trim());
+      appendDisclosure(button, actExpanded);
     }
 
     // Clicking updates the view: toggle expand/collapse and open act, or expand bundle
@@ -793,6 +917,9 @@ const renderSidebarList = (items = []) => {
           }
 
           const bundleActKey = `${item.id}::${act.id}`;
+          if (Array.isArray(act.articles) && act.articles.length) {
+            appendDisclosure(actButton, expandedBundleActIds.has(bundleActKey));
+          }
           actButton.addEventListener('click', (ev) => {
             ev.preventDefault();
             ev.stopPropagation();
@@ -936,8 +1063,7 @@ const renderSidebarList = (items = []) => {
   articleListElement.appendChild(fragment);
   updateListMessage();
   highlightActiveLink();
-  
-  // Restore scroll position gently or scroll active item into view
+  updateCollapseAllButton();
   if (sidePanel) {
     // Postpone scroll restoration to allow DOM to settle
     requestAnimationFrame(() => {
@@ -1455,9 +1581,11 @@ const fetchArticles = async () => {
 };
 
 searchInput.addEventListener('input', handleSearchInput);
-clearSearchButton.addEventListener('click', clearSearch);
 prevButton.addEventListener('click', goToPrevious);
 nextButton.addEventListener('click', goToNext);
+if (collapseAllButton) {
+  collapseAllButton.addEventListener('click', collapseAll);
+}
 
 const pageHeader = document.getElementById('pageHeader');
 const headerToggle = document.getElementById('headerToggle');
@@ -1639,10 +1767,18 @@ const getParagraphPermalink = (paragraphId) => {
     return window.location.href;
   }
 
+  // Scope the permalink to the act currently being viewed so the same paragraph
+  // id shared across multiple acts (e.g. "art_6") resolves to the correct one
+  // when the link is opened in a new tab.
+  const currentActId = currentSidebarSelectionKey && currentSidebarSelectionKey.startsWith('act:')
+    ? currentSidebarSelectionKey.slice(4)
+    : null;
+  const targetHash = currentActId ? `a:${currentActId}:${paragraphId}` : paragraphId;
+
   try {
-    return new URL(`#${paragraphId}`, window.location.href).href;
+    return new URL(`#${targetHash}`, window.location.href).href;
   } catch (error) {
-    return `${window.location.origin}${window.location.pathname}${window.location.search}#${paragraphId}`;
+    return `${window.location.origin}${window.location.pathname}${window.location.search}#${targetHash}`;
   }
 };
 
