@@ -195,10 +195,21 @@ textarea {
 }
 
 .hero {
-  max-width: none;
-  margin: 0;
+  width: min(1100px, 100%);
+  margin: 0 auto;
   text-align: center;
   transition: opacity var(--transition-base);
+}
+
+.ciso-logo {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: min(190px, 20vw);
+  height: auto;
+  margin: 0;
 }
 
 .hero h1 {
@@ -842,7 +853,6 @@ textarea {
 }
 
 /* Links */
-.legal-link,
 .internal-article-link {
   color: var(--accent-blue);
   text-decoration: none;
@@ -852,8 +862,6 @@ textarea {
   transition: all var(--transition-fast);
 }
 
-.legal-link:hover,
-.legal-link:focus,
 .internal-article-link:hover,
 .internal-article-link:focus {
   color: var(--accent-teal);
@@ -1106,7 +1114,7 @@ textarea {
 }
 
 .page-footer a {
-  color: var(--accent-blue);
+  color: var(--accent-orange);
   text-decoration: none;
   transition: color var(--transition-fast);
 }
@@ -1258,6 +1266,22 @@ button:focus-visible,
 @media (max-width: 720px) {
   .page-header {
     padding: 2.5rem 1.5rem 2rem;
+  }
+
+  .hero {
+    text-align: center;
+  }
+
+  .ciso-logo {
+    position: static;
+    transform: none;
+    width: min(210px, 65vw);
+    margin: 0 auto 1rem;
+  }
+
+  .hero p {
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .hero h1 {
