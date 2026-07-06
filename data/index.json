@@ -7,6 +7,6 @@
     { "id": "act_boersg_2007", "path": "regulations-data/boersengesetz.json", "label": "Börsengesetz (BörsG)" }
   ],
   "bundles": [
-    { "id": "bundle_all_regulations", "path": "data/bundles/all-regulations.json", "label": "All Available Regulations" }
+    { "id": "bundle_dora", "path": "data/bundles/dora.json", "label": "DORA" }
   ]
 }

@@ -1,0 +1,23 @@
+{
+  "type": "bundle",
+  "id": "bundle_dora",
+  "title": "DORA",
+  "description": "Digital Operational Resilience Act (DORA) and its technical standards.",
+  "members": [
+    {
+      "type": "bundle",
+      "id": "bundle_dora_rts",
+      "title": "RTS",
+      "description": "Regulatory Technical Standards under DORA.",
+      "members": []
+    },
+    {
+      "type": "bundle",
+      "id": "bundle_dora_its",
+      "title": "ITS",
+      "description": "Implementing Technical Standards under DORA.",
+      "members": []
+    }
+  ],
+  "meta": { "tags": ["dora"], "updated": "2026-07-01" }
+}
