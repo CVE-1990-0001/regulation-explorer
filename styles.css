@@ -84,8 +84,17 @@
   --space-6: 2rem;
   --space-7: 2.5rem;
 
-  /* Typography - News Gothic family (News Cycle is the free web fallback) */
-  --font-sans: "News Gothic GD", "News Gothic MT", "News Gothic", "NewsGothicBT-Regular", "News Cycle", "Franklin Gothic Medium", "Segoe UI", Tahoma, sans-serif;
+  /* Fixed type scale (Deutsche Börse styleguide, fixed px sizes) */
+  --fs-h-big: 28px;    --lh-h-big: 32px;   /* Headline Big  - Blau */
+  --fs-h-md: 22px;     --lh-h-md: 26px;    /* Headline Medium - Dunkelgrau */
+  --fs-h-sm: 18px;     --lh-h-sm: 22px;    /* Headline Small  - Dunkelgrau */
+  --fs-h-xs: 16px;     --lh-h-xs: 20px;    /* Headline XSmall - Dunkelgrau */
+  --fs-body-big: 14px; --lh-body-big: 16px; /* Fliesstext Big  - Dunkelgrau */
+  --fs-body-md: 12px;  --lh-body-md: 14px;  /* Fliesstext Med  - Dunkelgrau */
+  --fs-body-sm: 12px;  --lh-body-sm: 14px;  /* Fliesstext Small - Mittelgrau */
+
+  /* Typography - News Gothic corporate font, styleguide fallbacks Arial/Helvetica */
+  --font-sans: "News Gothic GD", "News Gothic MT", "News Gothic", Arial, Helvetica, sans-serif;
 }
 
 html,
@@ -261,6 +270,15 @@ textarea {
   align-self: stretch;
   margin: 0.15rem 0.25rem;
   background: var(--border-strong);
+}
+
+/* Deutsche Börse Group logo, pinned to the right of the top bar */
+.dbg-logo {
+  flex: 0 0 auto;
+  height: 1.85rem;
+  width: auto;
+  margin-left: auto;
+  object-fit: contain;
 }
 
 .search-wrapper {
@@ -495,15 +513,15 @@ textarea {
   padding: 0.35rem 1.4rem 0.35rem 0.6rem;
   border-radius: 4px;
   background: var(--surface-light);
-  font-size: 0.95rem;
+  font-size: var(--fs-body-big);
 }
 
 .article-child-link .list-article-number {
-  font-size: 0.95rem;
+  font-size: var(--fs-body-big);
 }
 
 .article-child-link .list-article-heading {
-  font-size: 0.85rem;
+  font-size: var(--fs-body-sm);
 }
 
 /* Main navigation links */
@@ -516,7 +534,7 @@ textarea {
   padding: 0.5rem 1.5rem 0.5rem 0.7rem;
   text-align: left;
   color: var(--text-primary);
-  font-size: 1.05rem;
+  font-size: var(--fs-h-xs);
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
@@ -594,36 +612,57 @@ textarea {
 }
 
 .list-article-heading {
-  font-size: 0.95rem;
+  font-size: var(--fs-body-md);
+  line-height: var(--lh-body-md);
   font-weight: 500;
   color: var(--color-darkgray);
 }
 
-/* Item chips */
+/* Item chips (type indicator icons) */
 .item-chip {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   align-self: flex-start;
-  padding: 0.1rem 0.4rem;
-  border-radius: 2px;
-  font-size: 0.62rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  background: transparent;
-  border: 1px solid var(--border-strong);
-  color: var(--color-darkgray);
+  width: 0.95rem;
+  height: 0.95rem;
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--color-midgray);
+}
+
+.item-chip svg {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 .item-chip.act {
-  background: transparent;
   color: var(--accent-blue);
-  border-color: rgba(0, 0, 153, 0.25);
 }
 
 .item-chip.bundle {
-  background: transparent;
   color: var(--color-midgray);
-  border-color: var(--border-strong);
+}
+
+/* Rows that carry a type icon: lay the icon out to the left of the text */
+.article-link:has(> .item-chip) {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 0.55rem;
+  row-gap: 0.15rem;
+  align-items: start;
+}
+
+.article-link:has(> .item-chip) .item-chip {
+  grid-row: 1 / -1;
+  align-self: center;
+}
+
+.article-link:has(> .item-chip) .list-article-number,
+.article-link:has(> .item-chip) .list-article-heading {
+  grid-column: 2;
 }
 
 /* Main content area */
@@ -648,7 +687,7 @@ textarea {
   background: rgba(0, 0, 153, 0.06);
   color: var(--accent-blue);
   font-weight: 500;
-  font-size: 0.9rem;
+  font-size: var(--fs-body-big);
   border-left: 3px solid var(--accent-blue);
 }
 
@@ -672,14 +711,60 @@ textarea {
 .article-number-chip {
   display: inline-block;
   align-self: flex-start;
-  padding: 0.5rem 1rem;
-  border-radius: 2px;
-  background: rgba(0, 0, 153, 0.07);
+  padding: 0;
   color: var(--accent-blue);
   font-weight: 700;
-  letter-spacing: 0.05em;
-  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  font-size: var(--fs-body-big);
   text-transform: uppercase;
+}
+
+.article-number-chip:empty {
+  display: none;
+}
+
+/* Collapse the number row entirely when there is no chip (acts / folders) */
+.article-number-row:has(> .article-number-chip:empty) {
+  display: none;
+}
+
+/* Breadcrumb (styleguide: FS 12px, Mittelgrau) */
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: var(--fs-body-md);
+  line-height: var(--lh-body-md);
+  color: var(--color-midgray);
+}
+
+.breadcrumb:empty {
+  display: none;
+}
+
+.breadcrumb .crumb {
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  color: var(--color-midgray);
+  cursor: pointer;
+}
+
+.breadcrumb button.crumb:hover,
+.breadcrumb button.crumb:focus-visible {
+  color: var(--accent-teal);
+  text-decoration: underline;
+}
+
+.breadcrumb .crumb.is-current {
+  color: var(--color-darkgray);
+  cursor: default;
+}
+
+.breadcrumb .crumb-sep {
+  color: var(--color-gray);
 }
 
 .article-number-row {
@@ -689,28 +774,19 @@ textarea {
   gap: 0.75rem;
 }
 
-.article-act-name {
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: var(--color-midgray);
-}
-
-.article-act-name:empty {
-  display: none;
-}
-
 .article-title {
   margin: 0;
-  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-size: var(--fs-h-big);
+  line-height: var(--lh-h-big);
   color: var(--accent-blue);
-  line-height: 1.15;
   font-weight: 400;
   letter-spacing: 0;
 }
 
 .article-subtitle {
   margin: 0;
-  font-size: 1.0625rem;
+  font-size: var(--fs-h-sm);
+  line-height: var(--lh-h-sm);
   color: var(--color-darkgray);
   font-weight: 500;
 }
@@ -728,7 +804,7 @@ textarea {
 
 .article-paragraph {
   margin: 0;
-  font-size: 1.0rem;
+  font-size: var(--fs-h-xs);
   line-height: 1.7;
   position: relative;
 }
@@ -894,7 +970,8 @@ textarea {
 /* Act/Bundle viewer */
 .act-article-title {
   margin: 1.5rem 0 0.25rem;
-  font-size: 1.375rem;
+  font-size: var(--fs-h-md);
+  line-height: var(--lh-h-md);
   font-weight: 400;
   color: var(--color-darkgray);
   padding-top: 1.75rem;
@@ -1203,16 +1280,53 @@ textarea {
   text-align: center;
 }
 
-.empty-state-logo {
-  height: 3.5rem;
-  width: auto;
-  opacity: 0.3;
+.empty-state-icon {
+  width: 3rem;
+  height: 3rem;
+  color: var(--color-gray);
+}
+
+.empty-state-icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 .empty-state-text {
   margin: 0;
   color: var(--text-secondary);
   font-size: 1.05rem;
+  font-weight: 500;
+}
+
+.loading-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  min-height: 45vh;
+  color: var(--text-secondary);
+}
+
+.loading-spinner {
+  width: 2rem;
+  height: 2rem;
+  border: 3px solid var(--border-strong);
+  border-top-color: var(--accent-blue);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-text {
+  margin: 0;
+  font-size: var(--fs-body-big);
   font-weight: 500;
 }
 
@@ -1230,7 +1344,6 @@ button:focus-visible,
   .layout {
     grid-template-columns: 1fr;
   }
-
   .side-panel {
     position: static;
     max-height: none;
@@ -1265,6 +1378,19 @@ button:focus-visible,
 }
 
 @media (max-width: 720px) {
+  .search-bar {
+    flex-wrap: wrap;
+  }
+
+  .brand-divider {
+    display: none;
+  }
+
+  .search-wrapper {
+    order: 5;
+    flex: 1 1 100%;
+  }
+
   .page-header {
     padding: 2.5rem 1.5rem 2rem;
   }
@@ -1331,17 +1457,9 @@ button:focus-visible,
   }
 }
 
-/* Faint version badge - bottom right */
-.version-badge {
-  position: fixed;
-  right: 0.75rem;
-  bottom: 0.6rem;
-  z-index: 50;
-  font-family: var(--font-sans);
-  font-size: 0.85rem;
-  letter-spacing: 0.02em;
+/* Footer version tag */
+.footer-version {
+  margin-left: 0.5rem;
   color: var(--text-tertiary);
-  opacity: 0.45;
-  pointer-events: none;
-  user-select: none;
+  opacity: 0.8;
 }

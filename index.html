@@ -5,9 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>RegBro</title>
   <link rel="icon" type="image/png" href="ciso.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=News+Cycle:wght@400;700&display=swap" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -16,9 +13,10 @@
     <span class="brand-name">Reg<span class="brand-name-accent">Bro</span></span>
     <span class="brand-divider" aria-hidden="true"></span>
     <div class="search-wrapper">
-      <label for="searchInput" class="sr-only">Search articles</label>
+      <label for="searchInput" class="sr-only">Search</label>
       <input id="searchInput" type="search" placeholder="Search articles or keywords..." autocomplete="off" />
     </div>
+    <img src="dbg_logo.svg" alt="Deutsche Börse Group" class="dbg-logo" />
   </div>
 
   <main class="page-content">
@@ -39,9 +37,9 @@
       <section class="article-content">
         <div id="statusMessage" class="status-message" role="status" aria-live="polite"></div>
         <header class="article-header">
+          <nav class="breadcrumb" id="breadcrumb" aria-label="Breadcrumb"></nav>
           <div class="article-number-row">
             <span id="articleNumber" class="article-number-chip"></span>
-            <span id="articleActName" class="article-act-name"></span>
           </div>
           <h2 id="articleTitle" class="article-title" tabindex="-1"></h2>
           <p id="articleSubtitle" class="article-subtitle"></p>
@@ -56,10 +54,8 @@
   </main>
 
   <footer class="page-footer">
-    <p>Data sourced from consolidated legal texts published on <a href="https://eur-lex.europa.eu" target="_blank">EUR-Lex</a>.</p>
+    <p>Data sourced from consolidated legal texts published on <a href="https://eur-lex.europa.eu" target="_blank">EUR-Lex</a>.<span class="footer-version">v0.1</span></p>
   </footer>
-
-  <span class="version-badge" aria-hidden="true">v0.1</span>
 
   <script src="app.js" defer></script>
 </body>

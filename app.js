@@ -3,12 +3,13 @@ const listMessage = document.getElementById('listMessage');
 const statusMessage = document.getElementById('statusMessage');
 const searchInput = document.getElementById('searchInput');
 const articleNumberElement = document.getElementById('articleNumber');
-const articleActNameElement = document.getElementById('articleActName');
 const articleTitleElement = document.getElementById('articleTitle');
 const articleSubtitleElement = document.getElementById('articleSubtitle');
+const breadcrumbElement = document.getElementById('breadcrumb');
 const paragraphsContainer = document.getElementById('paragraphsContainer');
 const prevButton = document.getElementById('prevArticle');
 const nextButton = document.getElementById('nextArticle');
+const articleNav = document.querySelector('.article-navigation');
 const sidePanel = document.querySelector('.side-panel');
 const collapseAllButton = document.getElementById('collapseAllButton');
 
@@ -565,9 +566,12 @@ const updateNavigationButtons = () => {
   if (!visibleArticles.length || index === -1) {
     prevButton.disabled = true;
     nextButton.disabled = true;
+    // Pagination only makes sense inside a single-article view.
+    if (articleNav) articleNav.hidden = true;
     return;
   }
 
+  if (articleNav) articleNav.hidden = false;
   prevButton.disabled = index <= 0;
   nextButton.disabled = index >= visibleArticles.length - 1;
 };
@@ -603,19 +607,97 @@ const updateStatus = () => {
   statusMessage.textContent = '';
 };
 
+// Find the folder path (root -> target) for a bundle id, including nested folders.
+const findBundlePath = (id, bundles = allBundles, trail = []) => {
+  for (const b of bundles) {
+    if (!b) continue;
+    const nextTrail = [...trail, b];
+    if (b.id === id) return nextTrail;
+    if (Array.isArray(b.members)) {
+      const nested = b.members.filter((m) => m && m.type === 'bundle');
+      const found = findBundlePath(id, nested, nextTrail);
+      if (found) return found;
+    }
+  }
+  return null;
+};
+
+// Small type-indicator icon for sidebar rows (folder vs. document).
+const chipIcon = (kind) => {
+  if (kind === 'bundle') {
+    return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>';
+  }
+  return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><polyline points="13 2 13 9 20 9"/></svg>';
+};
+
+// Render a breadcrumb (path of ancestors). Crumbs with a hash are links.
+const renderBreadcrumb = (crumbs) => {
+  if (!breadcrumbElement) return;
+  breadcrumbElement.innerHTML = '';
+  if (!Array.isArray(crumbs) || !crumbs.length) return;
+
+  crumbs.forEach((crumb, index) => {
+    if (index > 0) {
+      const sep = document.createElement('span');
+      sep.className = 'crumb-sep';
+      sep.textContent = '\u203a';
+      sep.setAttribute('aria-hidden', 'true');
+      breadcrumbElement.appendChild(sep);
+    }
+
+    if (!crumb.hash) {
+      const current = document.createElement('span');
+      current.className = 'crumb is-current';
+      current.textContent = crumb.label;
+      breadcrumbElement.appendChild(current);
+      return;
+    }
+
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'crumb';
+    btn.textContent = crumb.label;
+    btn.addEventListener('click', () => {
+      try {
+        window.location.hash = crumb.hash;
+      } catch (e) {
+        window.location.href = `${window.location.pathname}${window.location.search}#${crumb.hash}`;
+      }
+    });
+    breadcrumbElement.appendChild(btn);
+  });
+};
+
 const buildEmptyState = () => {
   const wrap = document.createElement('div');
   wrap.className = 'empty-state';
 
-  const logo = document.createElement('img');
-  logo.src = 'ciso.png';
-  logo.alt = '';
-  logo.className = 'empty-state-logo';
-  wrap.appendChild(logo);
+  const icon = document.createElement('span');
+  icon.className = 'empty-state-icon';
+  icon.setAttribute('aria-hidden', 'true');
+  icon.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><polyline points="13 2 13 9 20 9"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="14" y2="17"/></svg>';
+  wrap.appendChild(icon);
 
   const text = document.createElement('p');
   text.className = 'empty-state-text';
   text.textContent = 'Select a regulation to begin';
+  wrap.appendChild(text);
+
+  return wrap;
+};
+
+const buildLoadingState = () => {
+  const wrap = document.createElement('div');
+  wrap.className = 'loading-state';
+
+  const spinner = document.createElement('span');
+  spinner.className = 'loading-spinner';
+  spinner.setAttribute('aria-hidden', 'true');
+  wrap.appendChild(spinner);
+
+  const text = document.createElement('p');
+  text.className = 'loading-text';
+  text.textContent = 'Loading regulations\u2026';
   wrap.appendChild(text);
 
   return wrap;
@@ -635,7 +717,7 @@ const renderArticleDetail = (article) => {
     }
 
     articleNumberElement.textContent = '';
-    if (articleActNameElement) articleActNameElement.textContent = '';
+    renderBreadcrumb([]);
     articleTitleElement.textContent = '';
     articleSubtitleElement.textContent = '';
     paragraphsContainer.innerHTML = '';
@@ -647,10 +729,10 @@ const renderArticleDetail = (article) => {
   const numberText = (article.title || article.id || '').trim();
 
   articleNumberElement.textContent = numberText;
-  if (articleActNameElement) {
-    const parentAct = allActs.find((item) => item.id === article._actId);
-    articleActNameElement.textContent = parentAct ? (parentAct.title || parentAct.id || '') : '';
-  }
+  const parentAct = allActs.find((item) => item.id === article._actId);
+  renderBreadcrumb(parentAct
+    ? [{ label: parentAct.title || parentAct.id, hash: `act:${parentAct.id}` }]
+    : []);
   articleTitleElement.textContent = headingText || numberText;
   articleSubtitleElement.textContent = '';
 
@@ -699,8 +781,8 @@ const renderAct = (act) => {
     return;
   }
 
-  articleNumberElement.textContent = 'Act';
-  if (articleActNameElement) articleActNameElement.textContent = '';
+  articleNumberElement.textContent = '';
+  renderBreadcrumb([]);
   articleTitleElement.textContent = act.title || act.id || '';
   articleSubtitleElement.textContent = act.heading || '';
 
@@ -745,8 +827,10 @@ const renderBundle = (bundle) => {
     return;
   }
 
-  articleNumberElement.textContent = bundle.id || '';
-  if (articleActNameElement) articleActNameElement.textContent = '';
+  articleNumberElement.textContent = '';
+  const bundlePath = findBundlePath(bundle.id) || [bundle];
+  const ancestors = bundlePath.slice(0, -1);
+  renderBreadcrumb(ancestors.map((b) => ({ label: b.title || b.id, hash: `bundle:${b.id}` })));
   articleTitleElement.textContent = bundle.title || bundle.id || '';
   articleSubtitleElement.textContent = '';
 
@@ -960,9 +1044,7 @@ const renderSidebarList = (items = []) => {
 
     const subChip = document.createElement('span');
     subChip.className = 'item-chip bundle';
-    subChip.textContent = 'folder';
-    subButton.appendChild(subChip);
-
+        subChip.innerHTML = chipIcon('bundle');
     const subTitle = document.createElement('span');
     subTitle.className = 'list-article-number';
     subTitle.textContent = folder.title || folder.id;
@@ -1056,7 +1138,7 @@ const renderSidebarList = (items = []) => {
     const chip = document.createElement('span');
     chip.className = 'item-chip';
     chip.classList.add(kind);
-    chip.textContent = kind === 'bundle' ? 'folder' : kind;
+    chip.innerHTML = chipIcon(kind);
     button.appendChild(chip);
 
     const numberSpan = document.createElement('span');
@@ -1155,20 +1237,23 @@ const renderSidebarList = (items = []) => {
   highlightActiveLink();
   updateCollapseAllButton();
   if (sidePanel) {
-    // Postpone scroll restoration to allow DOM to settle
+    // Postpone scroll handling to allow the DOM to settle
     requestAnimationFrame(() => {
-      // If there's an active selection, scroll it into view
-      if (currentSidebarSelectionKey) {
-        const activeButton = articleButtons.get(currentSidebarSelectionKey);
-        if (activeButton) {
-          // Use scrollIntoView with minimal block to prevent jarring jumps
+      // Always restore the pre-render scroll first so a click never yanks the
+      // list around — the clicked row stays exactly under the cursor.
+      sidePanel.scrollTop = savedScrollPosition;
+
+      // Only nudge the active item into view if it ended up outside the panel
+      // (e.g. when navigating via a breadcrumb, hash link, or keyboard).
+      const activeKey = currentArticleSelectionKey || currentSidebarSelectionKey;
+      const activeButton = activeKey ? articleButtons.get(activeKey) : null;
+      if (activeButton) {
+        const panelRect = sidePanel.getBoundingClientRect();
+        const itemRect = activeButton.getBoundingClientRect();
+        if (itemRect.top < panelRect.top || itemRect.bottom > panelRect.bottom) {
           activeButton.scrollIntoView({ block: 'nearest', behavior: 'auto' });
-          return;
         }
       }
-      
-      // Otherwise restore saved scroll position
-      sidePanel.scrollTop = savedScrollPosition;
     });
   }
 };
@@ -1317,11 +1402,14 @@ const handleRoute = (hashId) => {
       statusMessage.textContent = `Bundle ${id} not found.`;
       return true;
     }
+    // Expand the containing folders so the sidebar reflects where we are.
+    const ancestors = (findBundlePath(id) || [bundle]).slice(0, -1);
+    ancestors.forEach((b) => expandedBundleIds.add(b.id));
     renderItem(bundle);
     currentSidebarSelectionKey = `bundle:${id}`;
     currentArticleSelectionKey = null;
-    highlightActiveLink();
     currentArticleId = null;
+    renderArticleList();
     updateNavigationButtons();
     updateStatus();
     return true;
@@ -1502,8 +1590,21 @@ const applyFilter = (query) => {
   highlightSearchMatches(lastSearchQuery);
 };
 
+let searchDebounceTimer = null;
+
 const handleSearchInput = (event) => {
-  applyFilter(event.target.value);
+  const value = event.target.value;
+  window.clearTimeout(searchDebounceTimer);
+
+  // Clearing the field should feel instant; typing is debounced.
+  if (!value.trim()) {
+    applyFilter(value);
+    return;
+  }
+
+  searchDebounceTimer = window.setTimeout(() => {
+    applyFilter(value);
+  }, 180);
 };
 
 const clearSearch = () => {
@@ -1609,6 +1710,10 @@ const loadAllData = async () => {
 const fetchArticles = async () => {
   statusMessage.textContent = 'Loading articles...';
   listMessage.textContent = 'Loading articles...';
+  if (paragraphsContainer) {
+    paragraphsContainer.innerHTML = '';
+    paragraphsContainer.appendChild(buildLoadingState());
+  }
 
   try {
     const { acts, bundles, articles } = await loadAllData();
