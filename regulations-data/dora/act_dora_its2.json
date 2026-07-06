@@ -2,7 +2,7 @@
   "type": "act",
   "id": "act_dora_its2",
   "title": "ITS 2",
-  "heading": "Commission Implementing Regulation (Eu) 2024/2956",
+  "heading": "Implementing Regulation (EU) 2024/2956",
   "source": {
     "uri": "",
     "label": "EUR-Lex"
@@ -43,7 +43,7 @@
       "paragraphs": [
         {
           "id": "art_3__1",
-          "text": "1. Financial entities shall use the templates set out in Annex I to IV to maintain and update the register of information in accordance with Article 28(3) of Regulation (EU) 2022/2554, at entity level, or at sub-consolidated and consolidated level.",
+          "text": "1. Financial entities shall use the templates set out in Annex I to IV to maintain and update the register of information in accordance with Article 28(3) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a>, at entity level, or at sub-consolidated and consolidated level.",
           "class": ""
         },
         {
@@ -103,7 +103,7 @@
         },
         {
           "id": "art_3__13",
-          "text": "5. Financial entities shall use a valid and active legal entity identifier (LEI) or the European Unique Identifier referred to in Article 16 of Directive (EU) 2017/1132 (‘EUID’), and where available both of these identifiers, to identify all of their ICT third-party service providers that are legal persons, except for individuals acting in a business capacity.",
+          "text": "5. Financial entities shall use a valid and active legal entity identifier (LEI) or the European Unique Identifier referred to in Article 16 of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32017L1132\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Directive (EU) 2017/1132 – opens on EUR-Lex\">Directive (EU) 2017/1132</a> (‘EUID’), and where available both of these identifiers, to identify all of their ICT third-party service providers that are legal persons, except for individuals acting in a business capacity.",
           "class": ""
         },
         {

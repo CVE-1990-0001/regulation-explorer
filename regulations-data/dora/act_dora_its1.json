@@ -2,7 +2,7 @@
   "type": "act",
   "id": "act_dora_its1",
   "title": "ITS 1",
-  "heading": "Commission Implementing Regulation (Eu) 2025/302",
+  "heading": "Implementing Regulation (EU) 2025/302",
   "source": {
     "uri": "",
     "label": "EUR-Lex"
@@ -19,22 +19,22 @@
       "paragraphs": [
         {
           "id": "art_1__1",
-          "text": "1. Financial entities shall use the template laid down in Annex I to submit the initial notification, the intermediate report, and the final report referred to in Article 19(4) of Regulation (EU) 2022/2554 as follows:",
+          "text": "1. Financial entities shall use the template laid down in Annex I to submit the initial notification, the intermediate report, and the final report referred to in Article 19(4) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a> as follows:",
           "class": ""
         },
         {
           "id": "art_1__2",
-          "text": "(a) financial entities that submit an initial notification shall complete the data fields of the template which correspond to the information to be provided in accordance with Article 2 of Commission Delegated Regulation (EU) 2025/301 ( 7 ) , and may, where they already have that information, complete those data fields the completion of which is not required for an initial notification but is required for an intermediate or final report;",
+          "text": "(a) financial entities that submit an initial notification shall complete the data fields of the template which correspond to the information to be provided in accordance with <a href=\"#a:act_dora_its1:art_2\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 2</a> of Commission Delegated <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R0301\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2025/301 – opens on EUR-Lex\">Regulation (EU) 2025/301</a> ( 7 ) , and may, where they already have that information, complete those data fields the completion of which is not required for an initial notification but is required for an intermediate or final report;",
           "class": "list-item-l1"
         },
         {
           "id": "art_1__3",
-          "text": "(b) financial entities that submit an intermediate report shall complete the data fields of the template which correspond to the information to be provided in accordance with Article 3 of Delegated Regulation (EU) 2025/301 and may, where they already have the relevant information, complete data fields the completion of which is not required for the intermediate report, but is required for the final report.",
+          "text": "(b) financial entities that submit an intermediate report shall complete the data fields of the template which correspond to the information to be provided in accordance with <a href=\"#a:act_dora_its1:art_3\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 3</a> of Delegated <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R0301\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2025/301 – opens on EUR-Lex\">Regulation (EU) 2025/301</a> and may, where they already have the relevant information, complete data fields the completion of which is not required for the intermediate report, but is required for the final report.",
           "class": "list-item-l1"
         },
         {
           "id": "art_1__4",
-          "text": "(c) financial entities that submit a final report shall complete the data fields of the template which correspond to the information to be provided in accordance with Article 4 of Delegated Regulation (EU) 2025/301.",
+          "text": "(c) financial entities that submit a final report shall complete the data fields of the template which correspond to the information to be provided in accordance with <a href=\"#a:act_dora_its1:art_4\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 4</a> of Delegated <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R0301\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2025/301 – opens on EUR-Lex\">Regulation (EU) 2025/301</a>.",
           "class": "list-item-l1"
         },
         {
@@ -66,7 +66,7 @@
       "paragraphs": [
         {
           "id": "art_2__1",
-          "text": "Financial entities may combine the submission of the initial notification, the intermediate report, and the final report to provide two or all of those at the same time, where regular activities have recovered or the root cause analysis has been completed and provided that the time limits set out in Article 5 of Delegated Regulation (EU) 2025/301 are met.",
+          "text": "Financial entities may combine the submission of the initial notification, the intermediate report, and the final report to provide two or all of those at the same time, where regular activities have recovered or the root cause analysis has been completed and provided that the time limits set out in <a href=\"#a:act_dora_its1:art_5\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 5</a> of Delegated <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R0301\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2025/301 – opens on EUR-Lex\">Regulation (EU) 2025/301</a> are met.",
           "class": ""
         }
       ]
@@ -78,7 +78,7 @@
       "paragraphs": [
         {
           "id": "art_3__1",
-          "text": "Financial entities that provide information on non-major recurring ICT-related incidents that cumulatively meet the conditions for one major ICT-related incident as set out in Article 8(2) of Delegated Regulation (EU) 2024/1772, shall provide that information in an aggregated form.",
+          "text": "Financial entities that provide information on non-major recurring ICT-related incidents that cumulatively meet the conditions for one major ICT-related incident as set out in <a href=\"#a:act_dora_its1:art_8\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 8</a>(2) of Delegated <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1772\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2024/1772 – opens on EUR-Lex\">Regulation (EU) 2024/1772</a>, shall provide that information in an aggregated form.",
           "class": ""
         }
       ]
@@ -107,7 +107,7 @@
       "paragraphs": [
         {
           "id": "art_5__1",
-          "text": "Where after further assessment, the financial entity concludes that the ICT-related incident previously reported as major, at no time fulfilled the classification criteria and thresholds set out in Article 8 of Delegated Regulation (EU) 2024/1772, the financial entity shall notify to the competent authority that it has reclassified the ICT-related incident from major to non-major by providing the information about that reclassification in the template laid down in Annex II to this Regulation in relation to the fields ‘type of report’ and ‘other information’.",
+          "text": "Where after further assessment, the financial entity concludes that the ICT-related incident previously reported as major, at no time fulfilled the classification criteria and thresholds set out in <a href=\"#a:act_dora_its1:art_8\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 8</a> of Delegated <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1772\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2024/1772 – opens on EUR-Lex\">Regulation (EU) 2024/1772</a>, the financial entity shall notify to the competent authority that it has reclassified the ICT-related incident from major to non-major by providing the information about that reclassification in the template laid down in Annex II to this Regulation in relation to the fields ‘type of report’ and ‘other information’.",
           "class": ""
         }
       ]
@@ -119,7 +119,7 @@
       "paragraphs": [
         {
           "id": "art_6__1",
-          "text": "1. Financial entities that have outsourced the obligation to report major ICT-related incidents in accordance with Article 19(5) of Regulation (EU) 2022/2554 shall inform their competent authority of that outsourcing arrangement as soon as the outsourcing arrangement has been concluded and at the latest prior to the first notification or reporting.",
+          "text": "1. Financial entities that have outsourced the obligation to report major ICT-related incidents in accordance with Article 19(5) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a> shall inform their competent authority of that outsourcing arrangement as soon as the outsourcing arrangement has been concluded and at the latest prior to the first notification or reporting.",
           "class": ""
         },
         {
@@ -129,7 +129,7 @@
         },
         {
           "id": "art_6__3",
-          "text": "3. Financial entities shall inform their competent authority as soon as they no longer outsource their reporting obligations as referred to in Article 19(5) of Regulation (EU) 2022/2554.",
+          "text": "3. Financial entities shall inform their competent authority as soon as they no longer outsource their reporting obligations as referred to in Article 19(5) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a>.",
           "class": ""
         }
       ]
@@ -141,7 +141,7 @@
       "paragraphs": [
         {
           "id": "art_7__1",
-          "text": "1. A third-party service provider to whom reporting obligations have been outsourced as referred to in Article 19(5) of Regulation (EU) 2022/2554 may use the template set out in Annex I to this Regulation to provide aggregated information about a major ICT-related incident impacting multiple financial entities in one single notification or report, and submit that notification or report to the competent authority on behalf of all impacted financial entities, provided that all of the following conditions are met:",
+          "text": "1. A third-party service provider to whom reporting obligations have been outsourced as referred to in Article 19(5) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a> may use the template set out in Annex I to this Regulation to provide aggregated information about a major ICT-related incident impacting multiple financial entities in one single notification or report, and submit that notification or report to the competent authority on behalf of all impacted financial entities, provided that all of the following conditions are met:",
           "class": ""
         },
         {
@@ -171,7 +171,7 @@
         },
         {
           "id": "art_7__7",
-          "text": "2. Paragraph 1 shall not apply to credit institutions that are considered to be of significant relevance as referred to in Article 2 point (16) of Regulation (EU) No 468/2014 of the European Central Bank ( 8 ) , operators of trading venues, and central counterparties, which shall only use the template in Annex I to submit major ICT-related incident notifications or reports individually to their competent authority.",
+          "text": "2. Paragraph 1 shall not apply to credit institutions that are considered to be of significant relevance as referred to in <a href=\"#a:act_dora_its1:art_2\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 2</a> point (16) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0468\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) No 468/2014 – opens on EUR-Lex\">Regulation (EU) No 468/2014</a> of the European Central Bank ( 8 ) , operators of trading venues, and central counterparties, which shall only use the template in Annex I to submit major ICT-related incident notifications or reports individually to their competent authority.",
           "class": ""
         },
         {
@@ -188,7 +188,7 @@
       "paragraphs": [
         {
           "id": "art_8__1",
-          "text": "1. Financial entities that notify significant cyber threats to competent authorities in accordance with Article 19(2) of Regulation (EU) 2022/2554 shall use the template laid down in Annex III to this Regulation and follow the data glossary and instructions set out Annex IV to this Regulation.",
+          "text": "1. Financial entities that notify significant cyber threats to competent authorities in accordance with Article 19(2) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a> shall use the template laid down in Annex III to this Regulation and follow the data glossary and instructions set out Annex IV to this Regulation.",
           "class": ""
         },
         {

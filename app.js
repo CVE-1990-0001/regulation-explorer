@@ -545,7 +545,9 @@ const updateListMessage = () => {
     return;
   }
 
-  listMessage.textContent = `${visibleSidebarItems.length} of ${allSidebarItems.length} items`;
+  // Search filters across every act (including those inside folders), so the
+  // total is the full act count, not just the top-level sidebar items.
+  listMessage.textContent = `${visibleSidebarItems.length} of ${allActs.length} items`;
 };
 
 const highlightActiveLink = () => {
@@ -1676,7 +1678,7 @@ const loadAllData = async () => {
         type: 'act',
         id: entry.id,
         title: entry.label || entry.id,
-        heading: 'Consolidated',
+        heading: entry.heading || '',
         source: {
           uri: '',
           label: 'EUR-Lex',

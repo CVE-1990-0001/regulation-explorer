@@ -47,7 +47,7 @@ def main():
         "heading": args.heading,
         "source": {"uri": "", "label": "EUR-Lex"},
         "meta": {"jurisdiction": "EU", "celex": doc.get("celex")},
-        "articles": convert_dora.build_articles(doc),
+        "articles": convert_dora.build_articles(doc, args.id),
     }
     with open(os.path.join(APP, args.out), "w", encoding="utf-8") as fh:
         json.dump(act, fh, ensure_ascii=False, indent=2)

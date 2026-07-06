@@ -2,7 +2,7 @@
   "type": "act",
   "id": "act_dora_rts4",
   "title": "RTS 4",
-  "heading": "Commission Delegated Regulation (Eu) 2025/1190",
+  "heading": "Delegated Regulation (EU) 2025/1190",
   "source": {
     "uri": "",
     "label": "EUR-Lex"
@@ -19,7 +19,7 @@
       "paragraphs": [
         {
           "id": "art_1__1",
-          "text": "For the purposes of this Regulation, the following definitions shall apply: (1) ‘control team’ means the team composed of staff of the tested financial entity and, where relevant in consideration of the scope of the TLPT, staff of its third-party service providers and any other party, who manages the test; (2) ‘control team lead’ means the staff member of the financial entity responsible for the conduct of all TLPT-related activities for the financial entity in the context of a given test; (3) ‘blue team’ means the staff of the financial entity and, where relevant, staff of the financial entity’s third-party service providers and any other party deemed relevant in consideration of the scope of the TLPT, of the financial entity’s third-party service providers, that are defending a financial entity&#x27;s use of network and information systems by maintaining its security posture against simulated or real attacks and that is not aware of the TLPT; (4) ‘blue team tasks’ means tasks that are typically carried out by the blue team such as security operation centre (SOC), ICT infrastructure services, helpdesk services, incident management services at operational level; (5) ‘red team’ means the testers, internal or external, contracted for, or assigned to, a TLPT; (6) ‘purple teaming’ means a collaborative testing activity that involves both the testers and the blue team; (7) ‘TLPT authority’ means any of the following: (a) the single public authority in the financial sector designated in accordance with Article 26(9) of Regulation (EU) 2022/2554; (b) the authority in the financial sector to which the exercise of some or all of the tasks in relation to TLPT is delegated in accordance with Article 26(10) of Regulation (EU) 2022/2554; (c) any of the competent authorities referred to in Article 46 of Regulation (EU) 2022/2554; (8) ‘TLPT Cyber Team’ or ‘TCT’ means the staff within the TLPT authorities that is responsible for TLPT-related matters; (9) ‘test managers’ means staff designated to lead the activities of the TLPT authority for a specific TLPT to monitor compliance with this Regulation; (10) ‘threat intelligence provider’ means the experts, contracted by the financial entity for each TLPT, and external to the financial entity and to ICT intra-group service providers if any, who collect and analyse targeted threat intelligence relevant for the financial entities in scope of a specific TLPT exercise and develop matching relevant and realistic threat scenarios; (11) ‘TLPT providers’ means testers and threat intelligence providers; (12) ‘leg-up’ means the assistance or information provided by the control team to the testers to enable the testers to continue the execution of an attack path where they are not able to advance on their own, and where no other reasonable alternative exists, including for insufficient time or resources in a given TLPT; (13) ‘attack path’ means the route followed by testers during the active red team testing phase of the TLPT to reach the flags specified for that TLPT; (14) ‘flags’ are key objectives in the ICT systems supporting critical or important functions of a financial entity that the testers try to achieve through the test; (15) ‘sensitive information’ means information that can readily be leveraged to carry out attacks against the ICT systems of the financial entity, intellectual property, confidential business data, or personal data, that can directly or indirectly harm the financial entity and its ecosystem would it fall in the hands of malicious actors; (16) ‘pool’ means all the financial entities participating in a pooled TLPT pursuant to Article 26(4) of Regulation (EU) 2022/2554; (17) ‘host Member State’ means the host Member State in accordance with the Union sectoral law applicable to each financial entity; (18) ‘joint TLPT’ means a TLPT, other than a pooled TLPT as referred to in Article 26(4) of Regulation (EU) 2022/2554, involving several financial entities using the same ICT intra-group service provider, or belonging to the same group and sharing ICT systems.",
+          "text": "For the purposes of this Regulation, the following definitions shall apply: (1) ‘control team’ means the team composed of staff of the tested financial entity and, where relevant in consideration of the scope of the TLPT, staff of its third-party service providers and any other party, who manages the test; (2) ‘control team lead’ means the staff member of the financial entity responsible for the conduct of all TLPT-related activities for the financial entity in the context of a given test; (3) ‘blue team’ means the staff of the financial entity and, where relevant, staff of the financial entity’s third-party service providers and any other party deemed relevant in consideration of the scope of the TLPT, of the financial entity’s third-party service providers, that are defending a financial entity&#x27;s use of network and information systems by maintaining its security posture against simulated or real attacks and that is not aware of the TLPT; (4) ‘blue team tasks’ means tasks that are typically carried out by the blue team such as security operation centre (SOC), ICT infrastructure services, helpdesk services, incident management services at operational level; (5) ‘red team’ means the testers, internal or external, contracted for, or assigned to, a TLPT; (6) ‘purple teaming’ means a collaborative testing activity that involves both the testers and the blue team; (7) ‘TLPT authority’ means any of the following: (a) the single public authority in the financial sector designated in accordance with Article 26(9) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a>; (b) the authority in the financial sector to which the exercise of some or all of the tasks in relation to TLPT is delegated in accordance with Article 26(10) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a>; (c) any of the competent authorities referred to in Article 46 of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a>; (8) ‘TLPT Cyber Team’ or ‘TCT’ means the staff within the TLPT authorities that is responsible for TLPT-related matters; (9) ‘test managers’ means staff designated to lead the activities of the TLPT authority for a specific TLPT to monitor compliance with this Regulation; (10) ‘threat intelligence provider’ means the experts, contracted by the financial entity for each TLPT, and external to the financial entity and to ICT intra-group service providers if any, who collect and analyse targeted threat intelligence relevant for the financial entities in scope of a specific TLPT exercise and develop matching relevant and realistic threat scenarios; (11) ‘TLPT providers’ means testers and threat intelligence providers; (12) ‘leg-up’ means the assistance or information provided by the control team to the testers to enable the testers to continue the execution of an attack path where they are not able to advance on their own, and where no other reasonable alternative exists, including for insufficient time or resources in a given TLPT; (13) ‘attack path’ means the route followed by testers during the active red team testing phase of the TLPT to reach the flags specified for that TLPT; (14) ‘flags’ are key objectives in the ICT systems supporting critical or important functions of a financial entity that the testers try to achieve through the test; (15) ‘sensitive information’ means information that can readily be leveraged to carry out attacks against the ICT systems of the financial entity, intellectual property, confidential business data, or personal data, that can directly or indirectly harm the financial entity and its ecosystem would it fall in the hands of malicious actors; (16) ‘pool’ means all the financial entities participating in a pooled TLPT pursuant to Article 26(4) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a>; (17) ‘host Member State’ means the host Member State in accordance with the Union sectoral law applicable to each financial entity; (18) ‘joint TLPT’ means a TLPT, other than a pooled TLPT as referred to in Article 26(4) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a>, involving several financial entities using the same ICT intra-group service provider, or belonging to the same group and sharing ICT systems.",
           "class": ""
         }
       ]
@@ -176,12 +176,12 @@
         },
         {
           "id": "art_2__30",
-          "text": "(i) they have been identified as global systemically important institutions (G-SIIs) in accordance with Article 131 of Directive 2013/36/EU of the European Parliament and of the Council ( 7 ) ;",
+          "text": "(i) they have been identified as global systemically important institutions (G-SIIs) in accordance with Article 131 of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013L0036\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Directive 2013/36/EU – opens on EUR-Lex\">Directive 2013/36/EU</a> of the European Parliament and of the Council ( 7 ) ;",
           "class": "list-item-l2"
         },
         {
           "id": "art_2__31",
-          "text": "(ii) they have been identified as other systemically important institutions (O-SIIs) in accordance with Article 131 of Directive 2013/36/EU;",
+          "text": "(ii) they have been identified as other systemically important institutions (O-SIIs) in accordance with Article 131 of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013L0036\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Directive 2013/36/EU – opens on EUR-Lex\">Directive 2013/36/EU</a>;",
           "class": "list-item-l2"
         },
         {
@@ -191,12 +191,12 @@
         },
         {
           "id": "art_2__33",
-          "text": "(b) payment institutions that exceeded in each of the 2 calendar years preceding the assessment by the TLPT authority EUR 150 billion of total value of payment transactions as defined in Article 4, point (5), of Directive (EU) 2015/2366 of the European Parliament and of the Council ( 8 ) ;",
+          "text": "(b) payment institutions that exceeded in each of the 2 calendar years preceding the assessment by the TLPT authority EUR 150 billion of total value of payment transactions as defined in <a href=\"#a:act_dora_rts4:art_4\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 4</a>, point (5), of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32015L2366\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Directive (EU) 2015/2366 – opens on EUR-Lex\">Directive (EU) 2015/2366</a> of the European Parliament and of the Council ( 8 ) ;",
           "class": "list-item-l1"
         },
         {
           "id": "art_2__34",
-          "text": "(c) electronic money institutions that exceeded in each of the 2 calendar years preceding the assessment by the TLPT authority either EUR 150 billion of total value of payment transactions as defined in Article 4, point (5), of Directive (EU) 2015/2366 or EUR 40 billion of total value of the amount of outstanding electronic money;",
+          "text": "(c) electronic money institutions that exceeded in each of the 2 calendar years preceding the assessment by the TLPT authority either EUR 150 billion of total value of payment transactions as defined in <a href=\"#a:act_dora_rts4:art_4\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 4</a>, point (5), of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32015L2366\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Directive (EU) 2015/2366 – opens on EUR-Lex\">Directive (EU) 2015/2366</a> or EUR 40 billion of total value of the amount of outstanding electronic money;",
           "class": "list-item-l1"
         },
         {
@@ -221,27 +221,27 @@
         },
         {
           "id": "art_2__39",
-          "text": "(1) transferable securities as defined in Article 4(1), point (44)(a), of Directive 2014/65/EU of the European Parliament and of the Council ( 9 ) ;",
+          "text": "(1) transferable securities as defined in <a href=\"#a:act_dora_rts4:art_4\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 4</a>(1), point (44)(a), of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Directive 2014/65/EU – opens on EUR-Lex\">Directive 2014/65/EU</a> of the European Parliament and of the Council ( 9 ) ;",
           "class": "list-item-l2"
         },
         {
           "id": "art_2__40",
-          "text": "(2) transferable securities as defined in Article 4(1), point (44)(b), of Directive 2014/65/EU;",
+          "text": "(2) transferable securities as defined in <a href=\"#a:act_dora_rts4:art_4\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 4</a>(1), point (44)(b), of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Directive 2014/65/EU – opens on EUR-Lex\">Directive 2014/65/EU</a>;",
           "class": "list-item-l2"
         },
         {
           "id": "art_2__41",
-          "text": "(3) derivatives as defined in Article 2(1), point (29), of Regulation (EU) No 600/2014 of the European Parliament and of the Council ( 10 ) ;",
+          "text": "(3) derivatives as defined in <a href=\"#a:act_dora_rts4:art_2\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 2</a>(1), point (29), of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0600\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) No 600/2014 – opens on EUR-Lex\">Regulation (EU) No 600/2014</a> of the European Parliament and of the Council ( 10 ) ;",
           "class": "list-item-l2"
         },
         {
           "id": "art_2__42",
-          "text": "(4) structured finance products as defined in Article 2(1), point (28), of Regulation (EU) No 600/2014;",
+          "text": "(4) structured finance products as defined in <a href=\"#a:act_dora_rts4:art_2\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 2</a>(1), point (28), of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0600\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) No 600/2014 – opens on EUR-Lex\">Regulation (EU) No 600/2014</a>;",
           "class": "list-item-l2"
         },
         {
           "id": "art_2__43",
-          "text": "(5) emission allowances as referred to in Section C, point (11), of Annex I to Directive 2014/65/EU;",
+          "text": "(5) emission allowances as referred to in Section C, point (11), of Annex I to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Directive 2014/65/EU – opens on EUR-Lex\">Directive 2014/65/EU</a>;",
           "class": "list-item-l2"
         },
         {
@@ -261,7 +261,7 @@
         },
         {
           "id": "art_2__47",
-          "text": "(3) derivatives as defined in Article 2(1), point (29), of Regulation (EU) No 600/2014,",
+          "text": "(3) derivatives as defined in <a href=\"#a:act_dora_rts4:art_2\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 2</a>(1), point (29), of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0600\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) No 600/2014 – opens on EUR-Lex\">Regulation (EU) No 600/2014</a>,",
           "class": "list-item-l2"
         },
         {
@@ -281,7 +281,7 @@
         },
         {
           "id": "art_2__51",
-          "text": "(iii) insurance undertakings that pursue only life activities or that pursue both life and non-life activities and that have total assets that exceed 3,5 % of the sum of the total assets valuated in accordance with Article 75 of Directive 2009/138/EC of the European Parliament and of the Council ( 11 ) of the insurance and reinsurance undertakings established in the Member State.",
+          "text": "(iii) insurance undertakings that pursue only life activities or that pursue both life and non-life activities and that have total assets that exceed 3,5 % of the sum of the total assets valuated in accordance with Article 75 of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32009L0138\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Directive 2009/138/EC – opens on EUR-Lex\">Directive 2009/138/EC</a> of the European Parliament and of the Council ( 11 ) of the insurance and reinsurance undertakings established in the Member State.",
           "class": "list-item-l2"
         },
         {
@@ -296,12 +296,12 @@
         },
         {
           "id": "art_2__54",
-          "text": "(c) total assets that exceed 10 % of the sum of the total assets valuated in accordance with Article 75 of Directive 2009/138/EC of the insurance and reinsurance undertakings established in the Member State.",
+          "text": "(c) total assets that exceed 10 % of the sum of the total assets valuated in accordance with Article 75 of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32009L0138\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Directive 2009/138/EC – opens on EUR-Lex\">Directive 2009/138/EC</a> of the insurance and reinsurance undertakings established in the Member State.",
           "class": "list-item-l1"
         },
         {
           "id": "art_2__55",
-          "text": "3. Where more than one financial entity belonging to the same group and sharing ICT systems, or where more than one financial entity using the same ICT intra-group service provider, meet the criteria set out in paragraph 2, the TLPT authorities of those financial entities shall, in accordance with Article 16(2), decide whether the requirement to perform TLPT on an individual basis is relevant for those financial entities. Where the TLPT authority of the parent undertaking of a group of financial entities referred to in the first subparagraph is different from the TLPT authorities of the financial entities of the group, that authority shall be consulted by the TLPT authorities of the financial entities belonging to that group on whether it is appropriate to perform TLPT on an individual basis.",
+          "text": "3. Where more than one financial entity belonging to the same group and sharing ICT systems, or where more than one financial entity using the same ICT intra-group service provider, meet the criteria set out in paragraph 2, the TLPT authorities of those financial entities shall, in accordance with <a href=\"#a:act_dora_rts4:art_16\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 16</a>(2), decide whether the requirement to perform TLPT on an individual basis is relevant for those financial entities. Where the TLPT authority of the parent undertaking of a group of financial entities referred to in the first subparagraph is different from the TLPT authorities of the financial entities of the group, that authority shall be consulted by the TLPT authorities of the financial entities belonging to that group on whether it is appropriate to perform TLPT on an individual basis.",
           "class": ""
         }
       ]
@@ -328,7 +328,7 @@
         },
         {
           "id": "art_3__4",
-          "text": "4. The test manager shall communicate the contact details of the TCT to the financial entity through the notification referred to in Article 9(1).",
+          "text": "4. The test manager shall communicate the contact details of the TCT to the financial entity through the notification referred to in <a href=\"#a:act_dora_rts4:art_9\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 9</a>(1).",
           "class": ""
         },
         {
@@ -392,7 +392,7 @@
       "paragraphs": [
         {
           "id": "art_5__1",
-          "text": "1. During the preparation phase referred to in Article 9, the control team shall assess the risks associated with the testing of live production systems of critical or important functions of the financial entity, including potential impacts on: The control team shall review those impacts throughout the testing.",
+          "text": "1. During the preparation phase referred to in <a href=\"#a:act_dora_rts4:art_9\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 9</a>, the control team shall assess the risks associated with the testing of live production systems of critical or important functions of the financial entity, including potential impacts on: The control team shall review those impacts throughout the testing.",
           "class": ""
         },
         {
@@ -417,7 +417,7 @@
         },
         {
           "id": "art_5__6",
-          "text": "(b) lack of compliance of the TLPT with Regulation (EU) 2022/2554 and with this Regulation where such lack of compliance results in a lack of the attestation referred to in Article 26(7) of Regulation (EU) 2022/2554, including where such lack of compliance is due to breaches of confidentiality on the TLPT or to a lack of ethical conduct;",
+          "text": "(b) lack of compliance of the TLPT with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a> and with this Regulation where such lack of compliance results in a lack of the attestation referred to in Article 26(7) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a>, including where such lack of compliance is due to breaches of confidentiality on the TLPT or to a lack of ethical conduct;",
           "class": "list-item-l1"
         },
         {
@@ -454,7 +454,7 @@
         },
         {
           "id": "art_6__2",
-          "text": "2. The control team of the designated financial entity referred to in Article 16(3), point (b), of this Regulation, or the financial entity designated in accordance with Article 26(4) of Regulation (EU) 2022/2554, shall assess the risks relating to the involvement in the TLPT of multiple financial entities. The control teams of the involved financial entities shall cooperate with the control team of the designated financial entity to identify potential joint risks.",
+          "text": "2. The control team of the designated financial entity referred to in <a href=\"#a:act_dora_rts4:art_16\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 16</a>(3), point (b), of this Regulation, or the financial entity designated in accordance with Article 26(4) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a>, shall assess the risks relating to the involvement in the TLPT of multiple financial entities. The control teams of the involved financial entities shall cooperate with the control team of the designated financial entity to identify potential joint risks.",
           "class": ""
         }
       ]
@@ -648,12 +648,12 @@
       "paragraphs": [
         {
           "id": "art_8__1",
-          "text": "1. Unless otherwise decided by the lead TLPT authority, where several financial entities, identified in accordance with Article 16(2) or (4), are involved in a pooled or joint TLPT, each financial entity shall follow each of the steps set out in Articles 9 to 15.",
+          "text": "1. Unless otherwise decided by the lead TLPT authority, where several financial entities, identified in accordance with <a href=\"#a:act_dora_rts4:art_16\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 16</a>(2) or (4), are involved in a pooled or joint TLPT, each financial entity shall follow each of the steps set out in Articles <a href=\"#a:act_dora_rts4:art_9\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">9</a> to <a href=\"#a:act_dora_rts4:art_15\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">15</a>.",
           "class": ""
         },
         {
           "id": "art_8__2",
-          "text": "2. Unless otherwise provided in this Regulation, where several TLPT authorities are involved in a joint TLPT or in a pooled TLPT, as referred to in Article 16(3) or 16(5), references in Articles 9 to 15 to the ‘TLPT authority’ shall be understood as a reference to the lead TLPT authority for such pooled or joint TLPT.",
+          "text": "2. Unless otherwise provided in this Regulation, where several TLPT authorities are involved in a joint TLPT or in a pooled TLPT, as referred to in <a href=\"#a:act_dora_rts4:art_16\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 16</a>(3) or 16(5), references in Articles <a href=\"#a:act_dora_rts4:art_9\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">9</a> to <a href=\"#a:act_dora_rts4:art_15\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">15</a> to the ‘TLPT authority’ shall be understood as a reference to the lead TLPT authority for such pooled or joint TLPT.",
           "class": ""
         }
       ]
@@ -665,7 +665,7 @@
       "paragraphs": [
         {
           "id": "art_9__1",
-          "text": "1. A financial entity identified pursuant to Article 26, paragraph 8, third subparagraph of Regulation (EU) 2022/2554 shall initiate a TLPT following a notification from the TLPT authority that a TLPT is to be carried out.",
+          "text": "1. A financial entity identified pursuant to Article 26, paragraph 8, third subparagraph of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a> shall initiate a TLPT following a notification from the TLPT authority that a TLPT is to be carried out.",
           "class": ""
         },
         {
@@ -685,7 +685,7 @@
         },
         {
           "id": "art_9__5",
-          "text": "(c) information on the intended use of internal or external testers or both, where relevant as detailed in Article 15;",
+          "text": "(c) information on the intended use of internal or external testers or both, where relevant as detailed in <a href=\"#a:act_dora_rts4:art_15\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 15</a>;",
           "class": "list-item-l1"
         },
         {
@@ -810,7 +810,7 @@
         },
         {
           "id": "art_9__30",
-          "text": "11. The control team shall assess the compliance of threat intelligence providers and testers they consider involving in the TLPT with the requirements laid down in Article 27 of Regulation (EU) 2022/2554 and with Article 7(1) of this Regulation, and document the outcome of that assessment. The control team shall select threat intelligence providers in accordance with that assessment and with its risk management practices. Prior to contracting the selected threat intelligence providers and external testers, the control team shall provide to the test managers evidence of compliance of those threat intelligence providers and testers with the requirements laid down in Article 27 of Regulation (EU) 2022/2554 and with Article 7(1) of this Regulation. The control team shall not proceed with contracting the selected threat intelligence providers and external testers where the TLPT authority is of the opinion that the selected threat intelligence providers and external testers do not comply with the requirements laid down in Article 27 of Regulation (EU) 2022/2554, or with the requirements laid down in Article 7(1) of this Regulation or with additional requirements stemming from national security legislations in accordance with Union law, or where the financial entity does not comply with Article 7(2), first subparagraph, of this Regulation, or where the circumstances referred to in Article 7(2), second subparagraph, of this Regulation are not met.",
+          "text": "11. The control team shall assess the compliance of threat intelligence providers and testers they consider involving in the TLPT with the requirements laid down in Article 27 of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a> and with <a href=\"#a:act_dora_rts4:art_7\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 7</a>(1) of this Regulation, and document the outcome of that assessment. The control team shall select threat intelligence providers in accordance with that assessment and with its risk management practices. Prior to contracting the selected threat intelligence providers and external testers, the control team shall provide to the test managers evidence of compliance of those threat intelligence providers and testers with the requirements laid down in Article 27 of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a> and with <a href=\"#a:act_dora_rts4:art_7\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 7</a>(1) of this Regulation. The control team shall not proceed with contracting the selected threat intelligence providers and external testers where the TLPT authority is of the opinion that the selected threat intelligence providers and external testers do not comply with the requirements laid down in Article 27 of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a>, or with the requirements laid down in <a href=\"#a:act_dora_rts4:art_7\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 7</a>(1) of this Regulation or with additional requirements stemming from national security legislations in accordance with Union law, or where the financial entity does not comply with <a href=\"#a:act_dora_rts4:art_7\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 7</a>(2), first subparagraph, of this Regulation, or where the circumstances referred to in <a href=\"#a:act_dora_rts4:art_7\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 7</a>(2), second subparagraph, of this Regulation are not met.",
           "class": ""
         },
         {
@@ -971,7 +971,7 @@
         },
         {
           "id": "art_12__7",
-          "text": "7. Once the TLPT authority has notified the control team lead that it has assessed that the blue team test report and the red team test report contain the information set out in Annexes V and VI, the financial entity shall within 8 weeks submit the report summarising the relevant findings of the TLPT to the TLPT authority, as referred to in Article 26(6) of Regulation (EU) 2022/2554, containing the elements set out in Annex VII for approval. At the request of the TLPT authority, the report referred to in the first subparagraph shall not contain sensitive information.",
+          "text": "7. Once the TLPT authority has notified the control team lead that it has assessed that the blue team test report and the red team test report contain the information set out in Annexes V and VI, the financial entity shall within 8 weeks submit the report summarising the relevant findings of the TLPT to the TLPT authority, as referred to in Article 26(6) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a>, containing the elements set out in Annex VII for approval. At the request of the TLPT authority, the report referred to in the first subparagraph shall not contain sensitive information.",
           "class": ""
         }
       ]
@@ -983,7 +983,7 @@
       "paragraphs": [
         {
           "id": "art_13__1",
-          "text": "1. Within 8 weeks from the notification referred to in Article 12(7) of this Regulation, the financial entity shall provide the remediation plans and the documentation referred to in Article 26(6) of Regulation (EU) 2022/2554 to the TLPT authority and, where different, to the financial entity’s competent authority.",
+          "text": "1. Within 8 weeks from the notification referred to in <a href=\"#a:act_dora_rts4:art_12\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 12</a>(7) of this Regulation, the financial entity shall provide the remediation plans and the documentation referred to in Article 26(6) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a> to the TLPT authority and, where different, to the financial entity’s competent authority.",
           "class": ""
         },
         {
@@ -1025,12 +1025,12 @@
       "paragraphs": [
         {
           "id": "art_14__1",
-          "text": "1. The attestation referred to in Article 26(7) of Regulation (EU) 2022/2554 shall contain the information set out in Annex VIII.",
+          "text": "1. The attestation referred to in Article 26(7) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a> shall contain the information set out in Annex VIII.",
           "class": ""
         },
         {
           "id": "art_14__2",
-          "text": "2. Where several TLPT authorities have been involved in a TLPT, the lead TLPT authority shall provide the attestation referred to in Article 26(7) of Regulation (EU) 2022/2554 to the tested financial entities.",
+          "text": "2. Where several TLPT authorities have been involved in a TLPT, the lead TLPT authority shall provide the attestation referred to in Article 26(7) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a> to the tested financial entities.",
           "class": ""
         }
       ]
@@ -1087,7 +1087,7 @@
         },
         {
           "id": "art_15__10",
-          "text": "2. Where a TLPT authority approves the use of internal testers in accordance with Article 27(2), point (a), of Regulation (EU) 2022/2554, the TLPT authority shall consider the requirements laid down in Article 7(1) of this Regulation.",
+          "text": "2. Where a TLPT authority approves the use of internal testers in accordance with Article 27(2), point (a), of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a>, the TLPT authority shall consider the requirements laid down in <a href=\"#a:act_dora_rts4:art_7\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 7</a>(1) of this Regulation.",
           "class": ""
         },
         {
@@ -1097,17 +1097,17 @@
         },
         {
           "id": "art_15__12",
-          "text": "(a) the test initiation information referred to in Article 9;",
+          "text": "(a) the test initiation information referred to in <a href=\"#a:act_dora_rts4:art_9\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 9</a>;",
           "class": "list-item-l1"
         },
         {
           "id": "art_15__13",
-          "text": "(b) the red team test report referred to in Article 12(2);",
+          "text": "(b) the red team test report referred to in <a href=\"#a:act_dora_rts4:art_12\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 12</a>(2);",
           "class": "list-item-l1"
         },
         {
           "id": "art_15__14",
-          "text": "(c) the report summarising the relevant findings of the TLPT referred to in Article 26(6) of Regulation (EU) 2022/2554.",
+          "text": "(c) the report summarising the relevant findings of the TLPT referred to in Article 26(6) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a>.",
           "class": "list-item-l1"
         },
         {
@@ -1169,12 +1169,12 @@
         },
         {
           "id": "art_16__10",
-          "text": "4. Where a financial entity intends to conduct a pooled TLPT as referred to in Article 26(4) of Regulation (EU) 2022/2554 possibly involving financial entities established in other Member States, its TLPT authority shall contact the TLPT authorities of the other financial entities and assess with them the feasibility and suitability of conducting a pooled TLPT in their respect in accordance with Article 26(4) of Regulation (EU) 2022/2554.",
+          "text": "4. Where a financial entity intends to conduct a pooled TLPT as referred to in Article 26(4) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a> possibly involving financial entities established in other Member States, its TLPT authority shall contact the TLPT authorities of the other financial entities and assess with them the feasibility and suitability of conducting a pooled TLPT in their respect in accordance with Article 26(4) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a>.",
           "class": ""
         },
         {
           "id": "art_16__11",
-          "text": "5. For the purposes of conducting a pooled TLPT as referred to in Article 26(4) of Regulation (EU) 2022/2554: The lead TLPT authority shall coordinate all TLPT authorities involved in the pooled TLPT and adopt all the decisions necessary to carry out the pooled TLPT in a sound and effective way.",
+          "text": "5. For the purposes of conducting a pooled TLPT as referred to in Article 26(4) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a>: The lead TLPT authority shall coordinate all TLPT authorities involved in the pooled TLPT and adopt all the decisions necessary to carry out the pooled TLPT in a sound and effective way.",
           "class": ""
         },
         {
@@ -1194,7 +1194,7 @@
         },
         {
           "id": "art_16__15",
-          "text": "6. Where, in relation to a financial entity required to perform a TLPT, its TLPT authority differs from its competent authority as referred to in Article 46 of Regulation (EU) 2022/2554, those authorities shall share any relevant information in respect of all TLPT-related matters for the purposes of carrying out the TLPT or to carry out their duties in accordance with that Regulation.",
+          "text": "6. Where, in relation to a financial entity required to perform a TLPT, its TLPT authority differs from its competent authority as referred to in Article 46 of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a>, those authorities shall share any relevant information in respect of all TLPT-related matters for the purposes of carrying out the TLPT or to carry out their duties in accordance with that Regulation.",
           "class": ""
         }
       ]

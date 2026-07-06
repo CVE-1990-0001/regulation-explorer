@@ -2,7 +2,7 @@
   "type": "act",
   "id": "act_dora_rts7",
   "title": "RTS 7",
-  "heading": "Commission Delegated Regulation (Eu) 2025/295",
+  "heading": "Delegated Regulation (EU) 2025/295",
   "source": {
     "uri": "",
     "label": "EUR-Lex"
@@ -19,7 +19,7 @@
       "paragraphs": [
         {
           "id": "art_1__1",
-          "text": "1. The information and communication technology (ICT) third-party service provider shall submit the following information in the reasoned application for a voluntary request under Article 31(11) of Regulation (EU) 2022/2554 to be designated as critical pursuant to Article 31(1), point (a), of Regulation (EU) 2022/2554:",
+          "text": "1. The information and communication technology (ICT) third-party service provider shall submit the following information in the reasoned application for a voluntary request under Article 31(11) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a> to be designated as critical pursuant to Article 31(1), point (a), of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a>:",
           "class": ""
         },
         {
@@ -64,7 +64,7 @@
         },
         {
           "id": "art_1__10",
-          "text": "(f) an estimation of the market share of the ICT third-party service provider in the Union financial sector and estimation of the market share per type of financial entity as referred to in Article 2(1) of Regulation (EU) 2022/2554 as of the year of submission of the application to be designated as critical and the year before that application;",
+          "text": "(f) an estimation of the market share of the ICT third-party service provider in the Union financial sector and estimation of the market share per type of financial entity as referred to in <a href=\"#a:act_dora_rts7:art_2\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 2</a>(1) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a> as of the year of submission of the application to be designated as critical and the year before that application;",
           "class": "list-item-l1"
         },
         {
@@ -104,7 +104,7 @@
         },
         {
           "id": "art_1__18",
-          "text": "(iii) type of financial entity as specified in Article 2(1) of Regulation (EU) 2022/2554;",
+          "text": "(iii) type of financial entity as specified in <a href=\"#a:act_dora_rts7:art_2\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 2</a>(1) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a>;",
           "class": "list-item-l2"
         },
         {
@@ -114,7 +114,7 @@
         },
         {
           "id": "art_1__20",
-          "text": "(i) a list of the critical ICT third-party service providers included in the latest available list of such providers published by the ESAs pursuant to Article 31(9) of Regulation (EU) 2022/2554 that rely on the services provided by the applicant where available;",
+          "text": "(i) a list of the critical ICT third-party service providers included in the latest available list of such providers published by the ESAs pursuant to Article 31(9) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a> that rely on the services provided by the applicant where available;",
           "class": "list-item-l1"
         },
         {
@@ -176,7 +176,7 @@
       "paragraphs": [
         {
           "id": "art_2__1",
-          "text": "1. Critical ICT third-party service providers shall provide to the Lead Overseer, upon its request, any information that is necessary by the Lead Overseer to carry out its oversight duties in accordance with the requirements of Regulation (EU) 2022/2554.",
+          "text": "1. Critical ICT third-party service providers shall provide to the Lead Overseer, upon its request, any information that is necessary by the Lead Overseer to carry out its oversight duties in accordance with the requirements of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a>.",
           "class": ""
         },
         {
@@ -191,7 +191,7 @@
         },
         {
           "id": "art_2__4",
-          "text": "(i) the critical ICT third-party service provider and the financial entities referred to in Article 2(1) of Regulation (EU) 2022/2554;",
+          "text": "(i) the critical ICT third-party service provider and the financial entities referred to in <a href=\"#a:act_dora_rts7:art_2\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 2</a>(1) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a>;",
           "class": "list-item-l2"
         },
         {
@@ -316,7 +316,7 @@
         },
         {
           "id": "art_2__29",
-          "text": "(v) information about any remediation plan to address recommendations pursuant to Article 3, and relevant related information to confirm remedies have been implemented;",
+          "text": "(v) information about any remediation plan to address recommendations pursuant to <a href=\"#a:act_dora_rts7:art_3\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 3</a>, and relevant related information to confirm remedies have been implemented;",
           "class": "list-item-l1"
         },
         {
@@ -338,7 +338,7 @@
       "paragraphs": [
         {
           "id": "art_3__1",
-          "text": "1. The critical ICT third-party service provider shall provide to the Lead Overseer a report containing a remediation plan in relation to the recommendations and remedies that the critical ICT third-party service provider plans to implement in order to mitigate the risks identified in the recommendations referred to in Article 35(1), point (d) of Regulation (EU) 2022/2254. The report shall be consistent with the timeline set by the Lead Overseer for each recommendation.",
+          "text": "1. The critical ICT third-party service provider shall provide to the Lead Overseer a report containing a remediation plan in relation to the recommendations and remedies that the critical ICT third-party service provider plans to implement in order to mitigate the risks identified in the recommendations referred to in Article 35(1), point (d) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2254\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2254 – opens on EUR-Lex\">Regulation (EU) 2022/2254</a>. The report shall be consistent with the timeline set by the Lead Overseer for each recommendation.",
           "class": ""
         },
         {
@@ -429,7 +429,7 @@
         },
         {
           "id": "art_6__5",
-          "text": "(c) the view of any other competent authorities who have been consulted in accordance with Article 42(5) of Regulation (EU) 2022/2554;",
+          "text": "(c) the view of any other competent authorities who have been consulted in accordance with Article 42(5) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a>;",
           "class": "list-item-l1"
         },
         {

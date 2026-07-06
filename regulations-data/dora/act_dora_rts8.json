@@ -2,7 +2,7 @@
   "type": "act",
   "id": "act_dora_rts8",
   "title": "RTS 8",
-  "heading": "Commission Delegated Regulation (Eu) 2025/420",
+  "heading": "Delegated Regulation (EU) 2025/420",
   "source": {
     "uri": "",
     "label": "EUR-Lex"
@@ -24,47 +24,47 @@
         },
         {
           "id": "art_1__2",
-          "text": "(a) assist the Lead Overseer in the preparation and drafting of the individual annual oversight plan referred to in Article 33(4) of Regulation (EU) 2022/2554;",
+          "text": "(a) assist the Lead Overseer in the preparation and drafting of the individual annual oversight plan referred to in Article 33(4) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a>;",
           "class": "list-item-l1"
         },
         {
           "id": "art_1__3",
-          "text": "(b) assist the Lead Overseer in performing the assessment referred to in Article 33(2) of Regulation (EU) 2022/2554;",
+          "text": "(b) assist the Lead Overseer in performing the assessment referred to in Article 33(2) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a>;",
           "class": "list-item-l1"
         },
         {
           "id": "art_1__4",
-          "text": "(c) assess the information obtained by the Lead Overseer from the critical ICT third-party service provider under Article 37 of Regulation (EU) 2022/2554 and Chapter II of Commission Delegated Regulation (EU) 2025/295 ( 7 ) ;",
+          "text": "(c) assess the information obtained by the Lead Overseer from the critical ICT third-party service provider under Article 37 of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a> and Chapter II of Commission Delegated <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R0295\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2025/295 – opens on EUR-Lex\">Regulation (EU) 2025/295</a> ( 7 ) ;",
           "class": "list-item-l1"
         },
         {
           "id": "art_1__5",
-          "text": "(d) conduct general investigations on the critical ICT third-party service providers referred to in Article 38 of Regulation (EU) 2022/2554;",
+          "text": "(d) conduct general investigations on the critical ICT third-party service providers referred to in Article 38 of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a>;",
           "class": "list-item-l1"
         },
         {
           "id": "art_1__6",
-          "text": "(e) conduct the inspections referred to in Article 39(1) of Regulation (EU) 2022/2554;",
+          "text": "(e) conduct the inspections referred to in Article 39(1) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a>;",
           "class": "list-item-l1"
         },
         {
           "id": "art_1__7",
-          "text": "(f) draft the recommendations referred to in Article 35(1), point (d), of Regulation (EU) 2022/2554;",
+          "text": "(f) draft the recommendations referred to in Article 35(1), point (d), of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a>;",
           "class": "list-item-l1"
         },
         {
           "id": "art_1__8",
-          "text": "(g) assess the remediation plan and the progress reports referred to in Article 4 of Delegated Regulation (EU) 2025/295;",
+          "text": "(g) assess the remediation plan and the progress reports referred to in <a href=\"#a:act_dora_rts8:art_4\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 4</a> of Delegated <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R0295\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2025/295 – opens on EUR-Lex\">Regulation (EU) 2025/295</a>;",
           "class": "list-item-l1"
         },
         {
           "id": "art_1__9",
-          "text": "(h) prepare and draft the requests and decisions referred to in Article 35(6), Article 37(1), Article 38(4), and Article 39(6) of Regulation (EU) 2022/2554;",
+          "text": "(h) prepare and draft the requests and decisions referred to in Article 35(6), Article 37(1), Article 38(4), and Article 39(6) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a>;",
           "class": "list-item-l1"
         },
         {
           "id": "art_1__10",
-          "text": "(i) assist the Lead Overseer in its contribution to horizontal oversight activities, including in the development of the comprehensive benchmarks referred to in Article 32(3) of Regulation (EU) 2022/2554;",
+          "text": "(i) assist the Lead Overseer in its contribution to horizontal oversight activities, including in the development of the comprehensive benchmarks referred to in Article 32(3) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a>;",
           "class": "list-item-l1"
         },
         {
@@ -91,7 +91,7 @@
       "paragraphs": [
         {
           "id": "art_2__1",
-          "text": "1. After the first designation of an ICT third-party service provider as critical in accordance with Article 31(1), point (a), of Regulation (EU) 2022/2554, the Lead Overseer, in agreement with the Joint Oversight Network referred to in Article 34(1) of Regulation (EU) 2022/2554, shall establish the joint examination team responsible to carry out the oversight activities over that critical ICT third-party service provider.",
+          "text": "1. After the first designation of an ICT third-party service provider as critical in accordance with Article 31(1), point (a), of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a>, the Lead Overseer, in agreement with the Joint Oversight Network referred to in Article 34(1) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a>, shall establish the joint examination team responsible to carry out the oversight activities over that critical ICT third-party service provider.",
           "class": ""
         },
         {
@@ -111,12 +111,12 @@
         },
         {
           "id": "art_2__5",
-          "text": "(c) the list of critical ICT third-party service providers at Union level referred to in Article 31(9) of Regulation (EU) 2022/2554.",
+          "text": "(c) the list of critical ICT third-party service providers at Union level referred to in Article 31(9) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a>.",
           "class": "list-item-l1"
         },
         {
           "id": "art_2__6",
-          "text": "3. The authorities referred to in Article 40(2) of Regulation (EU) 2022/2554 shall nominate one or more individuals from their staff to be appointed as members of the joint examination team. An individual may be nominated and appointed as member of one or more joint examination teams.",
+          "text": "3. The authorities referred to in Article 40(2) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a> shall nominate one or more individuals from their staff to be appointed as members of the joint examination team. An individual may be nominated and appointed as member of one or more joint examination teams.",
           "class": ""
         },
         {
@@ -126,7 +126,7 @@
         },
         {
           "id": "art_2__8",
-          "text": "5. When nominating the members of the joint examination teams, the authorities referred to in Article 40(2) of Regulation (EU) 2022/2554 shall assess their technical expertise, qualifications and skills in ICT and relevant areas, including communication and collaboration skills, as well as audit and supervision skills.",
+          "text": "5. When nominating the members of the joint examination teams, the authorities referred to in Article 40(2) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a> shall assess their technical expertise, qualifications and skills in ICT and relevant areas, including communication and collaboration skills, as well as audit and supervision skills.",
           "class": ""
         },
         {
@@ -148,7 +148,7 @@
       "paragraphs": [
         {
           "id": "art_3__1",
-          "text": "1. The Lead Overseer shall determine the number of members of the joint examination team and its composition in agreement with the Joint Oversight Network referred to in Article 34(1) of Regulation (EU) 2022/2554 and in consultation with the Oversight Forum referred to in Article 32(1) of that Regulation.",
+          "text": "1. The Lead Overseer shall determine the number of members of the joint examination team and its composition in agreement with the Joint Oversight Network referred to in Article 34(1) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a> and in consultation with the Oversight Forum referred to in Article 32(1) of that Regulation.",
           "class": ""
         },
         {
@@ -218,7 +218,7 @@
         },
         {
           "id": "art_3__15",
-          "text": "4. When nominating members of the joint examination team, the authorities referred to in Article 40(2) of Regulation (EU) 2022/2554 shall consider at least points (c), (d), (e), (g) and (h) of paragraph 3.",
+          "text": "4. When nominating members of the joint examination team, the authorities referred to in Article 40(2) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a> shall consider at least points (c), (d), (e), (g) and (h) of paragraph 3.",
           "class": ""
         }
       ]
@@ -230,7 +230,7 @@
       "paragraphs": [
         {
           "id": "art_4__1",
-          "text": "Periodically, or where the Lead Overseer changes, or where material changes as specified in Article 2(2) occur, the Lead Overseer, after having consulted the members of the joint examination team, shall assess the results of the members of the joint examination team. Both the nominating authorities and Lead Overseer shall use the results of that assessment to decide whether it is appropriate to change the membership of the joint examination team.",
+          "text": "Periodically, or where the Lead Overseer changes, or where material changes as specified in <a href=\"#a:act_dora_rts8:art_2\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 2</a>(2) occur, the Lead Overseer, after having consulted the members of the joint examination team, shall assess the results of the members of the joint examination team. Both the nominating authorities and Lead Overseer shall use the results of that assessment to decide whether it is appropriate to change the membership of the joint examination team.",
           "class": ""
         }
       ]
@@ -242,7 +242,7 @@
       "paragraphs": [
         {
           "id": "art_5__1",
-          "text": "1. The members of the joint examination team shall carry out their tasks identified in the individual annual oversight plan with due skill, care, and diligence, without any bias and in accordance with the instructions of the Lead Overseer coordinator referred to in Article 40(2), second subparagraph of Regulation (EU) 2022/2554.",
+          "text": "1. The members of the joint examination team shall carry out their tasks identified in the individual annual oversight plan with due skill, care, and diligence, without any bias and in accordance with the instructions of the Lead Overseer coordinator referred to in Article 40(2), second subparagraph of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a>.",
           "class": ""
         },
         {
@@ -252,7 +252,7 @@
         },
         {
           "id": "art_5__3",
-          "text": "3. The members of the joint examination team shall follow the information and data handling specifications and instructions provided by the Lead Overseer coordinator referred to in Article 40(2), second subparagraph of Regulation (EU) 2022/2554 and shall comply with the confidentiality regime of the European Supervisory Authorities.",
+          "text": "3. The members of the joint examination team shall follow the information and data handling specifications and instructions provided by the Lead Overseer coordinator referred to in Article 40(2), second subparagraph of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a> and shall comply with the confidentiality regime of the European Supervisory Authorities.",
           "class": ""
         },
         {

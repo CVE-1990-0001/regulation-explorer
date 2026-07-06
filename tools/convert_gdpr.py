@@ -32,10 +32,10 @@ def main():
         "type": "act",
         "id": "act_gdpr_2016",
         "title": "GDPR",
-        "heading": "Regulation (EU) 2016/679 - General Data Protection Regulation",
+        "heading": "Regulation (EU) 2016/679",
         "source": {"uri": "", "label": "EUR-Lex"},
         "meta": {"jurisdiction": "EU", "celex": doc.get("celex")},
-        "articles": convert_dora.build_articles(doc),
+        "articles": convert_dora.build_articles(doc, "act_gdpr_2016"),
     }
     with open(OUT, "w", encoding="utf-8") as fh:
         json.dump(act, fh, ensure_ascii=False, indent=2)

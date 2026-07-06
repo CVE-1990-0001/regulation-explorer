@@ -2,7 +2,7 @@
   "type": "act",
   "id": "act_dora_rts6",
   "title": "RTS 6",
-  "heading": "Commission Delegated Regulation (Eu) 2025/532",
+  "heading": "Delegated Regulation (EU) 2025/532",
   "source": {
     "uri": "",
     "label": "EUR-Lex"
@@ -19,7 +19,7 @@
       "paragraphs": [
         {
           "id": "art_1__1",
-          "text": "Financial entities shall take into account their size and their overall risk profile and the nature, scale, and elements of increased or reduced complexity of their services, activities and operations, including elements relating to: (a) the type of ICT services that support critical or important functions covered by the contractual arrangement between the financial entity and the ICT third-party service provider; (b) the type of ICT services covered by the contractual arrangement between the ICT-third party service provider and its subcontractors; (c) the location of the ICT subcontractor providing ICT services that support critical or important functions or a material part thereof, or of its parent company; (d) the length and complexity of the chain of subcontractors providing ICT services that support critical or important functions or material parts thereof used by the ICT third-party service provider; (e) the nature of the data shared with the ICT subcontractors providing ICT services that support critical or important functions or material parts thereof; (f) whether the ICT services that support critical or important functions or material parts thereof are provided by subcontractors, located within a Member State or in a third country, including the location where the ICT services are actually provided from and the location where the data are actually processed and stored; (g) whether the ICT subcontractors providing ICT services that support critical or important functions or material parts thereof are part of the same group as the financial entity to which those services are provided; (h) whether the ICT subcontractors providing ICT services that support critical or important functions or material parts thereof are authorised, registered or subject to supervision or oversight by a competent authority in a Member State, or are subject to the oversight framework under Chapter V, Section II, of Regulation (EU) 2022/2554; (i) whether the ICT third-party service providers that support critical or important functions or material parts thereof are authorised, registered or subject to supervision or oversight by a supervisory authority from a third country; (j) whether the provision of ICT services supporting critical or important functions or material parts thereof is concentrated to a single subcontractor of an ICT third-party service provider or a small number of such subcontractors; (k) whether the subcontracting of ICT services that support critical or important functions or material parts would impact the transferability of those ICT services to another ICT third-party service provider; (l) the potential impact of disruptions on the continuity and availability of the ICT services that support critical or important functions or material parts thereof provided by the ICT third-party service provider when using a subcontractor providing ICT services that support critical or important functions or material parts thereof.",
+          "text": "Financial entities shall take into account their size and their overall risk profile and the nature, scale, and elements of increased or reduced complexity of their services, activities and operations, including elements relating to: (a) the type of ICT services that support critical or important functions covered by the contractual arrangement between the financial entity and the ICT third-party service provider; (b) the type of ICT services covered by the contractual arrangement between the ICT-third party service provider and its subcontractors; (c) the location of the ICT subcontractor providing ICT services that support critical or important functions or a material part thereof, or of its parent company; (d) the length and complexity of the chain of subcontractors providing ICT services that support critical or important functions or material parts thereof used by the ICT third-party service provider; (e) the nature of the data shared with the ICT subcontractors providing ICT services that support critical or important functions or material parts thereof; (f) whether the ICT services that support critical or important functions or material parts thereof are provided by subcontractors, located within a Member State or in a third country, including the location where the ICT services are actually provided from and the location where the data are actually processed and stored; (g) whether the ICT subcontractors providing ICT services that support critical or important functions or material parts thereof are part of the same group as the financial entity to which those services are provided; (h) whether the ICT subcontractors providing ICT services that support critical or important functions or material parts thereof are authorised, registered or subject to supervision or oversight by a competent authority in a Member State, or are subject to the oversight framework under Chapter V, Section II, of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a>; (i) whether the ICT third-party service providers that support critical or important functions or material parts thereof are authorised, registered or subject to supervision or oversight by a supervisory authority from a third country; (j) whether the provision of ICT services supporting critical or important functions or material parts thereof is concentrated to a single subcontractor of an ICT third-party service provider or a small number of such subcontractors; (k) whether the subcontracting of ICT services that support critical or important functions or material parts would impact the transferability of those ICT services to another ICT third-party service provider; (l) the potential impact of disruptions on the continuity and availability of the ICT services that support critical or important functions or material parts thereof provided by the ICT third-party service provider when using a subcontractor providing ICT services that support critical or important functions or material parts thereof.",
           "class": ""
         }
       ]
@@ -48,7 +48,7 @@
         },
         {
           "id": "art_3__2",
-          "text": "(a) the due diligence processes on the ICT third-party service provider ensure that it is able to select and assess the operational and financial abilities of potential ICT subcontractors to provide the ICT services that support critical or important functions or material parts thereof, including by participating, when required to do so by the financial entity, in digital operational resilience testing as referred to in Chapter IV of Regulation (EU) 2022/2554;",
+          "text": "(a) the due diligence processes on the ICT third-party service provider ensure that it is able to select and assess the operational and financial abilities of potential ICT subcontractors to provide the ICT services that support critical or important functions or material parts thereof, including by participating, when required to do so by the financial entity, in digital operational resilience testing as referred to in Chapter IV of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a>;",
           "class": "list-item-l1"
         },
         {
@@ -58,7 +58,7 @@
         },
         {
           "id": "art_3__4",
-          "text": "(c) the ICT third-party service provider ensures that the contractual arrangements with the subcontractors that provide ICT services that support critical or important functions or material parts thereof enable the financial entity to comply with its own obligations stemming from Regulation (EU) 2022/2554 and applicable Union and national legislation;",
+          "text": "(c) the ICT third-party service provider ensures that the contractual arrangements with the subcontractors that provide ICT services that support critical or important functions or material parts thereof enable the financial entity to comply with its own obligations stemming from <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a> and applicable Union and national legislation;",
           "class": "list-item-l1"
         },
         {
@@ -88,7 +88,7 @@
         },
         {
           "id": "art_3__10",
-          "text": "(i) the financial entity has assessed the ICT concentration risks at entity level in accordance with Article 29 of Regulation (EU) 2022/2554;",
+          "text": "(i) the financial entity has assessed the ICT concentration risks at entity level in accordance with Article 29 of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a>;",
           "class": "list-item-l1"
         },
         {
@@ -103,7 +103,7 @@
         },
         {
           "id": "art_3__13",
-          "text": "3. Reliance on the results of the risk assessment carried out by their ICT third-party service providers on their subcontractors in complying with the obligations set out in this article shall not limit the final responsibility of financial entities to comply with their legal and regulatory obligations under Regulation (EU) 2022/2554.",
+          "text": "3. Reliance on the results of the risk assessment carried out by their ICT third-party service providers on their subcontractors in complying with the obligations set out in this article shall not limit the final responsibility of financial entities to comply with their legal and regulatory obligations under <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a>.",
           "class": ""
         }
       ]
@@ -155,17 +155,17 @@
         },
         {
           "id": "art_4__9",
-          "text": "(h) that the contractual arrangement between the ICT third-party service provider and its subcontractors contains the requirements on business contingency plans referred to in Article 30(3), point (c), of Regulation (EU) 2022/2554 and specifies the service levels to be met by the ICT subcontractors in relation to those plans;",
+          "text": "(h) that the contractual arrangement between the ICT third-party service provider and its subcontractors contains the requirements on business contingency plans referred to in Article 30(3), point (c), of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a> and specifies the service levels to be met by the ICT subcontractors in relation to those plans;",
           "class": "list-item-l1"
         },
         {
           "id": "art_4__10",
-          "text": "(i) that the contractual arrangement between the ICT third-party service provider and its subcontractors specifies the ICT security standards and any additional security requirements referred to in Article 30(3), point (c), of Regulation (EU) 2022/2554;",
+          "text": "(i) that the contractual arrangement between the ICT third-party service provider and its subcontractors specifies the ICT security standards and any additional security requirements referred to in Article 30(3), point (c), of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a>;",
           "class": "list-item-l1"
         },
         {
           "id": "art_4__11",
-          "text": "(j) that the subcontractor is to grant to the financial entity and relevant competent and resolution authorities the same rights of access, inspection, and audit as those referred to in Article 30(3), point (e), of Regulation (EU) 2022/2554;",
+          "text": "(j) that the subcontractor is to grant to the financial entity and relevant competent and resolution authorities the same rights of access, inspection, and audit as those referred to in Article 30(3), point (e), of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a>;",
           "class": "list-item-l1"
         },
         {
@@ -175,7 +175,7 @@
         },
         {
           "id": "art_4__13",
-          "text": "(l) that the financial entity has the right to terminate the contract with the ICT third-party service provider when the conditions laid down in either Article 6 of this Regulation or the conditions laid down in Article 28(7) of Regulation (EU) 2022/2554 have been fulfilled.",
+          "text": "(l) that the financial entity has the right to terminate the contract with the ICT third-party service provider when the conditions laid down in either <a href=\"#a:act_dora_rts6:art_6\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 6</a> of this Regulation or the conditions laid down in Article 28(7) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a> have been fulfilled.",
           "class": "list-item-l1"
         },
         {
