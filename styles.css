@@ -474,6 +474,15 @@ textarea {
   border-left-color: rgba(0, 153, 255, 0.3);
 }
 
+.folder-empty-note {
+  margin: 0.25rem 0 0.25rem 1rem;
+  padding: 0.35rem 0.6rem;
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--text-secondary);
+  border-left: 2px solid var(--border-subtle);
+}
+
 .bundle-child-acts .act-article-list {
   border-left-color: var(--border-subtle);
 }

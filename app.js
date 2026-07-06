@@ -364,6 +364,20 @@ const normaliseForSearch = (value) => (
     .replace(/ß/g, 'ss')
 );
 const getSidebarItemKey = (item) => `${item?.type || 'article'}:${item?.id || ''}`;
+
+// Find a bundle by id, searching top-level bundles and their nested sub-folders.
+const findBundleById = (id, bundles = allBundles) => {
+  for (const b of bundles) {
+    if (!b) continue;
+    if (b.id === id) return b;
+    if (Array.isArray(b.members)) {
+      const nested = b.members.filter((m) => m && m.type === 'bundle');
+      const found = findBundleById(id, nested);
+      if (found) return found;
+    }
+  }
+  return null;
+};
 const getArticleSelectionKey = (articleId, parentActId = null) => (
   parentActId ? `article:${parentActId}:${articleId}` : `article:${articleId}`
 );
@@ -750,7 +764,31 @@ const renderBundle = (bundle) => {
     const list = document.createElement('ul');
     list.className = 'bundle-members';
     bundle.members.forEach((m) => {
+      if (!m) {
+        return;
+      }
       const li = document.createElement('li');
+
+      // Nested sub-folder: link expands it in the sidebar
+      if (m.type === 'bundle') {
+        const a = document.createElement('a');
+        a.href = `#bundle:${m.id}`;
+        a.textContent = m.title || m.id;
+        a.addEventListener('click', (ev) => {
+          ev.preventDefault();
+          expandedBundleIds.add(m.id);
+          renderArticleList();
+          try {
+            window.location.hash = `bundle:${m.id}`;
+          } catch (e) {
+            window.location.href = `${window.location.pathname}${window.location.search}#bundle:${m.id}`;
+          }
+        });
+        li.appendChild(a);
+        list.appendChild(li);
+        return;
+      }
+
       const a = document.createElement('a');
       a.href = `#act:${m.ref}`;
       a.textContent = m.label || m.ref;
@@ -811,6 +849,186 @@ const renderSidebarList = (items = []) => {
     }
     btn.appendChild(chev);
   };
+
+  // Build a single article row under an act (used at top level and when nested).
+  const createArticleRow = (article, actId, onActivate) => {
+    const rowItem = document.createElement('li');
+    rowItem.className = 'act-article-list-item';
+
+    const rowButton = document.createElement('button');
+    rowButton.type = 'button';
+    rowButton.className = 'article-link article-child-link';
+
+    const rowTitle = document.createElement('span');
+    rowTitle.className = 'list-article-number';
+    rowTitle.textContent = article.title || article.id;
+    rowButton.appendChild(rowTitle);
+
+    const rowHeading = getHeadingText(article);
+    if (rowHeading) {
+      const rowHeadingSpan = document.createElement('span');
+      rowHeadingSpan.className = 'list-article-heading';
+      rowHeadingSpan.textContent = rowHeading;
+      rowButton.appendChild(rowHeadingSpan);
+    }
+
+    rowButton.addEventListener('click', (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      onActivate();
+    });
+
+    rowItem.appendChild(rowButton);
+    articleButtons.set(getArticleSelectionKey(article.id, actId), rowButton);
+    return rowItem;
+  };
+
+  // Build an act row nested inside a folder, with its expandable article list.
+  const createNestedActRow = (act, parentBundleId) => {
+    const actItem = document.createElement('li');
+    actItem.className = 'act-article-list-item';
+
+    const actButton = document.createElement('button');
+    actButton.type = 'button';
+    actButton.className = 'article-link article-child-link';
+
+    const actTitle = document.createElement('span');
+    actTitle.className = 'list-article-number';
+    actTitle.textContent = act.title || act.id;
+    actButton.appendChild(actTitle);
+
+    const actHeadingText = getHeadingText(act);
+    if (actHeadingText) {
+      const actHeadingSpan = document.createElement('span');
+      actHeadingSpan.className = 'list-article-heading';
+      actHeadingSpan.textContent = actHeadingText;
+      actButton.appendChild(actHeadingSpan);
+    }
+
+    const bundleActKey = `${parentBundleId}::${act.id}`;
+    const hasArticles = Array.isArray(act.articles) && act.articles.length > 0;
+    if (hasArticles) {
+      appendDisclosure(actButton, expandedBundleActIds.has(bundleActKey));
+    }
+
+    actButton.addEventListener('click', (ev) => {
+      ev.preventDefault();
+      ev.stopPropagation();
+      if (expandedBundleActIds.has(bundleActKey)) {
+        expandedBundleActIds.delete(bundleActKey);
+      } else {
+        expandedBundleActIds.add(bundleActKey);
+      }
+      renderArticleList();
+      handleRoute(`act:${act.id}`);
+      updateLocationHash(`act:${act.id}`);
+    });
+
+    actItem.appendChild(actButton);
+    articleButtons.set(`act:${act.id}`, actButton);
+
+    if (hasArticles && expandedBundleActIds.has(bundleActKey)) {
+      const childList = document.createElement('ul');
+      childList.className = 'act-article-list';
+      act.articles.forEach((article) => {
+        if (!article || !article.id) {
+          return;
+        }
+        childList.appendChild(createArticleRow(article, act.id, () => {
+          selectArticle(article.id, {
+            updateHash: true,
+            focus: false,
+            parentActId: act.id,
+            hashTarget: `a:${act.id}:${article.id}`,
+          });
+        }));
+      });
+      actItem.appendChild(childList);
+    }
+
+    return actItem;
+  };
+
+  // Build a sub-folder row that recursively renders its own children.
+  const createFolderRow = (folder) => {
+    const subItem = document.createElement('li');
+    subItem.className = 'act-article-list-item';
+
+    const subButton = document.createElement('button');
+    subButton.type = 'button';
+    subButton.className = 'article-link article-child-link';
+
+    const subChip = document.createElement('span');
+    subChip.className = 'item-chip bundle';
+    subChip.textContent = 'folder';
+    subButton.appendChild(subChip);
+
+    const subTitle = document.createElement('span');
+    subTitle.className = 'list-article-number';
+    subTitle.textContent = folder.title || folder.id;
+    subButton.appendChild(subTitle);
+
+    appendDisclosure(subButton, expandedBundleIds.has(folder.id));
+
+    subButton.addEventListener('click', (ev) => {
+      ev.preventDefault();
+      ev.stopPropagation();
+      if (expandedBundleIds.has(folder.id)) {
+        expandedBundleIds.delete(folder.id);
+      } else {
+        expandedBundleIds.add(folder.id);
+      }
+      renderArticleList();
+      handleRoute(`bundle:${folder.id}`);
+      updateLocationHash(`bundle:${folder.id}`);
+    });
+
+    subItem.appendChild(subButton);
+    articleButtons.set(getSidebarItemKey(folder), subButton);
+
+    if (expandedBundleIds.has(folder.id)) {
+      const childList = buildMemberList(folder);
+      if (childList) {
+        subItem.appendChild(childList);
+      } else {
+        const emptyNote = document.createElement('p');
+        emptyNote.className = 'folder-empty-note';
+        emptyNote.textContent = 'No regulations yet';
+        subItem.appendChild(emptyNote);
+      }
+    }
+
+    return subItem;
+  };
+
+  // Recursively build a folder's children: nested sub-folders and member acts.
+  function buildMemberList(bundleItem) {
+    const members = Array.isArray(bundleItem.members) ? bundleItem.members : [];
+    if (!members.length) {
+      return null;
+    }
+
+    const list = document.createElement('ul');
+    list.className = 'act-article-list bundle-child-acts';
+    let rendered = 0;
+
+    members.forEach((member) => {
+      if (member && member.type === 'bundle') {
+        list.appendChild(createFolderRow(member));
+        rendered += 1;
+        return;
+      }
+
+      const act = member && member.ref ? allActs.find((a) => a.id === member.ref) : null;
+      if (!act) {
+        return;
+      }
+      list.appendChild(createNestedActRow(act, bundleItem.id));
+      rendered += 1;
+    });
+
+    return rendered ? list : null;
+  }
 
   // Save current scroll position
   const savedScrollPosition = sidePanel ? sidePanel.scrollTop : 0;
@@ -885,110 +1103,11 @@ const renderSidebarList = (items = []) => {
 
     listItem.appendChild(button);
 
-    // Bundle: render member acts as expandable children
+    // Bundle: render members (nested sub-folders and acts) as expandable children
     if (item.type === 'bundle' && expandedBundleIds.has(item.id)) {
-      const memberActs = (item.members || [])
-        .map((m) => allActs.find((a) => a.id === m.ref))
-        .filter(Boolean);
-
-      if (memberActs.length) {
-        const bundleActList = document.createElement('ul');
-        bundleActList.className = 'act-article-list bundle-child-acts';
-
-        memberActs.forEach((act) => {
-          const actItem = document.createElement('li');
-          actItem.className = 'act-article-list-item';
-
-          const actButton = document.createElement('button');
-          actButton.type = 'button';
-          actButton.className = 'article-link article-child-link';
-
-          const actTitle = document.createElement('span');
-          actTitle.className = 'list-article-number';
-          actTitle.textContent = act.title || act.id;
-          actButton.appendChild(actTitle);
-
-          const actHeadingText = getHeadingText(act);
-          if (actHeadingText) {
-            const actHeadingSpan = document.createElement('span');
-            actHeadingSpan.className = 'list-article-heading';
-            actHeadingSpan.textContent = actHeadingText;
-            actButton.appendChild(actHeadingSpan);
-          }
-
-          const bundleActKey = `${item.id}::${act.id}`;
-          if (Array.isArray(act.articles) && act.articles.length) {
-            appendDisclosure(actButton, expandedBundleActIds.has(bundleActKey));
-          }
-          actButton.addEventListener('click', (ev) => {
-            ev.preventDefault();
-            ev.stopPropagation();
-            if (expandedBundleActIds.has(bundleActKey)) {
-              expandedBundleActIds.delete(bundleActKey);
-            } else {
-              expandedBundleActIds.add(bundleActKey);
-            }
-            renderArticleList();
-            handleRoute(`act:${act.id}`);
-            updateLocationHash(`act:${act.id}`);
-          });
-
-          actItem.appendChild(actButton);
-          articleButtons.set(`act:${act.id}`, actButton);
-
-          // If this act is expanded within the bundle, render its articles
-          if (expandedBundleActIds.has(bundleActKey) && Array.isArray(act.articles)) {
-            const childList = document.createElement('ul');
-            childList.className = 'act-article-list';
-
-            act.articles.forEach((article) => {
-              if (!article || !article.id) {
-                return;
-              }
-
-              const childItem = document.createElement('li');
-              childItem.className = 'act-article-list-item';
-
-              const childButton = document.createElement('button');
-              childButton.type = 'button';
-              childButton.className = 'article-link article-child-link';
-
-              const childTitle = document.createElement('span');
-              childTitle.className = 'list-article-number';
-              childTitle.textContent = article.title || article.id;
-              childButton.appendChild(childTitle);
-
-              const childHeading = getHeadingText(article);
-              if (childHeading) {
-                const childHeadingSpan = document.createElement('span');
-                childHeadingSpan.className = 'list-article-heading';
-                childHeadingSpan.textContent = childHeading;
-                childButton.appendChild(childHeadingSpan);
-              }
-
-              childButton.addEventListener('click', (event) => {
-                event.preventDefault();
-                event.stopPropagation();
-                selectArticle(article.id, {
-                  updateHash: true,
-                  focus: false,
-                  parentActId: act.id,
-                  hashTarget: `a:${act.id}:${article.id}`,
-                });
-              });
-
-              childItem.appendChild(childButton);
-              childList.appendChild(childItem);
-              articleButtons.set(getArticleSelectionKey(article.id, act.id), childButton);
-            });
-
-            actItem.appendChild(childList);
-          }
-
-          bundleActList.appendChild(actItem);
-        });
-
-        listItem.appendChild(bundleActList);
+      const memberList = buildMemberList(item);
+      if (memberList) {
+        listItem.appendChild(memberList);
       }
     }
 
@@ -1006,49 +1125,20 @@ const renderSidebarList = (items = []) => {
         if (!article || !article.id) {
           return;
         }
-
-        const childItem = document.createElement('li');
-        childItem.className = 'act-article-list-item';
-
-        const childButton = document.createElement('button');
-        childButton.type = 'button';
-        childButton.className = 'article-link article-child-link';
-
-        const childTitle = document.createElement('span');
-        childTitle.className = 'list-article-number';
-        childTitle.textContent = article.title || article.id;
-        childButton.appendChild(childTitle);
-
-        const childHeading = getHeadingText(article);
-        if (childHeading) {
-          const childHeadingSpan = document.createElement('span');
-          childHeadingSpan.className = 'list-article-heading';
-          childHeadingSpan.textContent = childHeading;
-          childButton.appendChild(childHeadingSpan);
-        }
-
-        childButton.addEventListener('click', (event) => {
-          event.preventDefault();
-          event.stopPropagation();
-
+        childList.appendChild(createArticleRow(article, item.id, () => {
           const parentActId = item.id;
           const wasExpanded = expandedActIds.has(parentActId);
           setExpandedAct(parentActId);
           if (!wasExpanded) {
             renderArticleList();
           }
-
           selectArticle(article.id, {
             updateHash: true,
             focus: false,
             parentActId,
             hashTarget: `a:${parentActId}:${article.id}`,
           });
-        });
-
-        childItem.appendChild(childButton);
-        childList.appendChild(childItem);
-        articleButtons.set(getArticleSelectionKey(article.id, item.id), childButton);
+        }));
       });
 
       listItem.appendChild(childList);
@@ -1222,7 +1312,7 @@ const handleRoute = (hashId) => {
   // bundle:<ID>
   if (raw.startsWith('bundle:')) {
     const id = raw.slice(7);
-    const bundle = allBundles.find((b) => b.id === id);
+    const bundle = findBundleById(id);
     if (!bundle) {
       statusMessage.textContent = `Bundle ${id} not found.`;
       return true;
@@ -1302,7 +1392,7 @@ const matchesItem = (item, query) => {
     const title = normaliseForSearch(item.title || '');
     const desc = normaliseForSearch(item.description || '');
     const membersText = (item.members || [])
-      .map((m) => ((m && (m.label || m.ref)) || ''))
+      .map((m) => ((m && (m.label || m.title || m.ref)) || ''))
       .join(' ')
       .replace(/<[^>]*>/g, ' ');
     const normalisedMembersText = normaliseForSearch(membersText);
