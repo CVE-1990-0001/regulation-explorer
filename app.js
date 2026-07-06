@@ -594,7 +594,7 @@ const updateStatus = () => {
 
   const index = visibleSidebarItems.findIndex((item) => getSidebarItemKey(item) === currentSidebarSelectionKey);
   if (index === -1) {
-    statusMessage.textContent = 'Viewing selected item.';
+    statusMessage.textContent = '';
     return;
   }
 
@@ -618,6 +618,21 @@ const findBundlePath = (id, bundles = allBundles, trail = []) => {
       const found = findBundlePath(id, nested, nextTrail);
       if (found) return found;
     }
+  }
+  return null;
+};
+
+// Find the folder chain (root -> containing folder) for an act id.
+const findActFolderPath = (actId, bundles = allBundles, trail = []) => {
+  for (const b of bundles) {
+    if (!b) continue;
+    const members = b.members || [];
+    if (members.some((m) => m && m.ref === actId)) {
+      return [...trail, b];
+    }
+    const nested = members.filter((m) => m && m.type === 'bundle');
+    const found = findActFolderPath(actId, nested, [...trail, b]);
+    if (found) return found;
   }
   return null;
 };
@@ -1284,10 +1299,20 @@ const selectArticle = (articleId, options = {}) => {
   const hasParentAct = allActs.some((act) => act.id === parentActId);
   currentSidebarSelectionKey = hasParentAct ? `act:${parentActId}` : null;
   if (hasParentAct) {
-    const wasExpanded = expandedActIds.has(parentActId);
-    setExpandedAct(parentActId);
-    if (!wasExpanded) {
+    const folderPath = findActFolderPath(parentActId) || [];
+    if (folderPath.length) {
+      // Act lives inside folder(s): expand the whole chain and the act's
+      // article list so the paragraph is revealed and highlighted on the left.
+      folderPath.forEach((b) => expandedBundleIds.add(b.id));
+      const containing = folderPath[folderPath.length - 1];
+      expandedBundleActIds.add(`${containing.id}::${parentActId}`);
       renderArticleList();
+    } else {
+      const wasExpanded = expandedActIds.has(parentActId);
+      setExpandedAct(parentActId);
+      if (!wasExpanded) {
+        renderArticleList();
+      }
     }
   }
 
@@ -1383,13 +1408,16 @@ const handleRoute = (hashId) => {
       return true;
     }
     const changedSelection = currentSidebarSelectionKey !== `act:${id}`;
+    // Expand the folder chain that contains this act so it shows on the left.
+    const folderPath = findActFolderPath(id) || [];
+    folderPath.forEach((b) => expandedBundleIds.add(b.id));
     // render act-level view
     renderItem(act);
     currentSidebarSelectionKey = `act:${id}`;
     currentArticleSelectionKey = null;
-    highlightActiveLink();
     // clear article selection state
     currentArticleId = null;
+    renderArticleList();
     updateNavigationButtons();
     updateStatus();
     // Show a newly opened act from the top (also fixes the initial load offset).
@@ -1729,7 +1757,22 @@ const fetchArticles = async () => {
     // Maintain the old `allArticles` array used by the UI by using the flattened articles
     allArticles = Array.isArray(articles) ? articles : [];
 
-    allSidebarItems = [...allActs, ...allBundles];
+    // Acts that live inside a folder are shown within that folder only, not
+    // duplicated as top-level sidebar entries.
+    const collectBundleActRefs = (bundleList, acc = new Set()) => {
+      (bundleList || []).forEach((b) => {
+        (b && b.members || []).forEach((m) => {
+          if (!m) return;
+          if (m.type === 'bundle') collectBundleActRefs([m], acc);
+          else if (m.ref) acc.add(m.ref);
+        });
+      });
+      return acc;
+    };
+    const foldered = collectBundleActRefs(allBundles);
+    const topLevelActs = allActs.filter((a) => !foldered.has(a.id));
+
+    allSidebarItems = [...topLevelActs, ...allBundles];
     expandedActIds = new Set();
     expandedBundleIds = new Set();
     expandedBundleActIds = new Set();

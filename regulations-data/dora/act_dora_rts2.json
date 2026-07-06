@@ -1,0 +1,397 @@
+{
+  "type": "act",
+  "id": "act_dora_rts2",
+  "title": "RTS 2",
+  "heading": "Commission Delegated Regulation (Eu) 2024/1772",
+  "source": {
+    "uri": "",
+    "label": "EUR-Lex"
+  },
+  "meta": {
+    "jurisdiction": "EU",
+    "celex": "32024R1772"
+  },
+  "articles": [
+    {
+      "id": "art_1",
+      "title": "Article 1",
+      "heading": "Clients, financial counterparts and transactions",
+      "paragraphs": [
+        {
+          "id": "art_1__1",
+          "text": "1. The number of clients affected by the incident as referred to in Article 18(1), point (a), of Regulation (EU) 2022/2554, shall reflect the number of all affected clients, whether natural or legal persons, that are or were unable to make use of the service provided by the financial entity during the incident or that were adversely impacted by the incident. That number shall also include third parties explicitly covered by the contractual agreement between the financial entity and the client as beneficiaries of the affected service.",
+          "class": ""
+        },
+        {
+          "id": "art_1__2",
+          "text": "2. The number of financial counterparts affected by the incident as referred to in Article 18(1), point (a), of Regulation (EU) 2022/2554 shall reflect the number of all affected financial counterparts that have concluded a contractual arrangement with the financial entity.",
+          "class": ""
+        },
+        {
+          "id": "art_1__3",
+          "text": "3. In relation to the relevance of clients and financial counterparts affected by the incident as referred to in Article 18(1), point (a), of Regulation (EU) 2022/2554, the financial entity shall take into account the extent to which the impact on a client or a financial counterpart will affect the implementation of the business objectives of the financial entity, as well as the potential impact of the incident on market efficiency.",
+          "class": ""
+        },
+        {
+          "id": "art_1__4",
+          "text": "4. In relation to the amount or number of transactions affected by the incident as referred to in Article 18(1), point (a), of Regulation (EU) 2022/2554, the financial entity shall take into account all affected transactions involving a monetary amount where at least one part of the transaction is carried out in the Union.",
+          "class": ""
+        },
+        {
+          "id": "art_1__5",
+          "text": "5. Where the actual number of clients or financial counterparts affected or the actual number or amount of transactions affected cannot be determined, the financial entity shall estimate those numbers or amounts based on available data from comparable reference periods.",
+          "class": ""
+        }
+      ]
+    },
+    {
+      "id": "art_2",
+      "title": "Article 2",
+      "heading": "Reputational impact",
+      "paragraphs": [
+        {
+          "id": "art_2__1",
+          "text": "1. For the purposes of determining the reputational impact of the incident as referred to in Article 18(1), point (a), of Regulation (EU) 2022/2554, financial entities shall consider that a reputational impact has occurred where at least one of the following criteria is met:",
+          "class": ""
+        },
+        {
+          "id": "art_2__2",
+          "text": "(a) the incident has been reflected in the media;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_2__3",
+          "text": "(b) the incident has resulted in repetitive complaints from different clients or financial counterparts on client-facing services or critical business relationships;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_2__4",
+          "text": "(c) the financial entity will not be able to or is likely not to be able to meet regulatory requirements as a result of the incident;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_2__5",
+          "text": "(d) the financial entity will or is likely to lose clients or financial counterparts with a material impact on its business as a result of the incident.",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_2__6",
+          "text": "2. When assessing the reputational impact of the incident, financial entities shall take into account the level of visibility that the incident has gained or is likely to gain in relation to each criterion listed in paragraph 1.",
+          "class": ""
+        }
+      ]
+    },
+    {
+      "id": "art_3",
+      "title": "Article 3",
+      "heading": "Duration and service downtime",
+      "paragraphs": [
+        {
+          "id": "art_3__1",
+          "text": "1. Financial entities shall measure the duration of an incident as referred to in Article 18(1), point (b), of Regulation (EU) 2022/2554, from the moment the incident occurs until the moment when it is resolved. Where financial entities are unable to determine the moment when the incident occurred, they shall measure the duration of the incident from the moment it was detected. Where financial entities become aware that the incident occurred prior to its detection, they shall measure the duration from the moment the incident is recorded in network or system logs or other data sources. Where financial entities do not yet know when the incident will be resolved or are unable to verify records in logs or other data sources, they shall apply estimates.",
+          "class": ""
+        },
+        {
+          "id": "art_3__2",
+          "text": "2. Financial entities shall measure the service downtime of an incident as referred to in Article 18(1), point (b), of Regulation (EU) 2022/2554, from the moment the service is fully or partially unavailable to clients, financial counterparts or other internal or external users to the moment when regular activities or operations have been restored to the level of service that was provided prior to the incident. Where the service downtime causes a delay in the provision of service after regular activities or operations have been restored, the downtime shall be measured from the start of the incident to the moment when that delayed service is fully provided. Where financial entities are unable to determine the moment when the service downtime started, they shall measure the service downtime from the moment it was detected.",
+          "class": ""
+        }
+      ]
+    },
+    {
+      "id": "art_4",
+      "title": "Article 4",
+      "heading": "Geographical spread",
+      "paragraphs": [
+        {
+          "id": "art_4__1",
+          "text": "For the purpose of determining the geographical spread with regard to the areas affected by the incident as referred to in Article 18(1), point (c), of Regulation (EU) 2022/2554, financial entities shall assess whether the incident has or had an impact in other Member States, and in particular the significance of the impact in relation to any of the following: (a) clients and financial counterparts in other Member States; (b) branches or other financial entities within the group carrying out activities in other Member States; (c) financial market infrastructures or third-party providers, which may affect financial entities in other Member States to which they provide services, to the extent such information is available.",
+          "class": ""
+        }
+      ]
+    },
+    {
+      "id": "art_5",
+      "title": "Article 5",
+      "heading": "Data losses",
+      "paragraphs": [
+        {
+          "id": "art_5__1",
+          "text": "For the purpose of determining the data losses that the incident entails as referred to in Article 18(1), point (d), of Regulation (EU) 2022/2554, financial entities shall take into account the following: (a) in relation to the availability of data, whether the incident has rendered the data on demand by the financial entity, its clients or its counterparts temporarily or permanently inaccessible or unusable; (b) in relation to the authenticity of data, whether the incident has compromised the trustworthiness of the source of data; (c) in relation to the integrity of data, whether the incident has resulted in non-authorised modification of data that has rendered it inaccurate or incomplete; (d) in relation to the confidentiality of data, whether the incident has resulted in data having been accessed by or disclosed to an unauthorised party or system.",
+          "class": ""
+        }
+      ]
+    },
+    {
+      "id": "art_6",
+      "title": "Article 6",
+      "heading": "Criticality of services affected",
+      "paragraphs": [
+        {
+          "id": "art_6__1",
+          "text": "For the purpose of determining the criticality of the services affected as referred to in Article 18(1), point (e), of Regulation (EU) 2022/2554, financial entities shall assess whether the incident: (a) affects or has affected ICT services or network and information systems that support critical or important functions of the financial entity; (b) affects or has affected financial services provided by the financial entity that require authorisation, registration or that are supervised by competent authorities; (c) constitutes or has constituted a successful, malicious and unauthorised access to the network and information systems of the financial entity.",
+          "class": ""
+        }
+      ]
+    },
+    {
+      "id": "art_7",
+      "title": "Article 7",
+      "heading": "Economic impact",
+      "paragraphs": [
+        {
+          "id": "art_7__1",
+          "text": "1. For the purpose of determining the economic impact of the incident as referred to in Article 18(1), point (f), of Regulation (EU) 2022/2554, financial entities shall, without accounting for financial recoveries, take into account the following types of direct and indirect costs and losses which they have incurred as a result of the incident:",
+          "class": ""
+        },
+        {
+          "id": "art_7__2",
+          "text": "(a) expropriated funds or financial assets for which they are liable, including assets lost to theft;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_7__3",
+          "text": "(b) costs for replacement or relocation of software, hardware or infrastructure;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_7__4",
+          "text": "(c) staff costs, including costs associated with replacement or relocation of staff, recruitment of extra staff, remuneration of overtime and recovery of lost or impaired skills;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_7__5",
+          "text": "(d) fees due to non-compliance with contractual obligations;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_7__6",
+          "text": "(e) costs for redress and compensation to customers;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_7__7",
+          "text": "(f) losses due to forgone revenues;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_7__8",
+          "text": "(g) costs associated with internal and external communication;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_7__9",
+          "text": "(h) advisory costs, including costs associated with legal counselling, forensic services and remediation services.",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_7__10",
+          "text": "2. Costs and losses referred to in paragraph 1 shall not include costs that are necessary for the day-to-day operation of the business, in particular the following:",
+          "class": ""
+        },
+        {
+          "id": "art_7__11",
+          "text": "(a) costs for general maintenance of infrastructure, equipment, hardware and software, and costs for keeping skills of staff up to date;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_7__12",
+          "text": "(b) internal or external costs to enhance the business after the incident, including upgrades, improvements and risk assessment initiatives;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_7__13",
+          "text": "(c) insurance premiums.",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_7__14",
+          "text": "3. Financial entities shall calculate the amounts of costs and losses based on data available at the time of reporting. Where the actual amounts of costs and losses cannot be determined, financial entities shall estimate those amounts.",
+          "class": ""
+        },
+        {
+          "id": "art_7__15",
+          "text": "4. When assessing the economic impact of the incident, financial entities shall sum up the costs and losses referred to in paragraph 1.",
+          "class": ""
+        }
+      ]
+    },
+    {
+      "id": "art_8",
+      "title": "Article 8",
+      "heading": "Major incidents",
+      "paragraphs": [
+        {
+          "id": "art_8__1",
+          "text": "1. An incident shall be considered a major incident for the purposes of Article 19(1) of Regulation (EU) 2022/2554 where it has affected critical services as referred to in Article 6 and where either of the following conditions is fulfilled:",
+          "class": ""
+        },
+        {
+          "id": "art_8__2",
+          "text": "(a) the materiality threshold referred to in Article 9(5), point (b), is met;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_8__3",
+          "text": "(b) two or more of the other materiality thresholds referred to in Articles 9(1) to (6) are met.",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_8__4",
+          "text": "2. Recurring incidents that individually are not considered a major incident in accordance with paragraph 1 shall be considered as one major incident where they meet all of the following conditions: Financial entities shall assess the existence of recurring incidents on a monthly basis. This paragraph does not apply to microenterprises and to financial entities listed in Article 16(1) of Regulation (EU) 2022/2554.",
+          "class": ""
+        },
+        {
+          "id": "art_8__5",
+          "text": "(a) they have occurred at least twice within 6 months;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_8__6",
+          "text": "(b) they have the same apparent root cause as referred to in Article 20, first subparagraph, point (b) of Regulation (EU) 2022/2554;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_8__7",
+          "text": "(c) they collectively fulfil the criteria for being considered a major incident set out in paragraph 1.",
+          "class": "list-item-l1"
+        }
+      ]
+    },
+    {
+      "id": "art_9",
+      "title": "Article 9",
+      "heading": "Materiality thresholds for determining major incidents",
+      "paragraphs": [
+        {
+          "id": "art_9__1",
+          "text": "1. The materiality threshold for the criterion ‘clients, financial counterparts and transactions’ is met where any of the following conditions are fulfilled: Where the actual number of clients or financial counterparts affected or the actual number or amount of transactions affected cannot be determined, the financial entity shall estimate those numbers or amounts based on available data from comparable reference periods.",
+          "class": ""
+        },
+        {
+          "id": "art_9__2",
+          "text": "(a) the number of affected clients is higher than 10 % of all clients using the affected service;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_9__3",
+          "text": "(b) the number of affected clients using the affected service is higher than 100 000;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_9__4",
+          "text": "(c) the number of affected financial counterparts is higher than 30 % of all financial counterparts carrying out activities related to the provision of the affected service;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_9__5",
+          "text": "(d) the number of affected transactions is higher than 10 % of the daily average number of transactions carried out by the financial entity related to the affected service;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_9__6",
+          "text": "(e) the amount of affected transactions is higher than 10 % of the daily average value of transactions carried out by the financial entity related to the affected service;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_9__7",
+          "text": "(f) clients or financial counterparts which have been identified as relevant in accordance with Article 1(3) have been affected.",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_9__8",
+          "text": "2. The materiality threshold for the criterion ‘reputational impact’ is met where any of the conditions set out in Article 2, points (a) to (d), are fulfilled.",
+          "class": ""
+        },
+        {
+          "id": "art_9__9",
+          "text": "3. The materiality threshold for the criterion ‘duration and service downtime’ is met where any of the following conditions are fulfilled:",
+          "class": ""
+        },
+        {
+          "id": "art_9__10",
+          "text": "(a) the duration of the incident is longer than 24 hours;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_9__11",
+          "text": "(b) the service downtime is longer than 2 hours for ICT services that support critical or important functions.",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_9__12",
+          "text": "4. The materiality threshold for the criterion ‘geographical spread’ is met where the incident has an impact in two or more Member States in accordance with Article 4.",
+          "class": ""
+        },
+        {
+          "id": "art_9__13",
+          "text": "5. The materiality threshold for the criterion ‘data losses’ is met where any of the following conditions are fulfilled:",
+          "class": ""
+        },
+        {
+          "id": "art_9__14",
+          "text": "(a) any impact as referred to in Article 5 on the availability, authenticity, integrity or confidentiality of data has or will have an adverse impact on the implementation of the business objectives of the financial entity or on its ability to meet regulatory requirements;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_9__15",
+          "text": "(b) any successful, malicious and unauthorised access not covered by point (a) occurs to network and information systems, where such access may result in data losses.",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_9__16",
+          "text": "6. The materiality threshold for the criterion ‘economic impact’ is met where the costs and losses incurred by the financial entity due to the incident have exceeded or are likely to exceed 100 000 euro.",
+          "class": ""
+        }
+      ]
+    },
+    {
+      "id": "art_10",
+      "title": "Article 10",
+      "heading": "High materiality thresholds for determining significant cyber threats",
+      "paragraphs": [
+        {
+          "id": "art_10__1",
+          "text": "For the purposes of Article 18(2) of Regulation (EU) 2022/2554, a cyber threat shall be considered significant where all of the following conditions are fulfilled: (a) the cyber threat, if materialised, could affect or could have affected critical or important functions of the financial entity, or could affect other financial entities, third-party providers, clients or financial counterparts, based on information available to the financial entity; (b) the cyber threat has a high probability of materialisation at the financial entity or at other financial entities, taking into account at least the following elements: (i) applicable risks related to the cyber threat referred to in point (a), including potential vulnerabilities of the systems of the financial entity that can be exploited; (ii) the capabilities and intent of threat actors to the extent known by the financial entity; (iii) the persistence of the threat and any accrued knowledge about incidents that have impacted the financial entity or its third-party provider, clients or financial counterparts; (c) the cyber threat could, if materialised, meet any of the following: (i) the criterion regarding criticality of services set out in Article 18(1), point (e), of Regulation (EU) 2022/2554, as specified in Article 6 of this Regulation; (ii) the materiality threshold set out in Article 9(1); (iii) the materiality threshold set out in Article 9(4). Where, depending on the type of cyber threat and available information, the financial entity concludes that the materiality thresholds set out in Article 9(2), (3), (5) and (6) could be met, those thresholds may also be considered.",
+          "class": ""
+        }
+      ]
+    },
+    {
+      "id": "art_11",
+      "title": "Article 11",
+      "heading": "Relevance of major incidents to competent authorities in other Member States",
+      "paragraphs": [
+        {
+          "id": "art_11__1",
+          "text": "The assessment of whether the major incident is relevant for competent authorities in other Member States as referred to in Article 19(7) of Regulation (EU) 2022/2554 shall be based on whether the incident has a root cause originating from another Member State or whether the incident has or has had a significant impact in another Member State in relation to any of the following: (a) clients or financial counterparts; (b) a branch of the financial entity or another financial entity within the group; (c) a financial market infrastructure or a third-party provider which may affect financial entities to which they provide services.",
+          "class": ""
+        }
+      ]
+    },
+    {
+      "id": "art_12",
+      "title": "Article 12",
+      "heading": "Details of major incidents to be shared with other competent authorities",
+      "paragraphs": [
+        {
+          "id": "art_12__1",
+          "text": "The details of major incidents to be submitted by competent authorities to other competent authorities in accordance with Article 19(6) of Regulation (EU) 2022/2554 and the notifications to be submitted by EBA, ESMA or EIOPA and the ECB to the relevant competent authorities in other Member States in accordance with Article 19(7) of that Regulation shall contain the same level of information, without any anonymisation, as the notifications and reports of major incidents received from financial entities in accordance with Article 19(4) of Regulation (EU) 2022/2554.",
+          "class": ""
+        }
+      ]
+    },
+    {
+      "id": "art_13",
+      "title": "Article 13",
+      "heading": "Entry into force",
+      "paragraphs": [
+        {
+          "id": "art_13__1",
+          "text": "This Regulation shall enter into force on the twentieth day following that of its publication in the Official Journal of the European Union.",
+          "class": ""
+        }
+      ]
+    }
+  ]
+}
