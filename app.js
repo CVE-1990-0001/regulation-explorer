@@ -1382,6 +1382,7 @@ const handleRoute = (hashId) => {
       statusMessage.textContent = `Act ${id} not found.`;
       return true;
     }
+    const changedSelection = currentSidebarSelectionKey !== `act:${id}`;
     // render act-level view
     renderItem(act);
     currentSidebarSelectionKey = `act:${id}`;
@@ -1391,6 +1392,8 @@ const handleRoute = (hashId) => {
     currentArticleId = null;
     updateNavigationButtons();
     updateStatus();
+    // Show a newly opened act from the top (also fixes the initial load offset).
+    if (changedSelection) window.scrollTo({ top: 0 });
     return true;
   }
 
@@ -1405,6 +1408,7 @@ const handleRoute = (hashId) => {
     // Expand the containing folders so the sidebar reflects where we are.
     const ancestors = (findBundlePath(id) || [bundle]).slice(0, -1);
     ancestors.forEach((b) => expandedBundleIds.add(b.id));
+    const changedSelection = currentSidebarSelectionKey !== `bundle:${id}`;
     renderItem(bundle);
     currentSidebarSelectionKey = `bundle:${id}`;
     currentArticleSelectionKey = null;
@@ -1412,6 +1416,7 @@ const handleRoute = (hashId) => {
     renderArticleList();
     updateNavigationButtons();
     updateStatus();
+    if (changedSelection) window.scrollTo({ top: 0 });
     return true;
   }
 
@@ -1802,6 +1807,11 @@ window.addEventListener('hashchange', () => {
   // delegate to unified route handler
   handleRoute(hashId);
 });
+
+// Don't let the browser restore a previous scroll position on load.
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+}
 
 document.addEventListener('DOMContentLoaded', fetchArticles);
 
