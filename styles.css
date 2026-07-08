@@ -530,6 +530,10 @@ textarea {
   font-size: var(--fs-body-sm);
 }
 
+.article-child-link .list-article-subtitle {
+  font-size: var(--fs-body-sm);
+}
+
 /* Main navigation links */
 .article-link {
   position: relative;
@@ -641,6 +645,17 @@ textarea {
   line-height: var(--lh-body-md);
   font-weight: 500;
   color: var(--color-darkgray);
+}
+
+.list-article-subtitle {
+  font-size: var(--fs-body-md);
+  line-height: var(--lh-body-md);
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.article-link.is-active .list-article-subtitle {
+  color: var(--accent-blue);
 }
 
 /* Item chips (type indicator icons) */

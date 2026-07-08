@@ -9,7 +9,8 @@
   },
   "meta": {
     "jurisdiction": "EU",
-    "celex": "32025R1190"
+    "celex": "32025R1190",
+    "subtitle": "Threat-led penetration testing (TLPT)"
   },
   "articles": [
     {

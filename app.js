@@ -356,6 +356,7 @@ const initialiseLegalTooltips = () => {
 
 const getSummaryText = (article) => (article?.summary || article?.summaryTitle || '').trim();
 const getHeadingText = (article) => (article?.heading || '').trim();
+const getSubtitleText = (item) => ((item?.meta && item.meta.subtitle) ? `${item.meta.subtitle}`.trim() : '');
 const stripHtml = (value) => (value || '').replace(/<[^>]*>/g, ' ');
 const normaliseForSearch = (value) => (
   `${value || ''}`
@@ -824,7 +825,7 @@ const renderAct = (act) => {
   articleNumberElement.textContent = '';
   renderBreadcrumb([]);
   articleTitleElement.textContent = act.title || act.id || '';
-  articleSubtitleElement.textContent = act.heading || '';
+  articleSubtitleElement.textContent = [getSubtitleText(act), act.heading].filter(Boolean).join(' — ');
 
   paragraphsContainer.innerHTML = '';
   const fragment = document.createDocumentFragment();
@@ -1020,6 +1021,14 @@ const renderSidebarList = (items = []) => {
     actTitle.className = 'list-article-number';
     setListTitle(actTitle, act);
     actButton.appendChild(actTitle);
+
+    const actSubtitleText = getSubtitleText(act);
+    if (actSubtitleText) {
+      const actSubtitleSpan = document.createElement('span');
+      actSubtitleSpan.className = 'list-article-subtitle';
+      actSubtitleSpan.textContent = actSubtitleText;
+      actButton.appendChild(actSubtitleSpan);
+    }
 
     const actHeadingText = getHeadingText(act);
     if (actHeadingText) {
@@ -1549,6 +1558,7 @@ const matchesItem = (item, query) => {
   if (item && item.type === 'act') {
     const title = normaliseForSearch(item.title || '');
     const heading = normaliseForSearch(getHeadingText(item));
+    const subtitle = normaliseForSearch(getSubtitleText(item));
     const articleText = (item.articles || [])
       .map((article) => {
         const articleTitle = normaliseForSearch(article?.title || '');
@@ -1577,7 +1587,7 @@ const matchesItem = (item, query) => {
       .replace(/\s+/g, ' ');
     const normalisedParagraphs = normaliseForSearch(paragraphs);
 
-    return title.includes(q) || heading.includes(q) || normalisedArticleText.includes(q) || normalisedParagraphs.includes(q);
+    return title.includes(q) || heading.includes(q) || subtitle.includes(q) || normalisedArticleText.includes(q) || normalisedParagraphs.includes(q);
   }
 
   // Treat as article-like

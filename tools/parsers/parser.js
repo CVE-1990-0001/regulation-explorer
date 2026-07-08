@@ -610,7 +610,7 @@ const getDirectiveSnippet = (celexId, articleIdentifier) => {
     if (snippetCache.has(celexId)) {
         store = snippetCache.get(celexId);
     } else {
-        const snippetPath = path.join(__dirname, 'data', `${celexId}.json`);
+        const snippetPath = path.join(__dirname, '..', '..', 'data', `${celexId}.json`);
         if (fs.existsSync(snippetPath)) {
             try {
                 store = JSON.parse(fs.readFileSync(snippetPath, 'utf8'));
