@@ -1,0 +1,465 @@
+{
+  "type": "act",
+  "id": "act_dora_rts7",
+  "title": "RTS 7",
+  "heading": "Delegated Regulation (EU) 2025/295",
+  "source": {
+    "uri": "",
+    "label": "EUR-Lex"
+  },
+  "meta": {
+    "jurisdiction": "EU",
+    "celex": "32025R0295"
+  },
+  "articles": [
+    {
+      "id": "art_1",
+      "title": "Article 1",
+      "heading": "Information to be provided by ICT third-party service provider in the application to be designated as critical",
+      "paragraphs": [
+        {
+          "id": "art_1__1",
+          "text": "1. The information and communication technology (ICT) third-party service provider shall submit the following information in the reasoned application for a voluntary request under Article 31(11) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a> to be designated as critical pursuant to Article 31(1), point (a), of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a>:",
+          "class": ""
+        },
+        {
+          "id": "art_1__2",
+          "text": "(a) name of the legal entity;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_1__3",
+          "text": "(b) legal entity identification code;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_1__4",
+          "text": "(c) name of contact person and contact details of the critical ICT third-party service provider;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_1__5",
+          "text": "(d) country where the legal entity has registered office;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_1__6",
+          "text": "(e) description of the corporate structure including at least information on its parent company and other related undertakings providing ICT services to Union financial entities. That information shall include where applicable;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_1__7",
+          "text": "(i) name of the legal entities;",
+          "class": "list-item-l2"
+        },
+        {
+          "id": "art_1__8",
+          "text": "(ii) legal entity identification code;",
+          "class": "list-item-l2"
+        },
+        {
+          "id": "art_1__9",
+          "text": "(iii) country where the legal entity has registered office;",
+          "class": "list-item-l2"
+        },
+        {
+          "id": "art_1__10",
+          "text": "(f) an estimation of the market share of the ICT third-party service provider in the Union financial sector and estimation of the market share per type of financial entity as referred to in <a href=\"#a:act_dora_rts7:art_2\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 2</a>(1) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a> as of the year of submission of the application to be designated as critical and the year before that application;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_1__11",
+          "text": "(g) a description of each ICT service provided to Union financial entities including:",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_1__12",
+          "text": "(i) a description of the nature of business and the type of ICT services provided to financial entities;",
+          "class": "list-item-l2"
+        },
+        {
+          "id": "art_1__13",
+          "text": "(ii) a list of the functions of financial entities supported by the ICT services provided, where available;",
+          "class": "list-item-l2"
+        },
+        {
+          "id": "art_1__14",
+          "text": "(iii) information whether the ICT services provided to financial entities support critical or important functions, where available;",
+          "class": "list-item-l2"
+        },
+        {
+          "id": "art_1__15",
+          "text": "(h) a list of financial entities that make use of the ICT services provided by the ICT third-party service provider, including the following information for each of the financial entity serviced, where available:",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_1__16",
+          "text": "(i) name of the legal entity;",
+          "class": "list-item-l2"
+        },
+        {
+          "id": "art_1__17",
+          "text": "(ii) legal entity identification code, where known to the ICT third-party service provider;",
+          "class": "list-item-l2"
+        },
+        {
+          "id": "art_1__18",
+          "text": "(iii) type of financial entity as specified in <a href=\"#a:act_dora_rts7:art_2\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 2</a>(1) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a>;",
+          "class": "list-item-l2"
+        },
+        {
+          "id": "art_1__19",
+          "text": "(iv) the geographic location from which the ICT services are provided to that specific legal entity;",
+          "class": "list-item-l2"
+        },
+        {
+          "id": "art_1__20",
+          "text": "(i) a list of the critical ICT third-party service providers included in the latest available list of such providers published by the ESAs pursuant to Article 31(9) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a> that rely on the services provided by the applicant where available;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_1__21",
+          "text": "(j) a self-assessment as regards the following:",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_1__22",
+          "text": "(i) the degree of substitutability for each ICT service provided by the applicant considering the following:",
+          "class": "list-item-l2"
+        },
+        {
+          "id": "art_1__23",
+          "text": "— the market share of the ICT third-party service provider in the Union financial sector;",
+          "class": "list-item-l2"
+        },
+        {
+          "id": "art_1__24",
+          "text": "— the number of known relevant competitors per type of ICT services, or group of ICT services;",
+          "class": "list-item-l2"
+        },
+        {
+          "id": "art_1__25",
+          "text": "— description of specificities relating to the ICT services offered, including in relation to any proprietary technology, or the specific features of the ICT third-party service provider’s organisation or activity;",
+          "class": "list-item-l2"
+        },
+        {
+          "id": "art_1__26",
+          "text": "(ii) knowledge about the availability of the alternative ICT third-party service providers to provide the same ICT services as the ICT third-party service provider submitting the application;",
+          "class": "list-item-l2"
+        },
+        {
+          "id": "art_1__27",
+          "text": "(k) information on a future business strategy in relation to the provision of ICT services and infrastructure to financial entities in the Union, including any planned changes in the group or management structure, entry into new markets or activities;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_1__28",
+          "text": "(l) identification of the subcontractors of the ICT third-party service provider which have been designated as critical ICT third-party service providers;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_1__29",
+          "text": "(m) any other reasons relevant for the ICT third-party service provider’s application to be designated as critical.",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_1__30",
+          "text": "2. Where the ICT third-party service provider belongs to a group, the information referred to in paragraph 1 shall be provided in relation to the ICT services provided by the group as a whole.",
+          "class": ""
+        }
+      ]
+    },
+    {
+      "id": "art_2",
+      "title": "Article 2",
+      "heading": "Content, structure and format of the information to be submitted, disclosed or reported by critical ICT third-party service providers",
+      "paragraphs": [
+        {
+          "id": "art_2__1",
+          "text": "1. Critical ICT third-party service providers shall provide to the Lead Overseer, upon its request, any information that is necessary by the Lead Overseer to carry out its oversight duties in accordance with the requirements of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a>.",
+          "class": ""
+        },
+        {
+          "id": "art_2__2",
+          "text": "2. The information referred to in paragraph 1 includes, inter alia, the following:",
+          "class": ""
+        },
+        {
+          "id": "art_2__3",
+          "text": "(a) information about the arrangements, and copies of contractual documents, between:",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_2__4",
+          "text": "(i) the critical ICT third-party service provider and the financial entities referred to in <a href=\"#a:act_dora_rts7:art_2\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 2</a>(1) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a>;",
+          "class": "list-item-l2"
+        },
+        {
+          "id": "art_2__5",
+          "text": "(ii) the critical ICT third-party service provider and its subcontractors with a view to capture the technological value chain of the ICT services provided to the financial entities in the Union;",
+          "class": "list-item-l2"
+        },
+        {
+          "id": "art_2__6",
+          "text": "(b) information about the organisational and group structure of the critical ICT third-party service provider, including identification of all entities belonging to the same group that directly or indirectly provide ICT services to financial entities in the Union;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_2__7",
+          "text": "(c) information about the major shareholders, including their structure and geographical spread, of any of the following:",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_2__8",
+          "text": "(i) entities that hold, solely or jointly with their linked entities, 25 % or more of the capital or voting rights of the critical ICT third-party service provider;",
+          "class": "list-item-l2"
+        },
+        {
+          "id": "art_2__9",
+          "text": "(ii) entities that hold the right to appoint or remove a majority of the members of the administrative, management, or supervisory body of the critical ICT third-party service provider;",
+          "class": "list-item-l2"
+        },
+        {
+          "id": "art_2__10",
+          "text": "(iii) entities that control, pursuant to an agreement, a majority of shareholders’ or members’ voting rights in the critical ICT third-party service provider;",
+          "class": "list-item-l2"
+        },
+        {
+          "id": "art_2__11",
+          "text": "(d) information about the critical ICT third-party service provider’s market share per type of services, in the relevant markets where it operates;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_2__12",
+          "text": "(e) information about the internal governance arrangements of the critical ICT third-party service provider, including the structure with lines of governance responsibility and accountability rules;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_2__13",
+          "text": "(f) the meeting minutes of the critical ICT third-party service provider’s management body and any other internal relevant committees, which relate in any way to activities and risks concerning ICT third-party services supporting functions of financial entities within the Union;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_2__14",
+          "text": "(g) information about the ICT security of the critical ICT third-party service provider, including relevant strategies, objectives, policies, procedures, protocols, processes, control measures to protect sensitive data, access controls, encryption practices, incident response plans, and information about compliance with all relevant regulations and national and international standards where applicable;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_2__15",
+          "text": "(h) information about technical and organisational measures to ensure data protection and data confidentiality, including personal and non-personal data, implemented control measures to protect sensitive data, access controls, encryption practices, data breach response plan; when in regards processing of personal data the ICT third-party service provider is subject to laws from third-countries, including third-country government access request, list of the countries and the laws applicable:",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_2__16",
+          "text": "(i) information about the mechanisms the critical ICT third-party service provider offers to the Union financial entities for data portability, application portability and interoperability;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_2__17",
+          "text": "(j) information about the location of the data centres and ICT production centres used for the purposes of providing services to the financial entities, including a list of all relevant premises and facilities of the critical ICT third-party service provider, including outside the Union;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_2__18",
+          "text": "(k) information about provision of services by the critical ICT third-party service provider from third countries, including information on relevant legal provisions applicable to personal and non-personal data processed by the ICT third-party service provider;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_2__19",
+          "text": "(l) information about measures taken to address risks arising from the provision of ICT services by the critical ICT third-party service provider and their subcontractors from third-countries;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_2__20",
+          "text": "(m) information about the risk management framework and the incident management framework, including policies, procedures, tools, mechanisms, and governance arrangements of the critical ICT third-party service provider and of its subcontractors, including list and description of major incidents with direct or indirect impact on financial entities within the Union, including relevant details to determine the significance of the incident on financial entities and assess possible cross-border impacts;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_2__21",
+          "text": "(n) information about the change management framework, including policies, procedures, and controls of the critical ICT third-party service provider and its subcontractors;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_2__22",
+          "text": "(o) information about the overall response and recovery framework of the critical ICT third-party service provider, including business continuity plans and related arrangements and procedures, software development lifecycle policy, response and recovery plans and related arrangements and procedures, backup policies arrangements and procedures;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_2__23",
+          "text": "(p) information about performance monitoring, security monitoring, and incident tracking as well as information about reporting mechanisms related to service performance, incidents, and compliance with agreed-upon service level agreements (SLAs) and service level objectives (SLOs) or similar arrangements between critical ICT third-party service providers and financial entities in the Union;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_2__24",
+          "text": "(q) information about the ICT third-party management framework of the critical ICT third-party service provider, including strategies, policies, procedures, processes, and controls including details on the due diligence and risk assessment performed by the critical ICT third-party service provider on its subcontractors before entering into an agreement with them and to monitor the relationship covering all relevant ICT and counterparty risks;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_2__25",
+          "text": "(r) extractions from the monitoring and scanning systems of the critical ICT third-party service provider and of its subcontractors, covering but not limited to network monitoring, server monitoring, application monitoring, security monitoring, vulnerability scanning, log management, performance monitoring, incident management and measurements against reliability goals, such as SLOs;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_2__26",
+          "text": "(s) extractions from any production, pre-production and test system or application used by the critical ICT third-party service provider and its subcontractors, to provide directly or indirectly services to financial entities in the Union;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_2__27",
+          "text": "(t) compliance and available audit reports as well as any relevant audit findings, including audits performed by national authorities in the Union and outside the Union where cooperation agreements with the relevant authorities provide for such information exchange, or certifications achieved by the critical ICT third-party service provider or its subcontractors, including reports from internal and external auditors, certifications, or compliance assessments with industry-specific standards. This includes information about any type of available independent testing of the resilience of the ICT systems of the critical ICT third-party service provider, including any type of threat led penetration testing carried out by the ICT third-party service provider;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_2__28",
+          "text": "(u) information about any assessments carried out by the critical ICT third-party service provider upon its request or on its behalf evaluating the suitability and integrity of individuals holding key positions within the critical ICT third-party service provider;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_2__29",
+          "text": "(v) information about any remediation plan to address recommendations pursuant to <a href=\"#a:act_dora_rts7:art_3\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 3</a>, and relevant related information to confirm remedies have been implemented;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_2__30",
+          "text": "(w) information about available employee training schemes and security awareness programs, including, where relevant, information on investments, resources and methods of the critical ICT third-party service provider in training its staff to handle sensitive financial data and maintain high levels of security;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_2__31",
+          "text": "(x) information about the activities of the critical ICT third-party service provider and financial statements, including information on the budget and resources related to ICT and security.",
+          "class": "list-item-l1"
+        }
+      ]
+    },
+    {
+      "id": "art_3",
+      "title": "Article 3",
+      "heading": "Information from critical ICT third-party service providers after the issuance of recommendations",
+      "paragraphs": [
+        {
+          "id": "art_3__1",
+          "text": "1. The critical ICT third-party service provider shall provide to the Lead Overseer a report containing a remediation plan in relation to the recommendations and remedies that the critical ICT third-party service provider plans to implement in order to mitigate the risks identified in the recommendations referred to in Article 35(1), point (d) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2254\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2254 – opens on EUR-Lex\">Regulation (EU) 2022/2254</a>. The report shall be consistent with the timeline set by the Lead Overseer for each recommendation.",
+          "class": ""
+        },
+        {
+          "id": "art_3__2",
+          "text": "2. To enable the monitoring of the implementation of the actions that have been taken or the remedies that have been implemented by the critical ICT third-party service provider in relation to the recommendations received, the critical ICT third-party service provider shall share with the Lead Overseer upon request:",
+          "class": ""
+        },
+        {
+          "id": "art_3__3",
+          "text": "(a) interim progress reports and related supporting documents specifying the progress of the implementation of the actions and measures set out in the report provided by the critical ICT third-party service provider to the Lead Overseer within the timeline defined by the Lead Overseer;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_3__4",
+          "text": "(b) final reports and related supporting documents specifying the actions that have been taken or the remedies that have been implemented by the critical ICT third-party service provider in order to mitigate the risks identified in the recommendations received.",
+          "class": "list-item-l1"
+        }
+      ]
+    },
+    {
+      "id": "art_4",
+      "title": "Article 4",
+      "heading": "Structure and format of information provided by critical ICT third-party service providers",
+      "paragraphs": [
+        {
+          "id": "art_4__1",
+          "text": "1. The critical ICT third-party service provider shall provide the requested information to the Lead Overseer through the dedicated secure electronic channels indicated by the Lead Overseer in its request and in the form set out by the Lead Overseer.",
+          "class": ""
+        },
+        {
+          "id": "art_4__2",
+          "text": "2. When providing information to the Lead Overseer, the critical ICT third-party service providers shall:",
+          "class": ""
+        },
+        {
+          "id": "art_4__3",
+          "text": "(a) follow the structure indicated by the Lead Overseer in its information request;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_4__4",
+          "text": "(b) clearly locate the relevant piece of information in the submitted documentation.",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_4__5",
+          "text": "3. Information submitted, disclosed or reported to the Lead Overseer by the critical ICT third-party service provider shall be in a language customary in the sphere of international finance.",
+          "class": ""
+        }
+      ]
+    },
+    {
+      "id": "art_5",
+      "title": "Article 5",
+      "heading": "Template for providing information on subcontracting arrangements",
+      "paragraphs": [
+        {
+          "id": "art_5__1",
+          "text": "A critical ICT third-party service provider which is required to share information on subcontracting arrangements shall provide the information to the Lead Overseer according to the template set out in the Annex.",
+          "class": ""
+        }
+      ]
+    },
+    {
+      "id": "art_6",
+      "title": "Article 6",
+      "heading": "Competent authorities’ assessment of the risks addressed in the recommendations of the Lead Overseer",
+      "paragraphs": [
+        {
+          "id": "art_6__1",
+          "text": "1. As part of their supervision of financial entities, the competent authority shall assess the impact on the financial entities of the measures taken by the critical ICT third-party service provider based on the recommendations of the Lead Overseer in accordance with the principle of proportionality.",
+          "class": ""
+        },
+        {
+          "id": "art_6__2",
+          "text": "2. When conducting the assessment referred to in paragraph 1, the competent authority shall take into account all of the following:",
+          "class": ""
+        },
+        {
+          "id": "art_6__3",
+          "text": "(a) the adequacy and the coherence of the corrective and remedial measures implemented by the financial entities to mitigate the risks identified in the recommendations;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_6__4",
+          "text": "(b) the assessment made by the Lead Overseer of the compliance of the critical ICT third-party service provider with the measures and actions included in the report where it has impacts on the exposure of the financial entities under its remit to the risks identified in the recommendations;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_6__5",
+          "text": "(c) the view of any other competent authorities who have been consulted in accordance with Article 42(5) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a>;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_6__6",
+          "text": "(d) whether the Lead Overseer has considered the actions and remedies implemented by the critical ICT third-party service provider as adequate to mitigate the exposure of the financial entities under its remit to the risks identified in the recommendations.",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_6__7",
+          "text": "3. Upon request from the Lead Overseer, the competent authority shall provide in reasonable time the results of the assessment set out in paragraph 1. When requesting the results of this assessment, the Lead Overseer shall consider the principle of proportionality and the magnitude of risks associated with the recommendations, including the cross-border impacts of these risks when impacting financial entities operating in more than one Member State.",
+          "class": ""
+        },
+        {
+          "id": "art_6__8",
+          "text": "4. Where relevant, the competent authority shall request financial entities to provide any information necessary to carry out the assessment referred to in paragraph 1.",
+          "class": ""
+        }
+      ]
+    },
+    {
+      "id": "art_7",
+      "title": "Article 7",
+      "heading": "Entry into force",
+      "paragraphs": [
+        {
+          "id": "art_7__1",
+          "text": "This Regulation shall enter into force on the twentieth day following that of its publication in the Official Journal of the European Union .",
+          "class": ""
+        }
+      ]
+    }
+  ]
+}

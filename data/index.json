@@ -1,12 +1,125 @@
 {
   "acts": [
-    { "id": "act_emir_2012", "path": "emir-regulation.json", "label": "EMIR Regulation" },
-    { "id": "act_csdr_2014", "path": "regulations-data/32014R0909.json", "label": "CSDR Regulation (EU) No 909/2014" },
-    { "id": "act_mifid2_2014", "path": "regulations-data/02014L0065.json", "label": "MiFID II Directive 2014/65/EU" },
-    { "id": "act_eu_ai_act_2024", "path": "regulations-data/202401689.json", "label": "EU AI Act (Regulation 2024/1689)" },
-    { "id": "act_boersg_2007", "path": "regulations-data/boersengesetz.json", "label": "Börsengesetz (BörsG)" }
+    {
+      "id": "act_emir_2012",
+      "path": "emir-regulation.json",
+      "label": "EMIR"
+    },
+    {
+      "id": "act_csdr_2014",
+      "path": "regulations-data/32014R0909.json",
+      "label": "CSDR",
+      "heading": "Regulation (EU) No 909/2014"
+    },
+    {
+      "id": "act_mifid2_2014",
+      "path": "regulations-data/02014L0065.json",
+      "label": "MiFID II",
+      "heading": "Directive 2014/65/EU"
+    },
+    {
+      "id": "act_eu_ai_act_2024",
+      "path": "regulations-data/202401689.json",
+      "label": "EU AI Act",
+      "heading": "Regulation (EU) 2024/1689"
+    },
+    {
+      "id": "act_boersg_2007",
+      "path": "regulations-data/boersengesetz.json",
+      "label": "Börsengesetz (BörsG)",
+      "heading": "German Securities Exchange Act"
+    },
+    {
+      "id": "act_dora_core",
+      "path": "regulations-data/dora/act_dora_core.json",
+      "label": "DORA Regulation"
+    },
+    {
+      "id": "act_dora_rts1",
+      "path": "regulations-data/dora/act_dora_rts1.json",
+      "label": "RTS 1"
+    },
+    {
+      "id": "act_dora_rts2",
+      "path": "regulations-data/dora/act_dora_rts2.json",
+      "label": "RTS 2"
+    },
+    {
+      "id": "act_dora_rts3",
+      "path": "regulations-data/dora/act_dora_rts3.json",
+      "label": "RTS 3"
+    },
+    {
+      "id": "act_dora_rts4",
+      "path": "regulations-data/dora/act_dora_rts4.json",
+      "label": "RTS 4"
+    },
+    {
+      "id": "act_dora_rts5",
+      "path": "regulations-data/dora/act_dora_rts5.json",
+      "label": "RTS 5"
+    },
+    {
+      "id": "act_dora_rts6",
+      "path": "regulations-data/dora/act_dora_rts6.json",
+      "label": "RTS 6"
+    },
+    {
+      "id": "act_dora_rts7",
+      "path": "regulations-data/dora/act_dora_rts7.json",
+      "label": "RTS 7"
+    },
+    {
+      "id": "act_dora_rts8",
+      "path": "regulations-data/dora/act_dora_rts8.json",
+      "label": "RTS 8"
+    },
+    {
+      "id": "act_dora_its1",
+      "path": "regulations-data/dora/act_dora_its1.json",
+      "label": "ITS 1"
+    },
+    {
+      "id": "act_dora_its2",
+      "path": "regulations-data/dora/act_dora_its2.json",
+      "label": "ITS 2"
+    },
+    {
+      "id": "act_dora_2556",
+      "path": "regulations-data/dora/act_dora_2556.json",
+      "label": "DORA Directive"
+    },
+    {
+      "id": "act_gdpr_2016",
+      "path": "regulations-data/gdpr.json",
+      "label": "GDPR (Regulation (EU) 2016/679)"
+    },
+    {
+      "id": "act_csa_2019",
+      "path": "regulations-data/cybersecurity_act.json",
+      "label": "Cybersecurity Act (Regulation (EU) 2019/881)"
+    },
+    {
+      "id": "act_cra_2024",
+      "path": "regulations-data/cyber_resilience_act.json",
+      "label": "Cyber Resilience Act (Regulation (EU) 2024/2847)"
+    },
+    {
+      "id": "act_nis2_2022",
+      "path": "regulations-data/nis2.json",
+      "label": "NIS2 (Directive (EU) 2022/2555)"
+    },
+    {
+      "id": "act_data_act_2023",
+      "path": "regulations-data/data_act.json",
+      "label": "Data Act (Regulation (EU) 2023/2854)"
+    }
   ],
   "bundles": [
-    { "id": "bundle_dora", "path": "data/bundles/dora.json", "label": "DORA" }
+    {
+      "id": "bundle_dora",
+      "path": "data/bundles/dora.json",
+      "label": "DORA"
+    }
   ]
 }

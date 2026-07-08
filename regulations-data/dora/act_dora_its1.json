@@ -1,0 +1,214 @@
+{
+  "type": "act",
+  "id": "act_dora_its1",
+  "title": "ITS 1",
+  "heading": "Implementing Regulation (EU) 2025/302",
+  "source": {
+    "uri": "",
+    "label": "EUR-Lex"
+  },
+  "meta": {
+    "jurisdiction": "EU",
+    "celex": "32025R0302"
+  },
+  "articles": [
+    {
+      "id": "art_1",
+      "title": "Article 1",
+      "heading": "Template for reporting ICT-related major incidents",
+      "paragraphs": [
+        {
+          "id": "art_1__1",
+          "text": "1. Financial entities shall use the template laid down in Annex I to submit the initial notification, the intermediate report, and the final report referred to in Article 19(4) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a> as follows:",
+          "class": ""
+        },
+        {
+          "id": "art_1__2",
+          "text": "(a) financial entities that submit an initial notification shall complete the data fields of the template which correspond to the information to be provided in accordance with <a href=\"#a:act_dora_its1:art_2\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 2</a> of Commission Delegated <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R0301\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2025/301 – opens on EUR-Lex\">Regulation (EU) 2025/301</a> ( 7 ) , and may, where they already have that information, complete those data fields the completion of which is not required for an initial notification but is required for an intermediate or final report;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_1__3",
+          "text": "(b) financial entities that submit an intermediate report shall complete the data fields of the template which correspond to the information to be provided in accordance with <a href=\"#a:act_dora_its1:art_3\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 3</a> of Delegated <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R0301\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2025/301 – opens on EUR-Lex\">Regulation (EU) 2025/301</a> and may, where they already have the relevant information, complete data fields the completion of which is not required for the intermediate report, but is required for the final report.",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_1__4",
+          "text": "(c) financial entities that submit a final report shall complete the data fields of the template which correspond to the information to be provided in accordance with <a href=\"#a:act_dora_its1:art_4\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 4</a> of Delegated <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R0301\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2025/301 – opens on EUR-Lex\">Regulation (EU) 2025/301</a>.",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_1__5",
+          "text": "2. Financial entities shall ensure that the information contained in the initial notification, and in the intermediate and final report, is complete and accurate.",
+          "class": ""
+        },
+        {
+          "id": "art_1__6",
+          "text": "3. Financial entities shall provide estimated values based on other available data and information, to the extent possible, where accurate data are not available at the time of reporting for the initial notification or the intermediate report.",
+          "class": ""
+        },
+        {
+          "id": "art_1__7",
+          "text": "4. When submitting an intermediate or final report, financial entities shall use the template laid down in Annex I to submit all required information and update, where applicable, the information that was previously provided in the initial notification or in the intermediate report.",
+          "class": ""
+        },
+        {
+          "id": "art_1__8",
+          "text": "5. Financial entities shall follow the data glossary and instructions set out in Annex II when completing the template laid down in Annex I.",
+          "class": ""
+        }
+      ]
+    },
+    {
+      "id": "art_2",
+      "title": "Article 2",
+      "heading": "Joint submission of initial notification, intermediate and final reports",
+      "paragraphs": [
+        {
+          "id": "art_2__1",
+          "text": "Financial entities may combine the submission of the initial notification, the intermediate report, and the final report to provide two or all of those at the same time, where regular activities have recovered or the root cause analysis has been completed and provided that the time limits set out in <a href=\"#a:act_dora_its1:art_5\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 5</a> of Delegated <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R0301\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2025/301 – opens on EUR-Lex\">Regulation (EU) 2025/301</a> are met.",
+          "class": ""
+        }
+      ]
+    },
+    {
+      "id": "art_3",
+      "title": "Article 3",
+      "heading": "Recurring ICT-related incidents",
+      "paragraphs": [
+        {
+          "id": "art_3__1",
+          "text": "Financial entities that provide information on non-major recurring ICT-related incidents that cumulatively meet the conditions for one major ICT-related incident as set out in <a href=\"#a:act_dora_its1:art_8\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 8</a>(2) of Delegated <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1772\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2024/1772 – opens on EUR-Lex\">Regulation (EU) 2024/1772</a>, shall provide that information in an aggregated form.",
+          "class": ""
+        }
+      ]
+    },
+    {
+      "id": "art_4",
+      "title": "Article 4",
+      "heading": "Use of secure electronic channels",
+      "paragraphs": [
+        {
+          "id": "art_4__1",
+          "text": "1. Financial entities shall use secure electronic channels as made available by their competent authority to submit the initial notification and the intermediate and final reports.",
+          "class": ""
+        },
+        {
+          "id": "art_4__2",
+          "text": "2. Financial entities that are unable to use the secure electronic channels as made available by their competent authority shall inform their competent authority about a major ICT-related incident through other secure means in agreement with the competent authority. If required by the competent authority, financial entities shall resubmit the initial notification, or intermediate or final report, through the secure electronic channel as made available by their competent authority once they are able to do so.",
+          "class": ""
+        }
+      ]
+    },
+    {
+      "id": "art_5",
+      "title": "Article 5",
+      "heading": "Reclassification of major ICT-related incidents",
+      "paragraphs": [
+        {
+          "id": "art_5__1",
+          "text": "Where after further assessment, the financial entity concludes that the ICT-related incident previously reported as major, at no time fulfilled the classification criteria and thresholds set out in <a href=\"#a:act_dora_its1:art_8\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 8</a> of Delegated <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1772\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2024/1772 – opens on EUR-Lex\">Regulation (EU) 2024/1772</a>, the financial entity shall notify to the competent authority that it has reclassified the ICT-related incident from major to non-major by providing the information about that reclassification in the template laid down in Annex II to this Regulation in relation to the fields ‘type of report’ and ‘other information’.",
+          "class": ""
+        }
+      ]
+    },
+    {
+      "id": "art_6",
+      "title": "Article 6",
+      "heading": "Notification of outsourcing of the reporting obligations",
+      "paragraphs": [
+        {
+          "id": "art_6__1",
+          "text": "1. Financial entities that have outsourced the obligation to report major ICT-related incidents in accordance with Article 19(5) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a> shall inform their competent authority of that outsourcing arrangement as soon as the outsourcing arrangement has been concluded and at the latest prior to the first notification or reporting.",
+          "class": ""
+        },
+        {
+          "id": "art_6__2",
+          "text": "2. Financial entities shall provide the competent authority with the name, contact details, and identification code of the third-party that will submit the major ICT-related incident notifications or reports for them.",
+          "class": ""
+        },
+        {
+          "id": "art_6__3",
+          "text": "3. Financial entities shall inform their competent authority as soon as they no longer outsource their reporting obligations as referred to in Article 19(5) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a>.",
+          "class": ""
+        }
+      ]
+    },
+    {
+      "id": "art_7",
+      "title": "Article 7",
+      "heading": "Aggregated reporting",
+      "paragraphs": [
+        {
+          "id": "art_7__1",
+          "text": "1. A third-party service provider to whom reporting obligations have been outsourced as referred to in Article 19(5) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a> may use the template set out in Annex I to this Regulation to provide aggregated information about a major ICT-related incident impacting multiple financial entities in one single notification or report, and submit that notification or report to the competent authority on behalf of all impacted financial entities, provided that all of the following conditions are met:",
+          "class": ""
+        },
+        {
+          "id": "art_7__2",
+          "text": "(a) the major ICT-related incident to be reported originates from or is being caused by a third-party ICT service provider;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_7__3",
+          "text": "(b) that third-party service provider provides the relevant ICT service to more than one financial entity, or to a group;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_7__4",
+          "text": "(c) the ICT-related incident is classified as major by each financial entity covered in the aggregated notification or report;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_7__5",
+          "text": "(d) the major ICT-related incident affects financial entities within a single Member State and the aggregated report relates to financial entities which are supervised by the same competent authority;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_7__6",
+          "text": "(e) competent authorities have explicitly permitted this type of financial entities to aggregate their reporting.",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_7__7",
+          "text": "2. Paragraph 1 shall not apply to credit institutions that are considered to be of significant relevance as referred to in <a href=\"#a:act_dora_its1:art_2\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 2</a> point (16) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0468\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) No 468/2014 – opens on EUR-Lex\">Regulation (EU) No 468/2014</a> of the European Central Bank ( 8 ) , operators of trading venues, and central counterparties, which shall only use the template in Annex I to submit major ICT-related incident notifications or reports individually to their competent authority.",
+          "class": ""
+        },
+        {
+          "id": "art_7__8",
+          "text": "3. Where competent authorities require information on the individual impact of the major ICT-related incident on a single financial entity, upon request of the competent authority, the financial entity shall submit an individual notification or a report on the major ICT-related incident.",
+          "class": ""
+        }
+      ]
+    },
+    {
+      "id": "art_8",
+      "title": "Article 8",
+      "heading": "Notification of significant cyber threats",
+      "paragraphs": [
+        {
+          "id": "art_8__1",
+          "text": "1. Financial entities that notify significant cyber threats to competent authorities in accordance with Article 19(2) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a> shall use the template laid down in Annex III to this Regulation and follow the data glossary and instructions set out Annex IV to this Regulation.",
+          "class": ""
+        },
+        {
+          "id": "art_8__2",
+          "text": "2. Financial entities shall ensure that the information contained in the notification of significant cyber threats is complete and accurate.",
+          "class": ""
+        }
+      ]
+    },
+    {
+      "id": "art_9",
+      "title": "Article 9",
+      "heading": "Entry into force",
+      "paragraphs": [
+        {
+          "id": "art_9__1",
+          "text": "This Regulation shall enter into force on the twentieth day following that of its publication in the Official Journal of the European Union .",
+          "class": ""
+        }
+      ]
+    }
+  ]
+}

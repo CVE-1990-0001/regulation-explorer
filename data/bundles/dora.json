@@ -5,19 +5,74 @@
   "description": "Digital Operational Resilience Act (DORA) and its technical standards.",
   "members": [
     {
+      "ref": "act_dora_core",
+      "label": "DORA Regulation"
+    },
+    {
+      "ref": "act_dora_2556",
+      "label": "DORA Directive"
+    },
+    {
       "type": "bundle",
       "id": "bundle_dora_rts",
       "title": "RTS",
       "description": "Regulatory Technical Standards under DORA.",
-      "members": []
+      "members": [
+        {
+          "ref": "act_dora_rts1",
+          "label": "RTS 1"
+        },
+        {
+          "ref": "act_dora_rts2",
+          "label": "RTS 2"
+        },
+        {
+          "ref": "act_dora_rts3",
+          "label": "RTS 3"
+        },
+        {
+          "ref": "act_dora_rts4",
+          "label": "RTS 4"
+        },
+        {
+          "ref": "act_dora_rts5",
+          "label": "RTS 5"
+        },
+        {
+          "ref": "act_dora_rts6",
+          "label": "RTS 6"
+        },
+        {
+          "ref": "act_dora_rts7",
+          "label": "RTS 7"
+        },
+        {
+          "ref": "act_dora_rts8",
+          "label": "RTS 8"
+        }
+      ]
     },
     {
       "type": "bundle",
       "id": "bundle_dora_its",
       "title": "ITS",
       "description": "Implementing Technical Standards under DORA.",
-      "members": []
+      "members": [
+        {
+          "ref": "act_dora_its1",
+          "label": "ITS 1"
+        },
+        {
+          "ref": "act_dora_its2",
+          "label": "ITS 2"
+        }
+      ]
     }
   ],
-  "meta": { "tags": ["dora"], "updated": "2026-07-01" }
+  "meta": {
+    "tags": [
+      "dora"
+    ],
+    "updated": "2026-07-06"
+  }
 }
