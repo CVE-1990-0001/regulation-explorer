@@ -20,14 +20,15 @@
     {
       "id": "act_eu_ai_act_2024",
       "path": "regulations-data/202401689.json",
-      "label": "EU AI Act",
+      "label": "AI Act",
       "heading": "Regulation (EU) 2024/1689"
     },
     {
       "id": "act_boersg_2007",
       "path": "regulations-data/boersengesetz.json",
       "label": "Börsengesetz (BörsG)",
-      "heading": "German Securities Exchange Act"
+      "heading": "German Securities Exchange Act",
+      "jurisdiction": "DE"
     },
     {
       "id": "act_dora_core",
