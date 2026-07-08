@@ -4,28 +4,28 @@
       "id": "act_eu_emir_2012_0648",
       "path": "emir-regulation.json",
       "label": "EMIR",
-      "celex": "32012R0648"
+      "authId": "celex:32012R0648"
     },
     {
       "id": "act_eu_csdr_2014_0909",
       "path": "regulations-data/32014R0909.json",
       "label": "CSDR",
       "heading": "Regulation (EU) No 909/2014",
-      "celex": "32014R0909"
+      "authId": "celex:32014R0909"
     },
     {
       "id": "act_eu_mifid2_2014_0065",
       "path": "regulations-data/02014L0065.json",
       "label": "MiFID II",
       "heading": "Directive 2014/65/EU",
-      "celex": "32014L0065"
+      "authId": "celex:32014L0065"
     },
     {
       "id": "act_eu_ai_act_2024_1689",
       "path": "regulations-data/202401689.json",
       "label": "AI Act",
       "heading": "Regulation (EU) 2024/1689",
-      "celex": "32024R1689"
+      "authId": "celex:32024R1689"
     },
     {
       "id": "act_de_boersg_2007",
@@ -38,103 +38,103 @@
       "id": "act_eu_dora_reg_2022_2554",
       "path": "regulations-data/dora/act_dora_core.json",
       "label": "DORA Regulation",
-      "celex": "32022R2554"
+      "authId": "celex:32022R2554"
     },
     {
       "id": "act_eu_dora_rts_2024_1774",
       "path": "regulations-data/dora/act_dora_rts1.json",
       "label": "RTS 1",
-      "celex": "32024R1774"
+      "authId": "celex:32024R1774"
     },
     {
       "id": "act_eu_dora_rts_2024_1772",
       "path": "regulations-data/dora/act_dora_rts2.json",
       "label": "RTS 2",
-      "celex": "32024R1772"
+      "authId": "celex:32024R1772"
     },
     {
       "id": "act_eu_dora_rts_2025_0301",
       "path": "regulations-data/dora/act_dora_rts3.json",
       "label": "RTS 3",
-      "celex": "32025R0301"
+      "authId": "celex:32025R0301"
     },
     {
       "id": "act_eu_dora_rts_2025_1190",
       "path": "regulations-data/dora/act_dora_rts4.json",
       "label": "RTS 4",
-      "celex": "32025R1190"
+      "authId": "celex:32025R1190"
     },
     {
       "id": "act_eu_dora_rts_2024_1773",
       "path": "regulations-data/dora/act_dora_rts5.json",
       "label": "RTS 5",
-      "celex": "32024R1773"
+      "authId": "celex:32024R1773"
     },
     {
       "id": "act_eu_dora_rts_2025_0532",
       "path": "regulations-data/dora/act_dora_rts6.json",
       "label": "RTS 6",
-      "celex": "32025R0532"
+      "authId": "celex:32025R0532"
     },
     {
       "id": "act_eu_dora_rts_2025_0295",
       "path": "regulations-data/dora/act_dora_rts7.json",
       "label": "RTS 7",
-      "celex": "32025R0295"
+      "authId": "celex:32025R0295"
     },
     {
       "id": "act_eu_dora_rts_2025_0420",
       "path": "regulations-data/dora/act_dora_rts8.json",
       "label": "RTS 8",
-      "celex": "32025R0420"
+      "authId": "celex:32025R0420"
     },
     {
       "id": "act_eu_dora_its_2025_0302",
       "path": "regulations-data/dora/act_dora_its1.json",
       "label": "ITS 1",
-      "celex": "32025R0302"
+      "authId": "celex:32025R0302"
     },
     {
       "id": "act_eu_dora_its_2024_2956",
       "path": "regulations-data/dora/act_dora_its2.json",
       "label": "ITS 2",
-      "celex": "32024R2956"
+      "authId": "celex:32024R2956"
     },
     {
       "id": "act_eu_dora_dir_2022_2556",
       "path": "regulations-data/dora/act_dora_2556.json",
       "label": "DORA Directive",
-      "celex": "32022L2556"
+      "authId": "celex:32022L2556"
     },
     {
       "id": "act_eu_gdpr_2016_0679",
       "path": "regulations-data/gdpr.json",
       "label": "GDPR (Regulation (EU) 2016/679)",
-      "celex": "32016R0679"
+      "authId": "celex:32016R0679"
     },
     {
       "id": "act_eu_csa_2019_0881",
       "path": "regulations-data/cybersecurity_act.json",
       "label": "Cybersecurity Act (Regulation (EU) 2019/881)",
-      "celex": "32019R0881"
+      "authId": "celex:32019R0881"
     },
     {
       "id": "act_eu_cra_2024_2847",
       "path": "regulations-data/cyber_resilience_act.json",
       "label": "Cyber Resilience Act (Regulation (EU) 2024/2847)",
-      "celex": "32024R2847"
+      "authId": "celex:32024R2847"
     },
     {
       "id": "act_eu_nis2_2022_2555",
       "path": "regulations-data/nis2.json",
       "label": "NIS2 (Directive (EU) 2022/2555)",
-      "celex": "32022L2555"
+      "authId": "celex:32022L2555"
     },
     {
       "id": "act_eu_data_act_2023_2854",
       "path": "regulations-data/data_act.json",
       "label": "Data Act (Regulation (EU) 2023/2854)",
-      "celex": "32023R2854"
+      "authId": "celex:32023R2854"
     }
   ],
   "bundles": [

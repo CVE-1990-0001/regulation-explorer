@@ -44,7 +44,7 @@
       "paragraphs": [
         {
           "id": "art_3__1",
-          "text": "1. Financial entities shall use the templates set out in Annex I to IV to maintain and update the register of information in accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"ref\" data-celex=\"32022R2554\" data-article=\"28\" target=\"_blank\" rel=\"noopener\">Article 28</a>(3) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"ref\" data-celex=\"32022R2554\" target=\"_blank\" rel=\"noopener\">Regulation (EU) 2022/2554</a>, at entity level, or at sub-consolidated and consolidated level.",
+          "text": "1. Financial entities shall use the templates set out in Annex I to IV to maintain and update the register of information in accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"ref\" data-ref=\"celex:32022R2554\" data-article=\"28\" target=\"_blank\" rel=\"noopener\">Article 28</a>(3) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"ref\" data-ref=\"celex:32022R2554\" target=\"_blank\" rel=\"noopener\">Regulation (EU) 2022/2554</a>, at entity level, or at sub-consolidated and consolidated level.",
           "class": ""
         },
         {
@@ -104,7 +104,7 @@
         },
         {
           "id": "art_3__13",
-          "text": "5. Financial entities shall use a valid and active legal entity identifier (LEI) or the European Unique Identifier referred to in <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32017L1132\" class=\"ref\" data-celex=\"32017L1132\" data-article=\"16\" target=\"_blank\" rel=\"noopener\">Article 16</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32017L1132\" class=\"ref\" data-celex=\"32017L1132\" target=\"_blank\" rel=\"noopener\">Directive (EU) 2017/1132</a> (‘EUID’), and where available both of these identifiers, to identify all of their ICT third-party service providers that are legal persons, except for individuals acting in a business capacity.",
+          "text": "5. Financial entities shall use a valid and active legal entity identifier (LEI) or the European Unique Identifier referred to in <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32017L1132\" class=\"ref\" data-ref=\"celex:32017L1132\" data-article=\"16\" target=\"_blank\" rel=\"noopener\">Article 16</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32017L1132\" class=\"ref\" data-ref=\"celex:32017L1132\" target=\"_blank\" rel=\"noopener\">Directive (EU) 2017/1132</a> (‘EUID’), and where available both of these identifiers, to identify all of their ICT third-party service providers that are legal persons, except for individuals acting in a business capacity.",
           "class": ""
         },
         {

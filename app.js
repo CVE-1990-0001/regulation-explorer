@@ -30,7 +30,7 @@ let sidePanelScrollPosition = 0;
 let allActs = [];
 let allBundles = [];
 let lastSearchQuery = '';
-let celexToActId = {};
+let authToActId = {};
 
 const legalTooltipSelectors = '.legal-reference, .legal-link, .internal-article-link, .ref';
 const LEGAL_TOOLTIP_MAX_CHARS = 1000;
@@ -105,9 +105,9 @@ const htmlToPlainText = (html) => {
 };
 
 // Build a preview for a reference anchor. Handles both cross-act references
-// (data-celex [+ data-article]) and same-act hash references (#a:act:art).
+// (data-ref [+ data-article]) and same-act hash references (#a:act:art).
 const getReferencePreview = (element) => {
-  const celex = element.dataset ? element.dataset.celex : null;
+  const refId = refIdOf(element);
   const articleAttr = element.dataset ? element.dataset.article : null;
   const fallback = element.textContent ? element.textContent.trim() : '';
 
@@ -115,11 +115,12 @@ const getReferencePreview = (element) => {
   let articleId = null;
   let paragraphId = null;
 
-  if (celex) {
-    // Cross-act: resolve the CELEX to a hosted act, else it's an EUR-Lex link.
-    targetActId = celexToActId[celex];
+  if (refId) {
+    // Cross-act: resolve to a hosted act, else it opens externally.
+    targetActId = authToActId[refId];
     if (!targetActId) {
-      return `${fallback} — opens on EUR-Lex`;
+      const scheme = refId.split(':')[0];
+      return `${fallback} — opens ${scheme === 'celex' ? 'on EUR-Lex' : 'externally'}`;
     }
     articleId = articleAttr ? artIdOf(articleAttr) : null;
   } else {
@@ -382,6 +383,14 @@ const getSubtitleText = (item) => ((item?.meta && item.meta.subtitle) ? `${item.
 // Article id from a printed article number (mirrors the converter's art_id_of).
 const artIdOf = (n) => 'art_' + String(n == null ? '' : n)
   .replace(/[^0-9A-Za-z]+/g, '_').replace(/^_+|_+$/g, '').toLowerCase();
+// Scheme-qualified identifier of a cross-act ref anchor (e.g. "celex:32022R2554").
+// Falls back to the legacy data-celex attribute.
+const refIdOf = (el) => {
+  if (!el || !el.dataset) return null;
+  if (el.dataset.ref) return el.dataset.ref;
+  if (el.dataset.celex) return `celex:${el.dataset.celex}`;
+  return null;
+};
 // The act currently open in the reading pane, if any.
 const getCurrentActId = () => (currentSidebarSelectionKey && currentSidebarSelectionKey.startsWith('act:'))
   ? currentSidebarSelectionKey.slice(4)
@@ -1521,11 +1530,11 @@ const handleInternalLinkClick = (event) => {
     return;
   }
 
-  // Cross-act reference: resolve the CELEX to a hosted act, else fall through
-  // and let the anchor's EUR-Lex href open in a new tab.
-  const celex = link.dataset ? link.dataset.celex : null;
-  if (celex) {
-    const targetActId = celexToActId[celex];
+  // Cross-act reference: resolve the id to a hosted act, else fall through
+  // and let the anchor's external href open in a new tab.
+  const refId = refIdOf(link);
+  if (refId) {
+    const targetActId = authToActId[refId];
     if (!targetActId) {
       return;
     }
@@ -1748,11 +1757,14 @@ const loadRegistry = async () => {
 const loadAllData = async () => {
   const registry = await loadRegistry();
 
-  // CELEX -> app act id: the runtime bridge for cross-act references.
-  celexToActId = {};
+  // Scheme-qualified id -> app act id: the runtime bridge for cross-act references.
+  authToActId = {};
   (registry.acts || []).forEach((entry) => {
-    if (entry && entry.celex) {
-      celexToActId[entry.celex] = entry.id;
+    if (!entry) return;
+    if (entry.authId) {
+      authToActId[entry.authId] = entry.id;
+    } else if (entry.celex) {
+      authToActId[`celex:${entry.celex}`] = entry.id;   // legacy registry entries
     }
   });
 

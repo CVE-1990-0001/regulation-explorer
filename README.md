@@ -63,7 +63,7 @@ act_<jurisdiction>_<mnemonic>[_<type>]_<year>[_<number>]
 - **Always identity-bound, never positional.** The `id` encodes the act's own official number, not our display ordering. `RTS 1`/`RTS 3` etc. are *labels* only; the id `act_eu_dora_rts_2024_1774` is fixed to that specific delegated regulation. **An id is permanent — never rename an id to point at a different act.**
 - **Stable under additions.** Because EU ids carry the full `year_number`, adding a sibling act to a family never forces an existing id to change.
 - **Jurisdiction-first for extensibility.** The `<jurisdiction>` segment lets French, US, or any other corpus be added without collision, and makes an act's provenance obvious from its id alone.
-- **`id` ≠ CELEX and ≠ filename.** The id is a readable routing slug. The canonical legal identifier (CELEX) is stored separately in the registry (`celex`), and the on-disk filename (`path`) is just a storage location — none of the three need to match.
+- **`id` ≠ legal identifier ≠ filename.** The id is a readable routing slug. The canonical legal identifier is stored separately in the registry as a **scheme-qualified `authId`** (e.g. `celex:32022R2554`, later `cfr:…`, `eli:…`), and the on-disk filename (`path`) is just a storage location — none of the three need to match.
 
 ### Examples
 
@@ -82,35 +82,35 @@ act_<jurisdiction>_<mnemonic>[_<type>]_<year>[_<number>]
 
 ## References (internal & cross-act)
 
-References become links in **two phases**. Links are written once at convert
-time; the runtime only decides where each one goes — it never re-parses text.
+Links are written **once at convert time**; the runtime only decides where each
+one goes (it never re-parses text).
 
-**Convert time** — `tools/link_references.py` (run manually). For each paragraph
-it writes `<a class="ref">` anchors. The cited act's **CELEX is computed from the
-citation text by formula** (`Regulation (EU) 2022/2554` → `32022R2554`) — no
-lookup, no act id resolved here:
+**Convert time** — `python3 tools/link_references.py` (idempotent, safe to re-run):
+scans each paragraph and writes `<a class="ref">` anchors.
 
-- same-act `Article N` → `data-article="N"`, `href="#a:<thisAct>:art_N"` (no CELEX)
-- cross-act `Article N of Regulation (EU) …` → `data-celex="…" data-article="N"`
-- bare / compound citations (`Regulations (EU) No 1093/2010, … and …`) → a
-  `data-celex` ref for **each** act in the list
-- German `§ N` → same-act, skipping references into other statutes
+- **same-act** (`Article N`, or German `§ N`) → `href="#a:<thisAct>:art_N"`, no identifier
+- **cross-act** (`Article N of Regulation (EU) 2022/2554`, including compound
+  lists) → `data-ref="celex:32022R2554"` (+ `data-article="N"`), plus a working
+  EUR-Lex `href` as a no-JS fallback
 
-Every anchor also carries a working fallback `href` (EUR-Lex for cross-act). The
-pass is idempotent (it unwraps its own anchors first, so it is safe to re-run).
+The identifier is **scheme-qualified** (`celex:…`, later `cfr:…`, `eli:…`) and
+computed straight from the citation text — no registry lookup at this stage.
 
-**Run time** — `app.js`. It builds `celexToActId = { celex → id }` from the
+**Run time** — `app.js` builds `authToActId = { "celex:…" → act id }` from the
 registry once at load, then on click/hover of an `a.ref`:
 
-- **no `data-celex`** → same-act: just follow the `#a:<act>:art_N` hash (no lookup)
-- **`data-celex` present** → `celexToActId[celex]`: **hit** → in-app jump;
-  **miss** → the anchor's EUR-Lex `href` opens
+- **no `data-ref`** → same-act: follow the `#a:<act>:art_N` hash (no lookup)
+- **`data-ref` present** → look it up: **hit** → in-app jump to the already-loaded
+  act/article; **miss** → the anchor's external `href` opens
 
-Resolution is fully in-memory: the act id maps to the already-loaded act/article
-object and to the hash route `#a:<id>:<art>`. The registry `path` is used only for
-the initial fetch — **never at click time**. Because the map is rebuilt from the
-registry on every load, hosting a new act auto-upgrades existing links to it
-without re-converting anything.
+Navigation is in-memory (act id → loaded object + `#a:<id>:<art>` hash); the
+registry `path` is used only for the initial fetch. Because the map is rebuilt on
+every load, hosting a new act auto-upgrades every existing link to it — no re-convert.
+
+To support a new jurisdiction, add its **citation matcher** in
+`tools/link_references.py` (emitting `data-ref="<scheme>:<id>"`) and give its acts
+an `authId` with that scheme. The plumbing (anchor, registry, runtime map) is
+already scheme-agnostic.
 
 ## Adding a regulation (end to end)
 
@@ -119,8 +119,9 @@ without re-converting anything.
    [`tools/parsers/`](tools/parsers/) (e.g. `node tools/parsers/parser-consolidated.js in.html out.json`),
    or add a hand-authored JSON. Save it under `regulations-data/`.
 2. **Register it** in [`data/index.json`](data/index.json): add an entry with
-   `id` (see *Act identifiers*), `path`, `label`, `jurisdiction`, and — for EU
-   acts — its `celex` (this is what makes it a cross-reference target).
+   `id` (see *Act identifiers*), `path`, `label`, `jurisdiction`, and — for acts
+   that can be cited — an `authId` (scheme-qualified, e.g. `celex:32016R0679`).
+   The `authId` is what makes it a cross-reference target.
 3. **Bundle it** (optional) — add its `ref` to a folder in
    [`data/bundles/`](data/bundles/) if it belongs to a family (e.g. DORA).
 4. **Link references** — run `python3 tools/link_references.py`. This re-links
@@ -129,6 +130,6 @@ without re-converting anything.
 5. **Verify** — serve locally and check the act loads, its sidebar entry, and a
    few cross-references resolve in-app.
 
-No app code changes are needed: the id scheme, `celexToActId`, and the runtime
+No app code changes are needed: the id scheme, `authToActId`, and the runtime
 resolver are all data-driven. Only the reference matcher needs extending for a
 new *citation style* (e.g. adding a French/US pattern in `tools/link_references.py`).

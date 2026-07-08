@@ -67,17 +67,17 @@ def spec_celex(m, letter):
 # Anchor builders
 # --------------------------------------------------------------------------- #
 def a_cross_article(cx, artnum, display):
-    """Cross-act article reference: CELEX + article, EUR-Lex href fallback."""
+    """Cross-act article reference: scheme-qualified id + article, EUR-Lex href."""
     return (
-        f'<a href="{EURLEX}{cx}" class="ref" data-celex="{cx}" '
+        f'<a href="{EURLEX}{cx}" class="ref" data-ref="celex:{cx}" '
         f'data-article="{artnum}" target="_blank" rel="noopener">{display}</a>'
     )
 
 
 def a_cross_act(cx, display):
-    """Cross-act act-level reference (no article): CELEX only."""
+    """Cross-act act-level reference (no article): scheme-qualified id only."""
     return (
-        f'<a href="{EURLEX}{cx}" class="ref" data-celex="{cx}" '
+        f'<a href="{EURLEX}{cx}" class="ref" data-ref="celex:{cx}" '
         f'target="_blank" rel="noopener">{display}</a>'
     )
 
