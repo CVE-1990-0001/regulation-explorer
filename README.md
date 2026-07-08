@@ -80,6 +80,38 @@ act_<jurisdiction>_<mnemonic>[_<type>]_<year>[_<number>]
 | _(future)_ French Code monétaire et financier | `act_fr_cmf_2000` |
 | _(future)_ US Gramm–Leach–Bliley Act | `act_us_glba_1999` |
 
+## References (internal & cross-act)
+
+References become links in **two phases**. Links are written once at convert
+time; the runtime only decides where each one goes — it never re-parses text.
+
+**Convert time** — `tools/link_references.py` (run manually). For each paragraph
+it writes `<a class="ref">` anchors. The cited act's **CELEX is computed from the
+citation text by formula** (`Regulation (EU) 2022/2554` → `32022R2554`) — no
+lookup, no act id resolved here:
+
+- same-act `Article N` → `data-article="N"`, `href="#a:<thisAct>:art_N"` (no CELEX)
+- cross-act `Article N of Regulation (EU) …` → `data-celex="…" data-article="N"`
+- bare / compound citations (`Regulations (EU) No 1093/2010, … and …`) → a
+  `data-celex` ref for **each** act in the list
+- German `§ N` → same-act, skipping references into other statutes
+
+Every anchor also carries a working fallback `href` (EUR-Lex for cross-act). The
+pass is idempotent (it unwraps its own anchors first, so it is safe to re-run).
+
+**Run time** — `app.js`. It builds `celexToActId = { celex → id }` from the
+registry once at load, then on click/hover of an `a.ref`:
+
+- **no `data-celex`** → same-act: just follow the `#a:<act>:art_N` hash (no lookup)
+- **`data-celex` present** → `celexToActId[celex]`: **hit** → in-app jump;
+  **miss** → the anchor's EUR-Lex `href` opens
+
+Resolution is fully in-memory: the act id maps to the already-loaded act/article
+object and to the hash route `#a:<id>:<art>`. The registry `path` is used only for
+the initial fetch — **never at click time**. Because the map is rebuilt from the
+registry on every load, hosting a new act auto-upgrades existing links to it
+without re-converting anything.
+
 ## Adding a regulation (end to end)
 
 1. **Get the source & produce the act JSON.** Parse the source HTML into the act
