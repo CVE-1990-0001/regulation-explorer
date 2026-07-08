@@ -16,7 +16,7 @@
       },
       {
         "id": "art_1__3",
-        "text": "3. This Regulation is without prejudice to provisions of Union law concerning specific financial instruments, in particular <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32003L0087\" class=\"ref\" data-celex=\"32003L0087\" target=\"_blank\" rel=\"noopener\">Directive 2003/87/EC</a>.",
+        "text": "3. This Regulation is without prejudice to provisions of Union law concerning specific financial instruments, in particular <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32003L0087\" class=\"ref\" data-ref=\"celex:32003L0087\" target=\"_blank\" rel=\"noopener\">Directive 2003/87/EC</a>.",
         "class": ""
       },
       {
@@ -73,7 +73,7 @@
       },
       {
         "id": "art_2__8",
-        "text": "(8) ‘financial instruments’ or ‘securities’ means financial instruments as defined in point (15) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-celex=\"32014L0065\" data-article=\"4\" target=\"_blank\" rel=\"noopener\">Article 4</a>(1) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-celex=\"32014L0065\" target=\"_blank\" rel=\"noopener\">Directive 2014/65/EU</a>;",
+        "text": "(8) ‘financial instruments’ or ‘securities’ means financial instruments as defined in point (15) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-ref=\"celex:32014L0065\" data-article=\"4\" target=\"_blank\" rel=\"noopener\">Article 4</a>(1) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-ref=\"celex:32014L0065\" target=\"_blank\" rel=\"noopener\">Directive 2014/65/EU</a>;",
         "class": "list-item-l1"
       },
       {
@@ -88,7 +88,7 @@
       },
       {
         "id": "art_2__11",
-        "text": "(11) ‘settlement internaliser’ means any institution, including one authorised in accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013L0036\" class=\"ref\" data-celex=\"32013L0036\" target=\"_blank\" rel=\"noopener\">Directive 2013/36/EU</a> or with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-celex=\"32014L0065\" target=\"_blank\" rel=\"noopener\">Directive 2014/65/EU</a>, which executes transfer orders on behalf of clients or on its own account other than through a securities settlement system;",
+        "text": "(11) ‘settlement internaliser’ means any institution, including one authorised in accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013L0036\" class=\"ref\" data-ref=\"celex:32013L0036\" target=\"_blank\" rel=\"noopener\">Directive 2013/36/EU</a> or with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-ref=\"celex:32014L0065\" target=\"_blank\" rel=\"noopener\">Directive 2014/65/EU</a>, which executes transfer orders on behalf of clients or on its own account other than through a securities settlement system;",
         "class": "list-item-l1"
       },
       {
@@ -113,7 +113,7 @@
       },
       {
         "id": "art_2__16",
-        "text": "(16) ‘central counterparty’ or ‘CCP’ means a CCP as defined in point (1) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32012R0648\" class=\"ref\" data-celex=\"32012R0648\" data-article=\"2\" target=\"_blank\" rel=\"noopener\">Article 2</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32012R0648\" class=\"ref\" data-celex=\"32012R0648\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 648/2012</a>;",
+        "text": "(16) ‘central counterparty’ or ‘CCP’ means a CCP as defined in point (1) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32012R0648\" class=\"ref\" data-ref=\"celex:32012R0648\" data-article=\"2\" target=\"_blank\" rel=\"noopener\">Article 2</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32012R0648\" class=\"ref\" data-ref=\"celex:32012R0648\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 648/2012</a>;",
         "class": "list-item-l1"
       },
       {
@@ -133,17 +133,17 @@
       },
       {
         "id": "art_2__20",
-        "text": "(20) ‘participation’ means participation within the meaning of the first sentence of point (2) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013L0034\" class=\"ref\" data-celex=\"32013L0034\" data-article=\"2\" target=\"_blank\" rel=\"noopener\">Article 2</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013L0034\" class=\"ref\" data-celex=\"32013L0034\" target=\"_blank\" rel=\"noopener\">Directive 2013/34/EU</a>, or the ownership, direct or indirect, of 20 % or more of the voting rights or capital of an undertaking;",
+        "text": "(20) ‘participation’ means participation within the meaning of the first sentence of point (2) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013L0034\" class=\"ref\" data-ref=\"celex:32013L0034\" data-article=\"2\" target=\"_blank\" rel=\"noopener\">Article 2</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013L0034\" class=\"ref\" data-ref=\"celex:32013L0034\" target=\"_blank\" rel=\"noopener\">Directive 2013/34/EU</a>, or the ownership, direct or indirect, of 20 % or more of the voting rights or capital of an undertaking;",
         "class": "list-item-l1"
       },
       {
         "id": "art_2__21",
-        "text": "(21) ‘control’ means the relationship between two undertakings as described in <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013L0034\" class=\"ref\" data-celex=\"32013L0034\" data-article=\"22\" target=\"_blank\" rel=\"noopener\">Article 22</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013L0034\" class=\"ref\" data-celex=\"32013L0034\" target=\"_blank\" rel=\"noopener\">Directive 2013/34/EU</a>;",
+        "text": "(21) ‘control’ means the relationship between two undertakings as described in <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013L0034\" class=\"ref\" data-ref=\"celex:32013L0034\" data-article=\"22\" target=\"_blank\" rel=\"noopener\">Article 22</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013L0034\" class=\"ref\" data-ref=\"celex:32013L0034\" target=\"_blank\" rel=\"noopener\">Directive 2013/34/EU</a>;",
         "class": "list-item-l1"
       },
       {
         "id": "art_2__22",
-        "text": "(22) ‘subsidiary’ means a subsidiary undertaking within the meaning of <a href=\"#a:act_eu_csdr_2014_0909:art_2\" class=\"ref\" data-article=\"2\">Article 2</a>(10) and <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013L0034\" class=\"ref\" data-celex=\"32013L0034\" data-article=\"22\" target=\"_blank\" rel=\"noopener\">Article 22</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013L0034\" class=\"ref\" data-celex=\"32013L0034\" target=\"_blank\" rel=\"noopener\">Directive 2013/34/EU</a>;",
+        "text": "(22) ‘subsidiary’ means a subsidiary undertaking within the meaning of <a href=\"#a:act_eu_csdr_2014_0909:art_2\" class=\"ref\" data-article=\"2\">Article 2</a>(10) and <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013L0034\" class=\"ref\" data-ref=\"celex:32013L0034\" data-article=\"22\" target=\"_blank\" rel=\"noopener\">Article 22</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013L0034\" class=\"ref\" data-ref=\"celex:32013L0034\" target=\"_blank\" rel=\"noopener\">Directive 2013/34/EU</a>;",
         "class": "list-item-l1"
       },
       {
@@ -208,42 +208,42 @@
       },
       {
         "id": "art_2__35",
-        "text": "(35) ‘transferable securities’ means transferable securities as defined in point (44) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-celex=\"32014L0065\" data-article=\"4\" target=\"_blank\" rel=\"noopener\">Article 4</a>(1) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-celex=\"32014L0065\" target=\"_blank\" rel=\"noopener\">Directive 2014/65/EU</a>;",
+        "text": "(35) ‘transferable securities’ means transferable securities as defined in point (44) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-ref=\"celex:32014L0065\" data-article=\"4\" target=\"_blank\" rel=\"noopener\">Article 4</a>(1) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-ref=\"celex:32014L0065\" target=\"_blank\" rel=\"noopener\">Directive 2014/65/EU</a>;",
         "class": "list-item-l1"
       },
       {
         "id": "art_2__36",
-        "text": "(36) ‘shares’ means securities specified in point (44)(a) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-celex=\"32014L0065\" data-article=\"4\" target=\"_blank\" rel=\"noopener\">Article 4</a>(1) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-celex=\"32014L0065\" target=\"_blank\" rel=\"noopener\">Directive 2014/65/EU</a>;",
+        "text": "(36) ‘shares’ means securities specified in point (44)(a) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-ref=\"celex:32014L0065\" data-article=\"4\" target=\"_blank\" rel=\"noopener\">Article 4</a>(1) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-ref=\"celex:32014L0065\" target=\"_blank\" rel=\"noopener\">Directive 2014/65/EU</a>;",
         "class": "list-item-l1"
       },
       {
         "id": "art_2__37",
-        "text": "(37) ‘money-market instruments’ means money-market instruments as defined in point (17) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-celex=\"32014L0065\" data-article=\"4\" target=\"_blank\" rel=\"noopener\">Article 4</a>(1) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-celex=\"32014L0065\" target=\"_blank\" rel=\"noopener\">Directive 2014/65/EU</a>;",
+        "text": "(37) ‘money-market instruments’ means money-market instruments as defined in point (17) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-ref=\"celex:32014L0065\" data-article=\"4\" target=\"_blank\" rel=\"noopener\">Article 4</a>(1) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-ref=\"celex:32014L0065\" target=\"_blank\" rel=\"noopener\">Directive 2014/65/EU</a>;",
         "class": "list-item-l1"
       },
       {
         "id": "art_2__38",
-        "text": "(38) ‘units in collective investment undertakings’ means units in collective investment undertakings as referred to in point (3) of Section C of Annex I to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-celex=\"32014L0065\" target=\"_blank\" rel=\"noopener\">Directive 2014/65/EU</a>;",
+        "text": "(38) ‘units in collective investment undertakings’ means units in collective investment undertakings as referred to in point (3) of Section C of Annex I to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-ref=\"celex:32014L0065\" target=\"_blank\" rel=\"noopener\">Directive 2014/65/EU</a>;",
         "class": "list-item-l1"
       },
       {
         "id": "art_2__39",
-        "text": "(39) ‘emission allowance’ means emission allowance as described in point (11) of Section C of Annex I to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-celex=\"32014L0065\" target=\"_blank\" rel=\"noopener\">Directive 2014/65/EU</a>, excluding derivatives in emission allowances;",
+        "text": "(39) ‘emission allowance’ means emission allowance as described in point (11) of Section C of Annex I to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-ref=\"celex:32014L0065\" target=\"_blank\" rel=\"noopener\">Directive 2014/65/EU</a>, excluding derivatives in emission allowances;",
         "class": "list-item-l1"
       },
       {
         "id": "art_2__40",
-        "text": "(40) ‘regulated market’ means regulated market as defined in point (21) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-celex=\"32014L0065\" data-article=\"4\" target=\"_blank\" rel=\"noopener\">Article 4</a>(1) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-celex=\"32014L0065\" target=\"_blank\" rel=\"noopener\">Directive 2014/65/EU</a>;",
+        "text": "(40) ‘regulated market’ means regulated market as defined in point (21) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-ref=\"celex:32014L0065\" data-article=\"4\" target=\"_blank\" rel=\"noopener\">Article 4</a>(1) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-ref=\"celex:32014L0065\" target=\"_blank\" rel=\"noopener\">Directive 2014/65/EU</a>;",
         "class": "list-item-l1"
       },
       {
         "id": "art_2__41",
-        "text": "(41) ‘multilateral trading facility’ or ‘MTF’ means multilateral trading facility as defined in point (22) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-celex=\"32014L0065\" data-article=\"4\" target=\"_blank\" rel=\"noopener\">Article 4</a>(1) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-celex=\"32014L0065\" target=\"_blank\" rel=\"noopener\">Directive 2014/65/EU</a>;",
+        "text": "(41) ‘multilateral trading facility’ or ‘MTF’ means multilateral trading facility as defined in point (22) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-ref=\"celex:32014L0065\" data-article=\"4\" target=\"_blank\" rel=\"noopener\">Article 4</a>(1) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-ref=\"celex:32014L0065\" target=\"_blank\" rel=\"noopener\">Directive 2014/65/EU</a>;",
         "class": "list-item-l1"
       },
       {
         "id": "art_2__42",
-        "text": "(42) ‘trading venue’ means a trading venue as defined in point (24) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-celex=\"32014L0065\" data-article=\"4\" target=\"_blank\" rel=\"noopener\">Article 4</a>(1) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-celex=\"32014L0065\" target=\"_blank\" rel=\"noopener\">Directive 2014/65/EU</a>;",
+        "text": "(42) ‘trading venue’ means a trading venue as defined in point (24) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-ref=\"celex:32014L0065\" data-article=\"4\" target=\"_blank\" rel=\"noopener\">Article 4</a>(1) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-ref=\"celex:32014L0065\" target=\"_blank\" rel=\"noopener\">Directive 2014/65/EU</a>;",
         "class": "list-item-l1"
       },
       {
@@ -253,7 +253,7 @@
       },
       {
         "id": "art_2__44",
-        "text": "(44) ‘SME growth market’ means an SME growth market as defined in point (12) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-celex=\"32014L0065\" data-article=\"4\" target=\"_blank\" rel=\"noopener\">Article 4</a>(1) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-celex=\"32014L0065\" target=\"_blank\" rel=\"noopener\">Directive 2014/65/EU</a>;",
+        "text": "(44) ‘SME growth market’ means an SME growth market as defined in point (12) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-ref=\"celex:32014L0065\" data-article=\"4\" target=\"_blank\" rel=\"noopener\">Article 4</a>(1) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-ref=\"celex:32014L0065\" target=\"_blank\" rel=\"noopener\">Directive 2014/65/EU</a>;",
         "class": "list-item-l1"
       },
       {
@@ -290,7 +290,7 @@
       },
       {
         "id": "art_3__p3",
-        "text": "Where transferable securities are transferred following a financial collateral arrangement as defined in point (a) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32002L0047\" class=\"ref\" data-celex=\"32002L0047\" data-article=\"2\" target=\"_blank\" rel=\"noopener\">Article 2</a>(1) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32002L0047\" class=\"ref\" data-celex=\"32002L0047\" target=\"_blank\" rel=\"noopener\">Directive 2002/47/EC</a>, those securities shall be recorded in book-entry form in a CSD on or before the intended settlement date, unless they have already been so recorded.",
+        "text": "Where transferable securities are transferred following a financial collateral arrangement as defined in point (a) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32002L0047\" class=\"ref\" data-ref=\"celex:32002L0047\" data-article=\"2\" target=\"_blank\" rel=\"noopener\">Article 2</a>(1) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32002L0047\" class=\"ref\" data-ref=\"celex:32002L0047\" target=\"_blank\" rel=\"noopener\">Directive 2002/47/EC</a>, those securities shall be recorded in book-entry form in a CSD on or before the intended settlement date, unless they have already been so recorded.",
         "class": ""
       }
     ]
@@ -307,12 +307,12 @@
       },
       {
         "id": "art_4__2",
-        "text": "2. The authorities competent for the supervision of the trading venues, including the competent authorities designated in accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32003L0071\" class=\"ref\" data-celex=\"32003L0071\" data-article=\"21\" target=\"_blank\" rel=\"noopener\">Article 21</a>(1) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32003L0071\" class=\"ref\" data-celex=\"32003L0071\" target=\"_blank\" rel=\"noopener\">Directive 2003/71/EC</a> of the European Parliament and of the Council (23), shall ensure that the first subparagraph of <a href=\"#a:act_eu_csdr_2014_0909:art_3\" class=\"ref\" data-article=\"3\">Article 3</a>(2) of this Regulation is applied where the securities referred to in <a href=\"#a:act_eu_csdr_2014_0909:art_3\" class=\"ref\" data-article=\"3\">Article 3</a>(1) of this Regulation are traded on trading venues.",
+        "text": "2. The authorities competent for the supervision of the trading venues, including the competent authorities designated in accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32003L0071\" class=\"ref\" data-ref=\"celex:32003L0071\" data-article=\"21\" target=\"_blank\" rel=\"noopener\">Article 21</a>(1) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32003L0071\" class=\"ref\" data-ref=\"celex:32003L0071\" target=\"_blank\" rel=\"noopener\">Directive 2003/71/EC</a> of the European Parliament and of the Council (23), shall ensure that the first subparagraph of <a href=\"#a:act_eu_csdr_2014_0909:art_3\" class=\"ref\" data-article=\"3\">Article 3</a>(2) of this Regulation is applied where the securities referred to in <a href=\"#a:act_eu_csdr_2014_0909:art_3\" class=\"ref\" data-article=\"3\">Article 3</a>(1) of this Regulation are traded on trading venues.",
         "class": ""
       },
       {
         "id": "art_4__3",
-        "text": "3. Member States’ authorities responsible for the application of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32002L0047\" class=\"ref\" data-celex=\"32002L0047\" target=\"_blank\" rel=\"noopener\">Directive 2002/47/EC</a> shall ensure that the second subparagraph of <a href=\"#a:act_eu_csdr_2014_0909:art_3\" class=\"ref\" data-article=\"3\">Article 3</a>(2) of this Regulation is applied where the securities referred to in <a href=\"#a:act_eu_csdr_2014_0909:art_3\" class=\"ref\" data-article=\"3\">Article 3</a>(1) of this Regulation are transferred following a financial collateral arrangement as defined in point (a) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32002L0047\" class=\"ref\" data-celex=\"32002L0047\" data-article=\"2\" target=\"_blank\" rel=\"noopener\">Article 2</a>(1) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32002L0047\" class=\"ref\" data-celex=\"32002L0047\" target=\"_blank\" rel=\"noopener\">Directive 2002/47/EC</a>.",
+        "text": "3. Member States’ authorities responsible for the application of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32002L0047\" class=\"ref\" data-ref=\"celex:32002L0047\" target=\"_blank\" rel=\"noopener\">Directive 2002/47/EC</a> shall ensure that the second subparagraph of <a href=\"#a:act_eu_csdr_2014_0909:art_3\" class=\"ref\" data-article=\"3\">Article 3</a>(2) of this Regulation is applied where the securities referred to in <a href=\"#a:act_eu_csdr_2014_0909:art_3\" class=\"ref\" data-article=\"3\">Article 3</a>(1) of this Regulation are transferred following a financial collateral arrangement as defined in point (a) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32002L0047\" class=\"ref\" data-ref=\"celex:32002L0047\" data-article=\"2\" target=\"_blank\" rel=\"noopener\">Article 2</a>(1) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32002L0047\" class=\"ref\" data-ref=\"celex:32002L0047\" target=\"_blank\" rel=\"noopener\">Directive 2002/47/EC</a>.",
         "class": ""
       }
     ]
@@ -356,17 +356,17 @@
       },
       {
         "id": "art_6__2",
-        "text": "2. Notwithstanding the requirement laid down in paragraph 1, investment firms authorised pursuant to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-celex=\"32014L0065\" data-article=\"5\" target=\"_blank\" rel=\"noopener\">Article 5</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-celex=\"32014L0065\" target=\"_blank\" rel=\"noopener\">Directive 2014/65/EU</a> shall, where applicable, take measures to limit the number of settlement fails.",
+        "text": "2. Notwithstanding the requirement laid down in paragraph 1, investment firms authorised pursuant to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-ref=\"celex:32014L0065\" data-article=\"5\" target=\"_blank\" rel=\"noopener\">Article 5</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-ref=\"celex:32014L0065\" target=\"_blank\" rel=\"noopener\">Directive 2014/65/EU</a> shall, where applicable, take measures to limit the number of settlement fails.",
         "class": ""
       },
       {
         "id": "art_6__p3",
-        "text": "Such measures shall at least consist of arrangements between the investment firm and its professional clients as referred to in Annex II to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-celex=\"32014L0065\" target=\"_blank\" rel=\"noopener\">Directive 2014/65/EU</a> to ensure the prompt communication of an allocation of securities to the transaction, confirmation of that allocation and confirmation of the acceptance or rejection of terms in good time before the intended settlement date.",
+        "text": "Such measures shall at least consist of arrangements between the investment firm and its professional clients as referred to in Annex II to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-ref=\"celex:32014L0065\" target=\"_blank\" rel=\"noopener\">Directive 2014/65/EU</a> to ensure the prompt communication of an allocation of securities to the transaction, confirmation of that allocation and confirmation of the acceptance or rejection of terms in good time before the intended settlement date.",
         "class": ""
       },
       {
         "id": "art_6__p4",
-        "text": "ESMA shall, in close cooperation with the members of the ESCB, issue guidelines in accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" data-article=\"16\" target=\"_blank\" rel=\"noopener\">Article 16</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a> on the standardised procedures and messaging protocols to be used for complying with the second subparagraph of this paragraph.",
+        "text": "ESMA shall, in close cooperation with the members of the ESCB, issue guidelines in accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" data-article=\"16\" target=\"_blank\" rel=\"noopener\">Article 16</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a> on the standardised procedures and messaging protocols to be used for complying with the second subparagraph of this paragraph.",
         "class": ""
       },
       {
@@ -391,7 +391,7 @@
       },
       {
         "id": "art_6__p9",
-        "text": "Power is delegated to the Commission to adopt the regulatory technical standards referred to in the first subparagraph in accordance with Articles <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" data-article=\"10\" target=\"_blank\" rel=\"noopener\">10</a> to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" data-article=\"14\" target=\"_blank\" rel=\"noopener\">14</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
+        "text": "Power is delegated to the Commission to adopt the regulatory technical standards referred to in the first subparagraph in accordance with Articles <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" data-article=\"10\" target=\"_blank\" rel=\"noopener\">10</a> to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" data-article=\"14\" target=\"_blank\" rel=\"noopener\">14</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
         "class": ""
       }
     ]
@@ -523,7 +523,7 @@
       },
       {
         "id": "art_7__13",
-        "text": "13. This Article shall not apply where the principal venue for the trading of shares is located in a third country. The location of the principal venue for the trading of shares shall be determined in accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32012R0236\" class=\"ref\" data-celex=\"32012R0236\" data-article=\"16\" target=\"_blank\" rel=\"noopener\">Article 16</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32012R0236\" class=\"ref\" data-celex=\"32012R0236\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 236/2012</a>.",
+        "text": "13. This Article shall not apply where the principal venue for the trading of shares is located in a third country. The location of the principal venue for the trading of shares shall be determined in accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32012R0236\" class=\"ref\" data-ref=\"celex:32012R0236\" data-article=\"16\" target=\"_blank\" rel=\"noopener\">Article 16</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32012R0236\" class=\"ref\" data-ref=\"celex:32012R0236\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 236/2012</a>.",
         "class": ""
       },
       {
@@ -553,7 +553,7 @@
       },
       {
         "id": "art_7__15_b_d",
-        "text": "(d) the circumstances under which the extension period could be prolonged according to asset type and liquidity of the financial instruments, in accordance with the conditions referred to in point (a) of paragraph 4 taking into account the criteria for assessing liquidity under point (17) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0600\" class=\"ref\" data-celex=\"32014R0600\" data-article=\"2\" target=\"_blank\" rel=\"noopener\">Article 2</a>(1) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0600\" class=\"ref\" data-celex=\"32014R0600\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 600/2014</a>;",
+        "text": "(d) the circumstances under which the extension period could be prolonged according to asset type and liquidity of the financial instruments, in accordance with the conditions referred to in point (a) of paragraph 4 taking into account the criteria for assessing liquidity under point (17) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0600\" class=\"ref\" data-ref=\"celex:32014R0600\" data-article=\"2\" target=\"_blank\" rel=\"noopener\">Article 2</a>(1) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0600\" class=\"ref\" data-ref=\"celex:32014R0600\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 600/2014</a>;",
         "class": "list-item-l1"
       },
       {
@@ -583,7 +583,7 @@
       },
       {
         "id": "art_7__p37",
-        "text": "Power is delegated to the Commission to adopt the regulatory technical standards referred to in the first subparagraph in accordance with Articles <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" data-article=\"10\" target=\"_blank\" rel=\"noopener\">10</a> to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" data-article=\"14\" target=\"_blank\" rel=\"noopener\">14</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
+        "text": "Power is delegated to the Commission to adopt the regulatory technical standards referred to in the first subparagraph in accordance with Articles <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" data-article=\"10\" target=\"_blank\" rel=\"noopener\">10</a> to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" data-article=\"14\" target=\"_blank\" rel=\"noopener\">14</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
         "class": ""
       }
     ]
@@ -600,7 +600,7 @@
       },
       {
         "id": "art_8__2",
-        "text": "2. In order to ensure consistent, efficient and effective supervisory practices within the Union in relation to Articles <a href=\"#a:act_eu_csdr_2014_0909:art_6\" class=\"ref\" data-article=\"6\">6</a> and <a href=\"#a:act_eu_csdr_2014_0909:art_7\" class=\"ref\" data-article=\"7\">7</a> of this Regulation, ESMA may, in close cooperation with the members of the ESCB, issue guidelines in accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" data-article=\"16\" target=\"_blank\" rel=\"noopener\">Article 16</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
+        "text": "2. In order to ensure consistent, efficient and effective supervisory practices within the Union in relation to Articles <a href=\"#a:act_eu_csdr_2014_0909:art_6\" class=\"ref\" data-article=\"6\">6</a> and <a href=\"#a:act_eu_csdr_2014_0909:art_7\" class=\"ref\" data-article=\"7\">7</a> of this Regulation, ESMA may, in close cooperation with the members of the ESCB, issue guidelines in accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" data-article=\"16\" target=\"_blank\" rel=\"noopener\">Article 16</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
         "class": ""
       },
       {
@@ -632,7 +632,7 @@
       },
       {
         "id": "art_9__p4",
-        "text": "Power is delegated to the Commission to adopt the regulatory technical standards referred to in the first subparagraph in accordance with Articles <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" data-article=\"10\" target=\"_blank\" rel=\"noopener\">10</a> to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" data-article=\"14\" target=\"_blank\" rel=\"noopener\">14</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
+        "text": "Power is delegated to the Commission to adopt the regulatory technical standards referred to in the first subparagraph in accordance with Articles <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" data-article=\"10\" target=\"_blank\" rel=\"noopener\">10</a> to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" data-article=\"14\" target=\"_blank\" rel=\"noopener\">14</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
         "class": ""
       },
       {
@@ -647,7 +647,7 @@
       },
       {
         "id": "art_9__p7",
-        "text": "Power is conferred on the Commission to adopt the implementing technical standards referred to in the first subparagraph in accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" data-article=\"15\" target=\"_blank\" rel=\"noopener\">Article 15</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
+        "text": "Power is conferred on the Commission to adopt the implementing technical standards referred to in the first subparagraph in accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" data-article=\"15\" target=\"_blank\" rel=\"noopener\">Article 15</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
         "class": ""
       }
     ]
@@ -733,7 +733,7 @@
       },
       {
         "id": "art_12__p8",
-        "text": "Power is delegated to the Commission to adopt the regulatory technical standards referred to in the first subparagraph in accordance with Articles <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" data-article=\"10\" target=\"_blank\" rel=\"noopener\">10</a> to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" data-article=\"14\" target=\"_blank\" rel=\"noopener\">14</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
+        "text": "Power is delegated to the Commission to adopt the regulatory technical standards referred to in the first subparagraph in accordance with Articles <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" data-article=\"10\" target=\"_blank\" rel=\"noopener\">10</a> to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" data-article=\"14\" target=\"_blank\" rel=\"noopener\">14</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
         "class": ""
       }
     ]
@@ -762,12 +762,12 @@
     "paragraphs": [
       {
         "id": "art_14__1",
-        "text": "1. Competent authorities, relevant authorities and ESMA shall cooperate closely, including by exchanging all relevant information for the application of this Regulation. Where appropriate and relevant, such cooperation shall include other public authorities and bodies, in particular those established or appointed under <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32003L0087\" class=\"ref\" data-celex=\"32003L0087\" target=\"_blank\" rel=\"noopener\">Directive 2003/87/EC</a>.",
+        "text": "1. Competent authorities, relevant authorities and ESMA shall cooperate closely, including by exchanging all relevant information for the application of this Regulation. Where appropriate and relevant, such cooperation shall include other public authorities and bodies, in particular those established or appointed under <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32003L0087\" class=\"ref\" data-ref=\"celex:32003L0087\" target=\"_blank\" rel=\"noopener\">Directive 2003/87/EC</a>.",
         "class": ""
       },
       {
         "id": "art_14__p2",
-        "text": "In order to ensure consistent, efficient and effective supervisory practices within the Union, including cooperation between competent authorities and relevant authorities in the different assessments necessary for the application of this Regulation, ESMA may, in close cooperation with the members of the ESCB, issue guidelines addressed to competent authorities in accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" data-article=\"16\" target=\"_blank\" rel=\"noopener\">Article 16</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
+        "text": "In order to ensure consistent, efficient and effective supervisory practices within the Union, including cooperation between competent authorities and relevant authorities in the different assessments necessary for the application of this Regulation, ESMA may, in close cooperation with the members of the ESCB, issue guidelines addressed to competent authorities in accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" data-article=\"16\" target=\"_blank\" rel=\"noopener\">Article 16</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
         "class": ""
       },
       {
@@ -784,7 +784,7 @@
     "paragraphs": [
       {
         "id": "art_15__p1",
-        "text": "Without prejudice to the notification procedure provided for in Article 6(3) of Directive 98/26/EC, competent authorities and relevant authorities shall immediately inform ESMA, the European Systemic Risk Board established by <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1092\" class=\"ref\" data-celex=\"32010R1092\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1092/2010</a> of the European Parliament and of the Council (24) and each other of any emergency situation relating to a CSD, including of any developments in financial markets, which may have an adverse effect on market liquidity, the stability of a currency in which settlement takes place, the integrity of monetary policy or on the stability of the financial system in any of the Member States where the CSD or one of its participants are established.",
+        "text": "Without prejudice to the notification procedure provided for in Article 6(3) of Directive 98/26/EC, competent authorities and relevant authorities shall immediately inform ESMA, the European Systemic Risk Board established by <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1092\" class=\"ref\" data-ref=\"celex:32010R1092\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1092/2010</a> of the European Parliament and of the Council (24) and each other of any emergency situation relating to a CSD, including of any developments in financial markets, which may have an adverse effect on market liquidity, the stability of a currency in which settlement takes place, the integrity of monetary policy or on the stability of the financial system in any of the Member States where the CSD or one of its participants are established.",
         "class": ""
       }
     ]
@@ -843,7 +843,7 @@
       },
       {
         "id": "art_17__5",
-        "text": "5. Where the applicant CSD intends to provide services referred to in point (2) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-celex=\"32014L0065\" data-article=\"4\" target=\"_blank\" rel=\"noopener\">Article 4</a>(1) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-celex=\"32014L0065\" target=\"_blank\" rel=\"noopener\">Directive 2014/65/EU</a> in addition to the provision of non-banking-type ancillary services explicitly listed in Section B of the Annex, the competent authority shall transmit all information included in the application to the authority referred to in <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-celex=\"32014L0065\" data-article=\"67\" target=\"_blank\" rel=\"noopener\">Article 67</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-celex=\"32014L0065\" target=\"_blank\" rel=\"noopener\">Directive 2014/65/EU</a> and consult that authority on the ability of the applicant CSD to comply with the requirements of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-celex=\"32014L0065\" target=\"_blank\" rel=\"noopener\">Directive 2014/65/EU</a> and of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0600\" class=\"ref\" data-celex=\"32014R0600\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 600/2014</a>.",
+        "text": "5. Where the applicant CSD intends to provide services referred to in point (2) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-ref=\"celex:32014L0065\" data-article=\"4\" target=\"_blank\" rel=\"noopener\">Article 4</a>(1) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-ref=\"celex:32014L0065\" target=\"_blank\" rel=\"noopener\">Directive 2014/65/EU</a> in addition to the provision of non-banking-type ancillary services explicitly listed in Section B of the Annex, the competent authority shall transmit all information included in the application to the authority referred to in <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-ref=\"celex:32014L0065\" data-article=\"67\" target=\"_blank\" rel=\"noopener\">Article 67</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-ref=\"celex:32014L0065\" target=\"_blank\" rel=\"noopener\">Directive 2014/65/EU</a> and consult that authority on the ability of the applicant CSD to comply with the requirements of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-ref=\"celex:32014L0065\" target=\"_blank\" rel=\"noopener\">Directive 2014/65/EU</a> and of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0600\" class=\"ref\" data-ref=\"celex:32014R0600\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 600/2014</a>.",
         "class": ""
       },
       {
@@ -898,7 +898,7 @@
       },
       {
         "id": "art_17__p16",
-        "text": "Power is delegated to the Commission to adopt the regulatory technical standards referred to in the first subparagraph in accordance with Articles <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" data-article=\"10\" target=\"_blank\" rel=\"noopener\">10</a> to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" data-article=\"14\" target=\"_blank\" rel=\"noopener\">14</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
+        "text": "Power is delegated to the Commission to adopt the regulatory technical standards referred to in the first subparagraph in accordance with Articles <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" data-article=\"10\" target=\"_blank\" rel=\"noopener\">10</a> to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" data-article=\"14\" target=\"_blank\" rel=\"noopener\">14</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
         "class": ""
       },
       {
@@ -913,7 +913,7 @@
       },
       {
         "id": "art_17__p19",
-        "text": "Power is conferred on the Commission to adopt the implementing technical standards referred to in the first subparagraph in accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" data-article=\"15\" target=\"_blank\" rel=\"noopener\">Article 15</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
+        "text": "Power is conferred on the Commission to adopt the implementing technical standards referred to in the first subparagraph in accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" data-article=\"15\" target=\"_blank\" rel=\"noopener\">Article 15</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
         "class": ""
       }
     ]
@@ -950,7 +950,7 @@
       },
       {
         "id": "art_18__p6",
-        "text": "Power is delegated to the Commission to adopt the regulatory technical standards referred to in the first subparagraph in accordance with Articles <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" data-article=\"10\" target=\"_blank\" rel=\"noopener\">10</a> to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" data-article=\"14\" target=\"_blank\" rel=\"noopener\">14</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
+        "text": "Power is delegated to the Commission to adopt the regulatory technical standards referred to in the first subparagraph in accordance with Articles <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" data-article=\"10\" target=\"_blank\" rel=\"noopener\">10</a> to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" data-article=\"14\" target=\"_blank\" rel=\"noopener\">14</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
         "class": ""
       }
     ]
@@ -1002,7 +1002,7 @@
       },
       {
         "id": "art_19__3",
-        "text": "3. CSDs established in the Union that intend to establish an interoperable link shall submit an application for authorisation as required under point (e) of paragraph 1, to their respective competent authorities. Those authorities shall consult each other regarding the approval of the CSD link. In the event of divergent decisions and if agreed by both competent authorities the matter may be referred to ESMA, which may act in accordance with the powers conferred on it under <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" data-article=\"19\" target=\"_blank\" rel=\"noopener\">Article 19</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
+        "text": "3. CSDs established in the Union that intend to establish an interoperable link shall submit an application for authorisation as required under point (e) of paragraph 1, to their respective competent authorities. Those authorities shall consult each other regarding the approval of the CSD link. In the event of divergent decisions and if agreed by both competent authorities the matter may be referred to ESMA, which may act in accordance with the powers conferred on it under <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" data-article=\"19\" target=\"_blank\" rel=\"noopener\">Article 19</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
         "class": ""
       },
       {
@@ -1059,17 +1059,17 @@
       },
       {
         "id": "art_20__1_b_d",
-        "text": "(d) has seriously or systematically infringed the requirements laid down in this Regulation or, where applicable, in <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-celex=\"32014L0065\" target=\"_blank\" rel=\"noopener\">Directive 2014/65/EU</a> or <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0600\" class=\"ref\" data-celex=\"32014R0600\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 600/2014</a>.",
+        "text": "(d) has seriously or systematically infringed the requirements laid down in this Regulation or, where applicable, in <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-ref=\"celex:32014L0065\" target=\"_blank\" rel=\"noopener\">Directive 2014/65/EU</a> or <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0600\" class=\"ref\" data-ref=\"celex:32014R0600\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 600/2014</a>.",
         "class": "list-item-l1"
       },
       {
         "id": "art_20__2",
-        "text": "2. From the moment when it becomes aware of one of the circumstances referred to in paragraph 1, the competent authority shall immediately consult the relevant authorities and, where applicable, the authority referred to in <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-celex=\"32014L0065\" data-article=\"67\" target=\"_blank\" rel=\"noopener\">Article 67</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-celex=\"32014L0065\" target=\"_blank\" rel=\"noopener\">Directive 2014/65/EU</a> on the necessity to withdraw the authorisation.",
+        "text": "2. From the moment when it becomes aware of one of the circumstances referred to in paragraph 1, the competent authority shall immediately consult the relevant authorities and, where applicable, the authority referred to in <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-ref=\"celex:32014L0065\" data-article=\"67\" target=\"_blank\" rel=\"noopener\">Article 67</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-ref=\"celex:32014L0065\" target=\"_blank\" rel=\"noopener\">Directive 2014/65/EU</a> on the necessity to withdraw the authorisation.",
         "class": ""
       },
       {
         "id": "art_20__3",
-        "text": "3. ESMA and any relevant authority and, where applicable, the authority referred to in <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-celex=\"32014L0065\" data-article=\"67\" target=\"_blank\" rel=\"noopener\">Article 67</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-celex=\"32014L0065\" target=\"_blank\" rel=\"noopener\">Directive 2014/65/EU</a> may, at any time, request that the competent authority of the home Member State examines whether the CSD still complies with the conditions under which the authorisation was granted.",
+        "text": "3. ESMA and any relevant authority and, where applicable, the authority referred to in <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-ref=\"celex:32014L0065\" data-article=\"67\" target=\"_blank\" rel=\"noopener\">Article 67</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-ref=\"celex:32014L0065\" target=\"_blank\" rel=\"noopener\">Directive 2014/65/EU</a> may, at any time, request that the competent authority of the home Member State examines whether the CSD still complies with the conditions under which the authorisation was granted.",
         "class": ""
       },
       {
@@ -1123,7 +1123,7 @@
       },
       {
         "id": "art_22__3",
-        "text": "3. The competent authority shall ensure that an adequate resolution plan is established and maintained for each CSD so as to ensure continuity of at least its core functions, having regard to the size, systemic importance, nature, scale and complexity of the activities of the CSD concerned and any relevant resolution plan established in accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0059\" class=\"ref\" data-celex=\"32014L0059\" target=\"_blank\" rel=\"noopener\">Directive 2014/59/EU</a>.",
+        "text": "3. The competent authority shall ensure that an adequate resolution plan is established and maintained for each CSD so as to ensure continuity of at least its core functions, having regard to the size, systemic importance, nature, scale and complexity of the activities of the CSD concerned and any relevant resolution plan established in accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0059\" class=\"ref\" data-ref=\"celex:32014L0059\" target=\"_blank\" rel=\"noopener\">Directive 2014/59/EU</a>.",
         "class": ""
       },
       {
@@ -1138,12 +1138,12 @@
       },
       {
         "id": "art_22__6",
-        "text": "6. When performing the review and evaluation referred to in paragraph 1, the competent authority shall, at an early stage, consult the relevant authorities, in particular concerning the functioning of the securities settlement systems operated by the CSD and, where applicable, the authority referred to in <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-celex=\"32014L0065\" data-article=\"67\" target=\"_blank\" rel=\"noopener\">Article 67</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-celex=\"32014L0065\" target=\"_blank\" rel=\"noopener\">Directive 2014/65/EU</a>.",
+        "text": "6. When performing the review and evaluation referred to in paragraph 1, the competent authority shall, at an early stage, consult the relevant authorities, in particular concerning the functioning of the securities settlement systems operated by the CSD and, where applicable, the authority referred to in <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-ref=\"celex:32014L0065\" data-article=\"67\" target=\"_blank\" rel=\"noopener\">Article 67</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-ref=\"celex:32014L0065\" target=\"_blank\" rel=\"noopener\">Directive 2014/65/EU</a>.",
         "class": ""
       },
       {
         "id": "art_22__7",
-        "text": "7. The competent authority shall regularly, and at least once a year, inform the relevant authorities and, where applicable, the authority referred to in <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-celex=\"32014L0065\" data-article=\"67\" target=\"_blank\" rel=\"noopener\">Article 67</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-celex=\"32014L0065\" target=\"_blank\" rel=\"noopener\">Directive 2014/65/EU</a> of the results, including any remedial actions or penalties, of the review and evaluation referred to in paragraph 1.",
+        "text": "7. The competent authority shall regularly, and at least once a year, inform the relevant authorities and, where applicable, the authority referred to in <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-ref=\"celex:32014L0065\" data-article=\"67\" target=\"_blank\" rel=\"noopener\">Article 67</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-ref=\"celex:32014L0065\" target=\"_blank\" rel=\"noopener\">Directive 2014/65/EU</a> of the results, including any remedial actions or penalties, of the review and evaluation referred to in paragraph 1.",
         "class": ""
       },
       {
@@ -1183,7 +1183,7 @@
       },
       {
         "id": "art_22__p15",
-        "text": "Power is delegated to the Commission to adopt the regulatory technical standards referred to in the first subparagraph in accordance with in Articles <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" data-article=\"10\" target=\"_blank\" rel=\"noopener\">10</a> to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" data-article=\"14\" target=\"_blank\" rel=\"noopener\">14</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
+        "text": "Power is delegated to the Commission to adopt the regulatory technical standards referred to in the first subparagraph in accordance with in Articles <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" data-article=\"10\" target=\"_blank\" rel=\"noopener\">10</a> to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" data-article=\"14\" target=\"_blank\" rel=\"noopener\">14</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
         "class": ""
       },
       {
@@ -1198,7 +1198,7 @@
       },
       {
         "id": "art_22__p18",
-        "text": "Power is conferred on the Commission to adopt the implementing technical standards referred to in the first subparagraph in accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" data-article=\"15\" target=\"_blank\" rel=\"noopener\">Article 15</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
+        "text": "Power is conferred on the Commission to adopt the implementing technical standards referred to in the first subparagraph in accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" data-article=\"15\" target=\"_blank\" rel=\"noopener\">Article 15</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
         "class": ""
       }
     ]
@@ -1327,17 +1327,17 @@
       },
       {
         "id": "art_24__p8",
-        "text": "The competent authority of the host Member State and of the home Member State may refer the matter to ESMA, which may act in accordance with the powers conferred on it under <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" data-article=\"19\" target=\"_blank\" rel=\"noopener\">Article 19</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
+        "text": "The competent authority of the host Member State and of the home Member State may refer the matter to ESMA, which may act in accordance with the powers conferred on it under <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" data-article=\"19\" target=\"_blank\" rel=\"noopener\">Article 19</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
         "class": ""
       },
       {
         "id": "art_24__6",
-        "text": "6. Without prejudice to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" data-article=\"30\" target=\"_blank\" rel=\"noopener\">Article 30</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>, ESMA shall, after consulting the members of the ESCB, organise and conduct, at least every three years, a peer review of the supervision of CSDs which make use of the freedom to provide services in another Member State in accordance with <a href=\"#a:act_eu_csdr_2014_0909:art_23\" class=\"ref\" data-article=\"23\">Article 23</a> or to participate in an interoperable link.",
+        "text": "6. Without prejudice to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" data-article=\"30\" target=\"_blank\" rel=\"noopener\">Article 30</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>, ESMA shall, after consulting the members of the ESCB, organise and conduct, at least every three years, a peer review of the supervision of CSDs which make use of the freedom to provide services in another Member State in accordance with <a href=\"#a:act_eu_csdr_2014_0909:art_23\" class=\"ref\" data-article=\"23\">Article 23</a> or to participate in an interoperable link.",
         "class": ""
       },
       {
         "id": "art_24__p10",
-        "text": "In the context of the peer review referred to in the first subparagraph ESMA shall, where appropriate, also request opinions or advice from the Securities and Markets Stakeholder Group referred to in <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" data-article=\"37\" target=\"_blank\" rel=\"noopener\">Article 37</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
+        "text": "In the context of the peer review referred to in the first subparagraph ESMA shall, where appropriate, also request opinions or advice from the Securities and Markets Stakeholder Group referred to in <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" data-article=\"37\" target=\"_blank\" rel=\"noopener\">Article 37</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
         "class": ""
       },
       {
@@ -1357,7 +1357,7 @@
       },
       {
         "id": "art_24__p14",
-        "text": "Power is conferred on the Commission to adopt the implementing technical standards referred to in the first subparagraph in accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" data-article=\"15\" target=\"_blank\" rel=\"noopener\">Article 15</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
+        "text": "Power is conferred on the Commission to adopt the implementing technical standards referred to in the first subparagraph in accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" data-article=\"15\" target=\"_blank\" rel=\"noopener\">Article 15</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
         "class": ""
       }
     ]
@@ -1489,7 +1489,7 @@
       },
       {
         "id": "art_25__10",
-        "text": "10. In accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" data-article=\"33\" target=\"_blank\" rel=\"noopener\">Article 33</a>(1) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>, ESMA shall establish cooperation arrangements with the responsible third-country authorities whose legal and supervisory frameworks have been recognised as equivalent to this Regulation in accordance with paragraph 9. Such arrangements shall specify at least:",
+        "text": "10. In accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" data-article=\"33\" target=\"_blank\" rel=\"noopener\">Article 33</a>(1) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>, ESMA shall establish cooperation arrangements with the responsible third-country authorities whose legal and supervisory frameworks have been recognised as equivalent to this Regulation in accordance with paragraph 9. Such arrangements shall specify at least:",
         "class": ""
       },
       {
@@ -1509,7 +1509,7 @@
       },
       {
         "id": "art_25__p29",
-        "text": "Where a cooperation agreement provides for transfers of personal data by a Member State, such transfers shall comply with the provisions of Directive 95/46/EC and where a cooperation agreement provides for transfers of personal data by ESMA, such transfers shall comply with the provisions of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32001R0045\" class=\"ref\" data-celex=\"32001R0045\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 45/2001</a>.",
+        "text": "Where a cooperation agreement provides for transfers of personal data by a Member State, such transfers shall comply with the provisions of Directive 95/46/EC and where a cooperation agreement provides for transfers of personal data by ESMA, such transfers shall comply with the provisions of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32001R0045\" class=\"ref\" data-ref=\"celex:32001R0045\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 45/2001</a>.",
         "class": ""
       },
       {
@@ -1529,7 +1529,7 @@
       },
       {
         "id": "art_25__p33",
-        "text": "Power is delegated to the Commission to adopt the regulatory technical standards referred to in the first subparagraph in accordance with Articles <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" data-article=\"10\" target=\"_blank\" rel=\"noopener\">10</a> to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" data-article=\"14\" target=\"_blank\" rel=\"noopener\">14</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
+        "text": "Power is delegated to the Commission to adopt the regulatory technical standards referred to in the first subparagraph in accordance with Articles <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" data-article=\"10\" target=\"_blank\" rel=\"noopener\">10</a> to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" data-article=\"14\" target=\"_blank\" rel=\"noopener\">14</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
         "class": ""
       }
     ]
@@ -1611,7 +1611,7 @@
       },
       {
         "id": "art_26__p15",
-        "text": "Power is delegated to the Commission to adopt the regulatory technical standards referred to in the first subparagraph in accordance with Articles <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" data-article=\"10\" target=\"_blank\" rel=\"noopener\">10</a> to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" data-article=\"14\" target=\"_blank\" rel=\"noopener\">14</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
+        "text": "Power is delegated to the Commission to adopt the regulatory technical standards referred to in the first subparagraph in accordance with Articles <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" data-article=\"10\" target=\"_blank\" rel=\"noopener\">10</a> to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" data-article=\"14\" target=\"_blank\" rel=\"noopener\">14</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
         "class": ""
       }
     ]
@@ -1742,7 +1742,7 @@
       },
       {
         "id": "art_29__p5",
-        "text": "Power is delegated to the Commission to adopt the regulatory technical standards referred to in the first subparagraph in accordance with Articles <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" data-article=\"10\" target=\"_blank\" rel=\"noopener\">10</a> to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" data-article=\"14\" target=\"_blank\" rel=\"noopener\">14</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
+        "text": "Power is delegated to the Commission to adopt the regulatory technical standards referred to in the first subparagraph in accordance with Articles <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" data-article=\"10\" target=\"_blank\" rel=\"noopener\">10</a> to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" data-article=\"14\" target=\"_blank\" rel=\"noopener\">14</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
         "class": ""
       },
       {
@@ -1757,7 +1757,7 @@
       },
       {
         "id": "art_29__p8",
-        "text": "Power is conferred on the Commission to adopt the implementing technical standards referred to in the first subparagraph in accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" data-article=\"15\" target=\"_blank\" rel=\"noopener\">Article 15</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
+        "text": "Power is conferred on the Commission to adopt the implementing technical standards referred to in the first subparagraph in accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" data-article=\"15\" target=\"_blank\" rel=\"noopener\">Article 15</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
         "class": ""
       }
     ]
@@ -1915,7 +1915,7 @@
       },
       {
         "id": "art_33__p6",
-        "text": "That competent authority shall consult the competent authority of the place of establishment of the requesting participant on its assessment of the complaint. Where the authority of the requesting participant disagrees with the assessment provided, any one of the two competent authorities may refer the matter to ESMA, which may act in accordance with the powers conferred on it under <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" data-article=\"19\" target=\"_blank\" rel=\"noopener\">Article 19</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
+        "text": "That competent authority shall consult the competent authority of the place of establishment of the requesting participant on its assessment of the complaint. Where the authority of the requesting participant disagrees with the assessment provided, any one of the two competent authorities may refer the matter to ESMA, which may act in accordance with the powers conferred on it under <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" data-article=\"19\" target=\"_blank\" rel=\"noopener\">Article 19</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
         "class": ""
       },
       {
@@ -1940,7 +1940,7 @@
       },
       {
         "id": "art_33__p11",
-        "text": "Power is delegated to the Commission to adopt the regulatory technical standards referred to in the first subparagraph in accordance with Articles <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" data-article=\"10\" target=\"_blank\" rel=\"noopener\">10</a> to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" data-article=\"14\" target=\"_blank\" rel=\"noopener\">14</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
+        "text": "Power is delegated to the Commission to adopt the regulatory technical standards referred to in the first subparagraph in accordance with Articles <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" data-article=\"10\" target=\"_blank\" rel=\"noopener\">10</a> to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" data-article=\"14\" target=\"_blank\" rel=\"noopener\">14</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
         "class": ""
       },
       {
@@ -1955,7 +1955,7 @@
       },
       {
         "id": "art_33__p14",
-        "text": "Power is conferred on the Commission to adopt the implementing technical standards referred to in the first subparagraph in accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" data-article=\"15\" target=\"_blank\" rel=\"noopener\">Article 15</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
+        "text": "Power is conferred on the Commission to adopt the implementing technical standards referred to in the first subparagraph in accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" data-article=\"15\" target=\"_blank\" rel=\"noopener\">Article 15</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
         "class": ""
       }
     ]
@@ -2063,7 +2063,7 @@
       },
       {
         "id": "art_37__p6",
-        "text": "Power is delegated to the Commission to adopt the regulatory technical standards referred to in the first subparagraph in accordance with Articles <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" data-article=\"10\" target=\"_blank\" rel=\"noopener\">10</a> to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" data-article=\"14\" target=\"_blank\" rel=\"noopener\">14</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
+        "text": "Power is delegated to the Commission to adopt the regulatory technical standards referred to in the first subparagraph in accordance with Articles <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" data-article=\"10\" target=\"_blank\" rel=\"noopener\">10</a> to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" data-article=\"14\" target=\"_blank\" rel=\"noopener\">14</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
         "class": ""
       }
     ]
@@ -2201,7 +2201,7 @@
       },
       {
         "id": "art_41__4",
-        "text": "4. In order to ensure consistent application of this Article, ESMA may, in close cooperation with the members of the ESCB, issue guidelines in accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" data-article=\"16\" target=\"_blank\" rel=\"noopener\">Article 16</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
+        "text": "4. In order to ensure consistent application of this Article, ESMA may, in close cooperation with the members of the ESCB, issue guidelines in accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" data-article=\"16\" target=\"_blank\" rel=\"noopener\">Article 16</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
         "class": ""
       }
     ]
@@ -2304,7 +2304,7 @@
       },
       {
         "id": "art_45__p10",
-        "text": "Power is delegated to the Commission to adopt the regulatory technical standards referred to in the first subparagraph in accordance with Articles <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" data-article=\"10\" target=\"_blank\" rel=\"noopener\">10</a> to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" data-article=\"14\" target=\"_blank\" rel=\"noopener\">14</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
+        "text": "Power is delegated to the Commission to adopt the regulatory technical standards referred to in the first subparagraph in accordance with Articles <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" data-article=\"10\" target=\"_blank\" rel=\"noopener\">10</a> to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" data-article=\"14\" target=\"_blank\" rel=\"noopener\">14</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
         "class": ""
       }
     ]
@@ -2341,7 +2341,7 @@
       },
       {
         "id": "art_46__6",
-        "text": "6. ESMA shall, in close cooperation with EBA and the members of the ESCB, develop draft regulatory technical standards specifying the financial instruments that can be considered to be highly liquid with minimal market and credit risk as referred to in paragraph 3, the appropriate timeframe for access to assets referred to in paragraph 2 and the concentration limits as referred to in paragraph 5. Such draft regulatory technical standards shall, where appropriate, be aligned to the regulatory technical standards adopted in accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32012R0648\" class=\"ref\" data-celex=\"32012R0648\" data-article=\"47\" target=\"_blank\" rel=\"noopener\">Article 47</a>(8) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32012R0648\" class=\"ref\" data-celex=\"32012R0648\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 648/2012</a>.",
+        "text": "6. ESMA shall, in close cooperation with EBA and the members of the ESCB, develop draft regulatory technical standards specifying the financial instruments that can be considered to be highly liquid with minimal market and credit risk as referred to in paragraph 3, the appropriate timeframe for access to assets referred to in paragraph 2 and the concentration limits as referred to in paragraph 5. Such draft regulatory technical standards shall, where appropriate, be aligned to the regulatory technical standards adopted in accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32012R0648\" class=\"ref\" data-ref=\"celex:32012R0648\" data-article=\"47\" target=\"_blank\" rel=\"noopener\">Article 47</a>(8) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32012R0648\" class=\"ref\" data-ref=\"celex:32012R0648\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 648/2012</a>.",
         "class": ""
       },
       {
@@ -2351,7 +2351,7 @@
       },
       {
         "id": "art_46__p8",
-        "text": "Power is delegated to the Commission to adopt the regulatory technical standards referred to in the first subparagraph in accordance with Articles <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" data-article=\"10\" target=\"_blank\" rel=\"noopener\">10</a> to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" data-article=\"14\" target=\"_blank\" rel=\"noopener\">14</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
+        "text": "Power is delegated to the Commission to adopt the regulatory technical standards referred to in the first subparagraph in accordance with Articles <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" data-article=\"10\" target=\"_blank\" rel=\"noopener\">10</a> to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" data-article=\"14\" target=\"_blank\" rel=\"noopener\">14</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
         "class": ""
       }
     ]
@@ -2408,7 +2408,7 @@
       },
       {
         "id": "art_47__p10",
-        "text": "Power is delegated to the Commission to adopt the regulatory technical standards referred to in the first subparagraph in accordance with Articles <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1093\" class=\"ref\" data-celex=\"32010R1093\" data-article=\"10\" target=\"_blank\" rel=\"noopener\">10</a> to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1093\" class=\"ref\" data-celex=\"32010R1093\" data-article=\"14\" target=\"_blank\" rel=\"noopener\">14</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1093\" class=\"ref\" data-celex=\"32010R1093\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1093/2010</a>.",
+        "text": "Power is delegated to the Commission to adopt the regulatory technical standards referred to in the first subparagraph in accordance with Articles <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1093\" class=\"ref\" data-ref=\"celex:32010R1093\" data-article=\"10\" target=\"_blank\" rel=\"noopener\">10</a> to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1093\" class=\"ref\" data-ref=\"celex:32010R1093\" data-article=\"14\" target=\"_blank\" rel=\"noopener\">14</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1093\" class=\"ref\" data-ref=\"celex:32010R1093\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1093/2010</a>.",
         "class": ""
       }
     ]
@@ -2495,7 +2495,7 @@
       },
       {
         "id": "art_48__p16",
-        "text": "Powers is delegated to the Commission to adopt the regulatory technical standards referred to in the first subparagraph in accordance with Articles <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" data-article=\"10\" target=\"_blank\" rel=\"noopener\">10</a> to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" data-article=\"14\" target=\"_blank\" rel=\"noopener\">14</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
+        "text": "Powers is delegated to the Commission to adopt the regulatory technical standards referred to in the first subparagraph in accordance with Articles <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" data-article=\"10\" target=\"_blank\" rel=\"noopener\">10</a> to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" data-article=\"14\" target=\"_blank\" rel=\"noopener\">14</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
         "class": ""
       }
     ]
@@ -2537,7 +2537,7 @@
       },
       {
         "id": "art_49__4",
-        "text": "4. Without prejudice to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32005L0060\" class=\"ref\" data-celex=\"32005L0060\" target=\"_blank\" rel=\"noopener\">Directive 2005/60/EC</a> of the European Parliament and of the Council (25) and Commission <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32006L0070\" class=\"ref\" data-celex=\"32006L0070\" target=\"_blank\" rel=\"noopener\">Directive 2006/70/EC</a> (26), where a CSD refuses to provide services to an issuer, it shall provide the requesting issuer with full written reasons for its refusal.",
+        "text": "4. Without prejudice to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32005L0060\" class=\"ref\" data-ref=\"celex:32005L0060\" target=\"_blank\" rel=\"noopener\">Directive 2005/60/EC</a> of the European Parliament and of the Council (25) and Commission <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32006L0070\" class=\"ref\" data-ref=\"celex:32006L0070\" target=\"_blank\" rel=\"noopener\">Directive 2006/70/EC</a> (26), where a CSD refuses to provide services to an issuer, it shall provide the requesting issuer with full written reasons for its refusal.",
         "class": ""
       },
       {
@@ -2552,7 +2552,7 @@
       },
       {
         "id": "art_49__p10",
-        "text": "The competent authority of the CSD shall consult the competent authority of the place of establishment of the requesting issuer on its assessment of the complaint. Where the competent authority of the place of establishment of the requesting issuer disagrees with that assessment, any one of the two competent authorities may refer the matter to ESMA, which may act in accordance with the powers conferred on it under <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" data-article=\"19\" target=\"_blank\" rel=\"noopener\">Article 19</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
+        "text": "The competent authority of the CSD shall consult the competent authority of the place of establishment of the requesting issuer on its assessment of the complaint. Where the competent authority of the place of establishment of the requesting issuer disagrees with that assessment, any one of the two competent authorities may refer the matter to ESMA, which may act in accordance with the powers conferred on it under <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" data-article=\"19\" target=\"_blank\" rel=\"noopener\">Article 19</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
         "class": ""
       },
       {
@@ -2572,7 +2572,7 @@
       },
       {
         "id": "art_49__p14",
-        "text": "Power is delegated to the Commission to adopt the regulatory technical standards referred to in the first subparagraph in accordance with Articles <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" data-article=\"10\" target=\"_blank\" rel=\"noopener\">10</a> to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" data-article=\"14\" target=\"_blank\" rel=\"noopener\">14</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
+        "text": "Power is delegated to the Commission to adopt the regulatory technical standards referred to in the first subparagraph in accordance with Articles <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" data-article=\"10\" target=\"_blank\" rel=\"noopener\">10</a> to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" data-article=\"14\" target=\"_blank\" rel=\"noopener\">14</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
         "class": ""
       },
       {
@@ -2587,7 +2587,7 @@
       },
       {
         "id": "art_49__p17",
-        "text": "Power is conferred on the Commission to adopt the implementing technical standards referred to in the first subparagraph in accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" data-article=\"15\" target=\"_blank\" rel=\"noopener\">Article 15</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
+        "text": "Power is conferred on the Commission to adopt the implementing technical standards referred to in the first subparagraph in accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" data-article=\"15\" target=\"_blank\" rel=\"noopener\">Article 15</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
         "class": ""
       }
     ]
@@ -2653,7 +2653,7 @@
       },
       {
         "id": "art_52__p6",
-        "text": "The competent authority of the receiving CSD shall consult the competent authority of the requesting CSD and the relevant authority of the requesting CSD referred to in point (a) of <a href=\"#a:act_eu_csdr_2014_0909:art_12\" class=\"ref\" data-article=\"12\">Article 12</a>(1) on its assessment of the complaint. Where any of the authorities of the requesting CSD disagrees with the assessment provided, any one of the authorities may refer the matter to ESMA, which may act in accordance with the powers conferred on it under <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" data-article=\"19\" target=\"_blank\" rel=\"noopener\">Article 19</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
+        "text": "The competent authority of the receiving CSD shall consult the competent authority of the requesting CSD and the relevant authority of the requesting CSD referred to in point (a) of <a href=\"#a:act_eu_csdr_2014_0909:art_12\" class=\"ref\" data-article=\"12\">Article 12</a>(1) on its assessment of the complaint. Where any of the authorities of the requesting CSD disagrees with the assessment provided, any one of the authorities may refer the matter to ESMA, which may act in accordance with the powers conferred on it under <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" data-article=\"19\" target=\"_blank\" rel=\"noopener\">Article 19</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
         "class": ""
       },
       {
@@ -2673,7 +2673,7 @@
       },
       {
         "id": "art_52__p10",
-        "text": "Power is delegated to the Commission to adopt the regulatory technical standards referred to in the first subparagraph in accordance with Articles <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" data-article=\"10\" target=\"_blank\" rel=\"noopener\">10</a> to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" data-article=\"14\" target=\"_blank\" rel=\"noopener\">14</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
+        "text": "Power is delegated to the Commission to adopt the regulatory technical standards referred to in the first subparagraph in accordance with Articles <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" data-article=\"10\" target=\"_blank\" rel=\"noopener\">10</a> to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" data-article=\"14\" target=\"_blank\" rel=\"noopener\">14</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
         "class": ""
       },
       {
@@ -2688,7 +2688,7 @@
       },
       {
         "id": "art_52__p13",
-        "text": "Power is conferred on the Commission to adopt the implementing technical standards referred to in the first subparagraph in accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" data-article=\"15\" target=\"_blank\" rel=\"noopener\">Article 15</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
+        "text": "Power is conferred on the Commission to adopt the implementing technical standards referred to in the first subparagraph in accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" data-article=\"15\" target=\"_blank\" rel=\"noopener\">Article 15</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
         "class": ""
       }
     ]
@@ -2730,7 +2730,7 @@
       },
       {
         "id": "art_53__p7",
-        "text": "The competent authority of the receiving party shall consult the competent authority of the requesting party and the relevant authority referred to in point (a) of <a href=\"#a:act_eu_csdr_2014_0909:art_12\" class=\"ref\" data-article=\"12\">Article 12</a>(1) on its assessment of the complaint. Where any of the authorities of the requesting party disagrees with the assessment provided, any of them may refer the matter to ESMA, which may act in accordance with the powers conferred on it under <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" data-article=\"19\" target=\"_blank\" rel=\"noopener\">Article 19</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
+        "text": "The competent authority of the receiving party shall consult the competent authority of the requesting party and the relevant authority referred to in point (a) of <a href=\"#a:act_eu_csdr_2014_0909:art_12\" class=\"ref\" data-article=\"12\">Article 12</a>(1) on its assessment of the complaint. Where any of the authorities of the requesting party disagrees with the assessment provided, any of them may refer the matter to ESMA, which may act in accordance with the powers conferred on it under <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" data-article=\"19\" target=\"_blank\" rel=\"noopener\">Article 19</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
         "class": ""
       },
       {
@@ -2750,7 +2750,7 @@
       },
       {
         "id": "art_53__p11",
-        "text": "Power is delegated to the Commission to adopt the regulatory technical standards referred to in the first subparagraph in accordance with Articles <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" data-article=\"10\" target=\"_blank\" rel=\"noopener\">10</a> to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" data-article=\"14\" target=\"_blank\" rel=\"noopener\">14</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
+        "text": "Power is delegated to the Commission to adopt the regulatory technical standards referred to in the first subparagraph in accordance with Articles <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" data-article=\"10\" target=\"_blank\" rel=\"noopener\">10</a> to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" data-article=\"14\" target=\"_blank\" rel=\"noopener\">14</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
         "class": ""
       },
       {
@@ -2765,7 +2765,7 @@
       },
       {
         "id": "art_53__p14",
-        "text": "Power is conferred on the Commission to adopt the implementing technical standards referred to in the first subparagraph in accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" data-article=\"15\" target=\"_blank\" rel=\"noopener\">Article 15</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
+        "text": "Power is conferred on the Commission to adopt the implementing technical standards referred to in the first subparagraph in accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" data-article=\"15\" target=\"_blank\" rel=\"noopener\">Article 15</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
         "class": ""
       }
     ]
@@ -2792,7 +2792,7 @@
       },
       {
         "id": "art_54__2_b",
-        "text": "(b) to designate for that purpose one or more credit institutions authorised in accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013L0036\" class=\"ref\" data-celex=\"32013L0036\" data-article=\"8\" target=\"_blank\" rel=\"noopener\">Article 8</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013L0036\" class=\"ref\" data-celex=\"32013L0036\" target=\"_blank\" rel=\"noopener\">Directive 2013/36/EU</a>.",
+        "text": "(b) to designate for that purpose one or more credit institutions authorised in accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013L0036\" class=\"ref\" data-ref=\"celex:32013L0036\" data-article=\"8\" target=\"_blank\" rel=\"noopener\">Article 8</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013L0036\" class=\"ref\" data-ref=\"celex:32013L0036\" target=\"_blank\" rel=\"noopener\">Directive 2013/36/EU</a>.",
         "class": "list-item-l1"
       },
       {
@@ -2802,7 +2802,7 @@
       },
       {
         "id": "art_54__3_a",
-        "text": "(a) the CSD is authorised as a credit institution as provided for in <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013L0036\" class=\"ref\" data-celex=\"32013L0036\" data-article=\"8\" target=\"_blank\" rel=\"noopener\">Article 8</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013L0036\" class=\"ref\" data-celex=\"32013L0036\" target=\"_blank\" rel=\"noopener\">Directive 2013/36/EU</a>;",
+        "text": "(a) the CSD is authorised as a credit institution as provided for in <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013L0036\" class=\"ref\" data-ref=\"celex:32013L0036\" data-article=\"8\" target=\"_blank\" rel=\"noopener\">Article 8</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013L0036\" class=\"ref\" data-ref=\"celex:32013L0036\" target=\"_blank\" rel=\"noopener\">Directive 2013/36/EU</a>;",
         "class": "list-item-l1"
       },
       {
@@ -2822,7 +2822,7 @@
       },
       {
         "id": "art_54__3_e",
-        "text": "(e) the CSD reports at least monthly to the competent authority and annually as a part of its public disclosure as required under Part Eight of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013R0575\" class=\"ref\" data-celex=\"32013R0575\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 575/2013</a> on the extent and management of intra-day liquidity risk in accordance with point (j) of <a href=\"#a:act_eu_csdr_2014_0909:art_59\" class=\"ref\" data-article=\"59\">Article 59</a>(4) of this Regulation;",
+        "text": "(e) the CSD reports at least monthly to the competent authority and annually as a part of its public disclosure as required under Part Eight of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013R0575\" class=\"ref\" data-ref=\"celex:32013R0575\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 575/2013</a> on the extent and management of intra-day liquidity risk in accordance with point (j) of <a href=\"#a:act_eu_csdr_2014_0909:art_59\" class=\"ref\" data-article=\"59\">Article 59</a>(4) of this Regulation;",
         "class": "list-item-l1"
       },
       {
@@ -2832,7 +2832,7 @@
       },
       {
         "id": "art_54__p12",
-        "text": "In the case of conflicting provisions laid down in this Regulation, in <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013R0575\" class=\"ref\" data-celex=\"32013R0575\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 575/2013</a> and in <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013L0036\" class=\"ref\" data-celex=\"32013L0036\" target=\"_blank\" rel=\"noopener\">Directive 2013/36/EU</a>, the CSD referred to in point (a) of the first subparagraph shall comply with the stricter requirements on prudential supervision. The regulatory technical standards referred to in Articles <a href=\"#a:act_eu_csdr_2014_0909:art_47\" class=\"ref\" data-article=\"47\">47</a> and <a href=\"#a:act_eu_csdr_2014_0909:art_59\" class=\"ref\" data-article=\"59\">59</a> of this Regulation shall clarify the cases of conflicting provisions.",
+        "text": "In the case of conflicting provisions laid down in this Regulation, in <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013R0575\" class=\"ref\" data-ref=\"celex:32013R0575\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 575/2013</a> and in <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013L0036\" class=\"ref\" data-ref=\"celex:32013L0036\" target=\"_blank\" rel=\"noopener\">Directive 2013/36/EU</a>, the CSD referred to in point (a) of the first subparagraph shall comply with the stricter requirements on prudential supervision. The regulatory technical standards referred to in Articles <a href=\"#a:act_eu_csdr_2014_0909:art_47\" class=\"ref\" data-article=\"47\">47</a> and <a href=\"#a:act_eu_csdr_2014_0909:art_59\" class=\"ref\" data-article=\"59\">59</a> of this Regulation shall clarify the cases of conflicting provisions.",
         "class": ""
       },
       {
@@ -2842,7 +2842,7 @@
       },
       {
         "id": "art_54__4_a",
-        "text": "(a) the separate legal entity is authorised as a credit institution as provided for in <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013L0036\" class=\"ref\" data-celex=\"32013L0036\" data-article=\"8\" target=\"_blank\" rel=\"noopener\">Article 8</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013L0036\" class=\"ref\" data-celex=\"32013L0036\" target=\"_blank\" rel=\"noopener\">Directive 2013/36/EU</a>;",
+        "text": "(a) the separate legal entity is authorised as a credit institution as provided for in <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013L0036\" class=\"ref\" data-ref=\"celex:32013L0036\" data-article=\"8\" target=\"_blank\" rel=\"noopener\">Article 8</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013L0036\" class=\"ref\" data-ref=\"celex:32013L0036\" target=\"_blank\" rel=\"noopener\">Directive 2013/36/EU</a>;",
         "class": "list-item-l1"
       },
       {
@@ -2867,7 +2867,7 @@
       },
       {
         "id": "art_54__4_f",
-        "text": "(f) the separate legal entity reports at least monthly to the competent authority and annually as a part of its public disclosure as required under Part Eight of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013R0575\" class=\"ref\" data-celex=\"32013R0575\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 575/2013</a> on the extent and management of intra-day liquidity risk in accordance with point (j) of <a href=\"#a:act_eu_csdr_2014_0909:art_59\" class=\"ref\" data-article=\"59\">Article 59</a>(4) of this Regulation; and",
+        "text": "(f) the separate legal entity reports at least monthly to the competent authority and annually as a part of its public disclosure as required under Part Eight of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013R0575\" class=\"ref\" data-ref=\"celex:32013R0575\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 575/2013</a> on the extent and management of intra-day liquidity risk in accordance with point (j) of <a href=\"#a:act_eu_csdr_2014_0909:art_59\" class=\"ref\" data-article=\"59\">Article 59</a>(4) of this Regulation; and",
         "class": "list-item-l1"
       },
       {
@@ -2907,7 +2907,7 @@
       },
       {
         "id": "art_54__p27",
-        "text": "Power is delegated to the Commission to adopt the regulatory technical standards referred to in the first subparagraph in accordance with Articles <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" data-article=\"10\" target=\"_blank\" rel=\"noopener\">10</a> to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" data-article=\"14\" target=\"_blank\" rel=\"noopener\">14</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
+        "text": "Power is delegated to the Commission to adopt the regulatory technical standards referred to in the first subparagraph in accordance with Articles <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" data-article=\"10\" target=\"_blank\" rel=\"noopener\">10</a> to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" data-article=\"14\" target=\"_blank\" rel=\"noopener\">14</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
         "class": ""
       }
     ]
@@ -2944,7 +2944,7 @@
       },
       {
         "id": "art_55__4_b",
-        "text": "(b) the competent authority referred to in point (40) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013R0575\" class=\"ref\" data-celex=\"32013R0575\" data-article=\"4\" target=\"_blank\" rel=\"noopener\">Article 4</a>(1) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013R0575\" class=\"ref\" data-celex=\"32013R0575\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 575/2013</a>;",
+        "text": "(b) the competent authority referred to in point (40) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013R0575\" class=\"ref\" data-ref=\"celex:32013R0575\" data-article=\"4\" target=\"_blank\" rel=\"noopener\">Article 4</a>(1) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013R0575\" class=\"ref\" data-ref=\"celex:32013R0575\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 575/2013</a>;",
         "class": "list-item-l1"
       },
       {
@@ -2984,7 +2984,7 @@
       },
       {
         "id": "art_55__p14",
-        "text": "Where 30 days after that decision has been presented any of the authorities referred to in points (a) to (e) of paragraph 4 issues a negative opinion and the competent authority still wishes to grant the authorisation any of the authorities that issued a negative opinion may refer the matter to ESMA for assistance under point (c) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" data-article=\"31\" target=\"_blank\" rel=\"noopener\">Article 31</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
+        "text": "Where 30 days after that decision has been presented any of the authorities referred to in points (a) to (e) of paragraph 4 issues a negative opinion and the competent authority still wishes to grant the authorisation any of the authorities that issued a negative opinion may refer the matter to ESMA for assistance under point (c) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" data-article=\"31\" target=\"_blank\" rel=\"noopener\">Article 31</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
         "class": ""
       },
       {
@@ -3004,7 +3004,7 @@
       },
       {
         "id": "art_55__6",
-        "text": "6. Where ESMA considers that the competent authority referred to in paragraph 1 has granted an authorisation which may not be in conformity with Union law it shall act in accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" data-article=\"17\" target=\"_blank\" rel=\"noopener\">Article 17</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
+        "text": "6. Where ESMA considers that the competent authority referred to in paragraph 1 has granted an authorisation which may not be in conformity with Union law it shall act in accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" data-article=\"17\" target=\"_blank\" rel=\"noopener\">Article 17</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
         "class": ""
       },
       {
@@ -3019,7 +3019,7 @@
       },
       {
         "id": "art_55__p21",
-        "text": "Power is delegated to the Commission to adopt the regulatory technical standards referred to in the first subparagraph in accordance with Articles <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" data-article=\"10\" target=\"_blank\" rel=\"noopener\">10</a> to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" data-article=\"14\" target=\"_blank\" rel=\"noopener\">14</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
+        "text": "Power is delegated to the Commission to adopt the regulatory technical standards referred to in the first subparagraph in accordance with Articles <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" data-article=\"10\" target=\"_blank\" rel=\"noopener\">10</a> to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" data-article=\"14\" target=\"_blank\" rel=\"noopener\">14</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
         "class": ""
       },
       {
@@ -3034,7 +3034,7 @@
       },
       {
         "id": "art_55__p24",
-        "text": "Power is conferred on the Commission to adopt the implementing technical standards referred to in the first subparagraph in accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" data-article=\"15\" target=\"_blank\" rel=\"noopener\">Article 15</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-celex=\"32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
+        "text": "Power is conferred on the Commission to adopt the implementing technical standards referred to in the first subparagraph in accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" data-article=\"15\" target=\"_blank\" rel=\"noopener\">Article 15</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1095\" class=\"ref\" data-ref=\"celex:32010R1095\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1095/2010</a>.",
         "class": ""
       }
     ]
@@ -3267,7 +3267,7 @@
       },
       {
         "id": "art_59__5",
-        "text": "5. EBA shall, in close cooperation with ESMA and the members of the ESCB, develop draft regulatory technical standards to further specify details of the frameworks and tools for the monitoring, the measuring, the management, the reporting and the public disclosure of the credit and liquidity risks, including those which occur intra-day, referred to in paragraphs 3 and 4. Such draft regulatory technical standards shall, where appropriate, be aligned to the regulatory technical standards adopted in accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32012R0648\" class=\"ref\" data-celex=\"32012R0648\" data-article=\"46\" target=\"_blank\" rel=\"noopener\">Article 46</a>(3) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32012R0648\" class=\"ref\" data-celex=\"32012R0648\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 648/2012</a>.",
+        "text": "5. EBA shall, in close cooperation with ESMA and the members of the ESCB, develop draft regulatory technical standards to further specify details of the frameworks and tools for the monitoring, the measuring, the management, the reporting and the public disclosure of the credit and liquidity risks, including those which occur intra-day, referred to in paragraphs 3 and 4. Such draft regulatory technical standards shall, where appropriate, be aligned to the regulatory technical standards adopted in accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32012R0648\" class=\"ref\" data-ref=\"celex:32012R0648\" data-article=\"46\" target=\"_blank\" rel=\"noopener\">Article 46</a>(3) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32012R0648\" class=\"ref\" data-ref=\"celex:32012R0648\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 648/2012</a>.",
         "class": ""
       },
       {
@@ -3277,7 +3277,7 @@
       },
       {
         "id": "art_59__p26",
-        "text": "Power is delegated to the Commission to adopt the regulatory technical standards referred to in the first subparagraph in accordance with Articles <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1093\" class=\"ref\" data-celex=\"32010R1093\" data-article=\"10\" target=\"_blank\" rel=\"noopener\">10</a> to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1093\" class=\"ref\" data-celex=\"32010R1093\" data-article=\"14\" target=\"_blank\" rel=\"noopener\">14</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1093\" class=\"ref\" data-celex=\"32010R1093\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1093/2010</a>.",
+        "text": "Power is delegated to the Commission to adopt the regulatory technical standards referred to in the first subparagraph in accordance with Articles <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1093\" class=\"ref\" data-ref=\"celex:32010R1093\" data-article=\"10\" target=\"_blank\" rel=\"noopener\">10</a> to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1093\" class=\"ref\" data-ref=\"celex:32010R1093\" data-article=\"14\" target=\"_blank\" rel=\"noopener\">14</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1093\" class=\"ref\" data-ref=\"celex:32010R1093\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1093/2010</a>.",
         "class": ""
       }
     ]
@@ -3289,7 +3289,7 @@
     "paragraphs": [
       {
         "id": "art_60__1",
-        "text": "1. Without prejudice to Articles <a href=\"#a:act_eu_csdr_2014_0909:art_17\" class=\"ref\" data-article=\"17\">17</a> and <a href=\"#a:act_eu_csdr_2014_0909:art_22\" class=\"ref\" data-article=\"22\">22</a> of this Regulation, the competent authorities referred to in point (40) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013R0575\" class=\"ref\" data-celex=\"32013R0575\" data-article=\"4\" target=\"_blank\" rel=\"noopener\">Article 4</a>(1) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013R0575\" class=\"ref\" data-celex=\"32013R0575\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 575/2013</a> are responsible for the authorisation as credit institutions and supervision as credit institutions under the conditions provided in <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013R0575\" class=\"ref\" data-celex=\"32013R0575\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 575/2013</a> and in <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013L0036\" class=\"ref\" data-celex=\"32013L0036\" target=\"_blank\" rel=\"noopener\">Directive 2013/36/EU</a> of the designated credit institutions and CSDs authorised under this Regulation to provide banking-type ancillary services.",
+        "text": "1. Without prejudice to Articles <a href=\"#a:act_eu_csdr_2014_0909:art_17\" class=\"ref\" data-article=\"17\">17</a> and <a href=\"#a:act_eu_csdr_2014_0909:art_22\" class=\"ref\" data-article=\"22\">22</a> of this Regulation, the competent authorities referred to in point (40) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013R0575\" class=\"ref\" data-ref=\"celex:32013R0575\" data-article=\"4\" target=\"_blank\" rel=\"noopener\">Article 4</a>(1) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013R0575\" class=\"ref\" data-ref=\"celex:32013R0575\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 575/2013</a> are responsible for the authorisation as credit institutions and supervision as credit institutions under the conditions provided in <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013R0575\" class=\"ref\" data-ref=\"celex:32013R0575\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 575/2013</a> and in <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013L0036\" class=\"ref\" data-ref=\"celex:32013L0036\" target=\"_blank\" rel=\"noopener\">Directive 2013/36/EU</a> of the designated credit institutions and CSDs authorised under this Regulation to provide banking-type ancillary services.",
         "class": ""
       },
       {
@@ -3329,7 +3329,7 @@
       },
       {
         "id": "art_60__3",
-        "text": "3. In order to ensure consistent, efficient and effective supervision within the Union of credit institutions and CSDs authorised to provide banking-type ancillary services, EBA may, in close cooperation with ESMA and the members of the ESCB, issue guidelines addressed to competent authorities in accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1093\" class=\"ref\" data-celex=\"32010R1093\" data-article=\"16\" target=\"_blank\" rel=\"noopener\">Article 16</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1093\" class=\"ref\" data-celex=\"32010R1093\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1093/2010</a>.",
+        "text": "3. In order to ensure consistent, efficient and effective supervision within the Union of credit institutions and CSDs authorised to provide banking-type ancillary services, EBA may, in close cooperation with ESMA and the members of the ESCB, issue guidelines addressed to competent authorities in accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1093\" class=\"ref\" data-ref=\"celex:32010R1093\" data-article=\"16\" target=\"_blank\" rel=\"noopener\">Article 16</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1093\" class=\"ref\" data-ref=\"celex:32010R1093\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1093/2010</a>.",
         "class": ""
       }
     ]
@@ -3580,7 +3580,7 @@
       },
       {
         "id": "art_63__2_g",
-        "text": "(g) in the case of a legal person, maximum administrative pecuniary sanctions of at least EUR 20 million or up to 10 % of the total annual turnover of the legal person according to the last available accounts approved by the management body; where the legal person is a parent undertaking or a subsidiary of the parent undertaking which has to prepare consolidated financial accounts according to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013L0034\" class=\"ref\" data-celex=\"32013L0034\" target=\"_blank\" rel=\"noopener\">Directive 2013/34/EU</a>, the relevant total annual turnover shall be the total annual turnover or the corresponding type of income according to the relevant Accounting Directives according to the last available consolidated accounts approved by the management body of the ultimate parent undertaking.",
+        "text": "(g) in the case of a legal person, maximum administrative pecuniary sanctions of at least EUR 20 million or up to 10 % of the total annual turnover of the legal person according to the last available accounts approved by the management body; where the legal person is a parent undertaking or a subsidiary of the parent undertaking which has to prepare consolidated financial accounts according to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013L0034\" class=\"ref\" data-ref=\"celex:32013L0034\" target=\"_blank\" rel=\"noopener\">Directive 2013/34/EU</a>, the relevant total annual turnover shall be the total annual turnover or the corresponding type of income according to the relevant Accounting Directives according to the last available consolidated accounts approved by the management body of the ultimate parent undertaking.",
         "class": "list-item-l1"
       },
       {
@@ -3730,12 +3730,12 @@
     "paragraphs": [
       {
         "id": "art_68__1",
-        "text": "1. The Commission shall be assisted by the European Securities Committee established by Commission Decision 2001/528/EC (27). That Committee shall be a committee within the meaning of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011R0182\" class=\"ref\" data-celex=\"32011R0182\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 182/2011</a>.",
+        "text": "1. The Commission shall be assisted by the European Securities Committee established by Commission Decision 2001/528/EC (27). That Committee shall be a committee within the meaning of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011R0182\" class=\"ref\" data-ref=\"celex:32011R0182\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 182/2011</a>.",
         "class": ""
       },
       {
         "id": "art_68__2",
-        "text": "2. Where reference is made to this paragraph, <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011R0182\" class=\"ref\" data-celex=\"32011R0182\" data-article=\"5\" target=\"_blank\" rel=\"noopener\">Article 5</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011R0182\" class=\"ref\" data-celex=\"32011R0182\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 182/2011</a> shall apply.",
+        "text": "2. Where reference is made to this paragraph, <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011R0182\" class=\"ref\" data-ref=\"celex:32011R0182\" data-article=\"5\" target=\"_blank\" rel=\"noopener\">Article 5</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011R0182\" class=\"ref\" data-ref=\"celex:32011R0182\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 182/2011</a> shall apply.",
         "class": ""
       }
     ]
@@ -3806,17 +3806,17 @@
     "paragraphs": [
       {
         "id": "art_71__p1",
-        "text": "<a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-celex=\"32014L0065\" target=\"_blank\" rel=\"noopener\">Directive 2014/65/EU</a> is amended as follows:",
+        "text": "<a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-ref=\"celex:32014L0065\" target=\"_blank\" rel=\"noopener\">Directive 2014/65/EU</a> is amended as follows:",
         "class": ""
       },
       {
         "id": "art_71__1",
-        "text": "(1) in <a href=\"#a:act_eu_csdr_2014_0909:art_2\" class=\"ref\" data-article=\"2\">Article 2</a>(1), point (o) is replaced by the following: (*1) <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0909\" class=\"ref\" data-celex=\"32014R0909\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 909/2014</a> of the European Parliament and of the Council of 23 July 2014 on improving securities settlement in the European Union and on central securities depositories and amending Directives 98/26/EC and 2014/65/EU and <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32012R0236\" class=\"ref\" data-celex=\"32012R0236\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 236/2012</a> (OJ L 257, 28.8.2014, p. 1).’;\"",
+        "text": "(1) in <a href=\"#a:act_eu_csdr_2014_0909:art_2\" class=\"ref\" data-article=\"2\">Article 2</a>(1), point (o) is replaced by the following: (*1) <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0909\" class=\"ref\" data-ref=\"celex:32014R0909\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 909/2014</a> of the European Parliament and of the Council of 23 July 2014 on improving securities settlement in the European Union and on central securities depositories and amending Directives 98/26/EC and 2014/65/EU and <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32012R0236\" class=\"ref\" data-ref=\"celex:32012R0236\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 236/2012</a> (OJ L 257, 28.8.2014, p. 1).’;\"",
         "class": "list-item-l1"
       },
       {
         "id": "art_71__p3",
-        "text": "‘(o) CSDs except as provided for in <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0909\" class=\"ref\" data-celex=\"32014R0909\" data-article=\"73\" target=\"_blank\" rel=\"noopener\">Article 73</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0909\" class=\"ref\" data-celex=\"32014R0909\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 909/2014</a> of the European Parliament and of the Council (*1).",
+        "text": "‘(o) CSDs except as provided for in <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0909\" class=\"ref\" data-ref=\"celex:32014R0909\" data-article=\"73\" target=\"_blank\" rel=\"noopener\">Article 73</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0909\" class=\"ref\" data-ref=\"celex:32014R0909\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 909/2014</a> of the European Parliament and of the Council (*1).",
         "class": ""
       },
       {
@@ -3826,7 +3826,7 @@
       },
       {
         "id": "art_71__p6",
-        "text": "‘(64) ‘central securities depository’ or ‘CSD’ means a central securities depository as defined in point (1) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0909\" class=\"ref\" data-celex=\"32014R0909\" data-article=\"2\" target=\"_blank\" rel=\"noopener\">Article 2</a>(1) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0909\" class=\"ref\" data-celex=\"32014R0909\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 909/2014</a>.’;",
+        "text": "‘(64) ‘central securities depository’ or ‘CSD’ means a central securities depository as defined in point (1) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0909\" class=\"ref\" data-ref=\"celex:32014R0909\" data-article=\"2\" target=\"_blank\" rel=\"noopener\">Article 2</a>(1) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0909\" class=\"ref\" data-ref=\"celex:32014R0909\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 909/2014</a>.’;",
         "class": ""
       },
       {
@@ -3836,7 +3836,7 @@
       },
       {
         "id": "art_71__p9",
-        "text": "‘(1) Safekeeping and administration of financial instruments for the account of clients, including custodianship and related services such as cash/collateral management and excluding providing and maintaining securities accounts at the top tier level (‘central maintenance service’) referred to in point (2) of Section A of the Annex to the <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0909\" class=\"ref\" data-celex=\"32014R0909\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 909/2014</a>.’.",
+        "text": "‘(1) Safekeeping and administration of financial instruments for the account of clients, including custodianship and related services such as cash/collateral management and excluding providing and maintaining securities accounts at the top tier level (‘central maintenance service’) referred to in point (2) of Section A of the Annex to the <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0909\" class=\"ref\" data-ref=\"celex:32014R0909\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 909/2014</a>.’.",
         "class": ""
       }
     ]
@@ -3848,7 +3848,7 @@
     "paragraphs": [
       {
         "id": "art_72__p1",
-        "text": "<a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32012R0236\" class=\"ref\" data-celex=\"32012R0236\" data-article=\"15\" target=\"_blank\" rel=\"noopener\">Article 15</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32012R0236\" class=\"ref\" data-celex=\"32012R0236\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 236/2012</a> is deleted.",
+        "text": "<a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32012R0236\" class=\"ref\" data-ref=\"celex:32012R0236\" data-article=\"15\" target=\"_blank\" rel=\"noopener\">Article 15</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32012R0236\" class=\"ref\" data-ref=\"celex:32012R0236\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 236/2012</a> is deleted.",
         "class": ""
       }
     ]
@@ -3860,12 +3860,12 @@
     "paragraphs": [
       {
         "id": "art_73__p1",
-        "text": "CSDs authorised in accordance with <a href=\"#a:act_eu_csdr_2014_0909:art_16\" class=\"ref\" data-article=\"16\">Article 16</a> of this Regulation shall not require authorisation under <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-celex=\"32014L0065\" target=\"_blank\" rel=\"noopener\">Directive 2014/65/EU</a> in order to provide the services explicitly listed in Sections A and B of the Annex to this Regulation.",
+        "text": "CSDs authorised in accordance with <a href=\"#a:act_eu_csdr_2014_0909:art_16\" class=\"ref\" data-article=\"16\">Article 16</a> of this Regulation shall not require authorisation under <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-ref=\"celex:32014L0065\" target=\"_blank\" rel=\"noopener\">Directive 2014/65/EU</a> in order to provide the services explicitly listed in Sections A and B of the Annex to this Regulation.",
         "class": ""
       },
       {
         "id": "art_73__p2",
-        "text": "Where a CSD authorised in accordance with <a href=\"#a:act_eu_csdr_2014_0909:art_16\" class=\"ref\" data-article=\"16\">Article 16</a> of this Regulation provides one or more investment services or carries out one or more investment activities in addition to providing the services explicitly listed in Sections A and B of the Annex to this Regulation, <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-celex=\"32014L0065\" target=\"_blank\" rel=\"noopener\">Directive 2014/65/EU</a> with the exception of Articles <a href=\"#a:act_eu_csdr_2014_0909:art_5\" class=\"ref\" data-article=\"5\">5</a> to <a href=\"#a:act_eu_csdr_2014_0909:art_8\" class=\"ref\" data-article=\"8\">8</a>, <a href=\"#a:act_eu_csdr_2014_0909:art_9\" class=\"ref\" data-article=\"9\">Article 9</a>(1) to (2) and (4) to (6) and Articles <a href=\"#a:act_eu_csdr_2014_0909:art_10\" class=\"ref\" data-article=\"10\">10</a> to <a href=\"#a:act_eu_csdr_2014_0909:art_13\" class=\"ref\" data-article=\"13\">13</a>, and <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0600\" class=\"ref\" data-celex=\"32014R0600\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 600/2014</a> shall apply.",
+        "text": "Where a CSD authorised in accordance with <a href=\"#a:act_eu_csdr_2014_0909:art_16\" class=\"ref\" data-article=\"16\">Article 16</a> of this Regulation provides one or more investment services or carries out one or more investment activities in addition to providing the services explicitly listed in Sections A and B of the Annex to this Regulation, <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-ref=\"celex:32014L0065\" target=\"_blank\" rel=\"noopener\">Directive 2014/65/EU</a> with the exception of Articles <a href=\"#a:act_eu_csdr_2014_0909:art_5\" class=\"ref\" data-article=\"5\">5</a> to <a href=\"#a:act_eu_csdr_2014_0909:art_8\" class=\"ref\" data-article=\"8\">8</a>, <a href=\"#a:act_eu_csdr_2014_0909:art_9\" class=\"ref\" data-article=\"9\">Article 9</a>(1) to (2) and (4) to (6) and Articles <a href=\"#a:act_eu_csdr_2014_0909:art_10\" class=\"ref\" data-article=\"10\">10</a> to <a href=\"#a:act_eu_csdr_2014_0909:art_13\" class=\"ref\" data-article=\"13\">13</a>, and <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0600\" class=\"ref\" data-ref=\"celex:32014R0600\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 600/2014</a> shall apply.",
         "class": ""
       }
     ]
@@ -3991,17 +3991,17 @@
       },
       {
         "id": "art_76__p7",
-        "text": "An MTF that complies with the criteria laid down in <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-celex=\"32014L0065\" data-article=\"33\" target=\"_blank\" rel=\"noopener\">Article 33</a>(3) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-celex=\"32014L0065\" target=\"_blank\" rel=\"noopener\">Directive 2014/65/EU</a> shall be subject to the second subparagraph of <a href=\"#a:act_eu_csdr_2014_0909:art_7\" class=\"ref\" data-article=\"7\">Article 7</a>(3) of this Regulation:",
+        "text": "An MTF that complies with the criteria laid down in <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-ref=\"celex:32014L0065\" data-article=\"33\" target=\"_blank\" rel=\"noopener\">Article 33</a>(3) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-ref=\"celex:32014L0065\" target=\"_blank\" rel=\"noopener\">Directive 2014/65/EU</a> shall be subject to the second subparagraph of <a href=\"#a:act_eu_csdr_2014_0909:art_7\" class=\"ref\" data-article=\"7\">Article 7</a>(3) of this Regulation:",
         "class": ""
       },
       {
         "id": "art_76__5_a",
-        "text": "(a) until the final determination of its application for registration under <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-celex=\"32014L0065\" data-article=\"33\" target=\"_blank\" rel=\"noopener\">Article 33</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-celex=\"32014L0065\" target=\"_blank\" rel=\"noopener\">Directive 2014/65/EU</a>; or",
+        "text": "(a) until the final determination of its application for registration under <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-ref=\"celex:32014L0065\" data-article=\"33\" target=\"_blank\" rel=\"noopener\">Article 33</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-ref=\"celex:32014L0065\" target=\"_blank\" rel=\"noopener\">Directive 2014/65/EU</a>; or",
         "class": "list-item-l1"
       },
       {
         "id": "art_76__5_b",
-        "text": "(b) where an MTF has not applied for registration under <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-celex=\"32014L0065\" data-article=\"33\" target=\"_blank\" rel=\"noopener\">Article 33</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-celex=\"32014L0065\" target=\"_blank\" rel=\"noopener\">Directive 2014/65/EU</a>, until 13 June 2017.",
+        "text": "(b) where an MTF has not applied for registration under <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-ref=\"celex:32014L0065\" data-article=\"33\" target=\"_blank\" rel=\"noopener\">Article 33</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-ref=\"celex:32014L0065\" target=\"_blank\" rel=\"noopener\">Directive 2014/65/EU</a>, until 13 June 2017.",
         "class": "list-item-l1"
       },
       {
@@ -4011,7 +4011,7 @@
       },
       {
         "id": "art_76__7",
-        "text": "7. References in this Regulation to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-celex=\"32014L0065\" target=\"_blank\" rel=\"noopener\">Directive 2014/65/EU</a> and <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0600\" class=\"ref\" data-celex=\"32014R0600\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 600/2014</a> shall, before 3 January 2017, be read as references to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32004L0039\" class=\"ref\" data-celex=\"32004L0039\" target=\"_blank\" rel=\"noopener\">Directive 2004/39/EC</a> in accordance with the correlation table set out in Annex IV to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-celex=\"32014L0065\" target=\"_blank\" rel=\"noopener\">Directive 2014/65/EU</a> in so far as that correlation table contains provisions referring to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32004L0039\" class=\"ref\" data-celex=\"32004L0039\" target=\"_blank\" rel=\"noopener\">Directive 2004/39/EC</a>.",
+        "text": "7. References in this Regulation to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-ref=\"celex:32014L0065\" target=\"_blank\" rel=\"noopener\">Directive 2014/65/EU</a> and <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0600\" class=\"ref\" data-ref=\"celex:32014R0600\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 600/2014</a> shall, before 3 January 2017, be read as references to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32004L0039\" class=\"ref\" data-ref=\"celex:32004L0039\" target=\"_blank\" rel=\"noopener\">Directive 2004/39/EC</a> in accordance with the correlation table set out in Annex IV to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-ref=\"celex:32014L0065\" target=\"_blank\" rel=\"noopener\">Directive 2014/65/EU</a> in so far as that correlation table contains provisions referring to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32004L0039\" class=\"ref\" data-ref=\"celex:32004L0039\" target=\"_blank\" rel=\"noopener\">Directive 2004/39/EC</a>.",
         "class": ""
       }
     ]
