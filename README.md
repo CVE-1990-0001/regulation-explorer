@@ -79,3 +79,24 @@ act_<jurisdiction>_<mnemonic>[_<type>]_<year>[_<number>]
 | Börsengesetz (German, unnumbered) | `act_de_boersg_2007` |
 | _(future)_ French Code monétaire et financier | `act_fr_cmf_2000` |
 | _(future)_ US Gramm–Leach–Bliley Act | `act_us_glba_1999` |
+
+## Adding a regulation (end to end)
+
+1. **Get the source & produce the act JSON.** Parse the source HTML into the act
+   shape (`articles[].paragraphs[]`) with the matching parser in
+   [`tools/parsers/`](tools/parsers/) (e.g. `node tools/parsers/parser-consolidated.js in.html out.json`),
+   or add a hand-authored JSON. Save it under `regulations-data/`.
+2. **Register it** in [`data/index.json`](data/index.json): add an entry with
+   `id` (see *Act identifiers*), `path`, `label`, `jurisdiction`, and — for EU
+   acts — its `celex` (this is what makes it a cross-reference target).
+3. **Bundle it** (optional) — add its `ref` to a folder in
+   [`data/bundles/`](data/bundles/) if it belongs to a family (e.g. DORA).
+4. **Link references** — run `python3 tools/link_references.py`. This re-links
+   every act (idempotent), so the new act gets its outgoing links **and** every
+   existing act's citations to it auto-upgrade from EUR-Lex to in-app.
+5. **Verify** — serve locally and check the act loads, its sidebar entry, and a
+   few cross-references resolve in-app.
+
+No app code changes are needed: the id scheme, `celexToActId`, and the runtime
+resolver are all data-driven. Only the reference matcher needs extending for a
+new *citation style* (e.g. adding a French/US pattern in `tools/link_references.py`).
