@@ -1,6 +1,6 @@
 {
   "type": "act",
-  "id": "act_nis2_2022",
+  "id": "act_eu_nis2_2022_2555",
   "title": "NIS2",
   "heading": "Directive (EU) 2022/2555",
   "source": {
@@ -34,7 +34,7 @@
         },
         {
           "id": "art_1__4",
-          "text": "(b) cybersecurity risk-management measures and reporting obligations for entities of a type referred to in Annex I or II as well as for entities identified as critical entities under <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2557\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Directive (EU) 2022/2557 – opens on EUR-Lex\">Directive (EU) 2022/2557</a>;",
+          "text": "(b) cybersecurity risk-management measures and reporting obligations for entities of a type referred to in Annex I or II as well as for entities identified as critical entities under <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2557\" class=\"ref\" data-celex=\"32022L2557\" target=\"_blank\" rel=\"noopener\">Directive (EU) 2022/2557</a>;",
           "class": "list-item-l1"
         },
         {
@@ -56,7 +56,7 @@
       "paragraphs": [
         {
           "id": "art_2__1",
-          "text": "1. This Directive applies to public or private entities of a type referred to in Annex I or II which qualify as medium-sized enterprises under <a href=\"#a:act_nis2_2022:art_2\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 2</a> of the Annex to Recommendation 2003/361/EC, or exceed the ceilings for medium-sized enterprises provided for in paragraph 1 of that Article, and which provide their services or carry out their activities within the Union. <a href=\"#a:act_nis2_2022:art_3\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 3</a>(4) of the Annex to that Recommendation shall not apply for the purposes of this Directive.",
+          "text": "1. This Directive applies to public or private entities of a type referred to in Annex I or II which qualify as medium-sized enterprises under Article 2 of the Annex to Recommendation 2003/361/EC, or exceed the ceilings for medium-sized enterprises provided for in paragraph 1 of that Article, and which provide their services or carry out their activities within the Union. Article 3(4) of the Annex to that Recommendation shall not apply for the purposes of this Directive.",
           "class": ""
         },
         {
@@ -121,7 +121,7 @@
         },
         {
           "id": "art_2__14",
-          "text": "3. Regardless of their size, this Directive applies to entities identified as critical entities under <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2557\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Directive (EU) 2022/2557 – opens on EUR-Lex\">Directive (EU) 2022/2557</a>.",
+          "text": "3. Regardless of their size, this Directive applies to entities identified as critical entities under <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2557\" class=\"ref\" data-celex=\"32022L2557\" target=\"_blank\" rel=\"noopener\">Directive (EU) 2022/2557</a>.",
           "class": ""
         },
         {
@@ -156,7 +156,7 @@
         },
         {
           "id": "art_2__21",
-          "text": "8. Member States may exempt specific entities which carry out activities in the areas of national security, public security, defence or law enforcement, including the prevention, investigation, detection and prosecution of criminal offences, or which provide services exclusively to the public administration entities referred to in paragraph 7 of this Article, from the obligations laid down in <a href=\"#a:act_nis2_2022:art_21\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 21</a> or 23 with regard to those activities or services. In such cases, the supervisory and enforcement measures referred to in Chapter VII shall not apply in relation to those specific activities or services. Where the entities carry out activities or provide services exclusively of the type referred to in this paragraph, Member States may decide also to exempt those entities from the obligations laid down in Articles <a href=\"#a:act_nis2_2022:art_3\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">3</a> and <a href=\"#a:act_nis2_2022:art_27\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">27</a>.",
+          "text": "8. Member States may exempt specific entities which carry out activities in the areas of national security, public security, defence or law enforcement, including the prevention, investigation, detection and prosecution of criminal offences, or which provide services exclusively to the public administration entities referred to in paragraph 7 of this Article, from the obligations laid down in Article <a href=\"#a:act_eu_nis2_2022_2555:art_21\" class=\"ref\" data-article=\"21\">21</a> or <a href=\"#a:act_eu_nis2_2022_2555:art_23\" class=\"ref\" data-article=\"23\">23</a> with regard to those activities or services. In such cases, the supervisory and enforcement measures referred to in Chapter VII shall not apply in relation to those specific activities or services. Where the entities carry out activities or provide services exclusively of the type referred to in this paragraph, Member States may decide also to exempt those entities from the obligations laid down in Articles <a href=\"#a:act_eu_nis2_2022_2555:art_3\" class=\"ref\" data-article=\"3\">3</a> and <a href=\"#a:act_eu_nis2_2022_2555:art_27\" class=\"ref\" data-article=\"27\">27</a>.",
           "class": ""
         },
         {
@@ -166,7 +166,7 @@
         },
         {
           "id": "art_2__23",
-          "text": "10. This Directive does not apply to entities which Member States have exempted from the scope of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a> in accordance with <a href=\"#a:act_nis2_2022:art_2\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 2</a>(4) of that Regulation.",
+          "text": "10. This Directive does not apply to entities which Member States have exempted from the scope of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"ref\" data-celex=\"32022R2554\" target=\"_blank\" rel=\"noopener\">Regulation (EU) 2022/2554</a> in accordance with Article 2(4) of that Regulation.",
           "class": ""
         },
         {
@@ -176,7 +176,7 @@
         },
         {
           "id": "art_2__25",
-          "text": "12. This Directive applies without prejudice to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2016/679 – opens on EUR-Lex\">Regulation (EU) 2016/679</a>, <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32002L0058\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Directive 2002/58/EC – opens on EUR-Lex\">Directive 2002/58/EC</a>, Directives 2011/93/EU ( 27 ) and 2013/40/EU ( 28 ) of the European Parliament and of the Council and <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2557\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Directive (EU) 2022/2557 – opens on EUR-Lex\">Directive (EU) 2022/2557</a>.",
+          "text": "12. This Directive applies without prejudice to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679\" class=\"ref\" data-celex=\"32016R0679\" target=\"_blank\" rel=\"noopener\">Regulation (EU) 2016/679</a>, <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32002L0058\" class=\"ref\" data-celex=\"32002L0058\" target=\"_blank\" rel=\"noopener\">Directive 2002/58/EC</a>, <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011L0093\" class=\"ref\" data-celex=\"32011L0093\" target=\"_blank\" rel=\"noopener\">Directives 2011/93/EU</a> ( 27 ) and 2013/40/EU ( 28 ) of the European Parliament and of the Council and <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2557\" class=\"ref\" data-celex=\"32022L2557\" target=\"_blank\" rel=\"noopener\">Directive (EU) 2022/2557</a>.",
           "class": ""
         },
         {
@@ -186,7 +186,7 @@
         },
         {
           "id": "art_2__27",
-          "text": "14. Entities, the competent authorities, the single points of contact and the CSIRTs shall process personal data to the extent necessary for the purposes of this Directive and in accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2016/679 – opens on EUR-Lex\">Regulation (EU) 2016/679</a>, in particular such processing shall rely on <a href=\"#a:act_nis2_2022:art_6\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 6</a> thereof. The processing of personal data pursuant to this Directive by providers of public electronic communications networks or providers of publicly available electronic communications services shall be carried out in accordance with Union data protection law and Union privacy law, in particular <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32002L0058\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Directive 2002/58/EC – opens on EUR-Lex\">Directive 2002/58/EC</a>.",
+          "text": "14. Entities, the competent authorities, the single points of contact and the CSIRTs shall process personal data to the extent necessary for the purposes of this Directive and in accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679\" class=\"ref\" data-celex=\"32016R0679\" target=\"_blank\" rel=\"noopener\">Regulation (EU) 2016/679</a>, in particular such processing shall rely on <a href=\"#a:act_eu_nis2_2022_2555:art_6\" class=\"ref\" data-article=\"6\">Article 6</a> thereof. The processing of personal data pursuant to this Directive by providers of public electronic communications networks or providers of publicly available electronic communications services shall be carried out in accordance with Union data protection law and Union privacy law, in particular <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32002L0058\" class=\"ref\" data-celex=\"32002L0058\" target=\"_blank\" rel=\"noopener\">Directive 2002/58/EC</a>.",
           "class": ""
         }
       ]
@@ -203,7 +203,7 @@
         },
         {
           "id": "art_3__2",
-          "text": "(a) entities of a type referred to in Annex I which exceed the ceilings for medium-sized enterprises provided for in <a href=\"#a:act_nis2_2022:art_2\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 2</a>(1) of the Annex to Recommendation 2003/361/EC;",
+          "text": "(a) entities of a type referred to in Annex I which exceed the ceilings for medium-sized enterprises provided for in Article 2(1) of the Annex to Recommendation 2003/361/EC;",
           "class": "list-item-l1"
         },
         {
@@ -213,32 +213,32 @@
         },
         {
           "id": "art_3__4",
-          "text": "(c) providers of public electronic communications networks or of publicly available electronic communications services which qualify as medium-sized enterprises under <a href=\"#a:act_nis2_2022:art_2\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 2</a> of the Annex to Recommendation 2003/361/EC;",
+          "text": "(c) providers of public electronic communications networks or of publicly available electronic communications services which qualify as medium-sized enterprises under Article 2 of the Annex to Recommendation 2003/361/EC;",
           "class": "list-item-l1"
         },
         {
           "id": "art_3__5",
-          "text": "(d) public administration entities referred to in <a href=\"#a:act_nis2_2022:art_2\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 2</a>(2), point (f)(i);",
+          "text": "(d) public administration entities referred to in <a href=\"#a:act_eu_nis2_2022_2555:art_2\" class=\"ref\" data-article=\"2\">Article 2</a>(2), point (f)(i);",
           "class": "list-item-l1"
         },
         {
           "id": "art_3__6",
-          "text": "(e) any other entities of a type referred to in Annex I or II that are identified by a Member State as essential entities pursuant to <a href=\"#a:act_nis2_2022:art_2\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 2</a>(2), points (b) to (e);",
+          "text": "(e) any other entities of a type referred to in Annex I or II that are identified by a Member State as essential entities pursuant to <a href=\"#a:act_eu_nis2_2022_2555:art_2\" class=\"ref\" data-article=\"2\">Article 2</a>(2), points (b) to (e);",
           "class": "list-item-l1"
         },
         {
           "id": "art_3__7",
-          "text": "(f) entities identified as critical entities under <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2557\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Directive (EU) 2022/2557 – opens on EUR-Lex\">Directive (EU) 2022/2557</a>, referred to in <a href=\"#a:act_nis2_2022:art_2\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 2</a>(3) of this Directive;",
+          "text": "(f) entities identified as critical entities under <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2557\" class=\"ref\" data-celex=\"32022L2557\" target=\"_blank\" rel=\"noopener\">Directive (EU) 2022/2557</a>, referred to in <a href=\"#a:act_eu_nis2_2022_2555:art_2\" class=\"ref\" data-article=\"2\">Article 2</a>(3) of this Directive;",
           "class": "list-item-l1"
         },
         {
           "id": "art_3__8",
-          "text": "(g) if the Member State so provides, entities which that Member State identified before 16 January 2023 as operators of essential services in accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016L1148\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Directive (EU) 2016/1148 – opens on EUR-Lex\">Directive (EU) 2016/1148</a> or national law.",
+          "text": "(g) if the Member State so provides, entities which that Member State identified before 16 January 2023 as operators of essential services in accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016L1148\" class=\"ref\" data-celex=\"32016L1148\" target=\"_blank\" rel=\"noopener\">Directive (EU) 2016/1148</a> or national law.",
           "class": "list-item-l1"
         },
         {
           "id": "art_3__9",
-          "text": "2. For the purposes of this Directive, entities of a type referred to in Annex I or II which do not qualify as essential entities pursuant to paragraph 1 of this Article shall be considered to be important entities. This includes entities identified by Member States as important entities pursuant to <a href=\"#a:act_nis2_2022:art_2\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 2</a>(2), points (b) to (e).",
+          "text": "2. For the purposes of this Directive, entities of a type referred to in Annex I or II which do not qualify as essential entities pursuant to paragraph 1 of this Article shall be considered to be important entities. This includes entities identified by Member States as important entities pursuant to <a href=\"#a:act_eu_nis2_2022_2555:art_2\" class=\"ref\" data-article=\"2\">Article 2</a>(2), points (b) to (e).",
           "class": ""
         },
         {
@@ -283,7 +283,7 @@
         },
         {
           "id": "art_3__18",
-          "text": "(b) the Commission of relevant information about the number of essential and important entities identified pursuant to <a href=\"#a:act_nis2_2022:art_2\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 2</a>(2), points (b) to (e), the sector and subsector referred to in Annex I or II to which they belong, the type of service that they provide, and the provision, from among those laid down in <a href=\"#a:act_nis2_2022:art_2\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 2</a>(2), points (b) to (e), pursuant to which they were identified.",
+          "text": "(b) the Commission of relevant information about the number of essential and important entities identified pursuant to <a href=\"#a:act_eu_nis2_2022_2555:art_2\" class=\"ref\" data-article=\"2\">Article 2</a>(2), points (b) to (e), the sector and subsector referred to in Annex I or II to which they belong, the type of service that they provide, and the provision, from among those laid down in <a href=\"#a:act_eu_nis2_2022_2555:art_2\" class=\"ref\" data-article=\"2\">Article 2</a>(2), points (b) to (e), pursuant to which they were identified.",
           "class": "list-item-l1"
         },
         {
@@ -310,12 +310,12 @@
         },
         {
           "id": "art_4__3",
-          "text": "(a) cybersecurity risk-management measures are at least equivalent in effect to those laid down in <a href=\"#a:act_nis2_2022:art_21\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 21</a>(1) and (2); or",
+          "text": "(a) cybersecurity risk-management measures are at least equivalent in effect to those laid down in <a href=\"#a:act_eu_nis2_2022_2555:art_21\" class=\"ref\" data-article=\"21\">Article 21</a>(1) and (2); or",
           "class": "list-item-l1"
         },
         {
           "id": "art_4__4",
-          "text": "(b) the sector-specific Union legal act provides for immediate access, where appropriate automatic and direct, to the incident notifications by the CSIRTs, the competent authorities or the single points of contact under this Directive and where requirements to notify significant incidents are at least equivalent in effect to those laid down in <a href=\"#a:act_nis2_2022:art_23\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 23</a>(1) to (6) of this Directive.",
+          "text": "(b) the sector-specific Union legal act provides for immediate access, where appropriate automatic and direct, to the incident notifications by the CSIRTs, the competent authorities or the single points of contact under this Directive and where requirements to notify significant incidents are at least equivalent in effect to those laid down in <a href=\"#a:act_eu_nis2_2022_2555:art_23\" class=\"ref\" data-article=\"23\">Article 23</a>(1) to (6) of this Directive.",
           "class": "list-item-l1"
         },
         {
@@ -344,7 +344,7 @@
       "paragraphs": [
         {
           "id": "art_6__1",
-          "text": "For the purposes of this Directive, the following definitions apply: (1) ‘network and information system’ means: (a) an electronic communications network as defined in <a href=\"#a:act_nis2_2022:art_2\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 2</a>, point (1), of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32018L1972\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Directive (EU) 2018/1972 – opens on EUR-Lex\">Directive (EU) 2018/1972</a>; (b) any device or group of interconnected or related devices, one or more of which, pursuant to a programme, carry out automatic processing of digital data; or (c) digital data stored, processed, retrieved or transmitted by elements covered under points (a) and (b) for the purposes of their operation, use, protection and maintenance; (2) ‘security of network and information systems’ means the ability of network and information systems to resist, at a given level of confidence, any event that may compromise the availability, authenticity, integrity or confidentiality of stored, transmitted or processed data or of the services offered by, or accessible via, those network and information systems; (3) ‘cybersecurity’ means cybersecurity as defined in <a href=\"#a:act_nis2_2022:art_2\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 2</a>, point (1), of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019R0881\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2019/881 – opens on EUR-Lex\">Regulation (EU) 2019/881</a>; (4) ‘national cybersecurity strategy ’ means a coherent framework of a Member State providing strategic objectives and priorities in the area of cybersecurity and the governance to achieve them in that Member State; (5) ‘near miss’ means an event that could have compromised the availability, authenticity, integrity or confidentiality of stored, transmitted or processed data or of the services offered by, or accessible via, network and information systems, but that was successfully prevented from materialising or that did not materialise; (6) ‘incident’ means an event compromising the availability, authenticity, integrity or confidentiality of stored, transmitted or processed data or of the services offered by, or accessible via, network and information systems; (7) ‘large-scale cybersecurity incident’ means an incident which causes a level of disruption that exceeds a Member State’s capacity to respond to it or which has a significant impact on at least two Member States; (8) ‘incident handling’ means any actions and procedures aiming to prevent, detect, analyse, and contain or to respond to and recover from an incident; (9) ‘risk’ means the potential for loss or disruption caused by an incident and is to be expressed as a combination of the magnitude of such loss or disruption and the likelihood of occurrence of the incident; (10) ‘cyber threat’ means a cyber threat as defined in <a href=\"#a:act_nis2_2022:art_2\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 2</a>, point (8), of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019R0881\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2019/881 – opens on EUR-Lex\">Regulation (EU) 2019/881</a>; (11) ‘significant cyber threat’ means a cyber threat which, based on its technical characteristics, can be assumed to have the potential to have a severe impact on the network and information systems of an entity or the users of the entity’s services by causing considerable material or non-material damage; (12) ‘ICT product’ means an ICT product as defined in <a href=\"#a:act_nis2_2022:art_2\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 2</a>, point (12), of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019R0881\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2019/881 – opens on EUR-Lex\">Regulation (EU) 2019/881</a>; (13) ‘ICT service’ means an ICT service as defined in <a href=\"#a:act_nis2_2022:art_2\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 2</a>, point (13), of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019R0881\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2019/881 – opens on EUR-Lex\">Regulation (EU) 2019/881</a>; (14) ‘ICT process’ means an ICT process as defined in <a href=\"#a:act_nis2_2022:art_2\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 2</a>, point (14), of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019R0881\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2019/881 – opens on EUR-Lex\">Regulation (EU) 2019/881</a>; (15) ‘vulnerability’ means a weakness, susceptibility or flaw of ICT products or ICT services that can be exploited by a cyber threat; (16) ‘standard’ means a standard as defined in <a href=\"#a:act_nis2_2022:art_2\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 2</a>, point (1), of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32012R1025\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) No 1025/2012 – opens on EUR-Lex\">Regulation (EU) No 1025/2012</a> of the European Parliament and of the Council ( 29 ) ; (17) ‘technical specification’ means a technical specification as defined in <a href=\"#a:act_nis2_2022:art_2\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 2</a>, point (4), of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32012R1025\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) No 1025/2012 – opens on EUR-Lex\">Regulation (EU) No 1025/2012</a>; (18) ‘internet exchange point’ means a network facility which enables the interconnection of more than two independent networks (autonomous systems), primarily for the purpose of facilitating the exchange of internet traffic, which provides interconnection only for autonomous systems and which neither requires the internet traffic passing between any pair of participating autonomous systems to pass through any third autonomous system nor alters or otherwise interferes with such traffic; (19) ‘domain name system’ or ‘DNS’ means a hierarchical distributed naming system which enables the identification of internet services and resources, allowing end-user devices to use internet routing and connectivity services to reach those services and resources; (20) ‘DNS service provider’ means an entity that provides: (a) publicly available recursive domain name resolution services for internet end-users; or (b) authoritative domain name resolution services for third-party use, with the exception of root name servers; (21) ‘top-level domain name registry’ or ‘TLD name registry’ means an entity which has been delegated a specific TLD and is responsible for administering the TLD including the registration of domain names under the TLD and the technical operation of the TLD, including the operation of its name servers, the maintenance of its databases and the distribution of TLD zone files across name servers, irrespective of whether any of those operations are carried out by the entity itself or are outsourced, but excluding situations where TLD names are used by a registry only for its own use; (22) ‘entity providing domain name registration services’ means a registrar or an agent acting on behalf of registrars, such as a privacy or proxy registration service provider or reseller; (23) ‘digital service’ means a service as defined in <a href=\"#a:act_nis2_2022:art_1\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 1</a>(1), point (b), of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32015L1535\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Directive (EU) 2015/1535 – opens on EUR-Lex\">Directive (EU) 2015/1535</a> of the European Parliament and of the Council ( 30 ) ; (24) ‘trust service’ means a trust service as defined in <a href=\"#a:act_nis2_2022:art_3\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 3</a>, point (16), of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0910\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) No 910/2014 – opens on EUR-Lex\">Regulation (EU) No 910/2014</a>; (25) ‘trust service provider’ means a trust service provider as defined in <a href=\"#a:act_nis2_2022:art_3\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 3</a>, point (19), of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0910\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) No 910/2014 – opens on EUR-Lex\">Regulation (EU) No 910/2014</a>; (26) ‘qualified trust service’ means a qualified trust service as defined in <a href=\"#a:act_nis2_2022:art_3\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 3</a>, point (17), of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0910\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) No 910/2014 – opens on EUR-Lex\">Regulation (EU) No 910/2014</a>; (27) ‘qualified trust service provider’ means a qualified trust service provider as defined in <a href=\"#a:act_nis2_2022:art_3\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 3</a>, point (20), of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0910\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) No 910/2014 – opens on EUR-Lex\">Regulation (EU) No 910/2014</a>; (28) ‘online marketplace’ means an online marketplace as defined in <a href=\"#a:act_nis2_2022:art_2\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 2</a>, point (n), of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32005L0029\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Directive 2005/29/EC – opens on EUR-Lex\">Directive 2005/29/EC</a> of the European Parliament and of the Council ( 31 ) ; (29) ‘online search engine’ means an online search engine as defined in <a href=\"#a:act_nis2_2022:art_2\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 2</a>, point (5), of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019R1150\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2019/1150 – opens on EUR-Lex\">Regulation (EU) 2019/1150</a> of the European Parliament and of the Council ( 32 ) ; (30) ‘cloud computing service’ means a digital service that enables on-demand administration and broad remote access to a scalable and elastic pool of shareable computing resources, including where such resources are distributed across several locations; (31) ‘data centre service’ means a service that encompasses structures, or groups of structures, dedicated to the centralised accommodation, interconnection and operation of IT and network equipment providing data storage, processing and transport services together with all the facilities and infrastructures for power distribution and environmental control; (32) ‘content delivery network’ means a network of geographically distributed servers for the purpose of ensuring high availability, accessibility or fast delivery of digital content and services to internet users on behalf of content and service providers; (33) ‘social networking services platform’ means a platform that enables end-users to connect, share, discover and communicate with each other across multiple devices, in particular via chats, posts, videos and recommendations; (34) ‘representative’ means a natural or legal person established in the Union explicitly designated to act on behalf of a DNS service provider, a TLD name registry, an entity providing domain name registration services, a cloud computing service provider, a data centre service provider, a content delivery network provider, a managed service provider, a managed security service provider, or a provider of an online marketplace, of an online search engine or of a social networking services platform that is not established in the Union, which may be addressed by a competent authority or a CSIRT in the place of the entity itself with regard to the obligations of that entity under this Directive; (35) ‘public administration entity’ means an entity recognised as such in a Member State in accordance with national law, not including the judiciary, parliaments or central banks, which complies with the following criteria: (a) it is established for the purpose of meeting needs in the general interest and does not have an industrial or commercial character; (b) it has legal personality or is entitled by law to act on behalf of another entity with legal personality; (c) it is financed, for the most part, by the State, regional authorities or by other bodies governed by public law, is subject to management supervision by those authorities or bodies, or has an administrative, managerial or supervisory board, more than half of whose members are appointed by the State, regional authorities or by other bodies governed by public law; (d) it has the power to address to natural or legal persons administrative or regulatory decisions affecting their rights in the cross-border movement of persons, goods, services or capital; (36) ‘public electronic communications network’ means a public electronic communications network as defined in <a href=\"#a:act_nis2_2022:art_2\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 2</a>, point (8), of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32018L1972\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Directive (EU) 2018/1972 – opens on EUR-Lex\">Directive (EU) 2018/1972</a>; (37) ‘electronic communications service’ means an electronic communications service as defined in <a href=\"#a:act_nis2_2022:art_2\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 2</a>, point (4), of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32018L1972\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Directive (EU) 2018/1972 – opens on EUR-Lex\">Directive (EU) 2018/1972</a>; (38) ‘entity’ means a natural or legal person created and recognised as such under the national law of its place of establishment, which may, acting under its own name, exercise rights and be subject to obligations; (39) ‘managed service provider’ means an entity that provides services related to the installation, management, operation or maintenance of ICT products, networks, infrastructure, applications or any other network and information systems, via assistance or active administration carried out either on customers’ premises or remotely; (40) ‘managed security service provider’ means a managed service provider that carries out or provides assistance for activities relating to cybersecurity risk management; (41) ‘research organisation’ means an entity which has as its primary goal to conduct applied research or experimental development with a view to exploiting the results of that research for commercial purposes, but which does not include educational institutions.",
+          "text": "For the purposes of this Directive, the following definitions apply: (1) ‘network and information system’ means: (a) an electronic communications network as defined in <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32018L1972\" class=\"ref\" data-celex=\"32018L1972\" data-article=\"2\" target=\"_blank\" rel=\"noopener\">Article 2</a>, point (1), of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32018L1972\" class=\"ref\" data-celex=\"32018L1972\" target=\"_blank\" rel=\"noopener\">Directive (EU) 2018/1972</a>; (b) any device or group of interconnected or related devices, one or more of which, pursuant to a programme, carry out automatic processing of digital data; or (c) digital data stored, processed, retrieved or transmitted by elements covered under points (a) and (b) for the purposes of their operation, use, protection and maintenance; (2) ‘security of network and information systems’ means the ability of network and information systems to resist, at a given level of confidence, any event that may compromise the availability, authenticity, integrity or confidentiality of stored, transmitted or processed data or of the services offered by, or accessible via, those network and information systems; (3) ‘cybersecurity’ means cybersecurity as defined in <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019R0881\" class=\"ref\" data-celex=\"32019R0881\" data-article=\"2\" target=\"_blank\" rel=\"noopener\">Article 2</a>, point (1), of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019R0881\" class=\"ref\" data-celex=\"32019R0881\" target=\"_blank\" rel=\"noopener\">Regulation (EU) 2019/881</a>; (4) ‘national cybersecurity strategy ’ means a coherent framework of a Member State providing strategic objectives and priorities in the area of cybersecurity and the governance to achieve them in that Member State; (5) ‘near miss’ means an event that could have compromised the availability, authenticity, integrity or confidentiality of stored, transmitted or processed data or of the services offered by, or accessible via, network and information systems, but that was successfully prevented from materialising or that did not materialise; (6) ‘incident’ means an event compromising the availability, authenticity, integrity or confidentiality of stored, transmitted or processed data or of the services offered by, or accessible via, network and information systems; (7) ‘large-scale cybersecurity incident’ means an incident which causes a level of disruption that exceeds a Member State’s capacity to respond to it or which has a significant impact on at least two Member States; (8) ‘incident handling’ means any actions and procedures aiming to prevent, detect, analyse, and contain or to respond to and recover from an incident; (9) ‘risk’ means the potential for loss or disruption caused by an incident and is to be expressed as a combination of the magnitude of such loss or disruption and the likelihood of occurrence of the incident; (10) ‘cyber threat’ means a cyber threat as defined in <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019R0881\" class=\"ref\" data-celex=\"32019R0881\" data-article=\"2\" target=\"_blank\" rel=\"noopener\">Article 2</a>, point (8), of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019R0881\" class=\"ref\" data-celex=\"32019R0881\" target=\"_blank\" rel=\"noopener\">Regulation (EU) 2019/881</a>; (11) ‘significant cyber threat’ means a cyber threat which, based on its technical characteristics, can be assumed to have the potential to have a severe impact on the network and information systems of an entity or the users of the entity’s services by causing considerable material or non-material damage; (12) ‘ICT product’ means an ICT product as defined in <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019R0881\" class=\"ref\" data-celex=\"32019R0881\" data-article=\"2\" target=\"_blank\" rel=\"noopener\">Article 2</a>, point (12), of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019R0881\" class=\"ref\" data-celex=\"32019R0881\" target=\"_blank\" rel=\"noopener\">Regulation (EU) 2019/881</a>; (13) ‘ICT service’ means an ICT service as defined in <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019R0881\" class=\"ref\" data-celex=\"32019R0881\" data-article=\"2\" target=\"_blank\" rel=\"noopener\">Article 2</a>, point (13), of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019R0881\" class=\"ref\" data-celex=\"32019R0881\" target=\"_blank\" rel=\"noopener\">Regulation (EU) 2019/881</a>; (14) ‘ICT process’ means an ICT process as defined in <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019R0881\" class=\"ref\" data-celex=\"32019R0881\" data-article=\"2\" target=\"_blank\" rel=\"noopener\">Article 2</a>, point (14), of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019R0881\" class=\"ref\" data-celex=\"32019R0881\" target=\"_blank\" rel=\"noopener\">Regulation (EU) 2019/881</a>; (15) ‘vulnerability’ means a weakness, susceptibility or flaw of ICT products or ICT services that can be exploited by a cyber threat; (16) ‘standard’ means a standard as defined in <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32012R1025\" class=\"ref\" data-celex=\"32012R1025\" data-article=\"2\" target=\"_blank\" rel=\"noopener\">Article 2</a>, point (1), of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32012R1025\" class=\"ref\" data-celex=\"32012R1025\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1025/2012</a> of the European Parliament and of the Council ( 29 ) ; (17) ‘technical specification’ means a technical specification as defined in <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32012R1025\" class=\"ref\" data-celex=\"32012R1025\" data-article=\"2\" target=\"_blank\" rel=\"noopener\">Article 2</a>, point (4), of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32012R1025\" class=\"ref\" data-celex=\"32012R1025\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1025/2012</a>; (18) ‘internet exchange point’ means a network facility which enables the interconnection of more than two independent networks (autonomous systems), primarily for the purpose of facilitating the exchange of internet traffic, which provides interconnection only for autonomous systems and which neither requires the internet traffic passing between any pair of participating autonomous systems to pass through any third autonomous system nor alters or otherwise interferes with such traffic; (19) ‘domain name system’ or ‘DNS’ means a hierarchical distributed naming system which enables the identification of internet services and resources, allowing end-user devices to use internet routing and connectivity services to reach those services and resources; (20) ‘DNS service provider’ means an entity that provides: (a) publicly available recursive domain name resolution services for internet end-users; or (b) authoritative domain name resolution services for third-party use, with the exception of root name servers; (21) ‘top-level domain name registry’ or ‘TLD name registry’ means an entity which has been delegated a specific TLD and is responsible for administering the TLD including the registration of domain names under the TLD and the technical operation of the TLD, including the operation of its name servers, the maintenance of its databases and the distribution of TLD zone files across name servers, irrespective of whether any of those operations are carried out by the entity itself or are outsourced, but excluding situations where TLD names are used by a registry only for its own use; (22) ‘entity providing domain name registration services’ means a registrar or an agent acting on behalf of registrars, such as a privacy or proxy registration service provider or reseller; (23) ‘digital service’ means a service as defined in <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32015L1535\" class=\"ref\" data-celex=\"32015L1535\" data-article=\"1\" target=\"_blank\" rel=\"noopener\">Article 1</a>(1), point (b), of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32015L1535\" class=\"ref\" data-celex=\"32015L1535\" target=\"_blank\" rel=\"noopener\">Directive (EU) 2015/1535</a> of the European Parliament and of the Council ( 30 ) ; (24) ‘trust service’ means a trust service as defined in <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0910\" class=\"ref\" data-celex=\"32014R0910\" data-article=\"3\" target=\"_blank\" rel=\"noopener\">Article 3</a>, point (16), of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0910\" class=\"ref\" data-celex=\"32014R0910\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 910/2014</a>; (25) ‘trust service provider’ means a trust service provider as defined in <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0910\" class=\"ref\" data-celex=\"32014R0910\" data-article=\"3\" target=\"_blank\" rel=\"noopener\">Article 3</a>, point (19), of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0910\" class=\"ref\" data-celex=\"32014R0910\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 910/2014</a>; (26) ‘qualified trust service’ means a qualified trust service as defined in <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0910\" class=\"ref\" data-celex=\"32014R0910\" data-article=\"3\" target=\"_blank\" rel=\"noopener\">Article 3</a>, point (17), of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0910\" class=\"ref\" data-celex=\"32014R0910\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 910/2014</a>; (27) ‘qualified trust service provider’ means a qualified trust service provider as defined in <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0910\" class=\"ref\" data-celex=\"32014R0910\" data-article=\"3\" target=\"_blank\" rel=\"noopener\">Article 3</a>, point (20), of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0910\" class=\"ref\" data-celex=\"32014R0910\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 910/2014</a>; (28) ‘online marketplace’ means an online marketplace as defined in <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32005L0029\" class=\"ref\" data-celex=\"32005L0029\" data-article=\"2\" target=\"_blank\" rel=\"noopener\">Article 2</a>, point (n), of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32005L0029\" class=\"ref\" data-celex=\"32005L0029\" target=\"_blank\" rel=\"noopener\">Directive 2005/29/EC</a> of the European Parliament and of the Council ( 31 ) ; (29) ‘online search engine’ means an online search engine as defined in <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019R1150\" class=\"ref\" data-celex=\"32019R1150\" data-article=\"2\" target=\"_blank\" rel=\"noopener\">Article 2</a>, point (5), of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019R1150\" class=\"ref\" data-celex=\"32019R1150\" target=\"_blank\" rel=\"noopener\">Regulation (EU) 2019/1150</a> of the European Parliament and of the Council ( 32 ) ; (30) ‘cloud computing service’ means a digital service that enables on-demand administration and broad remote access to a scalable and elastic pool of shareable computing resources, including where such resources are distributed across several locations; (31) ‘data centre service’ means a service that encompasses structures, or groups of structures, dedicated to the centralised accommodation, interconnection and operation of IT and network equipment providing data storage, processing and transport services together with all the facilities and infrastructures for power distribution and environmental control; (32) ‘content delivery network’ means a network of geographically distributed servers for the purpose of ensuring high availability, accessibility or fast delivery of digital content and services to internet users on behalf of content and service providers; (33) ‘social networking services platform’ means a platform that enables end-users to connect, share, discover and communicate with each other across multiple devices, in particular via chats, posts, videos and recommendations; (34) ‘representative’ means a natural or legal person established in the Union explicitly designated to act on behalf of a DNS service provider, a TLD name registry, an entity providing domain name registration services, a cloud computing service provider, a data centre service provider, a content delivery network provider, a managed service provider, a managed security service provider, or a provider of an online marketplace, of an online search engine or of a social networking services platform that is not established in the Union, which may be addressed by a competent authority or a CSIRT in the place of the entity itself with regard to the obligations of that entity under this Directive; (35) ‘public administration entity’ means an entity recognised as such in a Member State in accordance with national law, not including the judiciary, parliaments or central banks, which complies with the following criteria: (a) it is established for the purpose of meeting needs in the general interest and does not have an industrial or commercial character; (b) it has legal personality or is entitled by law to act on behalf of another entity with legal personality; (c) it is financed, for the most part, by the State, regional authorities or by other bodies governed by public law, is subject to management supervision by those authorities or bodies, or has an administrative, managerial or supervisory board, more than half of whose members are appointed by the State, regional authorities or by other bodies governed by public law; (d) it has the power to address to natural or legal persons administrative or regulatory decisions affecting their rights in the cross-border movement of persons, goods, services or capital; (36) ‘public electronic communications network’ means a public electronic communications network as defined in <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32018L1972\" class=\"ref\" data-celex=\"32018L1972\" data-article=\"2\" target=\"_blank\" rel=\"noopener\">Article 2</a>, point (8), of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32018L1972\" class=\"ref\" data-celex=\"32018L1972\" target=\"_blank\" rel=\"noopener\">Directive (EU) 2018/1972</a>; (37) ‘electronic communications service’ means an electronic communications service as defined in <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32018L1972\" class=\"ref\" data-celex=\"32018L1972\" data-article=\"2\" target=\"_blank\" rel=\"noopener\">Article 2</a>, point (4), of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32018L1972\" class=\"ref\" data-celex=\"32018L1972\" target=\"_blank\" rel=\"noopener\">Directive (EU) 2018/1972</a>; (38) ‘entity’ means a natural or legal person created and recognised as such under the national law of its place of establishment, which may, acting under its own name, exercise rights and be subject to obligations; (39) ‘managed service provider’ means an entity that provides services related to the installation, management, operation or maintenance of ICT products, networks, infrastructure, applications or any other network and information systems, via assistance or active administration carried out either on customers’ premises or remotely; (40) ‘managed security service provider’ means a managed service provider that carries out or provides assistance for activities relating to cybersecurity risk management; (41) ‘research organisation’ means an entity which has as its primary goal to conduct applied research or experimental development with a view to exploiting the results of that research for commercial purposes, but which does not include educational institutions.",
           "class": ""
         }
       ]
@@ -391,7 +391,7 @@
         },
         {
           "id": "art_7__8",
-          "text": "(g) a policy framework for enhanced coordination between the competent authorities under this Directive and the competent authorities under <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2557\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Directive (EU) 2022/2557 – opens on EUR-Lex\">Directive (EU) 2022/2557</a> for the purpose of information sharing on risks, cyber threats, and incidents as well as on non-cyber risks, threats and incidents and the exercise of supervisory tasks, as appropriate;",
+          "text": "(g) a policy framework for enhanced coordination between the competent authorities under this Directive and the competent authorities under <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2557\" class=\"ref\" data-celex=\"32022L2557\" target=\"_blank\" rel=\"noopener\">Directive (EU) 2022/2557</a> for the purpose of information sharing on risks, cyber threats, and incidents as well as on non-cyber risks, threats and incidents and the exercise of supervisory tasks, as appropriate;",
           "class": "list-item-l1"
         },
         {
@@ -416,7 +416,7 @@
         },
         {
           "id": "art_7__13",
-          "text": "(c) managing vulnerabilities, encompassing the promotion and facilitation of coordinated vulnerability disclosure under <a href=\"#a:act_nis2_2022:art_12\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 12</a>(1);",
+          "text": "(c) managing vulnerabilities, encompassing the promotion and facilitation of coordinated vulnerability disclosure under <a href=\"#a:act_eu_nis2_2022_2555:art_12\" class=\"ref\" data-article=\"12\">Article 12</a>(1);",
           "class": "list-item-l1"
         },
         {
@@ -572,12 +572,12 @@
       "paragraphs": [
         {
           "id": "art_10__1",
-          "text": "1. Each Member State shall designate or establish one or more CSIRTs. The CSIRTs may be designated or established within a competent authority. The CSIRTs shall comply with the requirements set out in <a href=\"#a:act_nis2_2022:art_11\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 11</a>(1), shall cover at least the sectors, subsectors and types of entity referred to in Annexes I and II, and shall be responsible for incident handling in accordance with a well-defined process.",
+          "text": "1. Each Member State shall designate or establish one or more CSIRTs. The CSIRTs may be designated or established within a competent authority. The CSIRTs shall comply with the requirements set out in <a href=\"#a:act_eu_nis2_2022_2555:art_11\" class=\"ref\" data-article=\"11\">Article 11</a>(1), shall cover at least the sectors, subsectors and types of entity referred to in Annexes I and II, and shall be responsible for incident handling in accordance with a well-defined process.",
           "class": ""
         },
         {
           "id": "art_10__2",
-          "text": "2. Member States shall ensure that each CSIRT has adequate resources to carry out effectively its tasks as set out in <a href=\"#a:act_nis2_2022:art_11\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 11</a>(3).",
+          "text": "2. Member States shall ensure that each CSIRT has adequate resources to carry out effectively its tasks as set out in <a href=\"#a:act_eu_nis2_2022_2555:art_11\" class=\"ref\" data-article=\"11\">Article 11</a>(3).",
           "class": ""
         },
         {
@@ -587,12 +587,12 @@
         },
         {
           "id": "art_10__4",
-          "text": "4. The CSIRTs shall cooperate and, where appropriate, exchange relevant information in accordance with <a href=\"#a:act_nis2_2022:art_29\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 29</a> with sectoral or cross-sectoral communities of essential and important entities.",
+          "text": "4. The CSIRTs shall cooperate and, where appropriate, exchange relevant information in accordance with <a href=\"#a:act_eu_nis2_2022_2555:art_29\" class=\"ref\" data-article=\"29\">Article 29</a> with sectoral or cross-sectoral communities of essential and important entities.",
           "class": ""
         },
         {
           "id": "art_10__5",
-          "text": "5. The CSIRTs shall participate in peer reviews organised in accordance with <a href=\"#a:act_nis2_2022:art_19\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 19</a>.",
+          "text": "5. The CSIRTs shall participate in peer reviews organised in accordance with <a href=\"#a:act_eu_nis2_2022_2555:art_19\" class=\"ref\" data-article=\"19\">Article 19</a>.",
           "class": ""
         },
         {
@@ -612,7 +612,7 @@
         },
         {
           "id": "art_10__9",
-          "text": "9. Each Member State shall notify the Commission without undue delay of the identity of the CSIRT referred to in paragraph 1 of this Article and the CSIRT designated as coordinator pursuant to <a href=\"#a:act_nis2_2022:art_12\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 12</a>(1), of their respective tasks in relation to essential and important entities, and of any subsequent changes thereto.",
+          "text": "9. Each Member State shall notify the Commission without undue delay of the identity of the CSIRT referred to in paragraph 1 of this Article and the CSIRT designated as coordinator pursuant to Article 12(1), of their respective tasks in relation to essential and important entities, and of any subsequent changes thereto.",
           "class": ""
         },
         {
@@ -704,12 +704,12 @@
         },
         {
           "id": "art_11__16",
-          "text": "(g) where applicable, acting as a coordinator for the purposes of the coordinated vulnerability disclosure under <a href=\"#a:act_nis2_2022:art_12\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 12</a>(1);",
+          "text": "(g) where applicable, acting as a coordinator for the purposes of the coordinated vulnerability disclosure under <a href=\"#a:act_eu_nis2_2022_2555:art_12\" class=\"ref\" data-article=\"12\">Article 12</a>(1);",
           "class": "list-item-l1"
         },
         {
           "id": "art_11__17",
-          "text": "(h) contributing to the deployment of secure information-sharing tools pursuant to <a href=\"#a:act_nis2_2022:art_10\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 10</a>(3).",
+          "text": "(h) contributing to the deployment of secure information-sharing tools pursuant to <a href=\"#a:act_eu_nis2_2022_2555:art_10\" class=\"ref\" data-article=\"10\">Article 10</a>(3).",
           "class": "list-item-l1"
         },
         {
@@ -734,7 +734,7 @@
         },
         {
           "id": "art_11__22",
-          "text": "(c) coordinated vulnerability disclosure under <a href=\"#a:act_nis2_2022:art_12\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 12</a>(1).",
+          "text": "(c) coordinated vulnerability disclosure under <a href=\"#a:act_eu_nis2_2022_2555:art_12\" class=\"ref\" data-article=\"12\">Article 12</a>(1).",
           "class": "list-item-l1"
         }
       ]
@@ -798,7 +798,7 @@
         },
         {
           "id": "art_13__2",
-          "text": "2. Member States shall ensure that their CSIRTs or, where applicable, their competent authorities, receive notifications of significant incidents pursuant to <a href=\"#a:act_nis2_2022:art_23\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 23</a>, and incidents, cyber threats and near misses pursuant to <a href=\"#a:act_nis2_2022:art_30\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 30</a>.",
+          "text": "2. Member States shall ensure that their CSIRTs or, where applicable, their competent authorities, receive notifications of significant incidents pursuant to <a href=\"#a:act_eu_nis2_2022_2555:art_23\" class=\"ref\" data-article=\"23\">Article 23</a>, and incidents, cyber threats and near misses pursuant to <a href=\"#a:act_eu_nis2_2022_2555:art_30\" class=\"ref\" data-article=\"30\">Article 30</a>.",
           "class": ""
         },
         {
@@ -808,17 +808,17 @@
         },
         {
           "id": "art_13__4",
-          "text": "4. In order to ensure that the tasks and obligations of the competent authorities, the single points of contact and the CSIRTs are carried out effectively, Member States shall, to the extent possible, ensure appropriate cooperation between those bodies and law enforcement authorities, data protection authorities, the national authorities under Regulations (EC) No 300/2008 and (EU) 2018/1139, the supervisory bodies under <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0910\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) No 910/2014 – opens on EUR-Lex\">Regulation (EU) No 910/2014</a>, the competent authorities under <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a>, the national regulatory authorities under <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32018L1972\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Directive (EU) 2018/1972 – opens on EUR-Lex\">Directive (EU) 2018/1972</a>, the competent authorities under <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2557\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Directive (EU) 2022/2557 – opens on EUR-Lex\">Directive (EU) 2022/2557</a>, as well as the competent authorities under other sector-specific Union legal acts, within that Member State.",
+          "text": "4. In order to ensure that the tasks and obligations of the competent authorities, the single points of contact and the CSIRTs are carried out effectively, Member States shall, to the extent possible, ensure appropriate cooperation between those bodies and law enforcement authorities, data protection authorities, the national authorities under Regulations <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32008R0300\" class=\"ref\" data-celex=\"32008R0300\" target=\"_blank\" rel=\"noopener\">(EC) No 300/2008</a> and <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32018R1139\" class=\"ref\" data-celex=\"32018R1139\" target=\"_blank\" rel=\"noopener\">(EU) 2018/1139</a>, the supervisory bodies under <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0910\" class=\"ref\" data-celex=\"32014R0910\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 910/2014</a>, the competent authorities under <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"ref\" data-celex=\"32022R2554\" target=\"_blank\" rel=\"noopener\">Regulation (EU) 2022/2554</a>, the national regulatory authorities under <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32018L1972\" class=\"ref\" data-celex=\"32018L1972\" target=\"_blank\" rel=\"noopener\">Directive (EU) 2018/1972</a>, the competent authorities under <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2557\" class=\"ref\" data-celex=\"32022L2557\" target=\"_blank\" rel=\"noopener\">Directive (EU) 2022/2557</a>, as well as the competent authorities under other sector-specific Union legal acts, within that Member State.",
           "class": ""
         },
         {
           "id": "art_13__5",
-          "text": "5. Member States shall ensure that their competent authorities under this Directive and their competent authorities under <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2557\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Directive (EU) 2022/2557 – opens on EUR-Lex\">Directive (EU) 2022/2557</a> cooperate and exchange information on a regular basis with regard to the identification of critical entities, on risks, cyber threats, and incidents as well as on non-cyber risks, threats and incidents affecting entities identified as critical entities under <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2557\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Directive (EU) 2022/2557 – opens on EUR-Lex\">Directive (EU) 2022/2557</a>, and the measures taken in response to such risks, threats and incidents. Member States shall also ensure that their competent authorities under this Directive and their competent authorities under <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0910\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) No 910/2014 – opens on EUR-Lex\">Regulation (EU) No 910/2014</a>, <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a> and <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32018L1972\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Directive (EU) 2018/1972 – opens on EUR-Lex\">Directive (EU) 2018/1972</a> exchange relevant information on a regular basis, including with regard to relevant incidents and cyber threats.",
+          "text": "5. Member States shall ensure that their competent authorities under this Directive and their competent authorities under <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2557\" class=\"ref\" data-celex=\"32022L2557\" target=\"_blank\" rel=\"noopener\">Directive (EU) 2022/2557</a> cooperate and exchange information on a regular basis with regard to the identification of critical entities, on risks, cyber threats, and incidents as well as on non-cyber risks, threats and incidents affecting entities identified as critical entities under <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2557\" class=\"ref\" data-celex=\"32022L2557\" target=\"_blank\" rel=\"noopener\">Directive (EU) 2022/2557</a>, and the measures taken in response to such risks, threats and incidents. Member States shall also ensure that their competent authorities under this Directive and their competent authorities under <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0910\" class=\"ref\" data-celex=\"32014R0910\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 910/2014</a>, <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"ref\" data-celex=\"32022R2554\" target=\"_blank\" rel=\"noopener\">Regulation (EU) 2022/2554</a> and <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32018L1972\" class=\"ref\" data-celex=\"32018L1972\" target=\"_blank\" rel=\"noopener\">Directive (EU) 2018/1972</a> exchange relevant information on a regular basis, including with regard to relevant incidents and cyber threats.",
           "class": ""
         },
         {
           "id": "art_13__6",
-          "text": "6. Member States shall simplify the reporting through technical means for notifications referred to in Articles <a href=\"#a:act_nis2_2022:art_23\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">23</a> and <a href=\"#a:act_nis2_2022:art_30\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">30</a>.",
+          "text": "6. Member States shall simplify the reporting through technical means for notifications referred to in Articles <a href=\"#a:act_eu_nis2_2022_2555:art_23\" class=\"ref\" data-article=\"23\">23</a> and <a href=\"#a:act_eu_nis2_2022_2555:art_30\" class=\"ref\" data-article=\"30\">30</a>.",
           "class": ""
         }
       ]
@@ -840,7 +840,7 @@
         },
         {
           "id": "art_14__3",
-          "text": "3. The Cooperation Group shall be composed of representatives of Member States, the Commission and ENISA. The European External Action Service shall participate in the activities of the Cooperation Group as an observer. The European Supervisory Authorities (ESAs) and the competent authorities under <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a> may participate in the activities of the Cooperation Group in accordance with Article 47(1) of that Regulation. Where appropriate, the Cooperation Group may invite the European Parliament and representatives of relevant stakeholders to participate in its work. The Commission shall provide the secretariat.",
+          "text": "3. The Cooperation Group shall be composed of representatives of Member States, the Commission and ENISA. The European External Action Service shall participate in the activities of the Cooperation Group as an observer. The European Supervisory Authorities (ESAs) and the competent authorities under <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"ref\" data-celex=\"32022R2554\" target=\"_blank\" rel=\"noopener\">Regulation (EU) 2022/2554</a> may participate in the activities of the Cooperation Group in accordance with Article 47(1) of that Regulation. Where appropriate, the Cooperation Group may invite the European Parliament and representatives of relevant stakeholders to participate in its work. The Commission shall provide the secretariat.",
           "class": ""
         },
         {
@@ -855,12 +855,12 @@
         },
         {
           "id": "art_14__6",
-          "text": "(b) to provide guidance to the competent authorities in relation to the development and implementation of policies on coordinated vulnerability disclosure, as referred to in <a href=\"#a:act_nis2_2022:art_7\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 7</a>(2), point (c);",
+          "text": "(b) to provide guidance to the competent authorities in relation to the development and implementation of policies on coordinated vulnerability disclosure, as referred to in <a href=\"#a:act_eu_nis2_2022_2555:art_7\" class=\"ref\" data-article=\"7\">Article 7</a>(2), point (c);",
           "class": "list-item-l1"
         },
         {
           "id": "art_14__7",
-          "text": "(c) to exchange best practices and information in relation to the implementation of this Directive, including in relation to cyber threats, incidents, vulnerabilities, near misses, awareness-raising initiatives, training, exercises and skills, capacity building, standards and technical specifications as well as the identification of essential and important entities pursuant to <a href=\"#a:act_nis2_2022:art_2\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 2</a>(2), points (b) to (e);",
+          "text": "(c) to exchange best practices and information in relation to the implementation of this Directive, including in relation to cyber threats, incidents, vulnerabilities, near misses, awareness-raising initiatives, training, exercises and skills, capacity building, standards and technical specifications as well as the identification of essential and important entities pursuant to <a href=\"#a:act_eu_nis2_2022_2555:art_2\" class=\"ref\" data-article=\"2\">Article 2</a>(2), points (b) to (e);",
           "class": "list-item-l1"
         },
         {
@@ -885,22 +885,22 @@
         },
         {
           "id": "art_14__12",
-          "text": "(h) where relevant, to discuss reports on the peer review referred to in <a href=\"#a:act_nis2_2022:art_19\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 19</a>(9) and draw up conclusions and recommendations;",
+          "text": "(h) where relevant, to discuss reports on the peer review referred to in <a href=\"#a:act_eu_nis2_2022_2555:art_19\" class=\"ref\" data-article=\"19\">Article 19</a>(9) and draw up conclusions and recommendations;",
           "class": "list-item-l1"
         },
         {
           "id": "art_14__13",
-          "text": "(i) to carry out coordinated security risk assessments of critical supply chains in accordance with <a href=\"#a:act_nis2_2022:art_22\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 22</a>(1);",
+          "text": "(i) to carry out coordinated security risk assessments of critical supply chains in accordance with <a href=\"#a:act_eu_nis2_2022_2555:art_22\" class=\"ref\" data-article=\"22\">Article 22</a>(1);",
           "class": "list-item-l1"
         },
         {
           "id": "art_14__14",
-          "text": "(j) to discuss cases of mutual assistance, including experiences and results from cross-border joint supervisory actions as referred to in <a href=\"#a:act_nis2_2022:art_37\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 37</a>;",
+          "text": "(j) to discuss cases of mutual assistance, including experiences and results from cross-border joint supervisory actions as referred to in <a href=\"#a:act_eu_nis2_2022_2555:art_37\" class=\"ref\" data-article=\"37\">Article 37</a>;",
           "class": "list-item-l1"
         },
         {
           "id": "art_14__15",
-          "text": "(k) upon the request of one or more Member States concerned, to discuss specific requests for mutual assistance as referred to in <a href=\"#a:act_nis2_2022:art_37\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 37</a>;",
+          "text": "(k) upon the request of one or more Member States concerned, to discuss specific requests for mutual assistance as referred to in <a href=\"#a:act_eu_nis2_2022_2555:art_37\" class=\"ref\" data-article=\"37\">Article 37</a>;",
           "class": "list-item-l1"
         },
         {
@@ -930,12 +930,12 @@
         },
         {
           "id": "art_14__21",
-          "text": "(q) to establish the methodology and organisational aspects of the peer reviews referred to in <a href=\"#a:act_nis2_2022:art_19\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 19</a>(1), as well as to lay down the self-assessment methodology for Member States in accordance with <a href=\"#a:act_nis2_2022:art_19\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 19</a>(5), with the assistance of the Commission and ENISA, and, in cooperation with the Commission and ENISA, to develop codes of conduct underpinning the working methods of designated cybersecurity experts in accordance with <a href=\"#a:act_nis2_2022:art_19\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 19</a>(6);",
+          "text": "(q) to establish the methodology and organisational aspects of the peer reviews referred to in <a href=\"#a:act_eu_nis2_2022_2555:art_19\" class=\"ref\" data-article=\"19\">Article 19</a>(1), as well as to lay down the self-assessment methodology for Member States in accordance with <a href=\"#a:act_eu_nis2_2022_2555:art_19\" class=\"ref\" data-article=\"19\">Article 19</a>(5), with the assistance of the Commission and ENISA, and, in cooperation with the Commission and ENISA, to develop codes of conduct underpinning the working methods of designated cybersecurity experts in accordance with <a href=\"#a:act_eu_nis2_2022_2555:art_19\" class=\"ref\" data-article=\"19\">Article 19</a>(6);",
           "class": "list-item-l1"
         },
         {
           "id": "art_14__22",
-          "text": "(r) to prepare reports for the purpose of the review referred to in <a href=\"#a:act_nis2_2022:art_40\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 40</a> on the experience gained at a strategic level and from peer reviews;",
+          "text": "(r) to prepare reports for the purpose of the review referred to in <a href=\"#a:act_eu_nis2_2022_2555:art_40\" class=\"ref\" data-article=\"40\">Article 40</a> on the experience gained at a strategic level and from peer reviews;",
           "class": "list-item-l1"
         },
         {
@@ -960,12 +960,12 @@
         },
         {
           "id": "art_14__27",
-          "text": "8. The Commission may adopt implementing acts laying down procedural arrangements necessary for the functioning of the Cooperation Group. Those implementing acts shall be adopted in accordance with the examination procedure referred to in <a href=\"#a:act_nis2_2022:art_39\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 39</a>(2). The Commission shall exchange advice and cooperate with the Cooperation Group on the draft implementing acts referred to in the first subparagraph of this paragraph in accordance with paragraph (4), point (e).",
+          "text": "8. The Commission may adopt implementing acts laying down procedural arrangements necessary for the functioning of the Cooperation Group. Those implementing acts shall be adopted in accordance with the examination procedure referred to in <a href=\"#a:act_eu_nis2_2022_2555:art_39\" class=\"ref\" data-article=\"39\">Article 39</a>(2). The Commission shall exchange advice and cooperate with the Cooperation Group on the draft implementing acts referred to in the first subparagraph of this paragraph in accordance with paragraph (4), point (e).",
           "class": ""
         },
         {
           "id": "art_14__28",
-          "text": "9. The Cooperation Group shall meet on a regular basis and in any event at least once a year with the Critical Entities Resilience Group established under <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2557\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Directive (EU) 2022/2557 – opens on EUR-Lex\">Directive (EU) 2022/2557</a> to promote and facilitate strategic cooperation and the exchange of information.",
+          "text": "9. The Cooperation Group shall meet on a regular basis and in any event at least once a year with the Critical Entities Resilience Group established under <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2557\" class=\"ref\" data-celex=\"32022L2557\" target=\"_blank\" rel=\"noopener\">Directive (EU) 2022/2557</a> to promote and facilitate strategic cooperation and the exchange of information.",
           "class": ""
         }
       ]
@@ -982,7 +982,7 @@
         },
         {
           "id": "art_15__2",
-          "text": "2. The CSIRTs network shall be composed of representatives of the CSIRTs designated or established pursuant to <a href=\"#a:act_nis2_2022:art_10\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 10</a> and the computer emergency response team for the Union’s institutions, bodies and agencies (CERT-EU). The Commission shall participate in the CSIRTs network as an observer. ENISA shall provide the secretariat and shall actively provide assistance for the cooperation among the CSIRTs.",
+          "text": "2. The CSIRTs network shall be composed of representatives of the CSIRTs designated or established pursuant to <a href=\"#a:act_eu_nis2_2022_2555:art_10\" class=\"ref\" data-article=\"10\">Article 10</a> and the computer emergency response team for the Union’s institutions, bodies and agencies (CERT-EU). The Commission shall participate in the CSIRTs network as an observer. ENISA shall provide the secretariat and shall actively provide assistance for the cooperation among the CSIRTs.",
           "class": ""
         },
         {
@@ -1032,7 +1032,7 @@
         },
         {
           "id": "art_15__12",
-          "text": "(i) to cooperate, exchange best practices and provide assistance to the CSIRTs designated as coordinators pursuant to <a href=\"#a:act_nis2_2022:art_12\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 12</a>(1) with regard to the management of the coordinated disclosure of vulnerabilities which could have a significant impact on entities in more than one Member State;",
+          "text": "(i) to cooperate, exchange best practices and provide assistance to the CSIRTs designated as coordinators pursuant to <a href=\"#a:act_eu_nis2_2022_2555:art_12\" class=\"ref\" data-article=\"12\">Article 12</a>(1) with regard to the management of the coordinated disclosure of vulnerabilities which could have a significant impact on entities in more than one Member State;",
           "class": "list-item-l1"
         },
         {
@@ -1062,7 +1062,7 @@
         },
         {
           "id": "art_15__18",
-          "text": "(v) contribution to the national large-scale cybersecurity incident and crisis response plan referred to in <a href=\"#a:act_nis2_2022:art_9\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 9</a>(4) at the request of a Member State;",
+          "text": "(v) contribution to the national large-scale cybersecurity incident and crisis response plan referred to in <a href=\"#a:act_eu_nis2_2022_2555:art_9\" class=\"ref\" data-article=\"9\">Article 9</a>(4) at the request of a Member State;",
           "class": "list-item-l2"
         },
         {
@@ -1087,7 +1087,7 @@
         },
         {
           "id": "art_15__23",
-          "text": "(o) where relevant, to discuss the peer-review reports referred to in <a href=\"#a:act_nis2_2022:art_19\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 19</a>(9);",
+          "text": "(o) where relevant, to discuss the peer-review reports referred to in <a href=\"#a:act_eu_nis2_2022_2555:art_19\" class=\"ref\" data-article=\"19\">Article 19</a>(9);",
           "class": "list-item-l1"
         },
         {
@@ -1097,7 +1097,7 @@
         },
         {
           "id": "art_15__25",
-          "text": "4. By 17 January 2025, and every two years thereafter, the CSIRTs network shall, for the purpose of the review referred to in <a href=\"#a:act_nis2_2022:art_40\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 40</a>, assess the progress made with regard to the operational cooperation and adopt a report. The report shall, in particular, draw up conclusions and recommendations on the basis of the outcome of the peer reviews referred to in <a href=\"#a:act_nis2_2022:art_19\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 19</a>, which are carried out in relation to the national CSIRTs. That report shall be submitted to the Cooperation Group.",
+          "text": "4. By 17 January 2025, and every two years thereafter, the CSIRTs network shall, for the purpose of the review referred to in <a href=\"#a:act_eu_nis2_2022_2555:art_40\" class=\"ref\" data-article=\"40\">Article 40</a>, assess the progress made with regard to the operational cooperation and adopt a report. The report shall, in particular, draw up conclusions and recommendations on the basis of the outcome of the peer reviews referred to in <a href=\"#a:act_eu_nis2_2022_2555:art_19\" class=\"ref\" data-article=\"19\">Article 19</a>, which are carried out in relation to the national CSIRTs. That report shall be submitted to the Cooperation Group.",
           "class": ""
         },
         {
@@ -1154,7 +1154,7 @@
         },
         {
           "id": "art_16__8",
-          "text": "(e) to discuss, upon the request of a Member State concerned, national large-scale cybersecurity incident and crisis response plans referred to in <a href=\"#a:act_nis2_2022:art_9\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 9</a>(4).",
+          "text": "(e) to discuss, upon the request of a Member State concerned, national large-scale cybersecurity incident and crisis response plans referred to in <a href=\"#a:act_eu_nis2_2022_2555:art_9\" class=\"ref\" data-article=\"9\">Article 9</a>(4).",
           "class": "list-item-l1"
         },
         {
@@ -1169,7 +1169,7 @@
         },
         {
           "id": "art_16__11",
-          "text": "6. EU-CyCLONe shall cooperate with the CSIRTs network on the basis of agreed procedural arrangements provided for in <a href=\"#a:act_nis2_2022:art_15\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 15</a>(6).",
+          "text": "6. EU-CyCLONe shall cooperate with the CSIRTs network on the basis of agreed procedural arrangements provided for in <a href=\"#a:act_eu_nis2_2022_2555:art_15\" class=\"ref\" data-article=\"15\">Article 15</a>(6).",
           "class": ""
         },
         {
@@ -1218,7 +1218,7 @@
         },
         {
           "id": "art_18__5",
-          "text": "(d) an aggregated assessment of the outcome of the peer reviews referred to in <a href=\"#a:act_nis2_2022:art_19\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 19</a>;",
+          "text": "(d) an aggregated assessment of the outcome of the peer reviews referred to in <a href=\"#a:act_eu_nis2_2022_2555:art_19\" class=\"ref\" data-article=\"19\">Article 19</a>;",
           "class": "list-item-l1"
         },
         {
@@ -1228,7 +1228,7 @@
         },
         {
           "id": "art_18__7",
-          "text": "2. The report shall include particular policy recommendations, with a view to addressing shortcomings and increasing the level of cybersecurity across the Union, and a summary of the findings for the particular period from the EU Cybersecurity Technical Situation Reports on incidents and cyber threats prepared by ENISA in accordance with <a href=\"#a:act_nis2_2022:art_7\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 7</a>(6) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019R0881\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2019/881 – opens on EUR-Lex\">Regulation (EU) 2019/881</a>.",
+          "text": "2. The report shall include particular policy recommendations, with a view to addressing shortcomings and increasing the level of cybersecurity across the Union, and a summary of the findings for the particular period from the EU Cybersecurity Technical Situation Reports on incidents and cyber threats prepared by ENISA in accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019R0881\" class=\"ref\" data-celex=\"32019R0881\" data-article=\"7\" target=\"_blank\" rel=\"noopener\">Article 7</a>(6) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019R0881\" class=\"ref\" data-celex=\"32019R0881\" target=\"_blank\" rel=\"noopener\">Regulation (EU) 2019/881</a>.",
           "class": ""
         },
         {
@@ -1250,7 +1250,7 @@
         },
         {
           "id": "art_19__2",
-          "text": "(a) the level of implementation of the cybersecurity risk-management measures and reporting obligations laid down in Articles <a href=\"#a:act_nis2_2022:art_21\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">21</a> and <a href=\"#a:act_nis2_2022:art_23\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">23</a>;",
+          "text": "(a) the level of implementation of the cybersecurity risk-management measures and reporting obligations laid down in Articles <a href=\"#a:act_eu_nis2_2022_2555:art_21\" class=\"ref\" data-article=\"21\">21</a> and <a href=\"#a:act_eu_nis2_2022_2555:art_23\" class=\"ref\" data-article=\"23\">23</a>;",
           "class": "list-item-l1"
         },
         {
@@ -1265,12 +1265,12 @@
         },
         {
           "id": "art_19__5",
-          "text": "(d) the level of implementation of mutual assistance referred to in <a href=\"#a:act_nis2_2022:art_37\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 37</a>;",
+          "text": "(d) the level of implementation of mutual assistance referred to in <a href=\"#a:act_eu_nis2_2022_2555:art_37\" class=\"ref\" data-article=\"37\">Article 37</a>;",
           "class": "list-item-l1"
         },
         {
           "id": "art_19__6",
-          "text": "(e) the level of implementation of the cybersecurity information-sharing arrangements referred to in <a href=\"#a:act_nis2_2022:art_29\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 29</a>;",
+          "text": "(e) the level of implementation of the cybersecurity information-sharing arrangements referred to in <a href=\"#a:act_eu_nis2_2022_2555:art_29\" class=\"ref\" data-article=\"29\">Article 29</a>;",
           "class": "list-item-l1"
         },
         {
@@ -1327,7 +1327,7 @@
       "paragraphs": [
         {
           "id": "art_20__1",
-          "text": "1. Member States shall ensure that the management bodies of essential and important entities approve the cybersecurity risk-management measures taken by those entities in order to comply with <a href=\"#a:act_nis2_2022:art_21\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 21</a>, oversee its implementation and can be held liable for infringements by the entities of that Article. The application of this paragraph shall be without prejudice to national law as regards the liability rules applicable to public institutions, as well as the liability of public servants and elected or appointed officials.",
+          "text": "1. Member States shall ensure that the management bodies of essential and important entities approve the cybersecurity risk-management measures taken by those entities in order to comply with <a href=\"#a:act_eu_nis2_2022_2555:art_21\" class=\"ref\" data-article=\"21\">Article 21</a>, oversee its implementation and can be held liable for infringements by the entities of that Article. The application of this paragraph shall be without prejudice to national law as regards the liability rules applicable to public institutions, as well as the liability of public servants and elected or appointed officials.",
           "class": ""
         },
         {
@@ -1404,7 +1404,7 @@
         },
         {
           "id": "art_21__13",
-          "text": "3. Member States shall ensure that, when considering which measures referred to in paragraph 2, point (d), of this Article are appropriate, entities take into account the vulnerabilities specific to each direct supplier and service provider and the overall quality of products and cybersecurity practices of their suppliers and service providers, including their secure development procedures. Member States shall also ensure that, when considering which measures referred to in that point are appropriate, entities are required to take into account the results of the coordinated security risk assessments of critical supply chains carried out in accordance with <a href=\"#a:act_nis2_2022:art_22\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 22</a>(1).",
+          "text": "3. Member States shall ensure that, when considering which measures referred to in paragraph 2, point (d), of this Article are appropriate, entities take into account the vulnerabilities specific to each direct supplier and service provider and the overall quality of products and cybersecurity practices of their suppliers and service providers, including their secure development procedures. Member States shall also ensure that, when considering which measures referred to in that point are appropriate, entities are required to take into account the results of the coordinated security risk assessments of critical supply chains carried out in accordance with <a href=\"#a:act_eu_nis2_2022_2555:art_22\" class=\"ref\" data-article=\"22\">Article 22</a>(1).",
           "class": ""
         },
         {
@@ -1414,7 +1414,7 @@
         },
         {
           "id": "art_21__15",
-          "text": "5. By 17 October 2024, the Commission shall adopt implementing acts laying down the technical and the methodological requirements of the measures referred to in paragraph 2 with regard to DNS service providers, TLD name registries, cloud computing service providers, data centre service providers, content delivery network providers, managed service providers, managed security service providers, providers of online market places, of online search engines and of social networking services platforms, and trust service providers. The Commission may adopt implementing acts laying down the technical and the methodological requirements, as well as sectoral requirements, as necessary, of the measures referred to in paragraph 2 with regard to essential and important entities other than those referred to in the first subparagraph of this paragraph. When preparing the implementing acts referred to in the first and second subparagraphs of this paragraph, the Commission shall, to the extent possible, follow European and international standards, as well as relevant technical specifications. The Commission shall exchange advice and cooperate with the Cooperation Group and ENISA on the draft implementing acts in accordance with <a href=\"#a:act_nis2_2022:art_14\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 14</a>(4), point (e). Those implementing acts shall be adopted in accordance with the examination procedure referred to in <a href=\"#a:act_nis2_2022:art_39\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 39</a>(2).",
+          "text": "5. By 17 October 2024, the Commission shall adopt implementing acts laying down the technical and the methodological requirements of the measures referred to in paragraph 2 with regard to DNS service providers, TLD name registries, cloud computing service providers, data centre service providers, content delivery network providers, managed service providers, managed security service providers, providers of online market places, of online search engines and of social networking services platforms, and trust service providers. The Commission may adopt implementing acts laying down the technical and the methodological requirements, as well as sectoral requirements, as necessary, of the measures referred to in paragraph 2 with regard to essential and important entities other than those referred to in the first subparagraph of this paragraph. When preparing the implementing acts referred to in the first and second subparagraphs of this paragraph, the Commission shall, to the extent possible, follow European and international standards, as well as relevant technical specifications. The Commission shall exchange advice and cooperate with the Cooperation Group and ENISA on the draft implementing acts in accordance with <a href=\"#a:act_eu_nis2_2022_2555:art_14\" class=\"ref\" data-article=\"14\">Article 14</a>(4), point (e). Those implementing acts shall be adopted in accordance with the examination procedure referred to in <a href=\"#a:act_eu_nis2_2022_2555:art_39\" class=\"ref\" data-article=\"39\">Article 39</a>(2).",
           "class": ""
         }
       ]
@@ -1538,17 +1538,17 @@
         },
         {
           "id": "art_23__20",
-          "text": "9. The single point of contact shall submit to ENISA every three months a summary report, including anonymised and aggregated data on significant incidents, incidents, cyber threats and near misses notified in accordance with paragraph 1 of this Article and with <a href=\"#a:act_nis2_2022:art_30\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 30</a>. In order to contribute to the provision of comparable information, ENISA may adopt technical guidance on the parameters of the information to be included in the summary report. ENISA shall inform the Cooperation Group and the CSIRTs network about its findings on notifications received every six months.",
+          "text": "9. The single point of contact shall submit to ENISA every three months a summary report, including anonymised and aggregated data on significant incidents, incidents, cyber threats and near misses notified in accordance with paragraph 1 of this Article and with <a href=\"#a:act_eu_nis2_2022_2555:art_30\" class=\"ref\" data-article=\"30\">Article 30</a>. In order to contribute to the provision of comparable information, ENISA may adopt technical guidance on the parameters of the information to be included in the summary report. ENISA shall inform the Cooperation Group and the CSIRTs network about its findings on notifications received every six months.",
           "class": ""
         },
         {
           "id": "art_23__21",
-          "text": "10. The CSIRTs or, where applicable, the competent authorities shall provide to the competent authorities under <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2557\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Directive (EU) 2022/2557 – opens on EUR-Lex\">Directive (EU) 2022/2557</a> information about significant incidents, incidents, cyber threats and near misses notified in accordance with paragraph 1 of this Article and with <a href=\"#a:act_nis2_2022:art_30\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 30</a> by entities identified as critical entities under <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2557\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Directive (EU) 2022/2557 – opens on EUR-Lex\">Directive (EU) 2022/2557</a>.",
+          "text": "10. The CSIRTs or, where applicable, the competent authorities shall provide to the competent authorities under <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2557\" class=\"ref\" data-celex=\"32022L2557\" target=\"_blank\" rel=\"noopener\">Directive (EU) 2022/2557</a> information about significant incidents, incidents, cyber threats and near misses notified in accordance with paragraph 1 of this Article and with <a href=\"#a:act_eu_nis2_2022_2555:art_30\" class=\"ref\" data-article=\"30\">Article 30</a> by entities identified as critical entities under <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2557\" class=\"ref\" data-celex=\"32022L2557\" target=\"_blank\" rel=\"noopener\">Directive (EU) 2022/2557</a>.",
           "class": ""
         },
         {
           "id": "art_23__22",
-          "text": "11. The Commission may adopt implementing acts further specifying the type of information, the format and the procedure of a notification submitted pursuant to paragraph 1 of this Article and to <a href=\"#a:act_nis2_2022:art_30\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 30</a> and of a communication submitted pursuant to paragraph 2 of this Article. By 17 October 2024, the Commission shall, with regard to DNS service providers, TLD name registries, cloud computing service providers, data centre service providers, content delivery network providers, managed service providers, managed security service providers, as well as providers of online marketplaces, of online search engines and of social networking services platforms, adopt implementing acts further specifying the cases in which an incident shall be considered to be significant as referred to in paragraph 3. The Commission may adopt such implementing acts with regard to other essential and important entities. The Commission shall exchange advice and cooperate with the Cooperation Group on the draft implementing acts referred to in the first and second subparagraphs of this paragraph in accordance with <a href=\"#a:act_nis2_2022:art_14\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 14</a>(4), point (e). Those implementing acts shall be adopted in accordance with the examination procedure referred to in <a href=\"#a:act_nis2_2022:art_39\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 39</a>(2).",
+          "text": "11. The Commission may adopt implementing acts further specifying the type of information, the format and the procedure of a notification submitted pursuant to paragraph 1 of this Article and to Article 30 and of a communication submitted pursuant to paragraph 2 of this Article. By 17 October 2024, the Commission shall, with regard to DNS service providers, TLD name registries, cloud computing service providers, data centre service providers, content delivery network providers, managed service providers, managed security service providers, as well as providers of online marketplaces, of online search engines and of social networking services platforms, adopt implementing acts further specifying the cases in which an incident shall be considered to be significant as referred to in paragraph 3. The Commission may adopt such implementing acts with regard to other essential and important entities. The Commission shall exchange advice and cooperate with the Cooperation Group on the draft implementing acts referred to in the first and second subparagraphs of this paragraph in accordance with <a href=\"#a:act_eu_nis2_2022_2555:art_14\" class=\"ref\" data-article=\"14\">Article 14</a>(4), point (e). Those implementing acts shall be adopted in accordance with the examination procedure referred to in <a href=\"#a:act_eu_nis2_2022_2555:art_39\" class=\"ref\" data-article=\"39\">Article 39</a>(2).",
           "class": ""
         }
       ]
@@ -1560,17 +1560,17 @@
       "paragraphs": [
         {
           "id": "art_24__1",
-          "text": "1. In order to demonstrate compliance with particular requirements of <a href=\"#a:act_nis2_2022:art_21\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 21</a>, Member States may require essential and important entities to use particular ICT products, ICT services and ICT processes, developed by the essential or important entity or procured from third parties, that are certified under European cybersecurity certification schemes adopted pursuant to Article 49 of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019R0881\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2019/881 – opens on EUR-Lex\">Regulation (EU) 2019/881</a>. Furthermore, Member States shall encourage essential and important entities to use qualified trust services.",
+          "text": "1. In order to demonstrate compliance with particular requirements of <a href=\"#a:act_eu_nis2_2022_2555:art_21\" class=\"ref\" data-article=\"21\">Article 21</a>, Member States may require essential and important entities to use particular ICT products, ICT services and ICT processes, developed by the essential or important entity or procured from third parties, that are certified under European cybersecurity certification schemes adopted pursuant to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019R0881\" class=\"ref\" data-celex=\"32019R0881\" data-article=\"49\" target=\"_blank\" rel=\"noopener\">Article 49</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019R0881\" class=\"ref\" data-celex=\"32019R0881\" target=\"_blank\" rel=\"noopener\">Regulation (EU) 2019/881</a>. Furthermore, Member States shall encourage essential and important entities to use qualified trust services.",
           "class": ""
         },
         {
           "id": "art_24__2",
-          "text": "2. The Commission is empowered to adopt delegated acts, in accordance with <a href=\"#a:act_nis2_2022:art_38\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 38</a>, to supplement this Directive by specifying which categories of essential and important entities are to be required to use certain certified ICT products, ICT services and ICT processes or obtain a certificate under a European cybersecurity certification scheme adopted pursuant to Article 49 of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019R0881\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2019/881 – opens on EUR-Lex\">Regulation (EU) 2019/881</a>. Those delegated acts shall be adopted where insufficient levels of cybersecurity have been identified and shall include an implementation period. Before adopting such delegated acts, the Commission shall carry out an impact assessment and shall carry out consultations in accordance with Article 56 of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019R0881\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2019/881 – opens on EUR-Lex\">Regulation (EU) 2019/881</a>.",
+          "text": "2. The Commission is empowered to adopt delegated acts, in accordance with <a href=\"#a:act_eu_nis2_2022_2555:art_38\" class=\"ref\" data-article=\"38\">Article 38</a>, to supplement this Directive by specifying which categories of essential and important entities are to be required to use certain certified ICT products, ICT services and ICT processes or obtain a certificate under a European cybersecurity certification scheme adopted pursuant to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019R0881\" class=\"ref\" data-celex=\"32019R0881\" data-article=\"49\" target=\"_blank\" rel=\"noopener\">Article 49</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019R0881\" class=\"ref\" data-celex=\"32019R0881\" target=\"_blank\" rel=\"noopener\">Regulation (EU) 2019/881</a>. Those delegated acts shall be adopted where insufficient levels of cybersecurity have been identified and shall include an implementation period. Before adopting such delegated acts, the Commission shall carry out an impact assessment and shall carry out consultations in accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019R0881\" class=\"ref\" data-celex=\"32019R0881\" data-article=\"56\" target=\"_blank\" rel=\"noopener\">Article 56</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019R0881\" class=\"ref\" data-celex=\"32019R0881\" target=\"_blank\" rel=\"noopener\">Regulation (EU) 2019/881</a>.",
           "class": ""
         },
         {
           "id": "art_24__3",
-          "text": "3. Where no appropriate European cybersecurity certification scheme for the purposes of paragraph 2 of this Article is available, the Commission may, after consulting the Cooperation Group and the European Cybersecurity Certification Group, request ENISA to prepare a candidate scheme pursuant to Article 48(2) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019R0881\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2019/881 – opens on EUR-Lex\">Regulation (EU) 2019/881</a>.",
+          "text": "3. Where no appropriate European cybersecurity certification scheme for the purposes of paragraph 2 of this Article is available, the Commission may, after consulting the Cooperation Group and the European Cybersecurity Certification Group, request ENISA to prepare a candidate scheme pursuant to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019R0881\" class=\"ref\" data-celex=\"32019R0881\" data-article=\"48\" target=\"_blank\" rel=\"noopener\">Article 48</a>(2) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019R0881\" class=\"ref\" data-celex=\"32019R0881\" target=\"_blank\" rel=\"noopener\">Regulation (EU) 2019/881</a>.",
           "class": ""
         }
       ]
@@ -1582,7 +1582,7 @@
       "paragraphs": [
         {
           "id": "art_25__1",
-          "text": "1. In order to promote the convergent implementation of <a href=\"#a:act_nis2_2022:art_21\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 21</a>(1) and (2), Member States shall, without imposing or discriminating in favour of the use of a particular type of technology, encourage the use of European and international standards and technical specifications relevant to the security of network and information systems.",
+          "text": "1. In order to promote the convergent implementation of <a href=\"#a:act_eu_nis2_2022_2555:art_21\" class=\"ref\" data-article=\"21\">Article 21</a>(1) and (2), Member States shall, without imposing or discriminating in favour of the use of a particular type of technology, encourage the use of European and international standards and technical specifications relevant to the security of network and information systems.",
           "class": ""
         },
         {
@@ -1666,12 +1666,12 @@
         },
         {
           "id": "art_27__5",
-          "text": "(c) the address of the entity’s main establishment and its other legal establishments in the Union or, if not established in the Union, of its representative designated pursuant to <a href=\"#a:act_nis2_2022:art_26\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 26</a>(3);",
+          "text": "(c) the address of the entity’s main establishment and its other legal establishments in the Union or, if not established in the Union, of its representative designated pursuant to <a href=\"#a:act_eu_nis2_2022_2555:art_26\" class=\"ref\" data-article=\"26\">Article 26</a>(3);",
           "class": "list-item-l1"
         },
         {
           "id": "art_27__6",
-          "text": "(d) up-to-date contact details, including email addresses and telephone numbers of the entity and, where applicable, its representative designated pursuant to <a href=\"#a:act_nis2_2022:art_26\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 26</a>(3);",
+          "text": "(d) up-to-date contact details, including email addresses and telephone numbers of the entity and, where applicable, its representative designated pursuant to <a href=\"#a:act_eu_nis2_2022_2555:art_26\" class=\"ref\" data-article=\"26\">Article 26</a>(3);",
           "class": "list-item-l1"
         },
         {
@@ -1696,7 +1696,7 @@
         },
         {
           "id": "art_27__11",
-          "text": "5. Where applicable, the information referred to in paragraphs 2 and 3 of this Article shall be submitted through the national mechanism referred to in <a href=\"#a:act_nis2_2022:art_3\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 3</a>(4), fourth subparagraph.",
+          "text": "5. Where applicable, the information referred to in paragraphs 2 and 3 of this Article shall be submitted through the national mechanism referred to in <a href=\"#a:act_eu_nis2_2022_2555:art_3\" class=\"ref\" data-article=\"3\">Article 3</a>(4), fourth subparagraph.",
           "class": ""
         }
       ]
@@ -1785,7 +1785,7 @@
         },
         {
           "id": "art_29__5",
-          "text": "3. Member States shall facilitate the establishment of cybersecurity information-sharing arrangements referred to in paragraph 2 of this Article. Such arrangements may specify operational elements, including the use of dedicated ICT platforms and automation tools, content and conditions of the information-sharing arrangements. In laying down the details of the involvement of public authorities in such arrangements, Member States may impose conditions on the information made available by the competent authorities or the CSIRTs. Member States shall offer assistance for the application of such arrangements in accordance with their policies referred to in <a href=\"#a:act_nis2_2022:art_7\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 7</a>(2), point (h).",
+          "text": "3. Member States shall facilitate the establishment of cybersecurity information-sharing arrangements referred to in paragraph 2 of this Article. Such arrangements may specify operational elements, including the use of dedicated ICT platforms and automation tools, content and conditions of the information-sharing arrangements. In laying down the details of the involvement of public authorities in such arrangements, Member States may impose conditions on the information made available by the competent authorities or the CSIRTs. Member States shall offer assistance for the application of such arrangements in accordance with their policies referred to in <a href=\"#a:act_eu_nis2_2022_2555:art_7\" class=\"ref\" data-article=\"7\">Article 7</a>(2), point (h).",
           "class": ""
         },
         {
@@ -1807,7 +1807,7 @@
       "paragraphs": [
         {
           "id": "art_30__1",
-          "text": "1. Member States shall ensure that, in addition to the notification obligation provided for in <a href=\"#a:act_nis2_2022:art_23\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 23</a>, notifications can be submitted to the CSIRTs or, where applicable, the competent authorities, on a voluntary basis, by:",
+          "text": "1. Member States shall ensure that, in addition to the notification obligation provided for in <a href=\"#a:act_eu_nis2_2022_2555:art_23\" class=\"ref\" data-article=\"23\">Article 23</a>, notifications can be submitted to the CSIRTs or, where applicable, the competent authorities, on a voluntary basis, by:",
           "class": ""
         },
         {
@@ -1822,7 +1822,7 @@
         },
         {
           "id": "art_30__4",
-          "text": "2. Member States shall process the notifications referred to in paragraph 1 of this Article in accordance with the procedure laid down in <a href=\"#a:act_nis2_2022:art_23\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 23</a>. Member States may prioritise the processing of mandatory notifications over voluntary notifications. Where necessary, the CSIRTs and, where applicable, the competent authorities shall provide the single points of contact with the information about notifications received pursuant to this Article, while ensuring the confidentiality and appropriate protection of the information provided by the notifying entity. Without prejudice to the prevention, investigation, detection and prosecution of criminal offences, voluntary reporting shall not result in the imposition of any additional obligations upon the notifying entity to which it would not have been subject had it not submitted the notification.",
+          "text": "2. Member States shall process the notifications referred to in paragraph 1 of this Article in accordance with the procedure laid down in <a href=\"#a:act_eu_nis2_2022_2555:art_23\" class=\"ref\" data-article=\"23\">Article 23</a>. Member States may prioritise the processing of mandatory notifications over voluntary notifications. Where necessary, the CSIRTs and, where applicable, the competent authorities shall provide the single points of contact with the information about notifications received pursuant to this Article, while ensuring the confidentiality and appropriate protection of the information provided by the notifying entity. Without prejudice to the prevention, investigation, detection and prosecution of criminal offences, voluntary reporting shall not result in the imposition of any additional obligations upon the notifying entity to which it would not have been subject had it not submitted the notification.",
           "class": ""
         }
       ]
@@ -1839,12 +1839,12 @@
         },
         {
           "id": "art_31__2",
-          "text": "2. Member States may allow their competent authorities to prioritise supervisory tasks. Such prioritisation shall be based on a risk-based approach. To that end, when exercising their supervisory tasks provided for in Articles <a href=\"#a:act_nis2_2022:art_32\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">32</a> and <a href=\"#a:act_nis2_2022:art_33\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">33</a>, the competent authorities may establish supervisory methodologies allowing for a prioritisation of such tasks following a risk-based approach.",
+          "text": "2. Member States may allow their competent authorities to prioritise supervisory tasks. Such prioritisation shall be based on a risk-based approach. To that end, when exercising their supervisory tasks provided for in Articles <a href=\"#a:act_eu_nis2_2022_2555:art_32\" class=\"ref\" data-article=\"32\">32</a> and <a href=\"#a:act_eu_nis2_2022_2555:art_33\" class=\"ref\" data-article=\"33\">33</a>, the competent authorities may establish supervisory methodologies allowing for a prioritisation of such tasks following a risk-based approach.",
           "class": ""
         },
         {
           "id": "art_31__3",
-          "text": "3. The competent authorities shall work in close cooperation with supervisory authorities under <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2016/679 – opens on EUR-Lex\">Regulation (EU) 2016/679</a> when addressing incidents resulting in personal data breaches, without prejudice to the competence and tasks of the supervisory authorities under that Regulation.",
+          "text": "3. The competent authorities shall work in close cooperation with supervisory authorities under <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679\" class=\"ref\" data-celex=\"32016R0679\" target=\"_blank\" rel=\"noopener\">Regulation (EU) 2016/679</a> when addressing incidents resulting in personal data breaches, without prejudice to the competence and tasks of the supervisory authorities under that Regulation.",
           "class": ""
         },
         {
@@ -1891,7 +1891,7 @@
         },
         {
           "id": "art_32__7",
-          "text": "(e) requests for information necessary to assess the cybersecurity risk-management measures adopted by the entity concerned, including documented cybersecurity policies, as well as compliance with the obligation to submit information to the competent authorities pursuant to <a href=\"#a:act_nis2_2022:art_27\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 27</a>;",
+          "text": "(e) requests for information necessary to assess the cybersecurity risk-management measures adopted by the entity concerned, including documented cybersecurity policies, as well as compliance with the obligation to submit information to the competent authorities pursuant to <a href=\"#a:act_eu_nis2_2022_2555:art_27\" class=\"ref\" data-article=\"27\">Article 27</a>;",
           "class": "list-item-l1"
         },
         {
@@ -1931,7 +1931,7 @@
         },
         {
           "id": "art_32__15",
-          "text": "(d) order the entities concerned to ensure that their cybersecurity risk-management measures comply with <a href=\"#a:act_nis2_2022:art_21\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 21</a> or to fulfil the reporting obligations laid down in <a href=\"#a:act_nis2_2022:art_23\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 23</a>, in a specified manner and within a specified period;",
+          "text": "(d) order the entities concerned to ensure that their cybersecurity risk-management measures comply with <a href=\"#a:act_eu_nis2_2022_2555:art_21\" class=\"ref\" data-article=\"21\">Article 21</a> or to fulfil the reporting obligations laid down in <a href=\"#a:act_eu_nis2_2022_2555:art_23\" class=\"ref\" data-article=\"23\">Article 23</a>, in a specified manner and within a specified period;",
           "class": "list-item-l1"
         },
         {
@@ -1946,7 +1946,7 @@
         },
         {
           "id": "art_32__18",
-          "text": "(g) designate a monitoring officer with well-defined tasks for a determined period of time to oversee the compliance of the entities concerned with Articles <a href=\"#a:act_nis2_2022:art_21\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">21</a> and <a href=\"#a:act_nis2_2022:art_23\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">23</a>;",
+          "text": "(g) designate a monitoring officer with well-defined tasks for a determined period of time to oversee the compliance of the entities concerned with Articles <a href=\"#a:act_eu_nis2_2022_2555:art_21\" class=\"ref\" data-article=\"21\">21</a> and <a href=\"#a:act_eu_nis2_2022_2555:art_23\" class=\"ref\" data-article=\"23\">23</a>;",
           "class": "list-item-l1"
         },
         {
@@ -1956,7 +1956,7 @@
         },
         {
           "id": "art_32__20",
-          "text": "(i) impose, or request the imposition by the relevant bodies, courts or tribunals, in accordance with national law, of an administrative fine pursuant to <a href=\"#a:act_nis2_2022:art_34\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 34</a> in addition to any of the measures referred to in points (a) to (h) of this paragraph.",
+          "text": "(i) impose, or request the imposition by the relevant bodies, courts or tribunals, in accordance with national law, of an administrative fine pursuant to <a href=\"#a:act_eu_nis2_2022_2555:art_34\" class=\"ref\" data-article=\"34\">Article 34</a> in addition to any of the measures referred to in points (a) to (h) of this paragraph.",
           "class": "list-item-l1"
         },
         {
@@ -2011,7 +2011,7 @@
         },
         {
           "id": "art_32__31",
-          "text": "(v) providing false or grossly inaccurate information in relation to cybersecurity risk-management measures or reporting obligations laid down in Articles <a href=\"#a:act_nis2_2022:art_21\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">21</a> and <a href=\"#a:act_nis2_2022:art_23\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">23</a>;",
+          "text": "(v) providing false or grossly inaccurate information in relation to cybersecurity risk-management measures or reporting obligations laid down in Articles <a href=\"#a:act_eu_nis2_2022_2555:art_21\" class=\"ref\" data-article=\"21\">21</a> and <a href=\"#a:act_eu_nis2_2022_2555:art_23\" class=\"ref\" data-article=\"23\">23</a>;",
           "class": "list-item-l2"
         },
         {
@@ -2056,12 +2056,12 @@
         },
         {
           "id": "art_32__40",
-          "text": "9. Member States shall ensure that their competent authorities under this Directive inform the relevant competent authorities within the same Member State under <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2557\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Directive (EU) 2022/2557 – opens on EUR-Lex\">Directive (EU) 2022/2557</a> when exercising their supervisory and enforcement powers aiming to ensure compliance of an entity identified as a critical entity under <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2557\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Directive (EU) 2022/2557 – opens on EUR-Lex\">Directive (EU) 2022/2557</a> with this Directive. Where appropriate, the competent authorities under <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2557\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Directive (EU) 2022/2557 – opens on EUR-Lex\">Directive (EU) 2022/2557</a> may request the competent authorities under this Directive to exercise their supervisory and enforcement powers in relation to an entity that is identified as a critical entity under <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2557\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Directive (EU) 2022/2557 – opens on EUR-Lex\">Directive (EU) 2022/2557</a>.",
+          "text": "9. Member States shall ensure that their competent authorities under this Directive inform the relevant competent authorities within the same Member State under <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2557\" class=\"ref\" data-celex=\"32022L2557\" target=\"_blank\" rel=\"noopener\">Directive (EU) 2022/2557</a> when exercising their supervisory and enforcement powers aiming to ensure compliance of an entity identified as a critical entity under <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2557\" class=\"ref\" data-celex=\"32022L2557\" target=\"_blank\" rel=\"noopener\">Directive (EU) 2022/2557</a> with this Directive. Where appropriate, the competent authorities under <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2557\" class=\"ref\" data-celex=\"32022L2557\" target=\"_blank\" rel=\"noopener\">Directive (EU) 2022/2557</a> may request the competent authorities under this Directive to exercise their supervisory and enforcement powers in relation to an entity that is identified as a critical entity under <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022L2557\" class=\"ref\" data-celex=\"32022L2557\" target=\"_blank\" rel=\"noopener\">Directive (EU) 2022/2557</a>.",
           "class": ""
         },
         {
           "id": "art_32__41",
-          "text": "10. Member States shall ensure that their competent authorities under this Directive cooperate with the relevant competent authorities of the Member State concerned under <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a>. In particular, Member States shall ensure that their competent authorities under this Directive inform the Oversight Forum established pursuant to <a href=\"#a:act_nis2_2022:art_32\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 32</a>(1) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a> when exercising their supervisory and enforcement powers aimed at ensuring compliance of an essential entity that is designated as a critical ICT third-party service provider pursuant to <a href=\"#a:act_nis2_2022:art_31\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 31</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a>. with this Directive.",
+          "text": "10. Member States shall ensure that their competent authorities under this Directive cooperate with the relevant competent authorities of the Member State concerned under <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"ref\" data-celex=\"32022R2554\" target=\"_blank\" rel=\"noopener\">Regulation (EU) 2022/2554</a>. In particular, Member States shall ensure that their competent authorities under this Directive inform the Oversight Forum established pursuant to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"ref\" data-celex=\"32022R2554\" data-article=\"32\" target=\"_blank\" rel=\"noopener\">Article 32</a>(1) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"ref\" data-celex=\"32022R2554\" target=\"_blank\" rel=\"noopener\">Regulation (EU) 2022/2554</a> when exercising their supervisory and enforcement powers aimed at ensuring compliance of an essential entity that is designated as a critical ICT third-party service provider pursuant to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"ref\" data-celex=\"32022R2554\" data-article=\"31\" target=\"_blank\" rel=\"noopener\">Article 31</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"ref\" data-celex=\"32022R2554\" target=\"_blank\" rel=\"noopener\">Regulation (EU) 2022/2554</a>. with this Directive.",
           "class": ""
         }
       ]
@@ -2073,7 +2073,7 @@
       "paragraphs": [
         {
           "id": "art_33__1",
-          "text": "1. When provided with evidence, indication or information that an important entity allegedly does not comply with this Directive, in particular Articles <a href=\"#a:act_nis2_2022:art_21\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">21</a> and <a href=\"#a:act_nis2_2022:art_23\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">23</a> thereof, Member States shall ensure that the competent authorities take action, where necessary, through ex post supervisory measures. Member States shall ensure that those measures are effective, proportionate and dissuasive, taking into account the circumstances of each individual case.",
+          "text": "1. When provided with evidence, indication or information that an important entity allegedly does not comply with this Directive, in particular Articles <a href=\"#a:act_eu_nis2_2022_2555:art_21\" class=\"ref\" data-article=\"21\">21</a> and <a href=\"#a:act_eu_nis2_2022_2555:art_23\" class=\"ref\" data-article=\"23\">23</a> thereof, Member States shall ensure that the competent authorities take action, where necessary, through ex post supervisory measures. Member States shall ensure that those measures are effective, proportionate and dissuasive, taking into account the circumstances of each individual case.",
           "class": ""
         },
         {
@@ -2098,7 +2098,7 @@
         },
         {
           "id": "art_33__6",
-          "text": "(d) requests for information necessary to assess, ex post , the cybersecurity risk-management measures adopted by the entity concerned, including documented cybersecurity policies, as well as compliance with the obligation to submit information to the competent authorities pursuant to <a href=\"#a:act_nis2_2022:art_27\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 27</a>;",
+          "text": "(d) requests for information necessary to assess, ex post , the cybersecurity risk-management measures adopted by the entity concerned, including documented cybersecurity policies, as well as compliance with the obligation to submit information to the competent authorities pursuant to <a href=\"#a:act_eu_nis2_2022_2555:art_27\" class=\"ref\" data-article=\"27\">Article 27</a>;",
           "class": "list-item-l1"
         },
         {
@@ -2138,7 +2138,7 @@
         },
         {
           "id": "art_33__14",
-          "text": "(d) order the entities concerned to ensure that their cybersecurity risk-management measures comply with <a href=\"#a:act_nis2_2022:art_21\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 21</a> or to fulfil the reporting obligations laid down in <a href=\"#a:act_nis2_2022:art_23\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 23</a>, in a specified manner and within a specified period;",
+          "text": "(d) order the entities concerned to ensure that their cybersecurity risk-management measures comply with <a href=\"#a:act_eu_nis2_2022_2555:art_21\" class=\"ref\" data-article=\"21\">Article 21</a> or to fulfil the reporting obligations laid down in <a href=\"#a:act_eu_nis2_2022_2555:art_23\" class=\"ref\" data-article=\"23\">Article 23</a>, in a specified manner and within a specified period;",
           "class": "list-item-l1"
         },
         {
@@ -2158,17 +2158,17 @@
         },
         {
           "id": "art_33__18",
-          "text": "(h) impose, or request the imposition by the relevant bodies, courts or tribunals, in accordance with national law, of an administrative fine pursuant to <a href=\"#a:act_nis2_2022:art_34\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 34</a> in addition to any of the measures referred to in points (a) to (g) of this paragraph.",
+          "text": "(h) impose, or request the imposition by the relevant bodies, courts or tribunals, in accordance with national law, of an administrative fine pursuant to <a href=\"#a:act_eu_nis2_2022_2555:art_34\" class=\"ref\" data-article=\"34\">Article 34</a> in addition to any of the measures referred to in points (a) to (g) of this paragraph.",
           "class": "list-item-l1"
         },
         {
           "id": "art_33__19",
-          "text": "5. <a href=\"#a:act_nis2_2022:art_32\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 32</a>(6), (7) and (8) shall apply mutatis mutandis to the supervisory and enforcement measures provided for in this Article for important entities.",
+          "text": "5. <a href=\"#a:act_eu_nis2_2022_2555:art_32\" class=\"ref\" data-article=\"32\">Article 32</a>(6), (7) and (8) shall apply mutatis mutandis to the supervisory and enforcement measures provided for in this Article for important entities.",
           "class": ""
         },
         {
           "id": "art_33__20",
-          "text": "6. Member States shall ensure that their competent authorities under this Directive cooperate with the relevant competent authorities of the Member State concerned under <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a>. In particular, Member States shall ensure that their competent authorities under this Directive inform the Oversight Forum established pursuant to <a href=\"#a:act_nis2_2022:art_32\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 32</a>(1) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a> when exercising their supervisory and enforcement powers aimed at ensuring compliance of an important entity that is designated as a critical ICT third-party service provider pursuant to <a href=\"#a:act_nis2_2022:art_31\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 31</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2022/2554 – opens on EUR-Lex\">Regulation (EU) 2022/2554</a>. with this Directive.",
+          "text": "6. Member States shall ensure that their competent authorities under this Directive cooperate with the relevant competent authorities of the Member State concerned under <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"ref\" data-celex=\"32022R2554\" target=\"_blank\" rel=\"noopener\">Regulation (EU) 2022/2554</a>. In particular, Member States shall ensure that their competent authorities under this Directive inform the Oversight Forum established pursuant to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"ref\" data-celex=\"32022R2554\" data-article=\"32\" target=\"_blank\" rel=\"noopener\">Article 32</a>(1) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"ref\" data-celex=\"32022R2554\" target=\"_blank\" rel=\"noopener\">Regulation (EU) 2022/2554</a> when exercising their supervisory and enforcement powers aimed at ensuring compliance of an important entity that is designated as a critical ICT third-party service provider pursuant to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"ref\" data-celex=\"32022R2554\" data-article=\"31\" target=\"_blank\" rel=\"noopener\">Article 31</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"ref\" data-celex=\"32022R2554\" target=\"_blank\" rel=\"noopener\">Regulation (EU) 2022/2554</a>. with this Directive.",
           "class": ""
         }
       ]
@@ -2185,22 +2185,22 @@
         },
         {
           "id": "art_34__2",
-          "text": "2. Administrative fines shall be imposed in addition to any of the measures referred to in <a href=\"#a:act_nis2_2022:art_32\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 32</a>(4), points (a) to (h), <a href=\"#a:act_nis2_2022:art_32\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 32</a>(5) and <a href=\"#a:act_nis2_2022:art_33\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 33</a>(4), points (a) to (g).",
+          "text": "2. Administrative fines shall be imposed in addition to any of the measures referred to in <a href=\"#a:act_eu_nis2_2022_2555:art_32\" class=\"ref\" data-article=\"32\">Article 32</a>(4), points (a) to (h), <a href=\"#a:act_eu_nis2_2022_2555:art_32\" class=\"ref\" data-article=\"32\">Article 32</a>(5) and <a href=\"#a:act_eu_nis2_2022_2555:art_33\" class=\"ref\" data-article=\"33\">Article 33</a>(4), points (a) to (g).",
           "class": ""
         },
         {
           "id": "art_34__3",
-          "text": "3. When deciding whether to impose an administrative fine and deciding on its amount in each individual case, due regard shall be given, as a minimum, to the elements provided for in <a href=\"#a:act_nis2_2022:art_32\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 32</a>(7).",
+          "text": "3. When deciding whether to impose an administrative fine and deciding on its amount in each individual case, due regard shall be given, as a minimum, to the elements provided for in <a href=\"#a:act_eu_nis2_2022_2555:art_32\" class=\"ref\" data-article=\"32\">Article 32</a>(7).",
           "class": ""
         },
         {
           "id": "art_34__4",
-          "text": "4. Member States shall ensure that where they infringe <a href=\"#a:act_nis2_2022:art_21\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 21</a> or 23, essential entities are subject, in accordance with paragraphs 2 and 3 of this Article, to administrative fines of a maximum of at least EUR 10 000 000 or of a maximum of at least 2 % of the total worldwide annual turnover in the preceding financial year of the undertaking to which the essential entity belongs, whichever is higher.",
+          "text": "4. Member States shall ensure that where they infringe Article <a href=\"#a:act_eu_nis2_2022_2555:art_21\" class=\"ref\" data-article=\"21\">21</a> or <a href=\"#a:act_eu_nis2_2022_2555:art_23\" class=\"ref\" data-article=\"23\">23</a>, essential entities are subject, in accordance with paragraphs 2 and 3 of this Article, to administrative fines of a maximum of at least EUR 10 000 000 or of a maximum of at least 2 % of the total worldwide annual turnover in the preceding financial year of the undertaking to which the essential entity belongs, whichever is higher.",
           "class": ""
         },
         {
           "id": "art_34__5",
-          "text": "5. Member States shall ensure that where they infringe <a href=\"#a:act_nis2_2022:art_21\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 21</a> or 23, important entities are subject, in accordance with paragraphs 2 and 3 of this Article, to administrative fines of a maximum of at least EUR 7 000 000 or of a maximum of at least 1,4 % of the total worldwide annual turnover in the preceding financial year of the undertaking to which the important entity belongs, whichever is higher.",
+          "text": "5. Member States shall ensure that where they infringe Article <a href=\"#a:act_eu_nis2_2022_2555:art_21\" class=\"ref\" data-article=\"21\">21</a> or <a href=\"#a:act_eu_nis2_2022_2555:art_23\" class=\"ref\" data-article=\"23\">23</a>, important entities are subject, in accordance with paragraphs 2 and 3 of this Article, to administrative fines of a maximum of at least EUR 7 000 000 or of a maximum of at least 1,4 % of the total worldwide annual turnover in the preceding financial year of the undertaking to which the important entity belongs, whichever is higher.",
           "class": ""
         },
         {
@@ -2210,7 +2210,7 @@
         },
         {
           "id": "art_34__7",
-          "text": "7. Without prejudice to the powers of the competent authorities pursuant to Articles <a href=\"#a:act_nis2_2022:art_32\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">32</a> and <a href=\"#a:act_nis2_2022:art_33\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">33</a>, each Member State may lay down the rules on whether and to what extent administrative fines may be imposed on public administration entities.",
+          "text": "7. Without prejudice to the powers of the competent authorities pursuant to Articles <a href=\"#a:act_eu_nis2_2022_2555:art_32\" class=\"ref\" data-article=\"32\">32</a> and <a href=\"#a:act_eu_nis2_2022_2555:art_33\" class=\"ref\" data-article=\"33\">33</a>, each Member State may lay down the rules on whether and to what extent administrative fines may be imposed on public administration entities.",
           "class": ""
         },
         {
@@ -2227,17 +2227,17 @@
       "paragraphs": [
         {
           "id": "art_35__1",
-          "text": "1. Where the competent authorities become aware in the course of supervision or enforcement that the infringement by an essential or important entity of the obligations laid down in Articles <a href=\"#a:act_nis2_2022:art_21\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">21</a> and <a href=\"#a:act_nis2_2022:art_23\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">23</a> of this Directive can entail a personal data breach, as defined in <a href=\"#a:act_nis2_2022:art_4\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 4</a>, point (12), of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2016/679 – opens on EUR-Lex\">Regulation (EU) 2016/679</a> which is to be notified pursuant to <a href=\"#a:act_nis2_2022:art_33\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 33</a> of that Regulation, they shall, without undue delay, inform the supervisory authorities as referred to in Article 55 or 56 of that Regulation.",
+          "text": "1. Where the competent authorities become aware in the course of supervision or enforcement that the infringement by an essential or important entity of the obligations laid down in Articles <a href=\"#a:act_eu_nis2_2022_2555:art_21\" class=\"ref\" data-article=\"21\">21</a> and <a href=\"#a:act_eu_nis2_2022_2555:art_23\" class=\"ref\" data-article=\"23\">23</a> of this Directive can entail a personal data breach, as defined in <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679\" class=\"ref\" data-celex=\"32016R0679\" data-article=\"4\" target=\"_blank\" rel=\"noopener\">Article 4</a>, point (12), of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679\" class=\"ref\" data-celex=\"32016R0679\" target=\"_blank\" rel=\"noopener\">Regulation (EU) 2016/679</a> which is to be notified pursuant to Article 33 of that Regulation, they shall, without undue delay, inform the supervisory authorities as referred to in Article 55 or 56 of that Regulation.",
           "class": ""
         },
         {
           "id": "art_35__2",
-          "text": "2. Where the supervisory authorities as referred to in Article 55 or 56 of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2016/679 – opens on EUR-Lex\">Regulation (EU) 2016/679</a> impose an administrative fine pursuant to Article 58(2), point (i), of that Regulation, the competent authorities shall not impose an administrative fine pursuant to <a href=\"#a:act_nis2_2022:art_34\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 34</a> of this Directive for an infringement referred to in paragraph 1 of this Article arising from the same conduct as that which was the subject of the administrative fine under Article 58(2), point (i), of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2016/679 – opens on EUR-Lex\">Regulation (EU) 2016/679</a>. The competent authorities may, however, impose the enforcement measures provided for in <a href=\"#a:act_nis2_2022:art_32\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 32</a>(4), points (a) to (h), <a href=\"#a:act_nis2_2022:art_32\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 32</a>(5) and <a href=\"#a:act_nis2_2022:art_33\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 33</a>(4), points (a) to (g), of this Directive.",
+          "text": "2. Where the supervisory authorities as referred to in Article <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679\" class=\"ref\" data-celex=\"32016R0679\" data-article=\"55\" target=\"_blank\" rel=\"noopener\">55</a> or <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679\" class=\"ref\" data-celex=\"32016R0679\" data-article=\"56\" target=\"_blank\" rel=\"noopener\">56</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679\" class=\"ref\" data-celex=\"32016R0679\" target=\"_blank\" rel=\"noopener\">Regulation (EU) 2016/679</a> impose an administrative fine pursuant to Article 58(2), point (i), of that Regulation, the competent authorities shall not impose an administrative fine pursuant to <a href=\"#a:act_eu_nis2_2022_2555:art_34\" class=\"ref\" data-article=\"34\">Article 34</a> of this Directive for an infringement referred to in paragraph 1 of this Article arising from the same conduct as that which was the subject of the administrative fine under <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679\" class=\"ref\" data-celex=\"32016R0679\" data-article=\"58\" target=\"_blank\" rel=\"noopener\">Article 58</a>(2), point (i), of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679\" class=\"ref\" data-celex=\"32016R0679\" target=\"_blank\" rel=\"noopener\">Regulation (EU) 2016/679</a>. The competent authorities may, however, impose the enforcement measures provided for in <a href=\"#a:act_eu_nis2_2022_2555:art_32\" class=\"ref\" data-article=\"32\">Article 32</a>(4), points (a) to (h), <a href=\"#a:act_eu_nis2_2022_2555:art_32\" class=\"ref\" data-article=\"32\">Article 32</a>(5) and <a href=\"#a:act_eu_nis2_2022_2555:art_33\" class=\"ref\" data-article=\"33\">Article 33</a>(4), points (a) to (g), of this Directive.",
           "class": ""
         },
         {
           "id": "art_35__3",
-          "text": "3. Where the supervisory authority competent pursuant to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) 2016/679 – opens on EUR-Lex\">Regulation (EU) 2016/679</a> is established in another Member State than the competent authority, the competent authority shall inform the supervisory authority established in its own Member State of the potential data breach referred to in paragraph 1.",
+          "text": "3. Where the supervisory authority competent pursuant to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R0679\" class=\"ref\" data-celex=\"32016R0679\" target=\"_blank\" rel=\"noopener\">Regulation (EU) 2016/679</a> is established in another Member State than the competent authority, the competent authority shall inform the supervisory authority established in its own Member State of the potential data breach referred to in paragraph 1.",
           "class": ""
         }
       ]
@@ -2298,12 +2298,12 @@
         },
         {
           "id": "art_38__2",
-          "text": "2. The power to adopt delegated acts referred to in <a href=\"#a:act_nis2_2022:art_24\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 24</a>(2) shall be conferred on the Commission for a period of five years from 16 January 2023.",
+          "text": "2. The power to adopt delegated acts referred to in <a href=\"#a:act_eu_nis2_2022_2555:art_24\" class=\"ref\" data-article=\"24\">Article 24</a>(2) shall be conferred on the Commission for a period of five years from 16 January 2023.",
           "class": ""
         },
         {
           "id": "art_38__3",
-          "text": "3. The delegation of power referred to in <a href=\"#a:act_nis2_2022:art_24\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 24</a>(2) may be revoked at any time by the European Parliament or by the Council. A decision to revoke shall put an end to the delegation of the power specified in that decision. It shall take effect the day following the publication of the decision in the Official Journal of the European Union or at a later date specified therein. It shall not affect the validity of any delegated acts already in force.",
+          "text": "3. The delegation of power referred to in <a href=\"#a:act_eu_nis2_2022_2555:art_24\" class=\"ref\" data-article=\"24\">Article 24</a>(2) may be revoked at any time by the European Parliament or by the Council. A decision to revoke shall put an end to the delegation of the power specified in that decision. It shall take effect the day following the publication of the decision in the Official Journal of the European Union or at a later date specified therein. It shall not affect the validity of any delegated acts already in force.",
           "class": ""
         },
         {
@@ -2318,7 +2318,7 @@
         },
         {
           "id": "art_38__6",
-          "text": "6. A delegated act adopted pursuant to <a href=\"#a:act_nis2_2022:art_24\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 24</a>(2) shall enter into force only if no objection has been expressed either by the European Parliament or by the Council within a period of two months of notification of that act to the European Parliament and to the Council or if, before the expiry of that period, the European Parliament and the Council have both informed the Commission that they will not object. That period shall be extended by two months at the initiative of the European Parliament or of the Council.",
+          "text": "6. A delegated act adopted pursuant to <a href=\"#a:act_eu_nis2_2022_2555:art_24\" class=\"ref\" data-article=\"24\">Article 24</a>(2) shall enter into force only if no objection has been expressed either by the European Parliament or by the Council within a period of two months of notification of that act to the European Parliament and to the Council or if, before the expiry of that period, the European Parliament and the Council have both informed the Commission that they will not object. That period shall be extended by two months at the initiative of the European Parliament or of the Council.",
           "class": ""
         }
       ]
@@ -2330,12 +2330,12 @@
       "paragraphs": [
         {
           "id": "art_39__1",
-          "text": "1. The Commission shall be assisted by a committee. That committee shall be a committee within the meaning of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011R0182\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) No 182/2011 – opens on EUR-Lex\">Regulation (EU) No 182/2011</a>.",
+          "text": "1. The Commission shall be assisted by a committee. That committee shall be a committee within the meaning of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011R0182\" class=\"ref\" data-celex=\"32011R0182\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 182/2011</a>.",
           "class": ""
         },
         {
           "id": "art_39__2",
-          "text": "2. Where reference is made to this paragraph, <a href=\"#a:act_nis2_2022:art_5\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 5</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011R0182\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) No 182/2011 – opens on EUR-Lex\">Regulation (EU) No 182/2011</a> shall apply.",
+          "text": "2. Where reference is made to this paragraph, <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011R0182\" class=\"ref\" data-celex=\"32011R0182\" data-article=\"5\" target=\"_blank\" rel=\"noopener\">Article 5</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011R0182\" class=\"ref\" data-celex=\"32011R0182\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 182/2011</a> shall apply.",
           "class": ""
         },
         {
@@ -2381,7 +2381,7 @@
       "paragraphs": [
         {
           "id": "art_42__1",
-          "text": "In <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0910\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Regulation (EU) No 910/2014 – opens on EUR-Lex\">Regulation (EU) No 910/2014</a>, <a href=\"#a:act_nis2_2022:art_19\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">Article 19</a> is deleted with effect from 18 October 2024.",
+          "text": "In <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0910\" class=\"ref\" data-celex=\"32014R0910\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 910/2014</a>, <a href=\"#a:act_eu_nis2_2022_2555:art_19\" class=\"ref\" data-article=\"19\">Article 19</a> is deleted with effect from 18 October 2024.",
           "class": ""
         }
       ]
@@ -2393,7 +2393,7 @@
       "paragraphs": [
         {
           "id": "art_43__1",
-          "text": "In <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32018L1972\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Directive (EU) 2018/1972 – opens on EUR-Lex\">Directive (EU) 2018/1972</a>, Articles <a href=\"#a:act_nis2_2022:art_40\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">40</a> and <a href=\"#a:act_nis2_2022:art_41\" class=\"internal-article-link\" target=\"_blank\" rel=\"noopener\">41</a> are deleted with effect from 18 October 2024.",
+          "text": "In <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32018L1972\" class=\"ref\" data-celex=\"32018L1972\" target=\"_blank\" rel=\"noopener\">Directive (EU) 2018/1972</a>, Articles <a href=\"#a:act_eu_nis2_2022_2555:art_40\" class=\"ref\" data-article=\"40\">40</a> and <a href=\"#a:act_eu_nis2_2022_2555:art_41\" class=\"ref\" data-article=\"41\">41</a> are deleted with effect from 18 October 2024.",
           "class": ""
         }
       ]
@@ -2405,7 +2405,7 @@
       "paragraphs": [
         {
           "id": "art_44__1",
-          "text": "<a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016L1148\" class=\"legal-link\" target=\"_blank\" rel=\"noopener noreferrer\" data-preview=\"Directive (EU) 2016/1148 – opens on EUR-Lex\">Directive (EU) 2016/1148</a> is repealed with effect from 18 October 2024. References to the repealed Directive shall be construed as references to this Directive and shall be read in accordance with the correlation table set out in Annex III.",
+          "text": "<a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016L1148\" class=\"ref\" data-celex=\"32016L1148\" target=\"_blank\" rel=\"noopener\">Directive (EU) 2016/1148</a> is repealed with effect from 18 October 2024. References to the repealed Directive shall be construed as references to this Directive and shall be read in accordance with the correlation table set out in Annex III.",
           "class": ""
         }
       ]
