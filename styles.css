@@ -254,9 +254,15 @@ textarea {
   flex: 0 0 auto;
   font-family: var(--font-sans);
   font-size: 1.6rem;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: -0.01em;
   color: var(--accent-blue);
+}
+
+.brand-prefix {
+  font-weight: 700;
+  color: var(--accent-blue);
+  margin-right: 0.3em;
 }
 
 .brand-name-accent {
