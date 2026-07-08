@@ -95,3 +95,23 @@ jurisdiction only needs a citation matcher in `link_references.py` (emitting
 
 No app-code changes are needed — the id scheme, `authToActId`, and resolver are
 data-driven. Only a new *citation style* needs a matcher in `tools/link_references.py`.
+
+## Index database
+
+`data/index.db` is a generated SQLite index used by tooling/server-side workflows.
+It mirrors the flat `data/index.json` registry and stores richer metadata
+(acts, bundles, tags, and extracted cross-references).
+
+Initialise/update it with:
+
+```bash
+python3 tools/build_index_db.py
+```
+
+First run creates `data/index.db` from `schema.sql` and seeds all rows.
+Subsequent runs upsert current acts/bundles and re-sync tags, references, and
+bundle membership (including removals from `data/index.json`).
+
+`data/index.json` remains the browser app source of truth for loaded content.
+The DB is a derived index for querying/integration, and the script also writes
+`data/index_meta.json` (lightweight `id -> celex` metadata for runtime lookups).

@@ -20,9 +20,11 @@ The pass is idempotent: it first unwraps any anchors it previously produced
 (``ref``) as well as the legacy ``internal-article-link`` / ``legal-link``
 anchors, then re-links from the plain text.
 """
+import argparse
 import json
 import os
 import re
+import subprocess
 import sys
 
 APP = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -316,9 +318,25 @@ def process_act(path, act_id):
     return n_refs
 
 
+def parse_args(argv):
+    parser = argparse.ArgumentParser(description="Relink cross-references in act JSON files.")
+    parser.add_argument(
+        "only",
+        nargs="*",
+        help="Optional act ids or paths to process (default: all acts in data/index.json).",
+    )
+    parser.add_argument(
+        "--update-db",
+        action="store_true",
+        help="Run tools/build_index_db.py after relinking to sync data/index.db.",
+    )
+    return parser.parse_args(argv)
+
+
 def main(argv):
+    args = parse_args(argv)
     index = json.load(open(INDEX))
-    only = set(argv)
+    only = set(args.only)
     total = 0
     for entry in index["acts"]:
         if only and entry["id"] not in only and entry["path"] not in only:
@@ -328,6 +346,12 @@ def main(argv):
         total += refs
         print(f"{entry['id']:28} refs={refs}")
     print(f"total ref anchors: {total}")
+    if args.update_db:
+        build_script = os.path.join(APP, "tools", "build_index_db.py")
+        print("syncing sqlite index database ...")
+        subprocess.run([sys.executable, build_script], check=True)
+    else:
+        print("tip: run `python3 tools/build_index_db.py` (or use --update-db) to sync index.db")
 
 
 if __name__ == "__main__":
