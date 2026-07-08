@@ -30,8 +30,9 @@ let sidePanelScrollPosition = 0;
 let allActs = [];
 let allBundles = [];
 let lastSearchQuery = '';
+let celexToActId = {};
 
-const legalTooltipSelectors = '.legal-reference, .legal-link, .internal-article-link';
+const legalTooltipSelectors = '.legal-reference, .legal-link, .internal-article-link, .ref';
 const LEGAL_TOOLTIP_MAX_CHARS = 1000;
 let legalTooltipElement = null;
 let legalTooltipContent = null;
@@ -85,8 +86,8 @@ const getLegalTooltipText = (element) => {
   const preview = element.getAttribute('data-preview');
   if (preview && preview.trim()) {
     text = preview.trim();
-  } else if (element.matches && element.matches('.internal-article-link')) {
-    text = getInternalReferencePreview(element);
+  } else if (element.matches && element.matches('.internal-article-link, .ref')) {
+    text = getReferencePreview(element);
   } else {
     text = element.textContent ? element.textContent.trim() : '';
   }
@@ -103,29 +104,50 @@ const htmlToPlainText = (html) => {
   return (tmp.textContent || '').replace(/\u00a0/g, ' ').replace(/[ \t]+\n/g, '\n').trim();
 };
 
-// Build a preview from an internal cross-reference (#art_x or #art_x__n).
-const getInternalReferencePreview = (element) => {
-  const href = element.getAttribute('href') || '';
-  if (!href.startsWith('#')) {
-    return element.textContent ? element.textContent.trim() : '';
+// Build a preview for a reference anchor. Handles both cross-act references
+// (data-celex [+ data-article]) and same-act hash references (#a:act:art).
+const getReferencePreview = (element) => {
+  const celex = element.dataset ? element.dataset.celex : null;
+  const articleAttr = element.dataset ? element.dataset.article : null;
+  const fallback = element.textContent ? element.textContent.trim() : '';
+
+  let targetActId = null;
+  let articleId = null;
+  let paragraphId = null;
+
+  if (celex) {
+    // Cross-act: resolve the CELEX to a hosted act, else it's an EUR-Lex link.
+    targetActId = celexToActId[celex];
+    if (!targetActId) {
+      return `${fallback} — opens on EUR-Lex`;
+    }
+    articleId = articleAttr ? artIdOf(articleAttr) : null;
+  } else {
+    // Same-act: read the in-app hash href.
+    const href = element.getAttribute('href') || '';
+    if (!href.startsWith('#')) {
+      return fallback;
+    }
+    const parsed = parseHashTarget(href.slice(1));
+    if (!parsed.articleId) {
+      return fallback;
+    }
+    targetActId = parsed.parentActId || getCurrentActId();
+    articleId = parsed.articleId;
+    paragraphId = parsed.paragraphId;
   }
 
-  const { articleId, paragraphId } = parseHashTarget(href.slice(1));
+  // Act-level reference (no article): preview the act itself.
   if (!articleId) {
-    return element.textContent ? element.textContent.trim() : '';
+    const act = allActs.find((a) => a.id === targetActId);
+    return act ? [act.title, getHeadingText(act)].filter(Boolean).join(' — ') : fallback;
   }
 
-  // The same article id can exist across several acts, so resolve within the
-  // currently open act first to avoid showing a preview from the wrong regulation.
-  const currentActId = currentSidebarSelectionKey && currentSidebarSelectionKey.startsWith('act:')
-    ? currentSidebarSelectionKey.slice(4)
-    : null;
-
-  const article = (currentActId
-    ? allArticles.find((item) => item.id === articleId && item._actId === currentActId)
+  const article = (targetActId
+    ? allArticles.find((item) => item.id === articleId && item._actId === targetActId)
     : null) || allArticles.find((item) => item.id === articleId);
   if (!article) {
-    return element.textContent ? element.textContent.trim() : '';
+    return fallback;
   }
 
   const titleLine = [article.title, getHeadingText(article)].filter(Boolean).join(' — ');
@@ -357,6 +379,13 @@ const initialiseLegalTooltips = () => {
 const getSummaryText = (article) => (article?.summary || article?.summaryTitle || '').trim();
 const getHeadingText = (article) => (article?.heading || '').trim();
 const getSubtitleText = (item) => ((item?.meta && item.meta.subtitle) ? `${item.meta.subtitle}`.trim() : '');
+// Article id from a printed article number (mirrors the converter's art_id_of).
+const artIdOf = (n) => 'art_' + String(n == null ? '' : n)
+  .replace(/[^0-9A-Za-z]+/g, '_').replace(/^_+|_+$/g, '').toLowerCase();
+// The act currently open in the reading pane, if any.
+const getCurrentActId = () => (currentSidebarSelectionKey && currentSidebarSelectionKey.startsWith('act:'))
+  ? currentSidebarSelectionKey.slice(4)
+  : null;
 const stripHtml = (value) => (value || '').replace(/<[^>]*>/g, ' ');
 const normaliseForSearch = (value) => (
   `${value || ''}`
@@ -1487,11 +1516,37 @@ const handleRoute = (hashId) => {
 };
 
 const handleInternalLinkClick = (event) => {
-  const link = event.target.closest('a.internal-article-link');
+  const link = event.target.closest('a.ref, a.internal-article-link');
   if (!link) {
     return;
   }
 
+  // Cross-act reference: resolve the CELEX to a hosted act, else fall through
+  // and let the anchor's EUR-Lex href open in a new tab.
+  const celex = link.dataset ? link.dataset.celex : null;
+  if (celex) {
+    const targetActId = celexToActId[celex];
+    if (!targetActId) {
+      return;
+    }
+    event.preventDefault();
+    const articleAttr = link.dataset.article;
+    if (articleAttr) {
+      const articleId = artIdOf(articleAttr);
+      selectArticle(articleId, {
+        updateHash: false,
+        focus: true,
+        parentActId: targetActId,
+      });
+      updateLocationHash(`a:${targetActId}:${articleId}`);
+    } else {
+      handleRoute(`act:${targetActId}`);
+      updateLocationHash(`act:${targetActId}`);
+    }
+    return;
+  }
+
+  // Same-act (or legacy) reference: an in-app hash target.
   const href = link.getAttribute('href') || '';
   if (!href.startsWith('#')) {
     return;
@@ -1506,10 +1561,7 @@ const handleInternalLinkClick = (event) => {
     return;
   }
 
-  const currentActId = currentSidebarSelectionKey && currentSidebarSelectionKey.startsWith('act:')
-    ? currentSidebarSelectionKey.slice(4)
-    : null;
-  const scopedParentActId = parentActId || currentActId;
+  const scopedParentActId = parentActId || getCurrentActId();
 
   selectArticle(articleId, {
     updateHash: false,
@@ -1695,6 +1747,14 @@ const loadRegistry = async () => {
 // Load each act and bundle referenced by the registry. Returns { acts, bundles }.
 const loadAllData = async () => {
   const registry = await loadRegistry();
+
+  // CELEX -> app act id: the runtime bridge for cross-act references.
+  celexToActId = {};
+  (registry.acts || []).forEach((entry) => {
+    if (entry && entry.celex) {
+      celexToActId[entry.celex] = entry.id;
+    }
+  });
 
   const acts = [];
   const bundles = [];
