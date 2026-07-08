@@ -5,11 +5,11 @@
   "description": "Digital Operational Resilience Act (DORA) and its technical standards.",
   "members": [
     {
-      "ref": "act_dora_core",
+      "ref": "act_eu_dora_reg_2022_2554",
       "label": "DORA Regulation"
     },
     {
-      "ref": "act_dora_2556",
+      "ref": "act_eu_dora_dir_2022_2556",
       "label": "DORA Directive"
     },
     {
@@ -19,35 +19,35 @@
       "description": "Regulatory Technical Standards under DORA.",
       "members": [
         {
-          "ref": "act_dora_rts1",
+          "ref": "act_eu_dora_rts_2024_1774",
           "label": "RTS 1"
         },
         {
-          "ref": "act_dora_rts2",
+          "ref": "act_eu_dora_rts_2024_1772",
           "label": "RTS 2"
         },
         {
-          "ref": "act_dora_rts3",
+          "ref": "act_eu_dora_rts_2025_0301",
           "label": "RTS 3"
         },
         {
-          "ref": "act_dora_rts4",
+          "ref": "act_eu_dora_rts_2025_1190",
           "label": "RTS 4"
         },
         {
-          "ref": "act_dora_rts5",
+          "ref": "act_eu_dora_rts_2024_1773",
           "label": "RTS 5"
         },
         {
-          "ref": "act_dora_rts6",
+          "ref": "act_eu_dora_rts_2025_0532",
           "label": "RTS 6"
         },
         {
-          "ref": "act_dora_rts7",
+          "ref": "act_eu_dora_rts_2025_0295",
           "label": "RTS 7"
         },
         {
-          "ref": "act_dora_rts8",
+          "ref": "act_eu_dora_rts_2025_0420",
           "label": "RTS 8"
         }
       ]
@@ -59,11 +59,11 @@
       "description": "Implementing Technical Standards under DORA.",
       "members": [
         {
-          "ref": "act_dora_its1",
+          "ref": "act_eu_dora_its_2025_0302",
           "label": "ITS 1"
         },
         {
-          "ref": "act_dora_its2",
+          "ref": "act_eu_dora_its_2024_2956",
           "label": "ITS 2"
         }
       ]
