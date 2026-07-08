@@ -366,6 +366,29 @@ const normaliseForSearch = (value) => (
 );
 const getSidebarItemKey = (item) => `${item?.type || 'article'}:${item?.id || ''}`;
 
+// Jurisdiction code shown as a prefix on act rows (EU, DE, ...).
+const getJurisdiction = (item) => {
+  if (!item || item.type !== 'act') return '';
+  return (item.meta && item.meta.jurisdiction) || 'EU';
+};
+
+// Fill a sidebar title span: optional jurisdiction badge + the item's title.
+const setListTitle = (span, item) => {
+  span.textContent = '';
+  const jurisdiction = getJurisdiction(item);
+  if (jurisdiction) {
+    const badge = document.createElement('span');
+    badge.className = 'list-jurisdiction';
+    badge.textContent = jurisdiction;
+    span.appendChild(badge);
+  }
+  span.appendChild(document.createTextNode(item.title || item.id || ''));
+};
+
+// Alphabetical comparator for sidebar items (case/accent-insensitive, numeric-aware).
+const compareByTitle = (a, b) => `${a.title || a.id || ''}`
+  .localeCompare(`${b.title || b.id || ''}`, undefined, { sensitivity: 'base', numeric: true });
+
 // Find a bundle by id, searching top-level bundles and their nested sub-folders.
 const findBundleById = (id, bundles = allBundles) => {
   for (const b of bundles) {
@@ -995,7 +1018,7 @@ const renderSidebarList = (items = []) => {
 
     const actTitle = document.createElement('span');
     actTitle.className = 'list-article-number';
-    actTitle.textContent = act.title || act.id;
+    setListTitle(actTitle, act);
     actButton.appendChild(actTitle);
 
     const actHeadingText = getHeadingText(act);
@@ -1160,7 +1183,7 @@ const renderSidebarList = (items = []) => {
 
     const numberSpan = document.createElement('span');
     numberSpan.className = 'list-article-number';
-    numberSpan.textContent = item.title || item.id;
+    setListTitle(numberSpan, item);
     button.appendChild(numberSpan);
 
     const headingText = getHeadingText(item);
@@ -1581,7 +1604,7 @@ const applyFilter = (query) => {
   if (!normalisedQuery) {
     visibleSidebarItems = allSidebarItems.slice();
   } else {
-    visibleSidebarItems = allActs.filter((item) => matchesItem(item, normalisedQuery));
+    visibleSidebarItems = allActs.filter((item) => matchesItem(item, normalisedQuery)).sort(compareByTitle);
   }
 
   renderArticleList();
@@ -1684,7 +1707,7 @@ const loadAllData = async () => {
           label: 'EUR-Lex',
         },
         meta: {
-          jurisdiction: 'EU',
+          jurisdiction: entry.jurisdiction || 'EU',
         },
         articles: json,
       });
@@ -1774,7 +1797,11 @@ const fetchArticles = async () => {
     const foldered = collectBundleActRefs(allBundles);
     const topLevelActs = allActs.filter((a) => !foldered.has(a.id));
 
-    allSidebarItems = [...topLevelActs, ...allBundles];
+    // Folders first (alphabetical), then acts (alphabetical).
+    allSidebarItems = [
+      ...allBundles.slice().sort(compareByTitle),
+      ...topLevelActs.sort(compareByTitle),
+    ];
     expandedActIds = new Set();
     expandedBundleIds = new Set();
     expandedBundleActIds = new Set();
