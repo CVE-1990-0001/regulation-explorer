@@ -1,4 +1,4 @@
-# Regulation Browser (RegBro)
+# Regulation Browser (CISO RegBro)
 
 ## Local Development
 
