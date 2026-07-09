@@ -79,9 +79,9 @@ CREATE INDEX IF NOT EXISTS idx_ref_ext_target ON act_ref_external(target_auth_id
 CREATE TABLE IF NOT EXISTS act_ref_internal (
     source_act_id   TEXT    NOT NULL REFERENCES act(id) ON DELETE CASCADE ON UPDATE CASCADE,
     target_act_id   TEXT    NOT NULL REFERENCES act(id) ON DELETE CASCADE ON UPDATE CASCADE,
-    target_article  TEXT,
+    target_article  TEXT    NOT NULL DEFAULT '',
     citation_count  INTEGER NOT NULL DEFAULT 1,
-    PRIMARY KEY (source_act_id, target_act_id, COALESCE(target_article, ''))
+    PRIMARY KEY (source_act_id, target_act_id, target_article)
 );
 
 CREATE INDEX IF NOT EXISTS idx_ref_int_target ON act_ref_internal(target_act_id);
