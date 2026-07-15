@@ -61,3 +61,17 @@ test('same-act (self) ref navigates within the act', async () => {
   assert.strictEqual(ev.defaultPrevented, true);
   assert.match(app.hash(), /act_eu_dora_reg_2022_2554/);
 });
+
+test('paragraph citation uses the current regulation name', async () => {
+  await app.openAct('act_eu_gdpr_2016_0679');
+  const citationButton = app.doc.querySelector(
+    '.paragraph-tool-button[aria-label="Copy citation for this paragraph"]',
+  );
+  assert.ok(citationButton, 'expected a paragraph citation button');
+
+  app.click(citationButton);
+  await app.tick();
+
+  assert.match(app.clipboard(), /^GDPR Article/);
+  assert.doesNotMatch(app.clipboard(), /EMIR/);
+});
