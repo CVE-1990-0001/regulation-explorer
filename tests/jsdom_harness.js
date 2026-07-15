@@ -18,12 +18,20 @@ async function bootApp() {
     runScripts: 'outside-only', pretendToBeVisual: true, virtualConsole: vc, url: 'http://localhost/',
   });
   const { window } = dom;
+  let clipboardText = '';
 
   window.fetch = async (url) => {
     const rel = String(url).replace(/^https?:\/\/[^/]+\//, '').split('?')[0];
     const body = read(rel);
     return { ok: true, status: 200, json: async () => JSON.parse(body), text: async () => body };
   };
+  Object.defineProperty(window.navigator, 'clipboard', {
+    value: {
+      writeText: async (value) => {
+        clipboardText = value;
+      },
+    },
+  });
   window.matchMedia = () => ({ matches: false, addListener() {}, removeListener() {}, addEventListener() {}, removeEventListener() {} });
   window.scrollTo = () => {};
   window.HTMLElement.prototype.scrollIntoView = function () {}; // jsdom lacks it; let nav finish
@@ -46,6 +54,7 @@ async function bootApp() {
     },
     click: (a) => { const e = new window.MouseEvent('click', { bubbles: true, cancelable: true }); a.dispatchEvent(e); return e; },
     tick: () => sleep(200),
+    clipboard: () => clipboardText,
     registry: () => JSON.parse(read('data/index.json')),
   };
   return { window, ...helpers };

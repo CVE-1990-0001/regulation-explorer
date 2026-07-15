@@ -1972,8 +1972,6 @@ document.addEventListener('DOMContentLoaded', fetchArticles);
 initialiseLegalTooltips();
 document.addEventListener('click', handleInternalLinkClick);
 
-const regulationShortName = 'EMIR';
-
 const copyToClipboard = async (value) => {
   if (typeof value !== 'string') {
     return false;
@@ -2094,13 +2092,13 @@ const formatParagraphDescriptor = (paragraphId) => {
 
 const getParagraphCitation = (article, paragraphData) => {
   const articleTitle = (article?.title || article?.id || '').trim();
-  if (!articleTitle) {
-    return regulationShortName;
-  }
+  const actId = article?._actId || getCurrentActId();
+  const act = allActs.find((item) => item.id === actId);
+  const regulationName = (act?.title || '').trim();
 
   const paragraphId = typeof paragraphData === 'object' ? (paragraphData?.id || '') : '';
   const paragraphDescriptor = formatParagraphDescriptor(paragraphId);
-  const baseCitation = `${regulationShortName} ${articleTitle}`;
+  const baseCitation = [regulationName, articleTitle].filter(Boolean).join(' ');
 
   return paragraphDescriptor
     ? `${baseCitation}, ${paragraphDescriptor}`
