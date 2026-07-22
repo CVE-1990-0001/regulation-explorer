@@ -5,5 +5,10 @@ node_modules/
 __pycache__/
 *.pyc
 
+# Generated SQLite index
+data/index.db
+data/index.db-shm
+data/index.db-wal
+
 # OS / editor cruft
 .DS_Store
