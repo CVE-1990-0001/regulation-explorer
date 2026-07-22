@@ -4,7 +4,7 @@
 Reuses dora_gap/parse_dora.parse_document + convert_dora paragraph flattening.
 
 Example:
-  python3 tools/convert_eurlex.py \
+  python3 tools/parsers/convert_eurlex.py \
     --html regulations-data/CELEX_32019R0881_EN_TXT.html \
     --id act_csa_2019 --out regulations-data/cybersecurity_act.json \
     --title "Cybersecurity Act" \
@@ -18,7 +18,7 @@ import sys
 from pathlib import Path
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-APP = os.path.dirname(HERE)
+APP = os.path.dirname(os.path.dirname(HERE))
 GAP = os.path.abspath(os.path.join(APP, "..", "..", "dora_gap"))
 sys.path.insert(0, GAP)
 sys.path.insert(0, HERE)

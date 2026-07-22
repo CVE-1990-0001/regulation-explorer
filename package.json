@@ -1,15 +1,12 @@
 {
   "name": "regulation-explorer",
   "version": "1.0.0",
-  "description": "Data-prep tooling dependencies for the regulation browser parsers (tools/parsers/).",
+  "description": "JS test harness for the regulation browser (parsers live in tools/parsers/ and are Python).",
   "private": true,
   "scripts": {
     "test": "pytest -q && node --test tests/*.test.js",
     "test:py": "pytest -q",
     "test:js": "node --test tests/*.test.js"
-  },
-  "dependencies": {
-    "cheerio": "^1.2.0"
   },
   "devDependencies": {
     "jsdom": "^24.1.3"

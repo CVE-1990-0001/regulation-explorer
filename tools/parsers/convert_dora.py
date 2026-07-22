@@ -2,7 +2,7 @@
 """Convert the extracted DORA / RTS / ITS data (from ../../../dora_gap/data)
 into the regulation-explorer act JSON format and wire it into the DORA folder.
 
-Run from anywhere:  python3 tools/convert_dora.py
+Run from anywhere:  python3 tools/parsers/convert_dora.py
 """
 import json
 import os
@@ -10,7 +10,7 @@ import re
 import html
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-APP = os.path.dirname(HERE)                      # regulation-explorer/
+APP = os.path.dirname(os.path.dirname(HERE))     # regulation-explorer/
 GAP = os.path.abspath(os.path.join(APP, "..", "..", "dora_gap", "data"))
 
 SRC_DORA = os.path.join(GAP, "dora_articles.json")

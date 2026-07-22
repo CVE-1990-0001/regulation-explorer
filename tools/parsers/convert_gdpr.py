@@ -4,7 +4,7 @@
 Reuses the existing EUR-Lex parser (dora_gap/parse_dora.parse_document) and the
 paragraph-flattening logic from convert_dora.py.
 
-Run:  python3 tools/convert_gdpr.py
+Run:  python3 tools/parsers/convert_gdpr.py
 """
 import json
 import os
@@ -12,7 +12,7 @@ import sys
 from pathlib import Path
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-APP = os.path.dirname(HERE)
+APP = os.path.dirname(os.path.dirname(HERE))
 GAP = os.path.abspath(os.path.join(APP, "..", "..", "dora_gap"))
 sys.path.insert(0, GAP)
 sys.path.insert(0, HERE)
