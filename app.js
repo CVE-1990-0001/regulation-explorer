@@ -2042,21 +2042,33 @@ const copyToClipboard = async (value) => {
   return copied;
 };
 
+// Inline SVG icons for the copy tools (Feather/Lucide, 24x24 stroke).
+const TOOL_SVG = (inner) =>
+  `<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">${inner}</svg>`;
+
+const TOOL_ICONS = {
+  text: '<rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>',
+  link: '<path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>',
+  citation: '<path d="M3 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path>',
+  success: '<polyline points="20 6 9 17 4 12"></polyline>',
+  error: '<line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line>',
+};
+
 const showCopyConfirmation = (button, label, { isSuccess = true } = {}) => {
   if (!button) {
     return;
   }
 
-  const finalLabel = label || 'Copied';
-  const originalLabel = button.dataset.originalLabel || button.textContent;
-  button.dataset.originalLabel = originalLabel;
+  if (button.dataset.originalHtml === undefined) {
+    button.dataset.originalHtml = button.innerHTML;
+  }
 
   if (button._copyTimeoutId) {
     clearTimeout(button._copyTimeoutId);
     button._copyTimeoutId = null;
   }
 
-  button.textContent = finalLabel;
+  button.innerHTML = TOOL_SVG(isSuccess ? TOOL_ICONS.success : TOOL_ICONS.error);
   if (isSuccess) {
     button.classList.add('is-copied');
     button.classList.remove('has-copy-error');
@@ -2066,11 +2078,11 @@ const showCopyConfirmation = (button, label, { isSuccess = true } = {}) => {
   }
 
   button._copyTimeoutId = window.setTimeout(() => {
-    button.textContent = button.dataset.originalLabel;
+    button.innerHTML = button.dataset.originalHtml;
     button.classList.remove('is-copied');
     button.classList.remove('has-copy-error');
     button._copyTimeoutId = null;
-  }, 1600);
+  }, 1400);
 };
 
 const parseParagraphToken = (token = '') => {
@@ -2297,7 +2309,8 @@ const createToolsWrapper = (actions, ariaLabel = 'Tools') => {
     const button = document.createElement('button');
     button.type = 'button';
     button.className = 'paragraph-tool-button';
-    button.textContent = action.label;
+    button.innerHTML = TOOL_SVG(TOOL_ICONS[action.key] || '');
+    button.title = action.label;
     button.setAttribute('aria-label', action.ariaLabel);
 
     button.addEventListener('click', async (event) => {
