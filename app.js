@@ -22,6 +22,9 @@ let currentArticleId = null;
 let currentArticleSelectionKey = null;
 let currentSidebarSelectionKey = null;
 let expandedActIds = new Set();
+// Acts the user has explicitly collapsed while a search is active (search would
+// otherwise force every matching act open).
+let searchCollapsedActIds = new Set();
 let expandedBundleIds = new Set();
 let expandedBundleActIds = new Set(); // composite keys: "bundleId::actId"
 let isUpdatingHash = false;
@@ -1289,7 +1292,10 @@ const renderSidebarList = (items = []) => {
     if (item.type === 'bundle') {
       appendDisclosure(button, expandedBundleIds.has(item.id));
     } else if (Array.isArray(item.articles) && item.articles.length) {
-      const actExpanded = expandedActIds.has(item.id) || Boolean(lastSearchQuery && lastSearchQuery.trim());
+      const searchActive = Boolean(lastSearchQuery && lastSearchQuery.trim());
+      const actExpanded = searchActive
+        ? !searchCollapsedActIds.has(item.id)
+        : expandedActIds.has(item.id);
       appendDisclosure(button, actExpanded);
     }
 
@@ -1309,7 +1315,16 @@ const renderSidebarList = (items = []) => {
 
       const actId = item.id;
       const hasActiveSearch = Boolean(lastSearchQuery && lastSearchQuery.trim());
-      setExpandedAct(actId, { allowCollapse: !hasActiveSearch });
+      if (hasActiveSearch) {
+        // During search, toggle this act's collapsed state directly.
+        if (searchCollapsedActIds.has(actId)) {
+          searchCollapsedActIds.delete(actId);
+        } else {
+          searchCollapsedActIds.add(actId);
+        }
+      } else {
+        setExpandedAct(actId, { allowCollapse: true });
+      }
       renderArticleList();
       handleRoute(`act:${actId}`);
       updateLocationHash(`act:${actId}`);
@@ -1329,7 +1344,10 @@ const renderSidebarList = (items = []) => {
       ? item.articles.filter((article) => (!lastSearchQuery || matchesItem(article, lastSearchQuery)))
       : [];
 
-    const showChildren = expandedActIds.has(item.id) || Boolean(lastSearchQuery && lastSearchQuery.trim());
+    const searchActive = Boolean(lastSearchQuery && lastSearchQuery.trim());
+    const showChildren = searchActive
+      ? !searchCollapsedActIds.has(item.id)
+      : expandedActIds.has(item.id);
 
     if (item.type === 'act' && visibleChildArticles.length && showChildren) {
       const childList = document.createElement('ul');
@@ -1721,6 +1739,10 @@ const matchesItem = (item, query) => {
 
 const applyFilter = (query) => {
   const normalisedQuery = `${query || ''}`.trim().toLowerCase();
+  if (normalisedQuery !== lastSearchQuery) {
+    // A new/changed query starts fresh with every matching act expanded.
+    searchCollapsedActIds = new Set();
+  }
   lastSearchQuery = normalisedQuery;
 
   if (!normalisedQuery) {
