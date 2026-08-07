@@ -742,8 +742,9 @@ textarea {
   display: flex;
   flex-direction: column;
   gap: var(--space-3);
-  padding-top: var(--space-3);
-  padding-bottom: var(--space-5);
+  margin-left: calc(-1 * var(--space-7));
+  margin-right: calc(-1 * var(--space-7));
+  padding: var(--space-3) var(--space-7);
   background: var(--surface-light);
   border-bottom: 1px solid var(--border-subtle);
 }
@@ -1489,6 +1490,10 @@ button:focus-visible,
 
   .article-header {
     gap: 0.75rem;
+    margin-left: -1.25rem;
+    margin-right: -1.25rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }
 
   .paragraphs {
