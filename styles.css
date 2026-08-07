@@ -721,7 +721,7 @@ textarea {
 }
 
 .status-message {
-  margin: 0;
+  margin: var(--space-4) 0 0;
   padding: 1rem 1.25rem;
   border-radius: 4px;
   background: rgba(0, 0, 153, 0.06);
@@ -732,6 +732,13 @@ textarea {
 }
 
 .status-message:empty {
+  display: none;
+}
+
+/* Clean loading state: show only the centered spinner in the content area */
+.article-content.is-loading .status-message,
+.article-content.is-loading .article-header,
+.article-content.is-loading .article-navigation {
   display: none;
 }
 
@@ -1371,35 +1378,79 @@ textarea {
   font-weight: 500;
 }
 
-.loading-state {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  min-height: 45vh;
-  color: var(--text-secondary);
+/* Shimmer skeleton (content + sidebar) shown while data loads */
+.skeleton {
+  position: relative;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.06);
+  border-radius: 4px;
 }
 
-.loading-spinner {
-  width: 2rem;
-  height: 2rem;
-  border: 3px solid var(--border-strong);
-  border-top-color: var(--accent-blue);
-  border-radius: 50%;
-  animation: spin 0.8s linear infinite;
+.skeleton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.65),
+    transparent
+  );
+  animation: skeleton-shimmer 1.4s ease infinite;
 }
 
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
+@keyframes skeleton-shimmer {
+  100% {
+    transform: translateX(100%);
   }
 }
 
-.loading-text {
-  margin: 0;
-  font-size: var(--fs-body-big);
-  font-weight: 500;
+.skeleton-article {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-top: var(--space-4);
+}
+
+.skeleton-title {
+  height: 2rem;
+  width: 45%;
+  margin-bottom: 0.5rem;
+}
+
+.skeleton-para {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.skeleton-line {
+  height: 0.85rem;
+  width: 100%;
+}
+
+.skeleton-line.short {
+  width: 62%;
+}
+
+.skeleton-row {
+  list-style: none;
+  padding: 0.4rem 0.25rem;
+}
+
+.skeleton-pill {
+  display: block;
+  height: 1.15rem;
+  width: 100%;
+}
+
+.skeleton-row:nth-child(3n) .skeleton-pill {
+  width: 78%;
+}
+
+.skeleton-row:nth-child(3n + 2) .skeleton-pill {
+  width: 88%;
 }
 
 /* Consistent keyboard focus rings */

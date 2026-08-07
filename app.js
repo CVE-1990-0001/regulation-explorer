@@ -765,21 +765,44 @@ const buildEmptyState = () => {
   return wrap;
 };
 
+// Content-area skeleton: a title bar + a few paragraph blocks of shimmer lines.
 const buildLoadingState = () => {
   const wrap = document.createElement('div');
-  wrap.className = 'loading-state';
+  wrap.className = 'skeleton-article';
+  wrap.setAttribute('aria-hidden', 'true');
 
-  const spinner = document.createElement('span');
-  spinner.className = 'loading-spinner';
-  spinner.setAttribute('aria-hidden', 'true');
-  wrap.appendChild(spinner);
+  const title = document.createElement('div');
+  title.className = 'skeleton skeleton-title';
+  wrap.appendChild(title);
 
-  const text = document.createElement('p');
-  text.className = 'loading-text';
-  text.textContent = 'Loading regulations\u2026';
-  wrap.appendChild(text);
+  for (let block = 0; block < 4; block += 1) {
+    const para = document.createElement('div');
+    para.className = 'skeleton-para';
+    const lines = block % 2 === 0 ? 4 : 3;
+    for (let i = 0; i < lines; i += 1) {
+      const line = document.createElement('div');
+      line.className = i === lines - 1 ? 'skeleton skeleton-line short' : 'skeleton skeleton-line';
+      para.appendChild(line);
+    }
+    wrap.appendChild(para);
+  }
 
   return wrap;
+};
+
+// Sidebar skeleton: shimmer rows standing in for the act/folder list.
+const buildSidebarSkeleton = (count = 7) => {
+  const frag = document.createDocumentFragment();
+  for (let i = 0; i < count; i += 1) {
+    const li = document.createElement('li');
+    li.className = 'skeleton-row';
+    li.setAttribute('aria-hidden', 'true');
+    const pill = document.createElement('span');
+    pill.className = 'skeleton skeleton-pill';
+    li.appendChild(pill);
+    frag.appendChild(li);
+  }
+  return frag;
 };
 
 const renderArticleDetail = (article) => {
@@ -1889,8 +1912,14 @@ const loadAllData = async () => {
 };
 
 const fetchArticles = async () => {
-  statusMessage.textContent = 'Loading articles...';
-  listMessage.textContent = 'Loading articles...';
+  const articleContent = document.querySelector('.article-content');
+  if (articleContent) articleContent.classList.add('is-loading');
+  if (articleNav) articleNav.hidden = true;
+  listMessage.textContent = '';
+  if (articleListElement) {
+    articleListElement.innerHTML = '';
+    articleListElement.appendChild(buildSidebarSkeleton());
+  }
   if (paragraphsContainer) {
     paragraphsContainer.innerHTML = '';
     paragraphsContainer.appendChild(buildLoadingState());
@@ -1972,6 +2001,8 @@ const fetchArticles = async () => {
     listMessage.textContent = 'Unable to load articles.';
     renderArticleDetail(null);
     updateNavigationButtons();
+  } finally {
+    if (articleContent) articleContent.classList.remove('is-loading');
   }
 };
 
