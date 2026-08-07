@@ -788,7 +788,7 @@ textarea {
   border: none;
   background: none;
   font: inherit;
-  color: var(--color-midgray);
+  color: var(--color-darkgray);
   cursor: pointer;
 }
 
@@ -884,6 +884,42 @@ textarea {
 .article-paragraph:hover .paragraph-tools,
 .article-paragraph:focus-within .paragraph-tools,
 .article-paragraph.is-highlighted .paragraph-tools {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Copy/link/citation tools on headings: act root title and per-article headings */
+.article-title.has-paragraph-tools,
+.act-article-title.has-paragraph-tools {
+  position: relative;
+  padding-right: 7.5rem;
+}
+
+.article-title .paragraph-tools,
+.act-article-title .paragraph-tools {
+  position: absolute;
+  right: 0;
+  top: 0.5rem;
+  display: inline-flex;
+  gap: 0.5rem;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-fast);
+}
+
+.act-article-title .paragraph-tools {
+  top: 1.9rem;
+}
+
+.act-article-title:first-child .paragraph-tools {
+  top: 0.15rem;
+}
+
+.article-title:hover .paragraph-tools,
+.article-title:focus-within .paragraph-tools,
+.act-article-title:hover .paragraph-tools,
+.act-article-title:focus-within .paragraph-tools {
   opacity: 1;
   pointer-events: auto;
 }

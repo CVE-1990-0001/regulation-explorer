@@ -813,6 +813,11 @@ const renderArticleDetail = (article) => {
     ? [{ label: parentAct.title || parentAct.id, hash: `act:${parentAct.id}` }]
     : []);
   articleTitleElement.textContent = headingText || numberText;
+  attachHeadingTools(articleTitleElement, {
+    getText: () => getArticleHeadingText(article),
+    getLink: () => getArticlePermalink(article._actId || getCurrentActId(), article.id),
+    getCitation: () => getArticleCitation(article, article._actId || getCurrentActId()),
+  });
   articleSubtitleElement.textContent = '';
 
   paragraphsContainer.innerHTML = '';
@@ -863,6 +868,11 @@ const renderAct = (act) => {
   articleNumberElement.textContent = '';
   renderBreadcrumb([]);
   articleTitleElement.textContent = act.title || act.id || '';
+  attachHeadingTools(articleTitleElement, {
+    getText: () => getActHeadingText(act),
+    getLink: () => getActPermalink(act.id),
+    getCitation: () => getActCitation(act),
+  });
   articleSubtitleElement.textContent = [getSubtitleText(act), act.heading].filter(Boolean).join(' — ');
 
   paragraphsContainer.innerHTML = '';
@@ -874,6 +884,11 @@ const renderAct = (act) => {
       const h = document.createElement('h3');
       h.className = 'act-article-title';
       h.textContent = article.title || article.id || '';
+      attachHeadingTools(h, {
+        getText: () => getArticleHeadingText(article),
+        getLink: () => getArticlePermalink(act.id, article.id),
+        getCitation: () => getArticleCitation(article, act.id),
+      });
       fragment.appendChild(h);
 
       (article.paragraphs || []).forEach((p) => {
@@ -2140,6 +2155,14 @@ const getParagraphPlainText = (paragraphElement) => {
     .trim();
 };
 
+const buildPermalink = (hash) => {
+  try {
+    return new URL(`#${hash}`, window.location.href).href;
+  } catch (error) {
+    return `${window.location.origin}${window.location.pathname}${window.location.search}#${hash}`;
+  }
+};
+
 const getParagraphPermalink = (paragraphId) => {
   if (!paragraphId) {
     return window.location.href;
@@ -2151,14 +2174,29 @@ const getParagraphPermalink = (paragraphId) => {
   const currentActId = currentSidebarSelectionKey && currentSidebarSelectionKey.startsWith('act:')
     ? currentSidebarSelectionKey.slice(4)
     : null;
-  const targetHash = currentActId ? `a:${currentActId}:${paragraphId}` : paragraphId;
-
-  try {
-    return new URL(`#${targetHash}`, window.location.href).href;
-  } catch (error) {
-    return `${window.location.origin}${window.location.pathname}${window.location.search}#${targetHash}`;
-  }
+  return buildPermalink(currentActId ? `a:${currentActId}:${paragraphId}` : paragraphId);
 };
+
+const getArticlePermalink = (actId, articleId) =>
+  buildPermalink(actId ? `a:${actId}:${articleId}` : articleId);
+
+const getActPermalink = (actId) => buildPermalink(`act:${actId}`);
+
+const getArticleHeadingText = (article) =>
+  [article?.title, getHeadingText(article)].filter(Boolean).join(' — ').trim();
+
+const getArticleCitation = (article, actId) => {
+  const act = allActs.find((item) => item.id === actId);
+  const regulationName = (act?.title || '').trim();
+  const articleTitle = (article?.title || article?.id || '').trim();
+  return [regulationName, articleTitle].filter(Boolean).join(' ');
+};
+
+const getActHeadingText = (act) =>
+  [act?.title, act?.heading].filter(Boolean).join(' — ').trim();
+
+const getActCitation = (act) => (act?.title || act?.id || '').trim();
+
 
 // --- Search highlighting helpers ---
 const escapeRegExp = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
@@ -2249,43 +2287,11 @@ const highlightSearchMatches = (query) => {
   });
 };
 
-const attachParagraphTools = (paragraphElement, article, paragraphData) => {
-  if (!paragraphElement || typeof paragraphData !== 'object') {
-    return;
-  }
-
-  const paragraphId = paragraphData.id || paragraphElement.id;
-  if (!paragraphId) {
-    return;
-  }
-
-  paragraphElement.classList.add('has-paragraph-tools');
-
+const createToolsWrapper = (actions, ariaLabel = 'Tools') => {
   const toolsWrapper = document.createElement('span');
   toolsWrapper.className = 'paragraph-tools';
   toolsWrapper.setAttribute('role', 'group');
-  toolsWrapper.setAttribute('aria-label', 'Paragraph tools');
-
-  const actions = [
-    {
-      key: 'text',
-      label: 'Text',
-      ariaLabel: 'Copy paragraph text to clipboard',
-      getContent: () => getParagraphPlainText(paragraphElement),
-    },
-    {
-      key: 'link',
-      label: 'Link',
-      ariaLabel: 'Copy direct link to this paragraph',
-      getContent: () => getParagraphPermalink(paragraphId),
-    },
-    {
-      key: 'citation',
-      label: 'Citation',
-      ariaLabel: 'Copy citation for this paragraph',
-      getContent: () => getParagraphCitation(article, paragraphData),
-    },
-  ];
+  toolsWrapper.setAttribute('aria-label', ariaLabel);
 
   actions.forEach((action) => {
     const button = document.createElement('button');
@@ -2311,5 +2317,58 @@ const attachParagraphTools = (paragraphElement, article, paragraphData) => {
     toolsWrapper.appendChild(button);
   });
 
-  paragraphElement.appendChild(toolsWrapper);
+  return toolsWrapper;
+};
+
+const attachParagraphTools = (paragraphElement, article, paragraphData) => {
+  if (!paragraphElement || typeof paragraphData !== 'object') {
+    return;
+  }
+
+  const paragraphId = paragraphData.id || paragraphElement.id;
+  if (!paragraphId) {
+    return;
+  }
+
+  paragraphElement.classList.add('has-paragraph-tools');
+
+  const actions = [
+    {
+      key: 'text',
+      label: 'Text',
+      ariaLabel: 'Copy paragraph text to clipboard',
+      getContent: () => getParagraphPlainText(paragraphElement),
+    },
+    {
+      key: 'link',
+      label: 'Link',
+      ariaLabel: 'Copy direct link to this paragraph',
+      getContent: () => getParagraphPermalink(paragraphId),
+    },
+    {
+      key: 'citation',
+      label: 'Citation',
+      ariaLabel: 'Copy citation for this paragraph',
+      getContent: () => getParagraphCitation(article, paragraphData),
+    },
+  ];
+
+  paragraphElement.appendChild(createToolsWrapper(actions, 'Paragraph tools'));
+};
+
+// Copy/link/citation tools for a heading element (article heading or act root title).
+const attachHeadingTools = (element, { getText, getLink, getCitation }) => {
+  if (!element) {
+    return;
+  }
+
+  element.classList.add('has-paragraph-tools');
+
+  const actions = [
+    { key: 'text', label: 'Text', ariaLabel: 'Copy heading text to clipboard', getContent: getText },
+    { key: 'link', label: 'Link', ariaLabel: 'Copy direct link', getContent: getLink },
+    { key: 'citation', label: 'Citation', ariaLabel: 'Copy citation', getContent: getCitation },
+  ];
+
+  element.appendChild(createToolsWrapper(actions, 'Heading tools'));
 };
