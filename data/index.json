@@ -135,9 +135,15 @@
       "path": "regulations-data/data_act.json",
       "label": "Data Act (Regulation (EU) 2023/2854)",
       "authId": "celex:32023R2854"
+    },
+    {
+      "id": "act_de_bsig_2025",
+      "path": "regulations-data/nis2_umsetzungsgesetz_bsig.json",
+      "label": "BSI-Gesetz (BSIG – NIS-2-Umsetzung)",
+      "heading": "BSI-Gesetz (NIS-2-Umsetzungsgesetz)",
+      "jurisdiction": "DE"
     }
-  ],
-  "bundles": [
+  ],  "bundles": [
     {
       "id": "bundle_dora",
       "path": "data/bundles/dora.json",

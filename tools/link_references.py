@@ -272,6 +272,132 @@ def make_pass_para_self(act_id, self_ids):
 
 
 # --------------------------------------------------------------------------- #
+# German citation passes (cross-act only)
+#
+# German acts cite EU instruments as "Verordnung (EU) 2019/881",
+# "Verordnung (EU) Nr. 648/2012", "Richtlinie 2014/65/EU" and by short name
+# ("NIS-2-Richtlinie"). These resolve to the same permanent CELEX ids as the
+# English forms, so hosted targets become in-app jumps at runtime.
+# --------------------------------------------------------------------------- #
+DE_KIND_RE = re.compile(r"\b(Verordnung(?:en)?|Richtlinie(?:n)?)\b")
+DE_SPEC_RE = re.compile(
+    r"\((?:EU|EG|EWG)\)\s*Nr\.\s*(\d{1,4})/(\d{4})"    # (EU) Nr. 648/2012 -> num/year
+    r"|\((?:EU|EG|EWG)\)\s*(\d{4})/(\d{1,4})"          # (EU) 2019/881     -> year/num
+    r"|(\d{4})/(\d{1,4})/(?:EU|EG|EWG)"                # 2014/65/EU        -> year/num
+)
+DE_SEP_RE = re.compile(r"\s*(?:,|und|oder|bis|\u2013|-)\s+", re.I)
+DE_OF = r"(?:\s*\([^)]*\)|\s*,|\s+(?:Absatz|Abs\.|Unterabsatz|Satz|Nummer|Nr\.|Buchstabe|Ziffer|Doppelbuchstabe)\s*[0-9a-z]+(?:\s+[0-9a-z]+)?|\s+(?:und|oder|bis))*\s+(?:des|der)\s+"
+DE_ART_LIST = re.compile(
+    r"\b(Artikeln?)\s+(\d+[a-z]?(?:\s*(?:,|und|oder|bis|\u2013|-)\s*\d+[a-z]?)*)"
+)
+# Short-name citations mapped to their permanent CELEX id.
+NAMED_CELEX = {"nis-2-richtlinie": "32022L2555"}
+NAMED_RE = re.compile(r"NIS-?\s*2-\s*Richtlinie", re.I)
+
+
+def de_letter(word):
+    return "R" if word[:1].lower() == "v" else "L"
+
+
+def de_spec_celex(m, letter):
+    if m.group(1):
+        return celex(letter, m.group(2), m.group(1))
+    if m.group(3):
+        return celex(letter, m.group(3), m.group(4))
+    return celex(letter, m.group(5), m.group(6))
+
+
+def render_de_group(text, lead_start, lead_end):
+    """Render a German "Verordnung/Richtlinie (EU) …" citation group."""
+    letter = de_letter(text[lead_start:lead_end])
+    i = WS_RE.match(text, lead_end).end()
+    m0 = DE_SPEC_RE.match(text, i)
+    if not m0:
+        return None  # e.g. "dieser Verordnung" (no number spec) -> not a target
+
+    rest, end = [], m0.end()
+    while True:
+        sm = DE_SEP_RE.match(text, end)
+        if not sm:
+            break
+        nm = DE_SPEC_RE.match(text, sm.end())
+        if not nm:
+            break
+        rest.append((sm, nm))
+        end = nm.end()
+
+    first_cx = de_spec_celex(m0, letter)
+    if not rest:
+        return a_cross_act(first_cx, text[lead_start:end]), end, first_cx
+    parts = [text[lead_start:m0.start()], a_cross_act(first_cx, m0.group(0))]
+    for sm, nm in rest:
+        parts.append(sm.group(0))
+        parts.append(a_cross_act(de_spec_celex(nm, letter), nm.group(0)))
+    return "".join(parts), end, first_cx
+
+
+def render_de_target(text, pos):
+    """Render whichever citation target begins at ``pos`` (kind group or named)."""
+    km = DE_KIND_RE.match(text, pos)
+    if km:
+        return render_de_group(text, km.start(), km.end())
+    nm = NAMED_RE.match(text, pos)
+    if nm:
+        cx = NAMED_CELEX[nm.group(0).lower().replace(" ", "")]
+        return a_cross_act(cx, nm.group(0)), nm.end(), cx
+    return None
+
+
+def pass_de_cross(text):
+    """"Artikel N … der Verordnung/Richtlinie …" -> cross-act article refs."""
+    out, pos = [], 0
+    m = DE_ART_LIST.search(text, pos)
+    while m:
+        of = re.match(DE_OF, text[m.end():])
+        grp = render_de_target(text, m.end() + of.end()) if of else None
+        if grp:
+            rendered, gend, first_cx = grp
+            out.append(text[pos:m.start()])
+            out.append(_link_list_cross(m.group(1), m.group(2), first_cx))
+            out.append(text[m.end():m.end() + of.end()])   # the " … der " glue
+            out.append(rendered)
+            pos = gend
+        else:
+            out.append(text[pos:m.end()])
+            pos = m.end()
+        m = DE_ART_LIST.search(text, pos)
+    out.append(text[pos:])
+    return "".join(out)
+
+
+def pass_de_citations(text):
+    """Standalone German citations -> act-level refs (kind groups and named)."""
+    out, pos = [], 0
+    while True:
+        km = DE_KIND_RE.search(text, pos)
+        nm = NAMED_RE.search(text, pos)
+        if not km and not nm:
+            break
+        if km and (not nm or km.start() <= nm.start()):
+            grp = render_de_group(text, km.start(), km.end())
+            if grp:
+                rendered, gend, _ = grp
+                out.append(text[pos:km.start()])
+                out.append(rendered)
+                pos = gend
+            else:
+                out.append(text[pos:km.end()])
+                pos = km.end()
+        else:
+            cx = NAMED_CELEX[nm.group(0).lower().replace(" ", "")]
+            out.append(text[pos:nm.start()])
+            out.append(a_cross_act(cx, nm.group(0)))
+            pos = nm.end()
+    out.append(text[pos:])
+    return "".join(out)
+
+
+# --------------------------------------------------------------------------- #
 # Driver
 # --------------------------------------------------------------------------- #
 def self_article_ids(articles):
@@ -294,6 +420,8 @@ def link_text(text, act_id, self_ids):
     t = outside_anchors(t, make_pass_self(act_id, self_ids))
     t = outside_anchors(t, make_pass_para_self(act_id, self_ids))
     t = outside_anchors(t, pass_citations)
+    t = outside_anchors(t, pass_de_cross)
+    t = outside_anchors(t, pass_de_citations)
     return t
 
 
