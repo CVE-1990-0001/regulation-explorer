@@ -75,3 +75,81 @@ test('paragraph citation uses the current regulation name', async () => {
   assert.match(app.clipboard(), /^GDPR Article/);
   assert.doesNotMatch(app.clipboard(), /EMIR/);
 });
+
+// --- Copy "Link" tools: permalinks at paragraph / article / regulation level ---
+
+test('copy Link on a paragraph yields a scoped paragraph permalink', async () => {
+  await app.openAct('act_de_boersg_2007');
+  const para = app.doc.querySelector('#paragraphsContainer .article-paragraph[id]');
+  assert.ok(para, 'expected a paragraph with an id');
+  const linkBtn = para.querySelector(
+    '.paragraph-tool-button[aria-label="Copy direct link to this paragraph"]',
+  );
+  assert.ok(linkBtn, 'expected a paragraph Link button');
+
+  app.click(linkBtn); await app.tick();
+  assert.match(app.clipboard(), new RegExp(`#a:act_de_boersg_2007:${para.id}$`));
+});
+
+test('copy Link on an article heading yields an article permalink', async () => {
+  await app.openAct('act_de_boersg_2007');
+  const heading = app.doc.querySelector('.act-article-title');
+  assert.ok(heading, 'expected a per-article heading in the act view');
+  const linkBtn = heading.querySelector('.paragraph-tool-button[aria-label="Copy direct link"]');
+  assert.ok(linkBtn, 'expected an article-heading Link button');
+
+  app.click(linkBtn); await app.tick();
+  assert.match(app.clipboard(), /#a:act_de_boersg_2007:art_1$/);
+});
+
+test('copy Link on the act root yields an act permalink', async () => {
+  await app.openAct('act_de_boersg_2007');
+  const title = app.doc.getElementById('articleTitle');
+  const linkBtn = title.querySelector('.paragraph-tool-button[aria-label="Copy direct link"]');
+  assert.ok(linkBtn, 'expected an act-root Link button');
+
+  app.click(linkBtn); await app.tick();
+  assert.match(app.clipboard(), /#act:act_de_boersg_2007$/);
+});
+
+test('copy Citation on an article heading includes the regulation and section', async () => {
+  await app.openAct('act_de_boersg_2007');
+  const heading = app.doc.querySelector('.act-article-title');
+  const citeBtn = heading.querySelector('.paragraph-tool-button[aria-label="Copy citation"]');
+  assert.ok(citeBtn, 'expected an article-heading Citation button');
+
+  app.click(citeBtn); await app.tick();
+  assert.match(app.clipboard(), /Börsengesetz.*§ 1/);
+});
+
+test('copy Link on a folder (bundle) heading yields a bundle permalink', async () => {
+  app.nav('#bundle:bundle_dora'); await app.tick();
+  const title = app.doc.getElementById('articleTitle');
+  const linkBtn = title.querySelector('.paragraph-tool-button[aria-label="Copy direct link"]');
+  assert.ok(linkBtn, 'expected a bundle Link button');
+
+  app.click(linkBtn); await app.tick();
+  assert.match(app.clipboard(), /#bundle:bundle_dora$/);
+});
+
+test('an act can be collapsed while a search is active', async () => {
+  const input = app.doc.getElementById('searchInput');
+  input.value = 'processing';
+  input.dispatchEvent(new app.window.Event('input', { bubbles: true }));
+  await app.tick(); // search is debounced ~180ms < tick 200ms
+
+  const expandedItem = [...app.doc.querySelectorAll('#articleList > .article-list-item')]
+    .find((li) => li.querySelector(':scope > .act-article-list'));
+  assert.ok(expandedItem, 'expected at least one expanded act in the search results');
+  const label = expandedItem.querySelector('.list-article-number').textContent;
+
+  // Clicking the act while searching should collapse its children.
+  expandedItem.querySelector(':scope > .article-link').click();
+  await app.tick();
+  const afterCollapse = [...app.doc.querySelectorAll('#articleList > .article-list-item')]
+    .find((li) => li.querySelector('.list-article-number')?.textContent === label);
+  assert.ok(
+    !afterCollapse.querySelector(':scope > .act-article-list'),
+    'act children should hide after clicking to collapse during search',
+  );
+});

@@ -22,6 +22,9 @@ let currentArticleId = null;
 let currentArticleSelectionKey = null;
 let currentSidebarSelectionKey = null;
 let expandedActIds = new Set();
+// Acts the user has explicitly collapsed while a search is active (search would
+// otherwise force every matching act open).
+let searchCollapsedActIds = new Set();
 let expandedBundleIds = new Set();
 let expandedBundleActIds = new Set(); // composite keys: "bundleId::actId"
 let isUpdatingHash = false;
@@ -765,21 +768,44 @@ const buildEmptyState = () => {
   return wrap;
 };
 
+// Content-area skeleton: a title bar + a few paragraph blocks of shimmer lines.
 const buildLoadingState = () => {
   const wrap = document.createElement('div');
-  wrap.className = 'loading-state';
+  wrap.className = 'skeleton-article';
+  wrap.setAttribute('aria-hidden', 'true');
 
-  const spinner = document.createElement('span');
-  spinner.className = 'loading-spinner';
-  spinner.setAttribute('aria-hidden', 'true');
-  wrap.appendChild(spinner);
+  const title = document.createElement('div');
+  title.className = 'skeleton skeleton-title';
+  wrap.appendChild(title);
 
-  const text = document.createElement('p');
-  text.className = 'loading-text';
-  text.textContent = 'Loading regulations\u2026';
-  wrap.appendChild(text);
+  for (let block = 0; block < 4; block += 1) {
+    const para = document.createElement('div');
+    para.className = 'skeleton-para';
+    const lines = block % 2 === 0 ? 4 : 3;
+    for (let i = 0; i < lines; i += 1) {
+      const line = document.createElement('div');
+      line.className = i === lines - 1 ? 'skeleton skeleton-line short' : 'skeleton skeleton-line';
+      para.appendChild(line);
+    }
+    wrap.appendChild(para);
+  }
 
   return wrap;
+};
+
+// Sidebar skeleton: shimmer rows standing in for the act/folder list.
+const buildSidebarSkeleton = (count = 7) => {
+  const frag = document.createDocumentFragment();
+  for (let i = 0; i < count; i += 1) {
+    const li = document.createElement('li');
+    li.className = 'skeleton-row';
+    li.setAttribute('aria-hidden', 'true');
+    const pill = document.createElement('span');
+    pill.className = 'skeleton skeleton-pill';
+    li.appendChild(pill);
+    frag.appendChild(li);
+  }
+  return frag;
 };
 
 const renderArticleDetail = (article) => {
@@ -813,6 +839,11 @@ const renderArticleDetail = (article) => {
     ? [{ label: parentAct.title || parentAct.id, hash: `act:${parentAct.id}` }]
     : []);
   articleTitleElement.textContent = headingText || numberText;
+  attachHeadingTools(articleTitleElement, {
+    getText: () => getArticleHeadingText(article),
+    getLink: () => getArticlePermalink(article._actId || getCurrentActId(), article.id),
+    getCitation: () => getArticleCitation(article, article._actId || getCurrentActId()),
+  });
   articleSubtitleElement.textContent = '';
 
   paragraphsContainer.innerHTML = '';
@@ -863,6 +894,11 @@ const renderAct = (act) => {
   articleNumberElement.textContent = '';
   renderBreadcrumb([]);
   articleTitleElement.textContent = act.title || act.id || '';
+  attachHeadingTools(articleTitleElement, {
+    getText: () => getActHeadingText(act),
+    getLink: () => getActPermalink(act.id),
+    getCitation: () => getActCitation(act),
+  });
   articleSubtitleElement.textContent = [getSubtitleText(act), act.heading].filter(Boolean).join(' — ');
 
   paragraphsContainer.innerHTML = '';
@@ -874,6 +910,11 @@ const renderAct = (act) => {
       const h = document.createElement('h3');
       h.className = 'act-article-title';
       h.textContent = article.title || article.id || '';
+      attachHeadingTools(h, {
+        getText: () => getArticleHeadingText(article),
+        getLink: () => getArticlePermalink(act.id, article.id),
+        getCitation: () => getArticleCitation(article, act.id),
+      });
       fragment.appendChild(h);
 
       (article.paragraphs || []).forEach((p) => {
@@ -911,6 +952,11 @@ const renderBundle = (bundle) => {
   const ancestors = bundlePath.slice(0, -1);
   renderBreadcrumb(ancestors.map((b) => ({ label: b.title || b.id, hash: `bundle:${b.id}` })));
   articleTitleElement.textContent = bundle.title || bundle.id || '';
+  attachHeadingTools(articleTitleElement, {
+    getText: () => getBundleHeadingText(bundle),
+    getLink: () => getBundlePermalink(bundle.id),
+    getCitation: () => getBundleHeadingText(bundle),
+  });
   articleSubtitleElement.textContent = '';
 
   paragraphsContainer.innerHTML = '';
@@ -1199,9 +1245,11 @@ const renderSidebarList = (items = []) => {
     return rendered ? list : null;
   }
 
-  // Save current scroll position
+  // Save current scroll position and the list's offset so we can compensate
+  // for anything above it (collapse button / message) toggling on re-render.
   const savedScrollPosition = sidePanel ? sidePanel.scrollTop : 0;
-  
+  const listOffsetBefore = articleListElement.offsetTop;
+
   articleListElement.innerHTML = '';
 
   if (!items.length) {
@@ -1244,7 +1292,10 @@ const renderSidebarList = (items = []) => {
     if (item.type === 'bundle') {
       appendDisclosure(button, expandedBundleIds.has(item.id));
     } else if (Array.isArray(item.articles) && item.articles.length) {
-      const actExpanded = expandedActIds.has(item.id) || Boolean(lastSearchQuery && lastSearchQuery.trim());
+      const searchActive = Boolean(lastSearchQuery && lastSearchQuery.trim());
+      const actExpanded = searchActive
+        ? !searchCollapsedActIds.has(item.id)
+        : expandedActIds.has(item.id);
       appendDisclosure(button, actExpanded);
     }
 
@@ -1264,7 +1315,16 @@ const renderSidebarList = (items = []) => {
 
       const actId = item.id;
       const hasActiveSearch = Boolean(lastSearchQuery && lastSearchQuery.trim());
-      setExpandedAct(actId, { allowCollapse: !hasActiveSearch });
+      if (hasActiveSearch) {
+        // During search, toggle this act's collapsed state directly.
+        if (searchCollapsedActIds.has(actId)) {
+          searchCollapsedActIds.delete(actId);
+        } else {
+          searchCollapsedActIds.add(actId);
+        }
+      } else {
+        setExpandedAct(actId, { allowCollapse: true });
+      }
       renderArticleList();
       handleRoute(`act:${actId}`);
       updateLocationHash(`act:${actId}`);
@@ -1284,7 +1344,10 @@ const renderSidebarList = (items = []) => {
       ? item.articles.filter((article) => (!lastSearchQuery || matchesItem(article, lastSearchQuery)))
       : [];
 
-    const showChildren = expandedActIds.has(item.id) || Boolean(lastSearchQuery && lastSearchQuery.trim());
+    const searchActive = Boolean(lastSearchQuery && lastSearchQuery.trim());
+    const showChildren = searchActive
+      ? !searchCollapsedActIds.has(item.id)
+      : expandedActIds.has(item.id);
 
     if (item.type === 'act' && visibleChildArticles.length && showChildren) {
       const childList = document.createElement('ul');
@@ -1324,20 +1387,26 @@ const renderSidebarList = (items = []) => {
   highlightActiveLink();
   updateCollapseAllButton();
   if (sidePanel) {
-    // Postpone scroll handling to allow the DOM to settle
-    requestAnimationFrame(() => {
-      // Always restore the pre-render scroll first so a click never yanks the
-      // list around — the clicked row stays exactly under the cursor.
-      sidePanel.scrollTop = savedScrollPosition;
+    // Restore scroll synchronously, before the browser paints, so the full
+    // list rebuild never yanks the panel to a different position (the previous
+    // rAF restore painted at the wrong scroll first, causing a visible jump).
+    // Adjust by the list's offset delta so a collapse button / message that
+    // appears or disappears above the list doesn't shift the rows either.
+    const listOffsetDelta = articleListElement.offsetTop - listOffsetBefore;
+    sidePanel.scrollTop = savedScrollPosition + listOffsetDelta;
 
-      // Only nudge the active item into view if it ended up outside the panel
-      // (e.g. when navigating via a breadcrumb, hash link, or keyboard).
+    // After layout settles, only nudge the active item into view if it ended up
+    // outside the panel (e.g. breadcrumb, hash link, or keyboard navigation).
+    requestAnimationFrame(() => {
       const activeKey = currentArticleSelectionKey || currentSidebarSelectionKey;
       const activeButton = activeKey ? articleButtons.get(activeKey) : null;
       if (activeButton) {
         const panelRect = sidePanel.getBoundingClientRect();
         const itemRect = activeButton.getBoundingClientRect();
-        if (itemRect.top < panelRect.top || itemRect.bottom > panelRect.bottom) {
+        // Only pull the active item in when it's entirely out of view (e.g. hash
+        // or keyboard navigation). If any part is already visible — like the row
+        // the user just clicked — leave the scroll alone to avoid a jump.
+        if (itemRect.bottom <= panelRect.top || itemRect.top >= panelRect.bottom) {
           activeButton.scrollIntoView({ block: 'nearest', behavior: 'auto' });
         }
       }
@@ -1670,6 +1739,10 @@ const matchesItem = (item, query) => {
 
 const applyFilter = (query) => {
   const normalisedQuery = `${query || ''}`.trim().toLowerCase();
+  if (normalisedQuery !== lastSearchQuery) {
+    // A new/changed query starts fresh with every matching act expanded.
+    searchCollapsedActIds = new Set();
+  }
   lastSearchQuery = normalisedQuery;
 
   if (!normalisedQuery) {
@@ -1869,8 +1942,14 @@ const loadAllData = async () => {
 };
 
 const fetchArticles = async () => {
-  statusMessage.textContent = 'Loading articles...';
-  listMessage.textContent = 'Loading articles...';
+  const articleContent = document.querySelector('.article-content');
+  if (articleContent) articleContent.classList.add('is-loading');
+  if (articleNav) articleNav.hidden = true;
+  listMessage.textContent = '';
+  if (articleListElement) {
+    articleListElement.innerHTML = '';
+    articleListElement.appendChild(buildSidebarSkeleton());
+  }
   if (paragraphsContainer) {
     paragraphsContainer.innerHTML = '';
     paragraphsContainer.appendChild(buildLoadingState());
@@ -1952,6 +2031,8 @@ const fetchArticles = async () => {
     listMessage.textContent = 'Unable to load articles.';
     renderArticleDetail(null);
     updateNavigationButtons();
+  } finally {
+    if (articleContent) articleContent.classList.remove('is-loading');
   }
 };
 
@@ -2027,21 +2108,33 @@ const copyToClipboard = async (value) => {
   return copied;
 };
 
+// Inline SVG icons for the copy tools (Feather/Lucide, 24x24 stroke).
+const TOOL_SVG = (inner) =>
+  `<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">${inner}</svg>`;
+
+const TOOL_ICONS = {
+  text: '<rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>',
+  link: '<path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>',
+  citation: '<path d="M3 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"></path><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"></path>',
+  success: '<polyline points="20 6 9 17 4 12"></polyline>',
+  error: '<line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line>',
+};
+
 const showCopyConfirmation = (button, label, { isSuccess = true } = {}) => {
   if (!button) {
     return;
   }
 
-  const finalLabel = label || 'Copied';
-  const originalLabel = button.dataset.originalLabel || button.textContent;
-  button.dataset.originalLabel = originalLabel;
+  if (button.dataset.originalHtml === undefined) {
+    button.dataset.originalHtml = button.innerHTML;
+  }
 
   if (button._copyTimeoutId) {
     clearTimeout(button._copyTimeoutId);
     button._copyTimeoutId = null;
   }
 
-  button.textContent = finalLabel;
+  button.innerHTML = TOOL_SVG(isSuccess ? TOOL_ICONS.success : TOOL_ICONS.error);
   if (isSuccess) {
     button.classList.add('is-copied');
     button.classList.remove('has-copy-error');
@@ -2051,11 +2144,11 @@ const showCopyConfirmation = (button, label, { isSuccess = true } = {}) => {
   }
 
   button._copyTimeoutId = window.setTimeout(() => {
-    button.textContent = button.dataset.originalLabel;
+    button.innerHTML = button.dataset.originalHtml;
     button.classList.remove('is-copied');
     button.classList.remove('has-copy-error');
     button._copyTimeoutId = null;
-  }, 1600);
+  }, 1400);
 };
 
 const parseParagraphToken = (token = '') => {
@@ -2140,6 +2233,14 @@ const getParagraphPlainText = (paragraphElement) => {
     .trim();
 };
 
+const buildPermalink = (hash) => {
+  try {
+    return new URL(`#${hash}`, window.location.href).href;
+  } catch (error) {
+    return `${window.location.origin}${window.location.pathname}${window.location.search}#${hash}`;
+  }
+};
+
 const getParagraphPermalink = (paragraphId) => {
   if (!paragraphId) {
     return window.location.href;
@@ -2151,14 +2252,33 @@ const getParagraphPermalink = (paragraphId) => {
   const currentActId = currentSidebarSelectionKey && currentSidebarSelectionKey.startsWith('act:')
     ? currentSidebarSelectionKey.slice(4)
     : null;
-  const targetHash = currentActId ? `a:${currentActId}:${paragraphId}` : paragraphId;
-
-  try {
-    return new URL(`#${targetHash}`, window.location.href).href;
-  } catch (error) {
-    return `${window.location.origin}${window.location.pathname}${window.location.search}#${targetHash}`;
-  }
+  return buildPermalink(currentActId ? `a:${currentActId}:${paragraphId}` : paragraphId);
 };
+
+const getArticlePermalink = (actId, articleId) =>
+  buildPermalink(actId ? `a:${actId}:${articleId}` : articleId);
+
+const getActPermalink = (actId) => buildPermalink(`act:${actId}`);
+
+const getArticleHeadingText = (article) =>
+  [article?.title, getHeadingText(article)].filter(Boolean).join(' — ').trim();
+
+const getArticleCitation = (article, actId) => {
+  const act = allActs.find((item) => item.id === actId);
+  const regulationName = (act?.title || '').trim();
+  const articleTitle = (article?.title || article?.id || '').trim();
+  return [regulationName, articleTitle].filter(Boolean).join(' ');
+};
+
+const getActHeadingText = (act) =>
+  [act?.title, act?.heading].filter(Boolean).join(' — ').trim();
+
+const getActCitation = (act) => (act?.title || act?.id || '').trim();
+
+const getBundlePermalink = (bundleId) => buildPermalink(`bundle:${bundleId}`);
+
+const getBundleHeadingText = (bundle) => (bundle?.title || bundle?.id || '').trim();
+
 
 // --- Search highlighting helpers ---
 const escapeRegExp = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
@@ -2249,6 +2369,40 @@ const highlightSearchMatches = (query) => {
   });
 };
 
+const createToolsWrapper = (actions, ariaLabel = 'Tools') => {
+  const toolsWrapper = document.createElement('span');
+  toolsWrapper.className = 'paragraph-tools';
+  toolsWrapper.setAttribute('role', 'group');
+  toolsWrapper.setAttribute('aria-label', ariaLabel);
+
+  actions.forEach((action) => {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'paragraph-tool-button';
+    button.innerHTML = TOOL_SVG(TOOL_ICONS[action.key] || '');
+    button.title = action.label;
+    button.setAttribute('aria-label', action.ariaLabel);
+
+    button.addEventListener('click', async (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+
+      const content = action.getContent();
+      if (!content) {
+        showCopyConfirmation(button, 'Error', { isSuccess: false });
+        return;
+      }
+
+      const succeeded = await copyToClipboard(content);
+      showCopyConfirmation(button, succeeded ? 'Copied' : 'Error', { isSuccess: succeeded });
+    });
+
+    toolsWrapper.appendChild(button);
+  });
+
+  return toolsWrapper;
+};
+
 const attachParagraphTools = (paragraphElement, article, paragraphData) => {
   if (!paragraphElement || typeof paragraphData !== 'object') {
     return;
@@ -2260,11 +2414,6 @@ const attachParagraphTools = (paragraphElement, article, paragraphData) => {
   }
 
   paragraphElement.classList.add('has-paragraph-tools');
-
-  const toolsWrapper = document.createElement('span');
-  toolsWrapper.className = 'paragraph-tools';
-  toolsWrapper.setAttribute('role', 'group');
-  toolsWrapper.setAttribute('aria-label', 'Paragraph tools');
 
   const actions = [
     {
@@ -2287,29 +2436,22 @@ const attachParagraphTools = (paragraphElement, article, paragraphData) => {
     },
   ];
 
-  actions.forEach((action) => {
-    const button = document.createElement('button');
-    button.type = 'button';
-    button.className = 'paragraph-tool-button';
-    button.textContent = action.label;
-    button.setAttribute('aria-label', action.ariaLabel);
+  paragraphElement.appendChild(createToolsWrapper(actions, 'Paragraph tools'));
+};
 
-    button.addEventListener('click', async (event) => {
-      event.preventDefault();
-      event.stopPropagation();
+// Copy/link/citation tools for a heading element (article heading or act root title).
+const attachHeadingTools = (element, { getText, getLink, getCitation }) => {
+  if (!element) {
+    return;
+  }
 
-      const content = action.getContent();
-      if (!content) {
-        showCopyConfirmation(button, 'Error', { isSuccess: false });
-        return;
-      }
+  element.classList.add('has-paragraph-tools');
 
-      const succeeded = await copyToClipboard(content);
-      showCopyConfirmation(button, succeeded ? 'Copied' : 'Error', { isSuccess: succeeded });
-    });
+  const actions = [
+    { key: 'text', label: 'Text', ariaLabel: 'Copy heading text to clipboard', getContent: getText },
+    { key: 'link', label: 'Link', ariaLabel: 'Copy direct link', getContent: getLink },
+    { key: 'citation', label: 'Citation', ariaLabel: 'Copy citation', getContent: getCitation },
+  ];
 
-    toolsWrapper.appendChild(button);
-  });
-
-  paragraphElement.appendChild(toolsWrapper);
+  element.appendChild(createToolsWrapper(actions, 'Heading tools'));
 };
