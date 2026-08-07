@@ -1242,9 +1242,11 @@ const renderSidebarList = (items = []) => {
     return rendered ? list : null;
   }
 
-  // Save current scroll position
+  // Save current scroll position and the list's offset so we can compensate
+  // for anything above it (collapse button / message) toggling on re-render.
   const savedScrollPosition = sidePanel ? sidePanel.scrollTop : 0;
-  
+  const listOffsetBefore = articleListElement.offsetTop;
+
   articleListElement.innerHTML = '';
 
   if (!items.length) {
@@ -1367,14 +1369,17 @@ const renderSidebarList = (items = []) => {
   highlightActiveLink();
   updateCollapseAllButton();
   if (sidePanel) {
-    // Postpone scroll handling to allow the DOM to settle
-    requestAnimationFrame(() => {
-      // Always restore the pre-render scroll first so a click never yanks the
-      // list around — the clicked row stays exactly under the cursor.
-      sidePanel.scrollTop = savedScrollPosition;
+    // Restore scroll synchronously, before the browser paints, so the full
+    // list rebuild never yanks the panel to a different position (the previous
+    // rAF restore painted at the wrong scroll first, causing a visible jump).
+    // Adjust by the list's offset delta so a collapse button / message that
+    // appears or disappears above the list doesn't shift the rows either.
+    const listOffsetDelta = articleListElement.offsetTop - listOffsetBefore;
+    sidePanel.scrollTop = savedScrollPosition + listOffsetDelta;
 
-      // Only nudge the active item into view if it ended up outside the panel
-      // (e.g. when navigating via a breadcrumb, hash link, or keyboard).
+    // After layout settles, only nudge the active item into view if it ended up
+    // outside the panel (e.g. breadcrumb, hash link, or keyboard navigation).
+    requestAnimationFrame(() => {
       const activeKey = currentArticleSelectionKey || currentSidebarSelectionKey;
       const activeButton = activeKey ? articleButtons.get(activeKey) : null;
       if (activeButton) {
