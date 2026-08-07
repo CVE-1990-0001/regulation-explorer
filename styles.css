@@ -1061,7 +1061,7 @@ textarea {
 }
 
 .bundle-description {
-  padding: 1.5rem;
+  padding: 1rem 1.25rem;
   background: var(--surface-light);
   border-radius: 4px;
   border-left: 3px solid var(--accent-blue);
@@ -1074,8 +1074,8 @@ textarea {
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.75rem;
 }
 
 .bundle-members li {
@@ -1084,7 +1084,7 @@ textarea {
 
 .bundle-members a {
   display: block;
-  padding: 1.25rem;
+  padding: 0.75rem 1rem;
   background: var(--surface-light);
   border: 1px solid var(--border-subtle);
   border-radius: 4px;
