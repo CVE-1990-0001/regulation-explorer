@@ -1385,7 +1385,10 @@ const renderSidebarList = (items = []) => {
       if (activeButton) {
         const panelRect = sidePanel.getBoundingClientRect();
         const itemRect = activeButton.getBoundingClientRect();
-        if (itemRect.top < panelRect.top || itemRect.bottom > panelRect.bottom) {
+        // Only pull the active item in when it's entirely out of view (e.g. hash
+        // or keyboard navigation). If any part is already visible — like the row
+        // the user just clicked — leave the scroll alone to avoid a jump.
+        if (itemRect.bottom <= panelRect.top || itemRect.top >= panelRect.bottom) {
           activeButton.scrollIntoView({ block: 'nearest', behavior: 'auto' });
         }
       }
