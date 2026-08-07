@@ -926,6 +926,11 @@ const renderBundle = (bundle) => {
   const ancestors = bundlePath.slice(0, -1);
   renderBreadcrumb(ancestors.map((b) => ({ label: b.title || b.id, hash: `bundle:${b.id}` })));
   articleTitleElement.textContent = bundle.title || bundle.id || '';
+  attachHeadingTools(articleTitleElement, {
+    getText: () => getBundleHeadingText(bundle),
+    getLink: () => getBundlePermalink(bundle.id),
+    getCitation: () => getBundleHeadingText(bundle),
+  });
   articleSubtitleElement.textContent = '';
 
   paragraphsContainer.innerHTML = '';
@@ -2208,6 +2213,10 @@ const getActHeadingText = (act) =>
   [act?.title, act?.heading].filter(Boolean).join(' — ').trim();
 
 const getActCitation = (act) => (act?.title || act?.id || '').trim();
+
+const getBundlePermalink = (bundleId) => buildPermalink(`bundle:${bundleId}`);
+
+const getBundleHeadingText = (bundle) => (bundle?.title || bundle?.id || '').trim();
 
 
 // --- Search highlighting helpers ---

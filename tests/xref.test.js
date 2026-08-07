@@ -121,3 +121,13 @@ test('copy Citation on an article heading includes the regulation and section', 
   app.click(citeBtn); await app.tick();
   assert.match(app.clipboard(), /Börsengesetz.*§ 1/);
 });
+
+test('copy Link on a folder (bundle) heading yields a bundle permalink', async () => {
+  app.nav('#bundle:bundle_dora'); await app.tick();
+  const title = app.doc.getElementById('articleTitle');
+  const linkBtn = title.querySelector('.paragraph-tool-button[aria-label="Copy direct link"]');
+  assert.ok(linkBtn, 'expected a bundle Link button');
+
+  app.click(linkBtn); await app.tick();
+  assert.match(app.clipboard(), /#bundle:bundle_dora$/);
+});
