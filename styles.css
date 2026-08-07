@@ -1064,11 +1064,10 @@ textarea {
 }
 
 .bundle-description {
-  padding: 1rem 1.25rem;
-  background: var(--surface-light);
-  border-radius: 4px;
-  border-left: 3px solid var(--accent-blue);
+  margin: 0;
+  max-width: 68ch;
   color: var(--color-darkgray);
+  font-size: var(--fs-h-sm);
   line-height: 1.7;
 }
 
@@ -1077,7 +1076,7 @@ textarea {
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 0.75rem;
 }
 
@@ -1086,22 +1085,46 @@ textarea {
 }
 
 .bundle-members a {
-  display: block;
-  padding: 0.75rem 1rem;
-  background: var(--surface-light);
-  border: 1px solid var(--border-subtle);
-  border-radius: 4px;
-  color: var(--accent-blue);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.85rem 1rem;
+  background: var(--surface-elevated);
+  border: 1px solid var(--border-strong);
+  border-radius: 6px;
+  color: var(--color-darkgray);
   text-decoration: none;
-  font-weight: 600;
-  transition: all var(--transition-base);
+  font-weight: 500;
+  transition: border-color var(--transition-fast), color var(--transition-fast),
+    box-shadow var(--transition-fast), transform var(--transition-fast);
+}
+
+/* Right-pointing chevron affordance (CSS box, no glyph) */
+.bundle-members a::after {
+  content: "";
+  flex: 0 0 auto;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-right: 1.5px solid var(--color-midgray);
+  border-bottom: 1.5px solid var(--color-midgray);
+  transform: rotate(-45deg);
+  transition: border-color var(--transition-fast), transform var(--transition-fast);
 }
 
 .bundle-members a:hover,
-.bundle-members a:focus {
-  background: rgba(0, 0, 153, 0.05);
+.bundle-members a:focus-visible {
   border-color: var(--accent-blue);
-  box-shadow: none;
+  color: var(--accent-blue);
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-1px);
+  outline: none;
+}
+
+.bundle-members a:hover::after,
+.bundle-members a:focus-visible::after {
+  border-color: var(--accent-blue);
+  transform: rotate(-45deg) translate(1px, 1px);
 }
 
 /* Navigation buttons */
