@@ -10,8 +10,9 @@ import json
 import os
 import re
 import sys
+import warnings
 
-from bs4 import BeautifulSoup, Tag
+from bs4 import BeautifulSoup, Tag, XMLParsedAsHTMLWarning
 
 
 def normalise_whitespace(value):
@@ -192,7 +193,9 @@ def extract_paragraph_text(node):
 
 
 def parse(html):
-    soup = BeautifulSoup(html, "lxml")
+    with warnings.catch_warnings():
+        warnings.simplefilter("ignore", XMLParsedAsHTMLWarning)
+        soup = BeautifulSoup(html, "lxml")
     parser = ConsolidatedParser()
 
     article_title_nodes = soup.select("p.title-article-norm")

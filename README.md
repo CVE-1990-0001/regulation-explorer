@@ -5,6 +5,12 @@ A static, client-side browser for legal acts. No build step: `index.html` +
 
 ## Local development
 
+Install the Python tooling and parser dependencies:
+
+```bash
+python3 -m pip install -r requirements.txt
+```
+
 `fetch()` is blocked on `file://`, so serve over HTTP:
 
 ```bash
@@ -115,3 +121,25 @@ bundle membership (including removals from `data/index.json`).
 `data/index.json` remains the browser app source of truth for loaded content.
 The DB is a derived index for querying/integration, and the script also writes
 `data/index_meta.json` (lightweight `id -> celex` metadata for runtime lookups).
+
+## Updating all regulations
+
+Run the complete RegBro data refresh with one command:
+
+```bash
+python3 tools/update_regulations.py
+```
+
+The updater visits every registry act whose `status` is `In Force` (the default),
+checks EUR-Lex acts identified by `authId`, updates changed article content, then
+re-links the complete corpus and rebuilds `data/index.db` and
+`data/index_meta.json`. Unsupported sources are reported and skipped. Use
+`--check` to report pending changes without writing, or pass act ids/paths to
+limit a run. Detailed function and update activity is written to
+`logs/update_regulations.log`; logs rotate at 100 MB.
+
+Non-EUR-Lex acts can define an `update` object in `data/index.json` with a
+`url` and parser name (`consolidated`, `oj`, `boersengesetz`, or `nis2_bsig`).
+Set `status` to another schema-supported value (for example `Repealed`) to
+exclude an act from automatic updates; `dateInForce` is also mirrored into the
+generated database.

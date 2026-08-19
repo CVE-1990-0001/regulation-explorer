@@ -32,7 +32,15 @@
       "path": "regulations-data/boersengesetz.json",
       "label": "Börsengesetz (BörsG)",
       "heading": "German Securities Exchange Act",
-      "jurisdiction": "DE"
+      "jurisdiction": "DE",
+      "update": {
+        "url": [
+          "https://www.gesetze-im-internet.de/b_rsg_2007/BJNR135100007.html",
+          "https://raw.githubusercontent.com/QuantLaw/gesetze-im-internet/data/data/items/b_rsg_2007/BJNR135100007.xml"
+        ],
+        "parser": "boersengesetz",
+        "encoding": "latin-1"
+      }
     },
     {
       "id": "act_eu_dora_reg_2022_2554",
@@ -141,7 +149,11 @@
       "path": "regulations-data/nis2_umsetzungsgesetz_bsig.json",
       "label": "BSI-Gesetz (BSIG – NIS-2-Umsetzung)",
       "heading": "BSI-Gesetz (NIS-2-Umsetzungsgesetz)",
-      "jurisdiction": "DE"
+      "jurisdiction": "DE",
+      "update": {
+        "url": "https://www.recht.bund.de/bgbl/1/2025/301/regelungstext.pdf?__blob=publicationFile&v=2",
+        "parser": "nis2_bsig"
+      }
     }
   ],  "bundles": [
     {
