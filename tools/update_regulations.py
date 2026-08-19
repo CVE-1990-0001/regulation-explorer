@@ -263,7 +263,6 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     return parser.parse_args(argv)
 
 
-@logged
 def main(argv: list[str] | None = None) -> int:
     configure_logging()
     LOGGER.debug("Starting main")
@@ -278,7 +277,7 @@ def main(argv: list[str] | None = None) -> int:
             counts[result] += 1
             if result == "updated" and not args.check:
                 write_json(APP / entry["path"], payload)
-                LOGGER.info("Applied update to %s", entry["path"])
+                LOGGER.info("Applied update to %s (%s)", entry["id"], entry["path"])
             else:
                 LOGGER.info("%s: %s", entry["id"], result)
             print(f"{entry['id']}: {result}")
@@ -291,10 +290,13 @@ def main(argv: list[str] | None = None) -> int:
     LOGGER.info(summary)
     print(summary)
     if counts["failed"]:
+        LOGGER.debug("Completed main")
         return 1
     if args.check:
+        LOGGER.debug("Completed main")
         return 2 if counts["updated"] else 0
     run_pipeline()
+    LOGGER.debug("Completed main")
     return 0
 
 
