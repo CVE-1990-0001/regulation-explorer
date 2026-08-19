@@ -129,7 +129,8 @@ checks EUR-Lex acts identified by `authId`, updates changed article content, the
 re-links the complete corpus and rebuilds `data/index.db` and
 `data/index_meta.json`. Unsupported sources are reported and skipped. Use
 `--check` to report pending changes without writing, or pass act ids/paths to
-limit a run.
+limit a run. Detailed function and update activity is written to
+`logs/update_regulations.log`; logs rotate at 100 MB.
 
 Non-EUR-Lex acts can define an `update` object in `data/index.json` with a
 `url` and parser name (`consolidated`, `oj`, `boersengesetz`, or `nis2_bsig`).

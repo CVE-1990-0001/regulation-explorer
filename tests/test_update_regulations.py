@@ -1,5 +1,6 @@
 import importlib.util
 import json
+import logging.handlers
 import os
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -73,3 +74,16 @@ def test_write_json_has_stable_format(tmp_path):
     updater.write_json(output, [{"id": "art_1"}])
     assert json.loads(output.read_text()) == [{"id": "art_1"}]
     assert output.read_text().endswith("\n")
+
+
+def test_logging_covers_functions_and_rotates_at_100_mb(tmp_path):
+    log_path = tmp_path / "update.log"
+    updater.configure_logging(log_path)
+    assert updater.celex_from_entry({"authId": "celex:32016R0679"}) == "32016R0679"
+
+    handler = updater.LOGGER.handlers[0]
+    handler.flush()
+    assert isinstance(handler, logging.handlers.RotatingFileHandler)
+    assert handler.maxBytes == 100 * 1024 * 1024
+    assert "Starting celex_from_entry" in log_path.read_text()
+    assert "Completed celex_from_entry" in log_path.read_text()

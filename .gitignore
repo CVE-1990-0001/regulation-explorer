@@ -10,5 +10,8 @@ data/index.db
 data/index.db-shm
 data/index.db-wal
 
+# Generated update logs
+logs/
+
 # OS / editor cruft
 .DS_Store

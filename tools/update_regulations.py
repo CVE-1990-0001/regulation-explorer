@@ -11,21 +11,58 @@ from __future__ import annotations
 import argparse
 import importlib.util
 import json
+import logging
 import os
 import subprocess
 import sys
 import tempfile
 import urllib.request
+from functools import wraps
+from logging.handlers import RotatingFileHandler
 from pathlib import Path
 from typing import Callable, Iterable
 
 APP = Path(__file__).resolve().parent.parent
 INDEX_PATH = APP / "data" / "index.json"
+LOG_PATH = APP / "logs" / "update_regulations.log"
+LOG_MAX_BYTES = 100 * 1024 * 1024
 PARSERS_DIR = APP / "tools" / "parsers"
 IN_FORCE = "In Force"
 Fetch = Callable[[str, int], bytes]
+LOGGER = logging.getLogger("regulation_updater")
 
 
+def configure_logging(log_path: Path = LOG_PATH) -> None:
+    log_path.parent.mkdir(parents=True, exist_ok=True)
+    handler = RotatingFileHandler(
+        log_path, maxBytes=LOG_MAX_BYTES, backupCount=5, encoding="utf-8"
+    )
+    handler.setFormatter(logging.Formatter("%(asctime)s %(levelname)s %(message)s"))
+    for existing_handler in LOGGER.handlers:
+        existing_handler.close()
+    LOGGER.handlers.clear()
+    LOGGER.addHandler(handler)
+    LOGGER.setLevel(logging.DEBUG)
+    LOGGER.propagate = False
+    LOGGER.debug("Completed configure_logging")
+
+
+def logged(function):
+    @wraps(function)
+    def wrapper(*args, **kwargs):
+        LOGGER.debug("Starting %s", function.__name__)
+        try:
+            result = function(*args, **kwargs)
+        except Exception:
+            LOGGER.exception("Failed %s", function.__name__)
+            raise
+        LOGGER.debug("Completed %s", function.__name__)
+        return result
+
+    return wrapper
+
+
+@logged
 def load_module(name: str, path: Path):
     spec = importlib.util.spec_from_file_location(name, path)
     if spec is None or spec.loader is None:
@@ -35,17 +72,20 @@ def load_module(name: str, path: Path):
     return module
 
 
+@logged
 def read_json(path: Path):
     with path.open(encoding="utf-8") as handle:
         return json.load(handle)
 
 
+@logged
 def write_json(path: Path, payload) -> None:
     with path.open("w", encoding="utf-8") as handle:
         json.dump(payload, handle, ensure_ascii=False, indent=2)
         handle.write("\n")
 
 
+@logged
 def fetch_url(url: str, timeout: int) -> bytes:
     request = urllib.request.Request(
         url,
@@ -58,6 +98,7 @@ def fetch_url(url: str, timeout: int) -> bytes:
         return response.read()
 
 
+@logged
 def celex_from_entry(entry: dict) -> str | None:
     auth_id = entry.get("authId")
     if not isinstance(auth_id, str) or not auth_id.lower().startswith("celex:"):
@@ -66,6 +107,7 @@ def celex_from_entry(entry: dict) -> str | None:
     return value or None
 
 
+@logged
 def eurlex_urls(celex: str) -> list[str]:
     identifiers = [celex]
     if celex.startswith("3"):
@@ -76,6 +118,7 @@ def eurlex_urls(celex: str) -> list[str]:
     ]
 
 
+@logged
 def update_config(entry: dict) -> tuple[list[str], str, str]:
     config = entry.get("update")
     if config is False or (isinstance(config, dict) and config.get("enabled") is False):
@@ -92,6 +135,7 @@ def update_config(entry: dict) -> tuple[list[str], str, str]:
     return urls, config.get("parser", "auto"), config.get("encoding", "utf-8")
 
 
+@logged
 def decode_html(content: bytes, encoding: str) -> str:
     try:
         return content.decode(encoding)
@@ -99,6 +143,7 @@ def decode_html(content: bytes, encoding: str) -> str:
         return content.decode("utf-8", errors="replace")
 
 
+@logged
 def parse_articles(content: bytes, parser_name: str, encoding: str) -> list[dict]:
     if parser_name == "nis2_bsig":
         module = load_module("update_parser_nis2_bsig", PARSERS_DIR / "parser_nis2_bsig.py")
@@ -137,6 +182,7 @@ def parse_articles(content: bytes, parser_name: str, encoding: str) -> list[dict
     return articles
 
 
+@logged
 def linked_articles(articles: list[dict], act_id: str) -> list[dict]:
     linker = load_module("update_link_references", APP / "tools" / "link_references.py")
     self_ids = linker.self_article_ids(articles)
@@ -147,6 +193,7 @@ def linked_articles(articles: list[dict], act_id: str) -> list[dict]:
     return articles
 
 
+@logged
 def replace_articles(document, articles: list[dict]):
     if isinstance(document, list):
         return articles
@@ -157,6 +204,7 @@ def replace_articles(document, articles: list[dict]):
     return updated
 
 
+@logged
 def selected_entries(index: dict, only: Iterable[str]) -> list[dict]:
     requested = set(only)
     selected = []
@@ -169,6 +217,7 @@ def selected_entries(index: dict, only: Iterable[str]) -> list[dict]:
     return selected
 
 
+@logged
 def refresh_entry(entry: dict, fetcher: Fetch, timeout: int) -> tuple[str, object | None]:
     urls, parser_name, encoding = update_config(entry)
     if not urls:
@@ -184,15 +233,25 @@ def refresh_entry(entry: dict, fetcher: Fetch, timeout: int) -> tuple[str, objec
             updated = replace_articles(current, articles)
             return ("unchanged" if updated == current else "updated"), updated
         except Exception as exc:  # Continue to a fallback source and then the next act.
+            LOGGER.warning(
+                "Source failed for %s: %s: %s",
+                entry.get("id", "<unknown>"),
+                url,
+                exc,
+            )
             errors.append(f"{url}: {exc}")
     raise RuntimeError("; ".join(errors))
 
 
+@logged
 def run_pipeline() -> None:
+    LOGGER.info("Re-linking references")
     subprocess.run([sys.executable, str(APP / "tools" / "link_references.py")], check=True)
+    LOGGER.info("Rebuilding indexes")
     subprocess.run([sys.executable, str(APP / "tools" / "build_index_db.py")], check=True)
 
 
+@logged
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Refresh all in-force regulations, references, and indexes."
@@ -204,7 +263,10 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     return parser.parse_args(argv)
 
 
+@logged
 def main(argv: list[str] | None = None) -> int:
+    configure_logging()
+    LOGGER.debug("Starting main")
     args = parse_args(argv)
     index = read_json(args.index)
     entries = selected_entries(index, args.only)
@@ -216,12 +278,18 @@ def main(argv: list[str] | None = None) -> int:
             counts[result] += 1
             if result == "updated" and not args.check:
                 write_json(APP / entry["path"], payload)
+                LOGGER.info("Applied update to %s", entry["path"])
+            else:
+                LOGGER.info("%s: %s", entry["id"], result)
             print(f"{entry['id']}: {result}")
         except Exception as exc:
             counts["failed"] += 1
+            LOGGER.exception("%s: failed", entry.get("id", "<unknown>"))
             print(f"{entry.get('id', '<unknown>')}: failed: {exc}", file=sys.stderr)
 
-    print(" ".join(f"{key}={value}" for key, value in counts.items()))
+    summary = " ".join(f"{key}={value}" for key, value in counts.items())
+    LOGGER.info(summary)
+    print(summary)
     if counts["failed"]:
         return 1
     if args.check:
