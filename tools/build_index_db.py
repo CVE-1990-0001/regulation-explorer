@@ -37,6 +37,8 @@ class ActRow:
     auth_id_scheme: Optional[str]
     source_url: Optional[str]
     path: str
+    status: str
+    date_in_force: Optional[str]
 
 
 @dataclass
@@ -172,6 +174,8 @@ def collect_act_rows(index_data: dict) -> Tuple[List[ActRow], Dict[str, List[dic
             auth_id_scheme=auth_id_scheme,
             source_url=(source.get("uri") if isinstance(source, dict) else None) or None,
             path=rel_path,
+            status=entry.get("status") or "In Force",
+            date_in_force=entry.get("dateInForce") or None,
         )
         act_rows.append(row)
         act_articles[act_id] = extract_articles(payload)
@@ -337,7 +341,7 @@ def sync_database(index_data: dict, db_exists: bool) -> None:
             conn.execute(
                 """
                 INSERT INTO act (id, label, heading, jurisdiction, auth_id, auth_id_scheme, source_url, path, status, date_in_force, primary_bundle)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, 'In Force', NULL, NULL)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, NULL)
                 ON CONFLICT(id) DO UPDATE SET
                     label=excluded.label,
                     heading=excluded.heading,
@@ -359,6 +363,8 @@ def sync_database(index_data: dict, db_exists: bool) -> None:
                     row.auth_id_scheme,
                     row.source_url,
                     row.path,
+                    row.status,
+                    row.date_in_force,
                 ),
             )
 

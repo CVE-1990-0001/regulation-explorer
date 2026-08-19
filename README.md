@@ -115,3 +115,24 @@ bundle membership (including removals from `data/index.json`).
 `data/index.json` remains the browser app source of truth for loaded content.
 The DB is a derived index for querying/integration, and the script also writes
 `data/index_meta.json` (lightweight `id -> celex` metadata for runtime lookups).
+
+## Updating all regulations
+
+Run the complete RegBro data refresh with one command:
+
+```bash
+python3 tools/update_regulations.py
+```
+
+The updater visits every registry act whose `status` is `In Force` (the default),
+checks EUR-Lex acts identified by `authId`, updates changed article content, then
+re-links the complete corpus and rebuilds `data/index.db` and
+`data/index_meta.json`. Unsupported sources are reported and skipped. Use
+`--check` to report pending changes without writing, or pass act ids/paths to
+limit a run.
+
+Non-EUR-Lex acts can define an `update` object in `data/index.json` with a
+`url` and parser name (`consolidated`, `oj`, `boersengesetz`, or `nis2_bsig`).
+Set `status` to another schema-supported value (for example `Repealed`) to
+exclude an act from automatic updates; `dateInForce` is also mirrored into the
+generated database.
