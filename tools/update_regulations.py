@@ -11,6 +11,7 @@ from __future__ import annotations
 import argparse
 import importlib.util
 import json
+import os
 import subprocess
 import sys
 import tempfile
@@ -101,10 +102,13 @@ def decode_html(content: bytes, encoding: str) -> str:
 def parse_articles(content: bytes, parser_name: str, encoding: str) -> list[dict]:
     if parser_name == "nis2_bsig":
         module = load_module("update_parser_nis2_bsig", PARSERS_DIR / "parser_nis2_bsig.py")
-        with tempfile.NamedTemporaryFile(suffix=".pdf") as source:
-            source.write(content)
-            source.flush()
-            articles = module.parse(source.name)
+        descriptor, source_name = tempfile.mkstemp(suffix=".pdf")
+        try:
+            with os.fdopen(descriptor, "wb") as source:
+                source.write(content)
+            articles = module.parse(source_name)
+        finally:
+            Path(source_name).unlink(missing_ok=True)
     else:
         html = decode_html(content, encoding)
         parsers = {
