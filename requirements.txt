@@ -1,0 +1,4 @@
+beautifulsoup4==4.15.0
+lxml==6.1.2
+pdfplumber==0.11.10
+pytest==9.1.1

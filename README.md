@@ -5,6 +5,12 @@ A static, client-side browser for legal acts. No build step: `index.html` +
 
 ## Local development
 
+Install the Python tooling and parser dependencies:
+
+```bash
+python3 -m pip install -r requirements.txt
+```
+
 `fetch()` is blocked on `file://`, so serve over HTTP:
 
 ```bash
