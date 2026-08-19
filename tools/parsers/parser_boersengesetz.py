@@ -162,7 +162,49 @@ def linkify_text(raw_text, known_tokens):
     return s
 
 
+def parse_xml(source):
+    soup = BeautifulSoup(source, "xml")
+    norm_nodes = [node for node in soup.find_all("norm") if node.find("enbez")]
+    known_article_tokens = {
+        token
+        for node in norm_nodes
+        if (token := extract_article_token(node.find("enbez").get_text()))
+    }
+    articles = []
+
+    for node in norm_nodes:
+        label_node = node.find("enbez")
+        raw_label = normalise_whitespace(label_node.get_text())
+        article_token = extract_article_token(raw_label)
+        if not article_token:
+            continue
+        title_node = node.find("titel")
+        article_id = f"art_{article_token}"
+        paragraphs = []
+        for paragraph_node in node.select("textdaten Content > P"):
+            raw_text = normalise_whitespace(paragraph_node.get_text(" "))
+            if not raw_text or raw_text == "-":
+                continue
+            paragraphs.append({
+                "id": f"{article_id}__{len(paragraphs) + 1}",
+                "text": linkify_text(raw_text, known_article_tokens),
+                "class": paragraph_class_from_text(raw_text),
+            })
+        if paragraphs:
+            articles.append({
+                "id": article_id,
+                "title": raw_label,
+                "heading": normalise_whitespace(title_node.get_text()) if title_node else "",
+                "paragraphs": paragraphs,
+            })
+
+    return articles
+
+
 def parse(html):
+    if re.match(r"\s*<\?xml\b", html, re.I):
+        return parse_xml(html)
+
     soup = BeautifulSoup(html, "lxml")
 
     # -- Pass 1: collect known article tokens --

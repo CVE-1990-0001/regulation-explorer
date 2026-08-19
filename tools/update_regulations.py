@@ -13,10 +13,12 @@ import importlib.util
 import json
 import logging
 import os
+import re
 import subprocess
 import sys
 import tempfile
 import urllib.request
+from urllib.parse import urlencode, urlparse
 from functools import wraps
 from logging.handlers import RotatingFileHandler
 from pathlib import Path
@@ -28,6 +30,9 @@ LOG_PATH = APP / "logs" / "update_regulations.log"
 LOG_MAX_BYTES = 100 * 1024 * 1024
 PARSERS_DIR = APP / "tools" / "parsers"
 IN_FORCE = "In Force"
+CELLAR_CELEX_PREFIX = "https://publications.europa.eu/resource/celex/"
+CELLAR_SPARQL_URL = "https://publications.europa.eu/webapi/rdf/sparql"
+CELLAR_DOWNLOAD_URL = "https://op.europa.eu/o/opportal-service/download-handler"
 Fetch = Callable[[str, int], bytes]
 LOGGER = logging.getLogger("regulation_updater")
 
@@ -85,17 +90,63 @@ def write_json(path: Path, payload) -> None:
         handle.write("\n")
 
 
-@logged
-def fetch_url(url: str, timeout: int) -> bytes:
+def request_bytes(url: str, timeout: int, accept: str) -> bytes:
     request = urllib.request.Request(
         url,
         headers={
-            "Accept": "text/html,application/xhtml+xml,application/pdf",
+            "Accept": accept,
             "User-Agent": "RegBro regulation updater/1.0",
         },
     )
     with urllib.request.urlopen(request, timeout=timeout) as response:
         return response.read()
+
+
+def cellar_download_url(work_uri: str) -> str:
+    identifier = urlparse(work_uri).path.rstrip("/").rsplit("/", 1)[-1]
+    if not identifier:
+        raise ValueError("CELLAR returned a work without an identifier")
+    return f"{CELLAR_DOWNLOAD_URL}?{urlencode({
+        'identifier': identifier,
+        'format': 'HTML',
+        'language': 'en',
+        'productionSystem': 'cellar',
+        'part': '',
+    })}"
+
+
+def fetch_cellar(url: str, timeout: int) -> bytes:
+    celex = url.removeprefix(CELLAR_CELEX_PREFIX)
+    if celex.startswith("0"):
+        condition = f'STRSTARTS(STR(?celex), "{celex}-")'
+    else:
+        condition = f'STR(?celex) = "{celex}"'
+    query = (
+        "PREFIX cdm: <http://publications.europa.eu/ontology/cdm#> "
+        "SELECT ?work ?celex WHERE { "
+        "?work cdm:resource_legal_id_celex ?celex . "
+        f"FILTER({condition}) }} ORDER BY DESC(?celex) LIMIT 1"
+    )
+    search_url = f"{CELLAR_SPARQL_URL}?{urlencode({'query': query})}"
+    payload = json.loads(
+        request_bytes(search_url, timeout, "application/sparql-results+json")
+    )
+    bindings = payload.get("results", {}).get("bindings", [])
+    if not bindings:
+        raise ValueError(f"CELLAR has no English work for CELEX:{celex}")
+    work_uri = bindings[0].get("work", {}).get("value", "")
+    return request_bytes(
+        cellar_download_url(work_uri), timeout, "application/xhtml+xml,text/html"
+    )
+
+
+@logged
+def fetch_url(url: str, timeout: int) -> bytes:
+    if url.startswith(CELLAR_CELEX_PREFIX):
+        return fetch_cellar(url, timeout)
+    return request_bytes(
+        url, timeout, "text/html,application/xhtml+xml,application/pdf"
+    )
 
 
 @logged
@@ -112,10 +163,12 @@ def eurlex_urls(celex: str) -> list[str]:
     identifiers = [celex]
     if celex.startswith("3"):
         identifiers.insert(0, f"0{celex[1:]}")
-    return [
+    cellar_urls = [f"{CELLAR_CELEX_PREFIX}{identifier}" for identifier in identifiers]
+    eurlex_fallbacks = [
         f"https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:{identifier}"
         for identifier in identifiers
     ]
+    return cellar_urls + eurlex_fallbacks
 
 
 @logged
@@ -137,9 +190,16 @@ def update_config(entry: dict) -> tuple[list[str], str, str]:
 
 @logged
 def decode_html(content: bytes, encoding: str) -> str:
+    declaration = re.search(
+        br"<\?xml\b[^>]*\bencoding=[\"']([A-Za-z0-9._-]+)[\"']",
+        content[:256],
+        re.I,
+    )
+    if declaration:
+        encoding = declaration.group(1).decode("ascii")
     try:
         return content.decode(encoding)
-    except UnicodeDecodeError:
+    except (LookupError, UnicodeDecodeError):
         return content.decode("utf-8", errors="replace")
 
 

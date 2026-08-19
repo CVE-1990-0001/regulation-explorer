@@ -10,8 +10,9 @@ import json
 import os
 import re
 import sys
+import warnings
 
-from bs4 import BeautifulSoup, Tag
+from bs4 import BeautifulSoup, Tag, XMLParsedAsHTMLWarning
 
 
 def normalise_whitespace(value):
@@ -225,10 +226,14 @@ def extract_paragraph_text(node):
 
 
 def parse(html):
-    soup = BeautifulSoup(html, "lxml")
+    with warnings.catch_warnings():
+        warnings.simplefilter("ignore", XMLParsedAsHTMLWarning)
+        soup = BeautifulSoup(html, "lxml")
     parser = OjParser(soup)
 
-    article_title_nodes = soup.select("p.oj-ti-art")
+    article_title_nodes = soup.select(
+        'div.eli-subdivision[id^="art_"] > p.oj-ti-art'
+    )
     articles = []
 
     # First pass: register article numbers

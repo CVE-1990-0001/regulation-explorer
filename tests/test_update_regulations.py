@@ -30,11 +30,24 @@ def test_eurlex_checks_consolidated_before_original():
     entry = {"authId": "celex:32016R0679"}
     urls, parser_name, encoding = updater.update_config(entry)
     assert urls == [
+        "https://publications.europa.eu/resource/celex/02016R0679",
+        "https://publications.europa.eu/resource/celex/32016R0679",
         "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:02016R0679",
         "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32016R0679",
     ]
     assert parser_name == "auto"
     assert encoding == "utf-8"
+
+
+def test_cellar_download_url_requests_english_html():
+    url = updater.cellar_download_url(
+        "http://publications.europa.eu/resource/cellar/example-uuid"
+    )
+    assert url == (
+        "https://op.europa.eu/o/opportal-service/download-handler?"
+        "identifier=example-uuid&format=HTML&language=en&"
+        "productionSystem=cellar&part="
+    )
 
 
 def test_explicit_update_configuration_and_disable_switch():
@@ -51,6 +64,34 @@ def test_explicit_update_configuration_and_disable_switch():
         "latin-1",
     )
     assert updater.update_config({"update": False})[0] == []
+
+
+def test_german_acts_have_update_configuration():
+    index = updater.read_json(updater.INDEX_PATH)
+    entries = {entry["id"]: entry for entry in index["acts"]}
+
+    assert updater.update_config(entries["act_de_boersg_2007"]) == (
+        [
+            "https://www.gesetze-im-internet.de/b_rsg_2007/BJNR135100007.html",
+            "https://raw.githubusercontent.com/QuantLaw/gesetze-im-internet/"
+            "data/data/items/b_rsg_2007/BJNR135100007.xml",
+        ],
+        "boersengesetz",
+        "latin-1",
+    )
+    assert updater.update_config(entries["act_de_bsig_2025"]) == (
+        [
+            "https://www.recht.bund.de/bgbl/1/2025/301/"
+            "regelungstext.pdf?__blob=publicationFile&v=2"
+        ],
+        "nis2_bsig",
+        "utf-8",
+    )
+
+
+def test_decode_html_honors_xml_encoding_declaration():
+    content = '<?xml version="1.0" encoding="UTF-8"?><P>Börse</P>'.encode()
+    assert "Börse" in updater.decode_html(content, "latin-1")
 
 
 def test_replace_articles_preserves_act_metadata():
