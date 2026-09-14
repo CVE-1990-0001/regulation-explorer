@@ -122,6 +122,22 @@ bundle membership (including removals from `data/index.json`).
 The DB is a derived index for querying/integration, and the script also writes
 `data/index_meta.json` (lightweight `id -> celex` metadata for runtime lookups).
 
+## Legal entity applicability
+
+The regulation root view displays shorthand labels for legal entities listed in
+`data/source/legal_entity_regulation_detail.csv`. Regenerate the browser mapping
+after the CSV or registry changes:
+
+```bash
+python3 tools/build_legal_entity_applicability.py
+```
+
+The generated `data/legal_entity_applicability.json` maps stable act ids to the
+matching legal entities and bundle ids to the union of their descendant acts.
+For regulation families such as DORA, the top-level bundle scope is displayed
+consistently on every descendant act and folder. Standalone regulations with no
+matching CSV row are marked as having no available applicability data.
+
 ## Updating all regulations
 
 Run the complete RegBro data refresh with one command:
