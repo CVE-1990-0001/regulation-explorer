@@ -843,6 +843,41 @@ textarea {
   display: none;
 }
 
+.legal-entity-applicability {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+.legal-entity-applicability[hidden] {
+  display: none;
+}
+
+.legal-entity-label {
+  color: var(--color-darkgray);
+  font-size: var(--fs-h-xs);
+  font-weight: 500;
+}
+
+.legal-entity-applicability.is-unavailable .legal-entity-label {
+  color: var(--color-gray);
+  font-weight: 400;
+}
+
+.legal-entity-chip {
+  border: 1px solid var(--accent-blue);
+  border-radius: 4px;
+  color: var(--accent-blue);
+  cursor: help;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1;
+  padding: 0.3rem 0.4rem;
+  text-decoration: none;
+}
+
 .paragraphs {
   display: flex;
   flex-direction: column;

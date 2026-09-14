@@ -5,6 +5,7 @@ const searchInput = document.getElementById('searchInput');
 const articleNumberElement = document.getElementById('articleNumber');
 const articleTitleElement = document.getElementById('articleTitle');
 const articleSubtitleElement = document.getElementById('articleSubtitle');
+const legalEntityApplicabilityElement = document.getElementById('legalEntityApplicability');
 const breadcrumbElement = document.getElementById('breadcrumb');
 const paragraphsContainer = document.getElementById('paragraphsContainer');
 const prevButton = document.getElementById('prevArticle');
@@ -34,6 +35,31 @@ let allActs = [];
 let allBundles = [];
 let lastSearchQuery = '';
 let authToActId = {};
+let legalEntitiesByItemId = {};
+
+const renderLegalEntityApplicability = (itemId = null) => {
+  if (!legalEntityApplicabilityElement) return;
+
+  const entities = itemId ? legalEntitiesByItemId[itemId] || [] : [];
+  legalEntityApplicabilityElement.innerHTML = '';
+  legalEntityApplicabilityElement.classList.toggle('is-unavailable', Boolean(itemId) && !entities.length);
+  legalEntityApplicabilityElement.hidden = !itemId;
+  if (!itemId) return;
+
+  const label = document.createElement('span');
+  label.className = 'legal-entity-label';
+  label.textContent = entities.length ? 'Applies to' : 'Applicability data not available';
+  legalEntityApplicabilityElement.appendChild(label);
+
+  entities.forEach((entity) => {
+    const chip = document.createElement('abbr');
+    chip.className = 'legal-entity-chip';
+    chip.textContent = entity.shortName;
+    chip.title = entity.name;
+    chip.setAttribute('aria-label', entity.name);
+    legalEntityApplicabilityElement.appendChild(chip);
+  });
+};
 
 const legalTooltipSelectors = '.legal-reference, .legal-link, .internal-article-link, .ref';
 const LEGAL_TOOLTIP_MAX_CHARS = 1000;
@@ -825,6 +851,7 @@ const renderArticleDetail = (article) => {
     renderBreadcrumb([]);
     articleTitleElement.textContent = '';
     articleSubtitleElement.textContent = '';
+    renderLegalEntityApplicability();
     paragraphsContainer.innerHTML = '';
     paragraphsContainer.appendChild(buildEmptyState());
     return;
@@ -845,6 +872,7 @@ const renderArticleDetail = (article) => {
     getCitation: () => getArticleCitation(article, article._actId || getCurrentActId()),
   });
   articleSubtitleElement.textContent = '';
+  renderLegalEntityApplicability();
 
   paragraphsContainer.innerHTML = '';
   const fragment = document.createDocumentFragment();
@@ -900,6 +928,7 @@ const renderAct = (act) => {
     getCitation: () => getActCitation(act),
   });
   articleSubtitleElement.textContent = [getSubtitleText(act), act.heading].filter(Boolean).join(' — ');
+  renderLegalEntityApplicability(act.id);
 
   paragraphsContainer.innerHTML = '';
   const fragment = document.createDocumentFragment();
@@ -958,6 +987,7 @@ const renderBundle = (bundle) => {
     getCitation: () => getBundleHeadingText(bundle),
   });
   articleSubtitleElement.textContent = '';
+  renderLegalEntityApplicability(bundle.id);
 
   paragraphsContainer.innerHTML = '';
   const fragment = document.createDocumentFragment();
@@ -1835,9 +1865,29 @@ const loadIndexMeta = async () => {
   return res.json();
 };
 
+const loadLegalEntityApplicability = async () => {
+  const res = await fetch('data/legal_entity_applicability.json', { cache: 'no-store' });
+  if (!res.ok) {
+    throw new Error(`Failed to load legal entity applicability: ${res.status}`);
+  }
+  return res.json();
+};
+
 // Load each act and bundle referenced by the registry. Returns { acts, bundles }.
 const loadAllData = async () => {
   const registry = await loadRegistry();
+
+  legalEntitiesByItemId = {};
+  try {
+    const applicability = await loadLegalEntityApplicability();
+    legalEntitiesByItemId = {
+      ...((applicability && applicability.actEntities) || {}),
+      ...((applicability && applicability.bundleEntities) || {}),
+      ...((applicability && applicability.familyEntities) || {}),
+    };
+  } catch (error) {
+    console.warn('Legal entity applicability is unavailable:', error);
+  }
 
   // Scheme-qualified id -> app act id: the runtime bridge for cross-act references.
   // data/index.json remains the source of truth for app content; index_meta.json is

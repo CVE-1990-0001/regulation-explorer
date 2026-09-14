@@ -21,6 +21,55 @@ test('app loads and populates the sidebar', () => {
   assert.ok(app.doc.querySelector('.article-link'));
 });
 
+test('act root shows applicable legal entity shorthand labels', async () => {
+  await app.openAct('act_eu_dora_reg_2022_2554');
+  const applicability = app.doc.getElementById('legalEntityApplicability');
+  const chips = [...applicability.querySelectorAll('.legal-entity-chip')];
+
+  assert.strictEqual(applicability.hidden, false);
+  assert.match(applicability.textContent, /^Applies to/);
+  assert.deepStrictEqual(chips.map((chip) => chip.textContent), ['CEAG', 'CHAG', 'DBAG', 'ECAG', 'ERG']);
+  assert.strictEqual(chips[0].title, 'Clearstream Europe AG');
+});
+
+test('act root identifies when the CSV has no matching regulation', async () => {
+  await app.openAct('act_eu_ai_act_2024_1689');
+  const applicability = app.doc.getElementById('legalEntityApplicability');
+  assert.strictEqual(applicability.hidden, false);
+  assert.strictEqual(applicability.textContent, 'Applicability data not available');
+});
+
+test('DORA bundle root shows the union of descendant applicability', async () => {
+  await app.openAct('act_eu_dora_reg_2022_2554');
+  app.nav('#bundle:bundle_dora');
+  await app.tick();
+  const chips = [...app.doc.querySelectorAll('#legalEntityApplicability .legal-entity-chip')];
+  assert.deepStrictEqual(chips.map((chip) => chip.textContent), ['CEAG', 'CHAG', 'DBAG', 'ECAG', 'ERG']);
+});
+
+test('DORA technical-standard folders show descendant applicability', async () => {
+  app.nav('#bundle:bundle_dora_rts');
+  await app.tick();
+  const shorthandLabels = () => [...app.doc.querySelectorAll('#legalEntityApplicability .legal-entity-chip')]
+    .map((chip) => chip.textContent);
+  assert.deepStrictEqual(shorthandLabels(), ['CEAG', 'CHAG', 'DBAG', 'ECAG', 'ERG']);
+
+  app.nav('#bundle:bundle_dora_its');
+  await app.tick();
+  assert.deepStrictEqual(shorthandLabels(), ['CEAG', 'CHAG', 'DBAG', 'ECAG', 'ERG']);
+});
+
+test('DORA family scope is shown on the directive and technical standards', async () => {
+  const shorthandLabels = () => [...app.doc.querySelectorAll('#legalEntityApplicability .legal-entity-chip')]
+    .map((chip) => chip.textContent);
+
+  await app.openAct('act_eu_dora_dir_2022_2556');
+  assert.deepStrictEqual(shorthandLabels(), ['CEAG', 'CHAG', 'DBAG', 'ECAG', 'ERG']);
+
+  await app.openAct('act_eu_dora_rts_2024_1774');
+  assert.deepStrictEqual(shorthandLabels(), ['CEAG', 'CHAG', 'DBAG', 'ECAG', 'ERG']);
+});
+
 test('cross-act article ref jumps to the target act + article', async () => {
   await app.openAct('act_eu_dora_rts_2024_1774'); // RTS 1 cites DORA Regulation
   const a = app.doc.querySelector('a.ref[data-ref="celex:32022R2554"][data-article="9"]');
