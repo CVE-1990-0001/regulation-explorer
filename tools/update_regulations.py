@@ -3,7 +3,7 @@
 
 EUR-Lex acts are discovered from their ``authId`` in ``data/index.json``.
 Other sources can opt in with an ``update`` object containing ``url`` and
-``parser`` (``consolidated``, ``oj``, ``boersengesetz``, or ``nis2_bsig``).
+``parser`` (``consolidated``, ``oj``, ``boersengesetz``, ``nis2_bsig``, or ``bsi_c3a``).
 """
 
 from __future__ import annotations
@@ -18,7 +18,7 @@ import subprocess
 import sys
 import tempfile
 import urllib.request
-from urllib.parse import urlencode, urlparse
+from urllib.parse import parse_qsl, urlencode, urlparse, urlunparse
 from functools import wraps
 from logging.handlers import RotatingFileHandler
 from pathlib import Path
@@ -185,7 +185,17 @@ def update_config(entry: dict) -> tuple[list[str], str, str]:
     else:
         celex = celex_from_entry(entry)
         urls = eurlex_urls(celex) if celex else []
-    return urls, config.get("parser", "auto"), config.get("encoding", "utf-8")
+    parser_name = config.get("parser", "auto")
+    if parser_name == "bsi_c3a":
+        # BSI's v parameter is a download revision, not the document's version.
+        urls = [
+            urlunparse(urlparse(url)._replace(query=urlencode([
+                (key, value) for key, value in parse_qsl(urlparse(url).query)
+                if key != "v"
+            ])))
+            for url in urls
+        ]
+    return urls, parser_name, config.get("encoding", "utf-8")
 
 
 @logged
@@ -204,16 +214,25 @@ def decode_html(content: bytes, encoding: str) -> str:
 
 
 @logged
+def parse_pdf_document(content: bytes, parser_name: str) -> dict:
+    module = load_module(
+        f"update_parser_{parser_name}", PARSERS_DIR / f"parser_{parser_name}.py"
+    )
+    descriptor, source_name = tempfile.mkstemp(suffix=".pdf")
+    try:
+        with os.fdopen(descriptor, "wb") as source:
+            source.write(content)
+        if parser_name == "bsi_c3a":
+            return module.parse_document(source_name)
+        return {"articles": module.parse(source_name)}
+    finally:
+        Path(source_name).unlink(missing_ok=True)
+
+
+@logged
 def parse_articles(content: bytes, parser_name: str, encoding: str) -> list[dict]:
-    if parser_name == "nis2_bsig":
-        module = load_module("update_parser_nis2_bsig", PARSERS_DIR / "parser_nis2_bsig.py")
-        descriptor, source_name = tempfile.mkstemp(suffix=".pdf")
-        try:
-            with os.fdopen(descriptor, "wb") as source:
-                source.write(content)
-            articles = module.parse(source_name)
-        finally:
-            Path(source_name).unlink(missing_ok=True)
+    if parser_name in {"nis2_bsig", "bsi_c3a"}:
+        articles = parse_pdf_document(content, parser_name)["articles"]
     else:
         html = decode_html(content, encoding)
         parsers = {
@@ -286,11 +305,15 @@ def refresh_entry(entry: dict, fetcher: Fetch, timeout: int) -> tuple[str, objec
     errors = []
     for url in urls:
         try:
-            articles = parse_articles(fetcher(url, timeout), parser_name, encoding)
+            content = fetcher(url, timeout)
+            parsed = parse_pdf_document(content, parser_name) if parser_name == "bsi_c3a" else None
+            articles = parsed["articles"] if parsed else parse_articles(content, parser_name, encoding)
             articles = linked_articles(articles, entry["id"])
             path = APP / entry["path"]
             current = read_json(path)
             updated = replace_articles(current, articles)
+            if parsed:
+                updated["meta"] = {**current.get("meta", {}), **parsed["meta"]}
             return ("unchanged" if updated == current else "updated"), updated
         except Exception as exc:  # Continue to a fallback source and then the next act.
             LOGGER.warning(

@@ -145,6 +145,17 @@
       "authId": "celex:32023R2854"
     },
     {
+      "id": "act_de_bsi_c3a_2026",
+      "path": "regulations-data/bsi_c3a.json",
+      "label": "BSI C3A",
+      "heading": "Criteria enabling Cloud Computing Autonomy",
+      "jurisdiction": "DE",
+      "update": {
+        "url": "https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/Publications/CloudComputing/C3A_Cloud_Computing_Autonomy.pdf?__blob=publicationFile",
+        "parser": "bsi_c3a"
+      }
+    },
+    {
       "id": "act_de_bsig_2025",
       "path": "regulations-data/nis2_umsetzungsgesetz_bsig.json",
       "label": "BSI-Gesetz (BSIG – NIS-2-Umsetzung)",

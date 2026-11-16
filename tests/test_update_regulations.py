@@ -2,6 +2,7 @@ import importlib.util
 import json
 import logging.handlers
 import os
+from pathlib import Path
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 _spec = importlib.util.spec_from_file_location(
@@ -92,6 +93,63 @@ def test_german_acts_have_update_configuration():
 def test_decode_html_honors_xml_encoding_declaration():
     content = '<?xml version="1.0" encoding="UTF-8"?><P>Börse</P>'.encode()
     assert "Börse" in updater.decode_html(content, "latin-1")
+
+
+def test_c3a_uses_latest_download_even_when_configured_with_revision():
+    entry = {
+        "update": {
+            "url": "https://www.bsi.bund.de/C3A.pdf?__blob=publicationFile&v=10",
+            "parser": "bsi_c3a",
+        }
+    }
+    assert updater.update_config(entry) == (
+        ["https://www.bsi.bund.de/C3A.pdf?__blob=publicationFile"],
+        "bsi_c3a",
+        "utf-8",
+    )
+    # Other sources can still require a pinned revision.
+    entry["update"]["parser"] = "nis2_bsig"
+    assert updater.update_config(entry)[0][0].endswith("&v=10")
+
+
+def test_c3a_refresh_is_reproducible_from_saved_pdf():
+    index = updater.read_json(updater.INDEX_PATH)
+    entry = next(e for e in index["acts"] if e["id"] == "act_de_bsi_c3a_2026")
+    pdf = (Path(ROOT) / "regulations-data" / "bsi_c3a.pdf").read_bytes()
+    urls = []
+
+    def fetch(url, timeout):
+        urls.append(url)
+        return pdf
+
+    result, document = updater.refresh_entry(entry, fetch, 30)
+    assert result == "unchanged"
+    assert document["meta"]["version"] == "1.0"
+    assert urls[0].endswith("?__blob=publicationFile")
+
+
+def test_c3a_refresh_updates_version_even_if_criteria_are_unchanged(tmp_path, monkeypatch):
+    current = {
+        "type": "act", "id": "act_de_bsi_c3a_2026", "title": "BSI C3A",
+        "meta": {"version": "1.0", "releaseDate": "2026-04-27", "custom": "keep"},
+        "articles": [{"id": "art_1", "paragraphs": []}],
+    }
+    path = tmp_path / "c3a.json"
+    updater.write_json(path, current)
+    parsed = {
+        "meta": {"version": "1.1", "releaseDate": "2026-11-01"},
+        "articles": current["articles"],
+    }
+    monkeypatch.setattr(updater, "parse_pdf_document", lambda *_: parsed)
+    entry = {
+        "id": current["id"], "path": str(path),
+        "update": {"parser": "bsi_c3a", "url": "https://example.test/latest.pdf"},
+    }
+    result, updated = updater.refresh_entry(entry, lambda *_: b"pdf", 30)
+    assert result == "updated"
+    assert updated["meta"] == {**parsed["meta"], "custom": "keep"}
+    assert updated["title"] == current["title"]
+    assert updater.read_json(path) == current
 
 
 def test_replace_articles_preserves_act_metadata():

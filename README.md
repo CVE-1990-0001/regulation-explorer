@@ -155,7 +155,39 @@ limit a run. Detailed function and update activity is written to
 `logs/update_regulations.log`; logs rotate at 100 MB.
 
 Non-EUR-Lex acts can define an `update` object in `data/index.json` with a
-`url` and parser name (`consolidated`, `oj`, `boersengesetz`, or `nis2_bsig`).
+`url` and parser name (`consolidated`, `oj`, `boersengesetz`, `nis2_bsig`, or
+`bsi_c3a`).
 Set `status` to another schema-supported value (for example `Repealed`) to
 exclude an act from automatic updates; `dateInForce` is also mirrored into the
 generated database.
+
+### BSI C3A
+
+BSI's **Criteria enabling Cloud Computing Autonomy (C3A)** is included as a
+non-binding framework, initially version **1.0 (27 April 2026)**. Its introduction,
+definitions, six sovereignty domains, and all criteria, additional criteria and
+supplementary information are parsed from the official PDF. Each criterion group
+(for example `SOV-3-02`) is a navigable section.
+Only sections with substantive content are loaded: five introductory sections
+and 30 criterion groups. Document history is used only for version/date metadata;
+the cover, table of contents, and empty structural headings are not articles.
+Definitions retain the PDF's bold terms, with a separate paragraph per definition.
+
+Reproduce the import from the saved source:
+
+```bash
+python3 tools/parsers/parser_bsi_c3a.py regulations-data/bsi_c3a.pdf regulations-data/bsi_c3a.json
+python3 tools/link_references.py
+```
+
+The registry uses BSI's versionless `?__blob=publicationFile` download endpoint
+to fetch the latest document. The C3A updater also removes any `v` query parameter
+from configured download URLs: `v=10` is a BSI download revision and must not be
+interpreted as version 10 or 1.0, or pin future checks to that revision. The
+published version and release date come from the PDF's document history and are
+refreshed alongside its content. The saved PDF is the initial import snapshot;
+automatic updates refresh the JSON, not that snapshot.
+
+```bash
+python3 tools/update_regulations.py --check act_de_bsi_c3a_2026
+```

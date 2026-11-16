@@ -21,6 +21,33 @@ test('app loads and populates the sidebar', () => {
   assert.ok(app.doc.querySelector('.article-link'));
 });
 
+test('BSI C3A loads and its criteria are navigable', async () => {
+  app.nav('#act:act_de_bsi_c3a_2026');
+  await app.tick();
+  assert.match(app.title(), /BSI C3A/);
+  const content = app.doc.getElementById('paragraphsContainer');
+  assert.doesNotMatch(content.textContent, /Document history/);
+  const sections = [...content.querySelectorAll('.act-article-title')];
+  assert.strictEqual(sections.length, 35);
+  assert.deepStrictEqual(sections.slice(0, 5).map((section) => section.textContent),
+    ['1.1', '1.2', '1.3', '1.4', '1.5']);
+  assert.match(content.textContent, /Non-binding|not binding in itself/);
+  assert.match(content.textContent, /SOV-6-03-C Criterion/);
+
+  app.nav('#a:act_de_bsi_c3a_2026:art_sov_3_02');
+  await app.tick();
+  assert.strictEqual(app.title(), 'External Key Management');
+  assert.match(content.textContent, /SOV-3-02-AC Additional criterion/);
+  assert.match(content.textContent, /SOV-3-02-SI Supplementary information/);
+
+  app.nav('#a:act_de_bsi_c3a_2026:art_1_5');
+  await app.tick();
+  const definitions = [...content.querySelectorAll('.article-paragraph')];
+  assert.strictEqual(definitions.length, 13);
+  assert.strictEqual(definitions[1].querySelector('strong').textContent, 'Account data');
+  assert.strictEqual(definitions[12].querySelector('strong').textContent, 'Integrity');
+});
+
 test('act root shows applicable legal entity shorthand labels', async () => {
   await app.openAct('act_eu_dora_reg_2022_2554');
   const applicability = app.doc.getElementById('legalEntityApplicability');
