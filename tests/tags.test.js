@@ -141,4 +141,28 @@ test('cross-act reference to an act outside the active tag filter clears tags an
   await app.tick();
   assert.strictEqual(app.doc.getElementById('tagFilterCount').hidden, true);
   assert.match(app.hash(), /act_eu_emir_2012_0648:art_1/);
+
+  // Direct act-level navigation (#act:...) to an excluded act also clears conflicting tag filters and highlights the act
+  openPopover();
+  app.click(getChip('topic', 'ai'));
+  await app.tick();
+  assert.strictEqual(app.doc.getElementById('tagFilterCount').textContent, '1');
+
+  app.nav('#act:act_eu_emir_2012_0648');
+  await app.tick();
+  assert.strictEqual(app.doc.getElementById('tagFilterCount').hidden, true);
+  assert.ok(app.doc.querySelector('#articleList .article-link.is-active'), 'EMIR should be visible and active in sidebar');
+});
+
+test('article pagination (Previous/Next) respects active tag filters and scoped act IDs', async () => {
+  openPopover();
+  app.click(getChip('topic', 'data-privacy')); // GDPR + Data Act
+  await app.tick();
+
+  // Open Data Act Article 1 (shares id "art_1" with GDPR); Next must go to Data Act Article 2, not GDPR Article 2
+  app.nav('#a:act_eu_data_act_2023_2854:art_1');
+  await app.tick();
+  app.click(app.doc.getElementById('nextArticle'));
+  await app.tick();
+  assert.match(app.hash(), /act_eu_data_act_2023_2854:art_2$/);
 });

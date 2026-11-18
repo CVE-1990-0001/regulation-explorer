@@ -956,7 +956,16 @@ const createParagraphElement = (paragraphData, article, actId = null) => {
   return paragraph;
 };
 
-const getCurrentIndex = () => visibleArticles.findIndex((article) => article.id === currentArticleId);
+const getCurrentIndex = () => {
+  const actId = getCurrentActId();
+  if (actId) {
+    const scopedIdx = visibleArticles.findIndex(
+      (article) => article.id === currentArticleId && article._actId === actId,
+    );
+    if (scopedIdx !== -1) return scopedIdx;
+  }
+  return visibleArticles.findIndex((article) => article.id === currentArticleId);
+};
 
 const updateListMessage = () => {
   if (!allSidebarItems.length) {
@@ -1935,6 +1944,13 @@ const handleRoute = (hashId) => {
       statusMessage.textContent = `Act ${id} not found.`;
       return true;
     }
+    if (!actMatchesTagCriteria(act)) {
+      selectedJurisdictions.clear();
+      selectedTags.clear();
+      visibleSidebarItems = computeVisibleSidebarItems(lastSearchQuery);
+      visibleArticles = allArticles.filter((a) => !lastSearchQuery || matchesItem(a, lastSearchQuery));
+      renderTagFilterUI();
+    }
     const changedSelection = currentSidebarSelectionKey !== `act:${id}`;
     // Expand the folder chain that contains this act so it shows on the left.
     const folderPath = findActFolderPath(id) || [];
@@ -2051,14 +2067,22 @@ const handleInternalLinkClick = (event) => {
 const goToPrevious = () => {
   const index = getCurrentIndex();
   if (index > 0) {
-    selectArticle(visibleArticles[index - 1].id);
+    const prev = visibleArticles[index - 1];
+    selectArticle(prev.id, {
+      parentActId: prev._actId || null,
+      hashTarget: prev._actId ? `a:${prev._actId}:${prev.id}` : prev.id,
+    });
   }
 };
 
 const goToNext = () => {
   const index = getCurrentIndex();
   if (index !== -1 && index < visibleArticles.length - 1) {
-    selectArticle(visibleArticles[index + 1].id);
+    const next = visibleArticles[index + 1];
+    selectArticle(next.id, {
+      parentActId: next._actId || null,
+      hashTarget: next._actId ? `a:${next._actId}:${next.id}` : next.id,
+    });
   }
 };
 
