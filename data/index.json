@@ -1,31 +1,78 @@
 {
+  "tagCatalog": [
+    {
+      "id": "cybersecurity",
+      "label": "Cybersecurity"
+    },
+    {
+      "id": "incident-reporting",
+      "label": "Incident Reporting"
+    },
+    {
+      "id": "third-party-risk",
+      "label": "Third-Party & Cloud"
+    },
+    {
+      "id": "financial-markets",
+      "label": "Financial Markets"
+    },
+    {
+      "id": "data-privacy",
+      "label": "Data & Privacy"
+    },
+    {
+      "id": "product-security",
+      "label": "Product & Certification"
+    },
+    {
+      "id": "ai",
+      "label": "AI"
+    },
+    {
+      "id": "non-binding",
+      "label": "Guidance / Standard"
+    }
+  ],
   "acts": [
     {
       "id": "act_eu_emir_2012_0648",
       "path": "emir-regulation.json",
       "label": "EMIR",
-      "authId": "celex:32012R0648"
+      "authId": "celex:32012R0648",
+      "tags": [
+        "financial-markets"
+      ]
     },
     {
       "id": "act_eu_csdr_2014_0909",
       "path": "regulations-data/32014R0909.json",
       "label": "CSDR",
       "heading": "Regulation (EU) No 909/2014",
-      "authId": "celex:32014R0909"
+      "authId": "celex:32014R0909",
+      "tags": [
+        "financial-markets"
+      ]
     },
     {
       "id": "act_eu_mifid2_2014_0065",
       "path": "regulations-data/02014L0065.json",
       "label": "MiFID II",
       "heading": "Directive 2014/65/EU",
-      "authId": "celex:32014L0065"
+      "authId": "celex:32014L0065",
+      "tags": [
+        "financial-markets"
+      ]
     },
     {
       "id": "act_eu_ai_act_2024_1689",
       "path": "regulations-data/202401689.json",
       "label": "AI Act",
       "heading": "Regulation (EU) 2024/1689",
-      "authId": "celex:32024R1689"
+      "authId": "celex:32024R1689",
+      "tags": [
+        "ai",
+        "product-security"
+      ]
     },
     {
       "id": "act_de_boersg_2007",
@@ -33,6 +80,10 @@
       "label": "Börsengesetz (BörsG)",
       "heading": "German Securities Exchange Act",
       "jurisdiction": "DE",
+      "tags": [
+        "financial-markets",
+        "third-party-risk"
+      ],
       "update": {
         "url": [
           "https://www.gesetze-im-internet.de/b_rsg_2007/BJNR135100007.html",
@@ -46,103 +97,176 @@
       "id": "act_eu_dora_reg_2022_2554",
       "path": "regulations-data/dora/act_dora_core.json",
       "label": "DORA Regulation",
-      "authId": "celex:32022R2554"
+      "authId": "celex:32022R2554",
+      "tags": [
+        "cybersecurity",
+        "incident-reporting",
+        "third-party-risk",
+        "financial-markets"
+      ]
     },
     {
       "id": "act_eu_dora_rts_2024_1774",
       "path": "regulations-data/dora/act_dora_rts1.json",
       "label": "RTS 1",
-      "authId": "celex:32024R1774"
+      "authId": "celex:32024R1774",
+      "tags": [
+        "cybersecurity",
+        "financial-markets"
+      ]
     },
     {
       "id": "act_eu_dora_rts_2024_1772",
       "path": "regulations-data/dora/act_dora_rts2.json",
       "label": "RTS 2",
-      "authId": "celex:32024R1772"
+      "authId": "celex:32024R1772",
+      "tags": [
+        "cybersecurity",
+        "incident-reporting",
+        "financial-markets"
+      ]
     },
     {
       "id": "act_eu_dora_rts_2025_0301",
       "path": "regulations-data/dora/act_dora_rts3.json",
       "label": "RTS 3",
-      "authId": "celex:32025R0301"
+      "authId": "celex:32025R0301",
+      "tags": [
+        "incident-reporting",
+        "financial-markets"
+      ]
     },
     {
       "id": "act_eu_dora_rts_2025_1190",
       "path": "regulations-data/dora/act_dora_rts4.json",
       "label": "RTS 4",
-      "authId": "celex:32025R1190"
+      "authId": "celex:32025R1190",
+      "tags": [
+        "cybersecurity",
+        "financial-markets"
+      ]
     },
     {
       "id": "act_eu_dora_rts_2024_1773",
       "path": "regulations-data/dora/act_dora_rts5.json",
       "label": "RTS 5",
-      "authId": "celex:32024R1773"
+      "authId": "celex:32024R1773",
+      "tags": [
+        "third-party-risk",
+        "financial-markets"
+      ]
     },
     {
       "id": "act_eu_dora_rts_2025_0532",
       "path": "regulations-data/dora/act_dora_rts6.json",
       "label": "RTS 6",
-      "authId": "celex:32025R0532"
+      "authId": "celex:32025R0532",
+      "tags": [
+        "third-party-risk",
+        "financial-markets"
+      ]
     },
     {
       "id": "act_eu_dora_rts_2025_0295",
       "path": "regulations-data/dora/act_dora_rts7.json",
       "label": "RTS 7",
-      "authId": "celex:32025R0295"
+      "authId": "celex:32025R0295",
+      "tags": [
+        "third-party-risk",
+        "financial-markets"
+      ]
     },
     {
       "id": "act_eu_dora_rts_2025_0420",
       "path": "regulations-data/dora/act_dora_rts8.json",
       "label": "RTS 8",
-      "authId": "celex:32025R0420"
+      "authId": "celex:32025R0420",
+      "tags": [
+        "third-party-risk",
+        "financial-markets"
+      ]
     },
     {
       "id": "act_eu_dora_its_2025_0302",
       "path": "regulations-data/dora/act_dora_its1.json",
       "label": "ITS 1",
-      "authId": "celex:32025R0302"
+      "authId": "celex:32025R0302",
+      "tags": [
+        "incident-reporting",
+        "financial-markets"
+      ]
     },
     {
       "id": "act_eu_dora_its_2024_2956",
       "path": "regulations-data/dora/act_dora_its2.json",
       "label": "ITS 2",
-      "authId": "celex:32024R2956"
+      "authId": "celex:32024R2956",
+      "tags": [
+        "third-party-risk",
+        "financial-markets"
+      ]
     },
     {
       "id": "act_eu_dora_dir_2022_2556",
       "path": "regulations-data/dora/act_dora_2556.json",
       "label": "DORA Directive",
-      "authId": "celex:32022L2556"
+      "authId": "celex:32022L2556",
+      "tags": [
+        "cybersecurity",
+        "financial-markets"
+      ]
     },
     {
       "id": "act_eu_gdpr_2016_0679",
       "path": "regulations-data/gdpr.json",
       "label": "GDPR (Regulation (EU) 2016/679)",
-      "authId": "celex:32016R0679"
+      "authId": "celex:32016R0679",
+      "tags": [
+        "data-privacy",
+        "incident-reporting"
+      ]
     },
     {
       "id": "act_eu_csa_2019_0881",
       "path": "regulations-data/cybersecurity_act.json",
       "label": "Cybersecurity Act (Regulation (EU) 2019/881)",
-      "authId": "celex:32019R0881"
+      "authId": "celex:32019R0881",
+      "tags": [
+        "cybersecurity",
+        "product-security"
+      ]
     },
     {
       "id": "act_eu_cra_2024_2847",
       "path": "regulations-data/cyber_resilience_act.json",
       "label": "Cyber Resilience Act (Regulation (EU) 2024/2847)",
-      "authId": "celex:32024R2847"
+      "authId": "celex:32024R2847",
+      "tags": [
+        "cybersecurity",
+        "product-security",
+        "incident-reporting"
+      ]
     },
     {
       "id": "act_eu_nis2_2022_2555",
       "path": "regulations-data/nis2.json",
       "label": "NIS2 (Directive (EU) 2022/2555)",
-      "authId": "celex:32022L2555"
+      "authId": "celex:32022L2555",
+      "tags": [
+        "cybersecurity",
+        "incident-reporting",
+        "third-party-risk"
+      ]
     },
     {
       "id": "act_eu_data_act_2023_2854",
       "path": "regulations-data/data_act.json",
       "label": "Data Act (Regulation (EU) 2023/2854)",
-      "authId": "celex:32023R2854"
+      "authId": "celex:32023R2854",
+      "tags": [
+        "data-privacy",
+        "third-party-risk"
+      ]
     },
     {
       "id": "act_de_bsi_c3a_2026",
@@ -150,6 +274,11 @@
       "label": "BSI C3A",
       "heading": "Criteria enabling Cloud Computing Autonomy",
       "jurisdiction": "DE",
+      "tags": [
+        "cybersecurity",
+        "third-party-risk",
+        "non-binding"
+      ],
       "update": {
         "url": "https://www.bsi.bund.de/SharedDocs/Downloads/EN/BSI/Publications/CloudComputing/C3A_Cloud_Computing_Autonomy.pdf?__blob=publicationFile",
         "parser": "bsi_c3a"
@@ -161,12 +290,18 @@
       "label": "BSI-Gesetz (BSIG – NIS-2-Umsetzung)",
       "heading": "BSI-Gesetz (NIS-2-Umsetzungsgesetz)",
       "jurisdiction": "DE",
+      "tags": [
+        "cybersecurity",
+        "incident-reporting",
+        "third-party-risk"
+      ],
       "update": {
         "url": "https://www.recht.bund.de/bgbl/1/2025/301/regelungstext.pdf?__blob=publicationFile&v=2",
         "parser": "nis2_bsig"
       }
     }
-  ],  "bundles": [
+  ],
+  "bundles": [
     {
       "id": "bundle_dora",
       "path": "data/bundles/dora.json",

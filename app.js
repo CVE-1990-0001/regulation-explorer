@@ -5,6 +5,7 @@ const searchInput = document.getElementById('searchInput');
 const articleNumberElement = document.getElementById('articleNumber');
 const articleTitleElement = document.getElementById('articleTitle');
 const articleSubtitleElement = document.getElementById('articleSubtitle');
+const actTopicTagsElement = document.getElementById('actTopicTags');
 const legalEntityApplicabilityElement = document.getElementById('legalEntityApplicability');
 const breadcrumbElement = document.getElementById('breadcrumb');
 const paragraphsContainer = document.getElementById('paragraphsContainer');
@@ -13,6 +14,10 @@ const nextButton = document.getElementById('nextArticle');
 const articleNav = document.querySelector('.article-navigation');
 const sidePanel = document.querySelector('.side-panel');
 const collapseAllButton = document.getElementById('collapseAllButton');
+const activeFilterPillsElement = document.getElementById('activeFilterPills');
+const tagFilterButton = document.getElementById('tagFilterButton');
+const tagFilterCountElement = document.getElementById('tagFilterCount');
+const tagFilterPopover = document.getElementById('tagFilterPopover');
 
 let allArticles = [];
 let visibleArticles = [];
@@ -38,6 +43,86 @@ let authToActId = {};
 let legalEntitiesByItemId = {};
 let definitionsByActId = {};
 const compiledDefinitionMatchers = new Map();
+let tagCatalog = [];
+let tagLabelsById = new Map();
+let actTagsById = {};
+let availableJurisdictions = [];
+let selectedJurisdictions = new Set();
+let selectedTags = new Set();
+
+const JURISDICTION_NAMES = {
+  EU: 'European Union',
+  DE: 'Germany',
+};
+
+const hasActiveTagFilters = () => selectedJurisdictions.size > 0 || selectedTags.size > 0;
+
+const getActTags = (actId) => (actId && actTagsById[actId]) ? actTagsById[actId] : [];
+
+const actMatchesTagCriteria = (act, jurisdictions = selectedJurisdictions, tags = selectedTags) => {
+  if (!act) return false;
+  if (jurisdictions.size > 0 && !jurisdictions.has(getJurisdiction(act))) {
+    return false;
+  }
+  if (tags.size > 0) {
+    const actTags = getActTags(act.id);
+    for (const tagId of tags) {
+      if (!actTags.includes(tagId)) {
+        return false;
+      }
+    }
+  }
+  return true;
+};
+
+// Recursively prune a bundle tree so only member acts matching `predicate` and
+// non-empty sub-folders remain.
+const pruneBundleByActPredicate = (bundle, predicate) => {
+  if (!bundle || !Array.isArray(bundle.members)) return null;
+  const prunedMembers = [];
+
+  bundle.members.forEach((member) => {
+    if (!member) return;
+    if (member.type === 'bundle') {
+      const prunedChild = pruneBundleByActPredicate(member, predicate);
+      if (prunedChild) prunedMembers.push(prunedChild);
+      return;
+    }
+    if (member.ref) {
+      const act = allActs.find((a) => a.id === member.ref);
+      if (act && predicate(act)) {
+        prunedMembers.push(member);
+      }
+    }
+  });
+
+  if (!prunedMembers.length) return null;
+  return { ...bundle, members: prunedMembers };
+};
+
+const renderActTopicTags = (actId = null) => {
+  if (!actTopicTagsElement) return;
+  const tags = actId ? getActTags(actId) : [];
+  actTopicTagsElement.innerHTML = '';
+  actTopicTagsElement.hidden = !tags.length;
+  if (!tags.length) return;
+
+  tags.forEach((tagId) => {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'act-topic-tag';
+    const isSelected = selectedTags.has(tagId);
+    btn.classList.toggle('is-active', isSelected);
+    btn.setAttribute('aria-pressed', String(isSelected));
+    btn.dataset.tagId = tagId;
+    btn.textContent = tagLabelsById.get(tagId) || tagId;
+    btn.title = isSelected ? 'Remove tag filter' : 'Filter regulations by this tag';
+    btn.addEventListener('click', () => {
+      toggleTopicTag(tagId);
+    });
+    actTopicTagsElement.appendChild(btn);
+  });
+};
 
 const renderLegalEntityApplicability = (itemId = null) => {
   if (!legalEntityApplicabilityElement) return;
@@ -880,18 +965,22 @@ const updateListMessage = () => {
   }
 
   if (!visibleSidebarItems.length) {
-    listMessage.textContent = 'No items match your search.';
+    listMessage.textContent = hasActiveTagFilters() && !searchInput.value.trim()
+      ? 'No regulations match the selected tags.'
+      : 'No items match your search.';
     return;
   }
 
-  if (!searchInput.value.trim()) {
+  const hasQuery = Boolean(searchInput.value.trim());
+  if (!hasQuery && !hasActiveTagFilters()) {
     listMessage.textContent = '';
     return;
   }
 
-  // Search filters across every act (including those inside folders), so the
-  // total is the full act count, not just the top-level sidebar items.
-  listMessage.textContent = `${visibleSidebarItems.length} of ${allActs.length} items`;
+  const matchingActCount = allActs.filter((act) => (
+    actMatchesTagCriteria(act) && (!hasQuery || matchesItem(act, lastSearchQuery))
+  )).length;
+  listMessage.textContent = `${matchingActCount} of ${allActs.length} regulations`;
 };
 
 const highlightActiveLink = () => {
@@ -1104,6 +1193,7 @@ const renderArticleDetail = (article) => {
     renderBreadcrumb([]);
     articleTitleElement.textContent = '';
     articleSubtitleElement.textContent = '';
+    renderActTopicTags();
     renderLegalEntityApplicability();
     paragraphsContainer.innerHTML = '';
     paragraphsContainer.appendChild(buildEmptyState());
@@ -1125,6 +1215,7 @@ const renderArticleDetail = (article) => {
     getCitation: () => getArticleCitation(article, article._actId || getCurrentActId()),
   });
   articleSubtitleElement.textContent = '';
+  renderActTopicTags();
   renderLegalEntityApplicability();
 
   paragraphsContainer.innerHTML = '';
@@ -1181,6 +1272,7 @@ const renderAct = (act) => {
     getCitation: () => getActCitation(act),
   });
   articleSubtitleElement.textContent = [getSubtitleText(act), act.heading].filter(Boolean).join(' — ');
+  renderActTopicTags(act.id);
   renderLegalEntityApplicability(act.id);
 
   paragraphsContainer.innerHTML = '';
@@ -1240,6 +1332,7 @@ const renderBundle = (bundle) => {
     getCitation: () => getBundleHeadingText(bundle),
   });
   articleSubtitleElement.textContent = '';
+  renderActTopicTags();
   renderLegalEntityApplicability(bundle.id);
 
   paragraphsContainer.innerHTML = '';
@@ -1740,9 +1833,20 @@ const selectArticle = (articleId, options = {}) => {
     }
   }
 
-  if (!visibleArticles.some((item) => item.id === articleId)) {
-    visibleArticles = [...allArticles];
+  if (!visibleArticles.some((item) => item.id === articleId && item._actId === parentActId)) {
+    const targetAct = allActs.find((a) => a.id === parentActId);
+    if (targetAct && !actMatchesTagCriteria(targetAct)) {
+      selectedJurisdictions.clear();
+      selectedTags.clear();
+    }
     searchInput.value = '';
+    lastSearchQuery = '';
+    visibleSidebarItems = computeVisibleSidebarItems('');
+    visibleArticles = allArticles.filter((a) => {
+      const pAct = allActs.find((act) => act.id === a._actId);
+      return !pAct || actMatchesTagCriteria(pAct);
+    });
+    renderTagFilterUI();
     renderArticleList();
   }
 
@@ -1852,7 +1956,10 @@ const handleRoute = (hashId) => {
   // bundle:<ID>
   if (raw.startsWith('bundle:')) {
     const id = raw.slice(7);
-    const bundle = findBundleById(id);
+    const rawBundle = findBundleById(id);
+    const bundle = (rawBundle && hasActiveTagFilters())
+      ? (pruneBundleByActPredicate(rawBundle, (act) => actMatchesTagCriteria(act)) || rawBundle)
+      : rawBundle;
     if (!bundle) {
       statusMessage.textContent = `Bundle ${id} not found.`;
       return true;
@@ -2024,6 +2131,286 @@ const matchesItem = (item, query) => {
   return title.includes(q) || heading.includes(q) || summary.includes(q) || normalisedParagraphs.includes(q);
 };
 
+const sidebarContainsSelectionKey = (items, targetKey) => {
+  if (!targetKey || !Array.isArray(items)) return false;
+  for (const item of items) {
+    if (!item) continue;
+    if (getSidebarItemKey(item) === targetKey) return true;
+    if (item.type === 'bundle' && Array.isArray(item.members)) {
+      for (const m of item.members) {
+        if (!m) continue;
+        if (m.type === 'bundle' && sidebarContainsSelectionKey([m], targetKey)) {
+          return true;
+        }
+        if (m.ref && `act:${m.ref}` === targetKey) {
+          return true;
+        }
+      }
+    }
+  }
+  return false;
+};
+
+const computeVisibleSidebarItems = (normalisedQuery) => {
+  const matchingActs = allActs.filter((act) => (
+    actMatchesTagCriteria(act) && (!normalisedQuery || matchesItem(act, normalisedQuery))
+  ));
+
+  if (normalisedQuery) {
+    return matchingActs.sort(compareByTitle);
+  }
+
+  if (!hasActiveTagFilters()) {
+    return allSidebarItems.slice();
+  }
+
+  const matchingActIds = new Set(matchingActs.map((a) => a.id));
+  const items = [];
+  allSidebarItems.forEach((item) => {
+    if (!item) return;
+    if (item.type === 'bundle') {
+      const pruned = pruneBundleByActPredicate(item, (act) => matchingActIds.has(act.id));
+      if (pruned) items.push(pruned);
+      return;
+    }
+    if (matchingActIds.has(item.id)) {
+      items.push(item);
+    }
+  });
+  return items;
+};
+
+const countActsForProspectiveJurisdiction = (jurCode) => {
+  const nextJurisdictions = new Set(selectedJurisdictions);
+  if (nextJurisdictions.has(jurCode)) {
+    nextJurisdictions.delete(jurCode);
+  } else {
+    nextJurisdictions.add(jurCode);
+  }
+  return allActs.filter((act) => (
+    actMatchesTagCriteria(act, nextJurisdictions, selectedTags)
+    && (!lastSearchQuery || matchesItem(act, lastSearchQuery))
+  )).length;
+};
+
+const countActsForProspectiveTopic = (tagId) => {
+  const nextTags = new Set(selectedTags);
+  nextTags.add(tagId);
+  return allActs.filter((act) => (
+    actMatchesTagCriteria(act, selectedJurisdictions, nextTags)
+    && (!lastSearchQuery || matchesItem(act, lastSearchQuery))
+  )).length;
+};
+
+const renderTagFilterUI = () => {
+  const totalSelected = selectedJurisdictions.size + selectedTags.size;
+
+  if (tagFilterCountElement) {
+    tagFilterCountElement.textContent = String(totalSelected);
+    tagFilterCountElement.hidden = totalSelected === 0;
+  }
+  if (tagFilterButton) {
+    tagFilterButton.classList.toggle('has-active-filters', totalSelected > 0);
+  }
+
+  // Inline removable pills inside the search bar
+  if (activeFilterPillsElement) {
+    activeFilterPillsElement.innerHTML = '';
+    activeFilterPillsElement.hidden = totalSelected === 0;
+
+    const createPill = (label, onRemove, ariaRemoveLabel) => {
+      const pill = document.createElement('button');
+      pill.type = 'button';
+      pill.className = 'active-filter-pill';
+      pill.setAttribute('aria-label', ariaRemoveLabel);
+
+      const textSpan = document.createElement('span');
+      textSpan.className = 'active-filter-pill-label';
+      textSpan.textContent = label;
+      pill.appendChild(textSpan);
+
+      const closeSpan = document.createElement('span');
+      closeSpan.className = 'active-filter-pill-remove';
+      closeSpan.setAttribute('aria-hidden', 'true');
+      closeSpan.textContent = '\u00d7';
+      pill.appendChild(closeSpan);
+
+      pill.addEventListener('click', (ev) => {
+        ev.stopPropagation();
+        onRemove();
+      });
+      return pill;
+    };
+
+    selectedJurisdictions.forEach((jur) => {
+      activeFilterPillsElement.appendChild(
+        createPill(jur, () => toggleJurisdictionTag(jur), `Remove jurisdiction filter ${jur}`),
+      );
+    });
+    selectedTags.forEach((tagId) => {
+      const label = tagLabelsById.get(tagId) || tagId;
+      activeFilterPillsElement.appendChild(
+        createPill(label, () => toggleTopicTag(tagId), `Remove tag filter ${label}`),
+      );
+    });
+  }
+
+  if (searchInput) {
+    searchInput.placeholder = totalSelected > 0
+      ? 'Search within filtered regulations...'
+      : 'Search articles or keywords...';
+  }
+
+  // Popover content
+  if (tagFilterPopover) {
+    tagFilterPopover.innerHTML = '';
+
+    const buildSection = (headingText, chips) => {
+      const section = document.createElement('div');
+      section.className = 'tag-popover-section';
+      const title = document.createElement('div');
+      title.className = 'tag-popover-heading';
+      title.textContent = headingText;
+      section.appendChild(title);
+
+      const grid = document.createElement('div');
+      grid.className = 'tag-popover-chips';
+      chips.forEach((chip) => grid.appendChild(chip));
+      section.appendChild(grid);
+      return section;
+    };
+
+    const buildOptionButton = ({ id, label, title, count, active, kind, onClick }) => {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'tag-option-chip';
+      btn.dataset.filterKind = kind;
+      btn.dataset.filterValue = id;
+      btn.classList.toggle('is-active', active);
+      btn.classList.toggle('is-empty', !active && count === 0);
+      btn.setAttribute('aria-pressed', String(active));
+      if (title) btn.title = title;
+
+      const nameSpan = document.createElement('span');
+      nameSpan.className = 'tag-option-label';
+      nameSpan.textContent = label;
+      btn.appendChild(nameSpan);
+
+      const countSpan = document.createElement('span');
+      countSpan.className = 'tag-option-count';
+      countSpan.textContent = String(count);
+      btn.appendChild(countSpan);
+
+      btn.addEventListener('click', (ev) => {
+        ev.stopPropagation();
+        onClick();
+      });
+      return btn;
+    };
+
+    if (availableJurisdictions.length > 0) {
+      const jurChips = availableJurisdictions.map((jur) => {
+        const active = selectedJurisdictions.has(jur);
+        const count = allActs.filter((act) => (
+          getJurisdiction(act) === jur
+          && actMatchesTagCriteria(act, new Set(), selectedTags)
+          && (!lastSearchQuery || matchesItem(act, lastSearchQuery))
+        )).length;
+        return buildOptionButton({
+          id: jur,
+          label: jur,
+          title: JURISDICTION_NAMES[jur] || jur,
+          count,
+          active,
+          kind: 'jurisdiction',
+          onClick: () => toggleJurisdictionTag(jur),
+        });
+      });
+      tagFilterPopover.appendChild(buildSection('Jurisdiction', jurChips));
+    }
+
+    if (tagCatalog.length > 0) {
+      const topicChips = tagCatalog.map((tag) => {
+        const active = selectedTags.has(tag.id);
+        const count = countActsForProspectiveTopic(tag.id);
+        return buildOptionButton({
+          id: tag.id,
+          label: tag.label,
+          title: '',
+          count,
+          active,
+          kind: 'topic',
+          onClick: () => toggleTopicTag(tag.id),
+        });
+      });
+      tagFilterPopover.appendChild(buildSection('Topics', topicChips));
+    }
+
+    if (totalSelected > 0) {
+      const footer = document.createElement('div');
+      footer.className = 'tag-popover-footer';
+      const clearBtn = document.createElement('button');
+      clearBtn.type = 'button';
+      clearBtn.className = 'tag-clear-button';
+      clearBtn.textContent = 'Clear all filters';
+      clearBtn.addEventListener('click', (ev) => {
+        ev.stopPropagation();
+        clearTagFilters();
+      });
+      footer.appendChild(clearBtn);
+      tagFilterPopover.appendChild(footer);
+    }
+  }
+
+  // Keep current act header tag state synced if an act overview is open
+  if (currentSidebarSelectionKey && currentSidebarSelectionKey.startsWith('act:') && !currentArticleId) {
+    renderActTopicTags(currentSidebarSelectionKey.slice(4));
+  }
+};
+
+const closeTagPopover = () => {
+  if (!tagFilterPopover || !tagFilterButton) return;
+  tagFilterPopover.hidden = true;
+  tagFilterButton.setAttribute('aria-expanded', 'false');
+};
+
+const toggleTagPopover = () => {
+  if (!tagFilterPopover || !tagFilterButton) return;
+  const willOpen = tagFilterPopover.hidden;
+  if (willOpen) {
+    renderTagFilterUI();
+  }
+  tagFilterPopover.hidden = !willOpen;
+  tagFilterButton.setAttribute('aria-expanded', String(willOpen));
+};
+
+const toggleJurisdictionTag = (jurCode) => {
+  if (!jurCode) return;
+  if (selectedJurisdictions.has(jurCode)) {
+    selectedJurisdictions.delete(jurCode);
+  } else {
+    selectedJurisdictions.add(jurCode);
+  }
+  applyFilter(searchInput ? searchInput.value : lastSearchQuery);
+};
+
+const toggleTopicTag = (tagId) => {
+  if (!tagId) return;
+  if (selectedTags.has(tagId)) {
+    selectedTags.delete(tagId);
+  } else {
+    selectedTags.add(tagId);
+  }
+  applyFilter(searchInput ? searchInput.value : lastSearchQuery);
+};
+
+const clearTagFilters = () => {
+  if (!hasActiveTagFilters()) return;
+  selectedJurisdictions.clear();
+  selectedTags.clear();
+  applyFilter(searchInput ? searchInput.value : lastSearchQuery);
+};
+
 const applyFilter = (query) => {
   const normalisedQuery = `${query || ''}`.trim().toLowerCase();
   if (normalisedQuery !== lastSearchQuery) {
@@ -2032,17 +2419,20 @@ const applyFilter = (query) => {
   }
   lastSearchQuery = normalisedQuery;
 
-  if (!normalisedQuery) {
-    visibleSidebarItems = allSidebarItems.slice();
-  } else {
-    visibleSidebarItems = allActs.filter((item) => matchesItem(item, normalisedQuery)).sort(compareByTitle);
-  }
+  visibleSidebarItems = computeVisibleSidebarItems(normalisedQuery);
+  visibleArticles = allArticles.filter((article) => {
+    const parentAct = allActs.find((a) => a.id === article._actId);
+    return (!parentAct || actMatchesTagCriteria(parentAct))
+      && (!normalisedQuery || matchesItem(article, normalisedQuery));
+  });
 
+  renderTagFilterUI();
   renderArticleList();
 
   if (!visibleSidebarItems.length) {
     currentArticleId = null;
     currentSidebarSelectionKey = null;
+    currentArticleSelectionKey = null;
     renderArticleDetail(null);
     updateNavigationButtons();
     updateStatus();
@@ -2050,7 +2440,10 @@ const applyFilter = (query) => {
     return;
   }
 
-  const hasVisibleSelectedSidebarItem = visibleSidebarItems.some((item) => getSidebarItemKey(item) === currentSidebarSelectionKey);
+  const hasVisibleSelectedSidebarItem = sidebarContainsSelectionKey(
+    visibleSidebarItems,
+    currentSidebarSelectionKey,
+  );
 
   if (!hasVisibleSelectedSidebarItem) {
     const first = visibleSidebarItems[0];
@@ -2069,6 +2462,18 @@ const applyFilter = (query) => {
     } else {
       selectArticle(first.id, { updateHash: true, focus: false });
     }
+  } else if (currentSidebarSelectionKey && currentSidebarSelectionKey.startsWith('bundle:')) {
+    // Re-render open bundle view so its member cards reflect pruned members immediately
+    const bundleId = currentSidebarSelectionKey.slice(7);
+    const rawBundle = findBundleById(bundleId);
+    if (rawBundle) {
+      const pruned = hasActiveTagFilters()
+        ? (pruneBundleByActPredicate(rawBundle, (act) => actMatchesTagCriteria(act)) || rawBundle)
+        : rawBundle;
+      renderBundle(pruned);
+    }
+    updateNavigationButtons();
+    updateStatus();
   } else {
     updateNavigationButtons();
     updateStatus();
@@ -2141,6 +2546,18 @@ const loadDefinitions = async () => {
 // Load each act and bundle referenced by the registry. Returns { acts, bundles }.
 const loadAllData = async () => {
   const registry = await loadRegistry();
+
+  tagCatalog = Array.isArray(registry.tagCatalog) ? registry.tagCatalog : [];
+  tagLabelsById = new Map(tagCatalog.map((t) => [t.id, t.label || t.id]));
+  actTagsById = {};
+  const catalogIds = new Set(tagCatalog.map((t) => t.id));
+  (registry.acts || []).forEach((entry) => {
+    if (!entry || !entry.id) return;
+    const validTags = Array.isArray(entry.tags)
+      ? entry.tags.filter((t) => typeof t === 'string' && (!catalogIds.size || catalogIds.has(t)))
+      : [];
+    actTagsById[entry.id] = validTags;
+  });
 
   legalEntitiesByItemId = {};
   try {
@@ -2284,6 +2701,10 @@ const fetchArticles = async () => {
     allActs = acts;
     allBundles = bundles;
 
+    const jurSet = new Set(allActs.map((a) => getJurisdiction(a)).filter(Boolean));
+    availableJurisdictions = ['EU', 'DE', ...Array.from(jurSet).filter((j) => j !== 'EU' && j !== 'DE').sort()]
+      .filter((j) => jurSet.has(j));
+
     // Maintain the old `allArticles` array used by the UI by using the flattened articles
     allArticles = Array.isArray(articles) ? articles : [];
 
@@ -2321,6 +2742,7 @@ const fetchArticles = async () => {
 
     visibleArticles = [...allArticles];
     visibleSidebarItems = [...allSidebarItems];
+    renderTagFilterUI();
     renderArticleList();
 
     const hashId = window.location.hash ? window.location.hash.replace('#', '') : '';
@@ -2360,6 +2782,44 @@ const fetchArticles = async () => {
 };
 
 searchInput.addEventListener('input', handleSearchInput);
+searchInput.addEventListener('keydown', (event) => {
+  if (event.key === 'Backspace' && !searchInput.value && hasActiveTagFilters()) {
+    // Remove the most recently added topic tag, or jurisdiction if no topic tags remain
+    if (selectedTags.size > 0) {
+      const lastTag = Array.from(selectedTags).pop();
+      toggleTopicTag(lastTag);
+    } else if (selectedJurisdictions.size > 0) {
+      const lastJur = Array.from(selectedJurisdictions).pop();
+      toggleJurisdictionTag(lastJur);
+    }
+  }
+});
+
+if (tagFilterButton) {
+  tagFilterButton.addEventListener('click', (event) => {
+    event.stopPropagation();
+    toggleTagPopover();
+  });
+}
+
+document.addEventListener('click', (event) => {
+  if (!tagFilterPopover || tagFilterPopover.hidden) return;
+  if (
+    tagFilterPopover.contains(event.target)
+    || (tagFilterButton && tagFilterButton.contains(event.target))
+  ) {
+    return;
+  }
+  closeTagPopover();
+});
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && tagFilterPopover && !tagFilterPopover.hidden) {
+    closeTagPopover();
+    if (tagFilterButton) tagFilterButton.focus();
+  }
+});
+
 prevButton.addEventListener('click', goToPrevious);
 nextButton.addEventListener('click', goToNext);
 if (collapseAllButton) {

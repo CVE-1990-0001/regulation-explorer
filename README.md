@@ -92,8 +92,10 @@ jurisdiction only needs a citation matcher in `link_references.py` (emitting
    (`articles[].paragraphs[]`) with a parser in [`tools/parsers/`](tools/parsers/),
    or hand-author it. Save under `regulations-data/`.
 2. **Register it** in [`data/index.json`](data/index.json): `id`, `path`, `label`,
-   `jurisdiction`, and — for citable acts — an `authId` (e.g. `celex:32016R0679`).
-   The `authId` is what makes it a cross-reference target.
+   `jurisdiction`, `tags` (one or more IDs from `tagCatalog`, adding a new catalog
+   entry there only when a genuinely new regulatory domain is introduced), and —
+   for citable acts — an `authId` (e.g. `celex:32016R0679`). The `authId` is what
+   makes it a cross-reference target.
 3. **Bundle it** (optional) — add its `ref` to a folder in [`data/bundles/`](data/bundles/).
 4. **Link references** — `python3 tools/link_references.py --update-db` (re-links
    all acts so existing citations to the new act auto-upgrade to in-app, and syncs
@@ -134,6 +136,16 @@ bundle membership (including removals from `data/index.json`).
 `data/index.json` remains the browser app source of truth for loaded content.
 The DB is a derived index for querying/integration, and the script also writes
 `data/index_meta.json` (lightweight `id -> celex` metadata for runtime lookups).
+
+## Tag filtering
+
+`data/index.json` defines a canonical `tagCatalog` (`{ id, label }`) and assigns
+curated topic `tags` to each act; jurisdiction facets (`EU`, `DE`, …) are derived
+automatically from each act's jurisdiction. In the UI, the **Tags** popover in
+the search bar filters regulations by Jurisdiction and Topics with live facet
+counts, prunes folder trees (`DORA`) down to matching member acts when browsing,
+and scopes keyword search strictly to acts matching the active tag filters.
+`tools/build_index_db.py` mirrors registry tags into the SQLite `act_tag` table.
 
 ## Legal entity applicability
 

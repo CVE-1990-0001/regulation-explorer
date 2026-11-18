@@ -156,14 +156,18 @@ def collect_act_rows(index_data: dict) -> Tuple[List[ActRow], Dict[str, List[dic
         if celex:
             id_to_celex[act_id] = celex
 
-        tags = meta.get("tags") if isinstance(meta, dict) else None
+        raw_tags = [
+            *(entry.get("tags") if isinstance(entry.get("tags"), list) else []),
+            *(meta.get("tags") if isinstance(meta, dict) and isinstance(meta.get("tags"), list) else []),
+        ]
         clean_tags: List[str] = []
-        if isinstance(tags, list):
-            for tag in tags:
-                if isinstance(tag, str):
-                    trimmed = tag.strip()
-                    if trimmed:
-                        clean_tags.append(trimmed[:64])
+        seen_tags = set()
+        for tag in raw_tags:
+            if isinstance(tag, str):
+                trimmed = tag.strip()[:64]
+                if trimmed and trimmed not in seen_tags:
+                    seen_tags.add(trimmed)
+                    clean_tags.append(trimmed)
 
         row = ActRow(
             act_id=act_id,
