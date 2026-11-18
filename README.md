@@ -95,12 +95,25 @@ jurisdiction only needs a citation matcher in `link_references.py` (emitting
    `jurisdiction`, and — for citable acts — an `authId` (e.g. `celex:32016R0679`).
    The `authId` is what makes it a cross-reference target.
 3. **Bundle it** (optional) — add its `ref` to a folder in [`data/bundles/`](data/bundles/).
-4. **Link references** — `python3 tools/link_references.py` (re-links all acts;
-   existing citations to the new act auto-upgrade to in-app).
-5. **Verify** — serve locally and check it loads and a few cross-references resolve.
+4. **Link references** — `python3 tools/link_references.py --update-db` (re-links
+   all acts so existing citations to the new act auto-upgrade to in-app, and syncs
+   [`data/index.db`](data/index.db) + [`data/index_meta.json`](data/index_meta.json)).
+5. **Build term definitions** — `python3 tools/build_definitions.py` (extracts any
+   `Definitions` / `Begriffsbestimmungen` chapter into
+   [`data/definitions.json`](data/definitions.json) and auto-resolves cross-act
+   pointer definitions against the newly hosted act; run *after* step 4 so
+   `<a class="ref">` links inside definitions are preserved).
+6. **Rebuild applicability** (if applicable) —
+   `python3 tools/build_legal_entity_applicability.py` when the act has matching
+   rows in [`data/source/legal_entity_regulation_detail.csv`](data/source/legal_entity_regulation_detail.csv).
+7. **Verify** — run `npm test` and serve locally to check the act loads,
+   cross-references resolve, and defined-term tooltips appear (if the act has a
+   definitions section).
 
-No app-code changes are needed — the id scheme, `authToActId`, and resolver are
-data-driven. Only a new *citation style* needs a matcher in `tools/link_references.py`.
+No app-code changes are needed — the id scheme, `authToActId`, cross-reference
+resolver, and defined-term tooltips are all data-driven. Only a new *citation
+style* needs a matcher in `tools/link_references.py`, or an unfamiliar
+*definitions layout* needs an extractor rule in `tools/build_definitions.py`.
 
 ## Index database
 
@@ -138,6 +151,26 @@ For regulation families such as DORA, the top-level bundle scope is displayed
 consistently on every descendant act and folder. Standalone regulations with no
 matching CSV row are marked as having no available applicability data.
 
+## Defined-term tooltips
+
+Acts with a definitions section (`Definitions` / `Begriffsbestimmungen`) display
+hover/focus tooltips on defined terms across all other articles of that act.
+Acts without a definitions section are left untouched. Regenerate the glossary
+sidecar after adding or modifying an act:
+
+```bash
+python3 tools/build_definitions.py
+```
+
+This writes `data/definitions.json` without modifying paragraph HTML in the act
+files; `app.js` wraps matched surface forms in `.defined-term` spans at render
+time. Citations (`<a class="ref">`) inside definitions remain interactive, the
+source badge jumps to the definition section, and definitions that delegate to
+another hosted act (e.g. *“as defined in Article 4(1) of Directive 2014/65/EU”*)
+automatically inline the resolved target definition underneath.
+`tools/update_regulations.py` rebuilds `data/definitions.json` automatically as
+part of its refresh pipeline.
+
 ## Updating all regulations
 
 Run the complete RegBro data refresh with one command:
@@ -148,8 +181,8 @@ python3 tools/update_regulations.py
 
 The updater visits every registry act whose `status` is `In Force` (the default),
 checks EUR-Lex acts identified by `authId`, updates changed article content, then
-re-links the complete corpus and rebuilds `data/index.db` and
-`data/index_meta.json`. Unsupported sources are reported and skipped. Use
+re-links the complete corpus and rebuilds `data/definitions.json`, `data/index.db`,
+and `data/index_meta.json`. Unsupported sources are reported and skipped. Use
 `--check` to report pending changes without writing, or pass act ids/paths to
 limit a run. Detailed function and update activity is written to
 `logs/update_regulations.log`; logs rotate at 100 MB.
