@@ -69,13 +69,13 @@ test('multi-tag drill-down combines Jurisdiction + Topics with AND and prunes DO
   // DORA bundle stays in the sidebar, pruned down to matching DORA members only
   app.nav('#bundle:bundle_dora');
   await app.tick();
-  const memberLinks = [...app.doc.querySelectorAll('.bundle-members a')].map((a) => a.textContent.trim());
+  const memberLinks = [...app.doc.querySelectorAll('.bundle-members .bundle-card-title')].map((el) => el.textContent.trim());
   assert.deepStrictEqual(memberLinks, ['DORA Regulation', 'RTS', 'ITS']);
 
   // Drill into DORA RTS sub-folder: only RTS 2 and RTS 3 relate to incident reporting
   app.nav('#bundle:bundle_dora_rts');
   await app.tick();
-  const rtsLinks = [...app.doc.querySelectorAll('.bundle-members a')].map((a) => a.textContent.trim());
+  const rtsLinks = [...app.doc.querySelectorAll('.bundle-members .bundle-card-title')].map((el) => el.textContent.trim());
   assert.deepStrictEqual(rtsLinks, ['RTS 2', 'RTS 3']);
 
   // Narrow further with Jurisdiction "DE": only BSIG matches both DE and Incident Reporting
@@ -107,11 +107,11 @@ test('search respects active tag filters and updates live facet counts', async (
 test('inline active pills, Backspace removal, and clickable act-header topic chips work', async () => {
   await app.openAct('act_eu_gdpr_2016_0679');
 
-  // Act root header shows GDPR's topic chips; clicking "Data & Privacy" filters immediately
+  // Act root header shows GDPR's Jurisdiction pill + topic chips; clicking "Data & Privacy" filters immediately
   const headerChips = [...app.doc.querySelectorAll('#actTopicTags .act-topic-tag')];
-  assert.deepStrictEqual(headerChips.map((c) => c.textContent), ['Data & Privacy', 'Incident Reporting']);
+  assert.deepStrictEqual(headerChips.map((c) => c.textContent), ['EU', 'Data & Privacy', 'Incident Reporting']);
 
-  app.click(headerChips[0]);
+  app.click(headerChips[1]);
   await app.tick();
 
   assert.strictEqual(app.doc.getElementById('listMessage').textContent, '2 of 24 regulations');
