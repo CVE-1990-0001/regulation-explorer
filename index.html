@@ -15,8 +15,27 @@
     </a>
     <span class="brand-divider" aria-hidden="true"></span>
     <div class="search-wrapper">
+      <div id="activeFilterPills" class="active-filter-pills" hidden aria-label="Active tag filters"></div>
       <label for="searchInput" class="sr-only">Search</label>
       <input id="searchInput" type="search" placeholder="Search articles or keywords..." autocomplete="off" />
+      <div class="tag-filter-control">
+        <button
+          id="tagFilterButton"
+          type="button"
+          class="tag-filter-button"
+          aria-expanded="false"
+          aria-haspopup="dialog"
+          aria-controls="tagFilterPopover"
+        >
+          <svg class="tag-filter-icon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
+            <line x1="7" y1="7" x2="7.01" y2="7"></line>
+          </svg>
+          <span class="tag-filter-label">Tags</span>
+          <span id="tagFilterCount" class="tag-filter-count" hidden>0</span>
+        </button>
+        <div id="tagFilterPopover" class="tag-filter-popover" role="dialog" aria-label="Filter regulations by tag" hidden></div>
+      </div>
     </div>
     <img src="dbg_logo.svg" alt="Deutsche Börse Group" class="dbg-logo" />
   </div>
@@ -45,6 +64,7 @@
           </div>
           <h2 id="articleTitle" class="article-title" tabindex="-1"></h2>
           <p id="articleSubtitle" class="article-subtitle"></p>
+          <div id="actTopicTags" class="act-topic-tags" hidden></div>
           <div id="legalEntityApplicability" class="legal-entity-applicability" hidden></div>
         </header>
         <div id="paragraphsContainer" class="paragraphs"></div>

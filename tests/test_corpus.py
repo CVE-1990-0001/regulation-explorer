@@ -73,6 +73,19 @@ def test_authid_is_scheme_qualified():
             assert re.match(r"^[a-z]+:.+", auth), f"{e['id']} authId not scheme:id -> {auth}"
 
 
+def test_act_tags_match_catalog():
+    catalog = INDEX.get("tagCatalog", [])
+    catalog_ids = [t["id"] for t in catalog]
+    assert catalog_ids and len(catalog_ids) == len(set(catalog_ids))
+    valid_ids = set(catalog_ids)
+
+    for e in INDEX["acts"]:
+        tags = e.get("tags")
+        assert isinstance(tags, list) and tags, f"{e['id']} should have at least one tag"
+        unknown = [t for t in tags if t not in valid_ids]
+        assert not unknown, f"{e['id']} has unknown tags not in tagCatalog: {unknown}"
+
+
 # --------------------------------------------------------------------------- #
 # Bundles resolve
 # --------------------------------------------------------------------------- #
