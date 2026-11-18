@@ -5,6 +5,7 @@ const searchInput = document.getElementById('searchInput');
 const articleNumberElement = document.getElementById('articleNumber');
 const articleTitleElement = document.getElementById('articleTitle');
 const articleSubtitleElement = document.getElementById('articleSubtitle');
+const actDossierMetaElement = document.getElementById('actDossierMeta');
 const actTopicTagsElement = document.getElementById('actTopicTags');
 const legalEntityApplicabilityElement = document.getElementById('legalEntityApplicability');
 const breadcrumbElement = document.getElementById('breadcrumb');
@@ -18,6 +19,17 @@ const activeFilterPillsElement = document.getElementById('activeFilterPills');
 const tagFilterButton = document.getElementById('tagFilterButton');
 const tagFilterCountElement = document.getElementById('tagFilterCount');
 const tagFilterPopover = document.getElementById('tagFilterPopover');
+const searchShortcutHintElement = document.getElementById('searchShortcutHint');
+const searchMatchStepperElement = document.getElementById('searchMatchStepper');
+const searchMatchCountElement = document.getElementById('searchMatchCount');
+const searchPrevMatchButton = document.getElementById('searchPrevMatch');
+const searchNextMatchButton = document.getElementById('searchNextMatch');
+const stickyContextBarElement = document.getElementById('stickyContextBar');
+const stickyContextTrailElement = document.getElementById('stickyContextTrail');
+const stickyContextActionsElement = document.getElementById('stickyContextActions');
+const articleHeaderElement = document.getElementById('articleHeader');
+const scrollTopButton = document.getElementById('scrollTopButton');
+const copyToastElement = document.getElementById('copyToast');
 
 let allArticles = [];
 let visibleArticles = [];
@@ -49,6 +61,13 @@ let actTagsById = {};
 let availableJurisdictions = [];
 let selectedJurisdictions = new Set();
 let selectedTags = new Set();
+let actRegistryEntriesById = {};
+let activeSearchMarks = [];
+let currentSearchHitIndex = -1;
+let currentScrollSpyKey = null;
+let currentScrollSpyArticleLabel = '';
+let scrollSpyObserver = null;
+let copyToastTimer = null;
 
 const JURISDICTION_NAMES = {
   EU: 'European Union',
@@ -100,12 +119,118 @@ const pruneBundleByActPredicate = (bundle, predicate) => {
   return { ...bundle, members: prunedMembers };
 };
 
+const getOfficialSourceInfo = (act) => {
+  if (!act) return null;
+  const entry = actRegistryEntriesById[act.id] || {};
+  const sourceUri = act.source && typeof act.source.uri === 'string' && act.source.uri.trim();
+  if (sourceUri) {
+    return { url: sourceUri, label: (act.source && act.source.label) || 'Official source' };
+  }
+  const authId = entry.authId || '';
+  if (authId.startsWith('celex:')) {
+    const cx = authId.slice(6);
+    return {
+      url: `https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:${cx}`,
+      label: 'EUR-Lex',
+    };
+  }
+  const updateUrl = entry.update && entry.update.url;
+  const firstUrl = Array.isArray(updateUrl) ? updateUrl[0] : updateUrl;
+  if (typeof firstUrl === 'string' && firstUrl.startsWith('http')) {
+    let label = 'Official source';
+    if (firstUrl.includes('gesetze-im-internet.de')) label = 'Gesetze im Internet';
+    else if (firstUrl.includes('recht.bund.de')) label = 'BGBl.';
+    else if (firstUrl.includes('bsi.bund.de')) label = 'BSI';
+    return { url: firstUrl, label };
+  }
+  return null;
+};
+
+const renderActDossierMeta = (act = null) => {
+  if (!actDossierMetaElement) return;
+  actDossierMetaElement.innerHTML = '';
+  if (!act || act.type !== 'act') {
+    actDossierMetaElement.hidden = true;
+    return;
+  }
+
+  const pills = [];
+  const articleCount = Array.isArray(act.articles) ? act.articles.length : 0;
+  if (articleCount > 0) {
+    const stat = document.createElement('span');
+    stat.className = 'dossier-stat';
+    stat.textContent = `${articleCount} ${articleCount === 1 ? 'section' : 'articles'}`;
+    pills.push(stat);
+  }
+
+  const defInfo = definitionsByActId[act.id];
+  const defCount = defInfo && Array.isArray(defInfo.entries) ? defInfo.entries.length : 0;
+  const firstDefArtId = defInfo && Array.isArray(defInfo.definitionArticleIds)
+    ? defInfo.definitionArticleIds[0]
+    : null;
+  if (defCount > 0 && firstDefArtId) {
+    const defBtn = document.createElement('button');
+    defBtn.type = 'button';
+    defBtn.className = 'dossier-stat dossier-stat-link';
+    defBtn.textContent = `${defCount} defined terms`;
+    defBtn.title = 'Jump to Definitions section';
+    defBtn.addEventListener('click', () => {
+      selectArticle(firstDefArtId, {
+        updateHash: true,
+        focus: true,
+        parentActId: act.id,
+        hashTarget: `a:${act.id}:${firstDefArtId}`,
+      });
+    });
+    pills.push(defBtn);
+  }
+
+  const sourceInfo = getOfficialSourceInfo(act);
+  if (sourceInfo) {
+    const srcLink = document.createElement('a');
+    srcLink.className = 'dossier-stat dossier-stat-link';
+    srcLink.href = sourceInfo.url;
+    srcLink.target = '_blank';
+    srcLink.rel = 'noopener noreferrer';
+    srcLink.textContent = `${sourceInfo.label} \u2197`;
+    srcLink.title = `Open official publication on ${sourceInfo.label}`;
+    pills.push(srcLink);
+  }
+
+  pills.forEach((p) => actDossierMetaElement.appendChild(p));
+  actDossierMetaElement.hidden = pills.length === 0;
+};
+
 const renderActTopicTags = (actId = null) => {
   if (!actTopicTagsElement) return;
+  const act = actId ? allActs.find((a) => a.id === actId) : null;
   const tags = actId ? getActTags(actId) : [];
+  const jurisdiction = act ? getJurisdiction(act) : '';
+
   actTopicTagsElement.innerHTML = '';
-  actTopicTagsElement.hidden = !tags.length;
-  if (!tags.length) return;
+  if (!actId || (!tags.length && !jurisdiction)) {
+    actTopicTagsElement.hidden = true;
+    return;
+  }
+  actTopicTagsElement.hidden = false;
+
+  if (jurisdiction) {
+    const jurBtn = document.createElement('button');
+    jurBtn.type = 'button';
+    jurBtn.className = 'act-topic-tag is-jurisdiction';
+    const jurSelected = selectedJurisdictions.has(jurisdiction);
+    jurBtn.classList.toggle('is-active', jurSelected);
+    jurBtn.setAttribute('aria-pressed', String(jurSelected));
+    jurBtn.dataset.jurisdiction = jurisdiction;
+    jurBtn.textContent = jurisdiction;
+    jurBtn.title = jurSelected
+      ? `Remove ${JURISDICTION_NAMES[jurisdiction] || jurisdiction} filter`
+      : `Filter by ${JURISDICTION_NAMES[jurisdiction] || jurisdiction}`;
+    jurBtn.addEventListener('click', () => {
+      toggleJurisdictionTag(jurisdiction);
+    });
+    actTopicTagsElement.appendChild(jurBtn);
+  }
 
   tags.forEach((tagId) => {
     const btn = document.createElement('button');
@@ -222,10 +347,20 @@ const createSourceBadgeElement = (label, sourceHash, extraClass = '') => {
   return span;
 };
 
+const markExternalReferenceAnchors = (rootElement) => {
+  if (!rootElement) return;
+  rootElement.querySelectorAll('a.ref').forEach((anchor) => {
+    const refId = refIdOf(anchor);
+    const isExternal = Boolean(refId && !authToActId[refId]);
+    anchor.classList.toggle('is-external-ref', isExternal);
+  });
+};
+
 const populateTooltipDefinitionBody = (element, definitionText, definitionHtml) => {
   const plain = (definitionText || '').trim();
   if (definitionHtml && plain.length <= LEGAL_TOOLTIP_MAX_CHARS) {
     element.innerHTML = definitionHtml;
+    markExternalReferenceAnchors(element);
     return;
   }
   element.textContent = plain.length > LEGAL_TOOLTIP_MAX_CHARS
@@ -949,6 +1084,7 @@ const createParagraphElement = (paragraphData, article, actId = null) => {
   }
 
   const resolvedActId = actId || article?._actId || getCurrentActId();
+  markExternalReferenceAnchors(paragraph);
   annotateDefinedTermsInElement(paragraph, resolvedActId, article?.id || null);
 
   attachParagraphTools(paragraph, article, paragraphData);
@@ -995,7 +1131,9 @@ const updateListMessage = () => {
 const highlightActiveLink = () => {
   articleButtons.forEach((button, id) => {
     const isActive = id === currentSidebarSelectionKey || (currentArticleSelectionKey && id === currentArticleSelectionKey);
+    const isScrollSpy = !currentArticleSelectionKey && Boolean(currentScrollSpyKey) && id === currentScrollSpyKey;
     button.classList.toggle('is-active', isActive);
+    button.classList.toggle('is-scroll-spy', isScrollSpy);
     if (isActive) {
       button.setAttribute('aria-current', 'true');
     } else {
@@ -1004,20 +1142,47 @@ const highlightActiveLink = () => {
   });
 };
 
+const formatNavArticleLabel = (article) => {
+  if (!article) return '';
+  const num = (article.title || article.id || '').trim();
+  const heading = getHeadingText(article);
+  return heading && heading !== num ? `${num} · ${heading}` : num;
+};
+
+const setNavButtonCard = (button, directionLabel, targetLabel, fallbackText) => {
+  if (!button) return;
+  button.innerHTML = '';
+  const dirSpan = document.createElement('span');
+  dirSpan.className = 'nav-button-dir';
+  dirSpan.textContent = directionLabel;
+  button.appendChild(dirSpan);
+
+  const targetSpan = document.createElement('span');
+  targetSpan.className = 'nav-button-target';
+  targetSpan.textContent = targetLabel || fallbackText;
+  button.appendChild(targetSpan);
+};
+
 const updateNavigationButtons = () => {
   const index = getCurrentIndex();
 
   if (!visibleArticles.length || index === -1) {
     prevButton.disabled = true;
     nextButton.disabled = true;
-    // Pagination only makes sense inside a single-article view.
     if (articleNav) articleNav.hidden = true;
     return;
   }
 
   if (articleNav) articleNav.hidden = false;
-  prevButton.disabled = index <= 0;
-  nextButton.disabled = index >= visibleArticles.length - 1;
+  const hasPrev = index > 0;
+  const hasNext = index < visibleArticles.length - 1;
+  prevButton.disabled = !hasPrev;
+  nextButton.disabled = !hasNext;
+
+  const prevArticleObj = hasPrev ? visibleArticles[index - 1] : null;
+  const nextArticleObj = hasNext ? visibleArticles[index + 1] : null;
+  setNavButtonCard(prevButton, '\u2190 Previous', formatNavArticleLabel(prevArticleObj), 'Start of list');
+  setNavButtonCard(nextButton, 'Next \u2192', formatNavArticleLabel(nextArticleObj), 'End of list');
 };
 
 const updateStatus = () => {
@@ -1185,8 +1350,122 @@ const buildSidebarSkeleton = (count = 7) => {
   return frag;
 };
 
+const teardownScrollSpy = () => {
+  if (scrollSpyObserver) {
+    scrollSpyObserver.disconnect();
+    scrollSpyObserver = null;
+  }
+  currentScrollSpyKey = null;
+  currentScrollSpyArticleLabel = '';
+};
+
+const updateStickyContextBar = () => {
+  if (!stickyContextBarElement || !articleHeaderElement) return;
+  const headerRect = articleHeaderElement.getBoundingClientRect();
+  const shouldShow = headerRect.bottom < 56 && Boolean(currentSidebarSelectionKey);
+
+  stickyContextBarElement.hidden = !shouldShow;
+  stickyContextBarElement.setAttribute('aria-hidden', String(!shouldShow));
+  if (!shouldShow) return;
+
+  stickyContextTrailElement.innerHTML = '';
+  stickyContextActionsElement.innerHTML = '';
+
+  const activeActId = getCurrentActId();
+  const activeAct = activeActId ? allActs.find((a) => a.id === activeActId) : null;
+
+  if (activeAct) {
+    const actBtn = document.createElement('button');
+    actBtn.type = 'button';
+    actBtn.className = 'sticky-context-act';
+    actBtn.textContent = activeAct.title || activeAct.id;
+    actBtn.addEventListener('click', () => {
+      if (currentArticleId) {
+        window.location.hash = `act:${activeAct.id}`;
+      } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    });
+    stickyContextTrailElement.appendChild(actBtn);
+
+    let subLabel = '';
+    if (currentArticleId) {
+      const art = allArticles.find((a) => a.id === currentArticleId && a._actId === activeAct.id);
+      subLabel = formatNavArticleLabel(art);
+    } else if (currentScrollSpyArticleLabel) {
+      subLabel = currentScrollSpyArticleLabel;
+    }
+
+    if (subLabel) {
+      const sep = document.createElement('span');
+      sep.textContent = '\u203a';
+      sep.setAttribute('aria-hidden', 'true');
+      stickyContextTrailElement.appendChild(sep);
+
+      const cur = document.createElement('span');
+      cur.className = 'sticky-context-current';
+      cur.textContent = subLabel;
+      stickyContextTrailElement.appendChild(cur);
+    }
+
+    const defInfo = definitionsByActId[activeAct.id];
+    const firstDefId = defInfo && defInfo.definitionArticleIds && defInfo.definitionArticleIds[0];
+    if (firstDefId && currentArticleId !== firstDefId) {
+      const defJump = document.createElement('button');
+      defJump.type = 'button';
+      defJump.className = 'sticky-context-btn';
+      defJump.textContent = 'Definitions';
+      defJump.addEventListener('click', () => {
+        selectArticle(firstDefId, {
+          updateHash: true,
+          focus: true,
+          parentActId: activeAct.id,
+          hashTarget: `a:${activeAct.id}:${firstDefId}`,
+        });
+      });
+      stickyContextActionsElement.appendChild(defJump);
+    }
+  } else {
+    const cur = document.createElement('span');
+    cur.className = 'sticky-context-current';
+    cur.textContent = (articleTitleElement.textContent || '').trim();
+    stickyContextTrailElement.appendChild(cur);
+  }
+};
+
+const setupActScrollSpy = (actId) => {
+  teardownScrollSpy();
+  if (typeof IntersectionObserver !== 'function' || !paragraphsContainer) return;
+
+  const headings = [...paragraphsContainer.querySelectorAll('.act-article-title[data-article-id]')];
+  if (!headings.length) return;
+
+  scrollSpyObserver = new IntersectionObserver(
+    (entries) => {
+      const visible = entries
+        .filter((e) => e.isIntersecting)
+        .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+      if (!visible.length) return;
+
+      const topHeading = visible[0].target;
+      const artId = topHeading.dataset.articleId;
+      const nextKey = getArticleSelectionKey(artId, actId);
+      if (nextKey !== currentScrollSpyKey) {
+        currentScrollSpyKey = nextKey;
+        currentScrollSpyArticleLabel = topHeading.dataset.articleLabel || '';
+        highlightActiveLink();
+        updateStickyContextBar();
+      }
+    },
+    { rootMargin: '-75px 0px -70% 0px', threshold: 0 },
+  );
+
+  headings.forEach((h) => scrollSpyObserver.observe(h));
+};
+
 const renderArticleDetail = (article) => {
   hideLegalTooltipImmediate();
+  teardownScrollSpy();
 
   if (!article) {
     if (currentSidebarSelectionKey && currentSidebarSelectionKey.startsWith('act:')) {
@@ -1202,10 +1481,13 @@ const renderArticleDetail = (article) => {
     renderBreadcrumb([]);
     articleTitleElement.textContent = '';
     articleSubtitleElement.textContent = '';
+    renderActDossierMeta(null);
     renderActTopicTags();
     renderLegalEntityApplicability();
     paragraphsContainer.innerHTML = '';
     paragraphsContainer.appendChild(buildEmptyState());
+    highlightSearchMatches('');
+    updateStickyContextBar();
     return;
   }
 
@@ -1224,6 +1506,7 @@ const renderArticleDetail = (article) => {
     getCitation: () => getArticleCitation(article, article._actId || getCurrentActId()),
   });
   articleSubtitleElement.textContent = '';
+  renderActDossierMeta(null);
   renderActTopicTags();
   renderLegalEntityApplicability();
 
@@ -1238,8 +1521,8 @@ const renderArticleDetail = (article) => {
   });
 
   paragraphsContainer.appendChild(fragment);
-  // Apply search highlighting for the current query
   highlightSearchMatches(lastSearchQuery);
+  updateStickyContextBar();
 };
 
 // Render an item by type (act or bundle)
@@ -1266,6 +1549,7 @@ const renderItem = (item) => {
 // Render an act-level object (may contain `articles` or `paragraphs`)
 const renderAct = (act) => {
   hideLegalTooltipImmediate();
+  teardownScrollSpy();
 
   if (!act) {
     renderArticleDetail(null);
@@ -1273,7 +1557,8 @@ const renderAct = (act) => {
   }
 
   articleNumberElement.textContent = '';
-  renderBreadcrumb([]);
+  const folderChain = findActFolderPath(act.id) || [];
+  renderBreadcrumb(folderChain.map((b) => ({ label: b.title || b.id, hash: `bundle:${b.id}` })));
   articleTitleElement.textContent = act.title || act.id || '';
   attachHeadingTools(articleTitleElement, {
     getText: () => getActHeadingText(act),
@@ -1281,18 +1566,50 @@ const renderAct = (act) => {
     getCitation: () => getActCitation(act),
   });
   articleSubtitleElement.textContent = [getSubtitleText(act), act.heading].filter(Boolean).join(' — ');
+  renderActDossierMeta(act);
   renderActTopicTags(act.id);
   renderLegalEntityApplicability(act.id);
 
   paragraphsContainer.innerHTML = '';
   const fragment = document.createDocumentFragment();
 
-  // If act has articles, render each with heading then paragraphs
+  // If act has articles, render each with clickable number + descriptive heading then paragraphs
   if (Array.isArray(act.articles)) {
     act.articles.forEach((article) => {
       const h = document.createElement('h3');
       h.className = 'act-article-title';
-      h.textContent = article.title || article.id || '';
+      const numLabel = (article.title || article.id || '').trim();
+      const subHeading = getHeadingText(article);
+      h.dataset.articleId = article.id || '';
+      h.dataset.articleLabel = formatNavArticleLabel(article);
+
+      const titleBtn = document.createElement('button');
+      titleBtn.type = 'button';
+      titleBtn.className = 'act-article-title-link';
+      titleBtn.title = `Open ${formatNavArticleLabel(article)}`;
+
+      const numSpan = document.createElement('span');
+      numSpan.className = 'act-article-heading-num';
+      numSpan.textContent = numLabel;
+      titleBtn.appendChild(numSpan);
+
+      if (subHeading && subHeading !== numLabel) {
+        const subSpan = document.createElement('span');
+        subSpan.className = 'act-article-heading-sub';
+        subSpan.textContent = `— ${subHeading}`;
+        titleBtn.appendChild(subSpan);
+      }
+
+      titleBtn.addEventListener('click', () => {
+        selectArticle(article.id, {
+          updateHash: true,
+          focus: true,
+          parentActId: act.id,
+          hashTarget: `a:${act.id}:${article.id}`,
+        });
+      });
+
+      h.appendChild(titleBtn);
       attachHeadingTools(h, {
         getText: () => getArticleHeadingText(article),
         getLink: () => getArticlePermalink(act.id, article.id),
@@ -1317,13 +1634,26 @@ const renderAct = (act) => {
   }
 
   paragraphsContainer.appendChild(fragment);
-  // Highlight search matches inside the act view as well
   highlightSearchMatches(lastSearchQuery);
+  setupActScrollSpy(act.id);
+  updateStickyContextBar();
 };
 
-// Render a bundle: title, description, and member list linking to acts
+const countBundleRegulations = (bundleObj) => {
+  if (!bundleObj || !Array.isArray(bundleObj.members)) return 0;
+  let total = 0;
+  bundleObj.members.forEach((m) => {
+    if (!m) return;
+    if (m.type === 'bundle') total += countBundleRegulations(m);
+    else if (m.ref) total += 1;
+  });
+  return total;
+};
+
+// Render a bundle: title, description, and enriched member cards linking to acts/sub-folders
 const renderBundle = (bundle) => {
   hideLegalTooltipImmediate();
+  teardownScrollSpy();
 
   if (!bundle) {
     renderArticleDetail(null);
@@ -1341,6 +1671,7 @@ const renderBundle = (bundle) => {
     getCitation: () => getBundleHeadingText(bundle),
   });
   articleSubtitleElement.textContent = '';
+  renderActDossierMeta(null);
   renderActTopicTags();
   renderLegalEntityApplicability(bundle.id);
 
@@ -1363,11 +1694,34 @@ const renderBundle = (bundle) => {
       }
       const li = document.createElement('li');
 
-      // Nested sub-folder: link expands it in the sidebar
+      // Nested sub-folder: card shows folder title, description, and member count
       if (m.type === 'bundle') {
         const a = document.createElement('a');
         a.href = `#bundle:${m.id}`;
-        a.textContent = m.title || m.id;
+
+        const topRow = document.createElement('span');
+        topRow.className = 'bundle-card-top';
+        const titleSpan = document.createElement('span');
+        titleSpan.className = 'bundle-card-title';
+        titleSpan.textContent = m.title || m.id;
+        topRow.appendChild(titleSpan);
+
+        const regCount = countBundleRegulations(m);
+        if (regCount > 0) {
+          const metaSpan = document.createElement('span');
+          metaSpan.className = 'bundle-card-meta';
+          metaSpan.textContent = `${regCount} ${regCount === 1 ? 'act' : 'acts'}`;
+          topRow.appendChild(metaSpan);
+        }
+        a.appendChild(topRow);
+
+        if (m.description) {
+          const sub = document.createElement('span');
+          sub.className = 'bundle-card-subtitle';
+          sub.textContent = m.description;
+          a.appendChild(sub);
+        }
+
         a.addEventListener('click', (ev) => {
           ev.preventDefault();
           expandedBundleIds.add(m.id);
@@ -1383,11 +1737,41 @@ const renderBundle = (bundle) => {
         return;
       }
 
+      const memberAct = allActs.find((act) => act.id === m.ref);
       const a = document.createElement('a');
       a.href = `#act:${m.ref}`;
-      a.textContent = m.label || m.ref;
+
+      const topRow = document.createElement('span');
+      topRow.className = 'bundle-card-top';
+      if (memberAct) {
+        const jurBadge = document.createElement('span');
+        jurBadge.className = 'list-jurisdiction';
+        jurBadge.textContent = getJurisdiction(memberAct);
+        topRow.appendChild(jurBadge);
+      }
+      const titleSpan = document.createElement('span');
+      titleSpan.className = 'bundle-card-title';
+      titleSpan.textContent = m.label || (memberAct && memberAct.title) || m.ref;
+      topRow.appendChild(titleSpan);
+
+      const artCount = memberAct && Array.isArray(memberAct.articles) ? memberAct.articles.length : 0;
+      if (artCount > 0) {
+        const metaSpan = document.createElement('span');
+        metaSpan.className = 'bundle-card-meta';
+        metaSpan.textContent = `${artCount} art.`;
+        topRow.appendChild(metaSpan);
+      }
+      a.appendChild(topRow);
+
+      const subText = memberAct ? (getSubtitleText(memberAct) || getHeadingText(memberAct)) : '';
+      if (subText) {
+        const sub = document.createElement('span');
+        sub.className = 'bundle-card-subtitle';
+        sub.textContent = subText;
+        a.appendChild(sub);
+      }
+
       a.addEventListener('click', (ev) => {
-        // set hash to act:<ID> and allow route handler to pick up
         ev.preventDefault();
         try {
           window.location.hash = `act:${m.ref}`;
@@ -1402,8 +1786,8 @@ const renderBundle = (bundle) => {
   }
 
   paragraphsContainer.appendChild(fragment);
-  // highlight any query terms in the bundle view (applies to description)
   highlightSearchMatches(lastSearchQuery);
+  updateStickyContextBar();
 };
 
 const renderArticleList = () => {
@@ -1427,6 +1811,62 @@ const collapseAll = () => {
   expandedBundleIds.clear();
   expandedBundleActIds.clear();
   renderArticleList();
+};
+
+const countSubstringOccurrences = (haystack, needle) => {
+  if (!haystack || !needle) return 0;
+  let count = 0;
+  let pos = 0;
+  while ((pos = haystack.indexOf(needle, pos)) !== -1) {
+    count += 1;
+    pos += needle.length;
+  }
+  return count;
+};
+
+const getArticleSearchText = (article) => {
+  if (!article) return '';
+  if (article._normalisedSearchText !== undefined) {
+    return article._normalisedSearchText;
+  }
+  const parts = [
+    article.title || '',
+    getHeadingText(article),
+    getSummaryText(article),
+    ...(article.paragraphs || []).map((p) => {
+      if (!p) return '';
+      return typeof p === 'string' ? stripHtml(p) : stripHtml(p.text || '');
+    }),
+  ];
+  article._normalisedSearchText = normaliseForSearch(parts.join(' ').replace(/\s+/g, ' '));
+  return article._normalisedSearchText;
+};
+
+const countItemSearchHits = (item, rawQuery) => {
+  const q = normaliseForSearch(`${rawQuery || ''}`.trim());
+  if (!q || !item) return 0;
+
+  if (item.type === 'act') {
+    const headerHits = countSubstringOccurrences(
+      normaliseForSearch([item.title || '', getHeadingText(item), getSubtitleText(item)].join(' ')),
+      q,
+    );
+    const articleHits = Array.isArray(item.articles)
+      ? item.articles.reduce((sum, art) => sum + countSubstringOccurrences(getArticleSearchText(art), q), 0)
+      : countSubstringOccurrences(getArticleSearchText(item), q);
+    return headerHits + articleHits;
+  }
+
+  return countSubstringOccurrences(getArticleSearchText(item), q);
+};
+
+const appendHitBadge = (button, count) => {
+  if (!button || !count || count <= 0) return;
+  const badge = document.createElement('span');
+  badge.className = 'list-hit-badge';
+  badge.textContent = count > 99 ? '99+' : String(count);
+  badge.title = `${count} ${count === 1 ? 'match' : 'matches'}`;
+  button.appendChild(badge);
 };
 
 // Render the sidebar list with a small type chip and hash-based routing
@@ -1464,6 +1904,10 @@ const renderSidebarList = (items = []) => {
       rowHeadingSpan.className = 'list-article-heading';
       rowHeadingSpan.textContent = rowHeading;
       rowButton.appendChild(rowHeadingSpan);
+    }
+
+    if (lastSearchQuery) {
+      appendHitBadge(rowButton, countItemSearchHits(article, lastSearchQuery));
     }
 
     rowButton.addEventListener('click', (event) => {
@@ -1681,7 +2125,12 @@ const renderSidebarList = (items = []) => {
       const actExpanded = searchActive
         ? !searchCollapsedActIds.has(item.id)
         : expandedActIds.has(item.id);
+      if (searchActive) {
+        appendHitBadge(button, countItemSearchHits(item, lastSearchQuery));
+      }
       appendDisclosure(button, actExpanded);
+    } else if (lastSearchQuery) {
+      appendHitBadge(button, countItemSearchHits(item, lastSearchQuery));
     }
 
     // Clicking updates the view: toggle expand/collapse and open act, or expand bundle
@@ -2512,7 +2961,10 @@ let searchDebounceTimer = null;
 
 const handleSearchInput = (event) => {
   const value = event.target.value;
-  window.clearTimeout(searchDebounceTimer);
+  if (searchDebounceTimer) {
+    window.clearTimeout(searchDebounceTimer);
+    searchDebounceTimer = null;
+  }
 
   // Clearing the field should feel instant; typing is debounced.
   if (!value.trim()) {
@@ -2521,6 +2973,7 @@ const handleSearchInput = (event) => {
   }
 
   searchDebounceTimer = window.setTimeout(() => {
+    searchDebounceTimer = null;
     applyFilter(value);
   }, 180);
 };
@@ -2574,9 +3027,11 @@ const loadAllData = async () => {
   tagCatalog = Array.isArray(registry.tagCatalog) ? registry.tagCatalog : [];
   tagLabelsById = new Map(tagCatalog.map((t) => [t.id, t.label || t.id]));
   actTagsById = {};
+  actRegistryEntriesById = {};
   const catalogIds = new Set(tagCatalog.map((t) => t.id));
   (registry.acts || []).forEach((entry) => {
     if (!entry || !entry.id) return;
+    actRegistryEntriesById[entry.id] = entry;
     const validTags = Array.isArray(entry.tags)
       ? entry.tags.filter((t) => typeof t === 'string' && (!catalogIds.size || catalogIds.has(t)))
       : [];
@@ -2805,8 +3260,35 @@ const fetchArticles = async () => {
   }
 };
 
-searchInput.addEventListener('input', handleSearchInput);
+searchInput.addEventListener('input', (event) => {
+  updateSearchShortcutHint();
+  handleSearchInput(event);
+});
+searchInput.addEventListener('focus', () => updateSearchShortcutHint());
+searchInput.addEventListener('blur', () => updateSearchShortcutHint());
 searchInput.addEventListener('keydown', (event) => {
+  if (event.key === 'Enter' && searchInput.value.trim()) {
+    event.preventDefault();
+    if (searchDebounceTimer) {
+      window.clearTimeout(searchDebounceTimer);
+      searchDebounceTimer = null;
+      applyFilter(searchInput.value);
+    } else {
+      stepSearchMatch(event.shiftKey ? -1 : 1);
+    }
+    return;
+  }
+  if (event.key === 'Escape') {
+    if (searchInput.value) {
+      event.preventDefault();
+      searchInput.value = '';
+      updateSearchShortcutHint();
+      applyFilter('');
+    } else {
+      searchInput.blur();
+    }
+    return;
+  }
   if (event.key === 'Backspace' && !searchInput.value && hasActiveTagFilters()) {
     // Remove the most recently added topic tag, or jurisdiction if no topic tags remain
     if (selectedTags.size > 0) {
@@ -2818,6 +3300,13 @@ searchInput.addEventListener('keydown', (event) => {
     }
   }
 });
+
+if (searchPrevMatchButton) {
+  searchPrevMatchButton.addEventListener('click', () => stepSearchMatch(-1));
+}
+if (searchNextMatchButton) {
+  searchNextMatchButton.addEventListener('click', () => stepSearchMatch(1));
+}
 
 if (tagFilterButton) {
   tagFilterButton.addEventListener('click', (event) => {
@@ -2837,12 +3326,58 @@ document.addEventListener('click', (event) => {
   closeTagPopover();
 });
 
+const isEditableElement = (el) => Boolean(
+  el && (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA' || el.tagName === 'SELECT' || el.isContentEditable),
+);
+
 document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape' && tagFilterPopover && !tagFilterPopover.hidden) {
     closeTagPopover();
     if (tagFilterButton) tagFilterButton.focus();
+    return;
+  }
+
+  // Global Ctrl+K / Cmd+K or '/' focuses search
+  if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 'k') {
+    event.preventDefault();
+    searchInput.focus();
+    searchInput.select();
+    return;
+  }
+
+  if (isEditableElement(event.target) || event.ctrlKey || event.metaKey || event.altKey) {
+    return;
+  }
+
+  if (event.key === '/') {
+    event.preventDefault();
+    searchInput.focus();
+    searchInput.select();
+    return;
+  }
+
+  // '[' and ']' navigate previous/next article when in single-article view
+  if (event.key === '[' && articleNav && !articleNav.hidden && !prevButton.disabled) {
+    event.preventDefault();
+    goToPrevious();
+  } else if (event.key === ']' && articleNav && !articleNav.hidden && !nextButton.disabled) {
+    event.preventDefault();
+    goToNext();
   }
 });
+
+if (scrollTopButton) {
+  scrollTopButton.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
+window.addEventListener('scroll', () => {
+  if (scrollTopButton) {
+    scrollTopButton.hidden = window.scrollY < 520;
+  }
+  updateStickyContextBar();
+}, { passive: true });
 
 prevButton.addEventListener('click', goToPrevious);
 nextButton.addEventListener('click', goToNext);
@@ -3137,41 +3672,141 @@ const highlightMatchesInNode = (node, regex) => {
   }
 };
 
+const updateSearchShortcutHint = () => {
+  if (!searchShortcutHintElement || !searchInput) return;
+  const hideHint = Boolean(searchInput.value) || document.activeElement === searchInput;
+  searchShortcutHintElement.classList.toggle('is-hidden', hideHint);
+};
+
+const updateSearchMatchStepperUI = () => {
+  if (!searchMatchStepperElement || !searchMatchCountElement) return;
+  const hasQuery = Boolean(lastSearchQuery && lastSearchQuery.trim());
+  if (!hasQuery) {
+    searchMatchStepperElement.hidden = true;
+    return;
+  }
+
+  const total = activeSearchMarks.length;
+  searchMatchStepperElement.hidden = false;
+  if (total === 0) {
+    searchMatchCountElement.textContent = '0 matches';
+    if (searchPrevMatchButton) searchPrevMatchButton.disabled = true;
+    if (searchNextMatchButton) searchNextMatchButton.disabled = true;
+    return;
+  }
+
+  const displayIdx = currentSearchHitIndex >= 0 ? currentSearchHitIndex + 1 : 1;
+  searchMatchCountElement.textContent = `${displayIdx} / ${total}`;
+  if (searchPrevMatchButton) searchPrevMatchButton.disabled = total <= 1;
+  if (searchNextMatchButton) searchNextMatchButton.disabled = total <= 1;
+};
+
+const focusSearchMatchAt = (targetIndex, { scroll = true } = {}) => {
+  const total = activeSearchMarks.length;
+  if (!total) {
+    currentSearchHitIndex = -1;
+    updateSearchMatchStepperUI();
+    return;
+  }
+
+  activeSearchMarks.forEach((mark) => mark.classList.remove('is-current-hit'));
+  const wrapped = ((targetIndex % total) + total) % total;
+  currentSearchHitIndex = wrapped;
+  const currentMark = activeSearchMarks[wrapped];
+  if (currentMark) {
+    currentMark.classList.add('is-current-hit');
+    if (scroll) {
+      try {
+        currentMark.scrollIntoView({ block: 'center', behavior: 'smooth' });
+      } catch (error) {
+        currentMark.scrollIntoView();
+      }
+    }
+  }
+  updateSearchMatchStepperUI();
+};
+
+const stepSearchMatch = (delta) => {
+  if (!activeSearchMarks.length) return;
+  const base = currentSearchHitIndex >= 0 ? currentSearchHitIndex : 0;
+  focusSearchMatchAt(base + delta, { scroll: true });
+};
+
 const highlightSearchMatches = (query) => {
   const container = paragraphsContainer;
   if (!container) return;
   removeExistingHighlights(container);
+  [articleNumberElement, articleTitleElement, articleSubtitleElement].forEach((el) => {
+    if (el) removeExistingHighlights(el);
+  });
+
+  activeSearchMarks = [];
+  currentSearchHitIndex = -1;
 
   const q = `${query || ''}`.trim();
-  if (!q) return;
+  if (!q) {
+    updateSearchMatchStepperUI();
+    return;
+  }
 
-  // Use the whole query as a contiguous phrase so typing/removing letters
-  // updates highlights exactly for the current input string.
-  const phrase = q; // already trimmed
-  if (!phrase) return;
-
-  const pattern = escapeRegExp(phrase);
+  const pattern = escapeRegExp(q);
   let regex;
   try {
     regex = new RegExp(pattern, 'gi');
   } catch (e) {
+    updateSearchMatchStepperUI();
     return;
   }
-
-  // Highlight in paragraphs and bundle descriptions
-  const paragraphs = container.querySelectorAll('.article-paragraph, .bundle-description');
-  paragraphs.forEach((p) => {
-    highlightMatchesInNode(p, regex);
-  });
 
   // Highlight in article number, title, and subtitle
   [articleNumberElement, articleTitleElement, articleSubtitleElement].forEach((el) => {
     if (el && el.textContent) {
-      // Remove previous highlights
-      removeExistingHighlights(el);
       highlightMatchesInNode(el, regex);
     }
   });
+
+  // Highlight in per-article headings, paragraphs, and bundle descriptions
+  const targets = container.querySelectorAll(
+    '.act-article-title-link, .article-paragraph, .bundle-description',
+  );
+  targets.forEach((p) => {
+    highlightMatchesInNode(p, regex);
+  });
+
+  activeSearchMarks = [
+    ...(articleHeaderElement ? articleHeaderElement.querySelectorAll('mark.search-hit') : []),
+    ...container.querySelectorAll('mark.search-hit'),
+  ];
+
+  if (activeSearchMarks.length > 0) {
+    focusSearchMatchAt(0, { scroll: false });
+  } else {
+    updateSearchMatchStepperUI();
+  }
+};
+
+const showCopyToast = (message, { isSuccess = true } = {}) => {
+  if (!copyToastElement || !message) return;
+  if (copyToastTimer) {
+    clearTimeout(copyToastTimer);
+    copyToastTimer = null;
+  }
+
+  copyToastElement.innerHTML = '';
+  const iconSpan = document.createElement('span');
+  iconSpan.className = 'copy-toast-accent';
+  iconSpan.textContent = isSuccess ? '\u2713' : '\u2715';
+  copyToastElement.appendChild(iconSpan);
+
+  const textSpan = document.createElement('span');
+  textSpan.textContent = message;
+  copyToastElement.appendChild(textSpan);
+
+  copyToastElement.hidden = false;
+  copyToastTimer = window.setTimeout(() => {
+    copyToastElement.hidden = true;
+    copyToastTimer = null;
+  }, 1900);
 };
 
 const createToolsWrapper = (actions, ariaLabel = 'Tools') => {
@@ -3185,7 +3820,7 @@ const createToolsWrapper = (actions, ariaLabel = 'Tools') => {
     button.type = 'button';
     button.className = 'paragraph-tool-button';
     button.innerHTML = TOOL_SVG(TOOL_ICONS[action.key] || '');
-    button.title = action.label;
+    button.title = `Copy ${action.label.toLowerCase()}`;
     button.setAttribute('aria-label', action.ariaLabel);
 
     button.addEventListener('click', async (event) => {
@@ -3195,11 +3830,20 @@ const createToolsWrapper = (actions, ariaLabel = 'Tools') => {
       const content = action.getContent();
       if (!content) {
         showCopyConfirmation(button, 'Error', { isSuccess: false });
+        showCopyToast('Unable to copy to clipboard', { isSuccess: false });
         return;
       }
 
       const succeeded = await copyToClipboard(content);
       showCopyConfirmation(button, succeeded ? 'Copied' : 'Error', { isSuccess: succeeded });
+      if (succeeded) {
+        const preview = action.key === 'citation' && content.length <= 64
+          ? `Copied citation: ${content}`
+          : `Copied ${action.label.toLowerCase()} to clipboard`;
+        showCopyToast(preview, { isSuccess: true });
+      } else {
+        showCopyToast('Unable to copy to clipboard', { isSuccess: false });
+      }
     });
 
     toolsWrapper.appendChild(button);

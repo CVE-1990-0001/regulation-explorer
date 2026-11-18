@@ -29,8 +29,10 @@ test('BSI C3A loads and its criteria are navigable', async () => {
   assert.doesNotMatch(content.textContent, /Document history/);
   const sections = [...content.querySelectorAll('.act-article-title')];
   assert.strictEqual(sections.length, 35);
-  assert.deepStrictEqual(sections.slice(0, 5).map((section) => section.textContent),
-    ['1.1', '1.2', '1.3', '1.4', '1.5']);
+  assert.deepStrictEqual(
+    sections.slice(0, 5).map((section) => section.querySelector('.act-article-heading-num').textContent),
+    ['1.1', '1.2', '1.3', '1.4', '1.5'],
+  );
   assert.match(content.textContent, /Non-binding|not binding in itself/);
   assert.match(content.textContent, /SOV-6-03-C Criterion/);
 
