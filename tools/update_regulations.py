@@ -330,6 +330,8 @@ def refresh_entry(entry: dict, fetcher: Fetch, timeout: int) -> tuple[str, objec
 def run_pipeline() -> None:
     LOGGER.info("Re-linking references")
     subprocess.run([sys.executable, str(APP / "tools" / "link_references.py")], check=True)
+    LOGGER.info("Rebuilding definitions")
+    subprocess.run([sys.executable, str(APP / "tools" / "build_definitions.py")], check=True)
     LOGGER.info("Rebuilding indexes")
     subprocess.run([sys.executable, str(APP / "tools" / "build_index_db.py")], check=True)
 

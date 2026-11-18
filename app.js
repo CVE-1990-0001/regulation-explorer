@@ -36,6 +36,8 @@ let allBundles = [];
 let lastSearchQuery = '';
 let authToActId = {};
 let legalEntitiesByItemId = {};
+let definitionsByActId = {};
+const compiledDefinitionMatchers = new Map();
 
 const renderLegalEntityApplicability = (itemId = null) => {
   if (!legalEntityApplicabilityElement) return;
@@ -61,7 +63,7 @@ const renderLegalEntityApplicability = (itemId = null) => {
   });
 };
 
-const legalTooltipSelectors = '.legal-reference, .legal-link, .internal-article-link, .ref';
+const legalTooltipSelectors = '.defined-term, .legal-reference, .legal-link, .internal-article-link, .ref';
 const LEGAL_TOOLTIP_MAX_CHARS = 1000;
 let legalTooltipElement = null;
 let legalTooltipContent = null;
@@ -70,6 +72,9 @@ let legalTooltipHideTimer = null;
 
 const getClosestLegalTooltipTarget = (node) => {
   if (!node || typeof node.closest !== 'function') {
+    return null;
+  }
+  if (legalTooltipElement && legalTooltipElement.contains(node)) {
     return null;
   }
   return node.closest(legalTooltipSelectors);
@@ -98,13 +103,96 @@ const ensureLegalTooltipElement = () => {
 
   legalTooltipElement.addEventListener('mouseout', (event) => {
     const related = event.relatedTarget;
-    if (related && legalTooltipTarget && legalTooltipTarget.contains(related)) {
+    if (related && (legalTooltipElement.contains(related) || (legalTooltipTarget && legalTooltipTarget.contains(related)))) {
       return;
     }
     scheduleLegalTooltipHide();
   });
 
   document.body.appendChild(legalTooltipElement);
+};
+
+const getDefinitionEntry = (element) => {
+  if (!element || !element.dataset) return null;
+  const actId = element.dataset.actId;
+  const idx = Number(element.dataset.defIdx);
+  const actDefs = actId ? definitionsByActId[actId] : null;
+  if (!actDefs || !Array.isArray(actDefs.entries) || !Number.isInteger(idx)) {
+    return null;
+  }
+  return actDefs.entries[idx] || null;
+};
+
+const createSourceBadgeElement = (label, sourceHash, extraClass = '') => {
+  if (sourceHash) {
+    const link = document.createElement('a');
+    link.className = ['legal-tooltip-source', 'ref', extraClass].filter(Boolean).join(' ');
+    link.href = `#${sourceHash}`;
+    link.textContent = label;
+    return link;
+  }
+  const span = document.createElement('span');
+  span.className = ['legal-tooltip-source', extraClass].filter(Boolean).join(' ');
+  span.textContent = label;
+  return span;
+};
+
+const populateTooltipDefinitionBody = (element, definitionText, definitionHtml) => {
+  const plain = (definitionText || '').trim();
+  if (definitionHtml && plain.length <= LEGAL_TOOLTIP_MAX_CHARS) {
+    element.innerHTML = definitionHtml;
+    return;
+  }
+  element.textContent = plain.length > LEGAL_TOOLTIP_MAX_CHARS
+    ? `${plain.slice(0, LEGAL_TOOLTIP_MAX_CHARS).trimEnd()}...`
+    : plain;
+};
+
+const renderDefinitionTooltipContent = (container, entry) => {
+  container.textContent = '';
+
+  const header = document.createElement('div');
+  header.className = 'legal-tooltip-header';
+
+  const termSpan = document.createElement('span');
+  termSpan.className = 'legal-tooltip-term';
+  termSpan.textContent = entry.term || '';
+  header.appendChild(termSpan);
+
+  if (entry.source) {
+    header.appendChild(createSourceBadgeElement(entry.source, entry.sourceHash));
+  }
+
+  const body = document.createElement('div');
+  body.className = 'legal-tooltip-body';
+  populateTooltipDefinitionBody(body, entry.definition, entry.definitionHtml);
+
+  container.appendChild(header);
+  container.appendChild(body);
+
+  if (entry.resolved && entry.resolved.definition) {
+    const resolvedWrap = document.createElement('div');
+    resolvedWrap.className = 'legal-tooltip-resolved';
+
+    const resolvedHeader = document.createElement('div');
+    resolvedHeader.className = 'legal-tooltip-resolved-header';
+    const resolvedLabel = [entry.resolved.actLabel, entry.resolved.source].filter(Boolean).join(' · ');
+    resolvedHeader.appendChild(
+      createSourceBadgeElement(`↳ ${resolvedLabel}`, entry.resolved.sourceHash, 'is-resolved-source'),
+    );
+    resolvedWrap.appendChild(resolvedHeader);
+
+    const resolvedBody = document.createElement('div');
+    resolvedBody.className = 'legal-tooltip-resolved-body';
+    populateTooltipDefinitionBody(
+      resolvedBody,
+      entry.resolved.definition,
+      entry.resolved.definitionHtml,
+    );
+    resolvedWrap.appendChild(resolvedBody);
+
+    container.appendChild(resolvedWrap);
+  }
 };
 
 const getLegalTooltipText = (element) => {
@@ -115,6 +203,11 @@ const getLegalTooltipText = (element) => {
   const preview = element.getAttribute('data-preview');
   if (preview && preview.trim()) {
     text = preview.trim();
+  } else if (element.matches && element.matches('.defined-term')) {
+    const entry = getDefinitionEntry(element);
+    if (!entry) return '';
+    const head = [entry.term, entry.source].filter(Boolean).join(' — ');
+    text = [head, entry.definition].filter(Boolean).join('\n\n').trim();
   } else if (element.matches && element.matches('.internal-article-link, .ref')) {
     text = getReferencePreview(element);
   } else {
@@ -312,14 +405,22 @@ const showLegalTooltip = (target) => {
     legalTooltipHideTimer = null;
   }
 
-  const text = getLegalTooltipText(target);
-  if (!text) {
-    hideLegalTooltipImmediate();
-    return;
-  }
+  const defEntry = target.matches && target.matches('.defined-term')
+    ? getDefinitionEntry(target)
+    : null;
 
-  legalTooltipTarget = target;
-  legalTooltipContent.textContent = text;
+  if (defEntry) {
+    legalTooltipTarget = target;
+    renderDefinitionTooltipContent(legalTooltipContent, defEntry);
+  } else {
+    const text = getLegalTooltipText(target);
+    if (!text) {
+      hideLegalTooltipImmediate();
+      return;
+    }
+    legalTooltipTarget = target;
+    legalTooltipContent.textContent = text;
+  }
   legalTooltipContent.scrollTop = 0;
 
   legalTooltipElement.style.visibility = 'hidden';
@@ -335,6 +436,17 @@ const showLegalTooltip = (target) => {
 const handleLegalTooltipMouseOver = (event) => {
   const target = getClosestLegalTooltipTarget(event.target);
   if (!target) {
+    return;
+  }
+  if (
+    target === legalTooltipTarget
+    && legalTooltipElement
+    && legalTooltipElement.classList.contains('is-visible')
+  ) {
+    if (legalTooltipHideTimer) {
+      clearTimeout(legalTooltipHideTimer);
+      legalTooltipHideTimer = null;
+    }
     return;
   }
   showLegalTooltip(target);
@@ -587,7 +699,145 @@ const highlightParagraph = (paragraphId, options = {}) => {
   return true;
 };
 
-const createParagraphElement = (paragraphData, article) => {
+const escapeRegExp = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+const getDefinitionMatcher = (actId) => {
+  if (!actId) return null;
+  if (compiledDefinitionMatchers.has(actId)) {
+    return compiledDefinitionMatchers.get(actId);
+  }
+
+  const actDefs = definitionsByActId[actId];
+  if (!actDefs || !Array.isArray(actDefs.entries) || !actDefs.entries.length) {
+    compiledDefinitionMatchers.set(actId, null);
+    return null;
+  }
+
+  const exactForms = new Map();
+  const foldedForms = new Map();
+  const uniqueForms = new Map();
+
+  actDefs.entries.forEach((entry, idx) => {
+    const forms = Array.isArray(entry.forms) && entry.forms.length ? entry.forms : [entry.term];
+    forms.forEach((rawForm) => {
+      const form = `${rawForm || ''}`.replace(/\s+/g, ' ').trim();
+      if (!form) return;
+      if (entry.caseSensitive) {
+        if (!exactForms.has(form)) exactForms.set(form, idx);
+      } else {
+        const folded = form.toLowerCase();
+        if (!foldedForms.has(folded)) foldedForms.set(folded, idx);
+      }
+      const key = form.toLowerCase();
+      if (!uniqueForms.has(key)) {
+        uniqueForms.set(key, form);
+      }
+    });
+  });
+
+  const sortedForms = Array.from(uniqueForms.values()).sort((a, b) => b.length - a.length);
+  if (!sortedForms.length) {
+    compiledDefinitionMatchers.set(actId, null);
+    return null;
+  }
+
+  const alternation = sortedForms
+    .map((form) => escapeRegExp(form).replace(/\s+/g, '\\s+'))
+    .join('|');
+
+  let regex = null;
+  try {
+    regex = new RegExp(`(?<![\\p{L}\\p{N}-])(?:${alternation})(?![\\p{L}\\p{N}-])`, 'giu');
+  } catch (error) {
+    compiledDefinitionMatchers.set(actId, null);
+    return null;
+  }
+
+  const matcher = {
+    definitionArticleIds: new Set(actDefs.definitionArticleIds || []),
+    exactForms,
+    foldedForms,
+    regex,
+  };
+  compiledDefinitionMatchers.set(actId, matcher);
+  return matcher;
+};
+
+const annotateTermsInNode = (node, actId, matcher) => {
+  if (!node || node.nodeType === Node.COMMENT_NODE) return;
+
+  if (node.nodeType === Node.TEXT_NODE) {
+    const text = node.nodeValue;
+    if (!text || !text.trim()) return;
+
+    matcher.regex.lastIndex = 0;
+    let m;
+    let lastIndex = 0;
+    let frag = null;
+
+    while ((m = matcher.regex.exec(text)) !== null) {
+      const matched = m[0];
+      if (!matched) break;
+      const normalised = matched.replace(/\s+/g, ' ');
+      let entryIdx = matcher.exactForms.get(normalised);
+      if (entryIdx === undefined) {
+        entryIdx = matcher.foldedForms.get(normalised.toLowerCase());
+      }
+      if (entryIdx === undefined) {
+        continue;
+      }
+
+      if (!frag) {
+        frag = document.createDocumentFragment();
+      }
+      if (m.index > lastIndex) {
+        frag.appendChild(document.createTextNode(text.slice(lastIndex, m.index)));
+      }
+      const span = document.createElement('span');
+      span.className = 'defined-term';
+      span.tabIndex = 0;
+      span.dataset.actId = actId;
+      span.dataset.defIdx = String(entryIdx);
+      span.textContent = matched;
+      frag.appendChild(span);
+      lastIndex = m.index + matched.length;
+    }
+
+    if (frag && node.parentNode) {
+      if (lastIndex < text.length) {
+        frag.appendChild(document.createTextNode(text.slice(lastIndex)));
+      }
+      node.parentNode.replaceChild(frag, node);
+    }
+    return;
+  }
+
+  if (node.nodeType === Node.ELEMENT_NODE) {
+    const tag = node.tagName.toLowerCase();
+    if (
+      tag === 'a'
+      || tag === 'mark'
+      || tag === 'button'
+      || tag === 'script'
+      || tag === 'style'
+      || node.classList.contains('paragraph-tools')
+      || node.classList.contains('defined-term')
+    ) {
+      return;
+    }
+    Array.from(node.childNodes).forEach((child) => annotateTermsInNode(child, actId, matcher));
+  }
+};
+
+const annotateDefinedTermsInElement = (element, actId, articleId = null) => {
+  if (!element || !actId) return;
+  const matcher = getDefinitionMatcher(actId);
+  if (!matcher) return;
+  if (articleId && matcher.definitionArticleIds.has(articleId)) return;
+  annotateTermsInNode(element, actId, matcher);
+};
+
+const createParagraphElement = (paragraphData, article, actId = null) => {
   if (!paragraphData) {
     return null;
   }
@@ -612,6 +862,9 @@ const createParagraphElement = (paragraphData, article) => {
   if (typeof paragraphData === 'object' && paragraphData.class) {
     paragraph.classList.add(paragraphData.class);
   }
+
+  const resolvedActId = actId || article?._actId || getCurrentActId();
+  annotateDefinedTermsInElement(paragraph, resolvedActId, article?.id || null);
 
   attachParagraphTools(paragraph, article, paragraphData);
 
@@ -947,7 +1200,7 @@ const renderAct = (act) => {
       fragment.appendChild(h);
 
       (article.paragraphs || []).forEach((p) => {
-        const paragraphElement = createParagraphElement(p, article);
+        const paragraphElement = createParagraphElement(p, article, act.id);
         if (paragraphElement) {
           fragment.appendChild(paragraphElement);
         }
@@ -955,7 +1208,7 @@ const renderAct = (act) => {
     });
   } else if (Array.isArray(act.paragraphs)) {
     (act.paragraphs || []).forEach((p) => {
-      const paragraphElement = createParagraphElement(p, act);
+      const paragraphElement = createParagraphElement(p, act, act.id);
       if (paragraphElement) {
         fragment.appendChild(paragraphElement);
       }
@@ -1629,6 +1882,10 @@ const handleInternalLinkClick = (event) => {
     return;
   }
 
+  if (legalTooltipElement && legalTooltipElement.contains(link)) {
+    hideLegalTooltipImmediate();
+  }
+
   // Cross-act reference: resolve the id to a hosted act, else fall through
   // and let the anchor's external href open in a new tab.
   const refId = refIdOf(link);
@@ -1873,6 +2130,14 @@ const loadLegalEntityApplicability = async () => {
   return res.json();
 };
 
+const loadDefinitions = async () => {
+  const res = await fetch('data/definitions.json', { cache: 'no-store' });
+  if (!res.ok) {
+    throw new Error(`Failed to load definitions: ${res.status}`);
+  }
+  return res.json();
+};
+
 // Load each act and bundle referenced by the registry. Returns { acts, bundles }.
 const loadAllData = async () => {
   const registry = await loadRegistry();
@@ -1887,6 +2152,14 @@ const loadAllData = async () => {
     };
   } catch (error) {
     console.warn('Legal entity applicability is unavailable:', error);
+  }
+
+  definitionsByActId = {};
+  compiledDefinitionMatchers.clear();
+  try {
+    definitionsByActId = (await loadDefinitions()) || {};
+  } catch (error) {
+    console.warn('Term definitions are unavailable:', error);
   }
 
   // Scheme-qualified id -> app act id: the runtime bridge for cross-act references.
@@ -2331,8 +2604,6 @@ const getBundleHeadingText = (bundle) => (bundle?.title || bundle?.id || '').tri
 
 
 // --- Search highlighting helpers ---
-const escapeRegExp = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-
 const removeExistingHighlights = (container) => {
   if (!container) return;
   const marks = container.querySelectorAll('mark.search-hit');
