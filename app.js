@@ -30,6 +30,52 @@ const stickyContextActionsElement = document.getElementById('stickyContextAction
 const articleHeaderElement = document.getElementById('articleHeader');
 const scrollTopButton = document.getElementById('scrollTopButton');
 const copyToastElement = document.getElementById('copyToast');
+const searchBarElement = document.querySelector('.search-bar');
+const mobileNavToggleButton = document.getElementById('mobileNavToggle');
+const mobileDrawerBackdrop = document.getElementById('mobileDrawerBackdrop');
+const mobileDrawerCloseButton = document.getElementById('mobileDrawerClose');
+
+const MOBILE_DRAWER_BREAKPOINT = 1080;
+let isMobileDrawerOpen = false;
+let activeTouchParagraph = null;
+
+const isMobileDrawerViewport = () => window.innerWidth <= MOBILE_DRAWER_BREAKPOINT;
+
+const syncTopbarHeightVar = () => {
+  if (!searchBarElement) return 56;
+  const h = Math.round(searchBarElement.getBoundingClientRect().height) || 56;
+  document.documentElement.style.setProperty('--topbar-height', `${h}px`);
+  return h;
+};
+
+const setMobileDrawerOpen = (open) => {
+  const nextState = Boolean(open) && isMobileDrawerViewport();
+  isMobileDrawerOpen = nextState;
+  if (sidePanel) {
+    sidePanel.classList.toggle('is-drawer-open', nextState);
+  }
+  if (mobileDrawerBackdrop) {
+    mobileDrawerBackdrop.hidden = !nextState;
+  }
+  if (mobileNavToggleButton) {
+    mobileNavToggleButton.setAttribute('aria-expanded', String(nextState));
+  }
+  document.body.classList.toggle('has-open-drawer', nextState);
+};
+
+const closeMobileDrawer = () => setMobileDrawerOpen(false);
+const toggleMobileDrawer = () => setMobileDrawerOpen(!isMobileDrawerOpen);
+
+const setTouchSelectedParagraph = (paragraphEl) => {
+  if (activeTouchParagraph === paragraphEl) return;
+  if (activeTouchParagraph) {
+    activeTouchParagraph.classList.remove('is-touch-selected');
+  }
+  activeTouchParagraph = paragraphEl || null;
+  if (activeTouchParagraph) {
+    activeTouchParagraph.classList.add('is-touch-selected');
+  }
+};
 
 let allArticles = [];
 let visibleArticles = [];
@@ -759,6 +805,35 @@ const initialiseLegalTooltips = () => {
   document.addEventListener('mouseout', handleLegalTooltipMouseOut);
   document.addEventListener('focusin', handleLegalTooltipFocusIn);
   document.addEventListener('focusout', handleLegalTooltipFocusOut);
+  document.addEventListener('click', (event) => {
+    const target = getClosestLegalTooltipTarget(event.target);
+    // Tapping a non-navigating defined term toggles/shows its tooltip cleanly on touchscreens
+    if (target && target.matches && target.matches('.defined-term')) {
+      if (
+        legalTooltipElement
+        && legalTooltipElement.classList.contains('is-visible')
+        && legalTooltipTarget === target
+        && event.detail > 0
+        && window.matchMedia
+        && window.matchMedia('(hover: none)').matches
+      ) {
+        hideLegalTooltipImmediate();
+      } else {
+        showLegalTooltip(target);
+      }
+      return;
+    }
+
+    // Tapping anywhere outside both the tooltip and a tooltip target dismisses an open tooltip
+    if (
+      legalTooltipElement
+      && legalTooltipElement.classList.contains('is-visible')
+      && !legalTooltipElement.contains(event.target)
+      && !target
+    ) {
+      hideLegalTooltipImmediate();
+    }
+  });
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') {
       hideLegalTooltipImmediate();
@@ -1434,8 +1509,11 @@ const teardownScrollSpy = () => {
 
 const updateStickyContextBar = () => {
   if (!stickyContextBarElement || !articleHeaderElement) return;
+  const topbarBottom = searchBarElement
+    ? (Math.round(searchBarElement.getBoundingClientRect().height) || 56)
+    : 56;
   const headerRect = articleHeaderElement.getBoundingClientRect();
-  const shouldShow = headerRect.bottom < 56 && Boolean(currentSidebarSelectionKey);
+  const shouldShow = headerRect.bottom < topbarBottom && Boolean(currentSidebarSelectionKey);
 
   stickyContextBarElement.hidden = !shouldShow;
   stickyContextBarElement.setAttribute('aria-hidden', String(!shouldShow));
@@ -1443,6 +1521,18 @@ const updateStickyContextBar = () => {
 
   stickyContextTrailElement.innerHTML = '';
   stickyContextActionsElement.innerHTML = '';
+
+  if (isMobileDrawerViewport()) {
+    const browseBtn = document.createElement('button');
+    browseBtn.type = 'button';
+    browseBtn.className = 'sticky-context-btn sticky-context-browse';
+    browseBtn.textContent = 'Articles';
+    browseBtn.setAttribute('aria-label', 'Open article navigation');
+    browseBtn.addEventListener('click', () => {
+      setMobileDrawerOpen(true);
+    });
+    stickyContextActionsElement.appendChild(browseBtn);
+  }
 
   const activeActId = getCurrentActId();
   const activeAct = activeActId ? allActs.find((a) => a.id === activeActId) : null;
@@ -2050,6 +2140,9 @@ const renderSidebarList = (items = []) => {
       renderArticleList();
       handleRoute(`act:${act.id}`);
       updateLocationHash(`act:${act.id}`);
+      if (!hasArticles) {
+        closeMobileDrawer();
+      }
     });
 
     actItem.appendChild(actButton);
@@ -2244,6 +2337,9 @@ const renderSidebarList = (items = []) => {
       renderArticleList();
       handleRoute(`act:${actId}`);
       updateLocationHash(`act:${actId}`);
+      if (!Array.isArray(item.articles) || !item.articles.length) {
+        closeMobileDrawer();
+      }
     });
 
     listItem.appendChild(button);
@@ -2331,6 +2427,8 @@ const renderSidebarList = (items = []) => {
 };
 
 const selectArticle = (articleId, options = {}) => {
+  closeMobileDrawer();
+  setTouchSelectedParagraph(null);
   if (!articleId) {
     currentArticleId = null;
     currentArticleSelectionKey = null;
@@ -2971,6 +3069,9 @@ const applyFilter = (query) => {
   if (normalisedQuery !== lastSearchQuery) {
     // A new/changed query starts fresh with every matching act expanded.
     searchCollapsedActIds = new Set();
+    if (normalisedQuery && isMobileDrawerViewport() && document.activeElement === searchInput) {
+      setMobileDrawerOpen(true);
+    }
   }
   lastSearchQuery = normalisedQuery;
 
@@ -2983,6 +3084,7 @@ const applyFilter = (query) => {
 
   renderTagFilterUI();
   renderArticleList();
+  requestAnimationFrame(syncTopbarHeightVar);
 
   if (!visibleSidebarItems.length) {
     currentArticleId = null;
@@ -3397,7 +3499,42 @@ if (tagFilterButton) {
   });
 }
 
+if (mobileNavToggleButton) {
+  mobileNavToggleButton.addEventListener('click', (event) => {
+    event.stopPropagation();
+    closeTagPopover();
+    toggleMobileDrawer();
+  });
+}
+
+if (mobileDrawerBackdrop) {
+  mobileDrawerBackdrop.addEventListener('click', () => {
+    closeMobileDrawer();
+  });
+}
+
+if (mobileDrawerCloseButton) {
+  mobileDrawerCloseButton.addEventListener('click', () => {
+    closeMobileDrawer();
+  });
+}
+
 document.addEventListener('click', (event) => {
+  // Tap-to-reveal paragraph copy tools on touch / narrow viewports without interfering with links or defined terms
+  const interactiveHit = event.target && typeof event.target.closest === 'function'
+    ? event.target.closest('a, button, .defined-term, .paragraph-tools')
+    : null;
+  const tappedParagraph = !interactiveHit && event.target && typeof event.target.closest === 'function'
+    ? event.target.closest('.article-paragraph.has-paragraph-tools')
+    : null;
+  if (tappedParagraph && isMobileDrawerViewport()) {
+    setTouchSelectedParagraph(
+      activeTouchParagraph === tappedParagraph ? null : tappedParagraph,
+    );
+  } else if (!event.target?.closest?.('.paragraph-tools')) {
+    setTouchSelectedParagraph(null);
+  }
+
   if (!tagFilterPopover || tagFilterPopover.hidden) return;
   if (
     tagFilterPopover.contains(event.target)
@@ -3413,6 +3550,11 @@ const isEditableElement = (el) => Boolean(
 );
 
 document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && isMobileDrawerOpen) {
+    closeMobileDrawer();
+    if (mobileNavToggleButton) mobileNavToggleButton.focus();
+    return;
+  }
   if (event.key === 'Escape' && tagFilterPopover && !tagFilterPopover.hidden) {
     closeTagPopover();
     if (tagFilterButton) tagFilterButton.focus();
@@ -3492,6 +3634,22 @@ window.addEventListener('hashchange', () => {
 if ('scrollRestoration' in history) {
   history.scrollRestoration = 'manual';
 }
+
+window.addEventListener('resize', () => {
+  syncTopbarHeightVar();
+  if (!isMobileDrawerViewport() && isMobileDrawerOpen) {
+    closeMobileDrawer();
+  }
+  updateStickyContextBar();
+});
+
+if (typeof ResizeObserver === 'function' && searchBarElement) {
+  const topbarObserver = new ResizeObserver(() => {
+    syncTopbarHeightVar();
+  });
+  topbarObserver.observe(searchBarElement);
+}
+syncTopbarHeightVar();
 
 document.addEventListener('DOMContentLoaded', fetchArticles);
 
