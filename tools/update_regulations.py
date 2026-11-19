@@ -73,6 +73,7 @@ def load_module(name: str, path: Path):
     if spec is None or spec.loader is None:
         raise ImportError(f"cannot load {path}")
     module = importlib.util.module_from_spec(spec)
+    sys.modules[name] = module
     spec.loader.exec_module(module)
     return module
 
@@ -296,25 +297,65 @@ def selected_entries(index: dict, only: Iterable[str]) -> list[dict]:
     return selected
 
 
+def extract_doc_articles(document) -> list[dict]:
+    if isinstance(document, list):
+        return document
+    if isinstance(document, dict) and isinstance(document.get("articles"), list):
+        return document["articles"]
+    return []
+
+
+def format_diff_stats(old_articles: list[dict], new_articles: list[dict]) -> str:
+    old_n, new_n = len(old_articles), len(new_articles)
+    old_p = sum(len(a.get("paragraphs") or []) for a in old_articles)
+    new_p = sum(len(a.get("paragraphs") or []) for a in new_articles)
+    art_delta = new_n - old_n
+    para_delta = new_p - old_p
+    art_part = f"articles {old_n}->{new_n} ({art_delta:+d})" if art_delta else f"articles {new_n}"
+    para_part = f"paras {old_p}->{new_p} ({para_delta:+d})" if para_delta else f"paras {new_p}"
+    return f"{art_part}, {para_part}"
+
+
 @logged
-def refresh_entry(entry: dict, fetcher: Fetch, timeout: int) -> tuple[str, object | None]:
+def refresh_entry(
+    entry: dict, fetcher: Fetch, timeout: int, force: bool = False
+) -> tuple[str, object | None, str]:
     urls, parser_name, encoding = update_config(entry)
     if not urls:
-        return "unsupported", None
+        return "unsupported", None, ""
+
+    formatter = load_module("update_formatting", PARSERS_DIR / "formatting.py")
+    path = APP / entry["path"]
+    current = read_json(path)
+    old_articles = extract_doc_articles(current)
 
     errors = []
+    rejection_reasons: list[str] = []
     for url in urls:
         try:
             content = fetcher(url, timeout)
             parsed = parse_pdf_document(content, parser_name) if parser_name == "bsi_c3a" else None
             articles = parsed["articles"] if parsed else parse_articles(content, parser_name, encoding)
             articles = linked_articles(articles, entry["id"])
-            path = APP / entry["path"]
-            current = read_json(path)
+
+            report = formatter.validate_parsed_articles(articles, old_articles)
+            if not report.ok and not force:
+                reason_text = "; ".join(report.reasons)
+                LOGGER.warning(
+                    "Quality gate rejected source for %s (%s): %s",
+                    entry.get("id", "<unknown>"),
+                    url,
+                    reason_text,
+                )
+                rejection_reasons.append(f"{url}: {reason_text}")
+                continue
+
             updated = replace_articles(current, articles)
             if parsed:
                 updated["meta"] = {**current.get("meta", {}), **parsed["meta"]}
-            return ("unchanged" if updated == current else "updated"), updated
+            status = "unchanged" if updated == current else "updated"
+            stats = format_diff_stats(old_articles, articles) if status == "updated" else ""
+            return status, updated, stats
         except Exception as exc:  # Continue to a fallback source and then the next act.
             LOGGER.warning(
                 "Source failed for %s: %s: %s",
@@ -323,6 +364,9 @@ def refresh_entry(entry: dict, fetcher: Fetch, timeout: int) -> tuple[str, objec
                 exc,
             )
             errors.append(f"{url}: {exc}")
+
+    if rejection_reasons:
+        return "rejected", None, "; ".join(rejection_reasons)
     raise RuntimeError("; ".join(errors))
 
 
@@ -343,6 +387,11 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     )
     parser.add_argument("only", nargs="*", help="Optional act ids or registry paths")
     parser.add_argument("--check", action="store_true", help="Report updates without writing files")
+    parser.add_argument(
+        "--force",
+        action="store_true",
+        help="Bypass the structural quality gate when applying intentional schema migrations.",
+    )
     parser.add_argument("--timeout", type=int, default=30, help="Download timeout in seconds")
     parser.add_argument("--index", type=Path, default=INDEX_PATH, help="Registry path")
     return parser.parse_args(argv)
@@ -354,18 +403,23 @@ def main(argv: list[str] | None = None) -> int:
     args = parse_args(argv)
     index = read_json(args.index)
     entries = selected_entries(index, args.only)
-    counts = {"updated": 0, "unchanged": 0, "unsupported": 0, "failed": 0}
+    counts = {"updated": 0, "unchanged": 0, "rejected": 0, "unsupported": 0, "failed": 0}
 
     for entry in entries:
         try:
-            result, payload = refresh_entry(entry, fetch_url, args.timeout)
+            result, payload, detail = refresh_entry(
+                entry, fetch_url, args.timeout, force=args.force
+            )
             counts[result] += 1
+            suffix = f" ({detail})" if detail else ""
             if result == "updated" and not args.check:
                 write_json(APP / entry["path"], payload)
-                LOGGER.info("Applied update to %s (%s)", entry["id"], entry["path"])
+                LOGGER.info("Applied update to %s (%s)%s", entry["id"], entry["path"], suffix)
+            elif result == "rejected":
+                LOGGER.error("Rejected update for %s: %s", entry["id"], detail)
             else:
-                LOGGER.info("%s: %s", entry["id"], result)
-            print(f"{entry['id']}: {result}")
+                LOGGER.info("%s: %s%s", entry["id"], result, suffix)
+            print(f"{entry['id']}: {result}{suffix}")
         except Exception as exc:
             counts["failed"] += 1
             LOGGER.exception("%s: failed", entry.get("id", "<unknown>"))
@@ -374,7 +428,7 @@ def main(argv: list[str] | None = None) -> int:
     summary = " ".join(f"{key}={value}" for key, value in counts.items())
     LOGGER.info(summary)
     print(summary)
-    if counts["failed"]:
+    if counts["failed"] or counts["rejected"]:
         LOGGER.debug("Completed main")
         return 1
     if args.check:

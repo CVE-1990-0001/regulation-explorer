@@ -122,7 +122,7 @@ def test_c3a_refresh_is_reproducible_from_saved_pdf():
         urls.append(url)
         return pdf
 
-    result, document = updater.refresh_entry(entry, fetch, 30)
+    result, document, _ = updater.refresh_entry(entry, fetch, 30)
     assert result == "unchanged"
     assert document["meta"]["version"] == "1.0"
     assert urls[0].endswith("?__blob=publicationFile")
@@ -132,7 +132,7 @@ def test_c3a_refresh_updates_version_even_if_criteria_are_unchanged(tmp_path, mo
     current = {
         "type": "act", "id": "act_de_bsi_c3a_2026", "title": "BSI C3A",
         "meta": {"version": "1.0", "releaseDate": "2026-04-27", "custom": "keep"},
-        "articles": [{"id": "art_1", "paragraphs": []}],
+        "articles": [{"id": "art_1", "paragraphs": [{"id": "art_1__1", "text": "Criterion", "class": ""}]}],
     }
     path = tmp_path / "c3a.json"
     updater.write_json(path, current)
@@ -145,11 +145,47 @@ def test_c3a_refresh_updates_version_even_if_criteria_are_unchanged(tmp_path, mo
         "id": current["id"], "path": str(path),
         "update": {"parser": "bsi_c3a", "url": "https://example.test/latest.pdf"},
     }
-    result, updated = updater.refresh_entry(entry, lambda *_: b"pdf", 30)
+    result, updated, _ = updater.refresh_entry(entry, lambda *_: b"pdf", 30)
     assert result == "updated"
     assert updated["meta"] == {**parsed["meta"], "custom": "keep"}
     assert updated["title"] == current["title"]
     assert updater.read_json(path) == current
+
+
+def test_quality_gate_rejects_collapsed_list_regression(tmp_path):
+    old_paras = [
+        {"id": "art_1__1", "text": "1. The following apply:", "class": ""},
+        *[
+            {"id": f"art_1__1_{chr(97 + i)}", "text": f"({chr(97 + i)}) item {i}", "class": "list-item-l1"}
+            for i in range(20)
+        ],
+    ]
+    current = {"type": "act", "id": "act_eu_test_2024_0001", "articles": [{"id": "art_1", "paragraphs": old_paras}]}
+    path = tmp_path / "act.json"
+    updater.write_json(path, current)
+
+    collapsed_html = """
+    <div class="eli-subdivision" id="art_1">
+      <p class="oj-ti-art">Article 1</p>
+      <p class="oj-normal">1. Flattened single paragraph losing all twenty list items.</p>
+    </div>
+    """
+    entry = {
+        "id": "act_eu_test_2024_0001",
+        "path": str(path),
+        "update": {"url": "https://example.test/act.html", "parser": "oj"},
+    }
+    result, payload, detail = updater.refresh_entry(entry, lambda *_: collapsed_html.encode(), 30)
+    assert result == "rejected"
+    assert payload is None
+    assert "list-item structure collapsed" in detail
+
+    # --force overrides the gate when explicitly requested
+    forced_result, forced_payload, _ = updater.refresh_entry(
+        entry, lambda *_: collapsed_html.encode(), 30, force=True
+    )
+    assert forced_result == "updated"
+    assert forced_payload is not None
 
 
 def test_replace_articles_preserves_act_metadata():

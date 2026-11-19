@@ -6,13 +6,23 @@ Python port of the former parser-oj.js (cheerio -> BeautifulSoup/lxml).
 Usage: python3 parser_oj.py <input.html> [output.json]
 """
 import copy
+import importlib.util
 import json
 import os
 import re
 import sys
 import warnings
 
-from bs4 import BeautifulSoup, Tag, XMLParsedAsHTMLWarning
+from bs4 import BeautifulSoup, NavigableString, Tag, XMLParsedAsHTMLWarning
+
+_FMT_SPEC = importlib.util.spec_from_file_location(
+    "parsers_formatting", os.path.join(os.path.dirname(os.path.abspath(__file__)), "formatting.py")
+)
+_fmt = sys.modules.get("parsers_formatting")
+if _fmt is None:
+    _fmt = importlib.util.module_from_spec(_FMT_SPEC)
+    sys.modules["parsers_formatting"] = _fmt
+    _FMT_SPEC.loader.exec_module(_fmt)
 
 
 def normalise_whitespace(value):
@@ -207,22 +217,162 @@ def paragraph_class_from_node(node, paragraph_text):
     return ""
 
 
-def extract_paragraph_text(node):
+def _clean_node_text(node):
     clone = copy.copy(node)
-
     for modref in clone.select(".modref"):
         modref.decompose()
+    return normalise_whitespace(clone.get_text(" "))
 
-    # For tables, extract text from all oj-normal paragraphs
-    if node.name == "table":
-        texts = [
-            normalise_whitespace(p.get_text())
-            for p in clone.select("p.oj-normal")
-        ]
-        texts = [t for t in texts if t]
-        return " ".join(texts)
 
-    return normalise_whitespace(clone.get_text())
+def _direct_table_rows(table_tag):
+    rows = table_tag.find_all("tr", recursive=False)
+    for section_name in ("thead", "tbody", "tfoot"):
+        for section in table_tag.find_all(section_name, recursive=False):
+            rows.extend(section.find_all("tr", recursive=False))
+    return rows
+
+
+_OJ_LIST_LABEL_RE = re.compile(
+    r"^[‘'“\"„]?(?:\([0-9a-z]+\)|[0-9]+(?:\.[0-9]+)*[a-z]?\.|[a-z]\)|[\-\u2013\u2014])$",
+    re.I,
+)
+
+
+def _classify_oj_table(table_tag):
+    """Return ``('list', rows_data)`` for 2-col/indent+2-col list tables, else ``('data', None)``."""
+    classes = class_of(table_tag)
+    if re.search(r"\boj-table\b", classes):
+        return "data", None
+
+    rows = _direct_table_rows(table_tag)
+    if not rows:
+        return "empty", None
+
+    parsed_rows = []
+    for tr in rows:
+        cells = tr.find_all(["td", "th"], recursive=False)
+        if not cells:
+            continue
+        # Drop empty leading spacer cell used in indented OJ tables: <td></td><td>(a)</td><td>...</td>
+        idx = 0
+        while idx < len(cells) - 2 and not _clean_node_text(cells[idx]):
+            idx += 1
+        effective = cells[idx:]
+        if len(effective) != 2:
+            return "data", None
+        label_txt = _clean_node_text(effective[0])
+        if label_txt and not _OJ_LIST_LABEL_RE.match(label_txt) and len(label_txt) > 12:
+            return "data", None
+        parsed_rows.append((label_txt, effective[1]))
+
+    if not parsed_rows:
+        return "empty", None
+    return "list", parsed_rows
+
+
+def _emit_oj_list_cell(label_txt, body_td, emitter, level):
+    text_buf: list[str] = []
+    emitted_head = False
+
+    def flush_buf():
+        nonlocal emitted_head
+        joined = normalise_whitespace(" ".join(t for t in text_buf if t))
+        text_buf.clear()
+        if not joined:
+            return
+        if not emitted_head:
+            emitter.add(joined, level=level, label=label_txt)
+            emitted_head = True
+        else:
+            emitter.add(joined, level=level)
+
+    for child in body_td.children:
+        if isinstance(child, NavigableString):
+            s = normalise_whitespace(str(child))
+            if s:
+                text_buf.append(s)
+            continue
+        if not isinstance(child, Tag) or re.search(r"\bmodref\b", class_of(child)):
+            continue
+
+        if child.name == "table":
+            kind, sub_rows = _classify_oj_table(child)
+            if kind == "list":
+                if not emitted_head and label_txt and not any(text_buf):
+                    emitter.add("", level=level, label=label_txt)
+                    emitted_head = True
+                else:
+                    flush_buf()
+                for sub_label, sub_td in sub_rows:
+                    _emit_oj_list_cell(sub_label, sub_td, emitter, level + 1)
+            elif kind == "data":
+                flush_buf()
+                tbl_html = _fmt.sanitize_eurlex_table(child)
+                if tbl_html:
+                    emitter.add("table", level=0, is_subparagraph=True, prelinked_html=tbl_html)
+        elif child.find("table"):
+            flush_buf()
+            _emit_oj_container(child, emitter, level_base=level)
+            emitted_head = True
+        else:
+            txt = _clean_node_text(child)
+            if txt:
+                if emitted_head:
+                    emitter.add(txt, level=level)
+                else:
+                    text_buf.append(txt)
+                    if child.name in {"p", "div"}:
+                        flush_buf()
+
+    flush_buf()
+    if not emitted_head and label_txt:
+        emitter.add("", level=level, label=label_txt)
+
+
+def _emit_oj_container(container, emitter, level_base=0):
+    seen_primary = False
+    for child in container.children:
+        if not isinstance(child, Tag):
+            continue
+        cls = class_of(child)
+        if re.search(r"\bmodref\b|\beli-title\b", cls):
+            continue
+
+        if child.name == "table":
+            kind, rows = _classify_oj_table(child)
+            if kind == "list":
+                for lbl, td in rows:
+                    _emit_oj_list_cell(lbl, td, emitter, level=level_base + 1)
+                seen_primary = True
+            elif kind == "data":
+                tbl_html = _fmt.sanitize_eurlex_table(child)
+                if tbl_html:
+                    emitter.add("table", level=0, is_subparagraph=True, prelinked_html=tbl_html)
+                    seen_primary = True
+        elif child.name == "div":
+            _emit_oj_container(child, emitter, level_base=level_base)
+            seen_primary = True
+        elif child.name == "p":
+            txt = _clean_node_text(child)
+            if not txt:
+                continue
+            is_numbered = bool(re.match(r"^\d+[a-z]?\.\s+", txt))
+            emitter.add(
+                txt,
+                level=level_base,
+                is_subparagraph=(level_base == 0 and seen_primary and not is_numbered),
+            )
+            seen_primary = True
+
+
+def _is_top_level_article_div(div_tag):
+    parent = div_tag.parent
+    while isinstance(parent, Tag):
+        pid = parent.get("id") or ""
+        if parent.name == "div" and pid.startswith("art_"):
+            return False
+        parent = parent.parent
+    return True
 
 
 def parse(html):
@@ -231,59 +381,72 @@ def parse(html):
         soup = BeautifulSoup(html, "lxml")
     parser = OjParser(soup)
 
-    article_title_nodes = soup.select(
-        'div.eli-subdivision[id^="art_"] > p.oj-ti-art'
-    )
+    candidate_divs = [
+        d for d in soup.select('div.eli-subdivision[id^="art_"]')
+        if _is_top_level_article_div(d)
+    ]
+    article_pairs = []
+    for div in candidate_divs:
+        title_node = div.find("p", class_="oj-ti-art", recursive=False)
+        if title_node is None:
+            continue
+        title_text = normalise_whitespace(title_node.get_text())
+        if title_text.startswith(("‘", "'", "“", '"')):
+            continue
+        article_pairs.append((div, title_node, title_text))
+
     articles = []
 
     # First pass: register article numbers
-    for index, title_node in enumerate(article_title_nodes):
-        title_text = normalise_whitespace(title_node.get_text())
+    for index, (_, _, title_text) in enumerate(article_pairs):
         article_id = parser.get_article_id_from_title(title_text, index)
         parser.register_article_number(title_text, article_id)
 
-    # Second pass: extract articles with their content
-    for index, title_node in enumerate(article_title_nodes):
-        title_text = normalise_whitespace(title_node.get_text())
+    # Second pass: extract articles with their full hierarchical content
+    for index, (art_div, title_node, title_text) in enumerate(article_pairs):
         article_id = parser.get_article_id_from_title(title_text, index)
-
         heading = ""
-        paragraphs = []
-        paragraph_counter = 0
-
-        next_article_node = (
-            article_title_nodes[index + 1] if index + 1 < len(article_title_nodes) else None
+        emitter = _fmt.ParagraphEmitter(
+            article_id, linkify_fn=parser.link_internal_article_references
         )
 
+        has_prior = False
         for current in title_node.next_siblings:
-            if current is next_article_node:
-                break
+            if not isinstance(current, Tag):
+                continue
+            class_name = class_of(current)
+            if not heading and re.search(r"\beli-title\b", class_name):
+                heading = _fmt.clean_heading_text(_clean_node_text(current))
+                continue
+            if re.search(r"\bmodref\b", class_name):
+                continue
 
-            if isinstance(current, Tag):
-                class_name = class_of(current)
+            before = len(emitter.paragraphs)
+            if current.name == "table":
+                kind, rows = _classify_oj_table(current)
+                if kind == "list":
+                    for lbl, td in rows:
+                        _emit_oj_list_cell(lbl, td, emitter, level=1)
+                elif kind == "data":
+                    tbl_html = _fmt.sanitize_eurlex_table(current)
+                    if tbl_html:
+                        emitter.add("table", level=0, is_subparagraph=True, prelinked_html=tbl_html)
+            elif current.name == "div":
+                _emit_oj_container(current, emitter, level_base=0)
+            elif current.name == "p" and should_capture_paragraph_node(current):
+                txt = _clean_node_text(current)
+                if txt:
+                    is_numbered = bool(re.match(r"^\d+[a-z]?\.\s+", txt))
+                    emitter.add(txt, level=0, is_subparagraph=(has_prior and not is_numbered))
+            if len(emitter.paragraphs) > before:
+                has_prior = True
 
-                # Capture heading from eli-title div
-                if not heading and re.search(r"\beli-title\b", class_name):
-                    heading = normalise_whitespace(current.get_text())
-                # Capture paragraphs from oj-normal and similar
-                elif should_capture_paragraph_node(current):
-                    text = extract_paragraph_text(current)
-                    if text:
-                        paragraph_counter += 1
-                        paragraphs.append({
-                            "id": f"{article_id}__{paragraph_counter}",
-                            "text": parser.link_internal_article_references(text),
-                            "class": paragraph_class_from_node(
-                                current, normalise_whitespace(current.get_text())
-                            ),
-                        })
-
-        if paragraphs:
+        if emitter.paragraphs:
             articles.append({
                 "id": article_id,
                 "title": title_text or article_id,
                 "heading": heading,
-                "paragraphs": paragraphs,
+                "paragraphs": emitter.paragraphs,
             })
 
     return articles
