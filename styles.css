@@ -1506,6 +1506,13 @@ a.dossier-stat-link:hover {
   color: var(--text-muted);
 }
 
+.article-paragraph .list-item-marker.is-wide-marker {
+  position: static;
+  display: inline;
+  width: auto;
+  margin-right: 0.45rem;
+}
+
 .article-paragraph.subparagraph {
   padding-left: 0.85rem;
   border-left: 2px solid var(--border-subtle);

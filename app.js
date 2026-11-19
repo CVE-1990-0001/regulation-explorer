@@ -1022,6 +1022,9 @@ const wrapHangingListLabel = (paragraphElement) => {
   const labelSpan = document.createElement('span');
   labelSpan.className = 'list-item-marker';
   labelSpan.textContent = match[1];
+  if (match[1].length >= 6) {
+    labelSpan.classList.add('is-wide-marker');
+  }
 
   const remainder = (firstChild.nodeValue || '').slice(match[0].length);
   firstChild.nodeValue = remainder;
