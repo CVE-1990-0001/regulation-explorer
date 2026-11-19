@@ -323,7 +323,10 @@
         "third-party-risk"
       ],
       "update": {
-        "url": "https://www.gesetze-im-internet.de/wpig/BJNR099010021.html",
+        "url": [
+          "https://www.gesetze-im-internet.de/wpig/BJNR099010021.html",
+          "https://raw.githubusercontent.com/QuantLaw/gesetze-im-internet/data/data/items/wpig/BJNR099010021.xml"
+        ],
         "parser": "gesetze_im_internet",
         "encoding": "latin-1"
       }
