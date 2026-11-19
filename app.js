@@ -729,11 +729,17 @@ const showLegalTooltip = (target) => {
     legalTooltipTarget = target;
     legalTooltipContent.textContent = text;
   }
+  legalTooltipContent.classList.toggle('is-definition', Boolean(defEntry));
+  legalTooltipContent.classList.remove('is-scrollable');
   legalTooltipContent.scrollTop = 0;
 
   legalTooltipElement.style.visibility = 'hidden';
   legalTooltipElement.classList.add('is-visible');
   legalTooltipElement.setAttribute('aria-hidden', 'false');
+
+  // Only enable scrolling when content genuinely overflows (prevents 1px subpixel phantom scrollbars)
+  const needsScroll = legalTooltipContent.scrollHeight > legalTooltipContent.clientHeight + 2;
+  legalTooltipContent.classList.toggle('is-scrollable', needsScroll);
 
   // Force layout to ensure accurate measurements before positioning.
   positionLegalTooltip();
