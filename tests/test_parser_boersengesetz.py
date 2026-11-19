@@ -67,6 +67,29 @@ def test_html_keeps_two_letter_sections_and_annex_tables():
     assert "<td>Obergrenze:</td><td>100 000 Euro</td>" in annex[0]["text"]
 
 
+def test_xml_upper_case_lists_are_kept():
+    # The gesetze-im-internet XML writes list markup as <DL><DT><DD><LA>.
+    source = """<?xml version="1.0" encoding="UTF-8"?>
+    <dokumente><norm>
+      <metadaten><enbez>§ 2</enbez><titel>Begriffsbestimmungen</titel></metadaten>
+      <textdaten><text><Content>
+        <P>(2) Dienstleistungen sind <DL Type="arabic">
+          <DT>1.</DT><DD><LA>das Finanzkommissionsgeschäft,</LA></DD>
+          <DT>2.</DT><DD><LA>das Emissionsgeschäft.</LA></DD>
+        </DL>Weitere Regeln bleiben unberührt.</P>
+      </Content></text></textdaten>
+    </norm></dokumente>"""
+
+    paragraphs = parser.parse(source)[0]["paragraphs"]
+
+    assert [(p["id"], p["text"]) for p in paragraphs] == [
+        ("art_2__2", "(2) Dienstleistungen sind"),
+        ("art_2__2_1", "1. das Finanzkommissionsgeschäft,"),
+        ("art_2__2_2", "2. das Emissionsgeschäft."),
+        ("art_2__2_s2", "Weitere Regeln bleiben unberührt."),
+    ]
+
+
 def test_xml_annex_table_is_kept():
     source = """<?xml version="1.0" encoding="UTF-8"?>
     <dokumente><norm>

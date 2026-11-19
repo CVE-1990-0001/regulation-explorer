@@ -182,11 +182,13 @@ def linkify_text(raw_text, known_tokens):
 
 
 def _emit_boersg_dl(dl_tag, emitter, level):
-    dts = dl_tag.find_all("dt", recursive=False)
-    dds = dl_tag.find_all("dd", recursive=False)
+    # HTML is parsed lower-case; the gesetze-im-internet XML uses upper-case
+    # DT/DD/LA, and the XML parser is case-sensitive.
+    dts = dl_tag.find_all(["dt", "DT"], recursive=False)
+    dds = dl_tag.find_all(["dd", "DD"], recursive=False)
     for dt, dd in zip(dts, dds):
         lbl = normalise_whitespace(dt.get_text(" "))
-        la = dd.find("la", recursive=False) or dd
+        la = dd.find(["la", "LA"], recursive=False) or dd
         buf: list[str] = []
         emitted_head = False
 
