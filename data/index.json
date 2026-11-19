@@ -330,6 +330,63 @@
         "parser": "gesetze_im_internet",
         "encoding": "latin-1"
       }
+    },
+    {
+      "id": "act_de_wphg_1994",
+      "path": "regulations-data/wphg.json",
+      "label": "Wertpapierhandelsgesetz (WpHG)",
+      "heading": "German Securities Trading Act",
+      "jurisdiction": "DE",
+      "authId": "jurabk:WpHG",
+      "tags": [
+        "financial-markets"
+      ],
+      "update": {
+        "url": [
+          "https://www.gesetze-im-internet.de/wphg/BJNR174910994.html",
+          "https://raw.githubusercontent.com/QuantLaw/gesetze-im-internet/data/data/items/wphg/BJNR174910994.xml"
+        ],
+        "parser": "gesetze_im_internet",
+        "encoding": "latin-1"
+      }
+    },
+    {
+      "id": "act_de_kwg_1961",
+      "path": "regulations-data/kwg.json",
+      "label": "Kreditwesengesetz (KWG)",
+      "heading": "German Banking Act",
+      "jurisdiction": "DE",
+      "authId": "jurabk:KWG",
+      "tags": [
+        "financial-markets",
+        "third-party-risk"
+      ],
+      "update": {
+        "url": [
+          "https://www.gesetze-im-internet.de/kredwg/BJNR008810961.html",
+          "https://raw.githubusercontent.com/QuantLaw/gesetze-im-internet/data/data/items/kredwg/BJNR008810961.xml"
+        ],
+        "parser": "gesetze_im_internet",
+        "encoding": "latin-1"
+      }
+    },
+    {
+      "id": "act_de_marisk_2024_0006",
+      "path": "regulations-data/marisk.json",
+      "label": "MaRisk",
+      "heading": "Mindestanforderungen an das Risikomanagement (BaFin-Rundschreiben 06/2024 (BA))",
+      "jurisdiction": "DE",
+      "authId": "bafin:MaRisk",
+      "tags": [
+        "financial-markets",
+        "cybersecurity",
+        "third-party-risk",
+        "non-binding"
+      ],
+      "update": {
+        "url": "https://www.bafin.de/SharedDocs/Veroeffentlichungen/DE/Rundschreiben/2024/rs_06_2024_MaRisk_BA.html",
+        "parser": "marisk"
+      }
     }
   ],
   "bundles": [
