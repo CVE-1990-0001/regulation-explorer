@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
-"""Parse the German Boersengesetz (gesetze-im-internet) HTML into act-article JSON.
+"""Parse German federal law from gesetze-im-internet.de into act-article JSON.
 
+Originally written for the Boersengesetz; it handles any statute published as a
+single-page HTML (or the QuantLaw XML mirror), e.g. WpIG, WpHG and KWG.
 Python port of the former parser-boersengesetz.js (cheerio -> BeautifulSoup/lxml).
 
 Usage: python3 parser_boersengesetz.py <input.html> [output.json]
@@ -47,7 +49,14 @@ def extract_article_token(raw_label):
         re.sub(r"[\u00A7\uFFFD]", " ", normalise_whitespace(raw_label)),
     ).strip()
 
-    match = re.search(r"\b([0-9]+[a-z]?)\b", clean_label, re.I)
+    # Annexes ("Anhang I", "Anlage 2") get their own namespace so they never
+    # collide with the section of the same number.
+    annex = re.match(r"^(Anhang|Anlage)\s+([0-9]+[a-z]?|[IVXLC]+)\b", clean_label, re.I)
+    if annex:
+        return f"{annex.group(1).lower()}_{annex.group(2).lower()}"
+
+    # Section numbers may carry up to two letters, e.g. KWG "§ 53ca".
+    match = re.search(r"\b([0-9]+[a-z]{0,2})\b", clean_label, re.I)
     if not match:
         return None
     return match.group(1).lower()
@@ -143,7 +152,7 @@ def linkify_text(raw_text, known_tokens):
         if is_external_law_ref(m.string[m.end():]):
             return m.group(0)
         linked_nums = re.sub(
-            r"\b(\d+[a-z]?)\b",
+            r"\b(\d+[a-z]{0,2})\b",
             lambda tm: (
                 f'<a href="#art_{tm.group(1).lower()}" class="internal-article-link" '
                 f'rel="noopener">{tm.group(1)}</a>'
@@ -155,7 +164,7 @@ def linkify_text(raw_text, known_tokens):
         return "\u00a7\u00a7 " + linked_nums
 
     s = re.sub(
-        r"\u00a7\u00a7\s*(\d+[a-z]?(?:\s+(?:bis|und|oder|,)\s+\d+[a-z]?)*)",
+        r"\u00a7\u00a7\s*(\d+[a-z]{0,2}(?:\s+(?:bis|und|oder|,)\s+\d+[a-z]{0,2})*)",
         repl_plural,
         s,
     )
@@ -167,17 +176,19 @@ def linkify_text(raw_text, known_tokens):
             return m.group(0)
         return wrap_internal_link(m.group(0), num, known_tokens)
 
-    s = re.sub(r"\u00a7\s*(\d+[a-z]?)", repl_single, s)
+    s = re.sub(r"\u00a7\s*(\d+[a-z]{0,2})", repl_single, s)
 
     return s
 
 
 def _emit_boersg_dl(dl_tag, emitter, level):
-    dts = dl_tag.find_all("dt", recursive=False)
-    dds = dl_tag.find_all("dd", recursive=False)
+    # HTML is parsed lower-case; the gesetze-im-internet XML uses upper-case
+    # DT/DD/LA, and the XML parser is case-sensitive.
+    dts = dl_tag.find_all(["dt", "DT"], recursive=False)
+    dds = dl_tag.find_all(["dd", "DD"], recursive=False)
     for dt, dd in zip(dts, dds):
         lbl = normalise_whitespace(dt.get_text(" "))
-        la = dd.find("la", recursive=False) or dd
+        la = dd.find(["la", "LA"], recursive=False) or dd
         buf: list[str] = []
         emitted_head = False
 
@@ -207,7 +218,38 @@ def _emit_boersg_dl(dl_tag, emitter, level):
         flush()
 
 
+def _is_table_only(paragraph_node, table):
+    rest = "".join(
+        str(text) for text in paragraph_node.find_all(string=True)
+        if table not in text.parents
+    )
+    return not normalise_whitespace(rest)
+
+
+def _table_html(table):
+    # HTML uses tr/td; the gesetze-im-internet XML uses row/entry (CALS tables).
+    rows = []
+    for row in table.find_all(["tr", "row"]):
+        cells = row.find_all(["td", "th", "entry"], recursive=False)
+        if cells:
+            rows.append("<tr>" + "".join(
+                f"<td>{escape_html(normalise_whitespace(cell.get_text(' ')))}</td>"
+                for cell in cells
+            ) + "</tr>")
+    if not rows:
+        return ""
+    return f'<div class="legal-table-wrap"><table class="legal-table">{"".join(rows)}</table></div>'
+
+
 def _emit_boersg_paragraph_node(paragraph_node, emitter):
+    table = paragraph_node.find(["table", "TABLE"])
+    if table is not None and _is_table_only(paragraph_node, table):
+        # Annex forms (e.g. KWG Anhang I) are tables; keep their row/column layout.
+        table_html = _table_html(table)
+        if table_html:
+            emitter.add("table", level=0, is_subparagraph=True, prelinked_html=table_html)
+        return
+
     nested_dls = paragraph_node.find_all(["DL", "dl"], recursive=False)
     if not nested_dls:
         raw_text = normalise_whitespace(paragraph_node.get_text(" "))

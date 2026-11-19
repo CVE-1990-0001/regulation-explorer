@@ -310,6 +310,79 @@
         "url": "https://www.recht.bund.de/bgbl/1/2025/301/regelungstext.pdf?__blob=publicationFile&v=2",
         "parser": "nis2_bsig"
       }
+    },
+    {
+      "id": "act_de_wpig_2021",
+      "path": "regulations-data/wpig.json",
+      "label": "Wertpapierinstitutsgesetz (WpIG)",
+      "heading": "German Investment Firm Act",
+      "jurisdiction": "DE",
+      "tags": [
+        "financial-markets",
+        "third-party-risk"
+      ],
+      "update": {
+        "url": [
+          "https://www.gesetze-im-internet.de/wpig/BJNR099010021.html",
+          "https://raw.githubusercontent.com/QuantLaw/gesetze-im-internet/data/data/items/wpig/BJNR099010021.xml"
+        ],
+        "parser": "gesetze_im_internet",
+        "encoding": "latin-1"
+      }
+    },
+    {
+      "id": "act_de_wphg_1994",
+      "path": "regulations-data/wphg.json",
+      "label": "Wertpapierhandelsgesetz (WpHG)",
+      "heading": "German Securities Trading Act",
+      "jurisdiction": "DE",
+      "tags": [
+        "financial-markets"
+      ],
+      "update": {
+        "url": [
+          "https://www.gesetze-im-internet.de/wphg/BJNR174910994.html",
+          "https://raw.githubusercontent.com/QuantLaw/gesetze-im-internet/data/data/items/wphg/BJNR174910994.xml"
+        ],
+        "parser": "gesetze_im_internet",
+        "encoding": "latin-1"
+      }
+    },
+    {
+      "id": "act_de_kwg_1961",
+      "path": "regulations-data/kwg.json",
+      "label": "Kreditwesengesetz (KWG)",
+      "heading": "German Banking Act",
+      "jurisdiction": "DE",
+      "tags": [
+        "financial-markets",
+        "third-party-risk"
+      ],
+      "update": {
+        "url": [
+          "https://www.gesetze-im-internet.de/kredwg/BJNR008810961.html",
+          "https://raw.githubusercontent.com/QuantLaw/gesetze-im-internet/data/data/items/kredwg/BJNR008810961.xml"
+        ],
+        "parser": "gesetze_im_internet",
+        "encoding": "latin-1"
+      }
+    },
+    {
+      "id": "act_de_marisk_2024_0006",
+      "path": "regulations-data/marisk.json",
+      "label": "MaRisk",
+      "heading": "Mindestanforderungen an das Risikomanagement (BaFin-Rundschreiben 06/2024 (BA))",
+      "jurisdiction": "DE",
+      "tags": [
+        "financial-markets",
+        "cybersecurity",
+        "third-party-risk",
+        "non-binding"
+      ],
+      "update": {
+        "url": "https://www.bafin.de/SharedDocs/Veroeffentlichungen/DE/Rundschreiben/2024/rs_06_2024_MaRisk_BA.html",
+        "parser": "marisk"
+      }
     }
   ],
   "bundles": [

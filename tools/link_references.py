@@ -135,10 +135,17 @@ NUM = re.compile(r"\d+[a-z]?")
 # paragraphs and point/paragraph/subparagraph clauses, e.g. "(2), point (a)".
 BETWEEN = r"(?:\s*\([^)]*\)|\s*,|\s+(?:points?|paragraphs?|subparagraph|to|and))*"
 
-# German section references: "§ 32", "§ 32 Absatz 1", "§§ 32, 33".
-PARA = re.compile(r"\u00a7\u00a7?\s*\d+[a-z]?(?:\s*(?:,|und|bis|-)\s*\d+[a-z]?)*")
+# German section references: "§ 32", "§ 32 Absatz 1", "§§ 32, 33", "§ 53ca".
+# Up to two suffix letters (KWG "§ 53ca"), but not "ff." ("und folgende").
+DE_NUM = re.compile(r"\d+(?:(?!ff\b)[a-z]{1,2}\b)?")
+PARA = re.compile(
+    r"\u00a7\u00a7?\s*\d+(?:(?!ff\b)[a-z]{1,2}\b)?"
+    r"(?:\s*(?:,|und|bis|-)\s*\d+(?:(?!ff\b)[a-z]{1,2}\b)?)*"
+)
 # Clauses that may follow a § number before naming another statute ("des ... Gesetzes").
 DE_TAIL = r"(?:\s*(?:Absatz|Abs\.|Satz|Nummer|Nr\.)\s*\d+[a-z]?|\s*,)*"
+# BaFin circular modules (MaRisk): "AT 4.3.2", "BTO 1.2", "BTR 3", "BT 2.1".
+MODULE_REF = re.compile(r"\b(?:AT|BTO|BTR|BT)\s+\d+(?:\.\d+)*\b")
 
 
 def _link_list_cross(prefix, numlist, cx):
@@ -266,9 +273,19 @@ def make_pass_para_self(act_id, self_ids):
             def one(mm):
                 n = mm.group(0)
                 return a_self(act_id, n, n) if art_id_of(n) in self_ids else n
-            return NUM.sub(one, m.group(0))
+            return DE_NUM.sub(one, m.group(0))
         return PARA.sub(repl, text)
     return pass_para_self
+
+
+def make_pass_module_self(act_id, self_ids):
+    # Same-act module references in BaFin circulars ("AT 4.3.2" -> art_at_4_3_2).
+    def pass_module_self(text):
+        def repl(m):
+            ref = m.group(0)
+            return a_self(act_id, ref, ref) if art_id_of(ref) in self_ids else ref
+        return MODULE_REF.sub(repl, text)
+    return pass_module_self
 
 
 # --------------------------------------------------------------------------- #
@@ -405,12 +422,15 @@ def self_article_ids(articles):
     for a in articles or []:
         if a.get("id"):
             ids.add(a["id"])
-        num = None
-        mt = re.search(r"\b(\d+[a-z]?)\b", a.get("title") or "")
+        # Only plain "§ N" / "Article N" titles imply an art_N alias; dotted or
+        # prefixed titles ("1.1", "AT 1") would create dangling self-links.
+        mt = re.match(
+            r"\s*(?:\u00a7+\s*|Art(?:icle|ikel|\.)?\s+)?(\d+[a-z]{0,2})\b(?!\.\d)",
+            a.get("title") or "",
+            re.I,
+        )
         if mt:
-            num = mt.group(1)
-        if num:
-            ids.add(art_id_of(num))
+            ids.add(art_id_of(mt.group(1)))
     return ids
 
 
@@ -419,6 +439,7 @@ def link_text(text, act_id, self_ids):
     t = outside_anchors(t, pass_cross)
     t = outside_anchors(t, make_pass_self(act_id, self_ids))
     t = outside_anchors(t, make_pass_para_self(act_id, self_ids))
+    t = outside_anchors(t, make_pass_module_self(act_id, self_ids))
     t = outside_anchors(t, pass_citations)
     t = outside_anchors(t, pass_de_cross)
     t = outside_anchors(t, pass_de_citations)
@@ -426,7 +447,7 @@ def link_text(text, act_id, self_ids):
 
 
 def process_act(path, act_id):
-    with open(path) as f:
+    with open(path, encoding="utf-8") as f:
         doc = json.load(f)
     articles = doc["articles"] if isinstance(doc, dict) else doc
     self_ids = self_article_ids(articles)
@@ -440,7 +461,7 @@ def process_act(path, act_id):
                 para["text"] = after
             n_refs += after.count('class="ref"')
 
-    with open(path, "w") as f:
+    with open(path, "w", encoding="utf-8") as f:
         json.dump(doc, f, ensure_ascii=False, indent=2)
         f.write("\n")
     return n_refs
@@ -463,7 +484,8 @@ def parse_args(argv):
 
 def main(argv):
     args = parse_args(argv)
-    index = json.load(open(INDEX))
+    with open(INDEX, encoding="utf-8") as f:
+        index = json.load(f)
     only = set(args.only)
     total = 0
     for entry in index["acts"]:
