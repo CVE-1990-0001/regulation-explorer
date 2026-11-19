@@ -19,21 +19,26 @@
       "paragraphs": [
         {
           "id": "art_1__1",
-          "text": "1. With a view to ensuring the proper functioning of the internal market while aiming to achieve a high level of cybersecurity, cyber resilience and trust within the Union, this Regulation lays down: The framework referred to in point (b) of the first subparagraph applies without prejudice to specific provisions in other Union legal acts regarding voluntary or mandatory certification.",
+          "text": "1. With a view to ensuring the proper functioning of the internal market while aiming to achieve a high level of cybersecurity, cyber resilience and trust within the Union, this Regulation lays down:",
           "class": ""
         },
         {
-          "id": "art_1__2",
+          "id": "art_1__1_a",
           "text": "(a) objectives, tasks and organisational matters relating to ENISA (the European Union Agency for Cybersecurity); and",
           "class": "list-item-l1"
         },
         {
-          "id": "art_1__3",
-          "text": "(b) a framework for the establishment of European cybersecurity certification schemes for the purpose of ensuring an adequate level of cybersecurity for ICT products, ICT services and ICT processes in the Union, as well as for the purpose of avoiding the fragmentation of the internal market with regard to cybersecurity certification schemes in the Union.",
+          "id": "art_1__1_b",
+          "text": "(b) a framework for the establishment of European cybersecurity certification schemes for the purpose of ensuring an adequate level of cybersecurity for ICT products, ICT services, ICT processes, and managed security services in the Union, as well as for the purpose of avoiding the fragmentation of the internal market with regard to cybersecurity certification schemes in the Union.",
           "class": "list-item-l1"
         },
         {
-          "id": "art_1__4",
+          "id": "art_1__1_s2",
+          "text": "The framework referred to in point (b) of the first subparagraph applies without prejudice to specific provisions in other Union legal acts regarding voluntary or mandatory certification.",
+          "class": "subparagraph"
+        },
+        {
+          "id": "art_1__2",
           "text": "2. This Regulation is without prejudice to the competences of the Member States regarding activities concerning public security, defence, national security and the activities of the State in areas of criminal law.",
           "class": ""
         }
@@ -46,8 +51,123 @@
       "paragraphs": [
         {
           "id": "art_2__1",
-          "text": "For the purposes of this Regulation, the following definitions apply: (1) ‘cybersecurity’ means the activities necessary to protect network and information systems, the users of such systems, and other persons affected by cyber threats; (2) ‘network and information system’ means a network and information system as defined in point (1) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016L1148\" class=\"ref\" data-ref=\"celex:32016L1148\" data-article=\"4\" target=\"_blank\" rel=\"noopener\">Article 4</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016L1148\" class=\"ref\" data-ref=\"celex:32016L1148\" target=\"_blank\" rel=\"noopener\">Directive (EU) 2016/1148</a>; (3) ‘national strategy on the security of network and information systems’ means a national strategy on the security of network and information systems as defined in point (3) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016L1148\" class=\"ref\" data-ref=\"celex:32016L1148\" data-article=\"4\" target=\"_blank\" rel=\"noopener\">Article 4</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016L1148\" class=\"ref\" data-ref=\"celex:32016L1148\" target=\"_blank\" rel=\"noopener\">Directive (EU) 2016/1148</a>; (4) ‘operator of essential services’ means an operator of essential services as defined in point (4) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016L1148\" class=\"ref\" data-ref=\"celex:32016L1148\" data-article=\"4\" target=\"_blank\" rel=\"noopener\">Article 4</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016L1148\" class=\"ref\" data-ref=\"celex:32016L1148\" target=\"_blank\" rel=\"noopener\">Directive (EU) 2016/1148</a>; (5) ‘digital service provider’ means a digital service provider as defined in point (6) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016L1148\" class=\"ref\" data-ref=\"celex:32016L1148\" data-article=\"4\" target=\"_blank\" rel=\"noopener\">Article 4</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016L1148\" class=\"ref\" data-ref=\"celex:32016L1148\" target=\"_blank\" rel=\"noopener\">Directive (EU) 2016/1148</a>; (6) ‘incident’ means an incident as defined in point (7) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016L1148\" class=\"ref\" data-ref=\"celex:32016L1148\" data-article=\"4\" target=\"_blank\" rel=\"noopener\">Article 4</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016L1148\" class=\"ref\" data-ref=\"celex:32016L1148\" target=\"_blank\" rel=\"noopener\">Directive (EU) 2016/1148</a>; (7) ‘incident handling’ means incident handling as defined in point (8) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016L1148\" class=\"ref\" data-ref=\"celex:32016L1148\" data-article=\"4\" target=\"_blank\" rel=\"noopener\">Article 4</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016L1148\" class=\"ref\" data-ref=\"celex:32016L1148\" target=\"_blank\" rel=\"noopener\">Directive (EU) 2016/1148</a>; (8) ‘cyber threat’ means any potential circumstance, event or action that could damage, disrupt or otherwise adversely impact network and information systems, the users of such systems and other persons; (9) ‘European cybersecurity certification scheme’ means a comprehensive set of rules, technical requirements, standards and procedures that are established at Union level and that apply to the certification or conformity assessment of specific ICT products, ICT services or ICT processes; (10) ‘national cybersecurity certification scheme’ means a comprehensive set of rules, technical requirements, standards and procedures developed and adopted by a national public authority and that apply to the certification or conformity assessment of ICT products, ICT services and ICT processes falling under the scope of the specific scheme; (11) ‘European cybersecurity certificate’ means a document issued by a relevant body, attesting that a given ICT product, ICT service or ICT process has been evaluated for compliance with specific security requirements laid down in a European cybersecurity certification scheme; (12) ‘ICT product’ means an element or a group of elements of a network or information system; (13) ‘ICT service’ means a service consisting fully or mainly in the transmission, storing, retrieving or processing of information by means of network and information systems; (14) ‘ICT process’ means a set of activities performed to design, develop, deliver or maintain an ICT product or ICT service; (15) ‘accreditation’ means accreditation as defined in point (10) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32008R0765\" class=\"ref\" data-ref=\"celex:32008R0765\" data-article=\"2\" target=\"_blank\" rel=\"noopener\">Article 2</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32008R0765\" class=\"ref\" data-ref=\"celex:32008R0765\" target=\"_blank\" rel=\"noopener\">Regulation (EC) No 765/2008</a>; (16) ‘national accreditation body’ means a national accreditation body as defined in point (11) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32008R0765\" class=\"ref\" data-ref=\"celex:32008R0765\" data-article=\"2\" target=\"_blank\" rel=\"noopener\">Article 2</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32008R0765\" class=\"ref\" data-ref=\"celex:32008R0765\" target=\"_blank\" rel=\"noopener\">Regulation (EC) No 765/2008</a>; (17) ‘conformity assessment’ means a conformity assessment as defined in point (12) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32008R0765\" class=\"ref\" data-ref=\"celex:32008R0765\" data-article=\"2\" target=\"_blank\" rel=\"noopener\">Article 2</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32008R0765\" class=\"ref\" data-ref=\"celex:32008R0765\" target=\"_blank\" rel=\"noopener\">Regulation (EC) No 765/2008</a>; (18) ‘conformity assessment body’ means a conformity assessment body as defined in point (13) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32008R0765\" class=\"ref\" data-ref=\"celex:32008R0765\" data-article=\"2\" target=\"_blank\" rel=\"noopener\">Article 2</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32008R0765\" class=\"ref\" data-ref=\"celex:32008R0765\" target=\"_blank\" rel=\"noopener\">Regulation (EC) No 765/2008</a>; (19) ‘standard’ means a standard as defined in point (1) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32012R1025\" class=\"ref\" data-ref=\"celex:32012R1025\" data-article=\"2\" target=\"_blank\" rel=\"noopener\">Article 2</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32012R1025\" class=\"ref\" data-ref=\"celex:32012R1025\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1025/2012</a>; (20) ‘technical specification’ means a document that prescribes the technical requirements to be met by, or conformity assessment procedures relating to, an ICT product, ICT service or ICT process; (21) ‘assurance level’ means a basis for confidence that an ICT product, ICT service or ICT process meets the security requirements of a specific European cybersecurity certification scheme, indicates the level at which an ICT product, ICT service or ICT process has been evaluated but as such does not measure the security of the ICT product, ICT service or ICT process concerned; (22) ‘conformity self-assessment’ means an action carried out by a manufacturer or provider of ICT products, ICT services or ICT processes, which evaluates whether those ICT products, ICT services or ICT processes meet the requirements of a specific European cybersecurity certification scheme.",
+          "text": "For the purposes of this Regulation, the following definitions apply:",
           "class": ""
+        },
+        {
+          "id": "art_2__1_1",
+          "text": "(1) ‘cybersecurity’ means the activities necessary to protect network and information systems, the users of such systems, and other persons affected by cyber threats;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_2__1_2",
+          "text": "(2) ‘network and information system’ means a network and information system as defined in point (1) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016L1148\" class=\"ref\" data-ref=\"celex:32016L1148\" data-article=\"4\" target=\"_blank\" rel=\"noopener\">Article 4</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016L1148\" class=\"ref\" data-ref=\"celex:32016L1148\" target=\"_blank\" rel=\"noopener\">Directive (EU) 2016/1148</a>;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_2__1_3",
+          "text": "(3) ‘national strategy on the security of network and information systems’ means a national strategy on the security of network and information systems as defined in point (3) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016L1148\" class=\"ref\" data-ref=\"celex:32016L1148\" data-article=\"4\" target=\"_blank\" rel=\"noopener\">Article 4</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016L1148\" class=\"ref\" data-ref=\"celex:32016L1148\" target=\"_blank\" rel=\"noopener\">Directive (EU) 2016/1148</a>;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_2__1_4",
+          "text": "(4) ‘operator of essential services’ means an operator of essential services as defined in point (4) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016L1148\" class=\"ref\" data-ref=\"celex:32016L1148\" data-article=\"4\" target=\"_blank\" rel=\"noopener\">Article 4</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016L1148\" class=\"ref\" data-ref=\"celex:32016L1148\" target=\"_blank\" rel=\"noopener\">Directive (EU) 2016/1148</a>;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_2__1_5",
+          "text": "(5) ‘digital service provider’ means a digital service provider as defined in point (6) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016L1148\" class=\"ref\" data-ref=\"celex:32016L1148\" data-article=\"4\" target=\"_blank\" rel=\"noopener\">Article 4</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016L1148\" class=\"ref\" data-ref=\"celex:32016L1148\" target=\"_blank\" rel=\"noopener\">Directive (EU) 2016/1148</a>;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_2__1_6",
+          "text": "(6) ‘incident’ means an incident as defined in point (7) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016L1148\" class=\"ref\" data-ref=\"celex:32016L1148\" data-article=\"4\" target=\"_blank\" rel=\"noopener\">Article 4</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016L1148\" class=\"ref\" data-ref=\"celex:32016L1148\" target=\"_blank\" rel=\"noopener\">Directive (EU) 2016/1148</a>;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_2__1_7",
+          "text": "(7) ‘incident handling’ means incident handling as defined in point (8) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016L1148\" class=\"ref\" data-ref=\"celex:32016L1148\" data-article=\"4\" target=\"_blank\" rel=\"noopener\">Article 4</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016L1148\" class=\"ref\" data-ref=\"celex:32016L1148\" target=\"_blank\" rel=\"noopener\">Directive (EU) 2016/1148</a>;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_2__1_8",
+          "text": "(8) ‘cyber threat’ means any potential circumstance, event or action that could damage, disrupt or otherwise adversely impact network and information systems, the users of such systems and other persons;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_2__1_9",
+          "text": "(9) ‘European cybersecurity certification scheme’ means a comprehensive set of rules, technical requirements, standards and procedures that are established at Union level and that apply to the certification or conformity assessment of specific ICT products, ICT services, ICT processes or managed security services;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_2__1_10",
+          "text": "(10) ‘national cybersecurity certification scheme’ means a comprehensive set of rules, technical requirements, standards and procedures developed and adopted by a national public authority and that apply to the certification or conformity assessment of ICT products, ICT services, ICT processes or managed security services falling under the scope of the specific scheme;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_2__1_11",
+          "text": "(11) ‘European cybersecurity certificate’ means a document issued by a relevant body, attesting that a given ICT product, ICT service, ICT process or managed security service has been evaluated for compliance with specific security requirements laid down in a European cybersecurity certification scheme;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_2__1_12",
+          "text": "(12) ‘ICT product’ means an element or a group of elements of a network or information system;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_2__1_13",
+          "text": "(13) ‘ICT service’ means a service consisting fully or mainly in the transmission, storing, retrieving or processing of information by means of network and information systems;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_2__1_14",
+          "text": "(14) ‘ICT process’ means a set of activities performed to design, develop, deliver or maintain an ICT product or ICT service;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_2__1_14a",
+          "text": "(14a) ‘managed security service’ means a service provided to a third party consisting of carrying out, or providing assistance for, activities relating to cybersecurity risk management, such as incident handling, penetration testing, security audits and consulting, including expert advice, related to technical support;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_2__1_15",
+          "text": "(15) ‘accreditation’ means accreditation as defined in point (10) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32008R0765\" class=\"ref\" data-ref=\"celex:32008R0765\" data-article=\"2\" target=\"_blank\" rel=\"noopener\">Article 2</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32008R0765\" class=\"ref\" data-ref=\"celex:32008R0765\" target=\"_blank\" rel=\"noopener\">Regulation (EC) No 765/2008</a>;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_2__1_16",
+          "text": "(16) ‘national accreditation body’ means a national accreditation body as defined in point (11) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32008R0765\" class=\"ref\" data-ref=\"celex:32008R0765\" data-article=\"2\" target=\"_blank\" rel=\"noopener\">Article 2</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32008R0765\" class=\"ref\" data-ref=\"celex:32008R0765\" target=\"_blank\" rel=\"noopener\">Regulation (EC) No 765/2008</a>;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_2__1_17",
+          "text": "(17) ‘conformity assessment’ means a conformity assessment as defined in point (12) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32008R0765\" class=\"ref\" data-ref=\"celex:32008R0765\" data-article=\"2\" target=\"_blank\" rel=\"noopener\">Article 2</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32008R0765\" class=\"ref\" data-ref=\"celex:32008R0765\" target=\"_blank\" rel=\"noopener\">Regulation (EC) No 765/2008</a>;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_2__1_18",
+          "text": "(18) ‘conformity assessment body’ means a conformity assessment body as defined in point (13) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32008R0765\" class=\"ref\" data-ref=\"celex:32008R0765\" data-article=\"2\" target=\"_blank\" rel=\"noopener\">Article 2</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32008R0765\" class=\"ref\" data-ref=\"celex:32008R0765\" target=\"_blank\" rel=\"noopener\">Regulation (EC) No 765/2008</a>;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_2__1_19",
+          "text": "(19) ‘standard’ means a standard as defined in point (1) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32012R1025\" class=\"ref\" data-ref=\"celex:32012R1025\" data-article=\"2\" target=\"_blank\" rel=\"noopener\">Article 2</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32012R1025\" class=\"ref\" data-ref=\"celex:32012R1025\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1025/2012</a>;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_2__1_20",
+          "text": "(20) ‘technical specification’ means a document that prescribes the technical requirements to be met by, or conformity assessment procedures relating to, an ICT product, ICT service, ICT process or managed security service;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_2__1_21",
+          "text": "(21) ‘assurance level’ means a basis for confidence that an ICT product, ICT service, ICT process or managed security service meets the security requirements of a specific European cybersecurity certification scheme, and indicates the level at which an ICT product, ICT service, ICT process or managed security service has been evaluated but as such does not measure the security of the ICT product, ICT service, ICT process or managed security service concerned;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_2__1_22",
+          "text": "(22) ‘conformity self-assessment’ means an action carried out by a manufacturer or provider of ICT products, ICT services, ICT processes or managed security services, which evaluates whether those ICT products, ICT services, ICT processes or managed security services meet the requirements of a specific European cybersecurity certification scheme.",
+          "class": "list-item-l1"
         }
       ]
     },
@@ -58,8 +178,13 @@
       "paragraphs": [
         {
           "id": "art_3__1",
-          "text": "1. ENISA shall carry out the tasks assigned to it under this Regulation for the purpose of achieving a high common level of cybersecurity across the Union, including by actively supporting Member States, Union institutions, bodies, offices and agencies in improving cybersecurity. ENISA shall act as a reference point for advice and expertise on cybersecurity for Union institutions, bodies, offices and agencies as well as for other relevant Union stakeholders. ENISA shall contribute to reducing the fragmentation of the internal market by carrying out the tasks assigned to it under this Regulation.",
+          "text": "1. ENISA shall carry out the tasks assigned to it under this Regulation for the purpose of achieving a high common level of cybersecurity across the Union, including by actively supporting Member States, Union institutions, bodies, offices and agencies in improving cybersecurity. ENISA shall act as a reference point for advice and expertise on cybersecurity for Union institutions, bodies, offices and agencies as well as for other relevant Union stakeholders.",
           "class": ""
+        },
+        {
+          "id": "art_3__1_s2",
+          "text": "ENISA shall contribute to reducing the fragmentation of the internal market by carrying out the tasks assigned to it under this Regulation.",
+          "class": "subparagraph"
         },
         {
           "id": "art_3__2",
@@ -110,7 +235,7 @@
         },
         {
           "id": "art_4__6",
-          "text": "6. ENISA shall promote the use of European cybersecurity certification, with a view to avoiding the fragmentation of the internal market. ENISA shall contribute to the establishment and maintenance of a European cybersecurity certification framework in accordance with Title III of this Regulation, with a view to increasing the transparency of the cybersecurity of ICT products, ICT services and ICT processes, thereby strengthening trust in the digital internal market and its competitiveness.",
+          "text": "6. ENISA shall promote the use of European cybersecurity certification with a view to avoiding the fragmentation of the internal market. ENISA shall contribute to the establishment and maintenance of a European cybersecurity certification framework in accordance with Title III of this Regulation with a view to increasing the transparency of the cybersecurity of ICT products, ICT services, ICT processes and managed security services, thereby strengthening trust in the digital internal market and its competitiveness.",
           "class": ""
         },
         {
@@ -127,8 +252,68 @@
       "paragraphs": [
         {
           "id": "art_5__1",
-          "text": "ENISA shall contribute to the development and implementation of Union policy and law, by: (1) assisting and advising on the development and review of Union policy and law in the field of cybersecurity and on sector-specific policy and law initiatives where matters related to cybersecurity are involved, in particular by providing its independent opinion and analysis as well as carrying out preparatory work; (2) assisting Member States to implement the Union policy and law regarding cybersecurity consistently, in particular in relation to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016L1148\" class=\"ref\" data-ref=\"celex:32016L1148\" target=\"_blank\" rel=\"noopener\">Directive (EU) 2016/1148</a>, including by means of issuing opinions, guidelines, providing advice and best practices on topics such as risk management, incident reporting and information sharing, as well as by facilitating the exchange of best practices between competent authorities in that regard; (3) assisting Member States and Union institutions, bodies, offices and agencies in developing and promoting cybersecurity policies related to sustaining the general availability or integrity of the public core of the open internet; (4) contributing to the work of the Cooperation Group pursuant to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016L1148\" class=\"ref\" data-ref=\"celex:32016L1148\" data-article=\"11\" target=\"_blank\" rel=\"noopener\">Article 11</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016L1148\" class=\"ref\" data-ref=\"celex:32016L1148\" target=\"_blank\" rel=\"noopener\">Directive (EU) 2016/1148</a>, by providing its expertise and assistance; (5) supporting: (a) the development and implementation of Union policy in the field of electronic identity and trust services, in particular by providing advice and issuing technical guidelines, as well as by facilitating the exchange of best practices between competent authorities; (b) the promotion of an enhanced level of security of electronic communications, including by providing advice and expertise, as well as by facilitating the exchange of best practices between competent authorities; (c) Member States in the implementation of specific cybersecurity aspects of Union policy and law relating to data protection and privacy, including by providing advice to the European Data Protection Board upon request; (6) supporting the regular review of Union policy activities by preparing an annual report on the state of the implementation of the respective legal framework regarding: (a) information on Member States’ incident notifications provided by the single points of contact to the Cooperation Group pursuant to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016L1148\" class=\"ref\" data-ref=\"celex:32016L1148\" data-article=\"10\" target=\"_blank\" rel=\"noopener\">Article 10</a>(3) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016L1148\" class=\"ref\" data-ref=\"celex:32016L1148\" target=\"_blank\" rel=\"noopener\">Directive (EU) 2016/1148</a>; (b) summaries of notifications of breach of security or loss of integrity received from trust service providers provided by the supervisory bodies to ENISA, pursuant to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0910\" class=\"ref\" data-ref=\"celex:32014R0910\" data-article=\"19\" target=\"_blank\" rel=\"noopener\">Article 19</a>(3) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0910\" class=\"ref\" data-ref=\"celex:32014R0910\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 910/2014</a> of the European Parliament and of the Council ( 23 ) ; (c) notifications of security incidents transmitted by the providers of public electronic communications networks or of publicly available electronic communications services, provided by the competent authorities to ENISA, pursuant to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32018L1972\" class=\"ref\" data-ref=\"celex:32018L1972\" data-article=\"40\" target=\"_blank\" rel=\"noopener\">Article 40</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32018L1972\" class=\"ref\" data-ref=\"celex:32018L1972\" target=\"_blank\" rel=\"noopener\">Directive (EU) 2018/1972</a>.",
+          "text": "ENISA shall contribute to the development and implementation of Union policy and law, by:",
           "class": ""
+        },
+        {
+          "id": "art_5__1_1",
+          "text": "(1) assisting and advising on the development and review of Union policy and law in the field of cybersecurity and on sector-specific policy and law initiatives where matters related to cybersecurity are involved, in particular by providing its independent opinion and analysis as well as carrying out preparatory work;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_5__1_2",
+          "text": "(2) assisting Member States to implement the Union policy and law regarding cybersecurity consistently, in particular in relation to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016L1148\" class=\"ref\" data-ref=\"celex:32016L1148\" target=\"_blank\" rel=\"noopener\">Directive (EU) 2016/1148</a>, including by means of issuing opinions, guidelines, providing advice and best practices on topics such as risk management, incident reporting and information sharing, as well as by facilitating the exchange of best practices between competent authorities in that regard;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_5__1_3",
+          "text": "(3) assisting Member States and Union institutions, bodies, offices and agencies in developing and promoting cybersecurity policies related to sustaining the general availability or integrity of the public core of the open internet;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_5__1_4",
+          "text": "(4) contributing to the work of the Cooperation Group pursuant to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016L1148\" class=\"ref\" data-ref=\"celex:32016L1148\" data-article=\"11\" target=\"_blank\" rel=\"noopener\">Article 11</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016L1148\" class=\"ref\" data-ref=\"celex:32016L1148\" target=\"_blank\" rel=\"noopener\">Directive (EU) 2016/1148</a>, by providing its expertise and assistance;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_5__1_5",
+          "text": "(5) supporting:",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_5__1_5_a",
+          "text": "(a) the development and implementation of Union policy in the field of electronic identity and trust services, in particular by providing advice and issuing technical guidelines, as well as by facilitating the exchange of best practices between competent authorities;",
+          "class": "list-item-l2"
+        },
+        {
+          "id": "art_5__1_5_b",
+          "text": "(b) the promotion of an enhanced level of security of electronic communications, including by providing advice and expertise, as well as by facilitating the exchange of best practices between competent authorities;",
+          "class": "list-item-l2"
+        },
+        {
+          "id": "art_5__1_5_c",
+          "text": "(c) Member States in the implementation of specific cybersecurity aspects of Union policy and law relating to data protection and privacy, including by providing advice to the European Data Protection Board upon request;",
+          "class": "list-item-l2"
+        },
+        {
+          "id": "art_5__1_6",
+          "text": "(6) supporting the regular review of Union policy activities by preparing an annual report on the state of the implementation of the respective legal framework regarding:",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_5__1_6_a",
+          "text": "(a) information on Member States’ incident notifications provided by the single points of contact to the Cooperation Group pursuant to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016L1148\" class=\"ref\" data-ref=\"celex:32016L1148\" data-article=\"10\" target=\"_blank\" rel=\"noopener\">Article 10</a>(3) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016L1148\" class=\"ref\" data-ref=\"celex:32016L1148\" target=\"_blank\" rel=\"noopener\">Directive (EU) 2016/1148</a>;",
+          "class": "list-item-l2"
+        },
+        {
+          "id": "art_5__1_6_b",
+          "text": "(b) summaries of notifications of breach of security or loss of integrity received from trust service providers provided by the supervisory bodies to ENISA, pursuant to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0910\" class=\"ref\" data-ref=\"celex:32014R0910\" data-article=\"19\" target=\"_blank\" rel=\"noopener\">Article 19</a>(3) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0910\" class=\"ref\" data-ref=\"celex:32014R0910\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 910/2014</a> of the European Parliament and of the Council ( 1 );",
+          "class": "list-item-l2"
+        },
+        {
+          "id": "art_5__1_6_c",
+          "text": "(c) notifications of security incidents transmitted by the providers of public electronic communications networks or of publicly available electronic communications services, provided by the competent authorities to ENISA, pursuant to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32018L1972\" class=\"ref\" data-ref=\"celex:32018L1972\" data-article=\"40\" target=\"_blank\" rel=\"noopener\">Article 40</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32018L1972\" class=\"ref\" data-ref=\"celex:32018L1972\" target=\"_blank\" rel=\"noopener\">Directive (EU) 2018/1972</a>.",
+          "class": "list-item-l2"
         }
       ]
     },
@@ -143,57 +328,57 @@
           "class": ""
         },
         {
-          "id": "art_6__2",
+          "id": "art_6__1_a",
           "text": "(a) Member States in their efforts to improve the prevention, detection and analysis of, and the capability to respond to cyber threats and incidents by providing them with knowledge and expertise;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_6__3",
+          "id": "art_6__1_b",
           "text": "(b) Member States and Union institutions, bodies, offices and agencies in establishing and implementing vulnerability disclosure policies on a voluntary basis;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_6__4",
+          "id": "art_6__1_c",
           "text": "(c) Union institutions, bodies, offices and agencies in their efforts to improve the prevention, detection and analysis of cyber threats and incidents and to improve their capabilities to respond to such cyber threats and incidents, in particular through appropriate support for the CERT-EU;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_6__5",
+          "id": "art_6__1_d",
           "text": "(d) Member States in developing national CSIRTs, where requested pursuant to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016L1148\" class=\"ref\" data-ref=\"celex:32016L1148\" data-article=\"9\" target=\"_blank\" rel=\"noopener\">Article 9</a>(5) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016L1148\" class=\"ref\" data-ref=\"celex:32016L1148\" target=\"_blank\" rel=\"noopener\">Directive (EU) 2016/1148</a>;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_6__6",
+          "id": "art_6__1_e",
           "text": "(e) Member States in developing national strategies on the security of network and information systems, where requested pursuant to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016L1148\" class=\"ref\" data-ref=\"celex:32016L1148\" data-article=\"7\" target=\"_blank\" rel=\"noopener\">Article 7</a>(2) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016L1148\" class=\"ref\" data-ref=\"celex:32016L1148\" target=\"_blank\" rel=\"noopener\">Directive (EU) 2016/1148</a>, and promote the dissemination of those strategies and note the progress in their implementation across the Union in order to promote best practices;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_6__7",
+          "id": "art_6__1_f",
           "text": "(f) Union institutions in developing and reviewing Union strategies regarding cybersecurity, promoting their dissemination and tracking the progress in their implementation;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_6__8",
+          "id": "art_6__1_g",
           "text": "(g) national and Union CSIRTs in raising the level of their capabilities, including by promoting dialogue and exchanges of information, with a view to ensuring that, with regard to the state of the art, each CSIRT possesses a common set of minimum capabilities and operates according to best practices;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_6__9",
+          "id": "art_6__1_h",
           "text": "(h) Member States by regularly organising the cybersecurity exercises at Union level referred to in <a href=\"#a:act_eu_csa_2019_0881:art_7\" class=\"ref\" data-article=\"7\">Article 7</a>(5) on at least a biennial basis and by making policy recommendations based on the evaluation process of the exercises and lessons learned from them;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_6__10",
+          "id": "art_6__1_i",
           "text": "(i) relevant public bodies by offering trainings regarding cybersecurity, where appropriate in cooperation with stakeholders;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_6__11",
+          "id": "art_6__1_j",
           "text": "(j) the Cooperation Group, in the exchange of best practices, in particular with regard to the identification by Member States of operators of essential services, pursuant to point (l) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016L1148\" class=\"ref\" data-ref=\"celex:32016L1148\" data-article=\"11\" target=\"_blank\" rel=\"noopener\">Article 11</a>(3) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016L1148\" class=\"ref\" data-ref=\"celex:32016L1148\" target=\"_blank\" rel=\"noopener\">Directive (EU) 2016/1148</a>, including in relation to cross-border dependencies, regarding risks and incidents.",
           "class": "list-item-l1"
         },
         {
-          "id": "art_6__12",
+          "id": "art_6__2",
           "text": "2. ENISA shall support information sharing in and between sectors, in particular in the sectors listed in Annex II to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016L1148\" class=\"ref\" data-ref=\"celex:32016L1148\" target=\"_blank\" rel=\"noopener\">Directive (EU) 2016/1148</a>, by providing best practices and guidance on available tools, procedures, as well as on how to address regulatory issues related to information-sharing.",
           "class": ""
         }
@@ -215,87 +400,97 @@
           "class": ""
         },
         {
-          "id": "art_7__3",
+          "id": "art_7__2_a",
           "text": "(a) the exchange of know-how and best practices;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_7__4",
+          "id": "art_7__2_b",
           "text": "(b) the provision of advice and issuing of guidelines on relevant matters related to cybersecurity;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_7__5",
+          "id": "art_7__2_c",
           "text": "(c) the establishment of practical arrangements for the execution of specific tasks, after consulting the Commission.",
           "class": "list-item-l1"
         },
         {
-          "id": "art_7__6",
+          "id": "art_7__3",
           "text": "3. ENISA shall provide the secretariat of the CSIRTs network pursuant to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016L1148\" class=\"ref\" data-ref=\"celex:32016L1148\" data-article=\"12\" target=\"_blank\" rel=\"noopener\">Article 12</a>(2) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016L1148\" class=\"ref\" data-ref=\"celex:32016L1148\" target=\"_blank\" rel=\"noopener\">Directive (EU) 2016/1148</a>, and in that capacity shall actively support the information sharing and the cooperation among its members.",
           "class": ""
         },
         {
-          "id": "art_7__7",
-          "text": "4. ENISA shall support Member States with respect to operational cooperation within the CSIRTs network by: In performing those tasks, ENISA and CERT-EU shall engage in structured cooperation to benefit from synergies and to avoid the duplication of activities.",
+          "id": "art_7__4",
+          "text": "4. ENISA shall support Member States with respect to operational cooperation within the CSIRTs network by:",
           "class": ""
         },
         {
-          "id": "art_7__8",
+          "id": "art_7__4_a",
           "text": "(a) advising on how to improve their capabilities to prevent, detect and respond to incidents and, at the request of one or more Member States, providing advice in relation to a specific cyber threat;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_7__9",
+          "id": "art_7__4_b",
           "text": "(b) assisting, at the request of one or more Member States, in the assessment of incidents having a significant or substantial impact through the provision of expertise and facilitating the technical handling of such incidents including in particular by supporting the voluntary sharing of relevant information and technical solutions between Member States;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_7__10",
+          "id": "art_7__4_c",
           "text": "(c) analysing vulnerabilities and incidents on the basis of publicly available information or information provided voluntarily by Member States for that purpose; and",
           "class": "list-item-l1"
         },
         {
-          "id": "art_7__11",
+          "id": "art_7__4_d",
           "text": "(d) at the request of one or more Member States, providing support in relation to ex-post technical inquiries regarding incidents having a significant or substantial impact within the meaning of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016L1148\" class=\"ref\" data-ref=\"celex:32016L1148\" target=\"_blank\" rel=\"noopener\">Directive (EU) 2016/1148</a>.",
           "class": "list-item-l1"
         },
         {
-          "id": "art_7__12",
-          "text": "5. ENISA shall regularly organise cybersecurity exercises at Union level, and shall support Member States and Union institutions, bodies, offices and agencies in organising cybersecurity exercises following their requests. Such cybersecurity exercises at Union level may include technical, operational or strategic elements. On a biennial basis, ENISA shall organise a large-scale comprehensive exercise. Where appropriate, ENISA shall also contribute to and help organise sectoral cybersecurity exercises together with relevant organisations that also participate in cybersecurity exercises at Union level.",
+          "id": "art_7__4_s2",
+          "text": "In performing those tasks, ENISA and CERT-EU shall engage in structured cooperation to benefit from synergies and to avoid the duplication of activities.",
+          "class": "subparagraph"
+        },
+        {
+          "id": "art_7__5",
+          "text": "5. ENISA shall regularly organise cybersecurity exercises at Union level, and shall support Member States and Union institutions, bodies, offices and agencies in organising cybersecurity exercises following their requests. Such cybersecurity exercises at Union level may include technical, operational or strategic elements. On a biennial basis, ENISA shall organise a large-scale comprehensive exercise.",
           "class": ""
         },
         {
-          "id": "art_7__13",
+          "id": "art_7__5_s2",
+          "text": "Where appropriate, ENISA shall also contribute to and help organise sectoral cybersecurity exercises together with relevant organisations that also participate in cybersecurity exercises at Union level.",
+          "class": "subparagraph"
+        },
+        {
+          "id": "art_7__6",
           "text": "6. ENISA, in close cooperation with the Member States, shall prepare a regular in-depth EU Cybersecurity Technical Situation Report on incidents and cyber threats based on publicly available information, its own analysis, and reports shared by, among others, the Member States’ CSIRTs or the single points of contact established by <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016L1148\" class=\"ref\" data-ref=\"celex:32016L1148\" target=\"_blank\" rel=\"noopener\">Directive (EU) 2016/1148</a>, both on a voluntary basis, EC3 and CERT-EU.",
           "class": ""
         },
         {
-          "id": "art_7__14",
+          "id": "art_7__7",
           "text": "7. ENISA shall contribute to developing a cooperative response at Union and Member States level to large-scale cross-border incidents or crises related to cybersecurity, mainly by:",
           "class": ""
         },
         {
-          "id": "art_7__15",
+          "id": "art_7__7_a",
           "text": "(a) aggregating and analysing reports from national sources that are in the public domain or shared on a voluntary basis with a view to contributing to the establishment of common situational awareness;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_7__16",
+          "id": "art_7__7_b",
           "text": "(b) ensuring the efficient flow of information and the provision of escalation mechanisms between the CSIRTs network and the technical and political decision-makers at Union level;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_7__17",
+          "id": "art_7__7_c",
           "text": "(c) upon request, facilitating the technical handling of such incidents or crises, including, in particular, by supporting the voluntary sharing of technical solutions between Member States;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_7__18",
+          "id": "art_7__7_d",
           "text": "(d) supporting Union institutions, bodies, offices and agencies and, at their request, Member States, in the public communication relating to such incidents or crises;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_7__19",
+          "id": "art_7__7_e",
           "text": "(e) testing the cooperation plans for responding to such incidents or crises at Union level and, at their request, supporting Member States in testing such plans at national level.",
           "class": "list-item-l1"
         }
@@ -308,61 +503,61 @@
       "paragraphs": [
         {
           "id": "art_8__1",
-          "text": "1. ENISA shall support and promote the development and implementation of Union policy on cybersecurity certification of ICT products, ICT services and ICT processes, as established in Title III of this Regulation, by:",
+          "text": "1. ENISA shall support and promote the development and implementation of Union policy on the cybersecurity certification of ICT products, ICT services, ICT processes and managed security services, as established in Title III of this Regulation, by:",
           "class": ""
         },
         {
-          "id": "art_8__2",
+          "id": "art_8__1_a",
           "text": "(a) monitoring developments, on an ongoing basis, in related areas of standardisation and recommending appropriate technical specifications for use in the development of European cybersecurity certification schemes pursuant to point (c) of <a href=\"#a:act_eu_csa_2019_0881:art_54\" class=\"ref\" data-article=\"54\">Article 54</a>(1) where standards are not available;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_8__3",
-          "text": "(b) preparing candidate European cybersecurity certification schemes (‘candidate schemes’) for ICT products, ICT services and ICT processes in accordance with <a href=\"#a:act_eu_csa_2019_0881:art_49\" class=\"ref\" data-article=\"49\">Article 49</a>;",
+          "id": "art_8__1_b",
+          "text": "(b) preparing candidate European cybersecurity certification schemes (candidate schemes) for ICT products, ICT services, ICT processes and managed security services in accordance with <a href=\"#a:act_eu_csa_2019_0881:art_49\" class=\"ref\" data-article=\"49\">Article 49</a>;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_8__4",
+          "id": "art_8__1_c",
           "text": "(c) evaluating adopted European cybersecurity certification schemes in accordance with <a href=\"#a:act_eu_csa_2019_0881:art_49\" class=\"ref\" data-article=\"49\">Article 49</a>(8);",
           "class": "list-item-l1"
         },
         {
-          "id": "art_8__5",
+          "id": "art_8__1_d",
           "text": "(d) participating in peer reviews pursuant to <a href=\"#a:act_eu_csa_2019_0881:art_59\" class=\"ref\" data-article=\"59\">Article 59</a>(4);",
           "class": "list-item-l1"
         },
         {
-          "id": "art_8__6",
+          "id": "art_8__1_e",
           "text": "(e) assisting the Commission in providing the secretariat of the ECCG pursuant to <a href=\"#a:act_eu_csa_2019_0881:art_62\" class=\"ref\" data-article=\"62\">Article 62</a>(5).",
           "class": "list-item-l1"
         },
         {
-          "id": "art_8__7",
+          "id": "art_8__2",
           "text": "2. ENISA shall provide the secretariat of the Stakeholder Cybersecurity Certification Group pursuant to <a href=\"#a:act_eu_csa_2019_0881:art_22\" class=\"ref\" data-article=\"22\">Article 22</a>(4).",
           "class": ""
         },
         {
-          "id": "art_8__8",
-          "text": "3. ENISA shall compile and publish guidelines and develop good practices, concerning the cybersecurity requirements for ICT products, ICT services and ICT processes, in cooperation with national cybersecurity certification authorities and industry in a formal, structured and transparent way.",
+          "id": "art_8__3",
+          "text": "3. ENISA shall compile and publish guidelines and develop good practices, concerning the cybersecurity requirements for ICT products, ICT services, ICT processes and managed security services, in cooperation with national cybersecurity certification authorities and industry in a formal, structured and transparent way.",
           "class": ""
         },
         {
-          "id": "art_8__9",
+          "id": "art_8__4",
           "text": "4. ENISA shall contribute to capacity-building related to evaluation and certification processes by compiling and issuing guidelines as well as by providing support to Member States at their request.",
           "class": ""
         },
         {
-          "id": "art_8__10",
-          "text": "5. ENISA shall facilitate the establishment and take-up of European and international standards for risk management and for the security of ICT products, ICT services and ICT processes.",
+          "id": "art_8__5",
+          "text": "5. ENISA shall facilitate the establishment and take-up of European and international standards for risk management and for the security of ICT products, ICT services, ICT processes and managed security services.",
           "class": ""
         },
         {
-          "id": "art_8__11",
+          "id": "art_8__6",
           "text": "6. ENISA shall draw up, in collaboration with Member States and industry, advice and guidelines regarding the technical areas related to the security requirements for operators of essential services and digital service providers, as well as regarding already existing standards, including Member States’ national standards, pursuant to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016L1148\" class=\"ref\" data-ref=\"celex:32016L1148\" data-article=\"19\" target=\"_blank\" rel=\"noopener\">Article 19</a>(2) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016L1148\" class=\"ref\" data-ref=\"celex:32016L1148\" target=\"_blank\" rel=\"noopener\">Directive (EU) 2016/1148</a>.",
           "class": ""
         },
         {
-          "id": "art_8__12",
+          "id": "art_8__7",
           "text": "7. ENISA shall perform and disseminate regular analyses of the main trends in the cybersecurity market on both the demand and supply sides, with a view to fostering the cybersecurity market in the Union.",
           "class": ""
         }
@@ -375,8 +570,33 @@
       "paragraphs": [
         {
           "id": "art_9__1",
-          "text": "ENISA shall: (a) perform analyses of emerging technologies and provide topic-specific assessments on the expected societal, legal, economic and regulatory impact of technological innovations on cybersecurity; (b) perform long-term strategic analyses of cyber threats and incidents in order to identify emerging trends and help prevent incidents; (c) in cooperation with experts from Member States authorities and relevant stakeholders, provide advice, guidance and best practices for the security of network and information systems, in particular for the security of the infrastructures supporting the sectors listed in Annex II to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016L1148\" class=\"ref\" data-ref=\"celex:32016L1148\" target=\"_blank\" rel=\"noopener\">Directive (EU) 2016/1148</a> and those used by the providers of the digital services listed in Annex III to that Directive; (d) through a dedicated portal, pool, organise and make available to the public information on cybersecurity provided by the Union institutions, bodies, offices and agencies and information on cybersecurity provided on a voluntary basis by Member States and private and public stakeholders; (e) collect and analyse publicly available information regarding significant incidents and compile reports with a view to providing guidance to citizens, organisations and businesses across the Union.",
+          "text": "ENISA shall:",
           "class": ""
+        },
+        {
+          "id": "art_9__1_a",
+          "text": "(a) perform analyses of emerging technologies and provide topic-specific assessments on the expected societal, legal, economic and regulatory impact of technological innovations on cybersecurity;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_9__1_b",
+          "text": "(b) perform long-term strategic analyses of cyber threats and incidents in order to identify emerging trends and help prevent incidents;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_9__1_c",
+          "text": "(c) in cooperation with experts from Member States authorities and relevant stakeholders, provide advice, guidance and best practices for the security of network and information systems, in particular for the security of the infrastructures supporting the sectors listed in Annex II to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016L1148\" class=\"ref\" data-ref=\"celex:32016L1148\" target=\"_blank\" rel=\"noopener\">Directive (EU) 2016/1148</a> and those used by the providers of the digital services listed in Annex III to that Directive;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_9__1_d",
+          "text": "(d) through a dedicated portal, pool, organise and make available to the public information on cybersecurity provided by the Union institutions, bodies, offices and agencies and information on cybersecurity provided on a voluntary basis by Member States and private and public stakeholders;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_9__1_e",
+          "text": "(e) collect and analyse publicly available information regarding significant incidents and compile reports with a view to providing guidance to citizens, organisations and businesses across the Union.",
+          "class": "list-item-l1"
         }
       ]
     },
@@ -387,8 +607,28 @@
       "paragraphs": [
         {
           "id": "art_10__1",
-          "text": "ENISA shall: (a) raise public awareness of cybersecurity risks, and provide guidance on good practices for individual users aimed at citizens, organisations and businesses, including cyber-hygiene and cyber-literacy; (b) in cooperation with the Member States, Union institutions, bodies, offices and agencies and industry, organise regular outreach campaigns to increase cybersecurity and its visibility in the Union and encourage a broad public debate; (c) assist Member States in their efforts to raise cybersecurity awareness and promote cybersecurity education; (d) support closer coordination and exchange of best practices among Member States on cybersecurity awareness and education.",
+          "text": "ENISA shall:",
           "class": ""
+        },
+        {
+          "id": "art_10__1_a",
+          "text": "(a) raise public awareness of cybersecurity risks, and provide guidance on good practices for individual users aimed at citizens, organisations and businesses, including cyber-hygiene and cyber-literacy;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_10__1_b",
+          "text": "(b) in cooperation with the Member States, Union institutions, bodies, offices and agencies and industry, organise regular outreach campaigns to increase cybersecurity and its visibility in the Union and encourage a broad public debate;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_10__1_c",
+          "text": "(c) assist Member States in their efforts to raise cybersecurity awareness and promote cybersecurity education;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_10__1_d",
+          "text": "(d) support closer coordination and exchange of best practices among Member States on cybersecurity awareness and education.",
+          "class": "list-item-l1"
         }
       ]
     },
@@ -399,8 +639,23 @@
       "paragraphs": [
         {
           "id": "art_11__1",
-          "text": "In relation to research and innovation, ENISA shall: (a) advise the Union institutions, bodies, offices and agencies and the Member States on research needs and priorities in the field of cybersecurity, with a view to enabling effective responses to current and emerging risks and cyber threats, including with respect to new and emerging information and communications technologies, and with a view to using risk-prevention technologies effectively; (b) where the Commission has conferred the relevant powers on it, participate in the implementation phase of research and innovation funding programmes or as a beneficiary; (c) contribute to the strategic research and innovation agenda at Union level in the field of cybersecurity.",
+          "text": "In relation to research and innovation, ENISA shall:",
           "class": ""
+        },
+        {
+          "id": "art_11__1_a",
+          "text": "(a) advise the Union institutions, bodies, offices and agencies and the Member States on research needs and priorities in the field of cybersecurity, with a view to enabling effective responses to current and emerging risks and cyber threats, including with respect to new and emerging information and communications technologies, and with a view to using risk-prevention technologies effectively;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_11__1_b",
+          "text": "(b) where the Commission has conferred the relevant powers on it, participate in the implementation phase of research and innovation funding programmes or as a beneficiary;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_11__1_c",
+          "text": "(c) contribute to the strategic research and innovation agenda at Union level in the field of cybersecurity.",
+          "class": "list-item-l1"
         }
       ]
     },
@@ -411,8 +666,28 @@
       "paragraphs": [
         {
           "id": "art_12__1",
-          "text": "ENISA shall contribute to the Union’s efforts to cooperate with third countries and international organisations as well as within relevant international cooperation frameworks to promote international cooperation on issues related to cybersecurity, by: (a) where appropriate, engaging as an observer in the organisation of international exercises, and analysing and reporting to the Management Board on the outcome of such exercises; (b) at the request of the Commission, facilitating the exchange of best practices; (c) at the request of the Commission, providing it with expertise; (d) providing advice and support to the Commission on matters concerning agreements for the mutual recognition of cybersecurity certificates with third countries, in collaboration with the ECCG established under <a href=\"#a:act_eu_csa_2019_0881:art_62\" class=\"ref\" data-article=\"62\">Article 62</a>.",
+          "text": "ENISA shall contribute to the Union’s efforts to cooperate with third countries and international organisations as well as within relevant international cooperation frameworks to promote international cooperation on issues related to cybersecurity, by:",
           "class": ""
+        },
+        {
+          "id": "art_12__1_a",
+          "text": "(a) where appropriate, engaging as an observer in the organisation of international exercises, and analysing and reporting to the Management Board on the outcome of such exercises;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_12__1_b",
+          "text": "(b) at the request of the Commission, facilitating the exchange of best practices;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_12__1_c",
+          "text": "(c) at the request of the Commission, providing it with expertise;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_12__1_d",
+          "text": "(d) providing advice and support to the Commission on matters concerning agreements for the mutual recognition of cybersecurity certificates with third countries, in collaboration with the ECCG established under <a href=\"#a:act_eu_csa_2019_0881:art_62\" class=\"ref\" data-article=\"62\">Article 62</a>.",
+          "class": "list-item-l1"
         }
       ]
     },
@@ -423,8 +698,33 @@
       "paragraphs": [
         {
           "id": "art_13__1",
-          "text": "The administrative and management structure of ENISA shall be composed of the following: (a) a Management Board; (b) an Executive Board; (c) an Executive Director; (d) an ENISA Advisory Group; (e) a National Liaison Officers Network.",
+          "text": "The administrative and management structure of ENISA shall be composed of the following:",
           "class": ""
+        },
+        {
+          "id": "art_13__1_a",
+          "text": "(a) a Management Board;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_13__1_b",
+          "text": "(b) an Executive Board;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_13__1_c",
+          "text": "(c) an Executive Director;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_13__1_d",
+          "text": "(d) an ENISA Advisory Group;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_13__1_e",
+          "text": "(e) a National Liaison Officers Network.",
+          "class": "list-item-l1"
         }
       ]
     },
@@ -466,102 +766,102 @@
           "class": ""
         },
         {
-          "id": "art_15__2",
+          "id": "art_15__1_a",
           "text": "(a) establish the general direction of the operation of ENISA and ensure that ENISA operates in accordance with the rules and principles laid down in this Regulation; it shall also ensure the consistency of ENISA’s work with activities conducted by the Member States as well as at Union level;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_15__3",
+          "id": "art_15__1_b",
           "text": "(b) adopt ENISA’s draft single programming document referred to in <a href=\"#a:act_eu_csa_2019_0881:art_24\" class=\"ref\" data-article=\"24\">Article 24</a>, before its submission to the Commission for an opinion;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_15__4",
+          "id": "art_15__1_c",
           "text": "(c) adopt ENISA’s single programming document, taking into account the Commission opinion;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_15__5",
+          "id": "art_15__1_d",
           "text": "(d) supervise the implementation of the multiannual and annual programming included in the single programming document;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_15__6",
+          "id": "art_15__1_e",
           "text": "(e) adopt the annual budget of ENISA and exercise other functions in respect of ENISA’s budget in accordance with Chapter IV;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_15__7",
+          "id": "art_15__1_f",
           "text": "(f) assess and adopt the consolidated annual report on ENISA’s activities, including the accounts and a description of how ENISA has met its performance indicators, submit both the annual report and the assessment thereof by 1 July of the following year, to the European Parliament, to the Council, to the Commission and to the Court of Auditors, and make the annual report public;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_15__8",
+          "id": "art_15__1_g",
           "text": "(g) adopt the financial rules applicable to ENISA in accordance with <a href=\"#a:act_eu_csa_2019_0881:art_32\" class=\"ref\" data-article=\"32\">Article 32</a>;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_15__9",
+          "id": "art_15__1_h",
           "text": "(h) adopt an anti-fraud strategy that is proportionate to the fraud risks, having regard to a cost-benefit analysis of the measures to be implemented;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_15__10",
+          "id": "art_15__1_i",
           "text": "(i) adopt rules for the prevention and management of conflicts of interest in respect of its members;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_15__11",
+          "id": "art_15__1_j",
           "text": "(j) ensure adequate follow-up to the findings and recommendations resulting from investigations of the European Anti-Fraud Office (OLAF) and the various internal or external audit reports and evaluations;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_15__12",
+          "id": "art_15__1_k",
           "text": "(k) adopt its rules of procedure, including rules for provisional decisions on the delegation of specific tasks, pursuant to <a href=\"#a:act_eu_csa_2019_0881:art_19\" class=\"ref\" data-article=\"19\">Article 19</a>(7);",
           "class": "list-item-l1"
         },
         {
-          "id": "art_15__13",
-          "text": "(l) with respect to the staff of ENISA, exercise the powers conferred by the Staff Regulations of Officials (the ‘Staff Regulations of Officials’) and the Conditions of Employment of Other Servants of the European Union (the ‘Conditions of Employment of Other Servants’), laid down in Council Regulation (EEC, Euratom, ECSC) No 259/68 ( 24 ) on the appointing authority and on the Authority Empowered to Conclude a Contract of Employment (‘appointing authority powers’) in accordance with paragraph 2 of this Article;",
+          "id": "art_15__1_l",
+          "text": "(l) with respect to the staff of ENISA, exercise the powers conferred by the Staff Regulations of Officials (the ‘Staff Regulations of Officials’) and the Conditions of Employment of Other Servants of the European Union (the ‘Conditions of Employment of Other Servants’), laid down in Council Regulation (EEC, Euratom, ECSC) No 259/68 ( 2 ) on the appointing authority and on the Authority Empowered to Conclude a Contract of Employment (‘appointing authority powers’) in accordance with paragraph 2 of this Article;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_15__14",
+          "id": "art_15__1_m",
           "text": "(m) adopt rules implementing the Staff Regulations of Officials and the Conditions of Employment of Other Servants in accordance with the procedure provided for in Article 110 of the Staff Regulations of Officials;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_15__15",
+          "id": "art_15__1_n",
           "text": "(n) appoint the Executive Director and where relevant extend his or her term of office or remove him or her from office in accordance with <a href=\"#a:act_eu_csa_2019_0881:art_36\" class=\"ref\" data-article=\"36\">Article 36</a>;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_15__16",
+          "id": "art_15__1_o",
           "text": "(o) appoint an accounting officer, who may be the Commission’s accounting officer, who shall be wholly independent in the performance of his or her duties;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_15__17",
+          "id": "art_15__1_p",
           "text": "(p) take all decisions concerning the establishment of ENISA’s internal structures and, where necessary, the modification of those internal structures, taking into consideration ENISA’s activity needs and having regard to sound budgetary management;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_15__18",
+          "id": "art_15__1_q",
           "text": "(q) authorise the establishment of working arrangements with regard to <a href=\"#a:act_eu_csa_2019_0881:art_7\" class=\"ref\" data-article=\"7\">Article 7</a>;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_15__19",
+          "id": "art_15__1_r",
           "text": "(r) authorise the establishment or conclusion of working arrangements in accordance with <a href=\"#a:act_eu_csa_2019_0881:art_42\" class=\"ref\" data-article=\"42\">Article 42</a>.",
           "class": "list-item-l1"
         },
         {
-          "id": "art_15__20",
+          "id": "art_15__2",
           "text": "2. In accordance with Article 110 of the Staff Regulations of Officials, the Management Board shall adopt a decision based on Article 2(1) of the Staff Regulations of Officials and Article 6 of the Conditions of Employment of Other Servants, delegating the relevant appointing authority powers to the Executive Director and determining the conditions under which that delegation of powers can be suspended. The Executive Director may sub-delegate those powers.",
           "class": ""
         },
         {
-          "id": "art_15__21",
+          "id": "art_15__3",
           "text": "3. Where exceptional circumstances so require, the Management Board may adopt a decision to temporarily suspend the delegation of appointing authority powers to the Executive Director and any appointing authority powers sub-delegated by the Executive Director and instead exercise them itself or delegate them to one of its members or to a staff member other than the Executive Director.",
           "class": ""
         }
@@ -669,42 +969,42 @@
           "class": ""
         },
         {
-          "id": "art_19__3",
+          "id": "art_19__2_a",
           "text": "(a) prepare decisions to be adopted by the Management Board;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_19__4",
+          "id": "art_19__2_b",
           "text": "(b) together with the Management Board, ensure the adequate follow-up to the findings and recommendations stemming from investigations of OLAF and the various internal or external audit reports and evaluations;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_19__5",
+          "id": "art_19__2_c",
           "text": "(c) without prejudice to the responsibilities of the Executive Director set out in <a href=\"#a:act_eu_csa_2019_0881:art_20\" class=\"ref\" data-article=\"20\">Article 20</a>, assist and advise the Executive Director in implementing the decisions of the Management Board on administrative and budgetary matters pursuant to <a href=\"#a:act_eu_csa_2019_0881:art_20\" class=\"ref\" data-article=\"20\">Article 20</a>.",
           "class": "list-item-l1"
         },
         {
-          "id": "art_19__6",
+          "id": "art_19__3",
           "text": "3. The Executive Board shall be composed of five members. The members of the Executive Board shall be appointed from among the members of the Management Board. One of the members shall be the Chairperson of the Management Board, who may also chair the Executive Board, and another shall be one of the representatives of the Commission. The appointments of the members of the Executive Board shall aim to ensure gender balance on the Executive Board. The Executive Director shall take part in the meetings of the Executive Board but shall not have the right to vote.",
           "class": ""
         },
         {
-          "id": "art_19__7",
+          "id": "art_19__4",
           "text": "4. The term of office of the members of the Executive Board shall be four years. That term shall be renewable.",
           "class": ""
         },
         {
-          "id": "art_19__8",
+          "id": "art_19__5",
           "text": "5. The Executive Board shall meet at least once every three months. The Chairperson of the Executive Board shall convene additional meetings at the request of its members.",
           "class": ""
         },
         {
-          "id": "art_19__9",
+          "id": "art_19__6",
           "text": "6. The Management Board shall lay down the rules of procedure of the Executive Board.",
           "class": ""
         },
         {
-          "id": "art_19__10",
+          "id": "art_19__7",
           "text": "7. When necessary because of urgency, the Executive Board may take certain provisional decisions on behalf of the Management Board, in particular on administrative management matters, including the suspension of the delegation of the appointing authority powers and budgetary matters. Any such provisional decisions shall be notified to the Management Board without undue delay. The Management Board shall then decide whether to approve or reject the provisional decision no later than three months after the decision was taken. The Executive Board shall not take decisions on behalf of the Management Board that require the approval of a majority of two-thirds of the members of the Management Board.",
           "class": ""
         }
@@ -731,84 +1031,89 @@
           "class": ""
         },
         {
-          "id": "art_20__4",
+          "id": "art_20__3_a",
           "text": "(a) the day-to-day administration of ENISA;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_20__5",
+          "id": "art_20__3_b",
           "text": "(b) implementing the decisions adopted by the Management Board;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_20__6",
+          "id": "art_20__3_c",
           "text": "(c) preparing the draft single programming document and submitting it to the Management Board for approval before its submission to the Commission;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_20__7",
+          "id": "art_20__3_d",
           "text": "(d) implementing the single programming document and reporting to the Management Board thereon;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_20__8",
+          "id": "art_20__3_e",
           "text": "(e) preparing the consolidated annual report on ENISA’s activities, including the implementation of ENISA’s annual work programme, and presenting it to the Management Board for assessment and adoption;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_20__9",
+          "id": "art_20__3_f",
           "text": "(f) preparing an action plan that follows up on the conclusions of the retrospective evaluations, and reporting on progress every two years to the Commission;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_20__10",
+          "id": "art_20__3_g",
           "text": "(g) preparing an action plan that follows up on the conclusions of internal or external audit reports, as well as on investigations by OLAF and reporting on progress biannually to the Commission and regularly to the Management Board;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_20__11",
+          "id": "art_20__3_h",
           "text": "(h) preparing the draft financial rules applicable to ENISA as referred to in <a href=\"#a:act_eu_csa_2019_0881:art_32\" class=\"ref\" data-article=\"32\">Article 32</a>;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_20__12",
+          "id": "art_20__3_i",
           "text": "(i) preparing ENISA’s draft statement of estimates of revenue and expenditure and implementing its budget;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_20__13",
+          "id": "art_20__3_j",
           "text": "(j) protecting the financial interests of the Union by the application of preventive measures against fraud, corruption and any other illegal activities, by effective checks and, if irregularities are detected, by the recovery of the amounts wrongly paid and, where appropriate, by effective, proportionate and dissuasive administrative and financial penalties;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_20__14",
+          "id": "art_20__3_k",
           "text": "(k) preparing an anti-fraud strategy for ENISA and presenting it to the Management Board for approval;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_20__15",
+          "id": "art_20__3_l",
           "text": "(l) developing and maintaining contact with the business community and consumers’ organisations to ensure regular dialogue with relevant stakeholders;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_20__16",
+          "id": "art_20__3_m",
           "text": "(m) exchanging views and information regularly with Union institutions, bodies, offices and agencies regarding their activities relating to cybersecurity to ensure coherence in the development and the implementation of Union policy;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_20__17",
+          "id": "art_20__3_n",
           "text": "(n) carrying out other tasks assigned to the Executive Director by this Regulation.",
           "class": "list-item-l1"
         },
         {
-          "id": "art_20__18",
+          "id": "art_20__4",
           "text": "4. Where necessary and within ENISA’s objectives and tasks, the Executive Director may set up ad hoc working groups composed of experts, including experts from the Member States’ competent authorities. The Executive Director shall inform the Management Board in advance thereof. The procedures regarding in particular the composition of the working groups, the appointment of the experts of the working groups by the Executive Director and the operation of the working groups shall be specified in ENISA’s internal rules of operation.",
           "class": ""
         },
         {
-          "id": "art_20__19",
-          "text": "5. Where necessary, for the purpose of carrying out ENISA’s tasks in an efficient and effective manner and based on an appropriate cost-benefit analysis, the Executive Director may decide to establish one or more local offices in one or more Member States. Before deciding to establish a local office, the Executive Director shall seek the opinion of the Member States concerned, including the Member State in which the seat of ENISA is located, and shall obtain the prior consent of the Commission and the Management Board. In cases of disagreement during the consultation process between the Executive Director and the Member States concerned, the issue shall be brought to the Council for discussion. The aggregate number of staff in all local offices shall be kept to a minimum and shall not exceed 40 % of the total number of ENISA’s staff located in the Member State in which the seat of ENISA is located. The number of the staff in each local office shall not exceed 10 % of the total number of ENISA’s staff located in the Member State in which the seat of ENISA is located. The decision establishing a local office shall specify the scope of the activities to be carried out at the local office in a manner that avoids unnecessary costs and duplication of administrative functions of ENISA.",
+          "id": "art_20__5",
+          "text": "5. Where necessary, for the purpose of carrying out ENISA’s tasks in an efficient and effective manner and based on an appropriate cost-benefit analysis, the Executive Director may decide to establish one or more local offices in one or more Member States. Before deciding to establish a local office, the Executive Director shall seek the opinion of the Member States concerned, including the Member State in which the seat of ENISA is located, and shall obtain the prior consent of the Commission and the Management Board. In cases of disagreement during the consultation process between the Executive Director and the Member States concerned, the issue shall be brought to the Council for discussion. The aggregate number of staff in all local offices shall be kept to a minimum and shall not exceed 40 % of the total number of ENISA’s staff located in the Member State in which the seat of ENISA is located. The number of the staff in each local office shall not exceed 10 % of the total number of ENISA’s staff located in the Member State in which the seat of ENISA is located.",
           "class": ""
+        },
+        {
+          "id": "art_20__5_s2",
+          "text": "The decision establishing a local office shall specify the scope of the activities to be carried out at the local office in a manner that avoids unnecessary costs and duplication of administrative functions of ENISA.",
+          "class": "subparagraph"
         }
       ]
     },
@@ -870,32 +1175,32 @@
           "class": ""
         },
         {
-          "id": "art_22__4",
+          "id": "art_22__3_a",
           "text": "(a) advise the Commission on strategic issues regarding the European cybersecurity certification framework;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_22__5",
+          "id": "art_22__3_b",
           "text": "(b) upon request, advise ENISA on general and strategic matters concerning ENISA’s tasks relating to market, cybersecurity certification, and standardisation;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_22__6",
+          "id": "art_22__3_c",
           "text": "(c) assist the Commission in the preparation of the Union rolling work programme referred to in <a href=\"#a:act_eu_csa_2019_0881:art_47\" class=\"ref\" data-article=\"47\">Article 47</a>;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_22__7",
+          "id": "art_22__3_d",
           "text": "(d) issue an opinion on the Union rolling work programme pursuant to <a href=\"#a:act_eu_csa_2019_0881:art_47\" class=\"ref\" data-article=\"47\">Article 47</a>(4); and",
           "class": "list-item-l1"
         },
         {
-          "id": "art_22__8",
+          "id": "art_22__3_e",
           "text": "(e) in urgent cases, provide advice to the Commission and the ECCG on the need for additional certification schemes not included in the Union rolling work programme, as outlined in Articles <a href=\"#a:act_eu_csa_2019_0881:art_47\" class=\"ref\" data-article=\"47\">47</a> and <a href=\"#a:act_eu_csa_2019_0881:art_48\" class=\"ref\" data-article=\"48\">48</a>.",
           "class": "list-item-l1"
         },
         {
-          "id": "art_22__9",
+          "id": "art_22__4",
           "text": "4. The Stakeholder Certification Group shall be co-chaired by the representatives of the Commission and of ENISA, and its secretariat shall be provided by ENISA.",
           "class": ""
         }
@@ -945,7 +1250,7 @@
         },
         {
           "id": "art_24__2",
-          "text": "2. Each year, the Executive Director shall draw up a draft single programming document containing its annual and multiannual programming with the corresponding financial and human resources planning in accordance with Article 32 of Commission Delegated <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013R1271\" class=\"ref\" data-ref=\"celex:32013R1271\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1271/2013</a> ( 25 ) and taking into account the guidelines set by the Commission.",
+          "text": "2. Each year, the Executive Director shall draw up a draft single programming document containing its annual and multiannual programming with the corresponding financial and human resources planning in accordance with Article 32 of Commission Delegated <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013R1271\" class=\"ref\" data-ref=\"celex:32013R1271\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1271/2013</a> ( 3 ) and taking into account the guidelines set by the Commission.",
           "class": ""
         },
         {
@@ -1051,7 +1356,7 @@
         },
         {
           "id": "art_27__4",
-          "text": "4. If required for the performance of ENISA’s tasks, the Management Board shall decide to allow ENISA to handle classified information. In that case ENISA, in agreement with the Commission services, shall adopt security rules applying the security principles set out in Commission Decisions (EU, Euratom) 2015/443 ( 26 ) and 2015/444 ( 27 ) . Those security rules shall include provisions for the exchange, processing and storage of classified information.",
+          "text": "4. If required for the performance of ENISA’s tasks, the Management Board shall decide to allow ENISA to handle classified information. In that case ENISA, in agreement with the Commission services, shall adopt security rules applying the security principles set out in Commission Decisions (EU, Euratom) 2015/443 ( 4 ) and 2015/444 ( 5 ). Those security rules shall include provisions for the exchange, processing and storage of classified information.",
           "class": ""
         }
       ]
@@ -1127,36 +1432,41 @@
       "paragraphs": [
         {
           "id": "art_30__1",
-          "text": "1. Without prejudice to other resources, ENISA’s revenue shall be composed of: Member States that provide voluntary contributions under point (e) of the first subparagraph shall not claim any specific right or service as a result thereof.",
+          "text": "1. Without prejudice to other resources, ENISA’s revenue shall be composed of:",
           "class": ""
         },
         {
-          "id": "art_30__2",
+          "id": "art_30__1_a",
           "text": "(a) a contribution from the general budget of the Union;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_30__3",
+          "id": "art_30__1_b",
           "text": "(b) revenue assigned to specific items of expenditure in accordance with its financial rules referred to in <a href=\"#a:act_eu_csa_2019_0881:art_32\" class=\"ref\" data-article=\"32\">Article 32</a>;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_30__4",
+          "id": "art_30__1_c",
           "text": "(c) Union funding in the form of delegation agreements or ad hoc grants in accordance with its financial rules referred to in <a href=\"#a:act_eu_csa_2019_0881:art_32\" class=\"ref\" data-article=\"32\">Article 32</a> and with the provisions of the relevant instruments supporting the policies of the Union;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_30__5",
+          "id": "art_30__1_d",
           "text": "(d) contributions from third countries participating in the work of ENISA as referred to in <a href=\"#a:act_eu_csa_2019_0881:art_42\" class=\"ref\" data-article=\"42\">Article 42</a>;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_30__6",
+          "id": "art_30__1_e",
           "text": "(e) any voluntary contributions from Member States in money or in kind.",
           "class": "list-item-l1"
         },
         {
-          "id": "art_30__7",
+          "id": "art_30__1_s2",
+          "text": "Member States that provide voluntary contributions under point (e) of the first subparagraph shall not claim any specific right or service as a result thereof.",
+          "class": "subparagraph"
+        },
+        {
+          "id": "art_30__2",
           "text": "2. The expenditure of ENISA shall include staff, administrative and technical support, infrastructure and operational expenses, and expenses resulting from contracts with third parties.",
           "class": ""
         }
@@ -1184,7 +1494,7 @@
         },
         {
           "id": "art_31__4",
-          "text": "4. Upon the receipt of the Court of Auditors’ observations on ENISA’s provisional accounts pursuant to Article 246 of Regulation (EU, Euratom) 2018/1046 of the European Parliament and of the Council ( 28 ) , ENISA’s accounting officer shall draw up ENISA’s final accounts under his or her responsibility and shall submit them to the Management Board for an opinion.",
+          "text": "4. Upon the receipt of the Court of Auditors’ observations on ENISA’s provisional accounts pursuant to Article 246 of Regulation (EU, Euratom) 2018/1046 of the European Parliament and of the Council ( 6 ), ENISA’s accounting officer shall draw up ENISA’s final accounts under his or her responsibility and shall submit them to the Management Board for an opinion.",
           "class": ""
         },
         {
@@ -1248,7 +1558,7 @@
       "paragraphs": [
         {
           "id": "art_33__1",
-          "text": "1. In order to facilitate the combating of fraud, corruption and other unlawful activities under Regulation (EU, Euratom) No 883/2013 of the European Parliament and of the Council ( 29 ) , ENISA shall by 28 December 2019, accede to the Interinstitutional Agreement of 25 May 1999 between the European Parliament, the Council of the European Union and the Commission of the European Communities concerning internal investigations by the European Anti-Fraud Office (OLAF) ( 30 ) . ENISA shall adopt appropriate provisions applicable to all employees of ENISA, using the template set out in the Annex to that Agreement.",
+          "text": "1. In order to facilitate the combating of fraud, corruption and other unlawful activities under Regulation (EU, Euratom) No 883/2013 of the European Parliament and of the Council ( 7 ), ENISA shall by 28 December 2019, accede to the Interinstitutional Agreement of 25 May 1999 between the European Parliament, the Council of the European Union and the Commission of the European Communities concerning internal investigations by the European Anti-Fraud Office (OLAF) ( 8 ). ENISA shall adopt appropriate provisions applicable to all employees of ENISA, using the template set out in the Annex to that Agreement.",
           "class": ""
         },
         {
@@ -1258,7 +1568,7 @@
         },
         {
           "id": "art_33__3",
-          "text": "3. OLAF may carry out investigations, including on-the-spot checks and inspections, in accordance with the provisions and procedures laid down in Regulation (EU, Euratom) No 883/2013 and Council Regulation (Euratom, EC) No 2185/96 ( 31 ) , with a view to establishing whether there has been fraud, corruption or any other illegal activity affecting the financial interests of the Union in connection with a grant or a contract funded by ENISA.",
+          "text": "3. OLAF may carry out investigations, including on-the-spot checks and inspections, in accordance with the provisions and procedures laid down in Regulation (EU, Euratom) No 883/2013 and Council Regulation (Euratom, EC) No 2185/96 ( 9 ), with a view to establishing whether there has been fraud, corruption or any other illegal activity affecting the financial interests of the Union in connection with a grant or a contract funded by ENISA.",
           "class": ""
         },
         {
@@ -1427,7 +1737,7 @@
       "paragraphs": [
         {
           "id": "art_40__1",
-          "text": "1. Council Regulation No 1 ( 32 ) shall apply to ENISA. The Member States and the other bodies appointed by the Member States may address ENISA and receive a reply in the official language of the institutions of the Union that they choose.",
+          "text": "1. Council Regulation No 1 ( 10 ) shall apply to ENISA. The Member States and the other bodies appointed by the Member States may address ENISA and receive a reply in the official language of the institutions of the Union that they choose.",
           "class": ""
         },
         {
@@ -1524,12 +1834,12 @@
       "paragraphs": [
         {
           "id": "art_46__1",
-          "text": "1. The European cybersecurity certification framework shall be established in order to improve the conditions for the functioning of the internal market by increasing the level of cybersecurity within the Union and enabling a harmonised approach at Union level to European cybersecurity certification schemes, with a view to creating a digital single market for ICT products, ICT services and ICT processes.",
+          "text": "1. The European cybersecurity certification framework shall be established in order to improve the conditions for the functioning of the internal market by increasing the level of cybersecurity within the Union and enabling a harmonised approach at Union level to European cybersecurity certification schemes, with a view to creating a digital single market for ICT products, ICT services, ICT processes and managed security services.",
           "class": ""
         },
         {
           "id": "art_46__2",
-          "text": "2. The European cybersecurity certification framework shall provide for a mechanism to establish European cybersecurity certification schemes and to attest that the ICT products, ICT services and ICT processes that have been evaluated in accordance with such schemes comply with specified security requirements for the purpose of protecting the availability, authenticity, integrity or confidentiality of stored or transmitted or processed data or the functions or services offered by, or accessible via, those products, services and processes throughout their life cycle.",
+          "text": "2. The European cybersecurity certification framework shall provide for a mechanism to establish European cybersecurity certification schemes and to attest that the ICT products, ICT services and ICT processes that have been evaluated in accordance with such schemes comply with specified security requirements for the purpose of protecting the availability, authenticity, integrity or confidentiality of stored or transmitted or processed data or the functions or services offered by, or accessible via, those products, services and processes throughout their life cycle. In addition, it shall attest that managed security services that have been evaluated in accordance with such schemes comply with specified security requirements for the purpose of protecting the availability, authenticity, integrity and confidentiality of data which are accessed, processed, stored or transmitted in relation to the provision of those services, and that those services are provided continuously with the requisite competence, expertise and experience by staff with a sufficient and appropriate level of relevant technical knowledge and professional integrity.",
           "class": ""
         }
       ]
@@ -1546,46 +1856,51 @@
         },
         {
           "id": "art_47__2",
-          "text": "2. The Union rolling work programme shall in particular include a list of ICT products, ICT services and ICT processes or categories thereof that are capable of benefiting from being included in the scope of a European cybersecurity certification scheme.",
+          "text": "2. The Union rolling work programme shall in particular include a list of ICT products, ICT services, ICT processes and managed security services, or categories thereof, that are capable of benefiting from being included in the scope of a European cybersecurity certification scheme.",
           "class": ""
         },
         {
           "id": "art_47__3",
-          "text": "3. Inclusion of specific ICT products, ICT services and ICT processes or categories thereof in the Union rolling work programme shall be justified on the basis of one or more of the following grounds:",
+          "text": "3. Inclusion in the Union rolling work programme of specific ICT products, ICT services, ICT processes, or managed security services, or categories thereof, shall be justified on the basis of one or more of the following grounds:",
           "class": ""
         },
         {
-          "id": "art_47__4",
-          "text": "(a) the availability and the development of national cybersecurity certification schemes covering a specific category of ICT products, ICT services or ICT processes and, in particular, as regards the risk of fragmentation;",
+          "id": "art_47__3_a",
+          "text": "(a) the availability and the development of national cybersecurity certification schemes covering a specific category of ICT products, ICT services, ICT processes or managed security services and, in particular, as regards the risk of fragmentation;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_47__5",
+          "id": "art_47__3_b",
           "text": "(b) relevant Union or Member State law or policy;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_47__6",
+          "id": "art_47__3_c",
           "text": "(c) market demand;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_47__7",
+          "id": "art_47__3_ca",
+          "text": "(ca) technological developments and the availability and development of international cybersecurity certification schemes and international standards and standards used by the industry;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_47__3_d",
           "text": "(d) developments in the cyber threat landscape;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_47__8",
+          "id": "art_47__3_e",
           "text": "(e) request for the preparation of a specific candidate scheme by the ECCG.",
           "class": "list-item-l1"
         },
         {
-          "id": "art_47__9",
+          "id": "art_47__4",
           "text": "4. The Commission shall take due account of the opinions issued by the ECCG and the Stakeholder Certification Group on the draft Union rolling work programme.",
           "class": ""
         },
         {
-          "id": "art_47__10",
+          "id": "art_47__5",
           "text": "5. The first Union rolling work programme shall be published by 28 June 2020. The Union rolling work programme shall be updated at least once every three years and more often if necessary.",
           "class": ""
         }
@@ -1615,22 +1930,22 @@
       "paragraphs": [
         {
           "id": "art_49__1",
-          "text": "1. Following a request from the Commission pursuant to <a href=\"#a:act_eu_csa_2019_0881:art_48\" class=\"ref\" data-article=\"48\">Article 48</a>, ENISA shall prepare a candidate scheme which meets the requirements set out in Articles <a href=\"#a:act_eu_csa_2019_0881:art_51\" class=\"ref\" data-article=\"51\">51</a>, <a href=\"#a:act_eu_csa_2019_0881:art_52\" class=\"ref\" data-article=\"52\">52</a> and <a href=\"#a:act_eu_csa_2019_0881:art_54\" class=\"ref\" data-article=\"54\">54</a>.",
+          "text": "1. Following a request from the Commission pursuant to <a href=\"#a:act_eu_csa_2019_0881:art_48\" class=\"ref\" data-article=\"48\">Article 48</a>, ENISA shall prepare a candidate scheme that meets the applicable requirements set out in Articles <a href=\"#a:act_eu_csa_2019_0881:art_51\" class=\"ref\" data-article=\"51\">51</a>, <a href=\"#a:act_eu_csa_2019_0881:art_51a\" class=\"ref\" data-article=\"51a\">51a</a>, <a href=\"#a:act_eu_csa_2019_0881:art_52\" class=\"ref\" data-article=\"52\">52</a> and <a href=\"#a:act_eu_csa_2019_0881:art_54\" class=\"ref\" data-article=\"54\">54</a>.",
           "class": ""
         },
         {
           "id": "art_49__2",
-          "text": "2. Following a request from the ECCG pursuant to <a href=\"#a:act_eu_csa_2019_0881:art_48\" class=\"ref\" data-article=\"48\">Article 48</a>(2), ENISA may prepare a candidate scheme which meets the requirements set out in Articles <a href=\"#a:act_eu_csa_2019_0881:art_51\" class=\"ref\" data-article=\"51\">51</a>, <a href=\"#a:act_eu_csa_2019_0881:art_52\" class=\"ref\" data-article=\"52\">52</a> and <a href=\"#a:act_eu_csa_2019_0881:art_54\" class=\"ref\" data-article=\"54\">54</a>. If ENISA refuses such a request, it shall give reasons for its refusal. Any decision to refuse such a request shall be taken by the Management Board.",
+          "text": "2. Following a request from the ECCG pursuant to <a href=\"#a:act_eu_csa_2019_0881:art_48\" class=\"ref\" data-article=\"48\">Article 48</a>(2), ENISA may prepare a candidate scheme that meets the applicable requirements set out in Articles <a href=\"#a:act_eu_csa_2019_0881:art_51\" class=\"ref\" data-article=\"51\">51</a>, <a href=\"#a:act_eu_csa_2019_0881:art_51a\" class=\"ref\" data-article=\"51a\">51a</a>, <a href=\"#a:act_eu_csa_2019_0881:art_52\" class=\"ref\" data-article=\"52\">52</a> and <a href=\"#a:act_eu_csa_2019_0881:art_54\" class=\"ref\" data-article=\"54\">54</a>. If ENISA refuses such a request, it shall give reasons for its refusal. Any decision to refuse such a request shall be taken by the Management Board.",
           "class": ""
         },
         {
           "id": "art_49__3",
-          "text": "3. When preparing a candidate scheme, ENISA shall consult all relevant stakeholders by means of a formal, open, transparent and inclusive consultation process.",
+          "text": "3. When preparing a candidate scheme, ENISA shall consult all relevant stakeholders in a timely manner by means of a formal, open, transparent and inclusive consultation process. When transmitting the candidate scheme to the Commission pursuant to paragraph 6, ENISA shall provide information on the manner in which it has complied with this paragraph.",
           "class": ""
         },
         {
           "id": "art_49__4",
-          "text": "4. For each candidate scheme, ENISA shall establish an ad hoc working group in accordance with <a href=\"#a:act_eu_csa_2019_0881:art_20\" class=\"ref\" data-article=\"20\">Article 20</a>(4) for the purpose of providing ENISA with specific advice and expertise.",
+          "text": "4. For each candidate scheme, ENISA shall establish an ad hoc working group in accordance with <a href=\"#a:act_eu_csa_2019_0881:art_20\" class=\"ref\" data-article=\"20\">Article 20</a>(4) for the purpose of providing ENISA with specific advice and expertise. Those ad hoc working groups shall, as appropriate and without prejudice to the procedures and discretion provided for in <a href=\"#a:act_eu_csa_2019_0881:art_20\" class=\"ref\" data-article=\"20\">Article 20</a>(4), include experts from the public administrations of the Member States, the Union institutions, bodies, offices and agencies, and the private sector.",
           "class": ""
         },
         {
@@ -1645,12 +1960,39 @@
         },
         {
           "id": "art_49__7",
-          "text": "7. The Commission, based on the candidate scheme prepared by ENISA, may adopt implementing acts providing for a European cybersecurity certification scheme for ICT products, ICT services and ICT processes which meets the requirements set out in Articles <a href=\"#a:act_eu_csa_2019_0881:art_51\" class=\"ref\" data-article=\"51\">51</a>, <a href=\"#a:act_eu_csa_2019_0881:art_52\" class=\"ref\" data-article=\"52\">52</a> and <a href=\"#a:act_eu_csa_2019_0881:art_54\" class=\"ref\" data-article=\"54\">54</a>. Those implementing acts shall be adopted in accordance with the examination procedure referred to in <a href=\"#a:act_eu_csa_2019_0881:art_66\" class=\"ref\" data-article=\"66\">Article 66</a>(2).",
+          "text": "7. The Commission may, on the basis of the candidate scheme prepared by ENISA, adopt implementing acts providing for a European cybersecurity certification scheme for ICT products, ICT services, ICT processes and managed security services which meets the relevant requirements set out in Articles <a href=\"#a:act_eu_csa_2019_0881:art_51\" class=\"ref\" data-article=\"51\">51</a>, <a href=\"#a:act_eu_csa_2019_0881:art_51a\" class=\"ref\" data-article=\"51a\">51a</a>, <a href=\"#a:act_eu_csa_2019_0881:art_52\" class=\"ref\" data-article=\"52\">52</a> and <a href=\"#a:act_eu_csa_2019_0881:art_54\" class=\"ref\" data-article=\"54\">54</a>. Those implementing acts shall be adopted in accordance with the examination procedure referred to in <a href=\"#a:act_eu_csa_2019_0881:art_66\" class=\"ref\" data-article=\"66\">Article 66</a>(2).",
           "class": ""
         },
         {
           "id": "art_49__8",
           "text": "8. At least every five years, ENISA shall evaluate each adopted European cybersecurity certification scheme, taking into account the feedback received from interested parties. If necessary, the Commission or the ECCG may request ENISA to start the process of developing a revised candidate scheme in accordance with <a href=\"#a:act_eu_csa_2019_0881:art_48\" class=\"ref\" data-article=\"48\">Article 48</a> and this Article.",
+          "class": ""
+        }
+      ]
+    },
+    {
+      "id": "art_49a",
+      "title": "Article 49a",
+      "heading": "Information and consultation on the European cybersecurity certification schemes",
+      "paragraphs": [
+        {
+          "id": "art_49a__1",
+          "text": "1. The Commission shall make the information on its request to ENISA to prepare a candidate scheme or to review an existing European cybersecurity certification scheme as referred to in <a href=\"#a:act_eu_csa_2019_0881:art_48\" class=\"ref\" data-article=\"48\">Article 48</a> publicly available.",
+          "class": ""
+        },
+        {
+          "id": "art_49a__2",
+          "text": "2. During the preparation of a candidate scheme by ENISA pursuant to <a href=\"#a:act_eu_csa_2019_0881:art_49\" class=\"ref\" data-article=\"49\">Article 49</a>, the European Parliament, the Council or both may request the Commission, in its capacity as chair of the ECCG, and ENISA to present relevant information on a draft candidate scheme on a quarterly basis. Upon the request of the European Parliament or the Council, ENISA, in agreement with the Commission and without prejudice to <a href=\"#a:act_eu_csa_2019_0881:art_27\" class=\"ref\" data-article=\"27\">Article 27</a>, may make available to the European Parliament and to the Council relevant parts of a draft candidate scheme in a manner appropriate to the confidentiality level required, and where appropriate in a restricted manner.",
+          "class": ""
+        },
+        {
+          "id": "art_49a__3",
+          "text": "3. In order to enhance the dialogue between the Union institutions and to contribute to a formal, open, transparent and inclusive consultation process, the European Parliament, the Council or both may invite the Commission and ENISA to discuss matters concerning the functioning of European cybersecurity certification schemes for ICT products, ICT services, ICT processes or managed security services.",
+          "class": ""
+        },
+        {
+          "id": "art_49a__4",
+          "text": "4. The Commission shall take into account, where appropriate, elements arising from the views expressed by the European Parliament and by the Council on the matters referred to in paragraph 3 of this Article when evaluating this Regulation pursuant to <a href=\"#a:act_eu_csa_2019_0881:art_67\" class=\"ref\" data-article=\"67\">Article 67</a>.",
           "class": ""
         }
       ]
@@ -1675,12 +2017,109 @@
     {
       "id": "art_51",
       "title": "Article 51",
-      "heading": "Security objectives of European cybersecurity certification schemes",
+      "heading": "Security objectives of European cybersecurity certification schemes for ICT products, ICT services and ICT processes",
       "paragraphs": [
         {
           "id": "art_51__1",
-          "text": "A European cybersecurity certification scheme shall be designed to achieve, as applicable, at least the following security objectives: (a) to protect stored, transmitted or otherwise processed data against accidental or unauthorised storage, processing, access or disclosure during the entire life cycle of the ICT product, ICT service or ICT process; (b) to protect stored, transmitted or otherwise processed data against accidental or unauthorised destruction, loss or alteration or lack of availability during the entire life cycle of the ICT product, ICT service or ICT process; (c) that authorised persons, programs or machines are able only to access the data, services or functions to which their access rights refer; (d) to identify and document known dependencies and vulnerabilities; (e) to record which data, services or functions have been accessed, used or otherwise processed, at what times and by whom; (f) to make it possible to check which data, services or functions have been accessed, used or otherwise processed, at what times and by whom; (g) to verify that ICT products, ICT services and ICT processes do not contain known vulnerabilities; (h) to restore the availability and access to data, services and functions in a timely manner in the event of a physical or technical incident; (i) that ICT products, ICT services and ICT processes are secure by default and by design; (j) that ICT products, ICT services and ICT processes are provided with up-to-date software and hardware that do not contain publicly known vulnerabilities, and are provided with mechanisms for secure updates.",
+          "text": "A European cybersecurity certification scheme for ICT products, ICT services or ICT processes shall be designed to achieve, as applicable, at least the following security objectives:",
           "class": ""
+        },
+        {
+          "id": "art_51__1_a",
+          "text": "(a) to protect stored, transmitted or otherwise processed data against accidental or unauthorised storage, processing, access or disclosure during the entire life cycle of the ICT product, ICT service or ICT process;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_51__1_b",
+          "text": "(b) to protect stored, transmitted or otherwise processed data against accidental or unauthorised destruction, loss or alteration or lack of availability during the entire life cycle of the ICT product, ICT service or ICT process;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_51__1_c",
+          "text": "(c) that authorised persons, programs or machines are able only to access the data, services or functions to which their access rights refer;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_51__1_d",
+          "text": "(d) to identify and document known dependencies and vulnerabilities;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_51__1_e",
+          "text": "(e) to record which data, services or functions have been accessed, used or otherwise processed, at what times and by whom;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_51__1_f",
+          "text": "(f) to make it possible to check which data, services or functions have been accessed, used or otherwise processed, at what times and by whom;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_51__1_g",
+          "text": "(g) to verify that ICT products, ICT services and ICT processes do not contain known vulnerabilities;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_51__1_h",
+          "text": "(h) to restore the availability and access to data, services and functions in a timely manner in the event of a physical or technical incident;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_51__1_i",
+          "text": "(i) that ICT products, ICT services and ICT processes are secure by default and by design;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_51__1_j",
+          "text": "(j) that ICT products, ICT services and ICT processes are provided with up-to-date software and hardware that do not contain publicly known vulnerabilities, and are provided with mechanisms for secure updates.",
+          "class": "list-item-l1"
+        }
+      ]
+    },
+    {
+      "id": "art_51a",
+      "title": "Article 51a",
+      "heading": "Security objectives of European cybersecurity certification schemes for managed security services",
+      "paragraphs": [
+        {
+          "id": "art_51a__1",
+          "text": "A European cybersecurity certification scheme for managed security services shall be designed to achieve, as applicable, at least the following security objectives:",
+          "class": ""
+        },
+        {
+          "id": "art_51a__1_a",
+          "text": "(a) that the managed security services are provided with the requisite competence, expertise and experience, including that the staff tasked with providing those services have a sufficient and appropriate level of technical knowledge and competence in the specific field, sufficient and appropriate experience, and the highest degree of professional integrity;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_51a__1_b",
+          "text": "(b) that the provider has appropriate internal procedures in place to ensure that the managed security services are provided at a sufficient and appropriate level of quality at all times;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_51a__1_c",
+          "text": "(c) that data accessed, stored, transmitted or otherwise processed in relation to the provision of managed security services are protected against accidental or unauthorised access, storage, disclosure, destruction, other processing, or loss or alteration or lack of availability;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_51a__1_d",
+          "text": "(d) that the availability of, and access to, data, services and functions is restored in a timely manner in the event of a physical or technical incident;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_51a__1_e",
+          "text": "(e) that authorised persons, programs or machines are able to access only the data, services or functions to which their access rights refer;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_51a__1_f",
+          "text": "(f) that a record is kept and is available for assessment, of the data, services or functions that have been accessed, used or otherwise processed, at what times and by whom;",
+          "class": "list-item-l1"
+        },
+        {
+          "id": "art_51a__1_g",
+          "text": "(g) that the ICT products, ICT services and ICT processes deployed in the provision of the managed security services are secure by design and by default and, where applicable, include the latest security updates and do not contain publicly known vulnerabilities.",
+          "class": "list-item-l1"
         }
       ]
     },
@@ -1691,7 +2130,7 @@
       "paragraphs": [
         {
           "id": "art_52__1",
-          "text": "1. A European cybersecurity certification scheme may specify one or more of the following assurance levels for ICT products, ICT services and ICT processes: ‘basic’, ‘substantial’ or ‘high’. The assurance level shall be commensurate with the level of the risk associated with the intended use of the ICT product, ICT service or ICT process, in terms of the probability and impact of an incident.",
+          "text": "1. A European cybersecurity certification scheme may specify one or more of the following assurance levels for ICT products, ICT services, ICT processes and managed security services: ‘basic’, ‘substantial’ or ‘high’. The assurance level shall be commensurate with the level of the risk associated with the intended use of the ICT product, ICT service, ICT process or managed security service, in terms of the probability and impact of an incident.",
           "class": ""
         },
         {
@@ -1701,7 +2140,7 @@
         },
         {
           "id": "art_52__3",
-          "text": "3. The security requirements corresponding to each assurance level shall be provided in the relevant European cybersecurity certification scheme, including the corresponding security functionalities and the corresponding rigour and depth of the evaluation that the ICT product, ICT service or ICT process is to undergo.",
+          "text": "3. The security requirements corresponding to each assurance level shall be provided in the relevant European cybersecurity certification scheme, including the corresponding security functionalities and the corresponding rigour and depth of the evaluation that the ICT product, ICT service, ICT process or managed security service is to undergo.",
           "class": ""
         },
         {
@@ -1711,17 +2150,17 @@
         },
         {
           "id": "art_52__5",
-          "text": "5. A European cybersecurity certificate or EU statement of conformity that refers to assurance level ‘basic’ shall provide assurance that the ICT products, ICT services and ICT processes for which that certificate or that EU statement of conformity is issued meet the corresponding security requirements, including security functionalities, and that they have been evaluated at a level intended to minimise the known basic risks of incidents and cyberattacks. The evaluation activities to be undertaken shall include at least a review of technical documentation. Where such a review is not appropriate, substitute evaluation activities with equivalent effect shall be undertaken.",
+          "text": "5. A European cybersecurity certificate or EU statement of conformity that refers to assurance level ‘basic’ shall provide assurance that the ICT products, ICT services, ICT processes or managed security services for which that certificate or that EU statement of conformity is issued meet the corresponding security requirements, including security functionalities, and that they have been evaluated at a level intended to minimise the known basic risks of incidents and cyberattacks. The evaluation activities to be undertaken shall include at least a review of technical documentation. Where such a review is not appropriate, substitute evaluation activities with equivalent effect shall be undertaken.",
           "class": ""
         },
         {
           "id": "art_52__6",
-          "text": "6. A European cybersecurity certificate that refers to assurance level ‘substantial’ shall provide assurance that the ICT products, ICT services and ICT processes for which that certificate is issued meet the corresponding security requirements, including security functionalities, and that they have been evaluated at a level intended to minimise the known cybersecurity risks, and the risk of incidents and cyberattacks carried out by actors with limited skills and resources. The evaluation activities to be undertaken shall include at least the following: a review to demonstrate the absence of publicly known vulnerabilities and testing to demonstrate that the ICT products, ICT services or ICT processes correctly implement the necessary security functionalities. Where any such evaluation activities are not appropriate, substitute evaluation activities with equivalent effect shall be undertaken.",
+          "text": "6. A European cybersecurity certificate that refers to assurance level ‘substantial’ shall provide assurance that the ICT products, ICT services, ICT processes or managed security services for which that certificate is issued meet the corresponding security requirements, including security functionalities, and that they have been evaluated at a level intended to minimise the known cybersecurity risks, and the risk of incidents and cyberattacks carried out by actors with limited skills and resources. The evaluation activities to be undertaken shall include at least the following: a review to demonstrate the absence of publicly known vulnerabilities and testing to demonstrate that the ICT products, ICT services, ICT processes or managed security services correctly implement the necessary security functionalities. Where any such evaluation activities are not appropriate, substitute evaluation activities with equivalent effect shall be undertaken.",
           "class": ""
         },
         {
           "id": "art_52__7",
-          "text": "7. A European cybersecurity certificate that refers to assurance level ‘high’ shall provide assurance that the ICT products, ICT services and ICT processes for which that certificate is issued meet the corresponding security requirements, including security functionalities, and that they have been evaluated at a level intended to minimise the risk of state-of-the-art cyberattacks carried out by actors with significant skills and resources. The evaluation activities to be undertaken shall include at least the following: a review to demonstrate the absence of publicly known vulnerabilities; testing to demonstrate that the ICT products, ICT services or ICT processes correctly implement the necessary security functionalities at the state of the art; and an assessment of their resistance to skilled attackers, using penetration testing. Where any such evaluation activities are not appropriate, substitute activities with equivalent effect shall be undertaken.",
+          "text": "7. A European cybersecurity certificate that refers to assurance level ‘high’ shall provide assurance that the ICT products, ICT services, ICT processes or managed security services for which that certificate is issued meet the corresponding security requirements, including security functionalities, and that they have been evaluated at a level intended to minimise the risk of state-of-the-art cyberattacks carried out by actors with significant skills and resources. The evaluation activities to be undertaken shall include at least the following: a review to demonstrate the absence of publicly known vulnerabilities; testing to demonstrate that the ICT products, ICT services, ICT processes or managed security services correctly implement the necessary security functionalities at the state of the art; and an assessment of their resistance to skilled attackers, using penetration testing. Where any such evaluation activities are not appropriate, substitute activities with equivalent effect shall be undertaken.",
           "class": ""
         },
         {
@@ -1738,17 +2177,17 @@
       "paragraphs": [
         {
           "id": "art_53__1",
-          "text": "1. A European cybersecurity certification scheme may allow for the conformity self-assessment under the sole responsibility of the manufacturer or provider of ICT products, ICT services or ICT processes. Conformity self-assessment shall be permitted only in relation to ICT products, ICT services and ICT processes that present a low risk corresponding to assurance level ‘basic’.",
+          "text": "1. A European cybersecurity certification scheme may allow for the conformity self-assessment under the sole responsibility of the manufacturer or provider of ICT products, ICT services, ICT processes or managed security services. Conformity self-assessment shall be permitted only in relation to ICT products, ICT services, ICT processes or managed security services that present a low risk corresponding to assurance level ‘basic’.",
           "class": ""
         },
         {
           "id": "art_53__2",
-          "text": "2. The manufacturer or provider of ICT products, ICT services or ICT processes may issue an EU statement of conformity stating that the fulfilment of the requirements set out in the scheme has been demonstrated. By issuing such a statement, the manufacturer or provider of ICT products, ICT services or ICT processes shall assume responsibility for the compliance of the ICT product, ICT service or ICT process with the requirements set out in that scheme.",
+          "text": "2. The manufacturer or provider of ICT products, ICT services, ICT processes or managed security services may issue an EU statement of conformity stating that the fulfilment of the requirements set out in the scheme has been demonstrated. By issuing such a statement, the manufacturer or provider of ICT products, ICT services, ICT processes or managed security services shall assume responsibility for the compliance of the ICT product, ICT service, ICT process or managed security service with the requirements set out in that scheme.",
           "class": ""
         },
         {
           "id": "art_53__3",
-          "text": "3. The manufacturer or provider of ICT products, ICT services or ICT processes shall make the EU statement of conformity, technical documentation, and all other relevant information relating to the conformity of the ICT products or ICT services with the scheme available to the national cybersecurity certification authority referred to in <a href=\"#a:act_eu_csa_2019_0881:art_58\" class=\"ref\" data-article=\"58\">Article 58</a> for the period provided for in the corresponding European cybersecurity certification scheme. A copy of the EU statement of conformity shall be submitted to the national cybersecurity certification authority and to ENISA.",
+          "text": "3. The manufacturer or provider of ICT products, ICT services, ICT processes or managed security services shall make the EU statement of conformity, technical documentation, and all other relevant information relating to the conformity of the ICT products, ICT services, ICT processes or managed security services with the scheme available to the national cybersecurity certification authority designated pursuant to <a href=\"#a:act_eu_csa_2019_0881:art_58\" class=\"ref\" data-article=\"58\">Article 58</a> for the period provided for in the corresponding European cybersecurity certification scheme. A copy of the EU statement of conformity shall be submitted to the national cybersecurity certification authority and to ENISA.",
           "class": ""
         },
         {
@@ -1774,127 +2213,127 @@
           "class": ""
         },
         {
-          "id": "art_54__2",
-          "text": "(a) the subject matter and scope of the certification scheme, including the type or categories of ICT products, ICT services and ICT processes covered;",
+          "id": "art_54__1_a",
+          "text": "(a) the subject matter and scope of the certification scheme, including the type or categories of ICT products, ICT services, ICT processes or managed security services covered;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_54__3",
+          "id": "art_54__1_b",
           "text": "(b) a clear description of the purpose of the scheme and of how the selected standards, evaluation methods and assurance levels correspond to the needs of the intended users of the scheme;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_54__4",
+          "id": "art_54__1_c",
           "text": "(c) references to the international, European or national standards applied in the evaluation or, where such standards are not available or appropriate, to technical specifications that meet the requirements set out in Annex II to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32012R1025\" class=\"ref\" data-ref=\"celex:32012R1025\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 1025/2012</a> or, if such specifications are not available, to technical specifications or other cybersecurity requirements defined in the European cybersecurity certification scheme;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_54__5",
+          "id": "art_54__1_d",
           "text": "(d) where applicable, one or more assurance levels;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_54__6",
+          "id": "art_54__1_e",
           "text": "(e) an indication of whether conformity self-assessment is permitted under the scheme;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_54__7",
+          "id": "art_54__1_f",
           "text": "(f) where applicable, specific or additional requirements to which conformity assessment bodies are subject in order to guarantee their technical competence to evaluate the cybersecurity requirements;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_54__8",
-          "text": "(g) the specific evaluation criteria and methods to be used, including types of evaluation, in order to demonstrate that the security objectives referred to in <a href=\"#a:act_eu_csa_2019_0881:art_51\" class=\"ref\" data-article=\"51\">Article 51</a> are achieved;",
+          "id": "art_54__1_g",
+          "text": "(g) the specific evaluation criteria and methods to be used, including types of evaluation, in order to demonstrate that the applicable security objectives referred to in Articles <a href=\"#a:act_eu_csa_2019_0881:art_51\" class=\"ref\" data-article=\"51\">51</a> and <a href=\"#a:act_eu_csa_2019_0881:art_51a\" class=\"ref\" data-article=\"51a\">51a</a> are achieved;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_54__9",
+          "id": "art_54__1_h",
           "text": "(h) where applicable, the information which is necessary for certification and which is to be supplied or otherwise be made available to the conformity assessment bodies by an applicant;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_54__10",
+          "id": "art_54__1_i",
           "text": "(i) where the scheme provides for marks or labels, the conditions under which such marks or labels may be used;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_54__11",
-          "text": "(j) rules for monitoring compliance of ICT products, ICT services and ICT processes with the requirements of the European cybersecurity certificates or the EU statements of conformity, including mechanisms to demonstrate continued compliance with the specified cybersecurity requirements;",
+          "id": "art_54__1_j",
+          "text": "(j) rules for monitoring the compliance of ICT products, ICT services, ICT processes or managed security services with the requirements of the European cybersecurity certificates or the EU statements of conformity, including mechanisms to demonstrate continued compliance with the specified cybersecurity requirements;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_54__12",
+          "id": "art_54__1_k",
           "text": "(k) where applicable, the conditions for issuing, maintaining, continuing and renewing the European cybersecurity certificates, as well as the conditions for extending or reducing the scope of certification;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_54__13",
-          "text": "(l) rules concerning the consequences for ICT products, ICT services and ICT processes that have been certified or for which an EU statement of conformity has been issued, but which do not comply with the requirements of the scheme;",
+          "id": "art_54__1_l",
+          "text": "(l) rules concerning the consequences for ICT products, ICT services, ICT processes or managed security services that have been certified or for which an EU statement of conformity has been issued, but which do not comply with the requirements of the scheme;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_54__14",
+          "id": "art_54__1_m",
           "text": "(m) rules concerning how previously undetected cybersecurity vulnerabilities in ICT products, ICT services and ICT processes are to be reported and dealt with;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_54__15",
+          "id": "art_54__1_n",
           "text": "(n) where applicable, rules concerning the retention of records by conformity assessment bodies;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_54__16",
-          "text": "(o) the identification of national or international cybersecurity certification schemes covering the same type or categories of ICT products, ICT services and ICT processes, security requirements, evaluation criteria and methods, and assurance levels;",
+          "id": "art_54__1_o",
+          "text": "(o) the identification of national or international cybersecurity certification schemes covering the same type or categories of ICT products, ICT services, ICT processes or managed security services, security requirements, evaluation criteria and methods, and assurance levels;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_54__17",
+          "id": "art_54__1_p",
           "text": "(p) the content and the format of the European cybersecurity certificates and the EU statements of conformity to be issued;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_54__18",
-          "text": "(q) the period of the availability of the EU statement of conformity, technical documentation, and all other relevant information to be made available by the manufacturer or provider of ICT products, ICT services or ICT processes;",
+          "id": "art_54__1_q",
+          "text": "(q) the period of the availability of the EU statement of conformity, technical documentation, and all other relevant information to be made available by the manufacturer or provider of ICT products, ICT services, ICT processes or managed security services;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_54__19",
+          "id": "art_54__1_r",
           "text": "(r) maximum period of validity of European cybersecurity certificates issued under the scheme;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_54__20",
+          "id": "art_54__1_s",
           "text": "(s) disclosure policy for European cybersecurity certificates issued, amended or withdrawn under the scheme;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_54__21",
+          "id": "art_54__1_t",
           "text": "(t) conditions for the mutual recognition of certification schemes with third countries;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_54__22",
+          "id": "art_54__1_u",
           "text": "(u) where applicable, rules concerning any peer assessment mechanism established by the scheme for the authorities or bodies issuing European cybersecurity certificates for assurance level ‘high’ pursuant to <a href=\"#a:act_eu_csa_2019_0881:art_56\" class=\"ref\" data-article=\"56\">Article 56</a>(6). Such mechanism shall be without prejudice to the peer review provided for in <a href=\"#a:act_eu_csa_2019_0881:art_59\" class=\"ref\" data-article=\"59\">Article 59</a>;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_54__23",
+          "id": "art_54__1_v",
           "text": "(v) format and procedures to be followed by manufacturers or providers of ICT products, ICT services or ICT processes in supplying and updating the supplementary cybersecurity information in accordance with <a href=\"#a:act_eu_csa_2019_0881:art_55\" class=\"ref\" data-article=\"55\">Article 55</a>.",
           "class": "list-item-l1"
         },
         {
-          "id": "art_54__24",
+          "id": "art_54__2",
           "text": "2. The specified requirements of the European cybersecurity certification scheme shall be consistent with any applicable legal requirements, in particular requirements emanating from harmonised Union law.",
           "class": ""
         },
         {
-          "id": "art_54__25",
+          "id": "art_54__3",
           "text": "3. Where a specific Union legal act so provides, a certificate or an EU statement of conformity issued under a European cybersecurity certification scheme may be used to demonstrate the presumption of conformity with requirements of that legal act.",
           "class": ""
         },
         {
-          "id": "art_54__26",
+          "id": "art_54__4",
           "text": "4. In the absence of harmonised Union law, Member State law may also provide that a European cybersecurity certification scheme may be used for establishing the presumption of conformity with legal requirements.",
           "class": ""
         }
@@ -1911,27 +2350,27 @@
           "class": ""
         },
         {
-          "id": "art_55__2",
+          "id": "art_55__1_a",
           "text": "(a) guidance and recommendations to assist end users with the secure configuration, installation, deployment, operation and maintenance of the ICT products or ICT services;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_55__3",
+          "id": "art_55__1_b",
           "text": "(b) the period during which security support will be offered to end users, in particular as regards the availability of cybersecurity related updates;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_55__4",
+          "id": "art_55__1_c",
           "text": "(c) contact information of the manufacturer or provider and accepted methods for receiving vulnerability information from end users and security researchers;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_55__5",
+          "id": "art_55__1_d",
           "text": "(d) a reference to online repositories listing publicly disclosed vulnerabilities related to the ICT product, ICT service or ICT process and to any relevant cybersecurity advisories.",
           "class": "list-item-l1"
         },
         {
-          "id": "art_55__6",
+          "id": "art_55__2",
           "text": "2. The information referred to in paragraph 1 shall be available in electronic form and shall remain available and be updated as necessary at least until the expiry of the corresponding European cybersecurity certificate or EU statement of conformity.",
           "class": ""
         }
@@ -1944,7 +2383,7 @@
       "paragraphs": [
         {
           "id": "art_56__1",
-          "text": "1. ICT products, ICT services and ICT processes that have been certified under a European cybersecurity certification scheme adopted pursuant to <a href=\"#a:act_eu_csa_2019_0881:art_49\" class=\"ref\" data-article=\"49\">Article 49</a> shall be presumed to comply with the requirements of such scheme.",
+          "text": "1. ICT products, ICT services, ICT processes and managed security services that have been certified under a European cybersecurity certification scheme adopted pursuant to <a href=\"#a:act_eu_csa_2019_0881:art_49\" class=\"ref\" data-article=\"49\">Article 49</a> shall be presumed to comply with the requirements of such scheme.",
           "class": ""
         },
         {
@@ -1954,86 +2393,96 @@
         },
         {
           "id": "art_56__3",
-          "text": "3. The Commission shall regularly assess the efficiency and use of the adopted European cybersecurity certification schemes and whether a specific European cybersecurity certification scheme is to be made mandatory through relevant Union law to ensure an adequate level of cybersecurity of ICT products, ICT services and ICT processes in the Union and improve the functioning of the internal market. The first such assessment shall be carried out by 31 December 2023, and subsequent assessments shall be carried out at least every two years thereafter. Based on the outcome of those assessments, the Commission shall identify the ICT products, ICT services and ICT processes covered by an existing certification scheme which are to be covered by a mandatory certification scheme. As a priority, the Commission shall focus on the sectors listed in Annex II to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016L1148\" class=\"ref\" data-ref=\"celex:32016L1148\" target=\"_blank\" rel=\"noopener\">Directive (EU) 2016/1148</a>, which shall be assessed at the latest two years after the adoption of the first European cybersecurity certification scheme. When preparing the assessment the Commission shall:",
+          "text": "3. ►M1 The Commission shall regularly assess the efficiency and use of the adopted European cybersecurity certification schemes and whether a specific European cybersecurity certification scheme is to be made mandatory through relevant Union law to ensure an adequate level of cybersecurity of ICT products, ICT services, ICT processes and, from 4 February 2025, managed security services in the Union and improve the functioning of the internal market. The first such assessment shall be carried out by 31 December 2023, and subsequent assessments shall be carried out at least every two years thereafter. Based on the outcome of those assessments, the Commission shall identify the ICT products, ICT services, ICT processes and managed security services covered by an existing certification scheme which are to be covered by a mandatory certification scheme. ◄",
           "class": ""
         },
         {
-          "id": "art_56__4",
-          "text": "(a) take into account the impact of the measures on the manufacturers or providers of such ICT products, ICT services or ICT processes and on the users in terms of the cost of those measures and the societal or economic benefits stemming from the anticipated enhanced level of security for the targeted ICT products, ICT services or ICT processes;",
+          "id": "art_56__3_s2",
+          "text": "As a priority, the Commission shall focus on the sectors listed in Annex II to <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016L1148\" class=\"ref\" data-ref=\"celex:32016L1148\" target=\"_blank\" rel=\"noopener\">Directive (EU) 2016/1148</a>, which shall be assessed at the latest two years after the adoption of the first European cybersecurity certification scheme.",
+          "class": "subparagraph"
+        },
+        {
+          "id": "art_56__3_s3",
+          "text": "When preparing the assessment the Commission shall:",
+          "class": "subparagraph"
+        },
+        {
+          "id": "art_56__3_a",
+          "text": "(a) take into account the impact of the measures on the manufacturers or providers of such ICT products, ICT services, ICT processes or managed security services and on the users in terms of the cost of those measures and the societal or economic benefits stemming from the anticipated enhanced level of security for the targeted ICT products, ICT services, ICT processes or managed security services;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_56__5",
+          "id": "art_56__3_b",
           "text": "(b) take into account the existence and implementation of relevant Member State and third country law;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_56__6",
+          "id": "art_56__3_c",
           "text": "(c) carry out an open, transparent and inclusive consultation process with all relevant stakeholders and Member States;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_56__7",
-          "text": "(d) take into account any implementation deadlines, transitional measures and periods, in particular with regard to the possible impact of the measure on the manufacturers or providers of ICT products, ICT services or ICT processes, including SMEs;",
+          "id": "art_56__3_d",
+          "text": "(d) take into account any implementation deadlines, transitional measures and periods, in particular with regard to the possible impact of the measure on the manufacturers or providers of ICT products, ICT services, ICT processes or managed security services, including the specific interests and needs of SMEs, including microenterprises;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_56__8",
+          "id": "art_56__3_e",
           "text": "(e) propose the most speedy and efficient way in which the transition from a voluntary to mandatory certification schemes is to be implemented.",
           "class": "list-item-l1"
         },
         {
-          "id": "art_56__9",
+          "id": "art_56__4",
           "text": "4. The conformity assessment bodies referred to in <a href=\"#a:act_eu_csa_2019_0881:art_60\" class=\"ref\" data-article=\"60\">Article 60</a> shall issue European cybersecurity certificates pursuant to this Article referring to assurance level ‘basic’ or ‘substantial’ on the basis of criteria included in the European cybersecurity certification scheme adopted by the Commission pursuant to <a href=\"#a:act_eu_csa_2019_0881:art_49\" class=\"ref\" data-article=\"49\">Article 49</a>.",
           "class": ""
         },
         {
-          "id": "art_56__10",
+          "id": "art_56__5",
           "text": "5. By way of derogation from paragraph 4, in duly justified cases a European cybersecurity certification scheme may provide that European cybersecurity certificates resulting from that scheme are to be issued only by a public body. Such body shall be one of the following:",
           "class": ""
         },
         {
-          "id": "art_56__11",
+          "id": "art_56__5_a",
           "text": "(a) a national cybersecurity certification authority as referred to in <a href=\"#a:act_eu_csa_2019_0881:art_58\" class=\"ref\" data-article=\"58\">Article 58</a>(1); or",
           "class": "list-item-l1"
         },
         {
-          "id": "art_56__12",
+          "id": "art_56__5_b",
           "text": "(b) a public body that is accredited as a conformity assessment body pursuant to <a href=\"#a:act_eu_csa_2019_0881:art_60\" class=\"ref\" data-article=\"60\">Article 60</a>(1).",
           "class": "list-item-l1"
         },
         {
-          "id": "art_56__13",
+          "id": "art_56__6",
           "text": "6. Where a European cybersecurity certification scheme adopted pursuant to <a href=\"#a:act_eu_csa_2019_0881:art_49\" class=\"ref\" data-article=\"49\">Article 49</a> requires an assurance level ‘high’, the European cybersecurity certificate under that scheme is to be issued only by a national cybersecurity certification authority or, in the following cases, by a conformity assessment body:",
           "class": ""
         },
         {
-          "id": "art_56__14",
+          "id": "art_56__6_a",
           "text": "(a) upon prior approval by the national cybersecurity certification authority for each individual European cybersecurity certificate issued by a conformity assessment body; or",
           "class": "list-item-l1"
         },
         {
-          "id": "art_56__15",
+          "id": "art_56__6_b",
           "text": "(b) on the basis of a general delegation of the task of issuing such European cybersecurity certificates to a conformity assessment body by the national cybersecurity certification authority.",
           "class": "list-item-l1"
         },
         {
-          "id": "art_56__16",
-          "text": "7. The natural or legal person who submits ICT products, ICT services or ICT processes for certification shall make available to the national cybersecurity certification authority referred to in <a href=\"#a:act_eu_csa_2019_0881:art_58\" class=\"ref\" data-article=\"58\">Article 58</a>, where that authority is the body issuing the European cybersecurity certificate, or to the conformity assessment body referred to in <a href=\"#a:act_eu_csa_2019_0881:art_60\" class=\"ref\" data-article=\"60\">Article 60</a> all information necessary to conduct the certification.",
+          "id": "art_56__7",
+          "text": "7. The natural or legal person who submits ICT products, ICT services, ICT processes or managed security services for certification shall make available to the national cybersecurity certification authority designated pursuant to <a href=\"#a:act_eu_csa_2019_0881:art_58\" class=\"ref\" data-article=\"58\">Article 58</a>, where that authority is the body issuing the European cybersecurity certificate, or to the conformity assessment body referred to in <a href=\"#a:act_eu_csa_2019_0881:art_60\" class=\"ref\" data-article=\"60\">Article 60</a> all information necessary to conduct the certification.",
           "class": ""
         },
         {
-          "id": "art_56__17",
-          "text": "8. The holder of a European cybersecurity certificate shall inform the authority or body referred to in paragraph 7 of any subsequently detected vulnerabilities or irregularities concerning the security of the certified ICT product, ICT service or ICT process that may have an impact on its compliance with the requirements related to the certification. That authority or body shall forward that information without undue delay to the national cybersecurity certification authority concerned.",
+          "id": "art_56__8",
+          "text": "8. The holder of a European cybersecurity certificate shall inform the authority or body referred to in paragraph 7 of any subsequently detected vulnerabilities or irregularities concerning the security of the certified ICT product, ICT service, ICT process or managed security service that may have an impact on its compliance with the requirements related to the certification. That authority or body shall forward that information without undue delay to the national cybersecurity certification authority concerned.",
           "class": ""
         },
         {
-          "id": "art_56__18",
+          "id": "art_56__9",
           "text": "9. A European cybersecurity certificate shall be issued for the period provided for in the European cybersecurity certification scheme and may be renewed, provided that the relevant requirements continue to be met.",
           "class": ""
         },
         {
-          "id": "art_56__19",
+          "id": "art_56__10",
           "text": "10. A European cybersecurity certificate issued pursuant to this Article shall be recognised in all Member States.",
           "class": ""
         }
@@ -2046,12 +2495,12 @@
       "paragraphs": [
         {
           "id": "art_57__1",
-          "text": "1. Without prejudice to paragraph 3 of this Article, national cybersecurity certification schemes, and the related procedures for the ICT products, ICT services and ICT processes that are covered by a European cybersecurity certification scheme shall cease to produce effects from the date established in the implementing act adopted pursuant to <a href=\"#a:act_eu_csa_2019_0881:art_49\" class=\"ref\" data-article=\"49\">Article 49</a>(7). National cybersecurity certification schemes and the related procedures for the ICT products, ICT services and ICT processes that are not covered by a European cybersecurity certification scheme shall continue to exist.",
+          "text": "1. Without prejudice to paragraph 3 of this Article, national cybersecurity certification schemes, and the related procedures for the ICT products, ICT services, ICT processes and managed security services that are covered by a European cybersecurity certification scheme shall cease to produce effects from the date established in the implementing act adopted pursuant to <a href=\"#a:act_eu_csa_2019_0881:art_49\" class=\"ref\" data-article=\"49\">Article 49</a>(7). National cybersecurity certification schemes and the related procedures for the ICT products, ICT services, ICT processes and managed security services that are not covered by a European cybersecurity certification scheme shall continue to exist.",
           "class": ""
         },
         {
           "id": "art_57__2",
-          "text": "2. Member States shall not introduce new national cybersecurity certification schemes for ICT products, ICT services and ICT processes already covered by a European cybersecurity certification scheme that is in force.",
+          "text": "2. Member States shall not introduce new national cybersecurity certification schemes for ICT products, ICT services, ICT processes and managed security services already covered by a European cybersecurity certification scheme that is in force.",
           "class": ""
         },
         {
@@ -2107,88 +2556,88 @@
           "class": ""
         },
         {
-          "id": "art_58__8",
-          "text": "(a) supervise and enforce rules included in European cybersecurity certification schemes pursuant to point (j) of <a href=\"#a:act_eu_csa_2019_0881:art_54\" class=\"ref\" data-article=\"54\">Article 54</a>(1) for the monitoring of the compliance of ICT products, ICT services and ICT processes with the requirements of the European cybersecurity certificates that have been issued in their respective territories, in cooperation with other relevant market surveillance authorities;",
+          "id": "art_58__7_a",
+          "text": "(a) supervise and enforce rules included in European cybersecurity certification schemes pursuant to <a href=\"#a:act_eu_csa_2019_0881:art_54\" class=\"ref\" data-article=\"54\">Article 54</a>(1), point (j), for the monitoring of the compliance of ICT products, ICT services, ICT processes and managed security services with the requirements of the European cybersecurity certificates that have been issued in their respective territories, in cooperation with other relevant market surveillance authorities;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_58__9",
-          "text": "(b) monitor compliance with and enforce the obligations of the manufacturers or providers of ICT products, ICT services or ICT processes that are established in their respective territories and that carry out conformity self-assessment, and shall, in particular, monitor compliance with and enforce the obligations of such manufacturers or providers set out in <a href=\"#a:act_eu_csa_2019_0881:art_53\" class=\"ref\" data-article=\"53\">Article 53</a>(2) and (3) and in the corresponding European cybersecurity certification scheme;",
+          "id": "art_58__7_b",
+          "text": "(b) monitor compliance with and enforce the obligations of the manufacturers or providers of ICT products, ICT services, ICT processes or managed security services that are established in their respective territories and that carry out conformity self-assessment, and shall, in particular, monitor compliance with and enforce the obligations of such manufacturers or providers set out in <a href=\"#a:act_eu_csa_2019_0881:art_53\" class=\"ref\" data-article=\"53\">Article 53</a>(2) and (3) and in the corresponding European cybersecurity certification scheme;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_58__10",
+          "id": "art_58__7_c",
           "text": "(c) without prejudice to <a href=\"#a:act_eu_csa_2019_0881:art_60\" class=\"ref\" data-article=\"60\">Article 60</a>(3), actively assist and support the national accreditation bodies in the monitoring and supervision of the activities of conformity assessment bodies, for the purposes of this Regulation;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_58__11",
+          "id": "art_58__7_d",
           "text": "(d) monitor and supervise the activities of the public bodies referred to in <a href=\"#a:act_eu_csa_2019_0881:art_56\" class=\"ref\" data-article=\"56\">Article 56</a>(5);",
           "class": "list-item-l1"
         },
         {
-          "id": "art_58__12",
+          "id": "art_58__7_e",
           "text": "(e) where applicable, authorise conformity assessment bodies in accordance with <a href=\"#a:act_eu_csa_2019_0881:art_60\" class=\"ref\" data-article=\"60\">Article 60</a>(3) and restrict, suspend or withdraw existing authorisation where conformity assessment bodies infringe the requirements of this Regulation;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_58__13",
+          "id": "art_58__7_f",
           "text": "(f) handle complaints by natural or legal persons in relation to European cybersecurity certificates issued by national cybersecurity certification authorities or to European cybersecurity certificates issued by conformity assessment bodies in accordance with <a href=\"#a:act_eu_csa_2019_0881:art_56\" class=\"ref\" data-article=\"56\">Article 56</a>(6) or in relation to EU statements of conformity issued under <a href=\"#a:act_eu_csa_2019_0881:art_53\" class=\"ref\" data-article=\"53\">Article 53</a>, and shall investigate the subject matter of such complaints to the extent appropriate, and shall inform the complainant of the progress and the outcome of the investigation within a reasonable period;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_58__14",
+          "id": "art_58__7_g",
           "text": "(g) provide an annual summary report on the activities conducted under points (b), (c) and (d) of this paragraph or under paragraph 8 to ENISA and the ECCG;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_58__15",
-          "text": "(h) cooperate with other national cybersecurity certification authorities or other public authorities, including by sharing information on the possible non-compliance of ICT products, ICT services and ICT processes with the requirements of this Regulation or with the requirements of specific European cybersecurity certification schemes; and",
+          "id": "art_58__7_h",
+          "text": "(h) cooperate with other national cybersecurity certification authorities or other public authorities, including by sharing information on the possible non-compliance of ICT products, ICT services, ICT processes or managed security services with the requirements of this Regulation or with the requirements of specific European cybersecurity certification schemes; and",
           "class": "list-item-l1"
         },
         {
-          "id": "art_58__16",
+          "id": "art_58__7_i",
           "text": "(i) monitor relevant developments in the field of cybersecurity certification.",
           "class": "list-item-l1"
         },
         {
-          "id": "art_58__17",
+          "id": "art_58__8",
           "text": "8. Each national cybersecurity certification authority shall have at least the following powers:",
           "class": ""
         },
         {
-          "id": "art_58__18",
+          "id": "art_58__8_a",
           "text": "(a) to request conformity assessment bodies, European cybersecurity certificates’ holders and issuers of EU statements of conformity to provide any information it requires for the performance of its tasks;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_58__19",
+          "id": "art_58__8_b",
           "text": "(b) to carry out investigations, in the form of audits, of conformity assessment bodies, European cybersecurity certificates’ holders and issuers of EU statements of conformity, for the purpose of verifying their compliance with this Title;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_58__20",
+          "id": "art_58__8_c",
           "text": "(c) to take appropriate measures, in accordance with national law, to ensure that conformity assessment bodies, European cybersecurity certificates’ holders and issuers of EU statements of conformity comply with this Regulation or with a European cybersecurity certification scheme;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_58__21",
+          "id": "art_58__8_d",
           "text": "(d) to obtain access to the premises of any conformity assessment bodies or holders of European cybersecurity certificates, for the purpose of carrying out investigations in accordance with Union or Member State procedural law;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_58__22",
+          "id": "art_58__8_e",
           "text": "(e) to withdraw, in accordance with national law, European cybersecurity certificates issued by the national cybersecurity certification authorities or European cybersecurity certificates issued by conformity assessment bodies in accordance with <a href=\"#a:act_eu_csa_2019_0881:art_56\" class=\"ref\" data-article=\"56\">Article 56</a>(6), where such certificates do not comply with this Regulation or with a European cybersecurity certification scheme;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_58__23",
+          "id": "art_58__8_f",
           "text": "(f) to impose penalties in accordance with national law, as provided for in <a href=\"#a:act_eu_csa_2019_0881:art_65\" class=\"ref\" data-article=\"65\">Article 65</a>, and to require the immediate cessation of infringements of the obligations set out in this Regulation.",
           "class": "list-item-l1"
         },
         {
-          "id": "art_58__24",
-          "text": "9. National cybersecurity certification authorities shall cooperate with each other and with the Commission, in particular, by exchanging information, experience and good practices as regards cybersecurity certification and technical issues concerning the cybersecurity of ICT products, ICT services and ICT processes.",
+          "id": "art_58__9",
+          "text": "9. National cybersecurity certification authorities shall cooperate with each other and with the Commission, in particular, by exchanging information, experience and good practices as regards cybersecurity certification and technical issues concerning the cybersecurity of ICT products, ICT services, ICT processes and managed security services.",
           "class": ""
         }
       ]
@@ -2214,42 +2663,42 @@
           "class": ""
         },
         {
-          "id": "art_59__4",
+          "id": "art_59__3_a",
           "text": "(a) where applicable, whether the activities of the national cybersecurity certification authorities that relate to the issuance of European cybersecurity certificates referred to in point (a) of <a href=\"#a:act_eu_csa_2019_0881:art_56\" class=\"ref\" data-article=\"56\">Article 56</a>(5) and in <a href=\"#a:act_eu_csa_2019_0881:art_56\" class=\"ref\" data-article=\"56\">Article 56</a>(6) are strictly separated from their supervisory activities set out in <a href=\"#a:act_eu_csa_2019_0881:art_58\" class=\"ref\" data-article=\"58\">Article 58</a> and whether those activities are carried out independently from each other;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_59__5",
-          "text": "(b) the procedures for supervising and enforcing the rules for monitoring the compliance of ICT products, ICT services and ICT processes with European cybersecurity certificates pursuant to point (a) of <a href=\"#a:act_eu_csa_2019_0881:art_58\" class=\"ref\" data-article=\"58\">Article 58</a>(7);",
+          "id": "art_59__3_b",
+          "text": "(b) the procedures for supervising and enforcing the rules for monitoring the compliance of ICT products, ICT services, ICT processes and managed security services with European cybersecurity certificates pursuant to <a href=\"#a:act_eu_csa_2019_0881:art_58\" class=\"ref\" data-article=\"58\">Article 58</a>(7), point (a);",
           "class": "list-item-l1"
         },
         {
-          "id": "art_59__6",
-          "text": "(c) the procedures for monitoring and enforcing the obligations of manufacturers or providers of ICT products, ICT services or ICT processes pursuant to point (b) of <a href=\"#a:act_eu_csa_2019_0881:art_58\" class=\"ref\" data-article=\"58\">Article 58</a>(7);",
+          "id": "art_59__3_c",
+          "text": "(c) the procedures for monitoring and enforcing the obligations of manufacturers or providers of ICT products, ICT services, ICT processes or managed security services pursuant to <a href=\"#a:act_eu_csa_2019_0881:art_58\" class=\"ref\" data-article=\"58\">Article 58</a>(7), point (b);",
           "class": "list-item-l1"
         },
         {
-          "id": "art_59__7",
+          "id": "art_59__3_d",
           "text": "(d) the procedures for monitoring, authorising and supervising the activities of the conformity assessment bodies;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_59__8",
+          "id": "art_59__3_e",
           "text": "(e) where applicable, whether the staff of authorities or bodies that issue certificates for assurance level ‘high’ pursuant to <a href=\"#a:act_eu_csa_2019_0881:art_56\" class=\"ref\" data-article=\"56\">Article 56</a>(6) have the appropriate expertise.",
           "class": "list-item-l1"
         },
         {
-          "id": "art_59__9",
+          "id": "art_59__4",
           "text": "4. Peer review shall be carried out by at least two national cybersecurity certification authorities of other Member States and the Commission and shall be carried out at least once every five years. ENISA may participate in the peer review.",
           "class": ""
         },
         {
-          "id": "art_59__10",
+          "id": "art_59__5",
           "text": "5. The Commission may adopt implementing acts establishing a plan for peer review which covers a period of at least five years, laying down the criteria concerning the composition of the peer review team, the methodology to be used in peer review, and the schedule, the frequency and other tasks related to it. In adopting those implementing acts, the Commission shall take due account of the views of the ECCG. Those implementing acts shall be adopted in accordance with the examination procedure referred to in <a href=\"#a:act_eu_csa_2019_0881:art_66\" class=\"ref\" data-article=\"66\">Article 66</a>(2).",
           "class": ""
         },
         {
-          "id": "art_59__11",
+          "id": "art_59__6",
           "text": "6. The outcomes of peer reviews shall be examined by the ECCG, which shall draw up summaries that may be made publicly available and which shall, where necessary, issue guidelines or recommendations on actions or measures to be taken by the entities concerned.",
           "class": ""
         }
@@ -2340,52 +2789,52 @@
           "class": ""
         },
         {
-          "id": "art_62__5",
+          "id": "art_62__4_a",
           "text": "(a) to advise and assist the Commission in its work to ensure the consistent implementation and application of this Title, in particular regarding the Union rolling work programme, cybersecurity certification policy issues, the coordination of policy approaches, and the preparation of European cybersecurity certification schemes;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_62__6",
+          "id": "art_62__4_b",
           "text": "(b) to assist, advise and cooperate with ENISA in relation to the preparation of a candidate scheme pursuant to <a href=\"#a:act_eu_csa_2019_0881:art_49\" class=\"ref\" data-article=\"49\">Article 49</a>;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_62__7",
+          "id": "art_62__4_c",
           "text": "(c) to adopt an opinion on candidate schemes prepared by ENISA pursuant to <a href=\"#a:act_eu_csa_2019_0881:art_49\" class=\"ref\" data-article=\"49\">Article 49</a>;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_62__8",
+          "id": "art_62__4_d",
           "text": "(d) to request ENISA to prepare candidate schemes pursuant to <a href=\"#a:act_eu_csa_2019_0881:art_48\" class=\"ref\" data-article=\"48\">Article 48</a>(2);",
           "class": "list-item-l1"
         },
         {
-          "id": "art_62__9",
+          "id": "art_62__4_e",
           "text": "(e) to adopt opinions addressed to the Commission relating to the maintenance and review of existing European cybersecurity certifications schemes;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_62__10",
+          "id": "art_62__4_f",
           "text": "(f) to examine relevant developments in the field of cybersecurity certification and to exchange information and good practices on cybersecurity certification schemes;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_62__11",
+          "id": "art_62__4_g",
           "text": "(g) to facilitate the cooperation between national cybersecurity certification authorities under this Title through capacity-building and the exchange of information, in particular by establishing methods for the efficient exchange of information relating to issues concerning cybersecurity certification;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_62__12",
+          "id": "art_62__4_h",
           "text": "(h) to support the implementation of peer assessment mechanisms in accordance with the rules established in a European cybersecurity certification scheme pursuant to point (u) of <a href=\"#a:act_eu_csa_2019_0881:art_54\" class=\"ref\" data-article=\"54\">Article 54</a>(1);",
           "class": "list-item-l1"
         },
         {
-          "id": "art_62__13",
+          "id": "art_62__4_i",
           "text": "(i) to facilitate the alignment of European cybersecurity certification schemes with internationally recognised standards, including by reviewing existing European cybersecurity certification schemes and, where appropriate, making recommendations to ENISA to engage with relevant international standardisation organisations to address insufficiencies or gaps in available internationally recognised standards.",
           "class": "list-item-l1"
         },
         {
-          "id": "art_62__14",
+          "id": "art_62__5",
           "text": "5. With the assistance of ENISA, the Commission shall chair the ECCG, and the Commission shall provide the ECCG with a secretariat in accordance with point (e) of <a href=\"#a:act_eu_csa_2019_0881:art_8\" class=\"ref\" data-article=\"8\">Article 8</a>(1).",
           "class": ""
         }
@@ -2419,17 +2868,17 @@
           "class": ""
         },
         {
-          "id": "art_64__2",
+          "id": "art_64__1_a",
           "text": "(a) decisions taken by the authority or body referred to in <a href=\"#a:act_eu_csa_2019_0881:art_63\" class=\"ref\" data-article=\"63\">Article 63</a>(1) including, where applicable, in relation to the improper issuing, failure to issue or recognition of a European cybersecurity certificate held by those natural and legal persons;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_64__3",
+          "id": "art_64__1_b",
           "text": "(b) a failure to act on a complaint lodged with the authority or body referred to in <a href=\"#a:act_eu_csa_2019_0881:art_63\" class=\"ref\" data-article=\"63\">Article 63</a>(1).",
           "class": "list-item-l1"
         },
         {
-          "id": "art_64__4",
+          "id": "art_64__2",
           "text": "2. Proceedings pursuant to this Article shall be brought before the courts of the Member State in which the authority or body against which the judicial remedy is sought is located.",
           "class": ""
         }
@@ -2476,12 +2925,12 @@
         },
         {
           "id": "art_67__2",
-          "text": "2. The evaluation shall also assess the impact, effectiveness and efficiency of the provisions of Title III of this Regulation with regard to the objectives of ensuring an adequate level of cybersecurity of ICT products, ICT services and ICT processes in the Union and improving the functioning of the internal market.",
+          "text": "2. The evaluation shall also assess the impact, effectiveness and efficiency of the provisions of Title III of this Regulation, including the procedures leading to the adoption of European cybersecurity certification schemes and their evidence bases, with regard to the objectives of ensuring an adequate level of cybersecurity of ICT products, ICT services, ICT processes and managed security services in the Union and improving the functioning of the internal market.",
           "class": ""
         },
         {
           "id": "art_67__3",
-          "text": "3. The evaluation shall assess whether essential cybersecurity requirements for access to the internal market are necessary in order to prevent ICT products, ICT services and ICT processes which do not meet basic cybersecurity requirements from entering the Union market.",
+          "text": "3. The evaluation shall assess whether essential cybersecurity requirements for access to the internal market are necessary in order to prevent ICT products, ICT services, ICT processes and managed security services which do not meet basic cybersecurity requirements from entering the internal market.",
           "class": ""
         },
         {
