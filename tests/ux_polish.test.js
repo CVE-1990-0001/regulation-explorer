@@ -127,4 +127,39 @@ test('keyboard shortcuts (/ to focus search, [ and ] for article pagination), co
   const toast = app.doc.getElementById('copyToast');
   assert.strictEqual(toast.hidden, false);
   assert.match(toast.textContent, /Copied citation: GDPR Article 5/);
+
+  // Structural paragraph IDs yield exact legal citations (e.g. GDPR Art. 6(1)(b) -> "paragraph 1 (b)")
+  app.nav('#a:act_eu_gdpr_2016_0679:art_6');
+  await app.tick();
+  const pointBPara = app.doc.getElementById('art_6__1_b');
+  assert.ok(pointBPara, 'expected structural paragraph id art_6__1_b');
+  assert.ok(pointBPara.querySelector('.list-item-marker'), 'expected hanging list-item-marker span');
+  assert.strictEqual(pointBPara.querySelector('.list-item-marker').textContent, '(b)');
+
+  const pointBCiteBtn = pointBPara.querySelector('.paragraph-tool-button[aria-label="Copy citation for this paragraph"]');
+  app.click(pointBCiteBtn);
+  await app.tick();
+  assert.strictEqual(app.clipboard(), 'GDPR Article 6, paragraph 1 (b)');
+
+  // Legacy positional hash (#a:act_eu_gdpr_2016_0679:art_6__7, where no paragraph 7 exists on Art. 6)
+  // falls back to highlighting the 7th rendered row of Article 6 (point (f)).
+  app.nav('#a:act_eu_gdpr_2016_0679:art_6__7');
+  await app.tick();
+  const pointFPara = app.doc.getElementById('art_6__1_f');
+  assert.ok(pointFPara && pointFPara.classList.contains('is-highlighted'), 'legacy positional hash should highlight matching paragraph');
+
+  // Article ordering is strictly deterministic (sidebar tree order: DORA folder -> ITS 2 last -> AI Act first),
+  // never affected by async fetch race timing.
+  app.nav('#a:act_eu_ai_act_2024_1689:art_7');
+  await app.tick();
+  app.click(app.doc.getElementById('prevArticle'));
+  await app.tick();
+  assert.match(app.hash(), /act_eu_ai_act_2024_1689:art_6$/);
+
+  app.nav('#a:act_eu_ai_act_2024_1689:art_1');
+  await app.tick();
+  assert.match(app.doc.getElementById('prevArticle').textContent, /ITS 2 — Article 7/);
+  app.click(app.doc.getElementById('prevArticle'));
+  await app.tick();
+  assert.match(app.hash(), /act_eu_dora_its_2024_2956:art_7$/);
 });

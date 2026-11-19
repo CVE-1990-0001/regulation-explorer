@@ -1458,30 +1458,93 @@ a.dossier-stat-link:hover {
   margin-right: -0.5rem;
 }
 
+/* Hanging-label 3-level legal list hierarchy + follow-on subparagraphs */
 .article-paragraph.list-item-l1 {
-  padding-left: 1.5rem;
+  padding-left: 2.35rem;
   position: relative;
-}
-
-.article-paragraph.list-item-l1::before {
-  content: "▪";
-  position: absolute;
-  left: 0;
-  color: var(--accent-teal);
-  font-weight: 600;
 }
 
 .article-paragraph.list-item-l2 {
-  padding-left: 2rem;
+  padding-left: 4.1rem;
   position: relative;
 }
 
-.article-paragraph.list-item-l2::before {
-  content: "∘";
+.article-paragraph.list-item-l3 {
+  padding-left: 5.85rem;
+  position: relative;
+}
+
+.article-paragraph .list-item-marker {
   position: absolute;
-  left: 0.75rem;
-  color: var(--color-midgray);
+  left: 0;
+  width: 2.05rem;
+  color: var(--accent-blue);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  user-select: text;
+}
+
+.article-paragraph.list-item-l2 .list-item-marker {
+  left: 1.75rem;
+  color: var(--text-muted);
+}
+
+.article-paragraph.list-item-l3 .list-item-marker {
+  left: 3.5rem;
+  color: var(--text-muted);
+}
+
+/* Fallback subtle marker only when a list item carries no explicit printed label */
+.article-paragraph.list-item-l1:not(.has-hanging-marker)::before {
+  content: "\2013";
+  position: absolute;
+  left: 0.6rem;
+  color: var(--text-muted);
   font-weight: 600;
+}
+
+.article-paragraph.subparagraph {
+  padding-left: 0.85rem;
+  border-left: 2px solid var(--border-subtle);
+}
+
+/* Structured EUR-Lex data tables inside articles/annexes */
+.legal-table-wrap {
+  overflow-x: auto;
+  margin: 0.35rem 0;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+}
+
+.legal-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  line-height: 1.45;
+}
+
+.legal-table th,
+.legal-table td {
+  padding: 0.45rem 0.65rem;
+  border-bottom: 1px solid var(--border-subtle);
+  border-right: 1px solid var(--border-subtle);
+  text-align: left;
+  vertical-align: top;
+}
+
+.legal-table th:last-child,
+.legal-table td:last-child {
+  border-right: none;
+}
+
+.legal-table tr:last-child td {
+  border-bottom: none;
+}
+
+.legal-table th {
+  background: var(--surface-rail);
+  font-weight: 700;
+  color: var(--text-primary);
 }
 
 /* Links */

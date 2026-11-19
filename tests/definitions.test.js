@@ -77,11 +77,11 @@ test('secondary regulations inherit parent-act definitions with provenance badge
   const badge = tooltip.querySelector('.legal-tooltip-source');
   assert.match(badge.textContent, /^DORA Regulation · Article 3\(/);
 
-  // Clicking the inherited provenance badge jumps straight to DORA Regulation Article 3
+  // Clicking the inherited provenance badge jumps straight to the exact DORA Regulation Article 3 definition paragraph
   const badgeClick = app.click(badge);
   await app.tick();
   assert.strictEqual(badgeClick.defaultPrevented, true);
-  assert.match(app.hash(), /act_eu_dora_reg_2022_2554:art_3$/);
+  assert.match(app.hash(), /act_eu_dora_reg_2022_2554:art_3(?:__|$)/);
 
   // 2. DORA RTS 4 defines local TLPT terms (Article 1) AND inherits parent DORA terms:
   //    local definitions do NOT carry the inherited prefix, while parent-only terms do.

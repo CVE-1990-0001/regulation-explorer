@@ -24,37 +24,37 @@
           "class": ""
         },
         {
-          "id": "art_1__2",
+          "id": "art_1__1_a",
           "text": "(a) financial entities that submit an initial notification shall complete the data fields of the template which correspond to the information to be provided in accordance with Article 2 of Commission Delegated <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R0301\" class=\"ref\" data-ref=\"celex:32025R0301\" target=\"_blank\" rel=\"noopener\">Regulation (EU) 2025/301</a> ( 7 ) , and may, where they already have that information, complete those data fields the completion of which is not required for an initial notification but is required for an intermediate or final report;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_1__3",
+          "id": "art_1__1_b",
           "text": "(b) financial entities that submit an intermediate report shall complete the data fields of the template which correspond to the information to be provided in accordance with Article 3 of Delegated <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R0301\" class=\"ref\" data-ref=\"celex:32025R0301\" target=\"_blank\" rel=\"noopener\">Regulation (EU) 2025/301</a> and may, where they already have the relevant information, complete data fields the completion of which is not required for the intermediate report, but is required for the final report.",
           "class": "list-item-l1"
         },
         {
-          "id": "art_1__4",
+          "id": "art_1__1_c",
           "text": "(c) financial entities that submit a final report shall complete the data fields of the template which correspond to the information to be provided in accordance with Article 4 of Delegated <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R0301\" class=\"ref\" data-ref=\"celex:32025R0301\" target=\"_blank\" rel=\"noopener\">Regulation (EU) 2025/301</a>.",
           "class": "list-item-l1"
         },
         {
-          "id": "art_1__5",
+          "id": "art_1__2",
           "text": "2. Financial entities shall ensure that the information contained in the initial notification, and in the intermediate and final report, is complete and accurate.",
           "class": ""
         },
         {
-          "id": "art_1__6",
+          "id": "art_1__3",
           "text": "3. Financial entities shall provide estimated values based on other available data and information, to the extent possible, where accurate data are not available at the time of reporting for the initial notification or the intermediate report.",
           "class": ""
         },
         {
-          "id": "art_1__7",
+          "id": "art_1__4",
           "text": "4. When submitting an intermediate or final report, financial entities shall use the template laid down in Annex I to submit all required information and update, where applicable, the information that was previously provided in the initial notification or in the intermediate report.",
           "class": ""
         },
         {
-          "id": "art_1__8",
+          "id": "art_1__5",
           "text": "5. Financial entities shall follow the data glossary and instructions set out in Annex II when completing the template laid down in Annex I.",
           "class": ""
         }
@@ -146,37 +146,37 @@
           "class": ""
         },
         {
-          "id": "art_7__2",
+          "id": "art_7__1_a",
           "text": "(a) the major ICT-related incident to be reported originates from or is being caused by a third-party ICT service provider;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_7__3",
+          "id": "art_7__1_b",
           "text": "(b) that third-party service provider provides the relevant ICT service to more than one financial entity, or to a group;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_7__4",
+          "id": "art_7__1_c",
           "text": "(c) the ICT-related incident is classified as major by each financial entity covered in the aggregated notification or report;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_7__5",
+          "id": "art_7__1_d",
           "text": "(d) the major ICT-related incident affects financial entities within a single Member State and the aggregated report relates to financial entities which are supervised by the same competent authority;",
           "class": "list-item-l1"
         },
         {
-          "id": "art_7__6",
+          "id": "art_7__1_e",
           "text": "(e) competent authorities have explicitly permitted this type of financial entities to aggregate their reporting.",
           "class": "list-item-l1"
         },
         {
-          "id": "art_7__7",
+          "id": "art_7__2",
           "text": "2. Paragraph 1 shall not apply to credit institutions that are considered to be of significant relevance as referred to in <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0468\" class=\"ref\" data-ref=\"celex:32014R0468\" data-article=\"2\" target=\"_blank\" rel=\"noopener\">Article 2</a> point (16) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0468\" class=\"ref\" data-ref=\"celex:32014R0468\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 468/2014</a> of the European Central Bank ( 8 ) , operators of trading venues, and central counterparties, which shall only use the template in Annex I to submit major ICT-related incident notifications or reports individually to their competent authority.",
           "class": ""
         },
         {
-          "id": "art_7__8",
+          "id": "art_7__3",
           "text": "3. Where competent authorities require information on the individual impact of the major ICT-related incident on a single financial entity, upon request of the competent authority, the financial entity shall submit an individual notification or a report on the major ICT-related incident.",
           "class": ""
         }

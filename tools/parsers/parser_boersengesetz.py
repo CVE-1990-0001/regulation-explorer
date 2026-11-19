@@ -5,13 +5,23 @@ Python port of the former parser-boersengesetz.js (cheerio -> BeautifulSoup/lxml
 
 Usage: python3 parser_boersengesetz.py <input.html> [output.json]
 """
+import importlib.util
 import json
 import os
 import re
 import sys
 import urllib.parse
 
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, NavigableString, Tag
+
+_FMT_SPEC = importlib.util.spec_from_file_location(
+    "parsers_formatting", os.path.join(os.path.dirname(os.path.abspath(__file__)), "formatting.py")
+)
+_fmt = sys.modules.get("parsers_formatting")
+if _fmt is None:
+    _fmt = importlib.util.module_from_spec(_FMT_SPEC)
+    sys.modules["parsers_formatting"] = _fmt
+    _FMT_SPEC.loader.exec_module(_fmt)
 
 
 def normalise_whitespace(value):
@@ -162,6 +172,95 @@ def linkify_text(raw_text, known_tokens):
     return s
 
 
+def _emit_boersg_dl(dl_tag, emitter, level):
+    dts = dl_tag.find_all("dt", recursive=False)
+    dds = dl_tag.find_all("dd", recursive=False)
+    for dt, dd in zip(dts, dds):
+        lbl = normalise_whitespace(dt.get_text(" "))
+        la = dd.find("la", recursive=False) or dd
+        buf: list[str] = []
+        emitted_head = False
+
+        def flush():
+            nonlocal emitted_head
+            txt = normalise_whitespace(" ".join(x for x in buf if x))
+            buf.clear()
+            if not txt:
+                return
+            if not emitted_head:
+                emitter.add(txt, level=level, label=lbl)
+                emitted_head = True
+            else:
+                emitter.add(txt, level=level)
+
+        for ch in la.children:
+            if isinstance(ch, NavigableString):
+                s = normalise_whitespace(str(ch))
+                if s:
+                    buf.append(s)
+            elif isinstance(ch, Tag):
+                if ch.name.lower() == "dl":
+                    flush()
+                    _emit_boersg_dl(ch, emitter, level + 1)
+                else:
+                    buf.append(normalise_whitespace(ch.get_text(" ")))
+        flush()
+
+
+def _emit_boersg_paragraph_node(paragraph_node, emitter):
+    nested_dls = paragraph_node.find_all(["DL", "dl"], recursive=False)
+    if not nested_dls:
+        raw_text = normalise_whitespace(paragraph_node.get_text(" "))
+        if not raw_text or raw_text == "-":
+            return
+        cls = paragraph_class_from_text(raw_text)
+        if cls:
+            # Keep top-level (1) Absatz at level 0 with class list-item-l1 so existing
+            # German Absatz layout & structural IDs (art_3a__1, art_2__10a) align cleanly.
+            m_abs = re.match(r"^\((\d+[a-z]?)\)\s*", raw_text, re.I)
+            emitter.add(
+                raw_text,
+                level=0,
+                para_num=m_abs.group(1).lower() if m_abs else None,
+                extra_class=cls,
+            )
+        else:
+            emitter.add(raw_text, level=0)
+        return
+
+    buf: list[str] = []
+    emitted_lead = False
+
+    def flush_lead():
+        nonlocal emitted_lead
+        txt = normalise_whitespace(" ".join(x for x in buf if x))
+        buf.clear()
+        if not txt or txt == "-":
+            return
+        m_abs = re.match(r"^\((\d+[a-z]?)\)\s*", txt, re.I)
+        emitter.add(
+            txt,
+            level=0,
+            para_num=m_abs.group(1).lower() if m_abs else None,
+            is_subparagraph=emitted_lead and not m_abs,
+            extra_class=paragraph_class_from_text(txt) if not emitted_lead else "",
+        )
+        emitted_lead = True
+
+    for ch in paragraph_node.children:
+        if isinstance(ch, NavigableString):
+            s = normalise_whitespace(str(ch))
+            if s:
+                buf.append(s)
+        elif isinstance(ch, Tag):
+            if ch.name.lower() == "dl":
+                flush_lead()
+                _emit_boersg_dl(ch, emitter, level=1)
+            else:
+                buf.append(normalise_whitespace(ch.get_text(" ")))
+    flush_lead()
+
+
 def parse_xml(source):
     soup = BeautifulSoup(source, "xml")
     norm_nodes = [node for node in soup.find_all("norm") if node.find("enbez")]
@@ -180,22 +279,17 @@ def parse_xml(source):
             continue
         title_node = node.find("titel")
         article_id = f"art_{article_token}"
-        paragraphs = []
+        emitter = _fmt.ParagraphEmitter(
+            article_id, linkify_fn=lambda t, kt=known_article_tokens: linkify_text(t, kt)
+        )
         for paragraph_node in node.select("textdaten Content > P"):
-            raw_text = normalise_whitespace(paragraph_node.get_text(" "))
-            if not raw_text or raw_text == "-":
-                continue
-            paragraphs.append({
-                "id": f"{article_id}__{len(paragraphs) + 1}",
-                "text": linkify_text(raw_text, known_article_tokens),
-                "class": paragraph_class_from_text(raw_text),
-            })
-        if paragraphs:
+            _emit_boersg_paragraph_node(paragraph_node, emitter)
+        if emitter.paragraphs:
             articles.append({
                 "id": article_id,
                 "title": raw_label,
                 "heading": normalise_whitespace(title_node.get_text()) if title_node else "",
-                "paragraphs": paragraphs,
+                "paragraphs": emitter.paragraphs,
             })
 
     return articles
@@ -235,30 +329,21 @@ def parse(html):
 
         article_id = f"art_{article_token}"
         title = raw_label or f"\u00a7 {article_token}"
-
-        paragraph_counter = 0
-        paragraphs = []
+        emitter = _fmt.ParagraphEmitter(
+            article_id, linkify_fn=lambda t, kt=known_article_tokens: linkify_text(t, kt)
+        )
 
         for paragraph_node in node.select("div.jurAbsatz"):
-            raw_text = normalise_whitespace(paragraph_node.get_text())
-            if not raw_text or raw_text == "-":
-                continue
+            _emit_boersg_paragraph_node(paragraph_node, emitter)
 
-            paragraph_counter += 1
-            paragraphs.append({
-                "id": f"{article_id}__{paragraph_counter}",
-                "text": linkify_text(raw_text, known_article_tokens),
-                "class": paragraph_class_from_text(raw_text),
-            })
-
-        if not paragraphs:
+        if not emitter.paragraphs:
             continue
 
         articles.append({
             "id": article_id,
             "title": title,
             "heading": heading,
-            "paragraphs": paragraphs,
+            "paragraphs": emitter.paragraphs,
         })
 
     return articles

@@ -923,6 +923,49 @@ const clearParagraphHighlight = () => {
   currentHighlightedParagraphId = null;
 };
 
+const HANGING_LABEL_RE = /^([‘'“"„]?(?:\([0-9a-z]+\)|[0-9]+(?:\.[0-9]+)*[a-z]?\.|[a-z]\)|[\-\u2013\u2014]))\s+/i;
+
+const wrapHangingListLabel = (paragraphElement) => {
+  if (!paragraphElement) return;
+  const isListItem = paragraphElement.classList.contains('list-item-l1')
+    || paragraphElement.classList.contains('list-item-l2')
+    || paragraphElement.classList.contains('list-item-l3');
+  if (!isListItem) return;
+
+  const firstChild = paragraphElement.firstChild;
+  if (!firstChild || firstChild.nodeType !== Node.TEXT_NODE) return;
+
+  const match = HANGING_LABEL_RE.exec(firstChild.nodeValue || '');
+  if (!match) return;
+
+  const labelSpan = document.createElement('span');
+  labelSpan.className = 'list-item-marker';
+  labelSpan.textContent = match[1];
+
+  const remainder = (firstChild.nodeValue || '').slice(match[0].length);
+  firstChild.nodeValue = remainder;
+  paragraphElement.insertBefore(labelSpan, firstChild);
+  paragraphElement.classList.add('has-hanging-marker');
+};
+
+const resolveParagraphTargetElement = (paragraphId) => {
+  if (!paragraphId) return null;
+  const direct = document.getElementById(paragraphId);
+  if (direct) return direct;
+
+  // Fallback for legacy positional links (#a:act:art_6__3) opened against structural IDs:
+  // map 1-based positional index N within that article's rendered paragraphs.
+  const legacyMatch = `${paragraphId}`.match(/^(art_[a-z0-9_]+)__(\d+)$/i);
+  if (!legacyMatch || !paragraphsContainer) return null;
+
+  const [, artPrefix, posStr] = legacyMatch;
+  const posIndex = Number(posStr) - 1;
+  if (posIndex < 0) return null;
+
+  const articleParas = [...paragraphsContainer.querySelectorAll(`.article-paragraph[id^="${artPrefix}__"]`)];
+  return articleParas[posIndex] || null;
+};
+
 const highlightParagraph = (paragraphId, options = {}) => {
   const { behavior = 'smooth', focus = true } = options;
 
@@ -931,7 +974,7 @@ const highlightParagraph = (paragraphId, options = {}) => {
     return false;
   }
 
-  const target = document.getElementById(paragraphId);
+  const target = resolveParagraphTargetElement(paragraphId);
   if (!target) {
     clearParagraphHighlight();
     return false;
@@ -939,7 +982,7 @@ const highlightParagraph = (paragraphId, options = {}) => {
 
   clearParagraphHighlight();
   target.classList.add('is-highlighted');
-  currentHighlightedParagraphId = paragraphId;
+  currentHighlightedParagraphId = target.id || paragraphId;
 
   try {
     target.scrollIntoView({ block: 'center', behavior });
@@ -1153,8 +1196,13 @@ const createParagraphElement = (paragraphData, article, actId = null) => {
   }
 
   if (typeof paragraphData === 'object' && paragraphData.class) {
-    paragraph.classList.add(paragraphData.class);
+    paragraphData.class
+      .split(/\s+/)
+      .filter(Boolean)
+      .forEach((cls) => paragraph.classList.add(cls));
   }
+
+  wrapHangingListLabel(paragraph);
 
   const resolvedActId = actId || article?._actId || getCurrentActId();
   markExternalReferenceAnchors(paragraph);
@@ -1215,11 +1263,15 @@ const highlightActiveLink = () => {
   });
 };
 
-const formatNavArticleLabel = (article) => {
+const formatNavArticleLabel = (article, currentActId = null) => {
   if (!article) return '';
   const num = (article.title || article.id || '').trim();
   const heading = getHeadingText(article);
-  return heading && heading !== num ? `${num} · ${heading}` : num;
+  const base = heading && heading !== num ? `${num} · ${heading}` : num;
+  if (currentActId && article._actId && article._actId !== currentActId && article._actTitle) {
+    return `${article._actTitle} — ${base}`;
+  }
+  return base;
 };
 
 const setNavButtonCard = (button, directionLabel, targetLabel, fallbackText) => {
@@ -1252,10 +1304,21 @@ const updateNavigationButtons = () => {
   prevButton.disabled = !hasPrev;
   nextButton.disabled = !hasNext;
 
+  const activeActId = getCurrentActId();
   const prevArticleObj = hasPrev ? visibleArticles[index - 1] : null;
   const nextArticleObj = hasNext ? visibleArticles[index + 1] : null;
-  setNavButtonCard(prevButton, '\u2190 Previous', formatNavArticleLabel(prevArticleObj), 'Start of list');
-  setNavButtonCard(nextButton, 'Next \u2192', formatNavArticleLabel(nextArticleObj), 'End of list');
+  setNavButtonCard(
+    prevButton,
+    '\u2190 Previous',
+    formatNavArticleLabel(prevArticleObj, activeActId),
+    'Start of list',
+  );
+  setNavButtonCard(
+    nextButton,
+    'Next \u2192',
+    formatNavArticleLabel(nextArticleObj, activeActId),
+    'End of list',
+  );
 };
 
 const updateStatus = () => {
@@ -3163,9 +3226,6 @@ const loadAllData = async () => {
     });
   }
 
-  const acts = [];
-  const bundles = [];
-
   const actFetches = (registry.acts || []).map(async (entry) => {
     const res = await fetch(entry.path, { cache: 'no-store' });
     if (!res.ok) {
@@ -3174,7 +3234,7 @@ const loadAllData = async () => {
     const json = await res.json();
 
     if (Array.isArray(json)) {
-      acts.push({
+      return {
         type: 'act',
         id: entry.id,
         title: entry.label || entry.id,
@@ -3187,17 +3247,15 @@ const loadAllData = async () => {
           jurisdiction: entry.jurisdiction || 'EU',
         },
         articles: json,
-      });
-      return;
+      };
     }
 
     if (!json || json.type !== 'act') {
       console.warn('Skipped non-act file', entry);
-      return;
+      return null;
     }
 
-    // Keep the raw act-level object for renderAct
-    acts.push(json);
+    return json;
   });
 
   const bundleFetches = (registry.bundles || []).map(async (entry) => {
@@ -3208,20 +3266,54 @@ const loadAllData = async () => {
     const json = await res.json();
     if (!json || json.type !== 'bundle') {
       console.warn('Skipped non-bundle file', entry);
-      return;
+      return null;
     }
-    bundles.push(json);
+    return json;
   });
 
-  await Promise.all([...actFetches, ...bundleFetches]);
+  const [fetchedActs, fetchedBundles] = await Promise.all([
+    Promise.all(actFetches),
+    Promise.all(bundleFetches),
+  ]);
 
-  // Flatten acts into article-level entries for the sidebar/list UI
+  const rawActs = fetchedActs.filter(Boolean);
+  const bundles = fetchedBundles.filter(Boolean).sort(compareByTitle);
+  const actsById = new Map(rawActs.map((a) => [a.id, a]));
+
+  // Order `acts` deterministically to match the visual sidebar tree:
+  // 1. Folders (alphabetical) and their members in exact depth-first order
+  // 2. Remaining standalone acts (alphabetical)
+  const orderedActs = [];
+  const seenActIds = new Set();
+  const appendBundleActsInOrder = (bundleList) => {
+    (bundleList || []).forEach((b) => {
+      ((b && b.members) || []).forEach((m) => {
+        if (!m) return;
+        if (m.type === 'bundle') {
+          appendBundleActsInOrder([m]);
+        } else if (m.ref && !seenActIds.has(m.ref) && actsById.has(m.ref)) {
+          seenActIds.add(m.ref);
+          orderedActs.push(actsById.get(m.ref));
+        }
+      });
+    });
+  };
+  appendBundleActsInOrder(bundles);
+
+  rawActs
+    .filter((a) => !seenActIds.has(a.id))
+    .sort(compareByTitle)
+    .forEach((a) => {
+      seenActIds.add(a.id);
+      orderedActs.push(a);
+    });
+
+  // Flatten acts into article-level entries in exact sidebar navigation order
   const flattenedArticles = [];
-  acts.forEach((act) => {
+  orderedActs.forEach((act) => {
     if (Array.isArray(act.articles)) {
       act.articles.forEach((a) => {
         const article = Object.assign({}, a);
-        // link back to parent act
         article._actId = act.id || null;
         article._actTitle = act.title || '';
         flattenedArticles.push(article);
@@ -3239,7 +3331,7 @@ const loadAllData = async () => {
     }
   });
 
-  return { acts, bundles, articles: flattenedArticles };
+  return { acts: orderedActs, bundles, articles: flattenedArticles };
 };
 
 const fetchArticles = async () => {
@@ -3610,16 +3702,20 @@ const formatParagraphDescriptor = (paragraphId) => {
     return '';
   }
 
-  const descriptorParts = [`paragraph ${primaryValue}`];
-  if (primarySuffix) {
-    descriptorParts.push(`(${primarySuffix})`);
-  }
+  const descriptorParts = [`paragraph ${primaryValue}${primarySuffix || ''}`];
 
   segments.slice(1).forEach((segment) => {
+    const subparaMatch = segment.match(/^s(\d+)$/i);
+    if (subparaMatch) {
+      descriptorParts.push(`subparagraph ${subparaMatch[1]}`);
+      return;
+    }
+    if (segment === 'dash') {
+      return;
+    }
     const { value, suffix } = parseParagraphToken(segment);
     if (value) {
-      const suffixPortion = suffix ? ` ${suffix}` : '';
-      descriptorParts.push(`(${value}${suffixPortion})`);
+      descriptorParts.push(`(${value}${suffix || ''})`);
     } else {
       descriptorParts.push(`(${segment})`);
     }
@@ -3650,6 +3746,9 @@ const getParagraphPlainText = (paragraphElement) => {
 
   const clone = paragraphElement.cloneNode(true);
   clone.querySelectorAll('.paragraph-tools').forEach((node) => node.remove());
+  clone.querySelectorAll('.list-item-marker').forEach((marker) => {
+    marker.textContent = `${marker.textContent} `;
+  });
 
   return clone.textContent
     .replace(/\s+\n/g, ' ')

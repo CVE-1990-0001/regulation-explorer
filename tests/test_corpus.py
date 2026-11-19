@@ -153,3 +153,20 @@ def test_linker_idempotent_on_corpus():
                 assert lr.link_text(t, e["id"], ids) == t, (
                     f"re-linking changed committed text in {e['id']} {art.get('id')}"
                 )
+
+
+def test_paragraph_ids_unique_and_lists_well_formed():
+    import sys
+
+    fmt_spec = importlib.util.spec_from_file_location(
+        "parsers_formatting_test",
+        os.path.join(ROOT, "tools", "parsers", "formatting.py"),
+    )
+    fmt_mod = importlib.util.module_from_spec(fmt_spec)
+    sys.modules["parsers_formatting_test"] = fmt_mod
+    fmt_spec.loader.exec_module(fmt_mod)
+
+    for e in INDEX["acts"]:
+        arts = _articles(_load(e["path"]))
+        report = fmt_mod.validate_parsed_articles(arts)
+        assert report.ok, f"{e['id']} failed formatting invariants: {report.reasons}"
