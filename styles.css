@@ -1842,6 +1842,15 @@ mark.search-hit.is-current-hit {
   outline: none;
 }
 
+.defined-term.is-inherited-term {
+  border-bottom-color: rgba(0, 153, 255, 0.45);
+}
+
+.defined-term.is-inherited-term:hover,
+.defined-term.is-inherited-term:focus-visible {
+  border-bottom-color: var(--accent-teal);
+}
+
 /* Legal tooltip */
 .legal-tooltip {
   position: fixed;

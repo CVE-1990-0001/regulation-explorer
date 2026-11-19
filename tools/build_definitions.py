@@ -669,8 +669,26 @@ def resolve_cross_act_pointers(
                 entry["resolved"] = resolved_obj
 
 
+def collect_parent_acts(registry: dict) -> dict[str, str]:
+    """Map child act ids to their declared ``parentAct`` in ``data/index.json``."""
+    parent_by_act: dict[str, str] = {}
+    for act_entry in registry.get("acts", []):
+        if not isinstance(act_entry, dict):
+            continue
+        act_id = act_entry.get("id")
+        parent_act = act_entry.get("parentAct")
+        if (
+            isinstance(act_id, str)
+            and isinstance(parent_act, str)
+            and parent_act.strip()
+            and parent_act.strip() != act_id
+        ):
+            parent_by_act[act_id] = parent_act.strip()
+    return parent_by_act
+
+
 def build_all_definitions(registry_path: Path = REGISTRY_PATH, root: Path = ROOT) -> dict[str, dict]:
-    """Build the ``{actId: {definitionArticleIds, entries}}`` map across the registry."""
+    """Build the ``{actId: {definitionArticleIds, inheritedFrom?, entries}}`` map."""
     registry = json.loads(registry_path.read_text(encoding="utf-8"))
     output: dict[str, dict] = {}
     auth_to_act_id: dict[str, str] = {}
@@ -697,6 +715,19 @@ def build_all_definitions(registry_path: Path = REGISTRY_PATH, root: Path = ROOT
             output[act_id] = extracted
 
     resolve_cross_act_pointers(output, auth_to_act_id, act_labels)
+
+    parent_by_act = collect_parent_acts(registry)
+    for act_id, parent_act_id in parent_by_act.items():
+        if parent_act_id in output:
+            output[act_id] = {
+                **(output.get(act_id) or {"definitionArticleIds": [], "entries": []}),
+                "inheritedFrom": {
+                    "actId": parent_act_id,
+                    "actLabel": act_labels.get(parent_act_id, parent_act_id),
+                    "definitionArticleIds": output[parent_act_id].get("definitionArticleIds", []),
+                },
+            }
+
     return output
 
 

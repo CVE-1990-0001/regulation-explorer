@@ -97,6 +97,14 @@ def _bundle_refs(members):
             yield m["ref"]
 
 
+def test_parent_act_refs_resolve():
+    for e in INDEX["acts"]:
+        parent = e.get("parentAct")
+        if parent is not None:
+            assert parent in ACT_IDS, f"{e['id']} parentAct unresolved -> {parent}"
+            assert parent != e["id"], f"{e['id']} cannot declare itself as parentAct"
+
+
 def test_bundle_refs_resolve():
     for b in glob.glob(os.path.join(ROOT, "data/bundles/*.json")):
         with open(b) as f:
