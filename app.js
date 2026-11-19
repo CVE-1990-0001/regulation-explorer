@@ -1002,6 +1002,12 @@ const HANGING_LABEL_RE = /^([‘'“"„]?(?:\([0-9a-z]+\)|[0-9]+(?:\.[0-9]+)*[a
 
 const wrapHangingListLabel = (paragraphElement) => {
   if (!paragraphElement) return;
+  if (
+    paragraphElement.classList.contains('legal-footnote')
+    || paragraphElement.classList.contains('quoted-amendment-heading')
+  ) {
+    return;
+  }
   const isListItem = paragraphElement.classList.contains('list-item-l1')
     || paragraphElement.classList.contains('list-item-l2')
     || paragraphElement.classList.contains('list-item-l3');

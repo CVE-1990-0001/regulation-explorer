@@ -1506,18 +1506,39 @@ a.dossier-stat-link:hover {
   color: var(--text-muted);
 }
 
-/* Fallback subtle marker only when a list item carries no explicit printed label */
-.article-paragraph.list-item-l1:not(.has-hanging-marker)::before {
-  content: "\2013";
-  position: absolute;
-  left: 0.6rem;
-  color: var(--text-muted);
-  font-weight: 600;
-}
-
 .article-paragraph.subparagraph {
   padding-left: 0.85rem;
   border-left: 2px solid var(--border-subtle);
+}
+
+/* Quoted replacement text & inline footnotes in amending regulations */
+.article-paragraph.quoted-amendment {
+  border-left: 2px solid rgba(0, 0, 153, 0.24);
+  background: rgba(0, 0, 153, 0.022);
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.article-paragraph.quoted-amendment:not(.list-item-l1):not(.list-item-l2):not(.list-item-l3) {
+  padding-left: 0.85rem;
+}
+
+.article-paragraph.quoted-amendment-heading {
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-top: 0.35rem;
+  padding-left: 0.85rem;
+  border-left: 2px solid rgba(0, 0, 153, 0.35);
+}
+
+.article-paragraph.legal-footnote {
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+  border-top: 1px dashed var(--border-subtle);
+  padding-top: 0.35rem;
+  margin-top: -0.25rem;
 }
 
 /* Structured EUR-Lex data tables inside articles/annexes */

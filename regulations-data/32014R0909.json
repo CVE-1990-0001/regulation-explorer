@@ -4913,11 +4913,6 @@
       },
       {
         "id": "art_70__1_1_dash",
-        "text": "—",
-        "class": "list-item-l2"
-      },
-      {
-        "id": "art_70__1_1_dash_dash",
         "text": "‘— designated, without prejudice to other more stringent conditions of general application laid down by national law, as a system and notified to the European Securities and Markets Authority by the Member State whose law is applicable, after that Member State is satisfied as to the adequacy of the rules of the system.’;",
         "class": "list-item-l3"
       },
@@ -4927,7 +4922,7 @@
         "class": "list-item-l1"
       },
       {
-        "id": "art_70__1_i6",
+        "id": "art_70__1_i5",
         "text": "‘3. By 18 March 2015, Member States shall adopt and publish and communicate to the Commission measures necessary to comply with the third indent of the first subparagraph of point (a) of <a href=\"#a:act_eu_csdr_2014_0909:art_2\" class=\"ref\" data-article=\"2\">Article 2</a>.’.",
         "class": "list-item-l1"
       }
@@ -4950,7 +4945,7 @@
       },
       {
         "id": "art_71__1_1_o",
-        "text": "‘(o) CSDs except as provided for in <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0909\" class=\"ref\" data-ref=\"celex:32014R0909\" data-article=\"73\" target=\"_blank\" rel=\"noopener\">Article 73</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0909\" class=\"ref\" data-ref=\"celex:32014R0909\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 909/2014</a> of the European Parliament and of the Council ( *1 ).",
+        "text": "‘(o) CSDs except as provided for in <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0909\" class=\"ref\" data-ref=\"celex:32014R0909\" data-article=\"73\" target=\"_blank\" rel=\"noopener\">Article 73</a> of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0909\" class=\"ref\" data-ref=\"celex:32014R0909\" target=\"_blank\" rel=\"noopener\">Regulation (EU) No 909/2014</a> of the European Parliament and of the Council (*1).",
         "class": "list-item-l2"
       },
       {

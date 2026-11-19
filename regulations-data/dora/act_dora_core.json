@@ -4240,13 +4240,13 @@
         },
         {
           "id": "art_59__1_i3",
-          "text": "‘A credit rating agency shall have sound administrative and accounting procedures, internal control mechanisms, effective procedures for risk assessment, and effective control and safeguard arrangements for managing ICT systems in accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"ref\" data-ref=\"celex:32022R2554\" target=\"_blank\" rel=\"noopener\">Regulation (EU) 2022/2554</a> of the European Parliament and of the Council ( *1 ) .",
-          "class": "list-item-l1"
+          "text": "‘A credit rating agency shall have sound administrative and accounting procedures, internal control mechanisms, effective procedures for risk assessment, and effective control and safeguard arrangements for managing ICT systems in accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"ref\" data-ref=\"celex:32022R2554\" target=\"_blank\" rel=\"noopener\">Regulation (EU) 2022/2554</a> of the European Parliament and of the Council (*1) .",
+          "class": "list-item-l1 quoted-amendment"
         },
         {
           "id": "art_59__1_i4",
-          "text": "( *1 ) <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"ref\" data-ref=\"celex:32022R2554\" target=\"_blank\" rel=\"noopener\">Regulation (EU) 2022/2554</a> of the European Parliament and of the Council of 14 December 2022 on digital operational resilience for the financial sector and amending Regulations <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32009R1060\" class=\"ref\" data-ref=\"celex:32009R1060\" target=\"_blank\" rel=\"noopener\">(EC) No 1060/2009</a>, <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32012R0648\" class=\"ref\" data-ref=\"celex:32012R0648\" target=\"_blank\" rel=\"noopener\">(EU) No 648/2012</a>, <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0600\" class=\"ref\" data-ref=\"celex:32014R0600\" target=\"_blank\" rel=\"noopener\">(EU) No 600/2014</a>, <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0909\" class=\"ref\" data-ref=\"celex:32014R0909\" target=\"_blank\" rel=\"noopener\">(EU) No 909/2014</a> and <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R1011\" class=\"ref\" data-ref=\"celex:32016R1011\" target=\"_blank\" rel=\"noopener\">(EU) 2016/1011</a> ( OJ L 333, 27.12.2022, p. 1 ).’;&quot;",
-          "class": "list-item-l1"
+          "text": "(*1) <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"ref\" data-ref=\"celex:32022R2554\" target=\"_blank\" rel=\"noopener\">Regulation (EU) 2022/2554</a> of the European Parliament and of the Council of 14 December 2022 on digital operational resilience for the financial sector and amending Regulations <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32009R1060\" class=\"ref\" data-ref=\"celex:32009R1060\" target=\"_blank\" rel=\"noopener\">(EC) No 1060/2009</a>, <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32012R0648\" class=\"ref\" data-ref=\"celex:32012R0648\" target=\"_blank\" rel=\"noopener\">(EU) No 648/2012</a>, <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0600\" class=\"ref\" data-ref=\"celex:32014R0600\" target=\"_blank\" rel=\"noopener\">(EU) No 600/2014</a>, <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0909\" class=\"ref\" data-ref=\"celex:32014R0909\" target=\"_blank\" rel=\"noopener\">(EU) No 909/2014</a> and <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R1011\" class=\"ref\" data-ref=\"celex:32016R1011\" target=\"_blank\" rel=\"noopener\">(EU) 2016/1011</a> ( OJ L 333, 27.12.2022, p. 1 ).’;",
+          "class": "list-item-l1 legal-footnote"
         },
         {
           "id": "art_59__1_2",
@@ -4256,7 +4256,7 @@
         {
           "id": "art_59__1_2_12",
           "text": "‘12. The credit rating agency infringes <a href=\"#a:act_eu_dora_reg_2022_2554:art_6\" class=\"ref\" data-article=\"6\">Article 6</a>(2), in conjunction with point 4 of Section A of Annex I, by not having sound administrative or accounting procedures, internal control mechanisms, effective procedures for risk assessment, or effective control or safeguard arrangements for managing ICT systems in accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"ref\" data-ref=\"celex:32022R2554\" target=\"_blank\" rel=\"noopener\">Regulation (EU) 2022/2554</a>; or by not implementing or maintaining decision-making procedures or organisational structures as required by that point.’.",
-          "class": "list-item-l2"
+          "class": "list-item-l2 quoted-amendment"
         }
       ]
     },
@@ -4282,13 +4282,13 @@
         },
         {
           "id": "art_60__1_1_i4",
-          "text": "‘3. A CCP shall maintain and operate an organisational structure that ensures continuity and orderly functioning in the performance of its services and activities. It shall employ appropriate and proportionate systems, resources and procedures, including ICT systems managed in accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"ref\" data-ref=\"celex:32022R2554\" target=\"_blank\" rel=\"noopener\">Regulation (EU) 2022/2554</a> of the European Parliament and of the Council ( *2 ) .",
-          "class": "list-item-l2"
+          "text": "‘3. A CCP shall maintain and operate an organisational structure that ensures continuity and orderly functioning in the performance of its services and activities. It shall employ appropriate and proportionate systems, resources and procedures, including ICT systems managed in accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"ref\" data-ref=\"celex:32022R2554\" target=\"_blank\" rel=\"noopener\">Regulation (EU) 2022/2554</a> of the European Parliament and of the Council (*2) .",
+          "class": "list-item-l2 quoted-amendment"
         },
         {
           "id": "art_60__1_1_i5",
-          "text": "( *2 ) <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"ref\" data-ref=\"celex:32022R2554\" target=\"_blank\" rel=\"noopener\">Regulation (EU) 2022/2554</a> of the European Parliament and of the Council of 14 December 2022 on digital operational resilience for the financial sector and amending Regulations <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32009R1060\" class=\"ref\" data-ref=\"celex:32009R1060\" target=\"_blank\" rel=\"noopener\">(EC) No 1060/2009</a>, <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32012R0648\" class=\"ref\" data-ref=\"celex:32012R0648\" target=\"_blank\" rel=\"noopener\">(EU) No 648/2012</a>, <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0600\" class=\"ref\" data-ref=\"celex:32014R0600\" target=\"_blank\" rel=\"noopener\">(EU) No 600/2014</a>, <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0909\" class=\"ref\" data-ref=\"celex:32014R0909\" target=\"_blank\" rel=\"noopener\">(EU) No 909/2014</a> and <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R1011\" class=\"ref\" data-ref=\"celex:32016R1011\" target=\"_blank\" rel=\"noopener\">(EU) 2016/1011</a> ( OJ L 333, 27.12.2022, p. 1 ).’;&quot;",
-          "class": "list-item-l2"
+          "text": "(*2) <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"ref\" data-ref=\"celex:32022R2554\" target=\"_blank\" rel=\"noopener\">Regulation (EU) 2022/2554</a> of the European Parliament and of the Council of 14 December 2022 on digital operational resilience for the financial sector and amending Regulations <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32009R1060\" class=\"ref\" data-ref=\"celex:32009R1060\" target=\"_blank\" rel=\"noopener\">(EC) No 1060/2009</a>, <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32012R0648\" class=\"ref\" data-ref=\"celex:32012R0648\" target=\"_blank\" rel=\"noopener\">(EU) No 648/2012</a>, <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0600\" class=\"ref\" data-ref=\"celex:32014R0600\" target=\"_blank\" rel=\"noopener\">(EU) No 600/2014</a>, <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0909\" class=\"ref\" data-ref=\"celex:32014R0909\" target=\"_blank\" rel=\"noopener\">(EU) No 909/2014</a> and <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R1011\" class=\"ref\" data-ref=\"celex:32016R1011\" target=\"_blank\" rel=\"noopener\">(EU) 2016/1011</a> ( OJ L 333, 27.12.2022, p. 1 ).’;",
+          "class": "list-item-l2 legal-footnote"
         },
         {
           "id": "art_60__1_1_b",
@@ -4308,7 +4308,7 @@
         {
           "id": "art_60__1_2_i9",
           "text": "‘1. A CCP shall establish, implement and maintain an adequate business continuity policy and disaster recovery plan, which shall include ICT business continuity policy and ICT response and recovery plans put in place and implemented in accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"ref\" data-ref=\"celex:32022R2554\" target=\"_blank\" rel=\"noopener\">Regulation (EU) 2022/2554</a>, aiming to ensure the preservation of its functions, the timely recovery of operations and the fulfilment of the CCP’s obligations.’;",
-          "class": "list-item-l2"
+          "class": "list-item-l2 quoted-amendment"
         },
         {
           "id": "art_60__1_2_b",
@@ -4318,7 +4318,7 @@
         {
           "id": "art_60__1_2_i11",
           "text": "‘3. In order to ensure consistent application of this Article, ESMA shall, after consulting the members of the ESCB, develop draft regulatory technical standards specifying the minimum content and requirements of the business continuity policy and of the disaster recovery plan, excluding ICT business continuity policy and disaster recovery plans.’;",
-          "class": "list-item-l2"
+          "class": "list-item-l2 quoted-amendment"
         },
         {
           "id": "art_60__1_3",
@@ -4328,7 +4328,7 @@
         {
           "id": "art_60__1_i13",
           "text": "‘3. In order to ensure consistent application of this Article, ESMA shall develop draft regulatory technical standards specifying the details, other than for requirements related to ICT risk management, of the application for registration referred to in paragraph 1.’;",
-          "class": "list-item-l1"
+          "class": "list-item-l1 quoted-amendment"
         },
         {
           "id": "art_60__1_4",
@@ -4338,7 +4338,7 @@
         {
           "id": "art_60__1_i15",
           "text": "‘1. A trade repository shall identify sources of operational risk and minimise them also through the development of appropriate systems, controls and procedures, including ICT systems managed in accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"ref\" data-ref=\"celex:32022R2554\" target=\"_blank\" rel=\"noopener\">Regulation (EU) 2022/2554</a>.",
-          "class": "list-item-l1"
+          "class": "list-item-l1 quoted-amendment"
         },
         {
           "id": "art_60__1_2_2",
@@ -4363,7 +4363,7 @@
         {
           "id": "art_60__1_6_a_a",
           "text": "‘(a) a trade repository infringes Article 79(1) by not identifying sources of operational risk or by not minimising those risks through the development of appropriate systems, controls and procedures including ICT systems managed in accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"ref\" data-ref=\"celex:32022R2554\" target=\"_blank\" rel=\"noopener\">Regulation (EU) 2022/2554</a>;",
-          "class": "list-item-l3"
+          "class": "list-item-l3 quoted-amendment"
         },
         {
           "id": "art_60__1_6_a_b",
@@ -4393,7 +4393,7 @@
         {
           "id": "art_60__1_7_a_c",
           "text": "‘(c) a Tier 2 CCP infringes <a href=\"#a:act_eu_dora_reg_2022_2554:art_26\" class=\"ref\" data-article=\"26\">Article 26</a>(3) by not maintaining or operating an organisational structure that ensures continuity and orderly functioning in the performance of its services and activities or by not employing appropriate and proportionate systems, resources or procedures including ICT systems managed in accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"ref\" data-ref=\"celex:32022R2554\" target=\"_blank\" rel=\"noopener\">Regulation (EU) 2022/2554</a>;’;",
-          "class": "list-item-l3"
+          "class": "list-item-l3 quoted-amendment"
         },
         {
           "id": "art_60__1_7_a_ii",
@@ -4408,7 +4408,7 @@
         {
           "id": "art_60__1_7_b_a",
           "text": "‘(a) a Tier 2 CCP infringes <a href=\"#a:act_eu_dora_reg_2022_2554:art_34\" class=\"ref\" data-article=\"34\">Article 34</a>(1) by not establishing, implementing or maintaining an adequate business continuity policy and response and recovery plan set up in accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"ref\" data-ref=\"celex:32022R2554\" target=\"_blank\" rel=\"noopener\">Regulation (EU) 2022/2554</a>, aiming to ensure the preservation of its functions, the timely recovery of operations and the fulfilment of the CCP’s obligations, which at least allows for the recovery of all transactions at the time of disruption to allow the CCP to continue to operate with certainty and to complete settlement on the scheduled date;’.",
-          "class": "list-item-l3"
+          "class": "list-item-l3 quoted-amendment"
         }
       ]
     },
@@ -4429,13 +4429,13 @@
         },
         {
           "id": "art_61__1_i3",
-          "text": "‘1. A CSD shall identify sources of operational risk, both internal and external, and minimise their impact also through the deployment of appropriate ICT tools, processes and policies set up and managed in accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"ref\" data-ref=\"celex:32022R2554\" target=\"_blank\" rel=\"noopener\">Regulation (EU) 2022/2554</a> of the European Parliament and of the Council ( *3 ) , as well as through any other relevant appropriate tools, controls and procedures for other types of operational risk, including for all the securities settlement systems it operates.",
-          "class": "list-item-l1"
+          "text": "‘1. A CSD shall identify sources of operational risk, both internal and external, and minimise their impact also through the deployment of appropriate ICT tools, processes and policies set up and managed in accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"ref\" data-ref=\"celex:32022R2554\" target=\"_blank\" rel=\"noopener\">Regulation (EU) 2022/2554</a> of the European Parliament and of the Council (*3) , as well as through any other relevant appropriate tools, controls and procedures for other types of operational risk, including for all the securities settlement systems it operates.",
+          "class": "list-item-l1 quoted-amendment"
         },
         {
           "id": "art_61__1_i4",
-          "text": "( *3 ) <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"ref\" data-ref=\"celex:32022R2554\" target=\"_blank\" rel=\"noopener\">Regulation (EU) 2022/2554</a> of the European Parliament and of the Council of 14 December 2022 on digital operational resilience for the financial sector and amending Regulations <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32009R1060\" class=\"ref\" data-ref=\"celex:32009R1060\" target=\"_blank\" rel=\"noopener\">(EC) No 1060/2009</a>, <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32012R0648\" class=\"ref\" data-ref=\"celex:32012R0648\" target=\"_blank\" rel=\"noopener\">(EU) No 648/2012</a>, <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0600\" class=\"ref\" data-ref=\"celex:32014R0600\" target=\"_blank\" rel=\"noopener\">(EU) No 600/2014</a>, <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0909\" class=\"ref\" data-ref=\"celex:32014R0909\" target=\"_blank\" rel=\"noopener\">(EU) No 909/2014</a> and <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R1011\" class=\"ref\" data-ref=\"celex:32016R1011\" target=\"_blank\" rel=\"noopener\">(EU) 2016/1011</a> ( OJ L 333, 27.12.2022, p. 1 ).’;&quot;",
-          "class": "list-item-l1"
+          "text": "(*3) <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"ref\" data-ref=\"celex:32022R2554\" target=\"_blank\" rel=\"noopener\">Regulation (EU) 2022/2554</a> of the European Parliament and of the Council of 14 December 2022 on digital operational resilience for the financial sector and amending Regulations <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32009R1060\" class=\"ref\" data-ref=\"celex:32009R1060\" target=\"_blank\" rel=\"noopener\">(EC) No 1060/2009</a>, <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32012R0648\" class=\"ref\" data-ref=\"celex:32012R0648\" target=\"_blank\" rel=\"noopener\">(EU) No 648/2012</a>, <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0600\" class=\"ref\" data-ref=\"celex:32014R0600\" target=\"_blank\" rel=\"noopener\">(EU) No 600/2014</a>, <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0909\" class=\"ref\" data-ref=\"celex:32014R0909\" target=\"_blank\" rel=\"noopener\">(EU) No 909/2014</a> and <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R1011\" class=\"ref\" data-ref=\"celex:32016R1011\" target=\"_blank\" rel=\"noopener\">(EU) 2016/1011</a> ( OJ L 333, 27.12.2022, p. 1 ).’;",
+          "class": "list-item-l1 legal-footnote"
         },
         {
           "id": "art_61__1_2",
@@ -4450,7 +4450,7 @@
         {
           "id": "art_61__1_i7",
           "text": "‘3. For services that it provides as well as for each securities settlement system that it operates, a CSD shall establish, implement and maintain an adequate business continuity policy and disaster recovery plan, including ICT business continuity policy and ICT response and recovery plans established in accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"ref\" data-ref=\"celex:32022R2554\" target=\"_blank\" rel=\"noopener\">Regulation (EU) 2022/2554</a>, to ensure the preservation of its services, the timely recovery of operations and the fulfilment of the CSD’s obligations in the case of events that pose a significant risk to disrupting operations.",
-          "class": "list-item-l1"
+          "class": "list-item-l1 quoted-amendment"
         },
         {
           "id": "art_61__1_4",
@@ -4465,7 +4465,7 @@
         {
           "id": "art_61__1_i10",
           "text": "‘6. A CSD shall identify, monitor and manage the risks that key participants in the securities settlement systems it operates, as well as service and utility providers, and other CSDs or other market infrastructures might pose to its operations. It shall, upon request, provide competent and relevant authorities with information on any such risk identified. It shall also inform the competent authority and relevant authorities without delay of any operational incidents, other than in relation to ICT risk, resulting from such risks.’;",
-          "class": "list-item-l1"
+          "class": "list-item-l1 quoted-amendment"
         },
         {
           "id": "art_61__1_5",
@@ -4475,7 +4475,7 @@
         {
           "id": "art_61__1_i12",
           "text": "‘7. ESMA shall, in close cooperation with the members of the ESCB, develop draft regulatory technical standards to specify the operational risks referred to in paragraphs 1 and 6, other than ICT risk, and the methods to test, to address or to minimise those risks, including the business continuity policies and disaster recovery plans referred to in paragraphs 3 and 4 and the methods of assessment thereof.’.",
-          "class": "list-item-l1"
+          "class": "list-item-l1 quoted-amendment"
         }
       ]
     },
@@ -4501,13 +4501,13 @@
         },
         {
           "id": "art_62__1_1_a_4",
-          "text": "‘4. An APA shall comply with the requirements concerning the security of network and information systems set out in <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"ref\" data-ref=\"celex:32022R2554\" target=\"_blank\" rel=\"noopener\">Regulation (EU) 2022/2554</a> of the European Parliament and of the Council ( *4 ) .",
-          "class": "list-item-l3"
+          "text": "‘4. An APA shall comply with the requirements concerning the security of network and information systems set out in <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"ref\" data-ref=\"celex:32022R2554\" target=\"_blank\" rel=\"noopener\">Regulation (EU) 2022/2554</a> of the European Parliament and of the Council (*4) .",
+          "class": "list-item-l3 quoted-amendment"
         },
         {
           "id": "art_62__1_1_i5",
-          "text": "( *4 ) <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"ref\" data-ref=\"celex:32022R2554\" target=\"_blank\" rel=\"noopener\">Regulation (EU) 2022/2554</a> of the European Parliament and of the Council of 14 December 2022 on digital operational resilience for the financial sector and amending Regulations <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32009R1060\" class=\"ref\" data-ref=\"celex:32009R1060\" target=\"_blank\" rel=\"noopener\">(EC) No 1060/2009</a>, <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32012R0648\" class=\"ref\" data-ref=\"celex:32012R0648\" target=\"_blank\" rel=\"noopener\">(EU) No 648/2012</a>, <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0600\" class=\"ref\" data-ref=\"celex:32014R0600\" target=\"_blank\" rel=\"noopener\">(EU) No 600/2014</a>, <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0909\" class=\"ref\" data-ref=\"celex:32014R0909\" target=\"_blank\" rel=\"noopener\">(EU) No 909/2014</a> and <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R1011\" class=\"ref\" data-ref=\"celex:32016R1011\" target=\"_blank\" rel=\"noopener\">(EU) 2016/1011</a> ( OJ L 333, 27.12.2022, p. 1 ).’;&quot;",
-          "class": "list-item-l2"
+          "text": "(*4) <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"ref\" data-ref=\"celex:32022R2554\" target=\"_blank\" rel=\"noopener\">Regulation (EU) 2022/2554</a> of the European Parliament and of the Council of 14 December 2022 on digital operational resilience for the financial sector and amending Regulations <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32009R1060\" class=\"ref\" data-ref=\"celex:32009R1060\" target=\"_blank\" rel=\"noopener\">(EC) No 1060/2009</a>, <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32012R0648\" class=\"ref\" data-ref=\"celex:32012R0648\" target=\"_blank\" rel=\"noopener\">(EU) No 648/2012</a>, <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0600\" class=\"ref\" data-ref=\"celex:32014R0600\" target=\"_blank\" rel=\"noopener\">(EU) No 600/2014</a>, <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0909\" class=\"ref\" data-ref=\"celex:32014R0909\" target=\"_blank\" rel=\"noopener\">(EU) No 909/2014</a> and <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32016R1011\" class=\"ref\" data-ref=\"celex:32016R1011\" target=\"_blank\" rel=\"noopener\">(EU) 2016/1011</a> ( OJ L 333, 27.12.2022, p. 1 ).’;",
+          "class": "list-item-l2 legal-footnote"
         },
         {
           "id": "art_62__1_1_b",
@@ -4517,7 +4517,7 @@
         {
           "id": "art_62__1_1_b_c",
           "text": "‘(c) the concrete organisational requirements laid down in paragraphs 3 and 5.’;",
-          "class": "list-item-l3"
+          "class": "list-item-l3 quoted-amendment"
         },
         {
           "id": "art_62__1_2",
@@ -4532,7 +4532,7 @@
         {
           "id": "art_62__1_2_i10",
           "text": "‘5. A CTP shall comply with the requirements concerning the security of network and information systems set out in <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"ref\" data-ref=\"celex:32022R2554\" target=\"_blank\" rel=\"noopener\">Regulation (EU) 2022/2554</a>.’.",
-          "class": "list-item-l2"
+          "class": "list-item-l2 quoted-amendment"
         },
         {
           "id": "art_62__1_2_b",
@@ -4542,7 +4542,7 @@
         {
           "id": "art_62__1_2_b_e",
           "text": "‘(e) the concrete organisational requirements laid down in paragraph 4.’;",
-          "class": "list-item-l3"
+          "class": "list-item-l3 quoted-amendment"
         },
         {
           "id": "art_62__1_3",
@@ -4557,7 +4557,7 @@
         {
           "id": "art_62__1_3_i15",
           "text": "‘3. An ARM shall comply with the requirements concerning the security of network and information systems set out in <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"ref\" data-ref=\"celex:32022R2554\" target=\"_blank\" rel=\"noopener\">Regulation (EU) 2022/2554</a>.’;",
-          "class": "list-item-l2"
+          "class": "list-item-l2 quoted-amendment"
         },
         {
           "id": "art_62__1_3_b",
@@ -4567,7 +4567,7 @@
         {
           "id": "art_62__1_3_b_b",
           "text": "‘(b) the concrete organisational requirements laid down in paragraphs 2 and 4.’.",
-          "class": "list-item-l3"
+          "class": "list-item-l3 quoted-amendment"
         }
       ]
     },
@@ -4583,8 +4583,8 @@
         },
         {
           "id": "art_63__1_6",
-          "text": "‘6. For critical benchmarks, an administrator shall have sound administrative and accounting procedures, internal control mechanisms, effective procedures for risk assessment, and effective control and safeguard arrangements for managing ICT systems in accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"ref\" data-ref=\"celex:32022R2554\" target=\"_blank\" rel=\"noopener\">Regulation (EU) 2022/2554</a> of the European Parliament and of the Council ( *5 ) .",
-          "class": "list-item-l1"
+          "text": "‘6. For critical benchmarks, an administrator shall have sound administrative and accounting procedures, internal control mechanisms, effective procedures for risk assessment, and effective control and safeguard arrangements for managing ICT systems in accordance with <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"ref\" data-ref=\"celex:32022R2554\" target=\"_blank\" rel=\"noopener\">Regulation (EU) 2022/2554</a> of the European Parliament and of the Council (*5) .",
+          "class": "list-item-l1 quoted-amendment"
         }
       ]
     },

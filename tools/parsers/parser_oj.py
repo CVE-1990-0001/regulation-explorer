@@ -270,6 +270,14 @@ def _classify_oj_table(table_tag):
     return "list", parsed_rows
 
 
+def _is_footnote_node(node):
+    return isinstance(node, Tag) and bool(re.search(r"\b(?:oj-note|footnote)\b", class_of(node)))
+
+
+def _is_quoted_text(text):
+    return bool(text and text.startswith(("‘", "“")))
+
+
 def _emit_oj_list_cell(label_txt, body_td, emitter, level):
     text_buf: list[str] = []
     emitted_head = False
@@ -281,10 +289,12 @@ def _emit_oj_list_cell(label_txt, body_td, emitter, level):
         if not joined:
             return
         if not emitted_head:
-            emitter.add(joined, level=level, label=label_txt)
+            extra = "quoted-amendment" if _is_quoted_text(label_txt or joined) else ""
+            emitter.add(joined, level=level, label=label_txt, extra_class=extra)
             emitted_head = True
         else:
-            emitter.add(joined, level=level)
+            extra = "quoted-amendment" if _is_quoted_text(joined) else ""
+            emitter.add(joined, level=level, extra_class=extra)
 
     for child in body_td.children:
         if isinstance(child, NavigableString):
@@ -295,7 +305,13 @@ def _emit_oj_list_cell(label_txt, body_td, emitter, level):
         if not isinstance(child, Tag) or re.search(r"\bmodref\b", class_of(child)):
             continue
 
-        if child.name == "table":
+        if _is_footnote_node(child):
+            flush_buf()
+            note_txt = _clean_node_text(child)
+            if note_txt:
+                emitter.add(note_txt, level=level, extra_class="legal-footnote")
+            emitted_head = True
+        elif child.name == "table":
             kind, sub_rows = _classify_oj_table(child)
             if kind == "list":
                 if not emitted_head and label_txt and not any(text_buf):
@@ -318,7 +334,8 @@ def _emit_oj_list_cell(label_txt, body_td, emitter, level):
             txt = _clean_node_text(child)
             if txt:
                 if emitted_head:
-                    emitter.add(txt, level=level)
+                    extra = "quoted-amendment" if _is_quoted_text(txt) else ""
+                    emitter.add(txt, level=level, extra_class=extra)
                 else:
                     text_buf.append(txt)
                     if child.name in {"p", "div"}:
@@ -331,11 +348,33 @@ def _emit_oj_list_cell(label_txt, body_td, emitter, level):
 
 def _emit_oj_container(container, emitter, level_base=0):
     seen_primary = False
-    for child in container.children:
-        if not isinstance(child, Tag):
-            continue
+    children = [c for c in container.children if isinstance(c, Tag)]
+    idx = 0
+    while idx < len(children):
+        child = children[idx]
         cls = class_of(child)
+        idx += 1
         if re.search(r"\bmodref\b|\beli-title\b", cls):
+            continue
+
+        if _is_footnote_node(child):
+            note_txt = _clean_node_text(child)
+            if note_txt:
+                emitter.add(note_txt, level=level_base, extra_class="legal-footnote")
+                seen_primary = True
+            continue
+
+        # Combine quoted replacement article title + subtitle (e.g. "‘Article 18" + "General principles")
+        if child.name == "p" and re.search(r"\boj-ti-art\b", cls):
+            q_title = _clean_node_text(child)
+            if idx < len(children) and children[idx].name == "p" and re.search(r"\boj-sti-art\b", class_of(children[idx])):
+                q_sub = _clean_node_text(children[idx])
+                idx += 1
+                if q_sub:
+                    q_title = f"{q_title} — {q_sub}"
+            if q_title:
+                emitter.add(q_title, level=level_base, extra_class="quoted-amendment-heading")
+                seen_primary = True
             continue
 
         if child.name == "table":
@@ -356,11 +395,13 @@ def _emit_oj_container(container, emitter, level_base=0):
             txt = _clean_node_text(child)
             if not txt:
                 continue
-            is_numbered = bool(re.match(r"^\d+[a-z]?\.\s+", txt))
+            is_numbered = bool(re.match(r"^[‘'“\"]?\d+[a-z]?\.\s+", txt))
+            extra = "quoted-amendment" if _is_quoted_text(txt) else ""
             emitter.add(
                 txt,
                 level=level_base,
-                is_subparagraph=(level_base == 0 and seen_primary and not is_numbered),
+                is_subparagraph=(level_base == 0 and seen_primary and not is_numbered and not extra),
+                extra_class=extra,
             )
             seen_primary = True
 
