@@ -310,6 +310,23 @@
         "url": "https://www.recht.bund.de/bgbl/1/2025/301/regelungstext.pdf?__blob=publicationFile&v=2",
         "parser": "nis2_bsig"
       }
+    },
+    {
+      "id": "act_de_wpig_2021",
+      "path": "regulations-data/wpig.json",
+      "label": "Wertpapierinstitutsgesetz (WpIG)",
+      "heading": "German Investment Firm Act",
+      "jurisdiction": "DE",
+      "authId": "jurabk:WpIG",
+      "tags": [
+        "financial-markets",
+        "third-party-risk"
+      ],
+      "update": {
+        "url": "https://www.gesetze-im-internet.de/wpig/BJNR099010021.html",
+        "parser": "gesetze_im_internet",
+        "encoding": "latin-1"
+      }
     }
   ],
   "bundles": [

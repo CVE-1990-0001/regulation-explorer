@@ -426,7 +426,7 @@ def link_text(text, act_id, self_ids):
 
 
 def process_act(path, act_id):
-    with open(path) as f:
+    with open(path, encoding="utf-8") as f:
         doc = json.load(f)
     articles = doc["articles"] if isinstance(doc, dict) else doc
     self_ids = self_article_ids(articles)
@@ -440,7 +440,7 @@ def process_act(path, act_id):
                 para["text"] = after
             n_refs += after.count('class="ref"')
 
-    with open(path, "w") as f:
+    with open(path, "w", encoding="utf-8") as f:
         json.dump(doc, f, ensure_ascii=False, indent=2)
         f.write("\n")
     return n_refs
@@ -463,7 +463,8 @@ def parse_args(argv):
 
 def main(argv):
     args = parse_args(argv)
-    index = json.load(open(INDEX))
+    with open(INDEX, encoding="utf-8") as f:
+        index = json.load(f)
     only = set(args.only)
     total = 0
     for entry in index["acts"]:

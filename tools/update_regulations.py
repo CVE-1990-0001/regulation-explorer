@@ -3,7 +3,9 @@
 
 EUR-Lex acts are discovered from their ``authId`` in ``data/index.json``.
 Other sources can opt in with an ``update`` object containing ``url`` and
-``parser`` (``consolidated``, ``oj``, ``boersengesetz``, ``nis2_bsig``, or ``bsi_c3a``).
+``parser`` (``consolidated``, ``oj``, ``gesetze_im_internet``/``boersengesetz``,
+``nis2_bsig``, or ``bsi_c3a``). A registered act whose JSON file does not exist
+yet is imported from scratch on its first run.
 """
 
 from __future__ import annotations
@@ -240,6 +242,7 @@ def parse_articles(content: bytes, parser_name: str, encoding: str) -> list[dict
             "consolidated": ("parser_consolidated.py", "update_parser_consolidated"),
             "oj": ("parser_oj.py", "update_parser_oj"),
             "boersengesetz": ("parser_boersengesetz.py", "update_parser_boersengesetz"),
+            "gesetze_im_internet": ("parser_boersengesetz.py", "update_parser_boersengesetz"),
         }
         names = ("consolidated", "oj") if parser_name == "auto" else (parser_name,)
         articles = []
@@ -326,7 +329,8 @@ def refresh_entry(
 
     formatter = load_module("update_formatting", PARSERS_DIR / "formatting.py")
     path = APP / entry["path"]
-    current = read_json(path)
+    # First import of a newly registered act: start from an empty article list.
+    current = read_json(path) if path.exists() else []
     old_articles = extract_doc_articles(current)
 
     errors = []
