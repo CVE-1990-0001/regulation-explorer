@@ -62,3 +62,36 @@ def test_oj_nested_tables_and_closing_subparagraph_produce_structural_ids():
         ("art_6__1_b", "list-item-l1", "(b) a contract applies."),
         ("art_6__1_s2", "subparagraph", "Point (b) shall not apply to public authorities."),
     ]
+
+
+def test_oj_amending_directive_footnotes_and_quoted_headings():
+    html = """
+    <div class="eli-subdivision" id="art_1">
+      <p class="oj-ti-art">Article 1</p>
+      <div class="eli-title"><p class="oj-sti-art">Amendments</p></div>
+      <p class="oj-normal">Article 12 is amended as follows:</p>
+      <table><tbody><tr>
+        <td><p class="oj-normal">(1)</p></td>
+        <td>
+          <p class="oj-normal">point (a) is replaced by:</p>
+          <table><tbody><tr>
+            <td><p class="oj-normal">‘(a)</p></td>
+            <td><p class="oj-normal">has sound procedures (<span class="oj-super">*1</span>);</p></td>
+          </tr></tbody></table>
+          <p class="oj-note">(<span class="oj-super">*1</span>) Regulation (EU) 2022/2554.’;"</p>
+        </td>
+      </tr></tbody></table>
+      <div>
+        <p class="oj-ti-art">‘Article 18</p>
+        <p class="oj-sti-art">General principles</p>
+      </div>
+    </div>
+    """
+    [article] = parser.parse(html)
+    classes = [(p["class"], p["text"]) for p in article["paragraphs"]]
+    assert ("list-item-l2 quoted-amendment", "‘(a) has sound procedures (*1);") in classes
+    assert any(
+        cls == "list-item-l1 legal-footnote" and "(*1)" in txt and not txt.endswith('"')
+        for cls, txt in classes
+    )
+    assert ("quoted-amendment-heading", "‘Article 18 — General principles") in classes

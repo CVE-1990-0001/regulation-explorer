@@ -46,7 +46,12 @@ COLLAPSED_NUM_LIST_RE = re.compile(
 
 
 def normalise_ws(value: str) -> str:
-    return re.sub(r"\s+", " ", f"{value or ''}".replace("\u00a0", " ")).strip()
+    text = re.sub(r"\s+", " ", f"{value or ''}".replace("\u00a0", " ")).strip()
+    # Collapse spaces introduced by get_text(" ") around superscript footnote tags: "( *1 )" -> "(*1)"
+    text = re.sub(r"\(\s*(\*\d+)\s*\)", r"(\1)", text)
+    # Strip stray trailing double-quote artifact in EUR-Lex OJ footnote HTML: ").’;"" -> ").’;"
+    text = re.sub(r"([’'][\.;])\"$", r"\1", text)
+    return text
 
 
 def clean_heading_text(value: str) -> str:
@@ -129,7 +134,7 @@ class ParagraphEmitter:
             combined_plain = (
                 f"{clean_label} {clean_body}".strip() if clean_label else clean_body
             )
-            if not combined_plain:
+            if not combined_plain or not re.search(r"[0-9A-Za-z\u00C0-\u024F]", combined_plain):
                 return
             rendered = self.linkify_fn(combined_plain)
         else:
