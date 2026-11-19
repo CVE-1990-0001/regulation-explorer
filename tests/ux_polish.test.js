@@ -162,4 +162,14 @@ test('keyboard shortcuts (/ to focus search, [ and ] for article pagination), co
   app.click(app.doc.getElementById('prevArticle'));
   await app.tick();
   assert.match(app.hash(), /act_eu_dora_its_2024_2956:art_7$/);
+
+  // Wide Roman-numeral markers (>= 6 chars, e.g. "(xxviii)" in MiFID II Art. 70) flow inline via .is-wide-marker
+  app.nav('#a:act_eu_mifid2_2014_0065:art_70');
+  await app.tick();
+  const wideMarker = [...app.doc.querySelectorAll('#paragraphsContainer .list-item-marker')]
+    .find((m) => m.textContent === '(xxviii)');
+  const normalMarker = [...app.doc.querySelectorAll('#paragraphsContainer .list-item-marker')]
+    .find((m) => m.textContent === '(a)');
+  assert.ok(wideMarker && wideMarker.classList.contains('is-wide-marker'), 'wide marker (xxviii) should carry .is-wide-marker');
+  assert.ok(normalMarker && !normalMarker.classList.contains('is-wide-marker'), 'short marker (a) should stay hanging');
 });
