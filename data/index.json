@@ -317,7 +317,6 @@
       "label": "Wertpapierinstitutsgesetz (WpIG)",
       "heading": "German Investment Firm Act",
       "jurisdiction": "DE",
-      "authId": "jurabk:WpIG",
       "tags": [
         "financial-markets",
         "third-party-risk"
@@ -337,7 +336,6 @@
       "label": "Wertpapierhandelsgesetz (WpHG)",
       "heading": "German Securities Trading Act",
       "jurisdiction": "DE",
-      "authId": "jurabk:WpHG",
       "tags": [
         "financial-markets"
       ],
@@ -356,7 +354,6 @@
       "label": "Kreditwesengesetz (KWG)",
       "heading": "German Banking Act",
       "jurisdiction": "DE",
-      "authId": "jurabk:KWG",
       "tags": [
         "financial-markets",
         "third-party-risk"
@@ -376,7 +373,6 @@
       "label": "MaRisk",
       "heading": "Mindestanforderungen an das Risikomanagement (BaFin-Rundschreiben 06/2024 (BA))",
       "jurisdiction": "DE",
-      "authId": "bafin:MaRisk",
       "tags": [
         "financial-markets",
         "cybersecurity",

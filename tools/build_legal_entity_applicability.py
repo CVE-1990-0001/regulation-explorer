@@ -21,17 +21,11 @@ ENTITY_SHORT_NAMES = {
 }
 
 CELEX_PATTERN = re.compile(r"celex:3(?P<year>\d{4})[A-Z](?P<number>\d{4})$")
-# National acts are listed by abbreviation, either alone ("KWG") or as the
-# parenthesised short title of a longer name ("BaFin Rundschreiben ... (MaRisk)").
-NAMED_SCHEMES = {"jurabk", "bafin"}
 
 
 def citation_pattern(auth_id):
     match = CELEX_PATTERN.fullmatch(auth_id or "")
     if not match:
-        scheme, _, name = (auth_id or "").partition(":")
-        if scheme.lower() in NAMED_SCHEMES and name.strip():
-            return re.compile(rf"(?:^|\(){re.escape(name.strip())}(?:\)|$)")
         return None
 
     year = match.group("year")
@@ -52,7 +46,7 @@ def build_mapping(rows, registry):
         entity_names = {
             row["Legal Entity"].strip()
             for row in rows
-            if pattern.search(row["Regulation Short Name"].strip())
+            if pattern.search(row["Regulation Short Name"])
         }
         entities = [
             {"shortName": ENTITY_SHORT_NAMES[name], "name": name}

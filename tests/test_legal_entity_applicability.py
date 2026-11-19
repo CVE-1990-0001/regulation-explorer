@@ -31,24 +31,6 @@ def test_build_mapping_accepts_both_eu_citation_orders():
     assert "unmatched" not in mapping
 
 
-def test_build_mapping_matches_german_abbreviations():
-    rows = [
-        {"Legal Entity": "Eurex Repo GmbH", "Regulation Short Name": "KWG"},
-        {"Legal Entity": "Deutsche Boerse AG", "Regulation Short Name": "BaFin Rundschreiben 06/2026 (BA) (MaRisk)"},
-        # Mentions KWG but is a different instrument.
-        {"Legal Entity": "Clearstream Europe AG", "Regulation Short Name": "Allgemeinverfügung nach § 24c Abs. 1 KWG"},
-    ]
-    registry = {"acts": [
-        {"id": "kwg", "authId": "jurabk:KWG"},
-        {"id": "marisk", "authId": "bafin:MaRisk"},
-    ]}
-
-    mapping = applicability_builder.build_mapping(rows, registry)
-
-    assert mapping["kwg"] == [{"shortName": "ERG", "name": "Eurex Repo GmbH"}]
-    assert mapping["marisk"] == [{"shortName": "DBAG", "name": "Deutsche Boerse AG"}]
-
-
 def test_build_bundle_mapping_aggregates_nested_descendant_acts():
     act_mapping = {
         "core": [{"shortName": "CHAG", "name": "Clearstream Holding AG"}],
