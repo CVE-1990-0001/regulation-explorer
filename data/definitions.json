@@ -7769,6 +7769,2146 @@
       }
     ]
   },
+  "act_de_wpig_2021": {
+    "definitionArticleIds": [
+      "art_2"
+    ],
+    "entries": [
+      {
+        "term": "Wertpapierdienstleistungen",
+        "forms": [
+          "Wertpapierdienstleistungen",
+          "Wertpapierdienstleistungens"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(2)",
+        "definition": "Wertpapierdienstleistungen im Sinne dieses Gesetzes sind",
+        "definitionHtml": "Wertpapierdienstleistungen im Sinne dieses Gesetzes sind",
+        "sourceHash": "a:act_de_wpig_2021:art_2__2"
+      },
+      {
+        "term": "Wertpapiernebendienstleistungen",
+        "forms": [
+          "Wertpapiernebendienstleistungen",
+          "Wertpapiernebendienstleistungens"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(3)",
+        "definition": "Wertpapiernebendienstleistungen im Sinne dieses Gesetzes sind",
+        "definitionHtml": "Wertpapiernebendienstleistungen im Sinne dieses Gesetzes sind",
+        "sourceHash": "a:act_de_wpig_2021:art_2__3"
+      },
+      {
+        "term": "Nebengeschäfte",
+        "forms": [
+          "Nebengeschäfte",
+          "Nebengeschäften"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(4)",
+        "definition": "Nebengeschäfte im Sinne dieses Gesetzes sind",
+        "definitionHtml": "Nebengeschäfte im Sinne dieses Gesetzes sind",
+        "sourceHash": "a:act_de_wpig_2021:art_2__4"
+      },
+      {
+        "term": "Kryptografische Instrumente",
+        "forms": [
+          "Kryptografische Instrumente",
+          "Kryptografische Instrumenten",
+          "Kryptografischen Instrumente",
+          "Kryptografischen Instrumenten",
+          "Kryptografischer Instrumente",
+          "Kryptografischer Instrumenten",
+          "Kryptografisches Instrumente",
+          "Kryptografisches Instrumenten",
+          "Kryptografischem Instrumente",
+          "Kryptografischem Instrumenten"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2",
+        "definition": "Kryptografische Instrumente im Sinne dieses Gesetzes sind digitale Darstellungen eines Wertes, der von keiner Zentralbank oder öffentlichen Stelle emittiert wurde oder garantiert wird und nicht den gesetzlichen Status einer Währung oder von Geld besitzt, aber von natürlichen oder juristischen Personen aufgrund einer Vereinbarung oder tatsächlichen Übung als Tausch- oder Zahlungsmittel akzeptiert wird oder Anlagezwecken dient und der auf elektronischem Wege übertragen, gespeichert und gehandelt werden kann.",
+        "definitionHtml": "Kryptografische Instrumente im Sinne dieses Gesetzes sind digitale Darstellungen eines Wertes, der von keiner Zentralbank oder öffentlichen Stelle emittiert wurde oder garantiert wird und nicht den gesetzlichen Status einer Währung oder von Geld besitzt, aber von natürlichen oder juristischen Personen aufgrund einer Vereinbarung oder tatsächlichen Übung als Tausch- oder Zahlungsmittel akzeptiert wird oder Anlagezwecken dient und der auf elektronischem Wege übertragen, gespeichert und gehandelt werden kann.",
+        "sourceHash": "a:act_de_wpig_2021:art_2__4_s2"
+      },
+      {
+        "term": "Keine kryptografischen Instrumente",
+        "forms": [
+          "Keine kryptografischen Instrumente",
+          "Keine kryptografischen Instrumenten",
+          "Keine kryptografische Instrumente",
+          "Keine kryptografische Instrumenten",
+          "Keinen kryptografischen Instrumente",
+          "Keinen kryptografischen Instrumenten",
+          "Keiner kryptografischer Instrumente",
+          "Keiner kryptografischer Instrumenten",
+          "Keines kryptografisches Instrumente",
+          "Keines kryptografisches Instrumenten",
+          "Keinem kryptografischem Instrumente",
+          "Keinem kryptografischem Instrumenten"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2",
+        "definition": "Keine kryptografischen Instrumente im Sinne dieses Gesetzes ist oder sind",
+        "definitionHtml": "Keine kryptografischen Instrumente im Sinne dieses Gesetzes ist oder sind",
+        "sourceHash": "a:act_de_wpig_2021:art_2__4_s2"
+      },
+      {
+        "term": "Finanzinstrumente",
+        "forms": [
+          "Finanzinstrumente",
+          "Finanzinstrumenten"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(5)",
+        "definition": "Finanzinstrumente im Sinne dieses Gesetzes sind",
+        "definitionHtml": "Finanzinstrumente im Sinne dieses Gesetzes sind",
+        "sourceHash": "a:act_de_wpig_2021:art_2__5"
+      },
+      {
+        "term": "Hinterlegungsscheine",
+        "forms": [
+          "Hinterlegungsscheine",
+          "Hinterlegungsscheinen"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(6)",
+        "definition": "Hinterlegungsscheine im Sinne dieses Gesetzes sind Wertpapiere, die auf dem Kapitalmarkt handelbar sind, ein Eigentumsrecht an Wertpapieren von Emittenten mit Sitz im Ausland verbriefen, zum Handel auf einem organisierten Markt zugelassen sind und unabhängig von den Wertpapieren des jeweiligen Emittenten mit Sitz im Ausland gehandelt werden können.",
+        "definitionHtml": "Hinterlegungsscheine im Sinne dieses Gesetzes sind Wertpapiere, die auf dem Kapitalmarkt handelbar sind, ein Eigentumsrecht an Wertpapieren von Emittenten mit Sitz im Ausland verbriefen, zum Handel auf einem organisierten Markt zugelassen sind und unabhängig von den Wertpapieren des jeweiligen Emittenten mit Sitz im Ausland gehandelt werden können.",
+        "sourceHash": "a:act_de_wpig_2021:art_2__6"
+      },
+      {
+        "term": "Geldmarktinstrumente",
+        "forms": [
+          "Geldmarktinstrumente",
+          "Geldmarktinstrumenten"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(7)",
+        "definition": "Geldmarktinstrumente im Sinne dieses Gesetzes sind Instrumente im Sinne des Artikels 11 der Delegierten Verordnung (EU) 2017/565 mit Ausnahme von Zahlungsinstrumenten.",
+        "definitionHtml": "Geldmarktinstrumente im Sinne dieses Gesetzes sind Instrumente im Sinne des Artikels 11 der Delegierten <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32017R0565\" class=\"ref\" data-ref=\"celex:32017R0565\" target=\"_blank\" rel=\"noopener\">Verordnung (EU) 2017/565</a> mit Ausnahme von Zahlungsinstrumenten.",
+        "sourceHash": "a:act_de_wpig_2021:art_2__7"
+      },
+      {
+        "term": "Derivate",
+        "forms": [
+          "Derivate",
+          "Derivaten"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(8)",
+        "definition": "Derivate im Sinne dieses Gesetzes sind",
+        "definitionHtml": "Derivate im Sinne dieses Gesetzes sind",
+        "sourceHash": "a:act_de_wpig_2021:art_2__8"
+      },
+      {
+        "term": "Anbieter von Nebendienstleistungen",
+        "forms": [
+          "Anbieter von Nebendienstleistungen",
+          "Anbieter von Nebendienstleistungens",
+          "Anbiete von Nebendienstleistungen",
+          "Anbiete von Nebendienstleistungens",
+          "Anbieten von Nebendienstleistungen",
+          "Anbieten von Nebendienstleistungens",
+          "Anbietes von Nebendienstleistungen",
+          "Anbietes von Nebendienstleistungens",
+          "Anbietem von Nebendienstleistungen",
+          "Anbietem von Nebendienstleistungens"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(9)",
+        "definition": "Anbieter von Nebendienstleistungen im Sinne dieses Gesetzes ist ein Unternehmen, dessen Haupttätigkeit besteht",
+        "definitionHtml": "Anbieter von Nebendienstleistungen im Sinne dieses Gesetzes ist ein Unternehmen, dessen Haupttätigkeit besteht",
+        "sourceHash": "a:act_de_wpig_2021:art_2__9"
+      },
+      {
+        "term": "Waren- und Emissionszertifikatehändler",
+        "forms": [
+          "Waren- und Emissionszertifikatehändler",
+          "Waren- und Emissionszertifikatehändlers",
+          "Waren- und Emissionszertifikatehändlern"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(10)",
+        "definition": "Waren- und Emissionszertifikatehändler im Sinne dieses Gesetzes sind Waren- und Emissionszertifikatehändler im Sinne des Artikels 4 Absatz 1 Nummer 150 der Verordnung (EU) Nr. 575/2013 des Europäischen Parlaments und des Rates vom 26. Juni 2013 über Aufsichtsanforderungen an Wertpapierfirmen und zur Änderung der Verordnung (EU) Nr. 648/2012 (ABl. L 176 vom 27.6.2013, S. 1; L 208 vom 2.8.2013; S. 68; L 321 vom 30.11.2013, S. 6; L 193 vom 21.7.2015, S. 166; L 20 vom 25.1.2017, S. 3; L 13 vom 17.1.2020, S. 58; L 335 vom 13.10.2020, S. 20), die zuletzt durch die Verordnung (EU) 2020/873 (ABl. L 204 vom 26.6.2020, S. 4) geändert worden ist.",
+        "definitionHtml": "Waren- und Emissionszertifikatehändler im Sinne dieses Gesetzes sind Waren- und Emissionszertifikatehändler im Sinne des Artikels 4 Absatz 1 Nummer 150 der <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013R0575\" class=\"ref\" data-ref=\"celex:32013R0575\" target=\"_blank\" rel=\"noopener\">Verordnung (EU) Nr. 575/2013</a> des Europäischen Parlaments und des Rates vom 26. Juni 2013 über Aufsichtsanforderungen an Wertpapierfirmen und zur Änderung der <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32012R0648\" class=\"ref\" data-ref=\"celex:32012R0648\" target=\"_blank\" rel=\"noopener\">Verordnung (EU) Nr. 648/2012</a> (ABl. L 176 vom 27.6.2013, S. 1; L 208 vom 2.8.2013; S. 68; L 321 vom 30.11.2013, S. 6; L 193 vom 21.7.2015, S. 166; L 20 vom 25.1.2017, S. 3; L 13 vom 17.1.2020, S. 58; L 335 vom 13.10.2020, S. 20), die zuletzt durch die <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32020R0873\" class=\"ref\" data-ref=\"celex:32020R0873\" target=\"_blank\" rel=\"noopener\">Verordnung (EU) 2020/873</a> (ABl. L 204 vom 26.6.2020, S. 4) geändert worden ist.",
+        "sourceHash": "a:act_de_wpig_2021:art_2__10"
+      },
+      {
+        "term": "Zweigniederlassung",
+        "forms": [
+          "Zweigniederlassung",
+          "Zweigniederlassungen"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(11)",
+        "definition": "Zweigniederlassung im Sinne dieses Gesetzes ist eine Betriebsstelle, die",
+        "definitionHtml": "Zweigniederlassung im Sinne dieses Gesetzes ist eine Betriebsstelle, die",
+        "sourceHash": "a:act_de_wpig_2021:art_2__11"
+      },
+      {
+        "term": "Zuständige Behörde",
+        "forms": [
+          "Zuständige Behörde",
+          "Zuständige Behörden",
+          "Zuständigen Behörde",
+          "Zuständigen Behörden",
+          "Zuständiger Behörde",
+          "Zuständiger Behörden",
+          "Zuständiges Behörde",
+          "Zuständiges Behörden",
+          "Zuständigem Behörde",
+          "Zuständigem Behörden"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(13)",
+        "definition": "Zuständige Behörde im Sinne dieses Gesetzes ist im Inland die Bundesanstalt für Finanzdienstleistungsaufsicht (Bundesanstalt) und im Ausland eine nach nationalem Recht offiziell anerkannte Behörde oder öffentliche Stelle eines Vertragsstaates, die nach diesem Recht im Rahmen des in dem betreffenden Vertragsstaat geltenden Aufsichtssystems zur Beaufsichtigung von Wertpapierinstituten gemäß der Richtlinie (EU) 2019/2034 des Europäischen Parlaments und des Rats vom 27. November 2019 über die Beaufsichtigung von Wertpapierfirmen und zur Änderung der Richtlinien 2002/87/EG, 2009/65/EG, 2011/61/EU, 2013/36/EU, 2014/59/EU und 2014/65/EU (ABl. L 314 vom 5.12.2019, S. 64) befugt ist.",
+        "definitionHtml": "Zuständige Behörde im Sinne dieses Gesetzes ist im Inland die Bundesanstalt für Finanzdienstleistungsaufsicht (Bundesanstalt) und im Ausland eine nach nationalem Recht offiziell anerkannte Behörde oder öffentliche Stelle eines Vertragsstaates, die nach diesem Recht im Rahmen des in dem betreffenden Vertragsstaat geltenden Aufsichtssystems zur Beaufsichtigung von Wertpapierinstituten gemäß der <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019L2034\" class=\"ref\" data-ref=\"celex:32019L2034\" target=\"_blank\" rel=\"noopener\">Richtlinie (EU) 2019/2034</a> des Europäischen Parlaments und des Rats vom 27. November 2019 über die Beaufsichtigung von Wertpapierfirmen und zur Änderung der Richtlinien <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32002L0087\" class=\"ref\" data-ref=\"celex:32002L0087\" target=\"_blank\" rel=\"noopener\">2002/87/EG</a>, <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32009L0065\" class=\"ref\" data-ref=\"celex:32009L0065\" target=\"_blank\" rel=\"noopener\">2009/65/EG</a>, <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011L0061\" class=\"ref\" data-ref=\"celex:32011L0061\" target=\"_blank\" rel=\"noopener\">2011/61/EU</a>, <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013L0036\" class=\"ref\" data-ref=\"celex:32013L0036\" target=\"_blank\" rel=\"noopener\">2013/36/EU</a>, <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0059\" class=\"ref\" data-ref=\"celex:32014L0059\" target=\"_blank\" rel=\"noopener\">2014/59/EU</a> und <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-ref=\"celex:32014L0065\" target=\"_blank\" rel=\"noopener\">2014/65/EU</a> (ABl. L 314 vom 5.12.2019, S. 64) befugt ist.",
+        "sourceHash": "a:act_de_wpig_2021:art_2__13"
+      },
+      {
+        "term": "Einhaltung des Gruppenkapitaltests",
+        "forms": [
+          "Einhaltung des Gruppenkapitaltests",
+          "Einhaltung des Gruppenkapitaltestse",
+          "Einhaltung des Gruppenkapitaltestsen",
+          "Einhaltung des Gruppenkapitaltestses",
+          "Einhaltung des Gruppenkapitaltestss"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(14)",
+        "definition": "Einhaltung des Gruppenkapitaltests im Sinne dieses Gesetzes ist die Einhaltung der in Artikel 8 der Verordnung (EU) 2019/2033 des Europäischen Parlaments und des Rats vom 27. November 2019 über Aufsichtsanforderungen an Wertpapierfirmen und zur Änderung der Verordnungen (EU) Nr. 1093/2010, (EU) Nr. 575/2013, (EU) Nr. 600/2014 und (EU) Nr. 806/2014 (ABl. L 314 vom 5.12.2019, S. 1; L 20 vom 24.1.2020, S. 26) genannten Anforderungen durch das Mutterunternehmen einer Wertpapierinstitutsgruppe.",
+        "definitionHtml": "Einhaltung des Gruppenkapitaltests im Sinne dieses Gesetzes ist die Einhaltung der in <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019R2033\" class=\"ref\" data-ref=\"celex:32019R2033\" data-article=\"8\" target=\"_blank\" rel=\"noopener\">Artikel 8</a> der <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019R2033\" class=\"ref\" data-ref=\"celex:32019R2033\" target=\"_blank\" rel=\"noopener\">Verordnung (EU) 2019/2033</a> des Europäischen Parlaments und des Rats vom 27. November 2019 über Aufsichtsanforderungen an Wertpapierfirmen und zur Änderung der Verordnungen <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32010R1093\" class=\"ref\" data-ref=\"celex:32010R1093\" target=\"_blank\" rel=\"noopener\">(EU) Nr. 1093/2010</a>, <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013R0575\" class=\"ref\" data-ref=\"celex:32013R0575\" target=\"_blank\" rel=\"noopener\">(EU) Nr. 575/2013</a>, <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0600\" class=\"ref\" data-ref=\"celex:32014R0600\" target=\"_blank\" rel=\"noopener\">(EU) Nr. 600/2014</a> und <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0806\" class=\"ref\" data-ref=\"celex:32014R0806\" target=\"_blank\" rel=\"noopener\">(EU) Nr. 806/2014</a> (ABl. L 314 vom 5.12.2019, S. 1; L 20 vom 24.1.2020, S. 26) genannten Anforderungen durch das Mutterunternehmen einer Wertpapierinstitutsgruppe.",
+        "sourceHash": "a:act_de_wpig_2021:art_2__14"
+      },
+      {
+        "term": "Kreditinstitut",
+        "forms": [
+          "Kreditinstitut",
+          "Kreditinstitute",
+          "Kreditinstituten",
+          "Kreditinstitutes",
+          "Kreditinstituts"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(15)",
+        "definition": "Kreditinstitut im Sinne dieses Gesetzes ist ein Kreditinstitut im Sinne des Artikels 4 Absatz 1 Nummer 1 der Verordnung (EU) Nr. 575/2013.",
+        "definitionHtml": "Kreditinstitut im Sinne dieses Gesetzes ist ein Kreditinstitut im Sinne des Artikels 4 Absatz 1 Nummer 1 der <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013R0575\" class=\"ref\" data-ref=\"celex:32013R0575\" target=\"_blank\" rel=\"noopener\">Verordnung (EU) Nr. 575/2013</a>.",
+        "sourceHash": "a:act_de_wpig_2021:art_2__15"
+      },
+      {
+        "term": "Kleines Wertpapierinstitut",
+        "forms": [
+          "Kleines Wertpapierinstitut",
+          "Kleines Wertpapierinstitute",
+          "Kleines Wertpapierinstituten",
+          "Kleines Wertpapierinstitutes",
+          "Kleines Wertpapierinstituts",
+          "Kleine Wertpapierinstitut",
+          "Kleine Wertpapierinstitute",
+          "Kleine Wertpapierinstituten",
+          "Kleine Wertpapierinstitutes",
+          "Kleine Wertpapierinstituts",
+          "Kleinen Wertpapierinstitut",
+          "Kleinen Wertpapierinstitute",
+          "Kleinen Wertpapierinstituten",
+          "Kleinen Wertpapierinstitutes",
+          "Kleinen Wertpapierinstituts",
+          "Kleiner Wertpapierinstitut",
+          "Kleiner Wertpapierinstitute",
+          "Kleiner Wertpapierinstituten",
+          "Kleiner Wertpapierinstitutes",
+          "Kleiner Wertpapierinstituts",
+          "Kleinem Wertpapierinstitut",
+          "Kleinem Wertpapierinstitute",
+          "Kleinem Wertpapierinstituten",
+          "Kleinem Wertpapierinstitutes",
+          "Kleinem Wertpapierinstituts"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(16)",
+        "definition": "Kleines Wertpapierinstitut im Sinne dieses Gesetzes ist ein Wertpapierinstitut, das die Bedingungen des Artikels 12 Absatz 1 der Verordnung (EU) 2019/2033 erfüllt.",
+        "definitionHtml": "Kleines Wertpapierinstitut im Sinne dieses Gesetzes ist ein Wertpapierinstitut, das die Bedingungen des Artikels 12 Absatz 1 der <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019R2033\" class=\"ref\" data-ref=\"celex:32019R2033\" target=\"_blank\" rel=\"noopener\">Verordnung (EU) 2019/2033</a> erfüllt.",
+        "sourceHash": "a:act_de_wpig_2021:art_2__16"
+      },
+      {
+        "term": "Mittleres Wertpapierinstitut",
+        "forms": [
+          "Mittleres Wertpapierinstitut",
+          "Mittleres Wertpapierinstitute",
+          "Mittleres Wertpapierinstituten",
+          "Mittleres Wertpapierinstitutes",
+          "Mittleres Wertpapierinstituts",
+          "Mittlere Wertpapierinstitut",
+          "Mittlere Wertpapierinstitute",
+          "Mittlere Wertpapierinstituten",
+          "Mittlere Wertpapierinstitutes",
+          "Mittlere Wertpapierinstituts",
+          "Mittleren Wertpapierinstitut",
+          "Mittleren Wertpapierinstitute",
+          "Mittleren Wertpapierinstituten",
+          "Mittleren Wertpapierinstitutes",
+          "Mittleren Wertpapierinstituts",
+          "Mittlerer Wertpapierinstitut",
+          "Mittlerer Wertpapierinstitute",
+          "Mittlerer Wertpapierinstituten",
+          "Mittlerer Wertpapierinstitutes",
+          "Mittlerer Wertpapierinstituts",
+          "Mittlerem Wertpapierinstitut",
+          "Mittlerem Wertpapierinstitute",
+          "Mittlerem Wertpapierinstituten",
+          "Mittlerem Wertpapierinstitutes",
+          "Mittlerem Wertpapierinstituts"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(17)",
+        "definition": "Mittleres Wertpapierinstitut im Sinne dieses Gesetzes ist ein Wertpapierinstitut, das die Bedingungen des Artikels 12 Absatz 1 der Verordnung (EU) 2019/2033 nicht erfüllt.",
+        "definitionHtml": "Mittleres Wertpapierinstitut im Sinne dieses Gesetzes ist ein Wertpapierinstitut, das die Bedingungen des Artikels 12 Absatz 1 der <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019R2033\" class=\"ref\" data-ref=\"celex:32019R2033\" target=\"_blank\" rel=\"noopener\">Verordnung (EU) 2019/2033</a> nicht erfüllt.",
+        "sourceHash": "a:act_de_wpig_2021:art_2__17"
+      },
+      {
+        "term": "Großes Wertpapierinstitut",
+        "forms": [
+          "Großes Wertpapierinstitut",
+          "Großes Wertpapierinstitute",
+          "Großes Wertpapierinstituten",
+          "Großes Wertpapierinstitutes",
+          "Großes Wertpapierinstituts",
+          "Große Wertpapierinstitut",
+          "Große Wertpapierinstitute",
+          "Große Wertpapierinstituten",
+          "Große Wertpapierinstitutes",
+          "Große Wertpapierinstituts",
+          "Großen Wertpapierinstitut",
+          "Großen Wertpapierinstitute",
+          "Großen Wertpapierinstituten",
+          "Großen Wertpapierinstitutes",
+          "Großen Wertpapierinstituts",
+          "Großer Wertpapierinstitut",
+          "Großer Wertpapierinstitute",
+          "Großer Wertpapierinstituten",
+          "Großer Wertpapierinstitutes",
+          "Großer Wertpapierinstituts",
+          "Großem Wertpapierinstitut",
+          "Großem Wertpapierinstitute",
+          "Großem Wertpapierinstituten",
+          "Großem Wertpapierinstitutes",
+          "Großem Wertpapierinstituts"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(18)",
+        "definition": "Großes Wertpapierinstitut im Sinne dieses Gesetzes ist ein Wertpapierinstitut im Sinne des Absatz 1, das aufgrund des Artikels 1 Absatz 2 der Verordnung (EU) 2019/2033 oder aufgrund einer Gestattung gemäß Artikel 1 Absatz 5 der Verordnung (EU) 2019/2033 oder nach § 8 verpflichtet ist, die Verordnung (EU) 575/2013 anzuwenden.",
+        "definitionHtml": "Großes Wertpapierinstitut im Sinne dieses Gesetzes ist ein Wertpapierinstitut im Sinne des Absatz 1, das aufgrund des Artikels 1 Absatz 2 der <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019R2033\" class=\"ref\" data-ref=\"celex:32019R2033\" target=\"_blank\" rel=\"noopener\">Verordnung (EU) 2019/2033</a> oder aufgrund einer Gestattung gemäß <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019R2033\" class=\"ref\" data-ref=\"celex:32019R2033\" data-article=\"1\" target=\"_blank\" rel=\"noopener\">Artikel 1</a> Absatz 5 der <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019R2033\" class=\"ref\" data-ref=\"celex:32019R2033\" target=\"_blank\" rel=\"noopener\">Verordnung (EU) 2019/2033</a> oder nach § <a href=\"#a:act_de_wpig_2021:art_8\" class=\"ref\" data-article=\"8\">8</a> verpflichtet ist, die Verordnung (EU) 575/2013 anzuwenden.",
+        "sourceHash": "a:act_de_wpig_2021:art_2__18"
+      },
+      {
+        "term": "Systemrisiko",
+        "forms": [
+          "Systemrisiko",
+          "Systemrisikoe",
+          "Systemrisikoen",
+          "Systemrisikoes",
+          "Systemrisikos"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(21)",
+        "definition": "Systemrisiko im Sinne dieses Gesetzes ist das Risiko einer Störung des Finanzsystems mit möglicherweise schwerwiegenden negativen Auswirkungen auf das Finanzsystem und die Realwirtschaft.",
+        "definitionHtml": "Systemrisiko im Sinne dieses Gesetzes ist das Risiko einer Störung des Finanzsystems mit möglicherweise schwerwiegenden negativen Auswirkungen auf das Finanzsystem und die Realwirtschaft.",
+        "sourceHash": "a:act_de_wpig_2021:art_2__21"
+      },
+      {
+        "term": "Kontrolle",
+        "forms": [
+          "Kontrolle",
+          "Kontrollen"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(22)",
+        "definition": "Kontrolle im Sinne dieses Gesetzes ist das in Artikel 22 Absatz 1 und 2 der Richtlinie 2013/34/EU oder in den jeweils für das Wertpapierinstitut nach der Verordnung (EG) Nr. 1606/2002 des Europäischen Parlaments und des Rates vom 19. Juli 2002 betreffend die Anwendung internationaler Rechnungslegungsstandards (ABl. L 243 vom 11.9.2002, S. 1), die zuletzt durch die Verordnung (EG) Nr. 297/2008 (ABl. L 97 vom 9.4.2008, S. 62) geändert worden ist, geltenden Rechnungslegungsstandards beschriebene Verhältnis zwischen einem Mutterunternehmen und einem Tochterunternehmen oder ein ähnliches Verhältnis zwischen einer natürlichen oder juristischen Person und einem Unternehmen.",
+        "definitionHtml": "Kontrolle im Sinne dieses Gesetzes ist das in Artikel 22 Absatz 1 und 2 der <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013L0034\" class=\"ref\" data-ref=\"celex:32013L0034\" target=\"_blank\" rel=\"noopener\">Richtlinie 2013/34/EU</a> oder in den jeweils für das Wertpapierinstitut nach der <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32002R1606\" class=\"ref\" data-ref=\"celex:32002R1606\" target=\"_blank\" rel=\"noopener\">Verordnung (EG) Nr. 1606/2002</a> des Europäischen Parlaments und des Rates vom 19. Juli 2002 betreffend die Anwendung internationaler Rechnungslegungsstandards (ABl. L 243 vom 11.9.2002, S. 1), die zuletzt durch die <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32008R0297\" class=\"ref\" data-ref=\"celex:32008R0297\" target=\"_blank\" rel=\"noopener\">Verordnung (EG) Nr. 297/2008</a> (ABl. L 97 vom 9.4.2008, S. 62) geändert worden ist, geltenden Rechnungslegungsstandards beschriebene Verhältnis zwischen einem Mutterunternehmen und einem Tochterunternehmen oder ein ähnliches Verhältnis zwischen einer natürlichen oder juristischen Person und einem Unternehmen.",
+        "sourceHash": "a:act_de_wpig_2021:art_2__22"
+      },
+      {
+        "term": "Bedeutende Beteiligung",
+        "forms": [
+          "Bedeutende Beteiligung",
+          "Bedeutende Beteiligungen",
+          "Bedeutenden Beteiligung",
+          "Bedeutenden Beteiligungen",
+          "Bedeutender Beteiligung",
+          "Bedeutender Beteiligungen",
+          "Bedeutendes Beteiligung",
+          "Bedeutendes Beteiligungen",
+          "Bedeutendem Beteiligung",
+          "Bedeutendem Beteiligungen"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(23)",
+        "definition": "Bedeutende Beteiligung im Sinne dieses Gesetzes ist eine qualifizierte Beteiligung gemäß Artikel 4 Absatz 1 Nummer 36 der Verordnung (EU) Nr. 575/2013. Für die Berechnung des Anteils der Stimmrechte gelten § 33 Absatz 1 in Verbindung mit einer Rechtsverordnung nach § 33 Absatz 3, § 34 Absatz 1 und 2, § 35 Absatz 1 bis 3 in Verbindung mit einer Rechtsverordnung nach § 35 Absatz 6 und § 36 des Wertpapierhandelsgesetzes entsprechend. Unberücksichtigt bleiben die Stimmrechte oder Kapitalanteile, die Kreditinstitute oder Wertpapierinstitute im Rahmen des Emissionsgeschäfts nach Absatz 2 Nummer 2 halten, vorausgesetzt, diese Rechte werden nicht ausgeübt oder anderweitig genutzt, um in die Geschäftsführung des Emittenten einzugreifen, und sie werden innerhalb eines Jahres nach dem Zeitpunkt des Erwerbs veräußert.",
+        "definitionHtml": "Bedeutende Beteiligung im Sinne dieses Gesetzes ist eine qualifizierte Beteiligung gemäß <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013R0575\" class=\"ref\" data-ref=\"celex:32013R0575\" data-article=\"4\" target=\"_blank\" rel=\"noopener\">Artikel 4</a> Absatz 1 Nummer 36 der <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013R0575\" class=\"ref\" data-ref=\"celex:32013R0575\" target=\"_blank\" rel=\"noopener\">Verordnung (EU) Nr. 575/2013</a>. Für die Berechnung des Anteils der Stimmrechte gelten § <a href=\"#a:act_de_wpig_2021:art_33\" class=\"ref\" data-article=\"33\">33</a> Absatz 1 in Verbindung mit einer Rechtsverordnung nach § <a href=\"#a:act_de_wpig_2021:art_33\" class=\"ref\" data-article=\"33\">33</a> Absatz 3, § <a href=\"#a:act_de_wpig_2021:art_34\" class=\"ref\" data-article=\"34\">34</a> Absatz 1 und 2, § <a href=\"#a:act_de_wpig_2021:art_35\" class=\"ref\" data-article=\"35\">35</a> Absatz 1 bis 3 in Verbindung mit einer Rechtsverordnung nach § <a href=\"#a:act_de_wpig_2021:art_35\" class=\"ref\" data-article=\"35\">35</a> Absatz 6 und § 36 des Wertpapierhandelsgesetzes entsprechend. Unberücksichtigt bleiben die Stimmrechte oder Kapitalanteile, die Kreditinstitute oder Wertpapierinstitute im Rahmen des Emissionsgeschäfts nach Absatz 2 Nummer 2 halten, vorausgesetzt, diese Rechte werden nicht ausgeübt oder anderweitig genutzt, um in die Geschäftsführung des Emittenten einzugreifen, und sie werden innerhalb eines Jahres nach dem Zeitpunkt des Erwerbs veräußert.",
+        "sourceHash": "a:act_de_wpig_2021:art_2__23"
+      },
+      {
+        "term": "Gruppe",
+        "forms": [
+          "Gruppe",
+          "Gruppen"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(24)",
+        "definition": "Gruppe im Sinne dieses Gesetzes ist eine Gruppe im Sinne des Artikels 2 Nummer 11 der Richtlinie 2013/34/EU.",
+        "definitionHtml": "Gruppe im Sinne dieses Gesetzes ist eine Gruppe im Sinne des Artikels 2 Nummer 11 der <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013L0034\" class=\"ref\" data-ref=\"celex:32013L0034\" target=\"_blank\" rel=\"noopener\">Richtlinie 2013/34/EU</a>.",
+        "sourceHash": "a:act_de_wpig_2021:art_2__24"
+      },
+      {
+        "term": "Wertpapierinstitutsgruppe",
+        "forms": [
+          "Wertpapierinstitutsgruppe",
+          "Wertpapierinstitutsgruppen"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(25)",
+        "definition": "Wertpapierinstitutsgruppe ist eine Unternehmensgruppe im Sinne des Artikels 4 Absatz 1 Nummer 25 der Verordnung (EU) 2019/2033.",
+        "definitionHtml": "Wertpapierinstitutsgruppe ist eine Unternehmensgruppe im Sinne des Artikels 4 Absatz 1 Nummer 25 der <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019R2033\" class=\"ref\" data-ref=\"celex:32019R2033\" target=\"_blank\" rel=\"noopener\">Verordnung (EU) 2019/2033</a>.",
+        "sourceHash": "a:act_de_wpig_2021:art_2__25"
+      },
+      {
+        "term": "Finanzinstitut",
+        "forms": [
+          "Finanzinstitut",
+          "Finanzinstitute",
+          "Finanzinstituten",
+          "Finanzinstitutes",
+          "Finanzinstituts"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(26)",
+        "definition": "Finanzinstitut im Sinne dieses Gesetzes ist ein Finanzinstitut im Sinne des Artikels 4 Absatz 1 Nummer 14 der Verordnung (EU) 2019/2033.",
+        "definitionHtml": "Finanzinstitut im Sinne dieses Gesetzes ist ein Finanzinstitut im Sinne des Artikels 4 Absatz 1 Nummer 14 der <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019R2033\" class=\"ref\" data-ref=\"celex:32019R2033\" target=\"_blank\" rel=\"noopener\">Verordnung (EU) 2019/2033</a>.",
+        "sourceHash": "a:act_de_wpig_2021:art_2__26"
+      },
+      {
+        "term": "Investmentholdinggesellschaft",
+        "forms": [
+          "Investmentholdinggesellschaft",
+          "Investmentholdinggesellschaften"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(27)",
+        "definition": "Investmentholdinggesellschaft im Sinne dieses Gesetzes ist ein Finanzinstitut, dessen Tochterunternehmen ausschließlich oder hauptsächlich Wertpapierinstitute oder Finanzinstitute sind, wobei mindestens ein Tochterunternehmen ein Wertpapierinstitut sein muss. Keine Investmentholdinggesellschaft ist eine Finanzholdinggesellschaft im Sinne des Artikels 4 Absatz 1 Nummer 20 der Verordnung (EU) Nr. 575/2013.",
+        "definitionHtml": "Investmentholdinggesellschaft im Sinne dieses Gesetzes ist ein Finanzinstitut, dessen Tochterunternehmen ausschließlich oder hauptsächlich Wertpapierinstitute oder Finanzinstitute sind, wobei mindestens ein Tochterunternehmen ein Wertpapierinstitut sein muss. Keine Investmentholdinggesellschaft ist eine Finanzholdinggesellschaft im Sinne des Artikels 4 Absatz 1 Nummer 20 der <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013R0575\" class=\"ref\" data-ref=\"celex:32013R0575\" target=\"_blank\" rel=\"noopener\">Verordnung (EU) Nr. 575/2013</a>.",
+        "sourceHash": "a:act_de_wpig_2021:art_2__27"
+      },
+      {
+        "term": "Gemischte Finanzholdinggesellschaft",
+        "forms": [
+          "Gemischte Finanzholdinggesellschaft",
+          "Gemischte Finanzholdinggesellschaften",
+          "Gemischten Finanzholdinggesellschaft",
+          "Gemischten Finanzholdinggesellschaften",
+          "Gemischter Finanzholdinggesellschaft",
+          "Gemischter Finanzholdinggesellschaften",
+          "Gemischtes Finanzholdinggesellschaft",
+          "Gemischtes Finanzholdinggesellschaften",
+          "Gemischtem Finanzholdinggesellschaft",
+          "Gemischtem Finanzholdinggesellschaften"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(28)",
+        "definition": "Gemischte Finanzholdinggesellschaft im Sinne dieses Gesetzes ist eine gemischte Finanzholdinggesellschaft im Sinne des Artikels 4 Absatz 1 Nummer 40 der Verordnung (EU) 2019/2033.",
+        "definitionHtml": "Gemischte Finanzholdinggesellschaft im Sinne dieses Gesetzes ist eine gemischte Finanzholdinggesellschaft im Sinne des Artikels 4 Absatz 1 Nummer 40 der <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019R2033\" class=\"ref\" data-ref=\"celex:32019R2033\" target=\"_blank\" rel=\"noopener\">Verordnung (EU) 2019/2033</a>.",
+        "sourceHash": "a:act_de_wpig_2021:art_2__28"
+      },
+      {
+        "term": "Gemischte Holdinggesellschaft",
+        "forms": [
+          "Gemischte Holdinggesellschaft",
+          "Gemischte Holdinggesellschaften",
+          "Gemischten Holdinggesellschaft",
+          "Gemischten Holdinggesellschaften",
+          "Gemischter Holdinggesellschaft",
+          "Gemischter Holdinggesellschaften",
+          "Gemischtes Holdinggesellschaft",
+          "Gemischtes Holdinggesellschaften",
+          "Gemischtem Holdinggesellschaft",
+          "Gemischtem Holdinggesellschaften"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(29)",
+        "definition": "Gemischte Holdinggesellschaft im Sinne dieses Gesetzes ist ein Mutterunternehmen, das keine Finanzholdinggesellschaft, keine Investmentholdinggesellschaft, kein Kreditinstitut, kein Wertpapierinstitut und keine gemischte Finanzholdinggesellschaft im Sinne dieses Gesetzes ist und zu dessen Tochterunternehmen mindestens ein Wertpapierinstitut gehört.",
+        "definitionHtml": "Gemischte Holdinggesellschaft im Sinne dieses Gesetzes ist ein Mutterunternehmen, das keine Finanzholdinggesellschaft, keine Investmentholdinggesellschaft, kein Kreditinstitut, kein Wertpapierinstitut und keine gemischte Finanzholdinggesellschaft im Sinne dieses Gesetzes ist und zu dessen Tochterunternehmen mindestens ein Wertpapierinstitut gehört.",
+        "sourceHash": "a:act_de_wpig_2021:art_2__29"
+      },
+      {
+        "term": "Mutterunternehmen",
+        "forms": [
+          "Mutterunternehmen",
+          "Mutterunternehmens"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(30)",
+        "definition": "Mutterunternehmen im Sinne dieses Gesetzes ist ein Mutterunternehmen im Sinne des Artikels 2 Nummer 9 und des Artikels 22 der Richtlinie 2013/34/EU.",
+        "definitionHtml": "Mutterunternehmen im Sinne dieses Gesetzes ist ein Mutterunternehmen im Sinne des Artikels 2 Nummer 9 und des Artikels 22 der <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013L0034\" class=\"ref\" data-ref=\"celex:32013L0034\" target=\"_blank\" rel=\"noopener\">Richtlinie 2013/34/EU</a>.",
+        "sourceHash": "a:act_de_wpig_2021:art_2__30"
+      },
+      {
+        "term": "Tochterunternehmen",
+        "forms": [
+          "Tochterunternehmen",
+          "Tochterunternehmens"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(31)",
+        "definition": "Tochterunternehmen im Sinne dieses Gesetzes ist ein Tochterunternehmen im Sinne des Artikels 2 Nummer 10 und des Artikels 22 der Richtlinie 2013/34/EU, einschließlich aller Tochterunternehmen eines Tochterunternehmens des an der Spitze stehenden Mutterunternehmens.",
+        "definitionHtml": "Tochterunternehmen im Sinne dieses Gesetzes ist ein Tochterunternehmen im Sinne des Artikels 2 Nummer 10 und des Artikels 22 der <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013L0034\" class=\"ref\" data-ref=\"celex:32013L0034\" target=\"_blank\" rel=\"noopener\">Richtlinie 2013/34/EU</a>, einschließlich aller Tochterunternehmen eines Tochterunternehmens des an der Spitze stehenden Mutterunternehmens.",
+        "sourceHash": "a:act_de_wpig_2021:art_2__31"
+      },
+      {
+        "term": "Schwesterunternehmen",
+        "forms": [
+          "Schwesterunternehmen",
+          "Schwesterunternehmens"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(32)",
+        "definition": "Schwesterunternehmen im Sinne dieses Gesetzes ist ein Schwesterunternehmen im Sinne des § 1 Absatz 7 des Kreditwesengesetzes.",
+        "definitionHtml": "Schwesterunternehmen im Sinne dieses Gesetzes ist ein Schwesterunternehmen im Sinne des § 1 Absatz 7 des Kreditwesengesetzes.",
+        "sourceHash": "a:act_de_wpig_2021:art_2__32"
+      },
+      {
+        "term": "EU-Mutterwertpapierinstitut",
+        "forms": [
+          "EU-Mutterwertpapierinstitut",
+          "EU-Mutterwertpapierinstitute",
+          "EU-Mutterwertpapierinstituten",
+          "EU-Mutterwertpapierinstitutes",
+          "EU-Mutterwertpapierinstituts"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(33)",
+        "definition": "EU-Mutterwertpapierinstitut im Sinne dieses Gesetzes ist ein Wertpapierinstitut im Sinne des Artikels 3 Absatz 1 Nummer 31 der Richtlinie (EU) 2019/2034 in Verbindung mit Artikel 4 Absatz 1 Nummer 56 der Verordnung (EU) 2019/2033.",
+        "definitionHtml": "EU-Mutterwertpapierinstitut im Sinne dieses Gesetzes ist ein Wertpapierinstitut im Sinne des Artikels 3 Absatz 1 Nummer 31 der <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019L2034\" class=\"ref\" data-ref=\"celex:32019L2034\" target=\"_blank\" rel=\"noopener\">Richtlinie (EU) 2019/2034</a> in Verbindung mit <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019R2033\" class=\"ref\" data-ref=\"celex:32019R2033\" data-article=\"4\" target=\"_blank\" rel=\"noopener\">Artikel 4</a> Absatz 1 Nummer 56 der <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019R2033\" class=\"ref\" data-ref=\"celex:32019R2033\" target=\"_blank\" rel=\"noopener\">Verordnung (EU) 2019/2033</a>.",
+        "sourceHash": "a:act_de_wpig_2021:art_2__33"
+      },
+      {
+        "term": "EU-Mutterinvestmentholdinggesellschaft",
+        "forms": [
+          "EU-Mutterinvestmentholdinggesellschaft",
+          "EU-Mutterinvestmentholdinggesellschaften"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(34)",
+        "definition": "EU-Mutterinvestmentholdinggesellschaft im Sinne dieses Gesetzes ist eine Gesellschaft im Sinne des Artikels 4 Absatz 1 Nummer 57 der Verordnung (EU) 2019/2033.",
+        "definitionHtml": "EU-Mutterinvestmentholdinggesellschaft im Sinne dieses Gesetzes ist eine Gesellschaft im Sinne des Artikels 4 Absatz 1 Nummer 57 der <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019R2033\" class=\"ref\" data-ref=\"celex:32019R2033\" target=\"_blank\" rel=\"noopener\">Verordnung (EU) 2019/2033</a>.",
+        "sourceHash": "a:act_de_wpig_2021:art_2__34"
+      },
+      {
+        "term": "Gemischte EU-Mutterfinanzholdinggesellschaft",
+        "forms": [
+          "Gemischte EU-Mutterfinanzholdinggesellschaft",
+          "Gemischte EU-Mutterfinanzholdinggesellschaften",
+          "Gemischten EU-Mutterfinanzholdinggesellschaft",
+          "Gemischten EU-Mutterfinanzholdinggesellschaften",
+          "Gemischter EU-Mutterfinanzholdinggesellschaft",
+          "Gemischter EU-Mutterfinanzholdinggesellschaften",
+          "Gemischtes EU-Mutterfinanzholdinggesellschaft",
+          "Gemischtes EU-Mutterfinanzholdinggesellschaften",
+          "Gemischtem EU-Mutterfinanzholdinggesellschaft",
+          "Gemischtem EU-Mutterfinanzholdinggesellschaften"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(35)",
+        "definition": "Gemischte EU-Mutterfinanzholdinggesellschaft im Sinne dieses Gesetzes ist eine Mutterfinanzholdinggesellschaft im Sinne des Artikels 3 Absatz 1 Nummer 33 der Richtlinie (EU) 2019/2034 in Verbindung mit Artikel 4 Absatz 1 Nummer 58 der Verordnung (EU) 2019/2033.",
+        "definitionHtml": "Gemischte EU-Mutterfinanzholdinggesellschaft im Sinne dieses Gesetzes ist eine Mutterfinanzholdinggesellschaft im Sinne des Artikels 3 Absatz 1 Nummer 33 der <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019L2034\" class=\"ref\" data-ref=\"celex:32019L2034\" target=\"_blank\" rel=\"noopener\">Richtlinie (EU) 2019/2034</a> in Verbindung mit <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019R2033\" class=\"ref\" data-ref=\"celex:32019R2033\" data-article=\"4\" target=\"_blank\" rel=\"noopener\">Artikel 4</a> Absatz 1 Nummer 58 der <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019R2033\" class=\"ref\" data-ref=\"celex:32019R2033\" target=\"_blank\" rel=\"noopener\">Verordnung (EU) 2019/2033</a>.",
+        "sourceHash": "a:act_de_wpig_2021:art_2__35"
+      },
+      {
+        "term": "Geschäftsleiter",
+        "forms": [
+          "Geschäftsleiter",
+          "Geschäftsleiters",
+          "Geschäftsleitern"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(36)",
+        "definition": "Geschäftsleiter im Sinne dieses Gesetzes sind diejenigen natürlichen Personen, die nach Gesetz, Satzung oder Gesellschaftsvertrag zur Führung der Geschäfte und zur Vertretung eines Wertpapierinstituts oder eines Unternehmens in der Rechtsform einer juristischen Person oder einer Personenhandelsgesellschaft, die Wertpapierinstitut im Sinne des Absatz 1 ist, berufen sind.",
+        "definitionHtml": "Geschäftsleiter im Sinne dieses Gesetzes sind diejenigen natürlichen Personen, die nach Gesetz, Satzung oder Gesellschaftsvertrag zur Führung der Geschäfte und zur Vertretung eines Wertpapierinstituts oder eines Unternehmens in der Rechtsform einer juristischen Person oder einer Personenhandelsgesellschaft, die Wertpapierinstitut im Sinne des Absatz 1 ist, berufen sind.",
+        "sourceHash": "a:act_de_wpig_2021:art_2__36"
+      },
+      {
+        "term": "Vertragsstaat",
+        "forms": [
+          "Vertragsstaat",
+          "Vertragsstaate",
+          "Vertragsstaaten",
+          "Vertragsstaates",
+          "Vertragsstaats"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(37)",
+        "definition": "Vertragsstaat im Sinne dieses Gesetzes ist ein Mitgliedstaat der Europäischen Union oder ein Vertragsstaat des Europäischen Wirtschaftsraums.",
+        "definitionHtml": "Vertragsstaat im Sinne dieses Gesetzes ist ein Mitgliedstaat der Europäischen Union oder ein Vertragsstaat des Europäischen Wirtschaftsraums.",
+        "sourceHash": "a:act_de_wpig_2021:art_2__37"
+      },
+      {
+        "term": "Auslagerungsunternehmen",
+        "forms": [
+          "Auslagerungsunternehmen",
+          "Auslagerungsunternehmens"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(38)",
+        "definition": "Auslagerungsunternehmen im Sinne dieses Gesetzes sind Unternehmen, auf die ein Wertpapierinstitut oder ein übergeordnetes Unternehmen Aktivitäten und Prozesse zur Durchführung von Wertpapierdienstleistungen, Wertpapiernebendienstleistungen oder Nebengeschäften ausgelagert hat, sowie deren Subunternehmen bei Weiterverlagerung von Aktivitäten und Prozessen, die für die Durchführung von Wertpapierdienstleistungen, Wertpapiernebendienstleistungen oder Nebengeschäften wesentlich sind.",
+        "definitionHtml": "Auslagerungsunternehmen im Sinne dieses Gesetzes sind Unternehmen, auf die ein Wertpapierinstitut oder ein übergeordnetes Unternehmen Aktivitäten und Prozesse zur Durchführung von Wertpapierdienstleistungen, Wertpapiernebendienstleistungen oder Nebengeschäften ausgelagert hat, sowie deren Subunternehmen bei Weiterverlagerung von Aktivitäten und Prozessen, die für die Durchführung von Wertpapierdienstleistungen, Wertpapiernebendienstleistungen oder Nebengeschäften wesentlich sind.",
+        "sourceHash": "a:act_de_wpig_2021:art_2__38"
+      },
+      {
+        "term": "Zentrale Gegenpartei",
+        "forms": [
+          "Zentrale Gegenpartei",
+          "Zentrale Gegenparteie",
+          "Zentrale Gegenparteien",
+          "Zentrale Gegenparteies",
+          "Zentrale Gegenparteis",
+          "Zentralen Gegenpartei",
+          "Zentralen Gegenparteie",
+          "Zentralen Gegenparteien",
+          "Zentralen Gegenparteies",
+          "Zentralen Gegenparteis",
+          "Zentraler Gegenpartei",
+          "Zentraler Gegenparteie",
+          "Zentraler Gegenparteien",
+          "Zentraler Gegenparteies",
+          "Zentraler Gegenparteis",
+          "Zentrales Gegenpartei",
+          "Zentrales Gegenparteie",
+          "Zentrales Gegenparteien",
+          "Zentrales Gegenparteies",
+          "Zentrales Gegenparteis",
+          "Zentralem Gegenpartei",
+          "Zentralem Gegenparteie",
+          "Zentralem Gegenparteien",
+          "Zentralem Gegenparteies",
+          "Zentralem Gegenparteis"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(39)",
+        "definition": "Zentrale Gegenpartei im Sinne dieses Gesetzes ist eine CCP im Sinne von Artikel 2 Nummer 1 der Verordnung (EU) Nr. 648/2012.",
+        "definitionHtml": "Zentrale Gegenpartei im Sinne dieses Gesetzes ist eine CCP im Sinne von <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32012R0648\" class=\"ref\" data-ref=\"celex:32012R0648\" data-article=\"2\" target=\"_blank\" rel=\"noopener\">Artikel 2</a> Nummer 1 der <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32012R0648\" class=\"ref\" data-ref=\"celex:32012R0648\" target=\"_blank\" rel=\"noopener\">Verordnung (EU) Nr. 648/2012</a>.",
+        "sourceHash": "a:act_de_wpig_2021:art_2__39"
+      },
+      {
+        "term": "Datenbereitstellungsdienste",
+        "forms": [
+          "Datenbereitstellungsdienste",
+          "Datenbereitstellungsdiensten"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(39)",
+        "definition": "Datenbereitstellungsdienste im Sinne dieses Gesetzes sind Datenbereitstellungsdienste im Sinne von § 2 Absatz 40 des Wertpapierhandelsgesetzes.",
+        "definitionHtml": "Datenbereitstellungsdienste im Sinne dieses Gesetzes sind Datenbereitstellungsdienste im Sinne von § 2 Absatz 40 des Wertpapierhandelsgesetzes.",
+        "sourceHash": "a:act_de_wpig_2021:art_2__39_2"
+      }
+    ]
+  },
+  "act_de_wphg_1994": {
+    "definitionArticleIds": [
+      "art_2"
+    ],
+    "entries": [
+      {
+        "term": "Wertpapiere",
+        "forms": [
+          "Wertpapiere",
+          "Wertpapieren"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(1)",
+        "definition": "Wertpapiere im Sinne dieses Gesetzes sind, auch wenn keine Urkunden über sie ausgestellt sind, alle Gattungen von übertragbaren Wertpapieren mit Ausnahme von Zahlungsinstrumenten, die ihrer Art nach auf den Finanzmärkten handelbar sind, insbesondere",
+        "definitionHtml": "Wertpapiere im Sinne dieses Gesetzes sind, auch wenn keine Urkunden über sie ausgestellt sind, alle Gattungen von übertragbaren Wertpapieren mit Ausnahme von Zahlungsinstrumenten, die ihrer Art nach auf den Finanzmärkten handelbar sind, insbesondere",
+        "sourceHash": "a:act_de_wphg_1994:art_2__1"
+      },
+      {
+        "term": "Geldmarktinstrumente",
+        "forms": [
+          "Geldmarktinstrumente",
+          "Geldmarktinstrumenten"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(2)",
+        "definition": "Geldmarktinstrumente im Sinne dieses Gesetzes sind Instrumente, die üblicherweise auf dem Geldmarkt gehandelt werden, insbesondere Schatzanweisungen, Einlagenzertifikate, Commercial Papers und sonstige vergleichbare Instrumente, sofern im Einklang mit Artikel 11 der Delegierten Verordnung (EU) 2017/565",
+        "definitionHtml": "Geldmarktinstrumente im Sinne dieses Gesetzes sind Instrumente, die üblicherweise auf dem Geldmarkt gehandelt werden, insbesondere Schatzanweisungen, Einlagenzertifikate, Commercial Papers und sonstige vergleichbare Instrumente, sofern im Einklang mit Artikel 11 der Delegierten <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32017R0565\" class=\"ref\" data-ref=\"celex:32017R0565\" target=\"_blank\" rel=\"noopener\">Verordnung (EU) 2017/565</a>",
+        "sourceHash": "a:act_de_wphg_1994:art_2__2"
+      },
+      {
+        "term": "Derivative Geschäfte",
+        "forms": [
+          "Derivative Geschäfte",
+          "Derivative Geschäften",
+          "Derivativen Geschäfte",
+          "Derivativen Geschäften",
+          "Derivativer Geschäfte",
+          "Derivativer Geschäften",
+          "Derivatives Geschäfte",
+          "Derivatives Geschäften",
+          "Derivativem Geschäfte",
+          "Derivativem Geschäften"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(3)",
+        "definition": "Derivative Geschäfte im Sinne dieses Gesetzes sind",
+        "definitionHtml": "Derivative Geschäfte im Sinne dieses Gesetzes sind",
+        "sourceHash": "a:act_de_wphg_1994:art_2__3"
+      },
+      {
+        "term": "Finanzinstrumente",
+        "forms": [
+          "Finanzinstrumente",
+          "Finanzinstrumenten"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(4)",
+        "definition": "Finanzinstrumente im Sinne dieses Gesetzes sind",
+        "definitionHtml": "Finanzinstrumente im Sinne dieses Gesetzes sind",
+        "sourceHash": "a:act_de_wphg_1994:art_2__4"
+      },
+      {
+        "term": "Waren",
+        "forms": [
+          "Waren",
+          "Warens"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(5)",
+        "definition": "Waren im Sinne dieses Gesetzes sind fungible Wirtschaftsgüter, die geliefert werden können; dazu zählen auch Metalle, Erze und Legierungen, landwirtschaftliche Produkte und Energien wie Strom.",
+        "definitionHtml": "Waren im Sinne dieses Gesetzes sind fungible Wirtschaftsgüter, die geliefert werden können; dazu zählen auch Metalle, Erze und Legierungen, landwirtschaftliche Produkte und Energien wie Strom.",
+        "sourceHash": "a:act_de_wphg_1994:art_2__5"
+      },
+      {
+        "term": "Waren-Spot-Kontrakt",
+        "forms": [
+          "Waren-Spot-Kontrakt",
+          "Waren-Spot-Kontrakte",
+          "Waren-Spot-Kontrakten",
+          "Waren-Spot-Kontraktes",
+          "Waren-Spot-Kontrakts"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(6)",
+        "definition": "Waren-Spot-Kontrakt im Sinne dieses Gesetzes ist ein Vertrag im Sinne des Artikels 3 Absatz 1 Nummer 15 der Verordnung (EU) Nr. 596/2014.",
+        "definitionHtml": "Waren-Spot-Kontrakt im Sinne dieses Gesetzes ist ein Vertrag im Sinne des Artikels 3 Absatz 1 Nummer 15 der <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0596\" class=\"ref\" data-ref=\"celex:32014R0596\" target=\"_blank\" rel=\"noopener\">Verordnung (EU) Nr. 596/2014</a>.",
+        "sourceHash": "a:act_de_wphg_1994:art_2__6"
+      },
+      {
+        "term": "Referenzwert",
+        "forms": [
+          "Referenzwert",
+          "Referenzwerte",
+          "Referenzwerten",
+          "Referenzwertes",
+          "Referenzwerts"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(7)",
+        "definition": "Referenzwert im Sinne dieses Gesetzes ist ein Kurs, Index oder Wert im Sinne des Artikels 3 Absatz 1 Nummer 29 der Verordnung (EU) Nr. 596/2014.",
+        "definitionHtml": "Referenzwert im Sinne dieses Gesetzes ist ein Kurs, Index oder Wert im Sinne des Artikels 3 Absatz 1 Nummer 29 der <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0596\" class=\"ref\" data-ref=\"celex:32014R0596\" target=\"_blank\" rel=\"noopener\">Verordnung (EU) Nr. 596/2014</a>.",
+        "sourceHash": "a:act_de_wphg_1994:art_2__7"
+      },
+      {
+        "term": "Wertpapierdienstleistungen",
+        "forms": [
+          "Wertpapierdienstleistungen",
+          "Wertpapierdienstleistungens"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(8)",
+        "definition": "Wertpapierdienstleistungen im Sinne dieses Gesetzes sind",
+        "definitionHtml": "Wertpapierdienstleistungen im Sinne dieses Gesetzes sind",
+        "sourceHash": "a:act_de_wphg_1994:art_2__8"
+      },
+      {
+        "term": "Wertpapiernebendienstleistungen",
+        "forms": [
+          "Wertpapiernebendienstleistungen",
+          "Wertpapiernebendienstleistungens"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(9)",
+        "definition": "Wertpapiernebendienstleistungen im Sinne dieses Gesetzes sind",
+        "definitionHtml": "Wertpapiernebendienstleistungen im Sinne dieses Gesetzes sind",
+        "sourceHash": "a:act_de_wphg_1994:art_2__9"
+      },
+      {
+        "term": "Umschichtung von Finanzinstrumenten",
+        "forms": [
+          "Umschichtung von Finanzinstrumenten",
+          "Umschichtung von Finanzinstrumentens"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(9a)",
+        "definition": "Umschichtung von Finanzinstrumenten im Sinne dieses Gesetzes ist der Verkauf eines Finanzinstruments und der Kauf eines Finanzinstruments oder die Ausübung eines Rechts, eine Änderung im Hinblick auf ein bestehendes Finanzinstrument vorzunehmen.",
+        "definitionHtml": "Umschichtung von Finanzinstrumenten im Sinne dieses Gesetzes ist der Verkauf eines Finanzinstruments und der Kauf eines Finanzinstruments oder die Ausübung eines Rechts, eine Änderung im Hinblick auf ein bestehendes Finanzinstrument vorzunehmen.",
+        "sourceHash": "a:act_de_wphg_1994:art_2__9a"
+      },
+      {
+        "term": "Wertpapierdienstleistungsunternehmen",
+        "forms": [
+          "Wertpapierdienstleistungsunternehmen",
+          "Wertpapierdienstleistungsunternehmens"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(10)",
+        "definition": "Wertpapierdienstleistungsunternehmen im Sinne dieses Gesetzes sind Kreditinstitute, Finanzdienstleistungsinstitute, nach § 53 Absatz 1 Satz 1 des Kreditwesengesetzes tätige Unternehmen und Wertpapierinstitute im Sinne des § 2 Absatz 1 des Wertpapierinstitutsgesetzes, die Wertpapierdienstleistungen allein oder zusammen mit Wertpapiernebendienstleistungen gewerbsmäßig oder in einem Umfang erbringen, der einen in kaufmännischer Weise eingerichteten Geschäftsbetrieb erfordert.",
+        "definitionHtml": "Wertpapierdienstleistungsunternehmen im Sinne dieses Gesetzes sind Kreditinstitute, Finanzdienstleistungsinstitute, nach § 53 Absatz 1 Satz 1 des Kreditwesengesetzes tätige Unternehmen und Wertpapierinstitute im Sinne des § 2 Absatz 1 des Wertpapierinstitutsgesetzes, die Wertpapierdienstleistungen allein oder zusammen mit Wertpapiernebendienstleistungen gewerbsmäßig oder in einem Umfang erbringen, der einen in kaufmännischer Weise eingerichteten Geschäftsbetrieb erfordert.",
+        "sourceHash": "a:act_de_wphg_1994:art_2__10"
+      },
+      {
+        "term": "Organisierter Markt",
+        "forms": [
+          "Organisierter Markt",
+          "Organisierter Märkte",
+          "Organisierter Märkten",
+          "Organisierter Markte",
+          "Organisierter Markten",
+          "Organisierter Marktes",
+          "Organisierter Markts",
+          "Organisierte Markt",
+          "Organisierte Märkte",
+          "Organisierte Märkten",
+          "Organisierte Markte",
+          "Organisierte Markten",
+          "Organisierte Marktes",
+          "Organisierte Markts",
+          "Organisierten Markt",
+          "Organisierten Märkte",
+          "Organisierten Märkten",
+          "Organisierten Markte",
+          "Organisierten Markten",
+          "Organisierten Marktes",
+          "Organisierten Markts",
+          "Organisiertes Markt",
+          "Organisiertes Märkte",
+          "Organisiertes Märkten",
+          "Organisiertes Markte",
+          "Organisiertes Markten",
+          "Organisiertes Marktes",
+          "Organisiertes Markts",
+          "Organisiertem Markt",
+          "Organisiertem Märkte",
+          "Organisiertem Märkten",
+          "Organisiertem Markte",
+          "Organisiertem Markten",
+          "Organisiertem Marktes",
+          "Organisiertem Markts"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(11)",
+        "definition": "Organisierter Markt im Sinne dieses Gesetzes ist ein im Inland, in einem anderen Mitgliedstaat der Europäischen Union oder einem anderen Vertragsstaat des Abkommens über den Europäischen Wirtschaftsraum betriebenes oder verwaltetes, durch staatliche Stellen genehmigtes, geregeltes und überwachtes multilaterales System, das die Interessen einer Vielzahl von Personen am Kauf und Verkauf von dort zum Handel zugelassenen Finanzinstrumenten innerhalb des Systems und nach nichtdiskretionären Bestimmungen in einer Weise zusammenbringt oder das Zusammenbringen fördert, die zu einem Vertrag über den Kauf dieser Finanzinstrumente führt.",
+        "definitionHtml": "Organisierter Markt im Sinne dieses Gesetzes ist ein im Inland, in einem anderen Mitgliedstaat der Europäischen Union oder einem anderen Vertragsstaat des Abkommens über den Europäischen Wirtschaftsraum betriebenes oder verwaltetes, durch staatliche Stellen genehmigtes, geregeltes und überwachtes multilaterales System, das die Interessen einer Vielzahl von Personen am Kauf und Verkauf von dort zum Handel zugelassenen Finanzinstrumenten innerhalb des Systems und nach nichtdiskretionären Bestimmungen in einer Weise zusammenbringt oder das Zusammenbringen fördert, die zu einem Vertrag über den Kauf dieser Finanzinstrumente führt.",
+        "sourceHash": "a:act_de_wphg_1994:art_2__11"
+      },
+      {
+        "term": "Drittstaat",
+        "forms": [
+          "Drittstaat",
+          "Drittstaate",
+          "Drittstaaten",
+          "Drittstaates",
+          "Drittstaats"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(12)",
+        "definition": "Drittstaat im Sinne dieses Gesetzes ist ein Staat, der weder Mitgliedstaat der Europäischen Union (Mitgliedstaat) noch Vertragsstaat des Abkommens über den Europäischen Wirtschaftsraum ist.",
+        "definitionHtml": "Drittstaat im Sinne dieses Gesetzes ist ein Staat, der weder Mitgliedstaat der Europäischen Union (Mitgliedstaat) noch Vertragsstaat des Abkommens über den Europäischen Wirtschaftsraum ist.",
+        "sourceHash": "a:act_de_wphg_1994:art_2__12"
+      },
+      {
+        "term": "MTF-Emittenten",
+        "forms": [
+          "MTF-Emittenten",
+          "MTF-Emittentens"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(15)",
+        "definition": "MTF-Emittenten im Sinne dieses Gesetzes sind Emittenten von Finanzinstrumenten,",
+        "definitionHtml": "MTF-Emittenten im Sinne dieses Gesetzes sind Emittenten von Finanzinstrumenten,",
+        "sourceHash": "a:act_de_wphg_1994:art_2__15"
+      },
+      {
+        "term": "OTF-Emittenten",
+        "forms": [
+          "OTF-Emittenten",
+          "OTF-Emittentens"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(16)",
+        "definition": "OTF-Emittenten im Sinne dieses Gesetzes sind Emittenten von Finanzinstrumenten,",
+        "definitionHtml": "OTF-Emittenten im Sinne dieses Gesetzes sind Emittenten von Finanzinstrumenten,",
+        "sourceHash": "a:act_de_wphg_1994:art_2__16"
+      },
+      {
+        "term": "Herkunftsmitgliedstaat",
+        "forms": [
+          "Herkunftsmitgliedstaat",
+          "Herkunftsmitgliedstaate",
+          "Herkunftsmitgliedstaaten",
+          "Herkunftsmitgliedstaates",
+          "Herkunftsmitgliedstaats"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(17)",
+        "definition": "Herkunftsmitgliedstaat im Sinne dieses Gesetzes ist",
+        "definitionHtml": "Herkunftsmitgliedstaat im Sinne dieses Gesetzes ist",
+        "sourceHash": "a:act_de_wphg_1994:art_2__17"
+      },
+      {
+        "term": "Aufnahmemitgliedstaat",
+        "forms": [
+          "Aufnahmemitgliedstaat",
+          "Aufnahmemitgliedstaate",
+          "Aufnahmemitgliedstaaten",
+          "Aufnahmemitgliedstaates",
+          "Aufnahmemitgliedstaats"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(18)",
+        "definition": "Aufnahmemitgliedstaat im Sinne dieses Gesetzes ist",
+        "definitionHtml": "Aufnahmemitgliedstaat im Sinne dieses Gesetzes ist",
+        "sourceHash": "a:act_de_wphg_1994:art_2__18"
+      },
+      {
+        "term": "Energiegroßhandelsprodukt",
+        "forms": [
+          "Energiegroßhandelsprodukt",
+          "Energiegroßhandelsprodukte",
+          "Energiegroßhandelsprodukten",
+          "Energiegroßhandelsproduktes",
+          "Energiegroßhandelsprodukts"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(20)",
+        "definition": "Energiegroßhandelsprodukt im Sinne dieses Gesetzes ist ein Energiegroßhandelsprodukt im Sinne des Artikels 2 Nummer 4 der Verordnung (EU) Nr. 1227/2011 des Europäischen Parlaments und des Rates vom 25. Oktober 2011 über die Integrität und Transparenz des Energiegroßhandelsmarkts (ABl. L 326 vom 8.12.2011, S. 1), sowie der Artikel 5 und 6 der Delegierten Verordnung (EU) 2017/565.",
+        "definitionHtml": "Energiegroßhandelsprodukt im Sinne dieses Gesetzes ist ein Energiegroßhandelsprodukt im Sinne des Artikels 2 Nummer 4 der <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32011R1227\" class=\"ref\" data-ref=\"celex:32011R1227\" target=\"_blank\" rel=\"noopener\">Verordnung (EU) Nr. 1227/2011</a> des Europäischen Parlaments und des Rates vom 25. Oktober 2011 über die Integrität und Transparenz des Energiegroßhandelsmarkts (ABl. L 326 vom 8.12.2011, S. 1), sowie der Artikel 5 und 6 der Delegierten <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32017R0565\" class=\"ref\" data-ref=\"celex:32017R0565\" target=\"_blank\" rel=\"noopener\">Verordnung (EU) 2017/565</a>.",
+        "sourceHash": "a:act_de_wphg_1994:art_2__20"
+      },
+      {
+        "term": "Multilaterales System",
+        "forms": [
+          "Multilaterales System",
+          "Multilaterales Systeme",
+          "Multilaterales Systemen",
+          "Multilaterales Systemes",
+          "Multilaterales Systems",
+          "Multilaterale System",
+          "Multilaterale Systeme",
+          "Multilaterale Systemen",
+          "Multilaterale Systemes",
+          "Multilaterale Systems",
+          "Multilateralen System",
+          "Multilateralen Systeme",
+          "Multilateralen Systemen",
+          "Multilateralen Systemes",
+          "Multilateralen Systems",
+          "Multilateraler System",
+          "Multilateraler Systeme",
+          "Multilateraler Systemen",
+          "Multilateraler Systemes",
+          "Multilateraler Systems",
+          "Multilateralem System",
+          "Multilateralem Systeme",
+          "Multilateralem Systemen",
+          "Multilateralem Systemes",
+          "Multilateralem Systems"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(21)",
+        "definition": "Multilaterales System im Sinne dieses Gesetzes ist ein multilaterales System im Sinne des Artikels 2 Absatz 1 Nummer 11 der Verordnung (EU) Nr. 600/2014.",
+        "definitionHtml": "Multilaterales System im Sinne dieses Gesetzes ist ein multilaterales System im Sinne des Artikels 2 Absatz 1 Nummer 11 der <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0600\" class=\"ref\" data-ref=\"celex:32014R0600\" target=\"_blank\" rel=\"noopener\">Verordnung (EU) Nr. 600/2014</a>.",
+        "sourceHash": "a:act_de_wphg_1994:art_2__21"
+      },
+      {
+        "term": "Handelsplatz",
+        "forms": [
+          "Handelsplatz",
+          "Handelsplätze",
+          "Handelsplätzen",
+          "Handelsplatze",
+          "Handelsplatzen",
+          "Handelsplatzes",
+          "Handelsplatzs"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(22)",
+        "definition": "Handelsplatz im Sinne dieses Gesetzes ist ein organisierter Markt, ein multilaterales Handelssystem oder ein organisiertes Handelssystem.",
+        "definitionHtml": "Handelsplatz im Sinne dieses Gesetzes ist ein organisierter Markt, ein multilaterales Handelssystem oder ein organisiertes Handelssystem.",
+        "sourceHash": "a:act_de_wphg_1994:art_2__22"
+      },
+      {
+        "term": "Liquider Markt",
+        "forms": [
+          "Liquider Markt",
+          "Liquider Märkte",
+          "Liquider Märkten",
+          "Liquider Markte",
+          "Liquider Markten",
+          "Liquider Marktes",
+          "Liquider Markts",
+          "Liquide Markt",
+          "Liquide Märkte",
+          "Liquide Märkten",
+          "Liquide Markte",
+          "Liquide Markten",
+          "Liquide Marktes",
+          "Liquide Markts",
+          "Liquiden Markt",
+          "Liquiden Märkte",
+          "Liquiden Märkten",
+          "Liquiden Markte",
+          "Liquiden Markten",
+          "Liquiden Marktes",
+          "Liquiden Markts",
+          "Liquides Markt",
+          "Liquides Märkte",
+          "Liquides Märkten",
+          "Liquides Markte",
+          "Liquides Markten",
+          "Liquides Marktes",
+          "Liquides Markts",
+          "Liquidem Markt",
+          "Liquidem Märkte",
+          "Liquidem Märkten",
+          "Liquidem Markte",
+          "Liquidem Markten",
+          "Liquidem Marktes",
+          "Liquidem Markts"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(23)",
+        "definition": "Liquider Markt im Sinne dieses Gesetzes ist ein Markt für ein Finanzinstrument oder für eine Kategorie von Finanzinstrumenten,",
+        "definitionHtml": "Liquider Markt im Sinne dieses Gesetzes ist ein Markt für ein Finanzinstrument oder für eine Kategorie von Finanzinstrumenten,",
+        "sourceHash": "a:act_de_wphg_1994:art_2__23"
+      },
+      {
+        "term": "Zweigniederlassung",
+        "forms": [
+          "Zweigniederlassung",
+          "Zweigniederlassungen"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(24)",
+        "definition": "Zweigniederlassung im Sinne dieses Gesetzes ist eine Betriebsstelle, die",
+        "definitionHtml": "Zweigniederlassung im Sinne dieses Gesetzes ist eine Betriebsstelle, die",
+        "sourceHash": "a:act_de_wphg_1994:art_2__24"
+      },
+      {
+        "term": "Mutterunternehmen",
+        "forms": [
+          "Mutterunternehmen",
+          "Mutterunternehmens"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(25)",
+        "definition": "Mutterunternehmen im Sinne dieses Gesetzes ist, sofern nicht die Abschnitte 6 und 16 besondere Regelungen enthalten, ein Mutterunternehmen im Sinne des Artikels 2 Nummer 9 und des Artikels 22 der Richtlinie 2013/34/EU des Europäischen Parlaments und des Rates vom 26. Juni 2013 über den Jahresabschluss, den konsolidierten Abschluss und damit verbundene Berichte von Unternehmen bestimmter Rechtsformen und zur Änderung der Richtlinie 2006/43/EG des Europäischen Parlaments und des Rates und zur Aufhebung der Richtlinien 78/660/EWG und 83/349/EWG des Rates (ABl. L 182 vom 29.6.2013, S. 19), die zuletzt durch die Richtlinie 2014/102/EU (ABl. L 334 vom 21.11.2014, S. 86) geändert worden ist.",
+        "definitionHtml": "Mutterunternehmen im Sinne dieses Gesetzes ist, sofern nicht die Abschnitte 6 und 16 besondere Regelungen enthalten, ein Mutterunternehmen im Sinne des Artikels 2 Nummer 9 und des Artikels 22 der <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013L0034\" class=\"ref\" data-ref=\"celex:32013L0034\" target=\"_blank\" rel=\"noopener\">Richtlinie 2013/34/EU</a> des Europäischen Parlaments und des Rates vom 26. Juni 2013 über den Jahresabschluss, den konsolidierten Abschluss und damit verbundene Berichte von Unternehmen bestimmter Rechtsformen und zur Änderung der <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32006L0043\" class=\"ref\" data-ref=\"celex:32006L0043\" target=\"_blank\" rel=\"noopener\">Richtlinie 2006/43/EG</a> des Europäischen Parlaments und des Rates und zur Aufhebung der Richtlinien 78/660/EWG und 83/349/EWG des Rates (ABl. L 182 vom 29.6.2013, S. 19), die zuletzt durch die <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0102\" class=\"ref\" data-ref=\"celex:32014L0102\" target=\"_blank\" rel=\"noopener\">Richtlinie 2014/102/EU</a> (ABl. L 334 vom 21.11.2014, S. 86) geändert worden ist.",
+        "sourceHash": "a:act_de_wphg_1994:art_2__25"
+      },
+      {
+        "term": "Tochterunternehmen",
+        "forms": [
+          "Tochterunternehmen",
+          "Tochterunternehmens"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(26)",
+        "definition": "Tochterunternehmen im Sinne dieses Gesetzes ist, sofern nicht die Abschnitte 6 und 16 besondere Regelungen enthalten, ein Tochterunternehmen im Sinne des Artikels 2 Nummer 10 und des Artikels 22 der Richtlinie 2013/34/EU, einschließlich aller Tochterunternehmen eines Tochterunternehmens des an der Spitze stehenden Mutterunternehmens.",
+        "definitionHtml": "Tochterunternehmen im Sinne dieses Gesetzes ist, sofern nicht die Abschnitte 6 und 16 besondere Regelungen enthalten, ein Tochterunternehmen im Sinne des Artikels 2 Nummer 10 und des Artikels 22 der <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013L0034\" class=\"ref\" data-ref=\"celex:32013L0034\" target=\"_blank\" rel=\"noopener\">Richtlinie 2013/34/EU</a>, einschließlich aller Tochterunternehmen eines Tochterunternehmens des an der Spitze stehenden Mutterunternehmens.",
+        "sourceHash": "a:act_de_wphg_1994:art_2__26"
+      },
+      {
+        "term": "Gruppe",
+        "forms": [
+          "Gruppe",
+          "Gruppen"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(27)",
+        "definition": "Gruppe im Sinne dieses Gesetzes ist eine Gruppe im Sinne des Artikels 2 Nummer 11 der Richtlinie 2013/34/EU.",
+        "definitionHtml": "Gruppe im Sinne dieses Gesetzes ist eine Gruppe im Sinne des Artikels 2 Nummer 11 der <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013L0034\" class=\"ref\" data-ref=\"celex:32013L0034\" target=\"_blank\" rel=\"noopener\">Richtlinie 2013/34/EU</a>.",
+        "sourceHash": "a:act_de_wphg_1994:art_2__27"
+      },
+      {
+        "term": "Überwiegend kommerzielle Gruppe",
+        "forms": [
+          "Überwiegend kommerzielle Gruppe",
+          "Überwiegend kommerzielle Gruppen",
+          "Überwiegend kommerziellen Gruppe",
+          "Überwiegend kommerziellen Gruppen",
+          "Überwiegend kommerzieller Gruppe",
+          "Überwiegend kommerzieller Gruppen",
+          "Überwiegend kommerzielles Gruppe",
+          "Überwiegend kommerzielles Gruppen",
+          "Überwiegend kommerziellem Gruppe",
+          "Überwiegend kommerziellem Gruppen"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(27a)",
+        "definition": "Überwiegend kommerzielle Gruppe im Sinne dieses Gesetzes ist jede Gruppe, deren Haupttätigkeit nicht in der Erbringung von Wertpapierdienstleistungen oder in der Erbringung von in Anhang I der Richtlinie 2013/36/EU aufgeführten Tätigkeiten oder in der Tätigkeit als Market Maker in Bezug auf Warenderivate besteht.",
+        "definitionHtml": "Überwiegend kommerzielle Gruppe im Sinne dieses Gesetzes ist jede Gruppe, deren Haupttätigkeit nicht in der Erbringung von Wertpapierdienstleistungen oder in der Erbringung von in Anhang I der <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013L0036\" class=\"ref\" data-ref=\"celex:32013L0036\" target=\"_blank\" rel=\"noopener\">Richtlinie 2013/36/EU</a> aufgeführten Tätigkeiten oder in der Tätigkeit als Market Maker in Bezug auf Warenderivate besteht.",
+        "sourceHash": "a:act_de_wphg_1994:art_2__27a"
+      },
+      {
+        "term": "Direkter elektronischer Zugang",
+        "forms": [
+          "Direkter elektronischer Zugang",
+          "Direkter elektronischer Zugänge",
+          "Direkter elektronischer Zugängen",
+          "Direkter elektronischer Zugange",
+          "Direkter elektronischer Zugangen",
+          "Direkter elektronischer Zuganges",
+          "Direkter elektronischer Zugangs",
+          "Direkte elektronische Zugang",
+          "Direkte elektronische Zugänge",
+          "Direkte elektronische Zugängen",
+          "Direkte elektronische Zugange",
+          "Direkte elektronische Zugangen",
+          "Direkte elektronische Zuganges",
+          "Direkte elektronische Zugangs",
+          "Direkten elektronischen Zugang",
+          "Direkten elektronischen Zugänge",
+          "Direkten elektronischen Zugängen",
+          "Direkten elektronischen Zugange",
+          "Direkten elektronischen Zugangen",
+          "Direkten elektronischen Zuganges",
+          "Direkten elektronischen Zugangs",
+          "Direktes elektronisches Zugang",
+          "Direktes elektronisches Zugänge",
+          "Direktes elektronisches Zugängen",
+          "Direktes elektronisches Zugange",
+          "Direktes elektronisches Zugangen",
+          "Direktes elektronisches Zuganges",
+          "Direktes elektronisches Zugangs",
+          "Direktem elektronischem Zugang",
+          "Direktem elektronischem Zugänge",
+          "Direktem elektronischem Zugängen",
+          "Direktem elektronischem Zugange",
+          "Direktem elektronischem Zugangen",
+          "Direktem elektronischem Zuganges",
+          "Direktem elektronischem Zugangs"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(30)",
+        "definition": "Direkter elektronischer Zugang im Sinne dieses Gesetzes ist eine Vereinbarung, in deren Rahmen ein Mitglied, ein Teilnehmer oder ein Kunde eines Handelsplatzes einer anderen Person die Nutzung seines Handelscodes gestattet, damit diese Person Aufträge in Bezug auf Finanzinstrumente elektronisch direkt an den Handelsplatz übermitteln kann, mit Ausnahme der in Artikel 20 der Delegierten Verordnung (EU) 2017/565 genannten Fälle. Der direkte elektronische Zugang umfasst auch Vereinbarungen, die die Nutzung der Infrastruktur oder eines anderweitigen Verbindungssystems des Mitglieds, des Teilnehmers oder des Kunden durch diese Person zur Übermittlung von Aufträgen beinhalten (direkter Marktzugang), sowie diejenigen Vereinbarungen, bei denen eine solche Infrastruktur nicht durch diese Person genutzt wird (geförderter Zugang).",
+        "definitionHtml": "Direkter elektronischer Zugang im Sinne dieses Gesetzes ist eine Vereinbarung, in deren Rahmen ein Mitglied, ein Teilnehmer oder ein Kunde eines Handelsplatzes einer anderen Person die Nutzung seines Handelscodes gestattet, damit diese Person Aufträge in Bezug auf Finanzinstrumente elektronisch direkt an den Handelsplatz übermitteln kann, mit Ausnahme der in Artikel 20 der Delegierten <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32017R0565\" class=\"ref\" data-ref=\"celex:32017R0565\" target=\"_blank\" rel=\"noopener\">Verordnung (EU) 2017/565</a> genannten Fälle. Der direkte elektronische Zugang umfasst auch Vereinbarungen, die die Nutzung der Infrastruktur oder eines anderweitigen Verbindungssystems des Mitglieds, des Teilnehmers oder des Kunden durch diese Person zur Übermittlung von Aufträgen beinhalten (direkter Marktzugang), sowie diejenigen Vereinbarungen, bei denen eine solche Infrastruktur nicht durch diese Person genutzt wird (geförderter Zugang).",
+        "sourceHash": "a:act_de_wphg_1994:art_2__30"
+      },
+      {
+        "term": "Hinterlegungsscheine",
+        "forms": [
+          "Hinterlegungsscheine",
+          "Hinterlegungsscheinen"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(31)",
+        "definition": "Hinterlegungsscheine im Sinne dieses Gesetzes sind Wertpapiere, die auf dem Kapitalmarkt handelbar sind und die ein Eigentumsrecht an Wertpapieren von Emittenten mit Sitz im Ausland verbriefen, zum Handel auf einem organisierten Markt zugelassen sind und unabhängig von den Wertpapieren des jeweiligen Emittenten mit Sitz im Ausland gehandelt werden können.",
+        "definitionHtml": "Hinterlegungsscheine im Sinne dieses Gesetzes sind Wertpapiere, die auf dem Kapitalmarkt handelbar sind und die ein Eigentumsrecht an Wertpapieren von Emittenten mit Sitz im Ausland verbriefen, zum Handel auf einem organisierten Markt zugelassen sind und unabhängig von den Wertpapieren des jeweiligen Emittenten mit Sitz im Ausland gehandelt werden können.",
+        "sourceHash": "a:act_de_wphg_1994:art_2__31"
+      },
+      {
+        "term": "Börsengehandeltes Investmentvermögen",
+        "forms": [
+          "Börsengehandeltes Investmentvermögen",
+          "Börsengehandeltes Investmentvermögens",
+          "Börsengehandelte Investmentvermögen",
+          "Börsengehandelte Investmentvermögens",
+          "Börsengehandelten Investmentvermögen",
+          "Börsengehandelten Investmentvermögens",
+          "Börsengehandelter Investmentvermögen",
+          "Börsengehandelter Investmentvermögens",
+          "Börsengehandeltem Investmentvermögen",
+          "Börsengehandeltem Investmentvermögens"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(32)",
+        "definition": "Börsengehandeltes Investmentvermögen im Sinne dieses Gesetzes ist ein Investmentvermögen im Sinne des Kapitalanlagegesetzbuchs, bei dem mindestens eine Anteilsklasse oder Aktiengattung ganztägig an mindestens einem Handelsplatz und mit mindestens einem Market Maker, der tätig wird, um sicherzustellen, dass der Preis seiner Anteile oder Aktien an diesem Handelsplatz nicht wesentlich von ihrem Nettoinventarwert und, sofern einschlägig, von ihrem indikativen Nettoinventarwert abweicht, gehandelt wird.",
+        "definitionHtml": "Börsengehandeltes Investmentvermögen im Sinne dieses Gesetzes ist ein Investmentvermögen im Sinne des Kapitalanlagegesetzbuchs, bei dem mindestens eine Anteilsklasse oder Aktiengattung ganztägig an mindestens einem Handelsplatz und mit mindestens einem Market Maker, der tätig wird, um sicherzustellen, dass der Preis seiner Anteile oder Aktien an diesem Handelsplatz nicht wesentlich von ihrem Nettoinventarwert und, sofern einschlägig, von ihrem indikativen Nettoinventarwert abweicht, gehandelt wird.",
+        "sourceHash": "a:act_de_wphg_1994:art_2__32"
+      },
+      {
+        "term": "Zertifikat",
+        "forms": [
+          "Zertifikat",
+          "Zertifikate",
+          "Zertifikaten",
+          "Zertifikates",
+          "Zertifikats"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(33)",
+        "definition": "Zertifikat im Sinne dieses Gesetzes ist ein Wertpapier, das auf dem Kapitalmarkt handelbar ist und das im Falle der durch den Emittenten vorgenommenen Rückzahlung einer Anlage bei dem Emittenten Vorrang vor Aktien hat, aber nicht besicherten Anleiheinstrumenten und anderen vergleichbaren Instrumenten nachgeordnet ist.",
+        "definitionHtml": "Zertifikat im Sinne dieses Gesetzes ist ein Wertpapier, das auf dem Kapitalmarkt handelbar ist und das im Falle der durch den Emittenten vorgenommenen Rückzahlung einer Anlage bei dem Emittenten Vorrang vor Aktien hat, aber nicht besicherten Anleiheinstrumenten und anderen vergleichbaren Instrumenten nachgeordnet ist.",
+        "sourceHash": "a:act_de_wphg_1994:art_2__33"
+      },
+      {
+        "term": "Strukturiertes Finanzprodukt",
+        "forms": [
+          "Strukturiertes Finanzprodukt",
+          "Strukturiertes Finanzprodukte",
+          "Strukturiertes Finanzprodukten",
+          "Strukturiertes Finanzproduktes",
+          "Strukturiertes Finanzprodukts",
+          "Strukturierte Finanzprodukt",
+          "Strukturierte Finanzprodukte",
+          "Strukturierte Finanzprodukten",
+          "Strukturierte Finanzproduktes",
+          "Strukturierte Finanzprodukts",
+          "Strukturierten Finanzprodukt",
+          "Strukturierten Finanzprodukte",
+          "Strukturierten Finanzprodukten",
+          "Strukturierten Finanzproduktes",
+          "Strukturierten Finanzprodukts",
+          "Strukturierter Finanzprodukt",
+          "Strukturierter Finanzprodukte",
+          "Strukturierter Finanzprodukten",
+          "Strukturierter Finanzproduktes",
+          "Strukturierter Finanzprodukts",
+          "Strukturiertem Finanzprodukt",
+          "Strukturiertem Finanzprodukte",
+          "Strukturiertem Finanzprodukten",
+          "Strukturiertem Finanzproduktes",
+          "Strukturiertem Finanzprodukts"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(34)",
+        "definition": "Strukturiertes Finanzprodukt im Sinne dieses Gesetzes ist ein Wertpapier, das zur Verbriefung und Übertragung des mit einer ausgewählten Palette an finanziellen Vermögenswerten einhergehenden Kreditrisikos geschaffen wurde und das den Wertpapierinhaber zum Empfang regelmäßiger Zahlungen berechtigt, die vom Geldfluss der Basisvermögenswerte abhängen.",
+        "definitionHtml": "Strukturiertes Finanzprodukt im Sinne dieses Gesetzes ist ein Wertpapier, das zur Verbriefung und Übertragung des mit einer ausgewählten Palette an finanziellen Vermögenswerten einhergehenden Kreditrisikos geschaffen wurde und das den Wertpapierinhaber zum Empfang regelmäßiger Zahlungen berechtigt, die vom Geldfluss der Basisvermögenswerte abhängen.",
+        "sourceHash": "a:act_de_wphg_1994:art_2__34"
+      },
+      {
+        "term": "Make-Whole-Klausel",
+        "forms": [
+          "Make-Whole-Klausel",
+          "Make-Whole-Klausels",
+          "Make-Whole-Klauseln"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(34a)",
+        "definition": "Make-Whole-Klausel im Sinne dieses Gesetzes ist eine Klausel, die den Anleger schützen soll, indem sichergestellt wird, dass der Emittent im Falle der vorzeitigen Rückzahlung einer Anleihe verpflichtet ist, dem Anleger, der die Anleihe hält, einen Betrag zu zahlen, welcher der Summe des Nettogegenwartwertes der verbleibenden Kuponzahlungen, die bis zur Fälligkeit erwartet werden, und dem Kapitalbetrag der zurückzuzahlenden Anleihe entspricht.",
+        "definitionHtml": "Make-Whole-Klausel im Sinne dieses Gesetzes ist eine Klausel, die den Anleger schützen soll, indem sichergestellt wird, dass der Emittent im Falle der vorzeitigen Rückzahlung einer Anleihe verpflichtet ist, dem Anleger, der die Anleihe hält, einen Betrag zu zahlen, welcher der Summe des Nettogegenwartwertes der verbleibenden Kuponzahlungen, die bis zur Fälligkeit erwartet werden, und dem Kapitalbetrag der zurückzuzahlenden Anleihe entspricht.",
+        "sourceHash": "a:act_de_wphg_1994:art_2__34a"
+      },
+      {
+        "term": "Derivate",
+        "forms": [
+          "Derivate",
+          "Derivaten"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(35)",
+        "definition": "Derivate im Sinne dieses Gesetzes sind derivative Geschäfte im Sinne des Absatzes 3 sowie Wertpapiere im Sinne des Absatzes 1 Nummer 3 Buchstabe b.",
+        "definitionHtml": "Derivate im Sinne dieses Gesetzes sind derivative Geschäfte im Sinne des Absatzes 3 sowie Wertpapiere im Sinne des Absatzes 1 Nummer 3 Buchstabe b.",
+        "sourceHash": "a:act_de_wphg_1994:art_2__35"
+      },
+      {
+        "term": "Warenderivate",
+        "forms": [
+          "Warenderivate",
+          "Warenderivaten"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(36)",
+        "definition": "Warenderivate im Sinne dieses Gesetzes sind Finanzinstrumente im Sinne des Artikels 2 Absatz 1 Nummer 30 der Verordnung (EU) Nr. 600/2014.",
+        "definitionHtml": "Warenderivate im Sinne dieses Gesetzes sind Finanzinstrumente im Sinne des Artikels 2 Absatz 1 Nummer 30 der <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0600\" class=\"ref\" data-ref=\"celex:32014R0600\" target=\"_blank\" rel=\"noopener\">Verordnung (EU) Nr. 600/2014</a>.",
+        "sourceHash": "a:act_de_wphg_1994:art_2__36"
+      },
+      {
+        "term": "Derivate auf landwirtschaftliche Erzeugnisse",
+        "forms": [
+          "Derivate auf landwirtschaftliche Erzeugnisse",
+          "Derivate auf landwirtschaftliche Erzeugnissen",
+          "Derivaten auf landwirtschaftlichen Erzeugnisse",
+          "Derivaten auf landwirtschaftlichen Erzeugnissen",
+          "Derivater auf landwirtschaftlicher Erzeugnisse",
+          "Derivater auf landwirtschaftlicher Erzeugnissen",
+          "Derivates auf landwirtschaftliches Erzeugnisse",
+          "Derivates auf landwirtschaftliches Erzeugnissen",
+          "Derivatem auf landwirtschaftlichem Erzeugnisse",
+          "Derivatem auf landwirtschaftlichem Erzeugnissen"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(36a)",
+        "definition": "Derivate auf landwirtschaftliche Erzeugnisse im Sinne dieses Gesetzes sind Derivatkontrakte in Bezug auf die Erzeugnisse, die in Artikel 1 und Anhang I Teil I bis XX und XXIV/1 der Verordnung (EU) Nr. 1308/2013 des Europäischen Parlaments und des Rates vom 17. Dezember 2013 über eine gemeinsame Marktorganisation für landwirtschaftliche Erzeugnisse und zur Aufhebung der Verordnungen (EWG) Nr. 922/72, (EWG) Nr. 234/79, (EG) Nr. 1037/2001 und (EG) Nr. 1234/2007 (ABl. L 347 vom 20.12.2013, S. 671; L 189 vom 27.6.2014, S. 261; L 130 vom 19.5.2016, S. 18; L 34 vom 9.2.2017, S. 41; L 106 vom 6.4.2020, S. 12), die zuletzt durch die Verordnung (EU) 2020/2220 (ABl. L 437 vom 28.12.2020, S. 1) geändert worden ist, sowie in Anhang I der Verordnung (EU) Nr. 1379/2013 des Europäischen Parlaments und des Rates vom 11. Dezember 2013 über die gemeinsame Marktorganisation für Erzeugnisse der Fischerei und der Aquakultur, zur Änderung der Verordnungen (EG) Nr. 1184/2006 und (EG) Nr. 1224/2009 des Rates und zur Aufhebung der Verordnung (EG) Nr. 104/2000 des Rates (ABl. L 354 vom 28.12.2013, S. 1), die zuletzt durch die Verordnung (EU) 2020/560 (ABl. L 130 vom 24.4.2020, S. 11) geändert worden ist, aufgeführt sind.",
+        "definitionHtml": "Derivate auf landwirtschaftliche Erzeugnisse im Sinne dieses Gesetzes sind Derivatkontrakte in Bezug auf die Erzeugnisse, die in Artikel 1 und Anhang I Teil I bis XX und XXIV/1 der <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013R1308\" class=\"ref\" data-ref=\"celex:32013R1308\" target=\"_blank\" rel=\"noopener\">Verordnung (EU) Nr. 1308/2013</a> des Europäischen Parlaments und des Rates vom 17. Dezember 2013 über eine gemeinsame Marktorganisation für landwirtschaftliche Erzeugnisse und zur Aufhebung der Verordnungen (EWG) Nr. 922/72, (EWG) Nr. 234/79, (EG) Nr. 1037/2001 und (EG) Nr. 1234/2007 (ABl. L 347 vom 20.12.2013, S. 671; L 189 vom 27.6.2014, S. 261; L 130 vom 19.5.2016, S. 18; L 34 vom 9.2.2017, S. 41; L 106 vom 6.4.2020, S. 12), die zuletzt durch die <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32020R2220\" class=\"ref\" data-ref=\"celex:32020R2220\" target=\"_blank\" rel=\"noopener\">Verordnung (EU) 2020/2220</a> (ABl. L 437 vom 28.12.2020, S. 1) geändert worden ist, sowie in Anhang I der <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013R1379\" class=\"ref\" data-ref=\"celex:32013R1379\" target=\"_blank\" rel=\"noopener\">Verordnung (EU) Nr. 1379/2013</a> des Europäischen Parlaments und des Rates vom 11. Dezember 2013 über die gemeinsame Marktorganisation für Erzeugnisse der Fischerei und der Aquakultur, zur Änderung der Verordnungen <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32006R1184\" class=\"ref\" data-ref=\"celex:32006R1184\" target=\"_blank\" rel=\"noopener\">(EG) Nr. 1184/2006</a> und <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32009R1224\" class=\"ref\" data-ref=\"celex:32009R1224\" target=\"_blank\" rel=\"noopener\">(EG) Nr. 1224/2009</a> des Rates und zur Aufhebung der <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32000R0104\" class=\"ref\" data-ref=\"celex:32000R0104\" target=\"_blank\" rel=\"noopener\">Verordnung (EG) Nr. 104/2000</a> des Rates (ABl. L 354 vom 28.12.2013, S. 1), die zuletzt durch die <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32020R0560\" class=\"ref\" data-ref=\"celex:32020R0560\" target=\"_blank\" rel=\"noopener\">Verordnung (EU) 2020/560</a> (ABl. L 130 vom 24.4.2020, S. 11) geändert worden ist, aufgeführt sind.",
+        "sourceHash": "a:act_de_wphg_1994:art_2__36a"
+      },
+      {
+        "term": "Genehmigtes Veröffentlichungssystem",
+        "forms": [
+          "Genehmigtes Veröffentlichungssystem",
+          "Genehmigtes Veröffentlichungssysteme",
+          "Genehmigtes Veröffentlichungssystemen",
+          "Genehmigtes Veröffentlichungssystemes",
+          "Genehmigtes Veröffentlichungssystems",
+          "Genehmigte Veröffentlichungssystem",
+          "Genehmigte Veröffentlichungssysteme",
+          "Genehmigte Veröffentlichungssystemen",
+          "Genehmigte Veröffentlichungssystemes",
+          "Genehmigte Veröffentlichungssystems",
+          "Genehmigten Veröffentlichungssystem",
+          "Genehmigten Veröffentlichungssysteme",
+          "Genehmigten Veröffentlichungssystemen",
+          "Genehmigten Veröffentlichungssystemes",
+          "Genehmigten Veröffentlichungssystems",
+          "Genehmigter Veröffentlichungssystem",
+          "Genehmigter Veröffentlichungssysteme",
+          "Genehmigter Veröffentlichungssystemen",
+          "Genehmigter Veröffentlichungssystemes",
+          "Genehmigter Veröffentlichungssystems",
+          "Genehmigtem Veröffentlichungssystem",
+          "Genehmigtem Veröffentlichungssysteme",
+          "Genehmigtem Veröffentlichungssystemen",
+          "Genehmigtem Veröffentlichungssystemes",
+          "Genehmigtem Veröffentlichungssystems"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(37)",
+        "definition": "Genehmigtes Veröffentlichungssystem im Sinne dieses Gesetzes ist ein genehmigtes Veröffentlichungssystem im Sinne von Artikel 2 Absatz 1 Nummer 34 der Verordnung (EU) Nr. 600/2014.",
+        "definitionHtml": "Genehmigtes Veröffentlichungssystem im Sinne dieses Gesetzes ist ein genehmigtes Veröffentlichungssystem im Sinne von <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0600\" class=\"ref\" data-ref=\"celex:32014R0600\" data-article=\"2\" target=\"_blank\" rel=\"noopener\">Artikel 2</a> Absatz 1 Nummer 34 der <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0600\" class=\"ref\" data-ref=\"celex:32014R0600\" target=\"_blank\" rel=\"noopener\">Verordnung (EU) Nr. 600/2014</a>.",
+        "sourceHash": "a:act_de_wphg_1994:art_2__37"
+      },
+      {
+        "term": "Genehmigter Meldemechanismus",
+        "forms": [
+          "Genehmigter Meldemechanismus",
+          "Genehmigter Meldemechanismuse",
+          "Genehmigter Meldemechanismusen",
+          "Genehmigter Meldemechanismuses",
+          "Genehmigter Meldemechanismuss",
+          "Genehmigte Meldemechanismus",
+          "Genehmigte Meldemechanismuse",
+          "Genehmigte Meldemechanismusen",
+          "Genehmigte Meldemechanismuses",
+          "Genehmigte Meldemechanismuss",
+          "Genehmigten Meldemechanismus",
+          "Genehmigten Meldemechanismuse",
+          "Genehmigten Meldemechanismusen",
+          "Genehmigten Meldemechanismuses",
+          "Genehmigten Meldemechanismuss",
+          "Genehmigtes Meldemechanismus",
+          "Genehmigtes Meldemechanismuse",
+          "Genehmigtes Meldemechanismusen",
+          "Genehmigtes Meldemechanismuses",
+          "Genehmigtes Meldemechanismuss",
+          "Genehmigtem Meldemechanismus",
+          "Genehmigtem Meldemechanismuse",
+          "Genehmigtem Meldemechanismusen",
+          "Genehmigtem Meldemechanismuses",
+          "Genehmigtem Meldemechanismuss"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(39)",
+        "definition": "Genehmigter Meldemechanismus im Sinne dieses Gesetzes ist ein genehmigter Meldemechanismus im Sinne von Artikel 2 Absatz 1 Nummer 36 der Verordnung (EU) Nr. 600/2014.",
+        "definitionHtml": "Genehmigter Meldemechanismus im Sinne dieses Gesetzes ist ein genehmigter Meldemechanismus im Sinne von <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0600\" class=\"ref\" data-ref=\"celex:32014R0600\" data-article=\"2\" target=\"_blank\" rel=\"noopener\">Artikel 2</a> Absatz 1 Nummer 36 der <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0600\" class=\"ref\" data-ref=\"celex:32014R0600\" target=\"_blank\" rel=\"noopener\">Verordnung (EU) Nr. 600/2014</a>.",
+        "sourceHash": "a:act_de_wphg_1994:art_2__39"
+      },
+      {
+        "term": "Datenbereitstellungsdienst",
+        "forms": [
+          "Datenbereitstellungsdienst",
+          "Datenbereitstellungsdienste",
+          "Datenbereitstellungsdiensten",
+          "Datenbereitstellungsdienstes",
+          "Datenbereitstellungsdiensts"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(40)",
+        "definition": "Datenbereitstellungsdienst im Sinne dieses Gesetzes ist",
+        "definitionHtml": "Datenbereitstellungsdienst im Sinne dieses Gesetzes ist",
+        "sourceHash": "a:act_de_wphg_1994:art_2__40"
+      },
+      {
+        "term": "Drittlandunternehmen",
+        "forms": [
+          "Drittlandunternehmen",
+          "Drittlandunternehmens"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(41)",
+        "definition": "Drittlandunternehmen im Sinne dieses Gesetzes ist ein Unternehmen, das ein Wertpapierdienstleistungsunternehmen wäre, wenn es seinen Sitz im Europäischen Wirtschaftsraum hätte.",
+        "definitionHtml": "Drittlandunternehmen im Sinne dieses Gesetzes ist ein Unternehmen, das ein Wertpapierdienstleistungsunternehmen wäre, wenn es seinen Sitz im Europäischen Wirtschaftsraum hätte.",
+        "sourceHash": "a:act_de_wphg_1994:art_2__41"
+      },
+      {
+        "term": "Öffentliche Emittenten",
+        "forms": [
+          "Öffentliche Emittenten",
+          "Öffentliche Emittentens",
+          "Öffentlichen Emittenten",
+          "Öffentlichen Emittentens",
+          "Öffentlicher Emittenten",
+          "Öffentlicher Emittentens",
+          "Öffentliches Emittenten",
+          "Öffentliches Emittentens",
+          "Öffentlichem Emittenten",
+          "Öffentlichem Emittentens"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(42)",
+        "definition": "Öffentliche Emittenten im Sinne dieses Gesetzes sind folgende Emittenten von Schuldtiteln:",
+        "definitionHtml": "Öffentliche Emittenten im Sinne dieses Gesetzes sind folgende Emittenten von Schuldtiteln:",
+        "sourceHash": "a:act_de_wphg_1994:art_2__42"
+      },
+      {
+        "term": "Elektronische Form",
+        "forms": [
+          "Elektronische Form",
+          "Elektronische Forme",
+          "Elektronische Formen",
+          "Elektronische Formes",
+          "Elektronische Forms",
+          "Elektronischen Form",
+          "Elektronischen Forme",
+          "Elektronischen Formen",
+          "Elektronischen Formes",
+          "Elektronischen Forms",
+          "Elektronischer Form",
+          "Elektronischer Forme",
+          "Elektronischer Formen",
+          "Elektronischer Formes",
+          "Elektronischer Forms",
+          "Elektronisches Form",
+          "Elektronisches Forme",
+          "Elektronisches Formen",
+          "Elektronisches Formes",
+          "Elektronisches Forms",
+          "Elektronischem Form",
+          "Elektronischem Forme",
+          "Elektronischem Formen",
+          "Elektronischem Formes",
+          "Elektronischem Forms"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(43a)",
+        "definition": "Elektronische Form im Sinne dieses Gesetzes ist ein dauerhaftes Medium, das kein Papier ist.",
+        "definitionHtml": "Elektronische Form im Sinne dieses Gesetzes ist ein dauerhaftes Medium, das kein Papier ist.",
+        "sourceHash": "a:act_de_wphg_1994:art_2__43a"
+      },
+      {
+        "term": "Hochfrequente algorithmische Handelstechnik",
+        "forms": [
+          "Hochfrequente algorithmische Handelstechnik",
+          "Hochfrequente algorithmische Handelstechnike",
+          "Hochfrequente algorithmische Handelstechniken",
+          "Hochfrequente algorithmische Handelstechnikes",
+          "Hochfrequente algorithmische Handelstechniks",
+          "Hochfrequenten algorithmischen Handelstechnik",
+          "Hochfrequenten algorithmischen Handelstechnike",
+          "Hochfrequenten algorithmischen Handelstechniken",
+          "Hochfrequenten algorithmischen Handelstechnikes",
+          "Hochfrequenten algorithmischen Handelstechniks",
+          "Hochfrequenter algorithmischer Handelstechnik",
+          "Hochfrequenter algorithmischer Handelstechnike",
+          "Hochfrequenter algorithmischer Handelstechniken",
+          "Hochfrequenter algorithmischer Handelstechnikes",
+          "Hochfrequenter algorithmischer Handelstechniks",
+          "Hochfrequentes algorithmisches Handelstechnik",
+          "Hochfrequentes algorithmisches Handelstechnike",
+          "Hochfrequentes algorithmisches Handelstechniken",
+          "Hochfrequentes algorithmisches Handelstechnikes",
+          "Hochfrequentes algorithmisches Handelstechniks",
+          "Hochfrequentem algorithmischem Handelstechnik",
+          "Hochfrequentem algorithmischem Handelstechnike",
+          "Hochfrequentem algorithmischem Handelstechniken",
+          "Hochfrequentem algorithmischem Handelstechnikes",
+          "Hochfrequentem algorithmischem Handelstechniks"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(44)",
+        "definition": "Hochfrequente algorithmische Handelstechnik im Sinne dieses Gesetzes ist ein algorithmischer Handel im Sinne des § 80 Absatz 2 Satz 1, der gekennzeichnet ist durch",
+        "definitionHtml": "Hochfrequente algorithmische Handelstechnik im Sinne dieses Gesetzes ist ein algorithmischer Handel im Sinne des § <a href=\"#a:act_de_wphg_1994:art_80\" class=\"ref\" data-article=\"80\">80</a> Absatz 2 Satz 1, der gekennzeichnet ist durch",
+        "sourceHash": "a:act_de_wphg_1994:art_2__44"
+      },
+      {
+        "term": "Zentrale Gegenpartei",
+        "forms": [
+          "Zentrale Gegenpartei",
+          "Zentrale Gegenparteie",
+          "Zentrale Gegenparteien",
+          "Zentrale Gegenparteies",
+          "Zentrale Gegenparteis",
+          "Zentralen Gegenpartei",
+          "Zentralen Gegenparteie",
+          "Zentralen Gegenparteien",
+          "Zentralen Gegenparteies",
+          "Zentralen Gegenparteis",
+          "Zentraler Gegenpartei",
+          "Zentraler Gegenparteie",
+          "Zentraler Gegenparteien",
+          "Zentraler Gegenparteies",
+          "Zentraler Gegenparteis",
+          "Zentrales Gegenpartei",
+          "Zentrales Gegenparteie",
+          "Zentrales Gegenparteien",
+          "Zentrales Gegenparteies",
+          "Zentrales Gegenparteis",
+          "Zentralem Gegenpartei",
+          "Zentralem Gegenparteie",
+          "Zentralem Gegenparteien",
+          "Zentralem Gegenparteies",
+          "Zentralem Gegenparteis"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(45)",
+        "definition": "Zentrale Gegenpartei im Sinne dieses Gesetzes ist ein Unternehmen im Sinne des Artikels 2 Nummer 1 der Verordnung (EU) Nr. 648/2012 in der jeweils geltenden Fassung.",
+        "definitionHtml": "Zentrale Gegenpartei im Sinne dieses Gesetzes ist ein Unternehmen im Sinne des Artikels 2 Nummer 1 der <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32012R0648\" class=\"ref\" data-ref=\"celex:32012R0648\" target=\"_blank\" rel=\"noopener\">Verordnung (EU) Nr. 648/2012</a> in der jeweils geltenden Fassung.",
+        "sourceHash": "a:act_de_wphg_1994:art_2__45"
+      },
+      {
+        "term": "Kleine und mittlere Unternehmen",
+        "forms": [
+          "Kleine und mittlere Unternehmen",
+          "Kleine und mittlere Unternehmens",
+          "Kleinen und mittleren Unternehmen",
+          "Kleinen und mittleren Unternehmens",
+          "Kleiner und mittlerer Unternehmen",
+          "Kleiner und mittlerer Unternehmens",
+          "Kleines und mittleres Unternehmen",
+          "Kleines und mittleres Unternehmens",
+          "Kleinem und mittlerem Unternehmen",
+          "Kleinem und mittlerem Unternehmens"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(46)",
+        "definition": "Kleine und mittlere Unternehmen im Sinne dieses Gesetzes sind Unternehmen, deren durchschnittliche Marktkapitalisierung auf der Grundlage der Notierungen zum Jahresende in den letzten drei Kalenderjahren weniger als 200 Millionen Euro betrug. Nähere Bestimmungen enthalten die Artikel 77 bis 79 der Delegierten Verordnung (EU) 2017/565.",
+        "definitionHtml": "Kleine und mittlere Unternehmen im Sinne dieses Gesetzes sind Unternehmen, deren durchschnittliche Marktkapitalisierung auf der Grundlage der Notierungen zum Jahresende in den letzten drei Kalenderjahren weniger als 200 Millionen Euro betrug. Nähere Bestimmungen enthalten die Artikel 77 bis 79 der Delegierten <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32017R0565\" class=\"ref\" data-ref=\"celex:32017R0565\" target=\"_blank\" rel=\"noopener\">Verordnung (EU) 2017/565</a>.",
+        "sourceHash": "a:act_de_wphg_1994:art_2__46"
+      },
+      {
+        "term": "Öffentlicher Schuldtitel",
+        "forms": [
+          "Öffentlicher Schuldtitel",
+          "Öffentlicher Schuldtitels",
+          "Öffentlicher Schuldtiteln",
+          "Öffentliche Schuldtitel",
+          "Öffentliche Schuldtitels",
+          "Öffentliche Schuldtiteln",
+          "Öffentlichen Schuldtitel",
+          "Öffentlichen Schuldtitels",
+          "Öffentlichen Schuldtiteln",
+          "Öffentliches Schuldtitel",
+          "Öffentliches Schuldtitels",
+          "Öffentliches Schuldtiteln",
+          "Öffentlichem Schuldtitel",
+          "Öffentlichem Schuldtitels",
+          "Öffentlichem Schuldtiteln"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(47)",
+        "definition": "Öffentlicher Schuldtitel im Sinne dieses Gesetzes ist ein Schuldtitel, der von einem öffentlichen Emittenten begeben wird.",
+        "definitionHtml": "Öffentlicher Schuldtitel im Sinne dieses Gesetzes ist ein Schuldtitel, der von einem öffentlichen Emittenten begeben wird.",
+        "sourceHash": "a:act_de_wphg_1994:art_2__47"
+      },
+      {
+        "term": "PRIP",
+        "forms": [
+          "PRIP",
+          "PRIPs"
+        ],
+        "caseSensitive": true,
+        "source": "§ 2(48)",
+        "definition": "PRIP im Sinne dieses Gesetzes ist ein Produkt im Sinne des Artikels 4 Nummer 1 der Verordnung (EU) Nr. 1286/2014.",
+        "definitionHtml": "PRIP im Sinne dieses Gesetzes ist ein Produkt im Sinne des Artikels 4 Nummer 1 der <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R1286\" class=\"ref\" data-ref=\"celex:32014R1286\" target=\"_blank\" rel=\"noopener\">Verordnung (EU) Nr. 1286/2014</a>.",
+        "sourceHash": "a:act_de_wphg_1994:art_2__48"
+      },
+      {
+        "term": "PRIIP",
+        "forms": [
+          "PRIIP",
+          "PRIIPs"
+        ],
+        "caseSensitive": true,
+        "source": "§ 2(49)",
+        "definition": "PRIIP im Sinne dieses Gesetzes ist ein Produkt im Sinne des Artikels 4 Nummer 3 der Verordnung (EU) Nr. 1286/2014.",
+        "definitionHtml": "PRIIP im Sinne dieses Gesetzes ist ein Produkt im Sinne des Artikels 4 Nummer 3 der <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R1286\" class=\"ref\" data-ref=\"celex:32014R1286\" target=\"_blank\" rel=\"noopener\">Verordnung (EU) Nr. 1286/2014</a>.",
+        "sourceHash": "a:act_de_wphg_1994:art_2__49"
+      },
+      {
+        "term": "Benannte veröffentlichende Einrichtung",
+        "forms": [
+          "Benannte veröffentlichende Einrichtung",
+          "Benannte veröffentlichende Einrichtungen",
+          "Benannten veröffentlichenden Einrichtung",
+          "Benannten veröffentlichenden Einrichtungen",
+          "Benannter veröffentlichender Einrichtung",
+          "Benannter veröffentlichender Einrichtungen",
+          "Benanntes veröffentlichendes Einrichtung",
+          "Benanntes veröffentlichendes Einrichtungen",
+          "Benanntem veröffentlichendem Einrichtung",
+          "Benanntem veröffentlichendem Einrichtungen"
+        ],
+        "caseSensitive": false,
+        "source": "§ 2(50)",
+        "definition": "Benannte veröffentlichende Einrichtung im Sinne dieses Gesetzes ist eine benannte veröffentlichende Einrichtung im Sinne des Artikels 2 Absatz 1 Nummer 16a der Verordnung (EU) Nr. 600/2014.",
+        "definitionHtml": "Benannte veröffentlichende Einrichtung im Sinne dieses Gesetzes ist eine benannte veröffentlichende Einrichtung im Sinne des Artikels 2 Absatz 1 Nummer 16a der <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0600\" class=\"ref\" data-ref=\"celex:32014R0600\" target=\"_blank\" rel=\"noopener\">Verordnung (EU) Nr. 600/2014</a>.",
+        "sourceHash": "a:act_de_wphg_1994:art_2__50"
+      }
+    ]
+  },
+  "act_de_kwg_1961": {
+    "definitionArticleIds": [
+      "art_1"
+    ],
+    "entries": [
+      {
+        "term": "Kryptografische Instrumente",
+        "forms": [
+          "Kryptografische Instrumente",
+          "Kryptografische Instrumenten",
+          "Kryptografischen Instrumente",
+          "Kryptografischen Instrumenten",
+          "Kryptografischer Instrumente",
+          "Kryptografischer Instrumenten",
+          "Kryptografisches Instrumente",
+          "Kryptografisches Instrumenten",
+          "Kryptografischem Instrumente",
+          "Kryptografischem Instrumenten"
+        ],
+        "caseSensitive": false,
+        "source": "§ 1",
+        "definition": "Kryptografische Instrumente im Sinne dieses Gesetzes sind digitale Darstellungen eines Wertes, der von keiner Zentralbank oder öffentlichen Stelle emittiert wurde oder garantiert wird und nicht den gesetzlichen Status einer Währung oder von Geld besitzt, aber von natürlichen oder juristischen Personen aufgrund einer Vereinbarung oder tatsächlichen Übung als Tausch- oder Zahlungsmittel akzeptiert wird oder Anlagezwecken dient und der auf elektronischem Wege übertragen, gespeichert und gehandelt werden kann.",
+        "definitionHtml": "Kryptografische Instrumente im Sinne dieses Gesetzes sind digitale Darstellungen eines Wertes, der von keiner Zentralbank oder öffentlichen Stelle emittiert wurde oder garantiert wird und nicht den gesetzlichen Status einer Währung oder von Geld besitzt, aber von natürlichen oder juristischen Personen aufgrund einer Vereinbarung oder tatsächlichen Übung als Tausch- oder Zahlungsmittel akzeptiert wird oder Anlagezwecken dient und der auf elektronischem Wege übertragen, gespeichert und gehandelt werden kann.",
+        "sourceHash": "a:act_de_kwg_1961:art_1__1a_s3"
+      },
+      {
+        "term": "Keine kryptografischen Instrumente",
+        "forms": [
+          "Keine kryptografischen Instrumente",
+          "Keine kryptografischen Instrumenten",
+          "Keine kryptografische Instrumente",
+          "Keine kryptografische Instrumenten",
+          "Keinen kryptografischen Instrumente",
+          "Keinen kryptografischen Instrumenten",
+          "Keiner kryptografischer Instrumente",
+          "Keiner kryptografischer Instrumenten",
+          "Keines kryptografisches Instrumente",
+          "Keines kryptografisches Instrumenten",
+          "Keinem kryptografischem Instrumente",
+          "Keinem kryptografischem Instrumenten"
+        ],
+        "caseSensitive": false,
+        "source": "§ 1",
+        "definition": "Keine kryptografischen Instrumente im Sinne dieses Gesetzes sind",
+        "definitionHtml": "Keine kryptografischen Instrumente im Sinne dieses Gesetzes sind",
+        "sourceHash": "a:act_de_kwg_1961:art_1__1a_s3"
+      },
+      {
+        "term": "Institute",
+        "forms": [
+          "Institute",
+          "Instituten"
+        ],
+        "caseSensitive": false,
+        "source": "§ 1(1b)",
+        "definition": "Institute im Sinne dieses Gesetzes sind Kreditinstitute und Finanzdienstleistungsinstitute.",
+        "definitionHtml": "Institute im Sinne dieses Gesetzes sind Kreditinstitute und Finanzdienstleistungsinstitute.",
+        "sourceHash": "a:act_de_kwg_1961:art_1__1b"
+      },
+      {
+        "term": "Große Unternehmen",
+        "forms": [
+          "Große Unternehmen",
+          "Große Unternehmens",
+          "Großen Unternehmen",
+          "Großen Unternehmens",
+          "Großer Unternehmen",
+          "Großer Unternehmens",
+          "Großes Unternehmen",
+          "Großes Unternehmens",
+          "Großem Unternehmen",
+          "Großem Unternehmens"
+        ],
+        "caseSensitive": false,
+        "source": "§ 1(1c)",
+        "definition": "Große Unternehmen im Sinne dieses Gesetzes sind große Institute und große Tochterunternehmen sowie nach § 2f Absatz 1 zugelassene Mutterfinanzholding-Gesellschaften und gemischte Mutterfinanzholding-Gesellschaften, die ein großes Institut in ihrer Gruppe haben.",
+        "definitionHtml": "Große Unternehmen im Sinne dieses Gesetzes sind große Institute und große Tochterunternehmen sowie nach § <a href=\"#a:act_de_kwg_1961:art_2f\" class=\"ref\" data-article=\"2f\">2f</a> Absatz 1 zugelassene Mutterfinanzholding-Gesellschaften und gemischte Mutterfinanzholding-Gesellschaften, die ein großes Institut in ihrer Gruppe haben.",
+        "sourceHash": "a:act_de_kwg_1961:art_1__1c"
+      },
+      {
+        "term": "Geschäftsleiter",
+        "forms": [
+          "Geschäftsleiter",
+          "Geschäftsleiters",
+          "Geschäftsleitern"
+        ],
+        "caseSensitive": false,
+        "source": "§ 1(2)",
+        "definition": "Geschäftsleiter im Sinne dieses Gesetzes sind diejenigen natürlichen Personen, die nach Gesetz, Satzung oder Gesellschaftsvertrag zur Führung der Geschäfte und zur Vertretung eines Instituts oder eines Unternehmens in der Rechtsform einer juristischen Person oder einer Personenhandelsgesellschaft berufen sind, sowie diejenigen natürlichen Personen, die die Geschäfte tatsächlich führen.",
+        "definitionHtml": "Geschäftsleiter im Sinne dieses Gesetzes sind diejenigen natürlichen Personen, die nach Gesetz, Satzung oder Gesellschaftsvertrag zur Führung der Geschäfte und zur Vertretung eines Instituts oder eines Unternehmens in der Rechtsform einer juristischen Person oder einer Personenhandelsgesellschaft berufen sind, sowie diejenigen natürlichen Personen, die die Geschäfte tatsächlich führen.",
+        "sourceHash": "a:act_de_kwg_1961:art_1__2"
+      },
+      {
+        "term": "Interne Kontrollfunktionen",
+        "forms": [
+          "Interne Kontrollfunktionen",
+          "Interne Kontrollfunktionens",
+          "Internen Kontrollfunktionen",
+          "Internen Kontrollfunktionens",
+          "Interner Kontrollfunktionen",
+          "Interner Kontrollfunktionens",
+          "Internes Kontrollfunktionen",
+          "Internes Kontrollfunktionens",
+          "Internem Kontrollfunktionen",
+          "Internem Kontrollfunktionens"
+        ],
+        "caseSensitive": false,
+        "source": "§ 1(2a)",
+        "definition": "Interne Kontrollfunktionen im Sinne dieses Gesetzes sind die Risikocontrolling-Funktion, die Compliance-Funktion und die Interne Revision.",
+        "definitionHtml": "Interne Kontrollfunktionen im Sinne dieses Gesetzes sind die Risikocontrolling-Funktion, die Compliance-Funktion und die Interne Revision.",
+        "sourceHash": "a:act_de_kwg_1961:art_1__2a"
+      },
+      {
+        "term": "Inhaber von Schlüsselfunktionen",
+        "forms": [
+          "Inhaber von Schlüsselfunktionen",
+          "Inhaber von Schlüsselfunktionens",
+          "Inhabe von Schlüsselfunktionen",
+          "Inhabe von Schlüsselfunktionens",
+          "Inhaben von Schlüsselfunktionen",
+          "Inhaben von Schlüsselfunktionens",
+          "Inhabes von Schlüsselfunktionen",
+          "Inhabes von Schlüsselfunktionens",
+          "Inhabem von Schlüsselfunktionen",
+          "Inhabem von Schlüsselfunktionens"
+        ],
+        "caseSensitive": false,
+        "source": "§ 1(2b)",
+        "definition": "Inhaber von Schlüsselfunktionen im Sinne dieses Gesetzes sind Personen, die einen wesentlichen Einfluss auf die Leitung von Instituten oder von Finanzholding-Gesellschaften oder gemischten Finanzholding-Gesellschaften haben, die nicht von der Zulassung nach § 2f Absatz 4 befreit sind, jedoch weder Geschäftsleiter noch Mitglieder des Verwaltungs- oder Aufsichtsorgans sind.",
+        "definitionHtml": "Inhaber von Schlüsselfunktionen im Sinne dieses Gesetzes sind Personen, die einen wesentlichen Einfluss auf die Leitung von Instituten oder von Finanzholding-Gesellschaften oder gemischten Finanzholding-Gesellschaften haben, die nicht von der Zulassung nach § <a href=\"#a:act_de_kwg_1961:art_2f\" class=\"ref\" data-article=\"2f\">2f</a> Absatz 4 befreit sind, jedoch weder Geschäftsleiter noch Mitglieder des Verwaltungs- oder Aufsichtsorgans sind.",
+        "sourceHash": "a:act_de_kwg_1961:art_1__2b"
+      },
+      {
+        "term": "Leiter der internen Kontrollfunktionen",
+        "forms": [
+          "Leiter der internen Kontrollfunktionen",
+          "Leiter der internen Kontrollfunktionens",
+          "Leite der interne Kontrollfunktionen",
+          "Leite der interne Kontrollfunktionens",
+          "Leiten der internen Kontrollfunktionen",
+          "Leiten der internen Kontrollfunktionens",
+          "Leiter der interner Kontrollfunktionen",
+          "Leiter der interner Kontrollfunktionens",
+          "Leites der internes Kontrollfunktionen",
+          "Leites der internes Kontrollfunktionens",
+          "Leitem der internem Kontrollfunktionen",
+          "Leitem der internem Kontrollfunktionens"
+        ],
+        "caseSensitive": false,
+        "source": "§ 1(2c)",
+        "definition": "Leiter der internen Kontrollfunktionen im Sinne dieses Gesetzes sind Personen, die auf der höchsten Hierarchieebene mit Ausnahme der Geschäftsleiter für die tatsächliche Leitung des Tagesgeschäfts der internen Kontrollfunktionen des Instituts verantwortlich sind.",
+        "definitionHtml": "Leiter der internen Kontrollfunktionen im Sinne dieses Gesetzes sind Personen, die auf der höchsten Hierarchieebene mit Ausnahme der Geschäftsleiter für die tatsächliche Leitung des Tagesgeschäfts der internen Kontrollfunktionen des Instituts verantwortlich sind.",
+        "sourceHash": "a:act_de_kwg_1961:art_1__2c"
+      },
+      {
+        "term": "Inhaber besonderer Schlüsselfunktionen",
+        "forms": [
+          "Inhaber besonderer Schlüsselfunktionen",
+          "Inhaber besonderer Schlüsselfunktionens",
+          "Inhabe besondere Schlüsselfunktionen",
+          "Inhabe besondere Schlüsselfunktionens",
+          "Inhaben besonderen Schlüsselfunktionen",
+          "Inhaben besonderen Schlüsselfunktionens",
+          "Inhabes besonderes Schlüsselfunktionen",
+          "Inhabes besonderes Schlüsselfunktionens",
+          "Inhabem besonderem Schlüsselfunktionen",
+          "Inhabem besonderem Schlüsselfunktionens"
+        ],
+        "caseSensitive": false,
+        "source": "§ 1(2d)",
+        "definition": "Inhaber besonderer Schlüsselfunktionen im Sinne dieses Gesetzes sind Inhaber von Schlüsselfunktionen, die besondere Funktionen wahrnehmen. Hierzu zählen die Leiter der internen Kontrollfunktionen sowie der Leiter Finanzen, soweit sie nicht Geschäftsleiter sind.",
+        "definitionHtml": "Inhaber besonderer Schlüsselfunktionen im Sinne dieses Gesetzes sind Inhaber von Schlüsselfunktionen, die besondere Funktionen wahrnehmen. Hierzu zählen die Leiter der internen Kontrollfunktionen sowie der Leiter Finanzen, soweit sie nicht Geschäftsleiter sind.",
+        "sourceHash": "a:act_de_kwg_1961:art_1__2d"
+      },
+      {
+        "term": "CRR-Kreditinstitute",
+        "forms": [
+          "CRR-Kreditinstitute",
+          "CRR-Kreditinstituten"
+        ],
+        "caseSensitive": false,
+        "source": "§ 1(3d)",
+        "definition": "CRR-Kreditinstitute im Sinne dieses Gesetzes sind Kreditinstitute im Sinne des Artikels 4 Absatz 1 Nummer 1 der Verordnung (EU) Nr. 575/2013 in der Fassung vom 17. Juni 2025; ein Unternehmen, das CRR-Kreditinstitut ist, ist auch Kreditinstitut im Sinne dieses Gesetzes. Wertpapierinstitute sind Unternehmen im Sinne des § 2 Absatz 1 des Wertpapierinstitutsgesetzes. E-Geld-Institute sind Unternehmen im Sinne des § 1 Absatz 2 Satz 1 Nummer 1 des Zahlungsdiensteaufsichtsgesetzes.",
+        "definitionHtml": "CRR-Kreditinstitute im Sinne dieses Gesetzes sind Kreditinstitute im Sinne des Artikels 4 Absatz 1 Nummer 1 der <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013R0575\" class=\"ref\" data-ref=\"celex:32013R0575\" target=\"_blank\" rel=\"noopener\">Verordnung (EU) Nr. 575/2013</a> in der Fassung vom 17. Juni 2025; ein Unternehmen, das CRR-Kreditinstitut ist, ist auch Kreditinstitut im Sinne dieses Gesetzes. Wertpapierinstitute sind Unternehmen im Sinne des § 2 Absatz 1 des Wertpapierinstitutsgesetzes. E-Geld-Institute sind Unternehmen im Sinne des § 1 Absatz 2 Satz 1 Nummer 1 des Zahlungsdiensteaufsichtsgesetzes.",
+        "sourceHash": "a:act_de_kwg_1961:art_1__3d"
+      },
+      {
+        "term": "Wertpapier- oder Terminbörsen",
+        "forms": [
+          "Wertpapier- oder Terminbörsen",
+          "Wertpapier- oder Terminbörse"
+        ],
+        "caseSensitive": false,
+        "source": "§ 1(3e)",
+        "definition": "Wertpapier- oder Terminbörsen im Sinne dieses Gesetzes sind Wertpapier- oder Terminmärkte, die von den zuständigen staatlichen Stellen geregelt und überwacht werden, regelmäßig stattfinden und für das Publikum unmittelbar oder mittelbar zugänglich sind, einschließlich",
+        "definitionHtml": "Wertpapier- oder Terminbörsen im Sinne dieses Gesetzes sind Wertpapier- oder Terminmärkte, die von den zuständigen staatlichen Stellen geregelt und überwacht werden, regelmäßig stattfinden und für das Publikum unmittelbar oder mittelbar zugänglich sind, einschließlich",
+        "sourceHash": "a:act_de_kwg_1961:art_1__3e"
+      },
+      {
+        "term": "Drittstaaten",
+        "forms": [
+          "Drittstaaten",
+          "Drittstaatens"
+        ],
+        "caseSensitive": false,
+        "source": "§ 1(5a)",
+        "definition": "Der Europäische Wirtschaftsraum im Sinne dieses Gesetzes umfaßt die Mitgliedstaaten der Europäischen Union sowie die anderen Vertragsstaaten des Abkommens über den Europäischen Wirtschaftsraum. Drittstaaten im Sinne dieses Gesetzes sind alle anderen Staaten.",
+        "definitionHtml": "Der Europäische Wirtschaftsraum im Sinne dieses Gesetzes umfaßt die Mitgliedstaaten der Europäischen Union sowie die anderen Vertragsstaaten des Abkommens über den Europäischen Wirtschaftsraum. Drittstaaten im Sinne dieses Gesetzes sind alle anderen Staaten.",
+        "sourceHash": "a:act_de_kwg_1961:art_1__5a"
+      },
+      {
+        "term": "Zentralverwahrer",
+        "forms": [
+          "Zentralverwahrer",
+          "Zentralverwahrers",
+          "Zentralverwahrern"
+        ],
+        "caseSensitive": false,
+        "source": "§ 1(6)",
+        "definition": "Ein Zentralverwahrer im Sinne dieses Gesetzes ist ein Unternehmen im Sinne des Artikels 2 Absatz 1 Nummer 1 der Verordnung (EU) Nr. 909/2014.",
+        "definitionHtml": "Ein Zentralverwahrer im Sinne dieses Gesetzes ist ein Unternehmen im Sinne des Artikels 2 Absatz 1 Nummer 1 der <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014R0909\" class=\"ref\" data-ref=\"celex:32014R0909\" target=\"_blank\" rel=\"noopener\">Verordnung (EU) Nr. 909/2014</a>.",
+        "sourceHash": "a:act_de_kwg_1961:art_1__6"
+      },
+      {
+        "term": "bedeutende Beteiligung",
+        "forms": [
+          "bedeutende Beteiligung",
+          "bedeutende Beteiligungen",
+          "bedeutenden Beteiligung",
+          "bedeutenden Beteiligungen",
+          "bedeutender Beteiligung",
+          "bedeutender Beteiligungen",
+          "bedeutendes Beteiligung",
+          "bedeutendes Beteiligungen",
+          "bedeutendem Beteiligung",
+          "bedeutendem Beteiligungen"
+        ],
+        "caseSensitive": false,
+        "source": "§ 1(9)",
+        "definition": "Eine bedeutende Beteiligung im Sinne dieses Gesetzes ist eine qualifizierte Beteiligung gemäß Artikel 4 Absatz 1 Nummer 36 der Verordnung (EU) Nr. 575/2013 in der jeweils geltenden Fassung. Für die Berechnung des Anteils der Stimmrechte gelten § 33 Absatz 1 in Verbindung mit einer Rechtsverordnung nach Absatz 5, § 34 Absatz 1 und 2, § 35 Absatz 1 bis 3 in Verbindung mit einer Rechtsverordnung nach Absatz 6 und § 36 des Wertpapierhandelsgesetzes entsprechend. Unberücksichtigt bleiben die Stimmrechte oder Kapitalanteile, die Institute oder Wertpapierinstitute im Rahmen des Emissionsgeschäfts nach Absatz 1 Satz 2 Nummer 10 oder nach § 2 Absatz 2 Nummer 2 des Wertpapierinstitutsgesetzes halten, vorausgesetzt, diese Rechte werden nicht ausgeübt oder anderweitig benutzt, um in die Geschäftsführung des Emittenten einzugreifen, und sie werden innerhalb eines Jahres nach dem Zeitpunkt des Erwerbs veräußert.",
+        "definitionHtml": "Eine bedeutende Beteiligung im Sinne dieses Gesetzes ist eine qualifizierte Beteiligung gemäß <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013R0575\" class=\"ref\" data-ref=\"celex:32013R0575\" data-article=\"4\" target=\"_blank\" rel=\"noopener\">Artikel 4</a> Absatz 1 Nummer 36 der <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013R0575\" class=\"ref\" data-ref=\"celex:32013R0575\" target=\"_blank\" rel=\"noopener\">Verordnung (EU) Nr. 575/2013</a> in der jeweils geltenden Fassung. Für die Berechnung des Anteils der Stimmrechte gelten § <a href=\"#a:act_de_kwg_1961:art_33\" class=\"ref\" data-article=\"33\">33</a> Absatz 1 in Verbindung mit einer Rechtsverordnung nach Absatz 5, § <a href=\"#a:act_de_kwg_1961:art_34\" class=\"ref\" data-article=\"34\">34</a> Absatz 1 und 2, § <a href=\"#a:act_de_kwg_1961:art_35\" class=\"ref\" data-article=\"35\">35</a> Absatz 1 bis 3 in Verbindung mit einer Rechtsverordnung nach Absatz 6 und § 36 des Wertpapierhandelsgesetzes entsprechend. Unberücksichtigt bleiben die Stimmrechte oder Kapitalanteile, die Institute oder Wertpapierinstitute im Rahmen des Emissionsgeschäfts nach Absatz 1 Satz 2 Nummer 10 oder nach § 2 Absatz 2 Nummer 2 des Wertpapierinstitutsgesetzes halten, vorausgesetzt, diese Rechte werden nicht ausgeübt oder anderweitig benutzt, um in die Geschäftsführung des Emittenten einzugreifen, und sie werden innerhalb eines Jahres nach dem Zeitpunkt des Erwerbs veräußert.",
+        "sourceHash": "a:act_de_kwg_1961:art_1__9"
+      },
+      {
+        "term": "wesentliche Übertragung",
+        "forms": [
+          "wesentliche Übertragung",
+          "wesentliche Übertragungen",
+          "wesentlichen Übertragung",
+          "wesentlichen Übertragungen",
+          "wesentlicher Übertragung",
+          "wesentlicher Übertragungen",
+          "wesentliches Übertragung",
+          "wesentliches Übertragungen",
+          "wesentlichem Übertragung",
+          "wesentlichem Übertragungen"
+        ],
+        "caseSensitive": false,
+        "source": "§ 1(9a)",
+        "definition": "Eine wesentliche Übertragung im Sinne dieses Gesetzes ist eine Übertragung von Vermögenswerten oder Verbindlichkeiten durch Veräußerung oder eine andere Art von Geschäft, wenn sie mindestens 10 Prozent der gesamten Vermögenswerte oder Verbindlichkeiten des Unternehmens ausmacht, es sei denn, die geplante Übertragung findet zwischen Unternehmen derselben Gruppe statt. In diesem Fall gilt die Übertragung für ein Unternehmen als wesentlich, wenn sie mindestens 15 Prozent der gesamten Vermögenswerte oder Verbindlichkeiten des Unternehmens ausmacht. Bei der Berechnung der Prozentsätze werden nicht berücksichtigt:",
+        "definitionHtml": "Eine wesentliche Übertragung im Sinne dieses Gesetzes ist eine Übertragung von Vermögenswerten oder Verbindlichkeiten durch Veräußerung oder eine andere Art von Geschäft, wenn sie mindestens 10 Prozent der gesamten Vermögenswerte oder Verbindlichkeiten des Unternehmens ausmacht, es sei denn, die geplante Übertragung findet zwischen Unternehmen derselben Gruppe statt. In diesem Fall gilt die Übertragung für ein Unternehmen als wesentlich, wenn sie mindestens 15 Prozent der gesamten Vermögenswerte oder Verbindlichkeiten des Unternehmens ausmacht. Bei der Berechnung der Prozentsätze werden nicht berücksichtigt:",
+        "sourceHash": "a:act_de_kwg_1961:art_1__9a"
+      },
+      {
+        "term": "wesentliche Beteiligung",
+        "forms": [
+          "wesentliche Beteiligung",
+          "wesentliche Beteiligungen",
+          "wesentlichen Beteiligung",
+          "wesentlichen Beteiligungen",
+          "wesentlicher Beteiligung",
+          "wesentlicher Beteiligungen",
+          "wesentliches Beteiligung",
+          "wesentliches Beteiligungen",
+          "wesentlichem Beteiligung",
+          "wesentlichem Beteiligungen"
+        ],
+        "caseSensitive": false,
+        "source": "§ 1(9b)",
+        "definition": "Eine wesentliche Beteiligung im Sinne dieses Gesetzes ist eine Beteiligung an einem anderen Unternehmen, wenn sie 15 Prozent oder mehr der eigenen anrechenbaren Eigenmittel entspricht.",
+        "definitionHtml": "Eine wesentliche Beteiligung im Sinne dieses Gesetzes ist eine Beteiligung an einem anderen Unternehmen, wenn sie 15 Prozent oder mehr der eigenen anrechenbaren Eigenmittel entspricht.",
+        "sourceHash": "a:act_de_kwg_1961:art_1__9b"
+      },
+      {
+        "term": "Verschmelzung",
+        "forms": [
+          "Verschmelzung",
+          "Verschmelzungen"
+        ],
+        "caseSensitive": false,
+        "source": "§ 1(9c)",
+        "definition": "Eine Verschmelzung im Sinne dieses Gesetzes ist ein Vorgang, bei dem",
+        "definitionHtml": "Eine Verschmelzung im Sinne dieses Gesetzes ist ein Vorgang, bei dem",
+        "sourceHash": "a:act_de_kwg_1961:art_1__9c"
+      },
+      {
+        "term": "Spaltung",
+        "forms": [
+          "Spaltung",
+          "Spaltungen"
+        ],
+        "caseSensitive": false,
+        "source": "§ 1(9d)",
+        "definition": "Eine Spaltung im Sinne dieses Gesetzes ist ein Vorgang, bei dem",
+        "definitionHtml": "Eine Spaltung im Sinne dieses Gesetzes ist ein Vorgang, bei dem",
+        "sourceHash": "a:act_de_kwg_1961:art_1__9d"
+      },
+      {
+        "term": "Hinterlegungsscheine",
+        "forms": [
+          "Hinterlegungsscheine",
+          "Hinterlegungsscheinen"
+        ],
+        "caseSensitive": false,
+        "source": "§ 1",
+        "definition": "Hinterlegungsscheine im Sinne dieses Gesetzes sind Wertpapiere, die auf dem Kapitalmarkt handelbar sind, ein Eigentumsrecht an Wertpapieren von Emittenten mit Sitz im Ausland verbriefen, zum Handel auf einem organisierten Markt zugelassen sind und unabhängig von den Wertpapieren des jeweiligen gebietsfremden Emittenten gehandelt werden können. Geldmarktinstrumente sind Instrumente im Sinne des Artikels 11 der Delegierten Verordnung (EU) 2017/565 mit Ausnahme von Zahlungsinstrumenten. Kryptowerte sind solche im Sinne des Artikels 3 Absatz 1 Nummer 5 der Verordnung (EU) 2023/1114.",
+        "definitionHtml": "Hinterlegungsscheine im Sinne dieses Gesetzes sind Wertpapiere, die auf dem Kapitalmarkt handelbar sind, ein Eigentumsrecht an Wertpapieren von Emittenten mit Sitz im Ausland verbriefen, zum Handel auf einem organisierten Markt zugelassen sind und unabhängig von den Wertpapieren des jeweiligen gebietsfremden Emittenten gehandelt werden können. Geldmarktinstrumente sind Instrumente im Sinne des Artikels 11 der Delegierten <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32017R0565\" class=\"ref\" data-ref=\"celex:32017R0565\" target=\"_blank\" rel=\"noopener\">Verordnung (EU) 2017/565</a> mit Ausnahme von Zahlungsinstrumenten. Kryptowerte sind solche im Sinne des Artikels 3 Absatz 1 Nummer 5 der <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R1114\" class=\"ref\" data-ref=\"celex:32023R1114\" target=\"_blank\" rel=\"noopener\">Verordnung (EU) 2023/1114</a>.",
+        "sourceHash": "a:act_de_kwg_1961:art_1__11_s2"
+      },
+      {
+        "term": "Keine Kryptowerte",
+        "forms": [
+          "Keine Kryptowerte",
+          "Keine Kryptowerten",
+          "Keinen Kryptowerte",
+          "Keinen Kryptowerten",
+          "Keiner Kryptowerte",
+          "Keiner Kryptowerten",
+          "Keines Kryptowerte",
+          "Keines Kryptowerten",
+          "Keinem Kryptowerte",
+          "Keinem Kryptowerten"
+        ],
+        "caseSensitive": false,
+        "source": "§ 1",
+        "definition": "Keine Kryptowerte im Sinne dieses Gesetzes sind solche nach Artikel 4 Absatz 3 Buchstabe c der Verordnung (EU) 2023/1114. Derivate sind",
+        "definitionHtml": "Keine Kryptowerte im Sinne dieses Gesetzes sind solche nach <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R1114\" class=\"ref\" data-ref=\"celex:32023R1114\" data-article=\"4\" target=\"_blank\" rel=\"noopener\">Artikel 4</a> Absatz 3 Buchstabe c der <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R1114\" class=\"ref\" data-ref=\"celex:32023R1114\" target=\"_blank\" rel=\"noopener\">Verordnung (EU) 2023/1114</a>. Derivate sind",
+        "sourceHash": "a:act_de_kwg_1961:art_1__11_s2"
+      },
+      {
+        "term": "Systembetreiber",
+        "forms": [
+          "Systembetreiber",
+          "Systembetreibers",
+          "Systembetreibern"
+        ],
+        "caseSensitive": false,
+        "source": "§ 1(16a)",
+        "definition": "Systembetreiber im Sinne dieses Gesetzes ist derjenige, der für den Betrieb des Systems rechtlich verantwortlich ist.",
+        "definitionHtml": "Systembetreiber im Sinne dieses Gesetzes ist derjenige, der für den Betrieb des Systems rechtlich verantwortlich ist.",
+        "sourceHash": "a:act_de_kwg_1961:art_1__16a"
+      },
+      {
+        "term": "Teilnehmer eines Systems",
+        "forms": [
+          "Teilnehmer eines Systems",
+          "Teilnehmer eines Systemse",
+          "Teilnehmer eines Systemsen",
+          "Teilnehmer eines Systemses",
+          "Teilnehmer eines Systemss",
+          "Teilnehme eine Systems",
+          "Teilnehme eine Systemse",
+          "Teilnehme eine Systemsen",
+          "Teilnehme eine Systemses",
+          "Teilnehme eine Systemss",
+          "Teilnehmen einen Systems",
+          "Teilnehmen einen Systemse",
+          "Teilnehmen einen Systemsen",
+          "Teilnehmen einen Systemses",
+          "Teilnehmen einen Systemss",
+          "Teilnehmer einer Systems",
+          "Teilnehmer einer Systemse",
+          "Teilnehmer einer Systemsen",
+          "Teilnehmer einer Systemses",
+          "Teilnehmer einer Systemss",
+          "Teilnehmes eines Systems",
+          "Teilnehmes eines Systemse",
+          "Teilnehmes eines Systemsen",
+          "Teilnehmes eines Systemses",
+          "Teilnehmes eines Systemss",
+          "Teilnehmem einem Systems",
+          "Teilnehmem einem Systemse",
+          "Teilnehmem einem Systemsen",
+          "Teilnehmem einem Systemses",
+          "Teilnehmem einem Systemss"
+        ],
+        "caseSensitive": false,
+        "source": "§ 1(16c)",
+        "definition": "Teilnehmer eines Systems im Sinne dieses Gesetzes sind die zur Teilnahme an diesem System berechtigten zentralen Gegenparteien, Systembetreiber, Clearingmitglieder einer zentralen Gegenpartei mit Zulassung gemäß Artikel 17 der Verordnung (EU) Nr. 648/2012 und Verrechnungsstellen, Clearingstellen und Institute im Sinne von Artikel 2 Buchstabe b, d oder e der Richtlinie 98/26/EG.",
+        "definitionHtml": "Teilnehmer eines Systems im Sinne dieses Gesetzes sind die zur Teilnahme an diesem System berechtigten zentralen Gegenparteien, Systembetreiber, Clearingmitglieder einer zentralen Gegenpartei mit Zulassung gemäß <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32012R0648\" class=\"ref\" data-ref=\"celex:32012R0648\" data-article=\"17\" target=\"_blank\" rel=\"noopener\">Artikel 17</a> der <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32012R0648\" class=\"ref\" data-ref=\"celex:32012R0648\" target=\"_blank\" rel=\"noopener\">Verordnung (EU) Nr. 648/2012</a> und Verrechnungsstellen, Clearingstellen und Institute im Sinne von Artikel 2 Buchstabe b, d oder e der Richtlinie 98/26/EG.",
+        "sourceHash": "a:act_de_kwg_1961:art_1__16c"
+      },
+      {
+        "term": "Finanzsicherheiten",
+        "forms": [
+          "Finanzsicherheiten",
+          "Finanzsicherheitens"
+        ],
+        "caseSensitive": false,
+        "source": "§ 1(17)",
+        "definition": "Finanzsicherheiten im Sinne dieses Gesetzes sind Barguthaben, Geldbeträge, Wertpapiere, Geldmarktinstrumente sowie Kreditforderungen im Sinne des Artikels 2 Absatz 1 Buchstabe o der Richtlinie 2002/47/EG des Europäischen Parlaments und des Rates vom 6. Juni 2002 über Finanzsicherheiten (ABl. L 168 vom 27.6.2002, S. 43), die durch die Richtlinie 2009/44/EG (ABl. L 146 vom 10.6.2009, S. 37) geändert worden ist, und Geldforderungen aus einer Vereinbarung, auf Grund derer ein Versicherungsunternehmen im Sinne des § 1 Absatz 1 des Versicherungsaufsichtsgesetzes einen Kredit in Form eines Darlehens gewährt hat, jeweils einschließlich jeglicher damit in Zusammenhang stehender Rechte oder Ansprüche, die als Sicherheit in Form eines beschränkten dinglichen Sicherungsrechts oder im Wege der Überweisung oder Vollrechtsübertragung auf Grund einer Vereinbarung zwischen einem Sicherungsnehmer und einem Sicherungsgeber, die einer der in Artikel 1 Abs. 2 Buchstabe a bis e der Richtlinie 2002/47/EG, die durch die Richtlinie 2009/44/EG geändert worden ist, aufgeführten Kategorien angehören, bereitgestellt werden; bei von Versicherungsunternehmen gewährten Kreditforderungen gilt dies nur, wenn der Sicherungsgeber seinen Sitz im Inland hat. Gehört der Sicherungsgeber zu den in Artikel 1 Abs. 2 Buchstabe e der Richtlinie 2002/47/EG genannten Personen oder Gesellschaften, so liegt eine Finanzsicherheit nur vor, wenn die Sicherheit der Besicherung von Verbindlichkeiten aus Verträgen oder aus der Vermittlung von Verträgen über",
+        "definitionHtml": "Finanzsicherheiten im Sinne dieses Gesetzes sind Barguthaben, Geldbeträge, Wertpapiere, Geldmarktinstrumente sowie Kreditforderungen im Sinne des Artikels 2 Absatz 1 Buchstabe o der <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32002L0047\" class=\"ref\" data-ref=\"celex:32002L0047\" target=\"_blank\" rel=\"noopener\">Richtlinie 2002/47/EG</a> des Europäischen Parlaments und des Rates vom 6. Juni 2002 über Finanzsicherheiten (ABl. L 168 vom 27.6.2002, S. 43), die durch die <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32009L0044\" class=\"ref\" data-ref=\"celex:32009L0044\" target=\"_blank\" rel=\"noopener\">Richtlinie 2009/44/EG</a> (ABl. L 146 vom 10.6.2009, S. 37) geändert worden ist, und Geldforderungen aus einer Vereinbarung, auf Grund derer ein Versicherungsunternehmen im Sinne des § 1 Absatz 1 des Versicherungsaufsichtsgesetzes einen Kredit in Form eines Darlehens gewährt hat, jeweils einschließlich jeglicher damit in Zusammenhang stehender Rechte oder Ansprüche, die als Sicherheit in Form eines beschränkten dinglichen Sicherungsrechts oder im Wege der Überweisung oder Vollrechtsübertragung auf Grund einer Vereinbarung zwischen einem Sicherungsnehmer und einem Sicherungsgeber, die einer der in Artikel 1 Abs. 2 Buchstabe a bis e der <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32002L0047\" class=\"ref\" data-ref=\"celex:32002L0047\" target=\"_blank\" rel=\"noopener\">Richtlinie 2002/47/EG</a>, die durch die <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32009L0044\" class=\"ref\" data-ref=\"celex:32009L0044\" target=\"_blank\" rel=\"noopener\">Richtlinie 2009/44/EG</a> geändert worden ist, aufgeführten Kategorien angehören, bereitgestellt werden; bei von Versicherungsunternehmen gewährten Kreditforderungen gilt dies nur, wenn der Sicherungsgeber seinen Sitz im Inland hat. Gehört der Sicherungsgeber zu den in <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32002L0047\" class=\"ref\" data-ref=\"celex:32002L0047\" data-article=\"1\" target=\"_blank\" rel=\"noopener\">Artikel 1</a> Abs. 2 Buchstabe e der <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32002L0047\" class=\"ref\" data-ref=\"celex:32002L0047\" target=\"_blank\" rel=\"noopener\">Richtlinie 2002/47/EG</a> genannten Personen oder Gesellschaften, so liegt eine Finanzsicherheit nur vor, wenn die Sicherheit der Besicherung von Verbindlichkeiten aus Verträgen oder aus der Vermittlung von Verträgen über",
+        "sourceHash": "a:act_de_kwg_1961:art_1__17"
+      },
+      {
+        "term": "Branchenvorschriften",
+        "forms": [
+          "Branchenvorschriften",
+          "Branchenvorschriftens"
+        ],
+        "caseSensitive": false,
+        "source": "§ 1(18)",
+        "definition": "Branchenvorschriften im Sinne dieses Gesetzes sind die Rechtsvorschriften der Europäischen Union im Bereich der Finanzaufsicht, insbesondere die Richtlinien 73/239/EWG, 98/78/EG, 2004/39/EG, 2006/48/EG, 2006/49/EG und 2009/65/EG sowie Anhang V Teil A der Richtlinie 2002/83/EG, die darauf beruhenden inländischen Gesetze, insbesondere dieses Gesetz, das Versicherungsaufsichtsgesetz, das Wertpapierhandelsgesetz, das Kapitalanlagegesetzbuch, das Pfandbriefgesetz, das Gesetz über Bausparkassen, das Geldwäschegesetz einschließlich der dazu ergangenen Rechtsverordnungen sowie der sonstigen im Bereich der Finanzaufsicht erlassenen Rechts- und Verwaltungsvorschriften.",
+        "definitionHtml": "Branchenvorschriften im Sinne dieses Gesetzes sind die Rechtsvorschriften der Europäischen Union im Bereich der Finanzaufsicht, insbesondere die Richtlinien 73/239/EWG, 98/78/EG, 2004/39/EG, 2006/48/EG, 2006/49/EG und 2009/65/EG sowie Anhang V Teil A der <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32002L0083\" class=\"ref\" data-ref=\"celex:32002L0083\" target=\"_blank\" rel=\"noopener\">Richtlinie 2002/83/EG</a>, die darauf beruhenden inländischen Gesetze, insbesondere dieses Gesetz, das Versicherungsaufsichtsgesetz, das Wertpapierhandelsgesetz, das Kapitalanlagegesetzbuch, das Pfandbriefgesetz, das Gesetz über Bausparkassen, das Geldwäschegesetz einschließlich der dazu ergangenen Rechtsverordnungen sowie der sonstigen im Bereich der Finanzaufsicht erlassenen Rechts- und Verwaltungsvorschriften.",
+        "sourceHash": "a:act_de_kwg_1961:art_1__18"
+      },
+      {
+        "term": "Finanzbranche",
+        "forms": [
+          "Finanzbranche",
+          "Finanzbranchen"
+        ],
+        "caseSensitive": false,
+        "source": "§ 1(19)",
+        "definition": "Finanzbranche im Sinne dieses Gesetzes sind folgende Branchen:",
+        "definitionHtml": "Finanzbranche im Sinne dieses Gesetzes sind folgende Branchen:",
+        "sourceHash": "a:act_de_kwg_1961:art_1__19"
+      },
+      {
+        "term": "Finanzkonglomerat",
+        "forms": [
+          "Finanzkonglomerat",
+          "Finanzkonglomerate",
+          "Finanzkonglomeraten",
+          "Finanzkonglomerates",
+          "Finanzkonglomerats"
+        ],
+        "caseSensitive": false,
+        "source": "§ 1(20)",
+        "definition": "Finanzkonglomerat ist eine Gruppe oder Untergruppe von Unternehmen im Sinne des § 1 Absatz 2 des Finanzkonglomerate-Aufsichtsgesetzes.",
+        "definitionHtml": "Finanzkonglomerat ist eine Gruppe oder Untergruppe von Unternehmen im Sinne des § 1 Absatz 2 des Finanzkonglomerate-Aufsichtsgesetzes.",
+        "sourceHash": "a:act_de_kwg_1961:art_1__20"
+      },
+      {
+        "term": "Refinanzierungsunternehmen",
+        "forms": [
+          "Refinanzierungsunternehmen",
+          "Refinanzierungsunternehmens"
+        ],
+        "caseSensitive": false,
+        "source": "§ 1(24)",
+        "definition": "Refinanzierungsunternehmen sind inländische Unternehmen, die Gegenstände oder Ansprüche auf deren Übertragung aus ihrem Geschäftsbetrieb an folgende Unternehmen zum Zwecke der eigenen Refinanzierung oder der Refinanzierung des Übertragungsberechtigten veräußern oder für diese treuhänderisch verwalten:",
+        "definitionHtml": "Refinanzierungsunternehmen sind inländische Unternehmen, die Gegenstände oder Ansprüche auf deren Übertragung aus ihrem Geschäftsbetrieb an folgende Unternehmen zum Zwecke der eigenen Refinanzierung oder der Refinanzierung des Übertragungsberechtigten veräußern oder für diese treuhänderisch verwalten:",
+        "sourceHash": "a:act_de_kwg_1961:art_1__24"
+      },
+      {
+        "term": "Refinanzierungsmittler",
+        "forms": [
+          "Refinanzierungsmittler",
+          "Refinanzierungsmittlers",
+          "Refinanzierungsmittlern"
+        ],
+        "caseSensitive": false,
+        "source": "§ 1(25)",
+        "definition": "Refinanzierungsmittler sind inländische Kreditinstitute, die von Refinanzierungsunternehmen oder anderen Refinanzierungsmittlern Gegenstände aus dem Geschäftsbetrieb eines Refinanzierungsunternehmens oder Ansprüche auf deren Übertragung erwerben, um diese an Zweckgesellschaften oder Refinanzierungsmittler zu veräußern; unschädlich ist, wenn sie daneben wirtschaftliche Risiken weitergeben, ohne dass damit ein Rechtsübergang einhergeht.",
+        "definitionHtml": "Refinanzierungsmittler sind inländische Kreditinstitute, die von Refinanzierungsunternehmen oder anderen Refinanzierungsmittlern Gegenstände aus dem Geschäftsbetrieb eines Refinanzierungsunternehmens oder Ansprüche auf deren Übertragung erwerben, um diese an Zweckgesellschaften oder Refinanzierungsmittler zu veräußern; unschädlich ist, wenn sie daneben wirtschaftliche Risiken weitergeben, ohne dass damit ein Rechtsübergang einhergeht.",
+        "sourceHash": "a:act_de_kwg_1961:art_1__25"
+      },
+      {
+        "term": "Interne Ansätze",
+        "forms": [
+          "Interne Ansätze",
+          "Interne Ansätzen",
+          "Internen Ansätze",
+          "Internen Ansätzen",
+          "Interner Ansätze",
+          "Interner Ansätzen",
+          "Internes Ansätze",
+          "Internes Ansätzen",
+          "Internem Ansätze",
+          "Internem Ansätzen"
+        ],
+        "caseSensitive": false,
+        "source": "§ 1(27)",
+        "definition": "Interne Ansätze im Sinne dieses Gesetzes sind die auf internen Beurteilungen basierenden Ansätze nach Artikel 143 Absatz 1 der Verordnung (EU) Nr. 575/2013, die auf internen Modellen beruhenden Ansätze nach Artikel 221 der Verordnung (EU) Nr. 575/2013, die auf internen Modellen beruhenden Methoden nach Artikel 283 der Verordnung (EU) Nr. 575/2013, die alternativen auf einem internen Modell beruhenden Ansätze nach Artikel 325az der Verordnung (EU) Nr. 575/2013 und die internen Bemessungsansätze nach Artikel 265 Absatz 2 der Verordnung (EU) Nr. 575/2013.",
+        "definitionHtml": "Interne Ansätze im Sinne dieses Gesetzes sind die auf internen Beurteilungen basierenden Ansätze nach <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013R0575\" class=\"ref\" data-ref=\"celex:32013R0575\" data-article=\"143\" target=\"_blank\" rel=\"noopener\">Artikel 143</a> Absatz 1 der <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013R0575\" class=\"ref\" data-ref=\"celex:32013R0575\" target=\"_blank\" rel=\"noopener\">Verordnung (EU) Nr. 575/2013</a>, die auf internen Modellen beruhenden Ansätze nach <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013R0575\" class=\"ref\" data-ref=\"celex:32013R0575\" data-article=\"221\" target=\"_blank\" rel=\"noopener\">Artikel 221</a> der <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013R0575\" class=\"ref\" data-ref=\"celex:32013R0575\" target=\"_blank\" rel=\"noopener\">Verordnung (EU) Nr. 575/2013</a>, die auf internen Modellen beruhenden Methoden nach <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013R0575\" class=\"ref\" data-ref=\"celex:32013R0575\" data-article=\"283\" target=\"_blank\" rel=\"noopener\">Artikel 283</a> der <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013R0575\" class=\"ref\" data-ref=\"celex:32013R0575\" target=\"_blank\" rel=\"noopener\">Verordnung (EU) Nr. 575/2013</a>, die alternativen auf einem internen Modell beruhenden Ansätze nach Artikel 325az der <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013R0575\" class=\"ref\" data-ref=\"celex:32013R0575\" target=\"_blank\" rel=\"noopener\">Verordnung (EU) Nr. 575/2013</a> und die internen Bemessungsansätze nach <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013R0575\" class=\"ref\" data-ref=\"celex:32013R0575\" data-article=\"265\" target=\"_blank\" rel=\"noopener\">Artikel 265</a> Absatz 2 der <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013R0575\" class=\"ref\" data-ref=\"celex:32013R0575\" target=\"_blank\" rel=\"noopener\">Verordnung (EU) Nr. 575/2013</a>.",
+        "sourceHash": "a:act_de_kwg_1961:art_1__27"
+      },
+      {
+        "term": "Hartes Kernkapital",
+        "forms": [
+          "Hartes Kernkapital",
+          "Hartes Kernkapitale",
+          "Hartes Kernkapitalen",
+          "Hartes Kernkapitales",
+          "Hartes Kernkapitals",
+          "Harte Kernkapital",
+          "Harte Kernkapitale",
+          "Harte Kernkapitalen",
+          "Harte Kernkapitales",
+          "Harte Kernkapitals",
+          "Harten Kernkapital",
+          "Harten Kernkapitale",
+          "Harten Kernkapitalen",
+          "Harten Kernkapitales",
+          "Harten Kernkapitals",
+          "Harter Kernkapital",
+          "Harter Kernkapitale",
+          "Harter Kernkapitalen",
+          "Harter Kernkapitales",
+          "Harter Kernkapitals",
+          "Hartem Kernkapital",
+          "Hartem Kernkapitale",
+          "Hartem Kernkapitalen",
+          "Hartem Kernkapitales",
+          "Hartem Kernkapitals"
+        ],
+        "caseSensitive": false,
+        "source": "§ 1(28)",
+        "definition": "Hartes Kernkapital im Sinne dieses Gesetzes ist das harte Kernkapital gemäß Artikel 26 der Verordnung (EU) Nr. 575/2013 in der jeweils geltenden Fassung.",
+        "definitionHtml": "Hartes Kernkapital im Sinne dieses Gesetzes ist das harte Kernkapital gemäß <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013R0575\" class=\"ref\" data-ref=\"celex:32013R0575\" data-article=\"26\" target=\"_blank\" rel=\"noopener\">Artikel 26</a> der <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013R0575\" class=\"ref\" data-ref=\"celex:32013R0575\" target=\"_blank\" rel=\"noopener\">Verordnung (EU) Nr. 575/2013</a> in der jeweils geltenden Fassung.",
+        "sourceHash": "a:act_de_kwg_1961:art_1__28"
+      },
+      {
+        "term": "Wohnungsunternehmen mit Spareinrichtung",
+        "forms": [
+          "Wohnungsunternehmen mit Spareinrichtung",
+          "Wohnungsunternehmen mit Spareinrichtungen",
+          "Wohnungsunternehme mit Spareinrichtung",
+          "Wohnungsunternehme mit Spareinrichtungen",
+          "Wohnungsunternehmer mit Spareinrichtung",
+          "Wohnungsunternehmer mit Spareinrichtungen",
+          "Wohnungsunternehmes mit Spareinrichtung",
+          "Wohnungsunternehmes mit Spareinrichtungen",
+          "Wohnungsunternehmem mit Spareinrichtung",
+          "Wohnungsunternehmem mit Spareinrichtungen"
+        ],
+        "caseSensitive": false,
+        "source": "§ 1(29)",
+        "definition": "Wohnungsunternehmen mit Spareinrichtung im Sinne dieses Gesetzes sind Unternehmen in der Rechtsform der eingetragenen Genossenschaft,",
+        "definitionHtml": "Wohnungsunternehmen mit Spareinrichtung im Sinne dieses Gesetzes sind Unternehmen in der Rechtsform der eingetragenen Genossenschaft,",
+        "sourceHash": "a:act_de_kwg_1961:art_1__29"
+      },
+      {
+        "term": "Terrorismusfinanzierung",
+        "forms": [
+          "Terrorismusfinanzierung",
+          "Terrorismusfinanzierungen"
+        ],
+        "caseSensitive": false,
+        "source": "§ 1(32)",
+        "definition": "Terrorismusfinanzierung im Sinne dieses Gesetzes ist Terrorismusfinanzierung nach § 1 Absatz 2 des Geldwäschegesetzes.",
+        "definitionHtml": "Terrorismusfinanzierung im Sinne dieses Gesetzes ist Terrorismusfinanzierung nach § 1 Absatz 2 des Geldwäschegesetzes.",
+        "sourceHash": "a:act_de_kwg_1961:art_1__32"
+      }
+    ]
+  },
   "act_eu_dora_rts_2024_1774": {
     "definitionArticleIds": [],
     "entries": [],
