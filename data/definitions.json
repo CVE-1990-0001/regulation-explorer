@@ -4171,7 +4171,14 @@
         "definitionHtml": "‘joint TLPT’ means a TLPT, other than a pooled TLPT as referred to in <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"ref\" data-ref=\"celex:32022R2554\" data-article=\"26\" target=\"_blank\" rel=\"noopener\">Article 26</a>(4) of <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554\" class=\"ref\" data-ref=\"celex:32022R2554\" target=\"_blank\" rel=\"noopener\">Regulation (EU) 2022/2554</a>, involving several financial entities using the same ICT intra-group service provider, or belonging to the same group and sharing ICT systems.",
         "sourceHash": "a:act_eu_dora_rts_2025_1190:art_1"
       }
-    ]
+    ],
+    "inheritedFrom": {
+      "actId": "act_eu_dora_reg_2022_2554",
+      "actLabel": "DORA Regulation",
+      "definitionArticleIds": [
+        "art_3"
+      ]
+    }
   },
   "act_eu_dora_its_2024_2956": {
     "definitionArticleIds": [
@@ -4214,7 +4221,14 @@
         "definitionHtml": "‘rank’ means the position of an ICT third-party service provider in the ICT service supply chain.",
         "sourceHash": "a:act_eu_dora_its_2024_2956:art_1"
       }
-    ]
+    ],
+    "inheritedFrom": {
+      "actId": "act_eu_dora_reg_2022_2554",
+      "actLabel": "DORA Regulation",
+      "definitionArticleIds": [
+        "art_3"
+      ]
+    }
   },
   "act_eu_gdpr_2016_0679": {
     "definitionArticleIds": [
@@ -7661,5 +7675,104 @@
         "sourceHash": "a:act_de_bsig_2025:art_2__46"
       }
     ]
+  },
+  "act_eu_dora_rts_2024_1774": {
+    "definitionArticleIds": [],
+    "entries": [],
+    "inheritedFrom": {
+      "actId": "act_eu_dora_reg_2022_2554",
+      "actLabel": "DORA Regulation",
+      "definitionArticleIds": [
+        "art_3"
+      ]
+    }
+  },
+  "act_eu_dora_rts_2024_1772": {
+    "definitionArticleIds": [],
+    "entries": [],
+    "inheritedFrom": {
+      "actId": "act_eu_dora_reg_2022_2554",
+      "actLabel": "DORA Regulation",
+      "definitionArticleIds": [
+        "art_3"
+      ]
+    }
+  },
+  "act_eu_dora_rts_2025_0301": {
+    "definitionArticleIds": [],
+    "entries": [],
+    "inheritedFrom": {
+      "actId": "act_eu_dora_reg_2022_2554",
+      "actLabel": "DORA Regulation",
+      "definitionArticleIds": [
+        "art_3"
+      ]
+    }
+  },
+  "act_eu_dora_rts_2024_1773": {
+    "definitionArticleIds": [],
+    "entries": [],
+    "inheritedFrom": {
+      "actId": "act_eu_dora_reg_2022_2554",
+      "actLabel": "DORA Regulation",
+      "definitionArticleIds": [
+        "art_3"
+      ]
+    }
+  },
+  "act_eu_dora_rts_2025_0532": {
+    "definitionArticleIds": [],
+    "entries": [],
+    "inheritedFrom": {
+      "actId": "act_eu_dora_reg_2022_2554",
+      "actLabel": "DORA Regulation",
+      "definitionArticleIds": [
+        "art_3"
+      ]
+    }
+  },
+  "act_eu_dora_rts_2025_0295": {
+    "definitionArticleIds": [],
+    "entries": [],
+    "inheritedFrom": {
+      "actId": "act_eu_dora_reg_2022_2554",
+      "actLabel": "DORA Regulation",
+      "definitionArticleIds": [
+        "art_3"
+      ]
+    }
+  },
+  "act_eu_dora_rts_2025_0420": {
+    "definitionArticleIds": [],
+    "entries": [],
+    "inheritedFrom": {
+      "actId": "act_eu_dora_reg_2022_2554",
+      "actLabel": "DORA Regulation",
+      "definitionArticleIds": [
+        "art_3"
+      ]
+    }
+  },
+  "act_eu_dora_its_2025_0302": {
+    "definitionArticleIds": [],
+    "entries": [],
+    "inheritedFrom": {
+      "actId": "act_eu_dora_reg_2022_2554",
+      "actLabel": "DORA Regulation",
+      "definitionArticleIds": [
+        "art_3"
+      ]
+    }
+  },
+  "act_eu_dora_dir_2022_2556": {
+    "definitionArticleIds": [],
+    "entries": [],
+    "inheritedFrom": {
+      "actId": "act_eu_dora_reg_2022_2554",
+      "actLabel": "DORA Regulation",
+      "definitionArticleIds": [
+        "art_3"
+      ]
+    }
   }
 }

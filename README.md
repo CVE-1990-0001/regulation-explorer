@@ -93,9 +93,12 @@ jurisdiction only needs a citation matcher in `link_references.py` (emitting
    or hand-author it. Save under `regulations-data/`.
 2. **Register it** in [`data/index.json`](data/index.json): `id`, `path`, `label`,
    `jurisdiction`, `tags` (one or more IDs from `tagCatalog`, adding a new catalog
-   entry there only when a genuinely new regulatory domain is introduced), and —
-   for citable acts — an `authId` (e.g. `celex:32016R0679`). The `authId` is what
-   makes it a cross-reference target.
+   entry there only when a genuinely new regulatory domain is introduced),
+   optional `parentAct` (for secondary acts such as RTS/ITS/companion directives
+   that legally inherit definitions from a Level-1 parent regulation, e.g.
+   `"parentAct": "act_eu_dora_reg_2022_2554"`), and — for citable acts — an
+   `authId` (e.g. `celex:32016R0679`). The `authId` is what makes it a
+   cross-reference target.
 3. **Bundle it** (optional) — add its `ref` to a folder in [`data/bundles/`](data/bundles/).
 4. **Link references** — `python3 tools/link_references.py --update-db` (re-links
    all acts so existing citations to the new act auto-upgrade to in-app, and syncs
@@ -167,8 +170,13 @@ matching CSV row are marked as having no available applicability data.
 
 Acts with a definitions section (`Definitions` / `Begriffsbestimmungen`) display
 hover/focus tooltips on defined terms across all other articles of that act.
-Acts without a definitions section are left untouched. Regenerate the glossary
-sidecar after adding or modifying an act:
+Child regulations (such as RTS, ITS, and companion directives) inherit their
+parent regulation's definitions when their entry in `data/index.json` sets
+`"parentAct": "<parent_act_id>"` — local definitions take precedence, and
+inherited tooltips display a clickable provenance badge (for example
+`DORA Regulation · Article 3(5)`). Standalone acts with neither local nor
+inherited definitions are left untouched. Regenerate the glossary sidecar after
+adding or modifying an act:
 
 ```bash
 python3 tools/build_definitions.py

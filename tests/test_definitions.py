@@ -223,12 +223,35 @@ def test_preserves_ref_anchors_and_resolves_cross_act_pointers():
     assert "resolved" not in by_term["non-personal data"]
 
 
+def test_parent_act_inheritance_collection():
+    registry = {
+        "acts": [
+            {"id": "act_parent"},
+            {"id": "act_self", "parentAct": "act_self"},
+            {"id": "act_child_rts", "parentAct": "act_parent"},
+        ],
+    }
+    parents = bd.collect_parent_acts(registry)
+    assert "act_parent" not in parents
+    assert "act_self" not in parents
+    assert parents == {"act_child_rts": "act_parent"}
+
+
 def test_committed_definitions_json_is_in_sync():
     committed = json.loads((ROOT / "data" / "definitions.json").read_text(encoding="utf-8"))
     generated = bd.build_all_definitions()
     assert committed == generated
-    # Acts with definitions are present; acts without definitions (e.g. RTS 1) are omitted.
     assert "act_eu_dora_reg_2022_2554" in committed
     assert "act_eu_gdpr_2016_0679" in committed
     assert "act_de_bsi_c3a_2026" in committed
-    assert "act_eu_dora_rts_2024_1774" not in committed
+    # Secondary acts in DORA inherit definitions from DORA Regulation (without self-inheriting on DORA itself)
+    assert "inheritedFrom" not in committed["act_eu_dora_reg_2022_2554"]
+    assert committed["act_eu_dora_rts_2024_1774"]["entries"] == []
+    assert committed["act_eu_dora_rts_2024_1774"]["inheritedFrom"] == {
+        "actId": "act_eu_dora_reg_2022_2554",
+        "actLabel": "DORA Regulation",
+        "definitionArticleIds": ["art_3"],
+    }
+    # RTS 4 keeps its 19 local definitions AND inherits DORA Regulation definitions
+    assert len(committed["act_eu_dora_rts_2025_1190"]["entries"]) == 19
+    assert committed["act_eu_dora_rts_2025_1190"]["inheritedFrom"]["actId"] == "act_eu_dora_reg_2022_2554"

@@ -59,10 +59,45 @@ test('does not wrap defined terms inside the Definitions article itself (article
   assert.ok(otherTerms.length > 0, 'expected defined terms in non-definition sections of BSI C3A');
 });
 
-test('does nothing on regulations without a definitions chapter', async () => {
-  await app.openAct('act_eu_dora_rts_2024_1774'); // DORA RTS 1 has no Definitions article
+test('secondary regulations inherit parent-act definitions with provenance badge while local definitions take precedence', async () => {
+  // 1. DORA RTS 1 has no local Definitions article, so it inherits DORA Regulation Article 3 definitions
+  await app.openAct('act_eu_dora_rts_2024_1774');
   const container = app.doc.getElementById('paragraphsContainer');
-  assert.strictEqual(container.querySelectorAll('.defined-term').length, 0);
+  const rts1Terms = [...container.querySelectorAll('.defined-term.is-inherited-term')];
+  assert.ok(rts1Terms.length > 0, 'expected inherited DORA terms in RTS 1');
+
+  // Dossier bar clearly indicates inherited definitions and jumps to DORA Article 3 on click
+  const dossier = app.doc.getElementById('actDossierMeta');
+  assert.match(dossier.textContent, /Uses DORA Regulation definitions/);
+
+  const ictRiskSpan = rts1Terms.find((el) => /^ICT risk$/i.test(el.textContent.trim())) || rts1Terms[0];
+  hover(ictRiskSpan);
+  const tooltip = app.doc.querySelector('.legal-tooltip');
+  assert.ok(tooltip.classList.contains('is-visible'));
+  const badge = tooltip.querySelector('.legal-tooltip-source');
+  assert.match(badge.textContent, /^DORA Regulation · Article 3\(/);
+
+  // Clicking the inherited provenance badge jumps straight to DORA Regulation Article 3
+  const badgeClick = app.click(badge);
+  await app.tick();
+  assert.strictEqual(badgeClick.defaultPrevented, true);
+  assert.match(app.hash(), /act_eu_dora_reg_2022_2554:art_3$/);
+
+  // 2. DORA RTS 4 defines local TLPT terms (Article 1) AND inherits parent DORA terms:
+  //    local definitions do NOT carry the inherited prefix, while parent-only terms do.
+  await app.openAct('act_eu_dora_rts_2025_1190');
+  const rts4Container = app.doc.getElementById('paragraphsContainer');
+  const localSpan = [...rts4Container.querySelectorAll('.defined-term:not(.is-inherited-term)')][0];
+  const parentSpan = [...rts4Container.querySelectorAll('.defined-term.is-inherited-term')][0];
+  assert.ok(localSpan, 'expected local RTS 4 term');
+  assert.ok(parentSpan, 'expected inherited DORA Regulation term alongside local RTS 4 terms');
+
+  hover(localSpan);
+  assert.doesNotMatch(tooltip.querySelector('.legal-tooltip-source').textContent, /DORA Regulation/);
+  assert.match(tooltip.querySelector('.legal-tooltip-source').textContent, /^Article 1\(/);
+
+  hover(parentSpan);
+  assert.match(tooltip.querySelector('.legal-tooltip-source').textContent, /^DORA Regulation · Article 3\(/);
 });
 
 test('never wraps inside a.ref links and keeps copied paragraph text clean', async () => {

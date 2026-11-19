@@ -164,15 +164,17 @@ const renderActDossierMeta = (act = null) => {
   }
 
   const defInfo = definitionsByActId[act.id];
-  const defCount = defInfo && Array.isArray(defInfo.entries) ? defInfo.entries.length : 0;
+  const localDefCount = defInfo && Array.isArray(defInfo.entries) ? defInfo.entries.length : 0;
   const firstDefArtId = defInfo && Array.isArray(defInfo.definitionArticleIds)
     ? defInfo.definitionArticleIds[0]
     : null;
-  if (defCount > 0 && firstDefArtId) {
+  const inheritedFrom = defInfo && defInfo.inheritedFrom ? defInfo.inheritedFrom : null;
+
+  if (localDefCount > 0 && firstDefArtId) {
     const defBtn = document.createElement('button');
     defBtn.type = 'button';
     defBtn.className = 'dossier-stat dossier-stat-link';
-    defBtn.textContent = `${defCount} defined terms`;
+    defBtn.textContent = `${localDefCount} defined ${localDefCount === 1 ? 'term' : 'terms'}`;
     defBtn.title = 'Jump to Definitions section';
     defBtn.addEventListener('click', () => {
       selectArticle(firstDefArtId, {
@@ -183,6 +185,32 @@ const renderActDossierMeta = (act = null) => {
       });
     });
     pills.push(defBtn);
+  }
+
+  if (inheritedFrom && inheritedFrom.actId) {
+    const parentDefInfo = definitionsByActId[inheritedFrom.actId];
+    const parentDefArtId = (inheritedFrom.definitionArticleIds && inheritedFrom.definitionArticleIds[0])
+      || (parentDefInfo && parentDefInfo.definitionArticleIds && parentDefInfo.definitionArticleIds[0])
+      || null;
+    if (parentDefArtId) {
+      const inhBtn = document.createElement('button');
+      inhBtn.type = 'button';
+      inhBtn.className = 'dossier-stat dossier-stat-link';
+      const parentLabel = inheritedFrom.actLabel || inheritedFrom.actId;
+      inhBtn.textContent = localDefCount > 0
+        ? `+ ${parentLabel} definitions`
+        : `Uses ${parentLabel} definitions`;
+      inhBtn.title = `Jump to ${parentLabel} Definitions`;
+      inhBtn.addEventListener('click', () => {
+        selectArticle(parentDefArtId, {
+          updateHash: true,
+          focus: true,
+          parentActId: inheritedFrom.actId,
+          hashTarget: `a:${inheritedFrom.actId}:${parentDefArtId}`,
+        });
+      });
+      pills.push(inhBtn);
+    }
   }
 
   const sourceInfo = getOfficialSourceInfo(act);
@@ -324,13 +352,19 @@ const ensureLegalTooltipElement = () => {
 
 const getDefinitionEntry = (element) => {
   if (!element || !element.dataset) return null;
-  const actId = element.dataset.actId;
+  const sourceActId = element.dataset.actId;
   const idx = Number(element.dataset.defIdx);
-  const actDefs = actId ? definitionsByActId[actId] : null;
+  const actDefs = sourceActId ? definitionsByActId[sourceActId] : null;
   if (!actDefs || !Array.isArray(actDefs.entries) || !Number.isInteger(idx)) {
     return null;
   }
-  return actDefs.entries[idx] || null;
+  const entry = actDefs.entries[idx];
+  if (!entry) return null;
+  const inheritedLabel = element.dataset.inheritedLabel || '';
+  if (inheritedLabel) {
+    return { ...entry, inheritedActLabel: inheritedLabel };
+  }
+  return entry;
 };
 
 const createSourceBadgeElement = (label, sourceHash, extraClass = '') => {
@@ -379,8 +413,15 @@ const renderDefinitionTooltipContent = (container, entry) => {
   termSpan.textContent = entry.term || '';
   header.appendChild(termSpan);
 
-  if (entry.source) {
-    header.appendChild(createSourceBadgeElement(entry.source, entry.sourceHash));
+  if (entry.source || entry.inheritedActLabel) {
+    const badgeLabel = [entry.inheritedActLabel, entry.source].filter(Boolean).join(' · ');
+    header.appendChild(
+      createSourceBadgeElement(
+        badgeLabel,
+        entry.sourceHash,
+        entry.inheritedActLabel ? 'is-inherited-source' : '',
+      ),
+    );
   }
 
   const body = document.createElement('div');
@@ -426,7 +467,8 @@ const getLegalTooltipText = (element) => {
   } else if (element.matches && element.matches('.defined-term')) {
     const entry = getDefinitionEntry(element);
     if (!entry) return '';
-    const head = [entry.term, entry.source].filter(Boolean).join(' — ');
+    const sourceLabel = [entry.inheritedActLabel, entry.source].filter(Boolean).join(' · ');
+    const head = [entry.term, sourceLabel].filter(Boolean).join(' — ');
     text = [head, entry.definition].filter(Boolean).join('\n\n').trim();
   } else if (element.matches && element.matches('.internal-article-link, .ref')) {
     text = getReferencePreview(element);
@@ -928,7 +970,28 @@ const getDefinitionMatcher = (actId) => {
   }
 
   const actDefs = definitionsByActId[actId];
-  if (!actDefs || !Array.isArray(actDefs.entries) || !actDefs.entries.length) {
+  if (!actDefs) {
+    compiledDefinitionMatchers.set(actId, null);
+    return null;
+  }
+
+  const sources = [];
+  if (Array.isArray(actDefs.entries) && actDefs.entries.length) {
+    sources.push({ sourceActId: actId, inheritedLabel: '', entries: actDefs.entries });
+  }
+  const inherited = actDefs.inheritedFrom;
+  if (inherited && inherited.actId && inherited.actId !== actId) {
+    const parentDefs = definitionsByActId[inherited.actId];
+    if (parentDefs && Array.isArray(parentDefs.entries) && parentDefs.entries.length) {
+      sources.push({
+        sourceActId: inherited.actId,
+        inheritedLabel: inherited.actLabel || inherited.actId,
+        entries: parentDefs.entries,
+      });
+    }
+  }
+
+  if (!sources.length) {
     compiledDefinitionMatchers.set(actId, null);
     return null;
   }
@@ -937,21 +1000,25 @@ const getDefinitionMatcher = (actId) => {
   const foldedForms = new Map();
   const uniqueForms = new Map();
 
-  actDefs.entries.forEach((entry, idx) => {
-    const forms = Array.isArray(entry.forms) && entry.forms.length ? entry.forms : [entry.term];
-    forms.forEach((rawForm) => {
-      const form = `${rawForm || ''}`.replace(/\s+/g, ' ').trim();
-      if (!form) return;
-      if (entry.caseSensitive) {
-        if (!exactForms.has(form)) exactForms.set(form, idx);
-      } else {
-        const folded = form.toLowerCase();
-        if (!foldedForms.has(folded)) foldedForms.set(folded, idx);
-      }
-      const key = form.toLowerCase();
-      if (!uniqueForms.has(key)) {
-        uniqueForms.set(key, form);
-      }
+  // Local definitions are registered first so they always take precedence over inherited parent terms.
+  sources.forEach(({ sourceActId, inheritedLabel, entries }) => {
+    entries.forEach((entry, idx) => {
+      const targetRef = { sourceActId, idx, inheritedLabel };
+      const forms = Array.isArray(entry.forms) && entry.forms.length ? entry.forms : [entry.term];
+      forms.forEach((rawForm) => {
+        const form = `${rawForm || ''}`.replace(/\s+/g, ' ').trim();
+        if (!form) return;
+        if (entry.caseSensitive) {
+          if (!exactForms.has(form)) exactForms.set(form, targetRef);
+        } else {
+          const folded = form.toLowerCase();
+          if (!foldedForms.has(folded)) foldedForms.set(folded, targetRef);
+        }
+        const key = form.toLowerCase();
+        if (!uniqueForms.has(key)) {
+          uniqueForms.set(key, form);
+        }
+      });
     });
   });
 
@@ -999,11 +1066,11 @@ const annotateTermsInNode = (node, actId, matcher) => {
       const matched = m[0];
       if (!matched) break;
       const normalised = matched.replace(/\s+/g, ' ');
-      let entryIdx = matcher.exactForms.get(normalised);
-      if (entryIdx === undefined) {
-        entryIdx = matcher.foldedForms.get(normalised.toLowerCase());
+      let targetRef = matcher.exactForms.get(normalised);
+      if (targetRef === undefined) {
+        targetRef = matcher.foldedForms.get(normalised.toLowerCase());
       }
-      if (entryIdx === undefined) {
+      if (targetRef === undefined) {
         continue;
       }
 
@@ -1015,9 +1082,15 @@ const annotateTermsInNode = (node, actId, matcher) => {
       }
       const span = document.createElement('span');
       span.className = 'defined-term';
+      if (targetRef.inheritedLabel) {
+        span.classList.add('is-inherited-term');
+      }
       span.tabIndex = 0;
-      span.dataset.actId = actId;
-      span.dataset.defIdx = String(entryIdx);
+      span.dataset.actId = targetRef.sourceActId;
+      span.dataset.defIdx = String(targetRef.idx);
+      if (targetRef.inheritedLabel) {
+        span.dataset.inheritedLabel = targetRef.inheritedLabel;
+      }
       span.textContent = matched;
       frag.appendChild(span);
       lastIndex = m.index + matched.length;
@@ -1409,18 +1482,27 @@ const updateStickyContextBar = () => {
     }
 
     const defInfo = definitionsByActId[activeAct.id];
-    const firstDefId = defInfo && defInfo.definitionArticleIds && defInfo.definitionArticleIds[0];
-    if (firstDefId && currentArticleId !== firstDefId) {
+    const localDefId = defInfo && defInfo.definitionArticleIds && defInfo.definitionArticleIds[0];
+    const inheritedFrom = defInfo && defInfo.inheritedFrom ? defInfo.inheritedFrom : null;
+    const inheritedDefId = inheritedFrom
+      && inheritedFrom.definitionArticleIds
+      && inheritedFrom.definitionArticleIds[0];
+    const targetDefActId = localDefId ? activeAct.id : (inheritedFrom && inheritedFrom.actId);
+    const targetDefArtId = localDefId || inheritedDefId;
+
+    if (targetDefActId && targetDefArtId && !(targetDefActId === activeAct.id && currentArticleId === targetDefArtId)) {
       const defJump = document.createElement('button');
       defJump.type = 'button';
       defJump.className = 'sticky-context-btn';
-      defJump.textContent = 'Definitions';
+      defJump.textContent = localDefId
+        ? 'Definitions'
+        : `${inheritedFrom.actLabel || 'Parent'} definitions`;
       defJump.addEventListener('click', () => {
-        selectArticle(firstDefId, {
+        selectArticle(targetDefArtId, {
           updateHash: true,
           focus: true,
-          parentActId: activeAct.id,
-          hashTarget: `a:${activeAct.id}:${firstDefId}`,
+          parentActId: targetDefActId,
+          hashTarget: `a:${targetDefActId}:${targetDefArtId}`,
         });
       });
       stickyContextActionsElement.appendChild(defJump);
