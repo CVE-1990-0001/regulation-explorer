@@ -58,7 +58,33 @@ test('act root shows applicable legal entity shorthand labels', async () => {
   assert.strictEqual(applicability.hidden, false);
   assert.match(applicability.textContent, /^Applies to/);
   assert.deepStrictEqual(chips.map((chip) => chip.textContent), ['CEAG', 'CHAG', 'DBAG', 'ECAG', 'ERG']);
-  assert.strictEqual(chips[0].title, 'Clearstream Europe AG');
+  assert.strictEqual(
+    chips[0].closest('.legal-entity-chip-wrap').querySelector('.legal-entity-popover-heading').textContent,
+    'Clearstream Europe AG',
+  );
+});
+
+test('legal entity popover lists the other regulations applicable to that entity', async () => {
+  const popoverLinks = (shortName) => {
+    const chip = [...app.doc.querySelectorAll('#legalEntityApplicability .legal-entity-chip')]
+      .find((c) => c.textContent === shortName);
+    return [...chip.closest('.legal-entity-chip-wrap').querySelectorAll('.legal-entity-popover-link')]
+      .map((link) => link.getAttribute('href'));
+  };
+
+  await app.openAct('act_eu_emir_2012_0648');
+  const dbag = popoverLinks('DBAG');
+  assert.ok(dbag.includes('#bundle:bundle_dora'), 'DORA family collapses into its folder');
+  assert.ok(!dbag.some((href) => href.startsWith('#act:act_eu_dora_')));
+  assert.ok(dbag.includes('#act:act_eu_gdpr_2016_0679'));
+  assert.ok(!dbag.includes('#act:act_eu_emir_2012_0648'), 'current act is not repeated');
+  assert.ok(popoverLinks('ECAG').includes('#act:act_eu_csdr_2014_0909'));
+  assert.ok(!dbag.includes('#act:act_eu_csdr_2014_0909'), 'only acts applicable to that entity');
+
+  await app.openAct('act_eu_dora_rts_2024_1774');
+  const ecag = popoverLinks('ECAG');
+  assert.ok(!ecag.includes('#bundle:bundle_dora'), 'own folder is not listed');
+  assert.ok(ecag.includes('#act:act_eu_emir_2012_0648'));
 });
 
 test('act root identifies when the CSV has no matching regulation', async () => {

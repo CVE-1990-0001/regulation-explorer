@@ -323,6 +323,103 @@ const renderActTopicTags = (actId = null) => {
   });
 };
 
+const collectBundleActIds = (bundle, ids = new Set()) => {
+  (bundle?.members || []).forEach((member) => {
+    if (member?.type === 'bundle') collectBundleActIds(member, ids);
+    else if (member?.ref) ids.add(member.ref);
+  });
+  return ids;
+};
+
+// Popover entries for the hosted regulations (other than `itemId`) applicable to an
+// entity. Acts inside a folder such as DORA collapse into one link to that folder,
+// and the folder the current item belongs to is left out.
+const getLegalEntityPopoverEntries = (shortName, itemId) => {
+  const applies = (id) => (legalEntitiesByItemId[id] || []).some((e) => e.shortName === shortName);
+  const entries = [];
+  const bundledActIds = new Set();
+
+  allBundles.forEach((bundle) => {
+    const actIds = collectBundleActIds(bundle);
+    actIds.forEach((id) => bundledActIds.add(id));
+    if (bundle.id === itemId || actIds.has(itemId)) return;
+    const count = [...actIds].filter(applies).length;
+    if (count) {
+      entries.push({
+        href: `#bundle:${bundle.id}`,
+        title: bundle.title || bundle.id,
+        subtitle: `Folder · ${count} regulation${count === 1 ? '' : 's'}`,
+      });
+    }
+  });
+
+  allActs
+    .filter((act) => act.id !== itemId && !bundledActIds.has(act.id) && applies(act.id))
+    .forEach((act) => entries.push({
+      href: `#act:${act.id}`,
+      title: act.title || act.id,
+      subtitle: getHeadingText(act),
+    }));
+
+  return entries.sort((a, b) => a.title.localeCompare(b.title, undefined, { sensitivity: 'base' }));
+};
+
+const createLegalEntityChip = (entity, itemId) => {
+  const wrap = document.createElement('span');
+  wrap.className = 'legal-entity-chip-wrap';
+
+  const popoverId = `legal-entity-popover-${entity.shortName}`;
+  const chip = document.createElement('button');
+  chip.type = 'button';
+  chip.className = 'legal-entity-chip';
+  chip.textContent = entity.shortName;
+  chip.setAttribute('aria-label', `${entity.name}: show other applicable regulations`);
+  chip.setAttribute('aria-describedby', popoverId);
+  wrap.appendChild(chip);
+
+  const popover = document.createElement('div');
+  popover.className = 'legal-entity-popover';
+  popover.id = popoverId;
+  popover.setAttribute('role', 'tooltip');
+
+  const entries = getLegalEntityPopoverEntries(entity.shortName, itemId);
+  const heading = document.createElement('div');
+  heading.className = 'legal-entity-popover-heading';
+  heading.textContent = entity.name;
+  popover.appendChild(heading);
+
+  const caption = document.createElement('div');
+  caption.className = 'legal-entity-popover-caption';
+  caption.textContent = entries.length
+    ? 'Also applicable'
+    : 'No other regulations in RegBro apply to this entity';
+  popover.appendChild(caption);
+
+  if (entries.length) {
+    const list = document.createElement('ul');
+    list.className = 'legal-entity-popover-list';
+    entries.forEach((entry) => {
+      const item = document.createElement('li');
+      const link = document.createElement('a');
+      link.href = entry.href;
+      link.className = 'legal-entity-popover-link';
+      link.textContent = entry.title;
+      if (entry.subtitle && entry.subtitle !== entry.title) {
+        const sub = document.createElement('span');
+        sub.className = 'legal-entity-popover-sub';
+        sub.textContent = entry.subtitle;
+        link.appendChild(sub);
+      }
+      item.appendChild(link);
+      list.appendChild(item);
+    });
+    popover.appendChild(list);
+  }
+
+  wrap.appendChild(popover);
+  return wrap;
+};
+
 const renderLegalEntityApplicability = (itemId = null) => {
   if (!legalEntityApplicabilityElement) return;
 
@@ -338,12 +435,7 @@ const renderLegalEntityApplicability = (itemId = null) => {
   legalEntityApplicabilityElement.appendChild(label);
 
   entities.forEach((entity) => {
-    const chip = document.createElement('abbr');
-    chip.className = 'legal-entity-chip';
-    chip.textContent = entity.shortName;
-    chip.title = entity.name;
-    chip.setAttribute('aria-label', entity.name);
-    legalEntityApplicabilityElement.appendChild(chip);
+    legalEntityApplicabilityElement.appendChild(createLegalEntityChip(entity, itemId));
   });
 };
 
@@ -3544,6 +3636,16 @@ const fetchArticles = async () => {
     if (articleContent) articleContent.classList.remove('is-loading');
   }
 };
+
+// Clicking the box around the pills/text focuses the field (pill clicks stop propagation).
+const searchInputShell = searchInput.closest('.search-input-shell');
+if (searchInputShell) {
+  searchInputShell.addEventListener('click', (event) => {
+    if (event.target === searchInputShell || event.target.id === 'activeFilterPills') {
+      searchInput.focus();
+    }
+  });
+}
 
 searchInput.addEventListener('input', (event) => {
   updateSearchShortcutHint();
