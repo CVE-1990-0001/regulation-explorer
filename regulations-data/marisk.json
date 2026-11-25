@@ -1,0 +1,2713 @@
+[
+  {
+    "id": "art_at_1",
+    "title": "AT 1",
+    "heading": "Vorbemerkung",
+    "paragraphs": [
+      {
+        "id": "art_at_1__1",
+        "text": "1. Dieses Rundschreiben gibt auf der Grundlage des § 25a Abs. 1 des Kreditwesengesetzes (KWG) einen flexiblen und praxisnahen Rahmen für die Ausgestaltung des Risikomanagements der Institute vor. Es präzisiert ferner die Anforderungen des § 25a Abs. 3 KWG (Risikomanagement auf Gruppenebene) sowie des § 25b KWG (Auslagerung). Ein angemessenes und wirksames Risikomanagement umfasst unter Berücksichtigung der Risikotragfähigkeit insbesondere die Festlegung von Strategien sowie die Einrichtung interner Kontrollverfahren. Die internen Kontrollverfahren bestehen aus dem internen Kontrollsystem und der Internen Revision. Das interne Kontrollsystem umfasst insbesondere",
+        "class": ""
+      },
+      {
+        "id": "art_at_1__1_dash",
+        "text": "– Regelungen zur Aufbau- und Ablauforganisation,",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_at_1__1_dash_2",
+        "text": "– Prozesse zur Identifizierung, Beurteilung, Steuerung, Überwachung sowie Kommunikation der Risiken (Risikosteuerungs- und controllingprozesse) und",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_at_1__1_dash_3",
+        "text": "– eine Risikocontrolling-Funktion und eine Compliance-Funktion.",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_at_1__1_s2",
+        "text": "Das Risikomanagement schafft eine Grundlage für die sachgerechte Wahrnehmung der Überwachungsfunktionen des Aufsichtsorgans und beinhaltet deshalb auch dessen angemessene Einbindung.",
+        "class": "subparagraph"
+      },
+      {
+        "id": "art_at_1__2",
+        "text": "2. Das Rundschreiben gibt zudem einen qualitativen Rahmen für die Umsetzung maßgeblicher Artikel der <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013L0036\" class=\"ref\" data-ref=\"celex:32013L0036\" target=\"_blank\" rel=\"noopener\">Richtlinie 2013/36/EU</a> (Bankenrichtlinie – „CRD IV“) zur Organisation und zum Risikomanagement der Institute vor. Danach sind von den Instituten insbesondere angemessene Leitungs-, Steuerungs- und Kontrollprozesse („Robust Governance Arrangements“), wirksame Verfahren zur Ermittlung, Steuerung, Überwachung und Kommunikation tatsächlicher oder potenzieller Risiken sowie angemessene interne Kontrollmechanismen einzurichten. Ferner müssen sie über wirksame und umfassende Verfahren und Methoden verfügen, die gewährleisten, dass genügend internes Kapital zur Abdeckung aller wesentlichen Risiken vorhanden ist (Interner Prozess zur Sicherstellung der Risikotragfähigkeit - „Internal Capital Adequacy Assessment Process“). Die Angemessenheit und Wirksamkeit dieser Verfahren, Methoden und Prozesse sind von der Aufsicht gemäß Art. 97 der Bankenrichtlinie im Rahmen des bankaufsichtlichen Überwachungsprozesses regelmäßig zu beurteilen („Supervisory Review and Evaluation Process“). Das Rundschreiben ist daher unter Berücksichtigung des Prinzips der doppelten Proportionalität der Regelungsrahmen für die qualitative Aufsicht in Deutschland. Im Hinblick auf die Methoden zur Berechnung der aufsichtsrechtlich erforderlichen Eigenmittel der Bankenrichtlinie sind die Anforderungen des Rundschreibens insofern neutral konzipiert, als sie unabhängig von der gewählten Methode eingehalten werden können.",
+        "class": ""
+      },
+      {
+        "id": "art_at_1__3",
+        "text": "3. Der sachgerechte Umgang mit dem Proportionalitätsprinzip seitens der Institute beinhaltet in dem prinzipienorientierten Aufbau der MaRisk auch, dass Institute im Einzelfall über bestimmte, in den MaRisk explizit formulierte Anforderungen hinaus weitergehende Vorkehrungen treffen, soweit dies zur Sicherstellung der Angemessenheit und Wirksamkeit des Risikomanagements erforderlich sein sollte. Insofern haben Institute, die besonders groß sind oder deren Geschäftsaktivitäten durch besondere Komplexität, Internationalität oder eine besondere Risikoexponierung gekennzeichnet sind, weitergehende Vorkehrungen im Bereich des Risikomanagements zu treffen als weniger große Institute mit weniger komplex strukturierten Geschäftsaktivitäten, die keine außergewöhnliche Risikoexponierung aufweisen. Erstgenannte Institute haben dabei auch die Inhalte einschlägiger Veröffentlichungen zum Risikomanagement des Baseler Ausschusses für Bankenaufsicht und des Financial Stability Board in eigenverantwortlicher Weise in ihre Überlegungen zur angemessenen Ausgestaltung des Risikomanagements einzubeziehen.",
+        "class": ""
+      },
+      {
+        "id": "art_at_1__4",
+        "text": "4. Durch das Rundschreiben wird zudem über § 80 Abs. 1 des Gesetzes über den Wertpapierhandel (WpHG) in Verbindung mit § 25a Abs. 1 KWG Art. 16 der <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0065\" class=\"ref\" data-ref=\"celex:32014L0065\" target=\"_blank\" rel=\"noopener\">Richtlinie 2014/65/EU</a> (Finanzmarktrichtlinie) umgesetzt, soweit diese auf Kreditinstitute und Finanzdienstleistungsinstitute gleichermaßen Anwendung findet. Dies betrifft die allgemeinen organisatorischen Anforderungen gemäß Art. 5, die Anforderungen an das Risikomanagement und die Interne Revision gemäß Art. 7 und 8, die Anforderungen zur Geschäftsleiterverantwortung gemäß Art. 9 sowie an Auslagerungen gemäß Art. 13 und 14 der <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32006L0073\" class=\"ref\" data-ref=\"celex:32006L0073\" target=\"_blank\" rel=\"noopener\">Richtlinie 2006/73/EG</a> (Durchführungsrichtlinie zur Finanzmarktrichtlinie). Diese Anforderungen dienen der Verwirklichung des Ziels der Finanzmarktrichtlinie, die Finanzmärkte in der Europäischen Union im Interesse des grenzüberschreitenden Finanzdienstleistungsverkehrs und einheitlicher Grundlagen für den Anlegerschutz zu harmonisieren.",
+        "class": ""
+      },
+      {
+        "id": "art_at_1__5",
+        "text": "5. Das Rundschreiben trägt der heterogenen Institutsstruktur und der Vielfalt der Geschäftsaktivitäten Rechnung. Es enthält zahlreiche Öffnungsklauseln, die abhängig von der Größe der Institute, den Geschäftsschwerpunkten und der Risikosituation eine vereinfachte Umsetzung ermöglichen. Insoweit kann es vor allem auch von kleineren Instituten flexibel umgesetzt werden. Das Rundschreiben ist gegenüber der laufenden Fortentwicklung der Prozesse und Verfahren im Risikomanagement offen, soweit diese im Einklang mit den Zielen des Rundschreibens stehen. Für diese Zwecke wird die Bundesanstalt für Finanzdienstleistungsaufsicht einen fortlaufenden Dialog mit der Praxis führen.",
+        "class": ""
+      },
+      {
+        "id": "art_at_1__6",
+        "text": "6. Soweit in den MaRisk auf bedeutende Institute referenziert wird, handelt es sich dabei um Institute, die gemäß <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013R1024\" class=\"ref\" data-ref=\"celex:32013R1024\" data-article=\"6\" target=\"_blank\" rel=\"noopener\">Artikel 6</a> der <a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32013R1024\" class=\"ref\" data-ref=\"celex:32013R1024\" target=\"_blank\" rel=\"noopener\">Verordnung (EU) Nr. 1024/2013</a> des Rates vom 15. Oktober 2013 (SSM-Verordnung) als bedeutend eingestuft sind.",
+        "class": ""
+      },
+      {
+        "id": "art_at_1__7",
+        "text": "7. Die Bundesanstalt für Finanzdienstleistungsaufsicht erwartet, dass der flexiblen Grundausrichtung des Rundschreibens im Rahmen von Prüfungshandlungen Rechnung getragen wird. Prüfungen sind daher auf der Basis eines risikoorientierten Prüfungsansatzes durchzuführen.",
+        "class": ""
+      },
+      {
+        "id": "art_at_1__8",
+        "text": "8. Das Rundschreiben ist modular strukturiert, so dass notwendige Anpassungen in bestimmten Regelungsfeldern auf die zeitnahe Überarbeitung einzelner Module beschränkt werden können. In einem allgemeinen Teil (Modul AT) befinden sich grundsätzliche Prinzipien für die Ausgestaltung des Risikomanagements. Spezifische Anforderungen an die Organisation des Kredit-, Handels- und Immobiliengeschäfts sind in einem besonderen Teil niedergelegt (Modul BT). Unter Berücksichtigung von Risikokonzentrationen werden in diesem Modul auch Anforderungen an die Identifizierung, Beurteilung, Steuerung sowie die Überwachung und Kommunikation von Adressenausfallrisiken, Marktpreisrisiken, Liquiditätsrisiken sowie operationellen Risiken gestellt. Darüber hinaus wird in Modul BT ein Rahmen für die Ausgestaltung der Internen Revision in den Instituten sowie für die Ausgestaltung der Risikoberichterstattung vorgegeben.",
+        "class": ""
+      }
+    ]
+  },
+  {
+    "id": "art_at_2",
+    "title": "AT 2",
+    "heading": "Anwendungsbereich",
+    "paragraphs": [
+      {
+        "id": "art_at_2__1",
+        "text": "1. Die Beachtung der Anforderungen des Rundschreibens durch die Institute soll dazu beitragen, Missständen im Kredit- und Finanzdienstleistungswesen entgegenzuwirken, welche die Sicherheit der den Instituten anvertrauten Vermögenswerte gefährden, die ordnungsgemäße Durchführung der Bankgeschäfte oder Finanzdienstleistungen beeinträchtigen oder erhebliche Nachteile für die Gesamtwirtschaft herbeiführen können. Bei der Erbringung von Wertpapierdienstleistungen und Wertpapiernebendienstleistungen müssen die Institute die Anforderungen darüber hinaus mit der Maßgabe einhalten, die Interessen der Wertpapierdienstleistungskunden zu schützen.",
+        "class": ""
+      }
+    ]
+  },
+  {
+    "id": "art_at_2_1",
+    "title": "AT 2.1",
+    "heading": "Anwenderkreis",
+    "paragraphs": [
+      {
+        "id": "art_at_2_1__1",
+        "text": "1. Die Anforderungen des Rundschreibens sind von allen Instituten im Sinne von § 1 Abs. 1b KWG bzw. im Sinne von § 53 Abs. 1 KWG zu beachten. Sie gelten auch für die Zweigniederlassungen deutscher Institute im Ausland. Auf Zweigniederlassungen von Unternehmen mit Sitz in einem anderen Staat des Europäischen Wirtschaftsraums nach § 53b KWG finden sie keine Anwendung. Die Anforderungen in Modul <a href=\"#a:act_de_marisk_2024_0006:art_at_4_5\" class=\"ref\" data-article=\"AT 4.5\">AT 4.5</a> des Rundschreibens sind von übergeordneten Unternehmen bzw. übergeordneten Finanzkonglomeratsunternehmen einer Institutsgruppe, einer Finanzholdinggruppe oder eines Finanzkonglomerats auf Gruppenebene zu beachten.",
+        "class": ""
+      },
+      {
+        "id": "art_at_2_1__2",
+        "text": "2. Finanzdienstleistungsinstitute und große Wertpapierfirmen gemäß § 2 Abs. 18 des Wertpapierinstitutsgesetzes, welche aufgrund der Vorgabe des § 4 dieses Gesetzes zur Anwendung der §§ 25a und 25b des KWG verpflichtet sind, haben die Anforderungen des Rundschreibens insoweit zu beachten, wie dies vor dem Hintergrund der Institutsgröße sowie von Art, Umfang, Komplexität und Risikogehalt der Geschäftsaktivitäten zur Einhaltung der gesetzlichen Pflichten aus §§ 25a und 25b KWG geboten erscheint. Dies gilt insbesondere für die Module <a href=\"#a:act_de_marisk_2024_0006:art_at_3\" class=\"ref\" data-article=\"AT 3\">AT 3</a>, <a href=\"#a:act_de_marisk_2024_0006:art_at_5\" class=\"ref\" data-article=\"AT 5\">AT 5</a>, AT 7 und <a href=\"#a:act_de_marisk_2024_0006:art_at_9\" class=\"ref\" data-article=\"AT 9\">AT 9</a>.",
+        "class": ""
+      }
+    ]
+  },
+  {
+    "id": "art_at_2_2",
+    "title": "AT 2.2",
+    "heading": "Risiken",
+    "paragraphs": [
+      {
+        "id": "art_at_2_2__1",
+        "text": "1. Die Anforderungen des Rundschreibens beziehen sich auf das Management der für das Institut wesentlichen Risiken. Zur Beurteilung der Wesentlichkeit hat sich die Geschäftsleitung regelmäßig und anlassbezogen im Rahmen einer Risikoinventur einen Überblick über die Risiken des Instituts zu verschaffen, wobei die Auswirkungen von ESG-Risiken angemessen und explizit einzubeziehen sind (Gesamtrisikoprofil). Die Risiken sind auf der Ebene des gesamten Instituts zu erfassen, unabhängig davon, in welcher Organisationseinheit die Risiken verursacht wurden.",
+        "class": ""
+      },
+      {
+        "id": "art_at_2_2__1_s2",
+        "text": "Grundsätzlich sind zumindest die folgenden Risiken als wesentlich einzustufen:",
+        "class": "subparagraph"
+      },
+      {
+        "id": "art_at_2_2__1_a",
+        "text": "a) Adressenausfallrisiken (einschließlich Länderrisiken),",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_at_2_2__1_b",
+        "text": "b) Marktpreisrisiken,",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_at_2_2__1_c",
+        "text": "c) Liquiditätsrisiken und",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_at_2_2__1_d",
+        "text": "d) operationelle Risiken.",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_at_2_2__1_s3",
+        "text": "Mit wesentlichen Risiken verbundene Risikokonzentrationen sind zu berücksichtigen. Kreditspreadrisiken im Anlagebuch können gemeinsam mit anderen Risikoarten oder als separate Risikoart ermittelt werden. Der Ausweis von Kreditspreadrisiken im Anlagebuch hat unbeschadet der Zuordnung separat zu erfolgen. Für Risiken, die als nicht wesentlich eingestuft werden, sind angemessene Vorkehrungen zu treffen.",
+        "class": "subparagraph"
+      },
+      {
+        "id": "art_at_2_2__2",
+        "text": "2. Das Institut hat im Rahmen der Risikoinventur zu prüfen, welche Risiken die Vermögenslage (inklusive Kapitalausstattung), die Ertragslage oder die Liquiditätslage wesentlich beeinträchtigen können. Die Risikoinventur darf sich dabei nicht ausschließlich an den Auswirkungen in der Rechnungslegung sowie an formalrechtlichen Ausgestaltungen orientieren.",
+        "class": ""
+      }
+    ]
+  },
+  {
+    "id": "art_at_2_3",
+    "title": "AT 2.3",
+    "heading": "Geschäfte",
+    "paragraphs": [
+      {
+        "id": "art_at_2_3__1",
+        "text": "1. Kreditgeschäfte im Sinne dieses Rundschreibens sind grundsätzlich Geschäfte nach Maßgabe des § 19 Abs. 1 KWG (Bilanzaktiva und außerbilanzielle Geschäfte mit Adressenausfallrisiken).",
+        "class": ""
+      },
+      {
+        "id": "art_at_2_3__2",
+        "text": "2. Im Sinne dieses Rundschreibens gilt als Kreditentscheidung jede Entscheidung über Neukredite, Krediterhöhungen, Beteiligungen, Limitüberschreitungen, die Festlegung von kreditnehmerbezogenen Limiten sowie von Kontrahenten- und Emittentenlimiten, Prolongationen und Änderungen risikorelevanter Sachverhalte, die dem Kreditbeschluss zugrunde lagen (z. B. Sicherheiten, Verwendungszweck). Dabei ist es unerheblich, ob diese Entscheidung ausschließlich vom Institut selbst oder gemeinsam mit anderen Instituten getroffen wird (so genanntes Konsortialgeschäft).",
+        "class": ""
+      },
+      {
+        "id": "art_at_2_3__3",
+        "text": "3. Handelsgeschäfte sind grundsätzlich alle Abschlüsse, die ein Finanzinstrument im Sinne des § 1 Abs. 11 KWG in Form eines",
+        "class": ""
+      },
+      {
+        "id": "art_at_2_3__3_a",
+        "text": "a) Geldmarktgeschäfts,",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_at_2_3__3_b",
+        "text": "b) Wertpapiergeschäfts,",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_at_2_3__3_c",
+        "text": "c) Devisengeschäfts,",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_at_2_3__3_d",
+        "text": "d) Geschäfts in handelbaren Forderungen (z. B. Handel in Schuldscheinen),",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_at_2_3__3_e",
+        "text": "e) Geschäfts in Waren,",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_at_2_3__3_f",
+        "text": "f) Geschäfts in Derivaten oder",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_at_2_3__3_g",
+        "text": "g) Geschäfts in Kryptowerten",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_at_2_3__3_s2",
+        "text": "zur Grundlage haben und die im eigenen Namen und für eigene Rechnung abgeschlossen werden. Als Wertpapiergeschäfte gelten auch Geschäfte mit Namensschuldverschreibungen sowie die Wertpapierleihe, nicht aber die Erstausgabe von Wertpapieren. Handelsgeschäfte sind auch, ungeachtet des Geschäftsgegenstandes, Vereinbarungen von Rückgabe- oder Rücknahmeverpflichtungen sowie Pensionsgeschäfte.",
+        "class": "subparagraph"
+      },
+      {
+        "id": "art_at_2_3__4",
+        "text": "4. Zu den Geschäften in Derivaten gehören Termingeschäfte, deren Preis sich von einem zugrunde liegenden Aktivum, von einem Referenzpreis, Referenzzins, Referenzindex oder einem im Voraus definierten Ereignis ableitet.",
+        "class": ""
+      },
+      {
+        "id": "art_at_2_3__5",
+        "text": "5. Immobiliengeschäfte im Sinne dieses Rundschreibens sind auf eigene Rechnung eines Instituts betriebene Geschäfte mit Immobilien, bei denen eine der folgenden Absichten verfolgt wird:",
+        "class": ""
+      },
+      {
+        "id": "art_at_2_3__5_a",
+        "text": "a) Immobilienerwerb oder -errichtung zur Ertragsgenerierung durch Vermietung/Verpachtung,",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_at_2_3__5_b",
+        "text": "b) Immobilienerwerb oder -errichtung zur Weiterveräußerung (z. B. Bauträgergeschäft),",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_at_2_3__5_c",
+        "text": "c) Bestandsimmobilien zur Ertragsgenerierung durch Vermietung/Verpachtung oder Weiterveräußerung.",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_at_2_3__5_s2",
+        "text": "Neben den direkten Immobiliengeschäften gelten auch auf eigene Rechnung betriebene Immobiliengeschäfte von Tochterunternehmen des Instituts i.S.v. § 290 HGB als Immobiliengeschäft des Instituts, sofern die Vermögensgegenstände des Tochterunternehmens ausschließlich oder überwiegend aus Immobiliengeschäften oder Beteiligungen an Immobiliengeschäften stammen. Den Tochterunternehmen sind insoweit Unternehmen gleichgestellt, auf die Institute gemeinschaftlich einen beherrschenden Einfluss ausüben können.",
+        "class": "subparagraph"
+      },
+      {
+        "id": "art_at_2_3__5_s3",
+        "text": "Immobiliengeschäfte, die überwiegend dem eigenen Geschäftsbetrieb dienen, gelten nicht als Immobiliengeschäfte im Sinne dieses Rundschreibens.",
+        "class": "subparagraph"
+      }
+    ]
+  },
+  {
+    "id": "art_at_3",
+    "title": "AT 3",
+    "heading": "Gesamtverantwortung der Geschäftsleitung",
+    "paragraphs": [
+      {
+        "id": "art_at_3__1",
+        "text": "1. Alle Geschäftsleiter (§ 1 Abs. 2 KWG) sind, unabhängig von der internen Zuständigkeitsregelung, für die ordnungsgemäße Geschäftsorganisation und deren Weiterentwicklung verantwortlich. Diese Verantwortung bezieht sich unter Berücksichtigung ausgelagerter Aktivitäten und Prozesse auf alle wesentlichen Elemente des Risikomanagements. Die Geschäftsleiter werden dieser Verantwortung nur gerecht, wenn sie die Risiken, einschließlich ESG-Risiken, beurteilen können und die erforderlichen Maßnahmen zu ihrer Begrenzung treffen. Hierzu zählen auch die Entwicklung, Förderung, Integration und Überwachung einer angemessenen Risikokultur auf allen Ebenen innerhalb des Instituts und der Gruppe. Die Geschäftsleiter eines übergeordneten Unternehmens einer Institutsgruppe oder Finanzholding-Gruppe bzw. eines übergeordneten Finanzkonglomeratsunternehmens sind zudem für die ordnungsgemäße Geschäftsorganisation in der Gruppe und somit auch für ein angemessenes und wirksames Risikomanagement auf Gruppenebene verantwortlich (§ 25a Abs. 3 KWG).",
+        "class": ""
+      },
+      {
+        "id": "art_at_3__2",
+        "text": "2. Ungeachtet der Gesamtverantwortung der Geschäftsleitung für die ordnungsgemäße Geschäftsorganisation und insbesondere für ein angemessenes und wirksames Risikomanagement ist jeder Geschäftsleiter für die Einrichtung angemessener Kontroll- und Überwachungsprozesse in seinem jeweiligen Zuständigkeitsbereich verantwortlich.",
+        "class": ""
+      }
+    ]
+  },
+  {
+    "id": "art_at_4_1",
+    "title": "AT 4.1",
+    "heading": "Risikotragfähigkeit",
+    "paragraphs": [
+      {
+        "id": "art_at_4_1__1",
+        "text": "1. Auf der Grundlage des Gesamtrisikoprofils ist sicherzustellen, dass die wesentlichen Risiken des Instituts durch das Risikodeckungspotenzial, unter Berücksichtigung von Risikokonzentrationen, laufend abgedeckt sind und damit die Risikotragfähigkeit gegeben ist. Die Auswirkungen von ESG-Risiken i.S. von <a href=\"#a:act_de_marisk_2024_0006:art_at_2_2\" class=\"ref\" data-article=\"AT 2.2\">AT 2.2</a> Tz. 1 sind angemessen und explizit zu berücksichtigen.",
+        "class": ""
+      },
+      {
+        "id": "art_at_4_1__2",
+        "text": "2. Das Institut hat einen internen Prozess zur Sicherstellung der Risikotragfähigkeit einzurichten. Die hierzu eingesetzten Verfahren haben sowohl das Ziel der Fortführung des Instituts als auch den Schutz der Gläubiger vor Verlusten aus ökonomischer Sicht angemessen zu berücksichtigen. Zur Erfüllung dieser Ziele sind Verfahren zur Sicherstellung der Risikotragfähigkeit zum einen aus der normativen Perspektive und zum anderen aus der ökonomischen Perspektive einzurichten.",
+        "class": ""
+      },
+      {
+        "id": "art_at_4_1__3",
+        "text": "3. Die Risikotragfähigkeit ist bei der Festlegung der Strategien (<a href=\"#a:act_de_marisk_2024_0006:art_at_4_2\" class=\"ref\" data-article=\"AT 4.2\">AT 4.2</a>) sowie bei deren Anpassung zu berücksichtigen. Zur Umsetzung der Strategien bzw. zur Gewährleistung der Risikotragfähigkeit sind ferner geeignete Risikosteuerungs- und -controllingprozesse (<a href=\"#a:act_de_marisk_2024_0006:art_at_4_3_2\" class=\"ref\" data-article=\"AT 4.3.2\">AT 4.3.2</a>) einzurichten.",
+        "class": ""
+      },
+      {
+        "id": "art_at_4_1__4",
+        "text": "4. Wesentliche Risiken, die nicht in das Risikotragfähigkeitskonzept einbezogen werden, sind festzulegen. Ihre Nichtberücksichtigung ist nachvollziehbar zu begründen und nur dann möglich, wenn das jeweilige Risiko aufgrund seiner Eigenart nicht sinnvoll durch Risikodeckungspotenzial begrenzt werden kann (z. B. das Zahlungsunfähigkeitsrisiko). Es ist sicherzustellen, dass solche Risiken angemessen in den Risikosteuerungs- und -controllingprozessen berücksichtigt werden.",
+        "class": ""
+      },
+      {
+        "id": "art_at_4_1__5",
+        "text": "5. Verfügt ein Institut über keine geeigneten Verfahren zur Quantifizierung einzelner Risiken, die in das Risikotragfähigkeitskonzept einbezogen werden sollen, so ist für diese auf der Basis einer Plausibilisierung ein Risikobetrag festzulegen. Die Plausibilisierung kann auf der Basis einer qualifizierten Expertenschätzung durchgeführt werden.",
+        "class": ""
+      },
+      {
+        "id": "art_at_4_1__6",
+        "text": "6. Fließen beobachtete Entwicklungen aus der Vergangenheit in die Verfahren zur Risikoquantifizierung ein, und beinhaltet der Beobachtungszeitraum ausschließlich oder überwiegend Zeiten geordneter und ruhiger Marktverhältnisse, so sind auch die Auswirkungen von stärkeren Parameterveränderungen bei der Risikoquantifizierung angemessen zu berücksichtigen.",
+        "class": ""
+      },
+      {
+        "id": "art_at_4_1__7",
+        "text": "7. Soweit ein Institut innerhalb oder zwischen Risikoarten risikomindernde Diversifikationseffekte im Risikotragfähigkeitskonzept berücksichtigt, müssen die zugrundeliegenden Annahmen anhand einer Analyse der institutsindividuellen Verhältnisse getroffen werden und auf Daten basieren, die auf die individuelle Risikosituation des Instituts als übertragbar angesehen werden können. Diversifikationseffekte müssen so konservativ geschätzt werden, dass sie auch in konjunkturellen Abschwungphasen bzw. bei im Hinblick auf die Geschäfts- und Risikostruktur des Instituts ungünstigen Marktverhältnissen als ausreichend stabil angenommen werden können. Die Verlässlichkeit und die Stabilität der Diversifikationsannahmen sind regelmäßig und ggf. anlassbezogen zu überprüfen.",
+        "class": ""
+      },
+      {
+        "id": "art_at_4_1__8",
+        "text": "8. Die Wahl der Methoden und Verfahren zur Beurteilung der Risikotragfähigkeit liegt in der Verantwortung des Instituts. Die den Methoden und Verfahren zugrunde liegenden Annahmen sind nachvollziehbar zu begründen. Die Festlegung wesentlicher Elemente der Risikotragfähigkeitssteuerung sowie wesentlicher zugrunde liegender Annahmen ist von der Geschäftsleitung zu genehmigen.",
+        "class": ""
+      },
+      {
+        "id": "art_at_4_1__9",
+        "text": "9. Die Angemessenheit der Methoden und Verfahren ist zumindest jährlich durch die fachlich zuständigen Mitarbeiter zu überprüfen. Im Rahmen der Überprüfung ist den Grenzen und Beschränkungen, die sich aus den eingesetzten Methoden und Verfahren, den ihnen zugrunde liegenden Annahmen und den in die Risikoquantifizierung einfließenden Daten ergeben, hinreichend Rechnung zu tragen. Die Stabilität und Konsistenz der Methoden und Verfahren sowie die Aussagekraft der damit ermittelten Risiken sind insofern kritisch zu analysieren.",
+        "class": ""
+      },
+      {
+        "id": "art_at_4_1__10",
+        "text": "10. Ist aufgrund der vergleichsweisen Komplexität der Verfahren und Methoden, der zugrunde liegenden Annahmen oder der einfließenden Daten eine umfassende Validierung dieser Komponenten gemäß Tz. 9 durchzuführen, ist hierbei eine angemessene Unabhängigkeit zwischen Methodenentwicklung und Validierung zu gewährleisten. Die wesentlichen Ergebnisse der Validierung und ggf. Vorschläge für Maßnahmen zum Umgang mit bekannten Grenzen und Beschränkungen der Methoden und Verfahren sind der Geschäftsleitung vorzulegen.",
+        "class": ""
+      },
+      {
+        "id": "art_at_4_1__11",
+        "text": "11. Jedes Institut muss über einen in die Ertrags- und Risikosteuerung eingebundenen Prozess zur Planung des zukünftigen Kapitalbedarfs und des zur Deckung dieses Kapitalbedarfs verfügbaren Kapitals verfügen. Der Planungshorizont muss einen angemessen langen, mehrjährigen Zeitraum umfassen. Dabei ist zu berücksichtigen, wie sich in diesem Zeitraum Veränderungen der eigenen Geschäftstätigkeit oder der strategischen Ziele sowie Veränderungen des wirtschaftlichen Umfelds auf den Kapitalbedarf und auf den Kapitalbestand auswirken. Möglichen adversen Entwicklungen, die von den Erwartungen abweichen, ist bei der Planung angemessen Rechnung zu tragen.",
+        "class": ""
+      }
+    ]
+  },
+  {
+    "id": "art_at_4_2",
+    "title": "AT 4.2",
+    "heading": "Strategien",
+    "paragraphs": [
+      {
+        "id": "art_at_4_2__1",
+        "text": "1. Die Geschäftsleitung hat eine ökonomisch nachhaltige Geschäftsstrategie festzulegen, in der die Ziele des Instituts für jede wesentliche Geschäftsaktivität sowie die Maßnahmen zur Erreichung dieser Ziele dargestellt werden. Diese Strategieentwicklung setzt daher eine eingehende, zukunftsgerichtete Analyse des Geschäftsmodells voraus. Bei der Festlegung und Anpassung der Geschäftsstrategie sind sowohl externe Einflussfaktoren (z. B. Marktentwicklung, Wettbewerbssituation, regulatorisches Umfeld, veränderte Umweltbedingungen und Transition zu einer nachhaltigen Wirtschaft unter Berücksichtigung möglicher Entwicklungen über einen angemessen langen Zeitraum) als auch interne Einflussfaktoren (z. B. Risikotragfähigkeit, Liquidität, Ertragslage, personelle und technisch-organisatorische Ressourcen) zu berücksichtigen. Im Hinblick auf die zukünftige Entwicklung der relevanten Einflussfaktoren sind Annahmen zu treffen. Die Annahmen sind einer mindestens jährlichen und anlassbezogenen Überprüfung zu unterziehen; erforderlichenfalls ist die Geschäftsstrategie anzupassen.",
+        "class": ""
+      },
+      {
+        "id": "art_at_4_2__2",
+        "text": "2. Die Geschäftsleitung hat eine mit der Geschäftsstrategie und den daraus resultierenden Risiken konsistente Risikostrategie festzulegen. Die Risikostrategie hat, ggf. unterteilt in Teilstrategien für die wesentlichen Risiken unter expliziter und angemessener Berücksichtigung der Auswirkungen von ESG-Risiken, die Ziele der Risikosteuerung der wesentlichen Geschäftsaktivitäten sowie die Maßnahmen zur Erreichung dieser Ziele zu umfassen. Insbesondere ist, unter Berücksichtigung von Risikokonzentrationen, für alle wesentlichen Risiken der Risikoappetit des Instituts festzulegen. Risikokonzentrationen sind dabei auch mit Blick auf die Ertragssituation des Instituts (Ertragskonzentrationen) zu berücksichtigen. Dies setzt voraus, dass das Institut seine Erfolgsquellen voneinander abgrenzen und diese quantifizieren kann (z. B. im Hinblick auf den Konditionen- und den Strukturbeitrag im Zinsbuch).",
+        "class": ""
+      },
+      {
+        "id": "art_at_4_2__3",
+        "text": "3. Institute mit hohem NPL-Bestand haben eine Strategie für notleidende Risikopositionen einzuführen, um eine Reduzierung auf ein vorab festgelegtes NPE-Ziel (sofern es nicht das originäre Geschäftsmodell ist) über einen realistischen, aber hinreichend ambitionierten Zeithorizont vorzunehmen.",
+        "class": ""
+      },
+      {
+        "id": "art_at_4_2__3_s2",
+        "text": "Die folgenden Schritte bilden dabei die zentralen Bausteine für die Entwicklung und Umsetzung dieser Strategie:",
+        "class": "subparagraph"
+      },
+      {
+        "id": "art_at_4_2__3_s3",
+        "text": "- Beurteilung des operativen Geschäftsumfelds und der externen Bedingungen;",
+        "class": "subparagraph"
+      },
+      {
+        "id": "art_at_4_2__3_s4",
+        "text": "- Entwicklung einer Strategie mit kurz-, mittel- und langfristigen Zielen und",
+        "class": "subparagraph"
+      },
+      {
+        "id": "art_at_4_2__3_s5",
+        "text": "- Umsetzung des Implementierungsplans.",
+        "class": "subparagraph"
+      },
+      {
+        "id": "art_at_4_2__4",
+        "text": "4. Die Geschäftsleitung ist verantwortlich für die Festlegung und Anpassung der Strategien; diese Verantwortung ist nicht delegierbar. Die Geschäftsleitung muss für die Umsetzung der Strategien Sorge tragen. Der Detaillierungsgrad der Strategien ist abhängig von Umfang und Komplexität sowie dem Risikogehalt der geplanten Geschäftsaktivitäten. Es bleibt dem Institut überlassen, die Risikostrategie in die Geschäftsstrategie zu integrieren.",
+        "class": ""
+      },
+      {
+        "id": "art_at_4_2__5",
+        "text": "5. Die Geschäftsleitung hat einen Strategieprozess einzurichten, der sich insbesondere auf die Prozessschritte Planung, Umsetzung, Beurteilung und Anpassung der Strategien erstreckt. Für die Zwecke der Beurteilung sind die in den Strategien niedergelegten Ziele so zu formulieren, dass eine sinnvolle Überprüfung der Zielerreichung möglich ist. Die Ursachen für etwaige Abweichungen sind zu analysieren.",
+        "class": ""
+      },
+      {
+        "id": "art_at_4_2__6",
+        "text": "6. Die Strategien sowie ggf. erforderliche Anpassungen der Strategien sind dem Aufsichtsorgan des Instituts zur Kenntnis zu geben und mit diesem zu erörtern. Die Erörterung erstreckt sich auch auf die Ursachenanalyse nach <a href=\"#a:act_de_marisk_2024_0006:art_at_4_2\" class=\"ref\" data-article=\"AT 4.2\">AT 4.2</a> Tz. 5 im Falle von Zielabweichungen.",
+        "class": ""
+      },
+      {
+        "id": "art_at_4_2__7",
+        "text": "7. Die Inhalte sowie Änderungen der Strategien sind innerhalb des Instituts in geeigneter Weise zu kommunizieren.",
+        "class": ""
+      }
+    ]
+  },
+  {
+    "id": "art_at_4_3",
+    "title": "AT 4.3",
+    "heading": "Internes Kontrollsystem",
+    "paragraphs": [
+      {
+        "id": "art_at_4_3__1",
+        "text": "1. In jedem Institut sind entsprechend Art, Umfang, Komplexität und Risikogehalt der Geschäftsaktivitäten",
+        "class": ""
+      },
+      {
+        "id": "art_at_4_3__1_a",
+        "text": "a) Regelungen zur Aufbau- und Ablauforganisation zu treffen,",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_at_4_3__1_b",
+        "text": "b) Risikosteuerungs- und -controllingprozesse einzurichten und",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_at_4_3__1_c",
+        "text": "c) eine Risikocontrolling-Funktion und eine Compliance-Funktion zu implementieren.",
+        "class": "list-item-l1"
+      }
+    ]
+  },
+  {
+    "id": "art_at_4_3_1",
+    "title": "AT 4.3.1",
+    "heading": "Aufbau- und Ablauforganisation",
+    "paragraphs": [
+      {
+        "id": "art_at_4_3_1__1",
+        "text": "1. Bei der Ausgestaltung der Aufbau- und Ablauforganisation ist sicherzustellen, dass miteinander unvereinbare Tätigkeiten durch unterschiedliche Mitarbeiter durchgeführt und auch bei Arbeitsplatzwechseln Interessenkonflikte vermieden werden. Beim Wechsel von Mitarbeitern der Handels- und Marktbereiche in nachgelagerte Bereiche und Kontrollbereiche sind für Tätigkeiten, die gegen das Verbot der Selbstprüfung und –überprüfung verstoßen, angemessene Übergangsfristen vorzusehen.",
+        "class": ""
+      },
+      {
+        "id": "art_at_4_3_1__2",
+        "text": "2. Prozesse sowie die damit verbundenen Aufgaben, Kompetenzen, Verantwortlichkeiten, Kontrollen sowie Kommunikationswege sind klar zu definieren und aufeinander abzustimmen. Berechtigungen und Kompetenzen sind nach dem Sparsamkeitsgrundsatz (Need-to-know-Prinzip) zu vergeben und bei Bedarf zeitnah anzupassen. Dies beinhaltet auch die regelmäßige und anlassbezogene Überprüfung von IT-Berechtigungen, Zeichnungsberechtigungen und sonstigen eingeräumten Kompetenzen innerhalb angemessener Fristen. Die Fristen orientieren sich dabei an der Bedeutung der Prozesse und, bei IT-Berechtigungen, dem Schutzbedarf verarbeiteter Informationen. Das gilt auch bezüglich der Schnittstellen zu wesentlichen Auslagerungen.",
+        "class": ""
+      }
+    ]
+  },
+  {
+    "id": "art_at_4_3_2",
+    "title": "AT 4.3.2",
+    "heading": "Risikosteuerungs- und -controllingprozesse",
+    "paragraphs": [
+      {
+        "id": "art_at_4_3_2__1",
+        "text": "1. Das Institut hat angemessene Risikosteuerungs- und -controllingprozesse einzurichten, die eine",
+        "class": ""
+      },
+      {
+        "id": "art_at_4_3_2__1_a",
+        "text": "a) Identifizierung,",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_at_4_3_2__1_b",
+        "text": "b) Beurteilung,",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_at_4_3_2__1_c",
+        "text": "c) Steuerung sowie",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_at_4_3_2__1_d",
+        "text": "d) Überwachung und Kommunikation",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_at_4_3_2__1_s2",
+        "text": "der wesentlichen Risiken und explizit der Auswirkungen von ESG-Risiken und damit verbundener Risikokonzentrationen gewährleisten. Diese Prozesse sind in eine gemeinsame Ertrags- und Risikosteuerung („Gesamtbanksteuerung“) einzubinden. Durch geeignete Maßnahmen ist zu gewährleisten, dass die Risiken und die damit verbundenen Risikokonzentrationen unter Berücksichtigung der Risikotragfähigkeit und des Risikoappetits wirksam begrenzt und überwacht werden.",
+        "class": "subparagraph"
+      },
+      {
+        "id": "art_at_4_3_2__2",
+        "text": "2. Die Risikosteuerungs- und -controllingprozesse müssen gewährleisten, dass die wesentlichen Risiken – auch aus ausgelagerten Aktivitäten und Prozessen – frühzeitig erkannt, vollständig erfasst und in angemessener Weise dargestellt werden können. Hierzu hat das Institut geeignete Indikatoren für die frühzeitige Identifizierung von Risiken sowie von risikoartenübergreifenden Effekten abzuleiten, die je nach Risikoart auf quantitativen und/oder qualitativen Risikomerkmalen basieren.",
+        "class": ""
+      },
+      {
+        "id": "art_at_4_3_2__3",
+        "text": "3. Die Geschäftsleitung hat sich in angemessenen Abständen über die Geschäftslage und die Risikosituation einschließlich vorhandener Risikokonzentrationen berichten zu lassen. Zudem hat die Geschäftsleitung das Aufsichtsorgan mindestens vierteljährlich über die Geschäftslage und die Risikosituation einschließlich vorhandener Risikokonzentrationen in angemessener Weise schriftlich zu informieren. Einzelheiten zur Geschäfts- und zur Risikoberichterstattung an die Geschäftsleitung und an das Aufsichtsorgan sind in BT 3 geregelt.",
+        "class": ""
+      },
+      {
+        "id": "art_at_4_3_2__4",
+        "text": "4. Unter Risikogesichtspunkten wesentliche Informationen sind unverzüglich an die Geschäftsleitung, die jeweiligen Verantwortlichen und ggf. die Interne Revision weiterzuleiten, so dass geeignete Maßnahmen bzw. Prüfungshandlungen frühzeitig eingeleitet werden können. Hierfür ist ein geeignetes Verfahren festzulegen.",
+        "class": ""
+      },
+      {
+        "id": "art_at_4_3_2__5",
+        "text": "5. Die Risikosteuerungs- und -controllingprozesse sowie die zur Risikoquantifizierung eingesetzten Methoden und Verfahren sind regelmäßig sowie bei sich ändernden Bedingungen auf ihre Angemessenheit zu überprüfen und ggf. anzupassen. Dies betrifft insbesondere auch die Plausibilisierung der ermittelten Ergebnisse und der zugrunde liegenden Daten. <a href=\"#a:act_de_marisk_2024_0006:art_at_4_1\" class=\"ref\" data-article=\"AT 4.1\">AT 4.1</a> Tz. 9 ist entsprechend anzuwenden.",
+        "class": ""
+      }
+    ]
+  },
+  {
+    "id": "art_at_4_3_3",
+    "title": "AT 4.3.3",
+    "heading": "Stresstests",
+    "paragraphs": [
+      {
+        "id": "art_at_4_3_3__1",
+        "text": "1. Es sind regelmäßig sowie anlassbezogen angemessene Stresstests für die wesentlichen Risiken durchzuführen, die Art, Umfang, Komplexität und den Risikogehalt der Geschäftsaktivitäten widerspiegeln. Hierfür sind die für die jeweiligen Risiken wesentlichen Risikofaktoren zu identifizieren und die Auswirkungen von ESG-Risiken zu berücksichtigen. Die Stresstests haben sich auch auf die angenommenen Risikokonzentrationen und Diversifikationseffekte innerhalb und zwischen den Risikoarten zu erstrecken. Risiken aus außerbilanziellen Gesellschaftskonstruktionen und Verbriefungstransaktionen sind im Rahmen der Stresstests zu berücksichtigen.",
+        "class": ""
+      },
+      {
+        "id": "art_at_4_3_3__2",
+        "text": "2. Regelmäßige und ggf. anlassbezogene Stresstests sind auch für das Gesamtrisikoprofil des Instituts durchzuführen. Dazu sind ausgehend von Art, Umfang, Komplexität und Risikogehalt der Geschäftsaktivitäten geeignete übergeordnete Szenarien zu definieren, die sowohl institutseigene als auch marktweite Ursachen berücksichtigen. Deren potenzielle Auswirkungen auf die wesentlichen Risikoarten sind kombiniert in einer Weise abzubilden, die die Wechselwirkungen zwischen den Risikoarten berücksichtigt.",
+        "class": ""
+      },
+      {
+        "id": "art_at_4_3_3__3",
+        "text": "3. Die Stresstests haben auch außergewöhnliche, aber plausibel mögliche Ereignisse abzubilden. Dabei sind geeignete historische und hypothetische Szenarien darzustellen. Anhand der Stresstests sind dabei auch die Auswirkungen eines schweren konjunkturellen Abschwungs auf Gesamtinstitutsebene zu analysieren. Bei der Festlegung der Szenarien sind die strategische Ausrichtung des Instituts und sein wirtschaftliches Umfeld zu berücksichtigen.",
+        "class": ""
+      },
+      {
+        "id": "art_at_4_3_3__4",
+        "text": "4. Das Institut hat auch sogenannte „inverse Stresstests“ durchzuführen. Die Ausgestaltung und Durchführung ist abhängig von Art, Umfang, Komplexität und Risikogehalt der Geschäftsaktivitäten und kann qualitativ oder quantitativ erfolgen.",
+        "class": ""
+      },
+      {
+        "id": "art_at_4_3_3__5",
+        "text": "5. Die Angemessenheit der Stresstests sowie deren zugrunde liegende Annahmen sind in regelmäßigen Abständen, mindestens aber jährlich, zu überprüfen.",
+        "class": ""
+      },
+      {
+        "id": "art_at_4_3_3__6",
+        "text": "6. Die Ergebnisse der Stresstests sind kritisch zu reflektieren. Dabei ist zu ergründen, inwieweit und, wenn ja, welcher Handlungsbedarf besteht. Die Ergebnisse der Stresstests sind auch bei der Beurteilung der Risikotragfähigkeit angemessen zu berücksichtigen. Dabei ist den Auswirkungen eines schweren konjunkturellen Abschwungs besondere Aufmerksamkeit zu schenken.",
+        "class": ""
+      }
+    ]
+  },
+  {
+    "id": "art_at_4_3_4",
+    "title": "AT 4.3.4",
+    "heading": "Datenmanagement, Datenqualität und Aggregation von Risikodaten",
+    "paragraphs": [
+      {
+        "id": "art_at_4_3_4__1",
+        "text": "1. Die Anforderungen dieses Moduls richten sich an bedeutende Institute und gelten sowohl auf Gruppenebene als auch auf der Ebene der wesentlichen gruppenangehörigen Einzelinstitute. Das Institut hat institutsweit und gruppenweit geltende Grundsätze für das Datenmanagement, die Datenqualität und die Aggregation von Risikodaten festzulegen, die von der Geschäftsleitung zu genehmigen und in Kraft zu setzen sind.",
+        "class": ""
+      },
+      {
+        "id": "art_at_4_3_4__2",
+        "text": "2. Datenstruktur und Datenhierarchie müssen gewährleisten, dass Daten zweifelsfrei identifiziert, zusammengeführt und ausgewertet werden können sowie zeitnah zur Verfügung stehen. Hierfür sind, soweit möglich, einheitliche Namenskonventionen und Kennzeichnungen von Daten festzulegen und innerhalb des Instituts zu kommunizieren. Bei unterschiedlichen Namenskonventionen und Kennzeichnungen hat das Institut sicherzustellen, dass Daten automatisiert ineinander überleitbar sind.",
+        "class": ""
+      },
+      {
+        "id": "art_at_4_3_4__3",
+        "text": "3. Das Institut hat zu gewährleisten, dass Risikodaten genau und vollständig sind. Daten müssen nach unterschiedlichen Kategorien auswertbar sein und sollten, soweit möglich und sinnvoll, automatisiert aggregiert werden können. Der Einsatz und der Umfang manueller Prozesse und Eingriffe sind zu begründen und zu dokumentieren und auf das notwendige Maß zu beschränken. Die Datenqualität und die Datenvollständigkeit sind anhand geeigneter Kriterien zu überwachen. Hierfür hat das Institut interne Anforderungen an die Genauigkeit und Vollständigkeit der Daten zu formulieren.",
+        "class": ""
+      },
+      {
+        "id": "art_at_4_3_4__4",
+        "text": "4. Die Risikodaten sind mit anderen im Institut vorhandenen Informationen abzugleichen und zu plausibilisieren. Es sind Verfahren und Prozesse zum Abgleich der Risikodaten und der Daten in den Risikoberichten einzurichten, mittels derer Datenfehler und Schwachstellen in der Datenqualität identifiziert werden können.",
+        "class": ""
+      },
+      {
+        "id": "art_at_4_3_4__5",
+        "text": "5. Die Datenaggregationskapazitäten müssen gewährleisten, dass aggregierte Risikodaten, sowohl unter gewöhnlichen Umständen als auch in Stressphasen, zeitnah zur Verfügung stehen. Das Institut hat unter Berücksichtigung der Häufigkeit von Risikoberichten den zeitlichen Rahmen zu definieren, innerhalb dessen die aggregierten Risikodaten vorliegen müssen.",
+        "class": ""
+      },
+      {
+        "id": "art_at_4_3_4__6",
+        "text": "6. Die Datenaggregationskapazitäten müssen hinreichend flexibel sein, um Informationen ad hoc nach unterschiedlichen Kategorien ausweisen und analysieren zu können. Dazu gehört auch die Möglichkeit, Risikopositionen auf den unterschiedlichsten Ebenen (Geschäftsfelder, Portfolios, ggf. Einzelgeschäfte) auszuweisen und zu analysieren.",
+        "class": ""
+      },
+      {
+        "id": "art_at_4_3_4__7",
+        "text": "7. Für alle Prozessschritte sind Verantwortlichkeiten festzulegen und entsprechende prozessabhängige Kontrollen einzurichten. Daneben ist regelmäßig zu überprüfen, ob die institutsinternen Regelungen, Verfahren, Methoden und Prozesse von den Mitarbeitern eingehalten werden. Die Überprüfung ist von einer von den geschäftsinitiierenden bzw. geschäftsabschließenden Organisationseinheiten unabhängigen Stelle wahrzunehmen.",
+        "class": ""
+      }
+    ]
+  },
+  {
+    "id": "art_at_4_3_5",
+    "title": "AT 4.3.5",
+    "heading": "Verwendung von Modellen",
+    "paragraphs": [
+      {
+        "id": "art_at_4_3_5__1",
+        "text": "1. Die Anforderungen dieses Moduls gelten für Modelle, die für die in diesem Rundschreiben geregelten Prozesse eingesetzt werden. Sie finden auch Anwendung bei automatisierten Modellen, technologiegestützter Innovation und künstlicher Intelligenz.",
+        "class": ""
+      },
+      {
+        "id": "art_at_4_3_5__2",
+        "text": "2. Die Wahl der Modelle liegt in der Verantwortung des Instituts. Die zugrundeliegenden Annahmen sind nachvollziehbar zu begründen. Die Angemessenheit und Eignung sind vor dem Einsatz eines Modells zu bewerten und regelmäßig zu überprüfen. Das setzt hinreichende Kenntnisse über die Modell-Konzeption, insbesondere zu wesentlichen Annahmen und Parametern sowie den darin einfließenden Daten, voraus.",
+        "class": ""
+      },
+      {
+        "id": "art_at_4_3_5__3",
+        "text": "3. Das Institut hat geeignete Verfahren, die die Qualität der zugrundeliegenden Daten sicherstellen, zu implementieren. Insbesondere sollen Qualitätsschwächen in den zugrundeliegenden Daten erkannt und bereinigt werden.",
+        "class": ""
+      },
+      {
+        "id": "art_at_4_3_5__4",
+        "text": "4. Das Institut hat angemessene Regelungen zur Verwendung der Modellergebnisse zu treffen. Soweit relevant, müssen diese auch Ausführungen zu Überschreibungen beinhalten.",
+        "class": ""
+      },
+      {
+        "id": "art_at_4_3_5__5",
+        "text": "5. Das Institut hat sich mit den Grenzen und Beschränkungen, die sich aus den eingesetzten Modellen, den ihnen zugrundeliegenden Annahmen und den darin einfließenden Daten ergeben, kritisch auseinanderzusetzen und eine regelmäßige Validierung der Modelle vorzunehmen. Dabei sind die sachgerechte Handhabung der Modellergebnisse und die Genauigkeit des Modells in Bezug auf dessen Verwendung angemessen zu überprüfen. Die Qualität der Modellergebnisse, insbesondere die Genauigkeit, Stabilität und Konsistenz der Verfahren, ist regelmäßig zu analysieren.",
+        "class": ""
+      },
+      {
+        "id": "art_at_4_3_5__6",
+        "text": "6. Neben der angestrebten Genauigkeit ist auch auf eine hinreichende Erklärbarkeit zu achten. Dies gilt insbesondere für Modelle, die Charakteristika von technologiegestützter Innovation und künstlicher Intelligenz aufweisen.",
+        "class": ""
+      }
+    ]
+  },
+  {
+    "id": "art_at_4_4_1",
+    "title": "AT 4.4.1",
+    "heading": "Risikocontrolling-Funktion",
+    "paragraphs": [
+      {
+        "id": "art_at_4_4_1__1",
+        "text": "1. Jedes Institut muss über eine unabhängige Risikocontrolling-Funktion verfügen, die für die angemessene Überwachung und Kommunikation der wesentlichen Risiken unter Berücksichtigung der Auswirkungen von ESG-Risiken zuständig ist. Die Risikocontrolling-Funktion ist aufbauorganisatorisch bis einschließlich der Ebene der Geschäftsleitung von den Bereichen zu trennen, die für die Initiierung bzw. den Abschluss von Geschäften zuständig sind.",
+        "class": ""
+      },
+      {
+        "id": "art_at_4_4_1__2",
+        "text": "2. Die Risikocontrolling-Funktion hat insbesondere die folgenden Aufgaben:",
+        "class": ""
+      },
+      {
+        "id": "art_at_4_4_1__2_dash",
+        "text": "– Unterstützung der Geschäftsleitung in allen risikopolitischen Fragen, insbesondere bei der Entwicklung und Umsetzung der Risikostrategie sowie bei der Ausgestaltung eines Systems zur Begrenzung der Risiken,",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_at_4_4_1__2_dash_2",
+        "text": "– Durchführung der Risikoinventur und Erstellung des Gesamtrisikoprofils,",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_at_4_4_1__2_dash_3",
+        "text": "– Unterstützung der Geschäftsleitung bei der Einrichtung und Weiterentwicklung der Risikosteuerungs- und –controllingprozesse,",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_at_4_4_1__2_dash_4",
+        "text": "– Einrichtung und Weiterentwicklung eines Systems von Risikokennzahlen und eines Risikofrüherkennungsverfahrens,",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_at_4_4_1__2_dash_5",
+        "text": "– Laufende Überwachung der Risikosituation des Instituts und der Risikotragfähigkeit sowie der Einhaltung der eingerichteten Risikolimite,",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_at_4_4_1__2_dash_6",
+        "text": "– Regelmäßige Erstellung der Risikoberichte für die Geschäftsleitung,",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_at_4_4_1__2_dash_7",
+        "text": "– Verantwortung für die Prozesse zur unverzüglichen Weitergabe von unter Risikogesichtspunkten wesentlichen Informationen an die Geschäftsleitung, die jeweiligen Verantwortlichen und ggf. die Interne Revision.",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_at_4_4_1__3",
+        "text": "3. Den Mitarbeitern der Risikocontrolling-Funktion sind alle notwendigen Befugnisse und ein uneingeschränkter Zugang zu allen Informationen einzuräumen, die für die Erfüllung ihrer Aufgaben erforderlich sind. Hierzu gehört insbesondere auch ein uneingeschränkter und jederzeitiger Zugang zu den Risikodaten des Instituts.",
+        "class": ""
+      },
+      {
+        "id": "art_at_4_4_1__4",
+        "text": "4. Die Leitung der Risikocontrolling-Funktion ist bei wichtigen risikopolitischen Entscheidungen der Geschäftsleitung zu beteiligen. Diese Aufgabe ist einer Person auf einer ausreichend hohen Führungsebene zu übertragen. Sie hat ihre Aufgaben in Abhängigkeit von der Größe des Instituts sowie Art, Umfang, Komplexität und Risikogehalt der Geschäftsaktivitäten grundsätzlich in exklusiver Weise auszufüllen.",
+        "class": ""
+      },
+      {
+        "id": "art_at_4_4_1__5",
+        "text": "5. Bei bedeutenden Instituten und Instituten gemäß § 2 Abs. 9i Satz 2 KWG, welche die in Satz 2 dieser Vorschrift gesetzte Bilanzschwelle überschreiten hat die exklusive Wahrnehmung der Leitung der Risikocontrolling-Funktion grundsätzlich durch einen Geschäftsleiter zu erfolgen. Er kann auch für die Marktfolge zuständig sein, sofern eine klare aufbauorganisatorische Trennung von Risikocontrolling-Funktion und Marktfolge bis unterhalb der Geschäftsleiterebene erfolgt. Dieser Geschäftsleiter darf weder für den Bereich Finanzen/Rechnungswesen noch für den Bereich Organisation/IT verantwortlich sein. Ausnahmen hiervon sind lediglich im Vertretungsfall möglich.",
+        "class": ""
+      },
+      {
+        "id": "art_at_4_4_1__6",
+        "text": "6. Wechselt die Leitung der Risikocontrolling-Funktion, ist das Aufsichtsorgan rechtzeitig vorab unter Angabe der Gründe für den Wechsel zu informieren.",
+        "class": ""
+      }
+    ]
+  },
+  {
+    "id": "art_at_4_4_2",
+    "title": "AT 4.4.2",
+    "heading": "Compliance-Funktion",
+    "paragraphs": [
+      {
+        "id": "art_at_4_4_2__1",
+        "text": "1. Jedes Institut muss über eine Compliance-Funktion verfügen, um den Risiken, die sich aus der Nichteinhaltung rechtlicher Regelungen und Vorgaben ergeben können, entgegenzuwirken. Die Compliance-Funktion hat auf die Implementierung wirksamer Verfahren zur Einhaltung der für das Institut wesentlichen rechtlichen Regelungen und Vorgaben und entsprechender Kontrollen hinzuwirken. Ferner hat die Compliance-Funktion die Geschäftsleitung hinsichtlich der Einhaltung dieser rechtlichen Regelungen und Vorgaben zu unterstützen und zu beraten.",
+        "class": ""
+      },
+      {
+        "id": "art_at_4_4_2__2",
+        "text": "2. Die Identifizierung der wesentlichen rechtlichen Regelungen und Vorgaben, deren Nichteinhaltung zu einer Gefährdung des Vermögens des Instituts führen kann, erfolgt unter Berücksichtigung von Risikogesichtspunkten in regelmäßigen Abständen durch die Compliance-Funktion.",
+        "class": ""
+      },
+      {
+        "id": "art_at_4_4_2__3",
+        "text": "3. Grundsätzlich ist die Compliance-Funktion unmittelbar der Geschäftsleitung unterstellt und berichtspflichtig. Sie kann auch an andere Kontrolleinheiten angebunden werden, sofern eine direkte Berichtslinie zur Geschäftsleitung existiert. Zur Erfüllung ihrer Aufgaben kann die Compliance-Funktion auch auf andere Funktionen und Stellen zurückgreifen. Die Compliance-Funktion ist abhängig von der Größe des Instituts sowie der Art, dem Umfang, der Komplexität und dem Risikogehalt der Geschäftsaktivitäten in einem von den Bereichen Markt und Handel unabhängigen Bereich anzusiedeln.",
+        "class": ""
+      },
+      {
+        "id": "art_at_4_4_2__4",
+        "text": "4. Bedeutende Institute und Institute gemäß § 2 Abs. 9i Satz 2 KWG, welche die in Satz 2 dieser Vorschrift gesetzte Bilanzschwelle überschreiten haben für die Compliance-Funktion grundsätzlich eine eigenständige Organisationseinheit einzurichten.",
+        "class": ""
+      },
+      {
+        "id": "art_at_4_4_2__5",
+        "text": "5. Das Institut hat einen Compliance-Beauftragten zu benennen, der für die Erfüllung der Aufgaben der Compliance-Funktion verantwortlich ist. Abhängig von Art, Umfang, Komplexität und Risikogehalt der Geschäftsaktivitäten sowie der Größe des Instituts kann im Ausnahmefall die Funktion des Compliance-Beauftragten auch einem Geschäftsleiter übertragen werden.",
+        "class": ""
+      },
+      {
+        "id": "art_at_4_4_2__6",
+        "text": "6. Den Mitarbeitern der Compliance-Funktion sind ausreichende Befugnisse und ein uneingeschränkter Zugang zu allen Informationen einzuräumen, die für die Erfüllung ihrer Aufgaben erforderlich sind. Weisungen und Beschlüsse der Geschäftsleitung, die für die Compliance-Funktion wesentlich sind, sind ihr bekanntzugeben. Über wesentliche Änderungen der Regelungen, die die Einhaltung der wesentlichen rechtlichen Regelungen und Vorgaben gewährleisten sollen, sind die Mitarbeiter der Compliance-Funktion rechtzeitig zu informieren.",
+        "class": ""
+      },
+      {
+        "id": "art_at_4_4_2__7",
+        "text": "7. Die Compliance-Funktion hat mindestens jährlich sowie anlassbezogen der Geschäftsleitung über ihre Tätigkeit Bericht zu erstatten. Darin ist auf die Angemessenheit und Wirksamkeit der Regelungen zur Einhaltung der wesentlichen rechtlichen Regelungen und Vorgaben einzugehen. Ferner hat der Bericht auch Angaben zu möglichen Defiziten sowie zu Maßnahmen zu deren Behebung zu enthalten. Die Berichte sind auch an das Aufsichtsorgan und die Interne Revision weiterzuleiten.",
+        "class": ""
+      },
+      {
+        "id": "art_at_4_4_2__8",
+        "text": "8. Wechselt die Position des Compliance-Beauftragten, ist das Aufsichtsorgan rechtzeitig vorab unter Angabe der Gründe für den Wechsel zu informieren.",
+        "class": ""
+      }
+    ]
+  },
+  {
+    "id": "art_at_4_4_3",
+    "title": "AT 4.4.3",
+    "heading": "Interne Revision",
+    "paragraphs": [
+      {
+        "id": "art_at_4_4_3__1",
+        "text": "1. Jedes Institut muss über eine funktionsfähige Interne Revision verfügen. Bei Instituten, bei denen aus Gründen der Betriebsgröße die Einrichtung einer Revisionseinheit unverhältnismäßig ist, können die Aufgaben der Internen Revision von einem Geschäftsleiter erfüllt werden.",
+        "class": ""
+      },
+      {
+        "id": "art_at_4_4_3__2",
+        "text": "2. Die Interne Revision ist ein Instrument der Geschäftsleitung, ihr unmittelbar unterstellt und berichtspflichtig. Sie kann auch einem Mitglied der Geschäftsleitung, nach Möglichkeit dem Vorsitzenden, unterstellt sein. Unbeschadet dessen ist sicherzustellen, dass der Vorsitzende des Aufsichtsorgans unter Einbeziehung der Geschäftsleitung direkt bei dem Leiter der Internen Revision Auskünfte einholen kann.",
+        "class": ""
+      },
+      {
+        "id": "art_at_4_4_3__3",
+        "text": "3. Die Interne Revision hat risikoorientiert und prozessunabhängig die Wirksamkeit und Angemessenheit des Risikomanagements im Allgemeinen und des internen Kontrollsystems im Besonderen sowie die Ordnungsmäßigkeit grundsätzlich aller Aktivitäten und Prozesse zu prüfen und zu beurteilen, unabhängig davon, ob diese ausgelagert sind oder nicht. <a href=\"#a:act_de_marisk_2024_0006:art_bt_2_1\" class=\"ref\" data-article=\"BT 2.1\">BT 2.1</a> Tz. 3 bleibt hiervon unberührt.",
+        "class": ""
+      },
+      {
+        "id": "art_at_4_4_3__4",
+        "text": "4. Zur Wahrnehmung ihrer Aufgaben ist der Internen Revision ein vollständiges und uneingeschränktes Informationsrecht einzuräumen. Dieses Recht ist jederzeit zu gewährleisten. Der Internen Revision sind insoweit unverzüglich die erforderlichen Informationen zu erteilen, die notwendigen Unterlagen zur Verfügung zu stellen und Einblick in die Aktivitäten und Prozesse sowie die IT-Systeme des Instituts zu gewähren.",
+        "class": ""
+      },
+      {
+        "id": "art_at_4_4_3__5",
+        "text": "5. Weisungen und Beschlüsse der Geschäftsleitung, die für die Interne Revision von Bedeutung sein können, sind ihr bekannt zu geben. Über wesentliche Änderungen im Risikomanagement ist die Interne Revision rechtzeitig zu informieren.",
+        "class": ""
+      },
+      {
+        "id": "art_at_4_4_3__6",
+        "text": "6. Wechselt die Leitung der Internen Revision, ist das Aufsichtsorgan rechtzeitig vorab unter Angabe der Gründe für den Wechsel zu informieren.",
+        "class": ""
+      }
+    ]
+  },
+  {
+    "id": "art_at_4_5",
+    "title": "AT 4.5",
+    "heading": "Risikomanagement auf Gruppenebene",
+    "paragraphs": [
+      {
+        "id": "art_at_4_5__1",
+        "text": "1. Nach § 25a Abs. 3 KWG sind die Geschäftsleiter des übergeordneten Unternehmens einer Institutsgruppe oder Finanzholding-Gruppe sowie die Geschäftsleiter des übergeordneten Finanzkonglomeratsunternehmens eines Finanzkonglomerats für die Einrichtung eines angemessenen und wirksamen Risikomanagements auf Gruppenebene verantwortlich. Die Reichweite des Risikomanagements auf Gruppenebene erstreckt sich auf alle wesentlichen Risiken der Gruppe, unabhängig davon, ob diese von konsolidierungspflichtigen Unternehmen begründet werden oder nicht (z. B. Risiken aus nicht konsolidierungspflichtigen Zweckgesellschaften). Die eingesetzten Methoden und Verfahren (z. B. IT-Systeme) dürfen der Wirksamkeit des Risikomanagements auf Gruppenebene nicht entgegenstehen. Besondere Maßstäbe für das Risikomanagement auf Gruppenebene können sich aus spezialgesetzlichen Regelungen ergeben, wie z. B. bei Bausparkassen hinsichtlich der Kollektivsteuerung oder bei Pfandbriefbanken.",
+        "class": ""
+      },
+      {
+        "id": "art_at_4_5__2",
+        "text": "2. Die Geschäftsleitung des übergeordneten Unternehmens hat eine Geschäftsstrategie sowie eine dazu konsistente Risikostrategie festzulegen („gruppenweite Strategien“). Die strategische Ausrichtung der gruppenangehörigen Unternehmen ist mit den gruppenweiten Strategien abzustimmen. Die Geschäftsleitung des übergeordneten Unternehmens muss für die Umsetzung der gruppenweiten Strategien Sorge tragen.",
+        "class": ""
+      },
+      {
+        "id": "art_at_4_5__3",
+        "text": "3. Das übergeordnete Unternehmen hat auf der Grundlage des Gesamtrisikoprofils der Gruppe einen internen Prozess zur Sicherstellung der Risikotragfähigkeit auf Gruppenebene einzurichten (<a href=\"#a:act_de_marisk_2024_0006:art_at_4_1\" class=\"ref\" data-article=\"AT 4.1\">AT 4.1</a> Tz. 2). Die Risikotragfähigkeit der Gruppe ist laufend sicherzustellen.",
+        "class": ""
+      },
+      {
+        "id": "art_at_4_5__4",
+        "text": "4. Es sind angemessene ablauforganisatorische Vorkehrungen auf Gruppenebene zu treffen. Das heißt, dass Prozesse sowie damit verbundene Aufgaben, Kompetenzen, Verantwortlichkeiten, Kontrollen sowie Kommunikationswege innerhalb der Gruppe klar zu definieren und aufeinander abzustimmen sind. An die Geschäftsleiter des übergeordneten Unternehmens ist zeitnah Bericht zu erstatten.",
+        "class": ""
+      },
+      {
+        "id": "art_at_4_5__5",
+        "text": "5. Das übergeordnete Unternehmen hat angemessene Risikosteuerungs- und -controllingprozesse einzurichten, die die gruppenangehörigen Unternehmen einbeziehen. Für die wesentlichen Risiken auf Gruppenebene sind regelmäßig angemessene Stresstests durchzuführen. Hierfür sind die für die jeweiligen Risiken wesentlichen Risikofaktoren zu identifizieren und die Auswirkungen von ESG-Risiken explizit zu berücksichtigen. Regelmäßige und ggf. anlassbezogene Stresstests sind auch für das Gesamtrisikoprofil auf Gruppenebene durchzuführen. Das übergeordnete Unternehmen hat sich in angemessenen Abständen über die Risikosituation der Gruppe zu informieren.",
+        "class": ""
+      },
+      {
+        "id": "art_at_4_5__6",
+        "text": "6. Die Konzernrevision hat im Rahmen des Risikomanagements auf Gruppenebene ergänzend zur Internen Revision der gruppenangehörigen Unternehmen tätig zu werden. Dabei kann die Konzernrevision auch die Prüfungsergebnisse der Internen Revisionen der gruppenangehörigen Unternehmen berücksichtigen. Es ist sicherzustellen, dass für die Konzernrevision und die Internen Revisionen der gruppenangehörigen Unternehmen Revisionsgrundsätze und Prüfungsstandards gelten, die eine Vergleichbarkeit der Prüfungsergebnisse gewährleisten. Des Weiteren sind die Prüfungsplanungen sowie die Verfahren zur Überwachung der fristgerechten Beseitigung von Mängeln aufeinander abzustimmen. Die Konzernrevision hat in angemessenen Abständen, mindestens aber vierteljährlich, an die Geschäftsleitung und das Aufsichtsorgan des übergeordneten Unternehmens über ihre Tätigkeit auf Gruppenebene in analoger Anwendung von <a href=\"#a:act_de_marisk_2024_0006:art_bt_2_4\" class=\"ref\" data-article=\"BT 2.4\">BT 2.4</a> Tz. 4 zu berichten.",
+        "class": ""
+      }
+    ]
+  },
+  {
+    "id": "art_at_5",
+    "title": "AT 5",
+    "heading": "Organisationsrichtlinien",
+    "paragraphs": [
+      {
+        "id": "art_at_5__1",
+        "text": "1. Das Institut hat sicherzustellen, dass die Geschäftsaktivitäten auf der Grundlage von Organisationsrichtlinien betrieben werden (z. B. Handbücher, Arbeitsanweisungen oder Arbeitsablaufbeschreibungen). Der Detaillierungsgrad der Organisationsrichtlinien hängt von Art, Umfang, Komplexität und Risikogehalt der Geschäftsaktivitäten ab.",
+        "class": ""
+      },
+      {
+        "id": "art_at_5__2",
+        "text": "2. Die Organisationsrichtlinien müssen schriftlich fixiert und den betroffenen Mitarbeitern in geeigneter Weise bekanntgemacht werden. Es ist sicherzustellen, dass sie den Mitarbeitern in der jeweils aktuellen Fassung zur Verfügung stehen. Die Richtlinien sind bei Veränderungen der Aktivitäten und Prozesse zeitnah anzupassen.",
+        "class": ""
+      },
+      {
+        "id": "art_at_5__3",
+        "text": "3. Die Organisationsrichtlinien haben vor allem Folgendes zu beinhalten:",
+        "class": ""
+      },
+      {
+        "id": "art_at_5__3_a",
+        "text": "a) Regelungen für die Aufbau- und Ablauforganisation sowie zur Aufgabenzuweisung, Kompetenzordnung und zu den Verantwortlichkeiten,",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_at_5__3_b",
+        "text": "b) Regelungen hinsichtlich der Ausgestaltung der Risikosteuerungs- und -controllingprozesse,",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_at_5__3_c",
+        "text": "c) Regelungen zu den Verfahren, Methoden und Prozessen der Aggregation von Risikodaten (bei bedeutenden Instituten),",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_at_5__3_d",
+        "text": "d) Regelungen zur Internen Revision,",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_at_5__3_e",
+        "text": "e) Regelungen, die die Einhaltung rechtlicher Regelungen und Vorgaben (z. B. Datenschutz, Compliance) gewährleisten,",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_at_5__3_f",
+        "text": "f) Regelungen zu Verfahrensweisen bei Auslagerungen,",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_at_5__3_g",
+        "text": "g) abhängig von der Größe des Instituts sowie der Art, dem Umfang, der Komplexität und dem Risikogehalt der Geschäftsaktivitäten, einen Verhaltenskodex für die Mitarbeiter.",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_at_5__3_s2",
+        "text": "Die Organisationsrichtlinien haben auch Regelungen zur Berücksichtigung der Aus-wirkungen von ESG-Risiken zu beinhalten.",
+        "class": "subparagraph"
+      },
+      {
+        "id": "art_at_5__4",
+        "text": "4. Die Ausgestaltung der Organisationsrichtlinien muss es der Internen Revision ermöglichen, in die Sachprüfung einzutreten.",
+        "class": ""
+      }
+    ]
+  },
+  {
+    "id": "art_at_6",
+    "title": "AT 6",
+    "heading": "Dokumentation",
+    "paragraphs": [
+      {
+        "id": "art_at_6__1",
+        "text": "1. Geschäfts-, Kontroll- und Überwachungsunterlagen sind systematisch und für sachkundige Dritte nachvollziehbar abzufassen und grundsätzlich fünf Jahre aufzubewahren. Die Aktualität und Vollständigkeit der Aktenführung ist sicherzustellen.",
+        "class": ""
+      },
+      {
+        "id": "art_at_6__2",
+        "text": "2. Die für die Einhaltung dieses Rundschreibens wesentlichen Handlungen und Festlegungen sind nachvollziehbar zu dokumentieren. Dies beinhaltet auch Festlegungen hinsichtlich der Inanspruchnahme wesentlicher Öffnungsklauseln, die ggf. zu begründen ist.",
+        "class": ""
+      }
+    ]
+  },
+  {
+    "id": "art_at_7_1",
+    "title": "AT 7.1",
+    "heading": "Personal",
+    "paragraphs": [
+      {
+        "id": "art_at_7_1__1",
+        "text": "1. Die quantitative und qualitative Personalausstattung des Instituts hat sich insbesondere an betriebsinternen Erfordernissen, den Geschäftsaktivitäten sowie der Risikosituation zu orientieren. Dies gilt auch beim Rückgriff auf Leiharbeitnehmer.",
+        "class": ""
+      },
+      {
+        "id": "art_at_7_1__2",
+        "text": "2. Die Mitarbeiter sowie deren Vertreter müssen abhängig von ihren Aufgaben, Kompetenzen und Verantwortlichkeiten über die erforderlichen Kenntnisse und Erfahrungen verfügen, sowie mit den Werten und Risikoerwartungen des Instituts vertraut sein. Durch geeignete Maßnahmen ist zu gewährleisten, dass das Qualifikationsniveau der Mitarbeiter angemessen ist.",
+        "class": ""
+      },
+      {
+        "id": "art_at_7_1__3",
+        "text": "3. Die Abwesenheit oder das Ausscheiden von Mitarbeitern sollte nicht zu nachhaltigen Störungen der Betriebsabläufe führen.",
+        "class": ""
+      }
+    ]
+  },
+  {
+    "id": "art_at_7_2",
+    "title": "AT 7.2",
+    "heading": "Technisch-organisatorische Ausstattung",
+    "paragraphs": [
+      {
+        "id": "art_at_7_2__1",
+        "text": "1. Umfang und Qualität der technisch-organisatorischen Ausstattung haben sich insbesondere an betriebsinternen Erfordernissen, den Geschäftsaktivitäten sowie der Risikosituation zu orientieren.",
+        "class": ""
+      },
+      {
+        "id": "art_at_7_2__2",
+        "text": "2. Die IT-Systeme (Hardware- und Software-Komponenten), die zugehörigen IT-Prozesse und sonstige Bestandteile des Informationsverbundes müssen die Integrität, die Verfügbarkeit, die Authentizität sowie die Vertraulichkeit der Daten sicherstellen. Für diese Zwecke ist bei der Ausgestaltung der IT-Systeme und der zugehörigen IT-Prozesse grundsätzlich auf gängige Standards abzustellen, insbesondere sind Prozesse für eine angemessene IT-Berechtigungsvergabe einzurichten, die sicherstellen, dass jeder Mitarbeiter nur über die Rechte verfügt, die er für seine Tätigkeit benötigt; die Zusammenfassung von Berechtigungen in einem Rollenmodell ist möglich. Die Eignung der IT-Systeme und der zugehörigen Prozesse ist regelmäßig von den fachlich und technisch zuständigen Mitarbeitern zu überprüfen.",
+        "class": ""
+      },
+      {
+        "id": "art_at_7_2__3",
+        "text": "3. Die IT-Systeme sind vor ihrem erstmaligen Einsatz und nach wesentlichen Veränderungen zu testen und von den fachlich sowie auch von den technisch zuständigen Mitarbeitern abzunehmen. Hierfür ist ein Regelprozess der Entwicklung, des Testens, der Freigabe und der Implementierung in die Produktionsprozesse zu etablieren. Produktions- und Testumgebung sind dabei grundsätzlich voneinander zu trennen.",
+        "class": ""
+      },
+      {
+        "id": "art_at_7_2__4",
+        "text": "4. Für IT-Risiken sind angemessene Überwachungs- und Steuerungsprozesse einzurichten, die insbesondere die Festlegung von IT-Risikokriterien, die Identifikation von IT-Risiken, die Festlegung des Schutzbedarfs, daraus abgeleitete Schutzmaßnahmen für den IT-Betrieb sowie die Festlegung entsprechender Maßnahmen zur Risikobehandlung und –minderung umfassen. Beim Bezug von Software sind die damit verbundenen Risiken angemessen zu bewerten.",
+        "class": ""
+      },
+      {
+        "id": "art_at_7_2__5",
+        "text": "5. Die Anforderungen aus <a href=\"#a:act_de_marisk_2024_0006:art_at_7_2\" class=\"ref\" data-article=\"AT 7.2\">AT 7.2</a> sind auch beim Einsatz von durch Mitarbeiter des Fachbereichs entwickelten oder betriebenen Anwendungen (Individuelle Datenverarbeitung - „IDV“) entsprechend der Kritikalität der unterstützten Geschäftsprozesse und der Bedeutung der Anwendungen für diese Prozesse zu beachten. Die Festlegung von Maßnahmen zur Sicherstellung der Datensicherheit hat sich am Schutzbedarf der verarbeiteten Daten zu orientieren.",
+        "class": ""
+      },
+      {
+        "id": "art_at_7_2__6",
+        "text": "6. Für die Generierung von Daten und Informationen zu den als wesentlich eingestuften Risikoarten sind angemessene technische Kapazitäten vorzuhalten sowie effektive Prozesse zur Sicherstellung der Datenqualität einzurichten, die die korrekte und vollständige Erfassung und den Ausweis der wesentlichen Komponenten dieser Risiken ermöglichen.",
+        "class": ""
+      }
+    ]
+  },
+  {
+    "id": "art_at_7_3",
+    "title": "AT 7.3",
+    "heading": "Notfallmanagement",
+    "paragraphs": [
+      {
+        "id": "art_at_7_3__1",
+        "text": "1. Das Institut hat Ziele zum Notfallmanagement zu definieren und hieraus abgeleitet einen Notfallmanagementprozess festzulegen. Für Notfälle in zeitkritischen Aktivitäten und Prozessen ist Vorsorge zu treffen (Notfallkonzept). Die im Notfallkonzept festgelegten Maßnahmen müssen dazu geeignet sein, das Ausmaß möglicher Schäden zu reduzieren. Das Notfallkonzept ist anlassbezogen zu aktualisieren, jährlich auf Aktualität zu überprüfen und angemessen zu kommunizieren. Die Geschäftsleitung hat sich mindestens quartalsweise und anlassbezogen über den Zustand des Notfallmanagements schriftlich berichten zu lassen.",
+        "class": ""
+      },
+      {
+        "id": "art_at_7_3__2",
+        "text": "2. Das Notfallkonzept muss Geschäftsfortführungs- sowie Wiederherstellungspläne umfassen. Geschäftsfortführungspläne müssen gewährleisten, dass im Notfall zeitnah Ersatzlösungen zur Verfügung stehen. Wiederherstellungspläne müssen innerhalb eines angemessenen Zeitraums die Rückkehr zum Normalbetrieb ermöglichen. Bei Notfällen ist eine angemessene interne und externe Kommunikation sicherzustellen. Im Fall der Auslagerung von zeitkritischen Aktivitäten und Prozessen haben das auslagernde Institut und das Auslagerungsunternehmen über aufeinander abgestimmte Notfallkonzepte zu verfügen.",
+        "class": ""
+      },
+      {
+        "id": "art_at_7_3__3",
+        "text": "3. Die Wirksamkeit und Angemessenheit des Notfallkonzeptes ist regelmäßig zu überprüfen. Für zeitkritische Aktivitäten und Prozesse ist sie für alle relevanten Szenarien mindestens jährlich und anlassbezogen nachzuweisen. Überprüfungen des Notfallkonzeptes sind zu protokollieren. Ergebnisse sind hinsichtlich notwendiger Verbesserungen zu analysieren. Risiken sind angemessen zu steuern. Die Ergebnisse sind den jeweiligen Verantwortlichen schriftlich mitzuteilen.",
+        "class": ""
+      }
+    ]
+  },
+  {
+    "id": "art_at_8_1",
+    "title": "AT 8.1",
+    "heading": "Neu-Produkt-Prozess",
+    "paragraphs": [
+      {
+        "id": "art_at_8_1__1",
+        "text": "1. Jedes Institut muss die von ihm betriebenen Geschäftsaktivitäten verstehen. Für die Aufnahme von Geschäftsaktivitäten in neuen Produkten oder auf neuen Märkten (einschließlich neuer Vertriebswege) ist vorab ein Konzept auszuarbeiten. Grundlage des Konzeptes müssen das Ergebnis der Analyse des Risikogehalts dieser neuen Geschäftsaktivitäten sowie deren Auswirkungen auf das Gesamtrisikoprofil sein. In dem Konzept sind die sich daraus ergebenden wesentlichen Konsequenzen für das Management der Risiken darzustellen.",
+        "class": ""
+      },
+      {
+        "id": "art_at_8_1__2",
+        "text": "2. Das Institut hat einen Katalog jener Produkte und Märkte vorzuhalten, die Gegenstand der Geschäftsaktivitäten sein sollen. In einem angemessenen Turnus ist zu überprüfen, ob die Produkte noch verwendet werden. Produkte, die über einen längeren Zeitraum nicht mehr Gegenstand der Geschäftstätigkeit waren, sind zu kennzeichnen. Der Abbau von Positionen ist davon unberührt. Das Auslaufen oder die Bestandsführung von Positionen begründet keine Produktverwendung. Vor der Wiederaufnahme der Geschäftstätigkeit in gekennzeichneten Produkten ist die Bestätigung der in die Arbeitsabläufe eingebundenen Organisationseinheiten über das Fortbestehen der beim letztmaligen Geschäftsabschluss vorherrschenden Geschäftsprozesse einzuholen. Bei Veränderungen ist zu prüfen, ob der Neu-Produkt-Prozess erneut zu durchlaufen ist.",
+        "class": ""
+      },
+      {
+        "id": "art_at_8_1__3",
+        "text": "3. Bei der Entscheidung, ob es sich um Geschäftsaktivitäten in neuen Produkten oder auf neuen Märkten handelt, ist ein vom Markt bzw. vom Handel unabhängiger Bereich einzubinden.",
+        "class": ""
+      },
+      {
+        "id": "art_at_8_1__4",
+        "text": "4. Bei Handelsgeschäften ist vor dem laufenden Handel in neuen Produkten oder auf neuen Märkten grundsätzlich eine Testphase durchzuführen. Während der Testphase dürfen Handelsgeschäfte nur in überschaubarem Umfang durchgeführt werden. Es ist sicherzustellen, dass der laufende Handel erst beginnt, wenn die Testphase erfolgreich abgeschlossen ist und geeignete Risikosteuerungs- und -controllingprozesse vorhanden sind.",
+        "class": ""
+      },
+      {
+        "id": "art_at_8_1__5",
+        "text": "5. Sowohl in die Erstellung des Konzeptes als auch in die Testphase sind die später in die Arbeitsabläufe eingebundenen Organisationseinheiten einzuschalten. Im Rahmen ihrer Aufgaben sind auch die Risikocontrolling-Funktion, die Compliance-Funktion und die Interne Revision zu beteiligen.",
+        "class": ""
+      },
+      {
+        "id": "art_at_8_1__6",
+        "text": "6. Das Konzept und die Aufnahme der laufenden Geschäftstätigkeit sind von den zuständigen Geschäftsleitern unter Einbeziehung der für die Überwachung der Geschäfte verantwortlichen Geschäftsleiter zu genehmigen. Diese Genehmigungen können delegiert werden, sofern dafür klare Vorgaben erlassen wurden und die Geschäftsleitung zeitnah über die Entscheidungen informiert wird.",
+        "class": ""
+      },
+      {
+        "id": "art_at_8_1__7",
+        "text": "7. Soweit nach Einschätzung der in die Arbeitsabläufe eingebundenen Organisationseinheiten Aktivitäten in einem neuen Produkt oder auf einem neuen Markt sachgerecht gehandhabt werden können, ist die Ausarbeitung eines Konzeptes nach Tz. 1 und die Durchführung einer Testphase nach Tz. 4 nicht erforderlich.",
+        "class": ""
+      },
+      {
+        "id": "art_at_8_1__8",
+        "text": "8. Treten im Neu-Produkt-Prozess Häufungen von Fällen auf, bei denen",
+        "class": ""
+      },
+      {
+        "id": "art_at_8_1__8_dash",
+        "text": "– die in den Konzepten getroffenen Annahmen und die damit verbundenen Analysen des Risikogehalts der Aktivitäten in neuen Produkten oder auf neuen Märkten im Wesentlichen unzutreffend waren oder",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_at_8_1__8_dash_2",
+        "text": "– die in den Konzepten und aus den Testphasen gezogenen Konsequenzen im Wesentlichen unzutreffend waren oder",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_at_8_1__8_dash_3",
+        "text": "– gemäß Tz. 7 getroffene Einschätzungen, dass Aktivitäten in neuen Produkten oder auf neuen Märkten sachgerecht gehandhabt werden können, sich als unzutreffend erwiesen haben,",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_at_8_1__8_s2",
+        "text": "ist eine anlassbezogene Prüfung des Neu-Produkt-Prozesses durchzuführen. Bei Mängeln ist der Prozess unverzüglich anzupassen",
+        "class": "subparagraph"
+      }
+    ]
+  },
+  {
+    "id": "art_at_8_2",
+    "title": "AT 8.2",
+    "heading": "Änderungen betrieblicher Prozesse oder Strukturen",
+    "paragraphs": [
+      {
+        "id": "art_at_8_2__1",
+        "text": "1. Vor wesentlichen Veränderungen in der Aufbau- und Ablauforganisation sowie in den IT-Systemen hat das Institut die Auswirkungen der geplanten Veränderungen auf die Kontrollverfahren und die Kontrollintensität zu analysieren. In diese Analysen sind die später in die Arbeitsabläufe eingebundenen Organisationseinheiten einzuschalten. Im Rahmen ihrer Aufgaben sind auch die Risikocontrolling-Funktion, die Compliance-Funktion und die Interne Revision zu beteiligen.",
+        "class": ""
+      }
+    ]
+  },
+  {
+    "id": "art_at_8_3",
+    "title": "AT 8.3",
+    "heading": "Übernahmen und Fusionen",
+    "paragraphs": [
+      {
+        "id": "art_at_8_3__1",
+        "text": "1. Vor der Übernahme anderer Unternehmen oder Fusionen mit anderen Unternehmen hat das Institut ein Konzept zu erarbeiten, in dem die wesentlichen strategischen Ziele, die voraussichtlichen wesentlichen Konsequenzen für das Management der Risiken und die wesentlichen Auswirkungen auf das Gesamtrisikoprofil des Instituts bzw. der Gruppe dargestellt werden. Dies umfasst auch die mittelfristig geplante Entwicklung der Vermögens-, Finanz- und Ertragslage, die voraussichtliche Höhe der Risikopositionen, die notwendigen Anpassungen der Risikosteuerungs- und –controllingprozesse und der IT-Systeme (inklusive der Datenaggregationskapazitäten) sowie die Darstellung wesentlicher rechtlicher Konsequenzen (Bilanzrecht, Steuerrecht etc.).",
+        "class": ""
+      }
+    ]
+  },
+  {
+    "id": "art_at_9",
+    "title": "AT 9",
+    "heading": "Auslagerung",
+    "paragraphs": [
+      {
+        "id": "art_at_9__1",
+        "text": "1. Eine Auslagerung liegt vor, wenn ein anderes Unternehmen mit der Wahrnehmung solcher Aktivitäten und Prozesse im Zusammenhang mit der Durchführung von Bankgeschäften, Finanzdienstleistungen oder sonstigen institutstypischen Dienstleistungen beauftragt wird, die ansonsten vom Institut selbst erbracht würden. Zivilrechtliche Gestaltungen und Vereinbarungen können dabei das Vorliegen einer Auslagerung nicht von vornherein ausschließen.",
+        "class": ""
+      },
+      {
+        "id": "art_at_9__2",
+        "text": "2. Das Institut muss anhand einer Risikoanalyse bewerten, welche Risiken mit einer Auslagerung verbunden sind. Ausgehend von dieser Risikoanalyse ist eigenverantwortlich festzulegen, welche Auslagerungen von Aktivitäten und Prozessen unter Risikogesichtspunkten wesentlich sind (wesentliche Auslagerungen). Diese ist auf der Grundlage von institutsweit bzw. gruppenweit einheitlichen Rahmenvorgaben sowohl regelmäßig als auch anlassbezogen durchzuführen. Die Ergebnisse der Risikoanalyse sind in der Auslagerungs- und Risikosteuerung zu beachten. Die maßgeblichen Organisationseinheiten sind bei der Erstellung der Risikoanalyse einzubeziehen. Im Rahmen ihrer Aufgaben ist auch die Interne Revision zu beteiligen.",
+        "class": ""
+      },
+      {
+        "id": "art_at_9__3",
+        "text": "3. Bei unter Risikogesichtspunkten nicht wesentlichen Auslagerungen sind die allgemeinen Anforderungen an die Ordnungsmäßigkeit der Geschäftsorganisation gemäß § 25a Abs. 1 KWG zu beachten.",
+        "class": ""
+      },
+      {
+        "id": "art_at_9__4",
+        "text": "4. Grundsätzlich sind Aktivitäten und Prozesse auslagerbar, solange dadurch die Ordnungsmäßigkeit der Geschäftsorganisation gemäß § 25a Abs. 1 KWG nicht beeinträchtigt wird. Die Auslagerung darf nicht zu einer Delegation der Verantwortung der Geschäftsleitung an das Auslagerungsunternehmen führen. Die Leitungsaufgaben der Geschäftsleitung sind nicht auslagerbar. Besondere Maßstäbe für Auslagerungsmaßnahmen ergeben sich bei der vollständigen oder teilweisen Auslagerung der besonderen Funktionen Risikocontrolling-Funktion, Compliance-Funktion und Interne Revision. Besondere Maßstäbe können sich ferner aus spezialgesetzlichen Regelungen ergeben, wie z. B. bei Bausparkassen hinsichtlich der Kollektivsteuerung oder bei Pfandbriefbanken hinsichtlich der Deckungsregisterführung und der Deckungsrechnung. Auslagerungen dürfen nicht dazu führen, dass das Institut nur noch als leere Hülle (empty shell) existiert.",
+        "class": ""
+      },
+      {
+        "id": "art_at_9__5",
+        "text": "5. Eine Auslagerung von Aktivitäten und Prozessen in Kontrollbereichen und Kernbankbereichen kann unter Beachtung der in Tz. 4 genannten Anforderungen in einem Umfang vorgenommen werden, der gewährleistet, dass hierdurch das Institut weiterhin über Kenntnisse und Erfahrungen verfügt, die eine wirksame Überwachung der vom Auslagerungsunternehmen erbrachten Dienstleistungen gewährleistet. Es ist sicherzustellen, dass bei Bedarf - im Falle der Beendigung des Auslagerungsverhältnisses oder der Änderung der Gruppenstruktur - der ordnungsmäßige Betrieb in diesen Bereichen fortgesetzt werden kann. Eine vollständige Auslagerung der besonderen Funktionen Risikocontrolling-Funktion, Compliance-Funktion oder Interne Revision ist lediglich für Tochterinstitute innerhalb einer Institutsgruppe zulässig, sofern das auslagernde Institut sowohl hinsichtlich seiner Größe, Komplexität und dem Risikogehalt der Geschäftsaktivitäten für den nationalen Finanzsektor als auch hinsichtlich seiner Bedeutung innerhalb der Gruppe als nicht wesentlich einzustufen ist. Gleiches gilt für Gruppen, wenn das Mutterunternehmen kein Institut und im Inland ansässig ist. Eine vollständige Auslagerung der Compliance-Funktion oder der Internen Revision ist ferner nur bei kleinen Instituten möglich, sofern deren Einrichtung vor dem Hintergrund der Institutsgröße sowie der Art, des Umfangs, der Komplexität und des Risikogehalts der betriebenen Geschäftsaktivitäten nicht angemessen erscheint.",
+        "class": ""
+      },
+      {
+        "id": "art_at_9__6",
+        "text": "6. Das Institut hat bei wesentlichen Auslagerungen im Fall der beabsichtigten oder erwarteten Beendigung der Auslagerungsvereinbarung Vorkehrungen zu treffen, um die Kontinuität und Qualität der ausgelagerten Aktivitäten und Prozesse auch nach Beendigung zu gewährleisten. Für Fälle unbeabsichtigter oder unerwarteter Beendigung dieser Auslagerungen, die mit einer erheblichen Beeinträchtigung der Geschäftstätigkeit verbunden sein können, hat das Institut etwaige Handlungsoptionen auf ihre Durchführbarkeit zu prüfen und zu verabschieden. Dies beinhaltet auch, soweit sinnvoll und möglich, die Festlegung entsprechender Ausstiegsprozesse. Die Handlungsoptionen sind regelmäßig und anlassbezogen zu überprüfen.",
+        "class": ""
+      },
+      {
+        "id": "art_at_9__7",
+        "text": "7. Bei wesentlichen Auslagerungen ist im in Textform dokumentierten Auslagerungsvertrag insbesondere Folgendes zu vereinbaren:",
+        "class": ""
+      },
+      {
+        "id": "art_at_9__7_a",
+        "text": "a) Spezifizierung und ggf. Abgrenzung der vom Auslagerungsunternehmen zu erbringenden Leistung,",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_at_9__7_b",
+        "text": "b) Datum des Beginns und ggf. des Endes der Auslagerungsvereinbarung,",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_at_9__7_c",
+        "text": "c) Sofern von deutschem Recht abweichend, das geltende Recht für die Auslagerungsvereinbarung,",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_at_9__7_d",
+        "text": "d) Standorte (d.h. Regionen oder Länder), in denen die Durchführung der Dienstleistung erfolgt und / oder maßgebliche Daten gespeichert und verarbeitet werden, sowie die Regelung, dass das Institut benachrichtigt wird, wenn das Auslagerungsunternehmen den Standort wechselt,",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_at_9__7_e",
+        "text": "e) vereinbarte Dienstleistungsgüte mit eindeutig festgelegten Leistungszielen,",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_at_9__7_f",
+        "text": "f) soweit zutreffend, dass das Auslagerungsunternehmen für bestimmte Risiken einen Versicherungsnachweis vorzulegen hat.",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_at_9__7_g",
+        "text": "g) Anforderungen für die Umsetzung und Überprüfung von Notfallkonzepten,",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_at_9__7_h",
+        "text": "h) Festlegung angemessener Informations- und Prüfungsrechte der Internen Revision sowie externer Prüfer,",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_at_9__7_i",
+        "text": "i) Sicherstellung der uneingeschränkten Informations- und Prüfungsrechte sowie der Kontrollmöglichkeiten der gemäß § 25b Absatz 3 KWG zuständigen Behörden bezüglich der ausgelagerten Aktivitäten und Prozesse,",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_at_9__7_j",
+        "text": "j) soweit erforderlich Weisungsrechte,",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_at_9__7_k",
+        "text": "k) Regelungen, die sicherstellen, dass datenschutzrechtliche Bestimmungen und sonstige Sicherheitsanforderungen beachtet werden,",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_at_9__7_l",
+        "text": "l) Kündigungsrechte und angemessene Kündigungsfristen,",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_at_9__7_m",
+        "text": "m) Regelungen über die Möglichkeit und über die Modalitäten einer Weiterverlagerung, die sicherstellen, dass das Institut die bankaufsichtsrechtlichen Anforderungen weiterhin einhält,",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_at_9__7_n",
+        "text": "n) Verpflichtung des Auslagerungsunternehmens, das Institut über Entwicklungen zu informieren, die die ordnungsgemäße Erledigung der ausgelagerten Aktivitäten und Prozesse beeinträchtigen können.",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_at_9__8",
+        "text": "8. Mit Blick auf Weiterverlagerungen sind möglichst Zustimmungsvorbehalte des auslagernden Instituts oder konkrete Voraussetzungen, wann Weiterverlagerungen einzelner Arbeits- und Prozessschritte möglich sind, im Auslagerungsvertrag zu vereinbaren. Zumindest ist vertraglich sicherzustellen, dass die Vereinbarungen des Auslagerungsunternehmens mit Subunternehmen im Einklang mit den vertraglichen Vereinbarungen des originären Auslagerungsvertrags stehen. Ferner haben die vertraglichen Anforderungen bei Weiterverlagerungen auch eine Informationspflicht des Auslagerungsunternehmens an das auslagernde Institut zu umfassen. Es muss sichergestellt sein, dass das Auslagerungsunternehmen im Falle einer Weiterverlagerung auf ein Subunternehmen weiterhin gegenüber dem auslagernden Institut berichtspflichtig bleibt.",
+        "class": ""
+      },
+      {
+        "id": "art_at_9__9",
+        "text": "9. Das Institut hat die mit Auslagerungen verbundenen Risiken angemessen zu steuern und die Ausführung der ausgelagerten Aktivitäten und Prozesse ordnungsgemäß zu überwachen. Dies umfasst bei wesentlichen Auslagerungen auch die laufende Überwachung der Leistung des Auslagerungsunternehmens anhand vorzuhaltender Kriterien (z. B. Key Performance Indicators, Key Risk Indicators) und vertraglich vereinbarter Informationen des Auslagerungsunternehmens; die Qualität der erbrachten Leistungen ist regelmäßig zu beurteilen.",
+        "class": ""
+      },
+      {
+        "id": "art_at_9__10",
+        "text": "10. Für die Dokumentation, Steuerung und Überwachung wesentlicher Auslagerungen hat das Institut klare Verantwortlichkeiten festzulegen. Soweit besondere Funktionen nach Maßgabe von Tz. 5 vollständig ausgelagert werden, hat die Geschäftsleitung jeweils einen Beauftragten zu benennen, der eine ordnungsgemäße Durchführung der jeweiligen Aufgaben gewährleisten muss. Die Anforderungen des <a href=\"#a:act_de_marisk_2024_0006:art_at_4_4_3\" class=\"ref\" data-article=\"AT 4.4.3\">AT 4.4.3</a> und BT 2 sind entsprechend zu beachten.",
+        "class": ""
+      },
+      {
+        "id": "art_at_9__11",
+        "text": "11. Die Anforderungen an die Auslagerung von Aktivitäten und Prozessen sind auch bei der Weiterverlagerung ausgelagerter Aktivitäten und Prozesse zu beachten.",
+        "class": ""
+      },
+      {
+        "id": "art_at_9__12",
+        "text": "12. Jedes Institut, das Auslagerungen vornimmt, hat einen zentralen Auslagerungsbeauftragten im Institut selbst einzurichten. Zusätzlich hat das Institut abhängig von der Art, dem Umfang und der Komplexität der Auslagerungsaktivitäten ein zentrales Auslagerungsmanagement zur Unterstützung des zentralen Auslagerungsbeauftragten einzurichten. Zu den Aufgaben zählen insbesondere:",
+        "class": ""
+      },
+      {
+        "id": "art_at_9__12_s2",
+        "text": "Zu den Aufgaben zählen insbesondere:",
+        "class": "subparagraph"
+      },
+      {
+        "id": "art_at_9__12_a",
+        "text": "a) Implementierung und Weiterentwicklung eines angemessenen Auslagerungsmanagements und entsprechender Kontroll- und Überwachungsprozesse,",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_at_9__12_b",
+        "text": "b) Erstellung und Pflege einer vollständigen Dokumentation der Auslagerungen (einschließlich Weiterverlagerungen),",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_at_9__12_c",
+        "text": "c) Unterstützung der Fachbereiche bezüglich der institutsinternen und gesetzlichen Anforderungen bei Auslagerungen,",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_at_9__12_d",
+        "text": "d) Koordination und Überprüfung der durch die zuständigen Bereiche durchgeführten Risikoanalyse gemäß Tz. 2.",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_at_9__13",
+        "text": "13. Der Auslagerungsbeauftragte bzw. das zentrale Auslagerungsmanagement haben mindestens jährlich einen Bericht über die wesentlichen Auslagerungen zu erstellen und der Geschäftsleitung zur Verfügung zu stellen. Zudem ist anlassbezogen zu berichten. Der Bericht hat unter Berücksichtigung der dem Institut vorliegenden Informationen bzw. der institutsinternen Bewertung der Dienstleistungsqualität der Auslagerungsunternehmen eine Aussage darüber zu treffen, ob die erbrachten Dienstleistungen der Auslagerungsunternehmen den vertraglichen Vereinbarungen entsprechen, die ausgelagerten Aktivitäten und Prozesse angemessen gesteuert und überwacht werden können und ob weitere risikomindernde Maßnahmen ergriffen werden sollen.",
+        "class": ""
+      },
+      {
+        "id": "art_at_9__14",
+        "text": "14. Grundsätzlich hat das Institut ein aktuelles Auslagerungsregister mit Informationen über alle Auslagerungsvereinbarungen vorzuhalten. Die inhaltlichen Mindestanforderungen an das Auslagerungsregister finden sich für alle Auslagerungen in Tz. 54 und für wesentliche Auslagerungen in Tz. 55 der EBA Leitlinien zu Auslagerungen (EBA/GL/2019/02). Das Auslagerungsregister umfasst alle Auslagerungsvereinbarungen, einschließlich der Auslagerungsvereinbarungen mit Auslagerungsunternehmen innerhalb einer Institutsgruppe oder eines Finanzverbundes. Ferner ist bei der Weiterverlagerung von wesentlichen Auslagerungen von dem auslagernden Institut festzulegen, ob der weiter zu verlagernde Teil wesentlich und dieser wesentliche Teil im Auslagerungsregister zu erfassen ist.",
+        "class": ""
+      },
+      {
+        "id": "art_at_9__15",
+        "text": "15. Im Hinblick auf Gruppen gemäß <a href=\"#a:act_de_marisk_2024_0006:art_at_4_5\" class=\"ref\" data-article=\"AT 4.5\">AT 4.5</a> oder Finanzverbünde ergeben sich die folgenden Erleichterungen:",
+        "class": ""
+      },
+      {
+        "id": "art_at_9__15_a",
+        "text": "a) Bei gruppen- und verbundinternen Auslagerungen können im Rahmen der Risikoanalyse gem. Tz. 2 wirksame Vorkehrungen auf Gruppen- bzw. Verbundebene, insbesondere ein einheitliches und umfassendes Risikomanagement sowie Durchgriffsrechte, bei der Erstellung und Anpassung der Risikoanalyse risikomindernd berücksichtigt werden.",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_at_9__15_b",
+        "text": "b) Für Auslagerungen mehrerer Institute einer Gruppe bzw. eines Verbundes an ein bzw. mehrere gemeinsame Auslagerungsunternehmen, besteht die Möglichkeit, ein zentrales Auslagerungsmanagement auf Gruppen- bzw. Verbundebene einzurichten, sofern das zentrale Auslagerungsmanagement den Anforderungen des Moduls <a href=\"#a:act_de_marisk_2024_0006:art_at_9\" class=\"ref\" data-article=\"AT 9\">AT 9</a> bzw., sofern nicht einschlägig, den Anforderungen der EBA/GL/2019/02 genügt.",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_at_9__15_c",
+        "text": "c) Bei der Risikoberichterstattung von Auslagerungsunternehmen, die innerhalb einer Gruppe / eines Verbundes genutzt werden, besteht die Möglichkeit einer zentralen Vorauswertung, welche den auslagernden Instituten die weitere Verwendung erleichtert.",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_at_9__15_d",
+        "text": "d) Bei gruppen- und verbundinternen Auslagerungen kann auf die Erstellung von Ausstiegsprozessen und Handlungsoptionen verzichtet werden.",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_at_9__15_e",
+        "text": "e) Wird gruppen- oder verbundintern ein zentrales Auslagerungsregister eingerichtet und geführt, so muss sichergestellt sein, dass das einzelne Institut und die zuständige Behörde das individuelle Auslagerungsregister bei Bedarf ohne größere Verzögerung erhalten.",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_at_9__15_i40",
+        "text": "Auch für Auslagerungen innerhalb einer Institutsgruppe oder eines Finanzverbundes an ein zentrales Auslagerungsunternehmen innerhalb der Gruppe bzw. des Verbundes sind die Bedingungen, einschließlich der finanziellen Bedingungen, festzulegen.",
+        "class": "list-item-l1"
+      }
+    ]
+  },
+  {
+    "id": "art_bt_1",
+    "title": "BT 1",
+    "heading": "Besondere Anforderungen an das interne Kontrollsystem",
+    "paragraphs": [
+      {
+        "id": "art_bt_1__1",
+        "text": "1. In diesem Modul werden besondere Anforderungen an die Ausgestaltung des internen Kontrollsystems gestellt. Die Anforderungen beziehen sich vor allem auf die Ausgestaltung der Aufbau- und Ablauforganisation im Kredit-, Handels- und Immobiliengeschäft (BTO). Darüber hinaus werden unter Berücksichtigung von Risikokonzentrationen und den Auswirkungen von ESG-Risiken Anforderungen an die angemessene Ausgestaltung der Risikosteuerungs- und -controllingprozesse für Adressenausfallrisiken, Marktpreisrisiken, Liquiditätsrisiken und operationelle Risiken gestellt (BTR).",
+        "class": ""
+      }
+    ]
+  },
+  {
+    "id": "art_bto",
+    "title": "BTO",
+    "heading": "Anforderungen an die Aufbau- und Ablauforganisation",
+    "paragraphs": [
+      {
+        "id": "art_bto__1",
+        "text": "1. Dieses Modul stellt vor allem Anforderungen an die Aufbau- und Ablauforganisation im Kredit-, Handels- und Immobiliengeschäft. Abhängig von der Größe der Institute, den Geschäftsschwerpunkten und der Risikosituation ist eine vereinfachte Umsetzung der Anforderungen in BTO möglich.",
+        "class": ""
+      },
+      {
+        "id": "art_bto__2",
+        "text": "2. Für die Zwecke des Rundschreibens werden folgende Bereiche unterschieden:",
+        "class": ""
+      },
+      {
+        "id": "art_bto__2_a",
+        "text": "a) Der Bereich, der Kreditgeschäfte initiiert und bei den Kreditentscheidungen über ein Votum verfügt (Markt),",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_bto__2_b",
+        "text": "b) Der Bereich, der Immobiliengeschäfte initiiert und bei den Entscheidungen über ein Votum verfügt (Markt),",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_bto__2_c",
+        "text": "c) der Bereich, der bei den Kreditentscheidungen über ein weiteres Votum verfügt (Marktfolge),",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_bto__2_d",
+        "text": "d) der Bereich, der bei den Entscheidungen über den Abschluss von Immobiliengeschäften über ein weiteres Votum verfügt (Marktfolge) sowie",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_bto__2_e",
+        "text": "e) der Bereich Handel.",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_bto__2_i8",
+        "text": "Darüber hinaus werden folgende Funktionen unterschieden:",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_bto__2_f",
+        "text": "f) Die Funktionen, die der Überwachung und Kommunikation der Risiken (Risikocontrolling) dienen und",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_bto__2_g",
+        "text": "g) die Funktionen, die der Abwicklung und Kontrolle der Handelsgeschäfte dienen.",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_bto__3",
+        "text": "3. Grundsätzlich ist bei der Ausgestaltung der Aufbauorganisation sicherzustellen, dass die Bereiche Markt (Kreditgeschäft) und Handel bis einschließlich der Ebene der Geschäftsleitung von denen in Tz. 2 unter c), f) und g) sowie den in <a href=\"#a:act_de_marisk_2024_0006:art_bto_1_1\" class=\"ref\" data-article=\"BTO 1.1\">BTO 1.1</a> Tz. 7, <a href=\"#a:act_de_marisk_2024_0006:art_bto_1_2\" class=\"ref\" data-article=\"BTO 1.2\">BTO 1.2</a> Tz. 1, <a href=\"#a:act_de_marisk_2024_0006:art_bto_1_2_4\" class=\"ref\" data-article=\"BTO 1.2.4\">BTO 1.2.4</a> Tz. 1, <a href=\"#a:act_de_marisk_2024_0006:art_bto_1_2_5\" class=\"ref\" data-article=\"BTO 1.2.5\">BTO 1.2.5</a> Tz. 1 und <a href=\"#a:act_de_marisk_2024_0006:art_bto_1_4\" class=\"ref\" data-article=\"BTO 1.4\">BTO 1.4</a> Tz. 2 genannten Bereichen oder Funktionen getrennt sind. Der Bereich Markt im Immobiliengeschäft ist bis einschließlich der Ebene der Geschäftsleitung von den in Tz. 2 unter d) und f) genannten Bereichen und Funktionen sowie von der in <a href=\"#a:act_de_marisk_2024_0006:art_bto_3_2\" class=\"ref\" data-article=\"BTO 3.2\">BTO 3.2</a> Tz. 3 genannten Funktion zu trennen.",
+        "class": ""
+      },
+      {
+        "id": "art_bto__4",
+        "text": "4. Funktionen des Marktpreisrisikocontrollings sind bis einschließlich der Ebene der Geschäftsleitung von Bereichen zu trennen, die die Positionsverantwortung tragen.",
+        "class": ""
+      },
+      {
+        "id": "art_bto__5",
+        "text": "5. Die Funktionstrennungen sind auch im Vertretungsfall zu beachten. Die Vertretung kann dabei grundsätzlich auch von einem geeigneten Mitarbeiter unterhalb der Ebene der Geschäftsleitung wahrgenommen werden.",
+        "class": ""
+      },
+      {
+        "id": "art_bto__6",
+        "text": "6. Die Mitwirkung des für die Funktionen des Risikocontrollings zuständigen Geschäftsleiters in einem von der Geschäftsleitung mit der Steuerung der Risiken betrauten Ausschuss steht dem Grundsatz der Funktionstrennung nicht entgegen.",
+        "class": ""
+      },
+      {
+        "id": "art_bto__7",
+        "text": "7. Das Rechnungswesen, insbesondere die Aufstellung der Kontierungsregeln sowie die Entwicklung der Buchungssystematik, ist in einer vom Markt und Handel unabhängigen Stelle anzusiedeln.",
+        "class": ""
+      },
+      {
+        "id": "art_bto__8",
+        "text": "8. Wesentliche Rechtsrisiken sind grundsätzlich in einer vom Markt und Handel unabhängigen Stelle (z. B. der Rechtsabteilung) zu überprüfen.",
+        "class": ""
+      },
+      {
+        "id": "art_bto__9",
+        "text": "9. Bei IT-gestützter Bearbeitung ist die Funktionstrennung durch entsprechende Verfahren und Schutzmaßnahmen sicherzustellen.",
+        "class": ""
+      }
+    ]
+  },
+  {
+    "id": "art_bto_1",
+    "title": "BTO 1",
+    "heading": "Kreditgeschäft",
+    "paragraphs": [
+      {
+        "id": "art_bto_1__1",
+        "text": "1. Dieses Modul stellt Anforderungen an die Ausgestaltung der Aufbau- und Ablauforganisation, die Verfahren zur Früherkennung von Risiken und die Verfahren zur Klassifizierung der Risiken im Kreditgeschäft. Bei Handelsgeschäften und Beteiligungen kann von der Umsetzung einzelner Anforderungen dieses Moduls abgesehen werden, soweit deren Umsetzung vor dem Hintergrund der Besonderheiten dieser Geschäftsarten nicht zweckmäßig ist (z. B. die Anforderungen zur Kreditverwendungskontrolle unter <a href=\"#a:act_de_marisk_2024_0006:art_bto_1_2_2\" class=\"ref\" data-article=\"BTO 1.2.2\">BTO 1.2.2</a> Tz. 1).",
+        "class": ""
+      }
+    ]
+  },
+  {
+    "id": "art_bto_1_1",
+    "title": "BTO 1.1",
+    "heading": "Funktionstrennung und Votierung",
+    "paragraphs": [
+      {
+        "id": "art_bto_1_1__1",
+        "text": "1. Maßgeblicher Grundsatz für die Ausgestaltung der Prozesse im Kreditgeschäft ist die klare aufbauorganisatorische Trennung der Bereiche Markt und Marktfolge bis einschließlich der Ebene der Geschäftsleitung. Bei kleinen Instituten sind unter bestimmten Voraussetzungen Ausnahmen hinsichtlich der Funktionstrennung möglich.",
+        "class": ""
+      },
+      {
+        "id": "art_bto_1_1__2",
+        "text": "2. Abhängig von Art, Umfang, Komplexität und Risikogehalt des Kreditengagements erfordert eine Kreditentscheidung zwei zustimmende Voten der Bereiche Markt und Marktfolge. Weitergehende Beschlussfassungsvorschriften (z. B. KWG, Satzung) bleiben hiervon unberührt. Soweit die Entscheidungen von einem Ausschuss getroffen werden, sind die Mehrheitsverhältnisse innerhalb eines Ausschusses so festzulegen, dass der Bereich Marktfolge nicht überstimmt werden kann.",
+        "class": ""
+      },
+      {
+        "id": "art_bto_1_1__3",
+        "text": "3. Bei Handelsgeschäften sind Kontrahenten- und Emittentenlimite durch eine Votierung aus dem Bereich Marktfolge festzulegen.",
+        "class": ""
+      },
+      {
+        "id": "art_bto_1_1__4",
+        "text": "4. Für Kreditentscheidungen bei Geschäften, die unter Risikogesichtspunkten als nicht wesentlich einzustufen sind, kann das Institut bestimmen, dass nur ein Votum erforderlich ist („nicht-risikorelevante Kreditgeschäfte“). Vereinfachungen sind auch dann möglich, wenn Kreditgeschäfte von Dritten initiiert werden. Insoweit ist die aufbauorganisatorische Trennung zwischen Markt und Marktfolge nur für Kreditgeschäfte maßgeblich, bei denen zwei Voten erforderlich sind. Falls ein zweites Votum nicht erforderlich sein sollte, ist eine angemessene Umsetzung der Anforderungen in <a href=\"#a:act_de_marisk_2024_0006:art_bto_1_2\" class=\"ref\" data-article=\"BTO 1.2\">BTO 1.2</a> sicherzustellen.",
+        "class": ""
+      },
+      {
+        "id": "art_bto_1_1__5",
+        "text": "5. Jeder Geschäftsleiter kann im Rahmen seiner Krediteinzelkompetenz eigenständig Kreditentscheidungen treffen und auch Kundenkontakte wahrnehmen. Die aufbauorganisatorische Trennung der Bereiche Markt und Marktfolge bleibt davon unberührt. Zudem sind zwei Voten einzuholen, soweit dies unter Risikogesichtspunkten erforderlich sein sollte. Falls die im Rahmen einer Krediteinzelkompetenz getroffenen Entscheidungen von den Voten abweichen oder wenn sie vom Geschäftsleiter getroffen werden, der für den Bereich Marktfolge zuständig ist, sind sie im Risikobericht besonders hervorzuheben (<a href=\"#a:act_de_marisk_2024_0006:art_bt_3_2\" class=\"ref\" data-article=\"BT 3.2\">BT 3.2</a> Tz. 3).",
+        "class": ""
+      },
+      {
+        "id": "art_bto_1_1__6",
+        "text": "6. Das Institut hat eine klare und konsistente Kompetenzordnung für Entscheidungen im Kreditgeschäft festzulegen. Für den Fall voneinander abweichender Voten sind in der Kompetenzordnung Entscheidungsregeln zu treffen: Der Kredit ist in diesen Fällen abzulehnen oder zur Entscheidung auf eine höhere Kompetenzstufe zu verlagern (Eskalationsverfahren).",
+        "class": ""
+      },
+      {
+        "id": "art_bto_1_1__7",
+        "text": "7. Die Überprüfung bestimmter, unter Risikogesichtspunkten festzulegender Sicherheiten ist außerhalb des Bereichs Markt durchzuführen. Diese Zuordnung gilt auch für Entscheidungen über die Risikovorsorge bei bedeutenden Engagements. Die Zuordnung aller anderen in <a href=\"#a:act_de_marisk_2024_0006:art_bto_1_2\" class=\"ref\" data-article=\"BTO 1.2\">BTO 1.2</a> genannten Prozesse bzw. Teilprozesse liegt, soweit dieses Rundschreiben nichts anderes vorsieht, im Ermessen der Institute (z. B. die Kreditbearbeitung oder Teilprozesse der Kreditbearbeitung).",
+        "class": ""
+      }
+    ]
+  },
+  {
+    "id": "art_bto_1_2",
+    "title": "BTO 1.2",
+    "heading": "Anforderungen an die Prozesse im Kreditgeschäft",
+    "paragraphs": [
+      {
+        "id": "art_bto_1_2__1",
+        "text": "1. Das Institut hat Prozesse für die Kreditbearbeitung (Kreditgewährung und Kreditweiterbearbeitung), die Kreditbearbeitungskontrolle, die Intensivbetreuung, die Problemkreditbearbeitung und die Risikovorsorge einzurichten. Die Verantwortung für deren Entwicklung und Qualität muss außerhalb des Bereichs Markt angesiedelt sein.",
+        "class": ""
+      },
+      {
+        "id": "art_bto_1_2__2",
+        "text": "2. Das Institut hat Bearbeitungsgrundsätze für die Prozesse im Kreditgeschäft zu formulieren, die, soweit erforderlich, in geeigneter Weise zu differenzieren sind (z. B. nach Kreditarten). Darüber hinaus sind die vom Institut akzeptierten Sicherheitenarten sowie die Verfahren zur Wertermittlung, Verwaltung und Verwertung dieser Sicherheiten festzulegen. Bei der Festlegung der Verfahren zur Wertermittlung von Sicherheiten ist auf geeignete Wertermittlungsverfahren abzustellen. Die Verfahren zur Wertermittlung von Sicherheiten sind mindestens jährlich zu überprüfen und vor ihrer erstmaligen Verwendung sowie im Falle wesentlicher Anpassungen von der Geschäftsleitung zu genehmigen. Die regelmäßige Überprüfung eines Wertermittlungsverfahrens ist jedoch nicht erforderlich, soweit das Institut ein allgemein anerkanntes, normiertes Verfahren (welches z. B. im Einklang mit der BelWertV steht) anwendet.",
+        "class": ""
+      },
+      {
+        "id": "art_bto_1_2__3",
+        "text": "3. Die mit der Wertermittlung von Immobiliensicherheiten und beweglichen Vermögenswerten betrauten sachverständigen Personen haben über die erforderlichen Qualifikationen und Erfahrungen zu verfügen und dürfen nicht in den Kreditvergabeprozess und in die Kreditbearbeitung eingebunden sein. Dabei können externe Sachverständige für diese Zwecke herangezogen werden. Mögliche Interessenkonflikte im Zusammenhang mit der Wertermittlung sind auszuschließen. Eine angemessene Rotation der für die Wertermittlung von Immobiliensicherheiten zuständigen Personen ist sicherzustellen.",
+        "class": ""
+      },
+      {
+        "id": "art_bto_1_2__4",
+        "text": "4. Die für das Adressenausfallrisiko eines Kreditengagements bedeutsamen Aspekte sind herauszuarbeiten und zu beurteilen, wobei die Intensität dieser Tätigkeiten vom Risikogehalt des Engagements abhängt. Branchen- und ggf. Länderrisiken sowie die Auswirkungen von ESG-Risiken sind in angemessener Weise zu berücksichtigen. Bei der Beurteilung der Auswirkungen von ESG-Risiken ist ein angemessen langer Zeitraum zu wählen.",
+        "class": ""
+      },
+      {
+        "id": "art_bto_1_2__5",
+        "text": "5. Die Verwendung externer Bonitätseinschätzungen enthebt das Institut nicht von seiner Verpflichtung, sich ein Urteil über das Adressenausfallrisiko zu bilden und dabei eigene Erkenntnisse und Informationen in die Kreditentscheidung einfließen zu lassen.",
+        "class": ""
+      },
+      {
+        "id": "art_bto_1_2__6",
+        "text": "6. Abhängig vom Risikogehalt der Kreditgeschäfte sind sowohl im Rahmen der Kreditentscheidung als auch bei turnusmäßigen oder anlassbezogenen Beurteilungen die Risiken eines Engagements mit Hilfe von Risikoklassifizierungsverfahren zu bewerten. Dabei sind die Auswirkungen von ESG-Risiken angemessen zu berücksichtigen. Eine Überprüfung der Risikoeinstufung ist jährlich durchzuführen.",
+        "class": ""
+      },
+      {
+        "id": "art_bto_1_2__7",
+        "text": "7. Die Konditionsgestaltung soll den Risikoappetit, die Geschäftsstrategie sowie die Art der Darlehen und Kreditnehmer berücksichtigen und alle relevanten Kosten abwägen. Zudem ist die Konditionengestaltung angemessen zu dokumentieren, durch geeignete Governancestrukturen zu unterstützen und mit angemessenen Leistungsindikatoren zu überwachen.",
+        "class": ""
+      },
+      {
+        "id": "art_bto_1_2__8",
+        "text": "8. Das Institut hat ein der Kompetenzordnung entsprechendes Verfahren einzurichten, in dem festgelegt ist, wie Überschreitungen von Limiten zu behandeln sind. Soweit unter Risikogesichtspunkten vertretbar, ist für Limitüberschreitungen und Prolongationen auf der Grundlage klarer Vorgaben eine vereinfachte Umsetzung der Anforderungen in <a href=\"#a:act_de_marisk_2024_0006:art_bto_1_1\" class=\"ref\" data-article=\"BTO 1.1\">BTO 1.1</a> sowie <a href=\"#a:act_de_marisk_2024_0006:art_bto_1_2\" class=\"ref\" data-article=\"BTO 1.2\">BTO 1.2</a> möglich.",
+        "class": ""
+      },
+      {
+        "id": "art_bto_1_2__9",
+        "text": "9. Im Hinblick auf die erforderlichen Kreditunterlagen ist ein Verfahren einzurichten, das deren zeitnahe Einreichung überwacht und eine zeitnahe Auswertung gewährleistet. Für ausstehende Unterlagen ist ein entsprechendes Mahnverfahren einzurichten.",
+        "class": ""
+      },
+      {
+        "id": "art_bto_1_2__10",
+        "text": "10. Das Institut hat standardisierte Kreditvorlagen zu verwenden, soweit dies in Anbetracht der jeweiligen Geschäftsarten möglich und zweckmäßig ist, wobei die Ausgestaltung der Kreditvorlagen von Art, Umfang, Komplexität und Risikogehalt der Kreditgeschäfte abhängt.",
+        "class": ""
+      },
+      {
+        "id": "art_bto_1_2__11",
+        "text": "11. Vertragliche Vereinbarungen im Kreditgeschäft sind auf der Grundlage rechtlich geprüfter Unterlagen abzuschließen.",
+        "class": ""
+      },
+      {
+        "id": "art_bto_1_2__12",
+        "text": "12. Für die einzelnen Kreditverträge sind rechtlich geprüfte Standardtexte zu verwenden, die anlassbezogen zu aktualisieren sind. Falls bei einem Engagement (z. B. im Rahmen von Individualvereinbarungen) von den Standardtexten abgewichen werden soll, ist, soweit unter Risikogesichtspunkten erforderlich, vor Abschluss des Vertrages die rechtliche Prüfung durch eine vom Bereich Markt unabhängige Stelle notwendig.ein.",
+        "class": ""
+      }
+    ]
+  },
+  {
+    "id": "art_bto_1_2_1",
+    "title": "BTO 1.2.1",
+    "heading": "Kreditgewährung",
+    "paragraphs": [
+      {
+        "id": "art_bto_1_2_1__1",
+        "text": "1. Der Prozess der Kreditgewährung umfasst die bis zur Bereitstellung des Kredites erforderlichen Arbeitsabläufe. Dabei sind die für die Beurteilung des Risikos wichtigen Faktoren und die Auswirkungen von ESG-Risiken unter besonderer Berücksichtigung der Kapitaldienstfähigkeit des Kreditnehmers bzw. des Objektes/Projektes zu analysieren und zu beurteilen, wobei die Intensität der Beurteilung vom Risikogehalt der Engagements abhängt (z. B. Kreditwürdigkeitsprüfung, Risikoeinstufung im Risikoklassifizierungs-verfahren oder eine Beurteilung auf der Grundlage eines vereinfachten Verfahrens).",
+        "class": ""
+      },
+      {
+        "id": "art_bto_1_2_1__2",
+        "text": "2. Die Werthaltigkeit und der rechtliche Bestand von Sicherheiten sind grundsätzlich vor der Kreditvergabe zu überprüfen. Der Wertansatz muss hinsichtlich wertbeeinflussender Umstände nachvollziehbar und in den Annahmen und Parametern begründet sein. Bei der Überprüfung der Werthaltigkeit kann auf bereits vorhandene Sicherheitenwerte zurückgegriffen werden, sofern keine Anhaltspunkte für Wertveränderungen vorliegen.",
+        "class": ""
+      }
+    ]
+  },
+  {
+    "id": "art_bto_1_2_2",
+    "title": "BTO 1.2.2",
+    "heading": "Kreditweiterbearbeitung",
+    "paragraphs": [
+      {
+        "id": "art_bto_1_2_2__1",
+        "text": "1. Im Rahmen der Kreditweiterbearbeitung ist zu überwachen, ob die vertraglichen Vereinbarungen vom Kreditnehmer eingehalten werden. Bei zweckgebundenen Kreditvergaben ist zu kontrollieren, ob die valutierten Mittel der vereinbarten Verwendung zukommen (Kreditverwendungskontrolle).",
+        "class": ""
+      },
+      {
+        "id": "art_bto_1_2_2__2",
+        "text": "2. Eine Beurteilung der Adressenausfallrisiken ist mindestens jährlich durchzuführen, wobei die Intensität der Beurteilungen vom Risikogehalt der Engagements abhängt (z. B. Kreditwürdigkeitsprüfung, Risikoeinstufung im Risikoklassifizierungsverfahren oder eine Beurteilung auf der Grundlage eines vereinfachten Verfahrens). Es sind die Anforderungen der EBA-Leitlinien für die Kreditvergabe und Überwachung (EBA/GL/2020/06) des Abschnittes 8.3 (Regelmäßige Überprüfung der Kreditnehmer) zu beachten.",
+        "class": ""
+      },
+      {
+        "id": "art_bto_1_2_2__3",
+        "text": "3. Die Werthaltigkeit und der rechtliche Bestand von Sicherheiten sind im Rahmen der Kreditweiterbearbeitung in Abhängigkeit von der Sicherheitenart zu überwachen und ggf. zu überprüfen sowie – je nach Ergebnis dieser Überprüfung – neu zu bewerten. Ab einer vom Institut unter Risikogesichtspunkten festzulegenden Grenze sind die Sicherheiten in angemessenen Abständen zu überprüfen und ggf. neu zu bewerten.",
+        "class": ""
+      },
+      {
+        "id": "art_bto_1_2_2__4",
+        "text": "4. Außerordentliche Überprüfungen von Engagements einschließlich der Sicherheiten sind zumindest dann unverzüglich durchzuführen, wenn dem Institut aus externen oder internen Quellen Informationen bekannt werden, die auf eine wesentliche negative Änderung der Risikoeinschätzung der Engagements oder der Sicherheiten hindeuten. Derartige Informationen sind unverzüglich an alle einzubindenden Organisationseinheiten weiterzuleiten.",
+        "class": ""
+      }
+    ]
+  },
+  {
+    "id": "art_bto_1_2_3",
+    "title": "BTO 1.2.3",
+    "heading": "Kreditbearbeitungskontrolle",
+    "paragraphs": [
+      {
+        "id": "art_bto_1_2_3__1",
+        "text": "1. Für die Kreditbearbeitung sind prozessabhängige Kontrollen einzurichten, die gewährleisten, dass die Vorgaben der Organisationsrichtlinien eingehalten werden. Die Kontrollen können auch im Rahmen des üblichen Vier-Augen-Prinzips erfolgen.",
+        "class": ""
+      },
+      {
+        "id": "art_bto_1_2_3__2",
+        "text": "2. Insbesondere ist zu kontrollieren, ob die Kreditentscheidung entsprechend der festgelegten Kompetenzordnung erfolgte und ob vor der Valutierung die Voraussetzungen bzw. Auflagen aus dem Kreditvertrag erfüllt sind.",
+        "class": ""
+      }
+    ]
+  },
+  {
+    "id": "art_bto_1_2_4",
+    "title": "BTO 1.2.4",
+    "heading": "Intensivbetreuung",
+    "paragraphs": [
+      {
+        "id": "art_bto_1_2_4__1",
+        "text": "1. Das Institut hat Kriterien festzulegen, wann ein Engagement der Intensivbetreuung zuzuordnen ist. Die Verantwortung für die Entwicklung und Qualität dieser Kriterien sowie deren regelmäßige Überprüfung muss außerhalb des Bereichs Markt angesiedelt sein.",
+        "class": ""
+      },
+      {
+        "id": "art_bto_1_2_4__2",
+        "text": "2. Mit Übergang in die Intensivbetreuung sind für diese Engagements Maßnahmen mit dem Ziel der Rückführung in die Normalbetreuung zu ergreifen und zu überwachen.",
+        "class": ""
+      },
+      {
+        "id": "art_bto_1_2_4__3",
+        "text": "3. Die einer Intensivbetreuung unterliegenden Engagements sind nach einem festzulegenden Turnus auf ihre weitere Behandlung hin zu überprüfen (weitere Intensivbetreuung, Rückführung in die Normalbetreuung, Abgabe an die Abwicklung oder die Sanierung).",
+        "class": ""
+      }
+    ]
+  },
+  {
+    "id": "art_bto_1_2_5",
+    "title": "BTO 1.2.5",
+    "heading": "Behandlung von Problemkrediten",
+    "paragraphs": [
+      {
+        "id": "art_bto_1_2_5__1",
+        "text": "1. Das Institut hat Kriterien festzulegen, die die Abgabe eines Engagements an die auf die Sanierung bzw. Abwicklung spezialisierten Mitarbeiter oder Bereiche bzw. deren Einschaltung regeln. Die Verantwortung für die Entwicklung und die Qualität dieser Kriterien sowie deren regelmäßige Überprüfung muss außerhalb des Bereichs Markt angesiedelt sein. Die Federführung für den Sanierungs- bzw. den Abwicklungsprozess oder die Überwachung dieser Prozesse ist außerhalb des Bereichs Markt wahrzunehmen.",
+        "class": ""
+      },
+      {
+        "id": "art_bto_1_2_5__2",
+        "text": "2. Im Rahmen der Überleitung des Engagements in die Sanierung bzw. Abwicklung hat eine Überprüfung der Werthaltigkeit von Sicherheiten und ggf. eine neue, unter Realisationsgesichtspunkten erstellte Wertermittlung zu erfolgen. Mindestens jährlich ist eine Überprüfung durchzuführen, wobei erhebliche Schwankungen und insbesondere ein erheblicher Rückgang des Sicherheitenwertes zu berücksichtigen sind. In den Prozess der Überprüfung der Werthaltigkeit bzw. der Wertermittlung sind Mitarbeiter oder ggf. externe Spezialisten mit entsprechenden Kenntnissen einzubeziehen.",
+        "class": ""
+      },
+      {
+        "id": "art_bto_1_2_5__3",
+        "text": "3. Entscheidet sich das Institut trotz Erfüllung der Kriterien für den Übergang in die Sanierung bzw. Abwicklung und trotz wesentlicher Leistungsstörungen für einen Verbleib in der Intensivbetreuung, ist sicherzustellen, dass das Adressenausfallrisiko des Kredits verringert oder begrenzt werden kann. Das Vorgehen ist mit den auf die Sanierung bzw. Abwicklung spezialisierten Mitarbeitern abzustimmen. Rechtliche Risiken und die Werthaltigkeit von Sicherheiten sind dabei zu prüfen.",
+        "class": ""
+      },
+      {
+        "id": "art_bto_1_2_5__4",
+        "text": "4. Zieht ein Institut die Begleitung einer Sanierung in Betracht, hat es sich ein Sanierungskonzept zur Beurteilung der Sanierungsfähigkeit des Kreditnehmers vorlegen zu lassen und auf dieser Grundlage ein eigenständiges Urteil darüber zu treffen, ob eine Sanierung erreicht werden kann.",
+        "class": ""
+      },
+      {
+        "id": "art_bto_1_2_5__5",
+        "text": "5. Die Umsetzung des Sanierungskonzeptes sowie die Auswirkungen der Maßnahmen sind vom Institut zu überwachen.",
+        "class": ""
+      },
+      {
+        "id": "art_bto_1_2_5__6",
+        "text": "6. Die zuständigen Geschäftsleiter sind bei bedeutenden Engagements regelmäßig über den Stand der Sanierung zu informieren. Erforderlichenfalls kann bei dem Sanierungsprozess auf externe Spezialisten mit entsprechenden Kenntnissen zurückgegriffen werden.",
+        "class": ""
+      },
+      {
+        "id": "art_bto_1_2_5__7",
+        "text": "7. Für den Fall der Abwicklung eines Engagements ist ein Abwicklungskonzept zu erstellen, in dem geeignete Abwicklungsmaßnahmen festzulegen sind. Die Maßnahmen sind regelmäßig zu überwachen. In den Prozess der Verwertung der Sicherheiten sind Mitarbeiter oder ggf. externe Spezialisten mit entsprechenden Kenntnissen einzubeziehen.",
+        "class": ""
+      },
+      {
+        "id": "art_bto_1_2_5__8",
+        "text": "8. Zieht ein Institut Rettungserwerbe in Betracht, hat es eine Richtlinie zu entwickeln, die das Verfahren zum Erwerb von gestellten Sicherheiten beschreibt. Die Richtlinie hat auch die beabsichtigte Haltedauer sowie Verfahren zur angemessenen Bewertung und Überprüfung der erworbenen Vermögenswerte festzulegen.",
+        "class": ""
+      },
+      {
+        "id": "art_bto_1_2_5__9",
+        "text": "9. Im Rahmen der Überwachung der notleidenden Risikopositionen hat das Institut geeignete Fristen für die Behandlung von besicherten und unbesicherten NPE festzulegen, die sicherstellen, dass Bestände an notleidenden Risikopositionen in einem angemessenen Zeitraum abgebaut werden.",
+        "class": ""
+      }
+    ]
+  },
+  {
+    "id": "art_bto_1_2_6",
+    "title": "BTO 1.2.6",
+    "heading": "Risikovorsorge",
+    "paragraphs": [
+      {
+        "id": "art_bto_1_2_6__1",
+        "text": "1. Das Institut hat Kriterien festzulegen, auf deren Grundlage unter Beachtung der angewandten Rechnungslegungsnormen Wertberichtigungen, Abschreibungen und Rückstellungen für das Kreditgeschäft (einschließlich der Länderrisikovorsorge) zu bilden sind (z. B. ein institutsinternes Forderungsbewertungsverfahren). Im Rahmen der Ermittlung des Risikovorsorgebedarfs hat eine Überprüfung der Sicherheitenwerte oder ggf. eine neue Wertermittlung zu erfolgen.",
+        "class": ""
+      },
+      {
+        "id": "art_bto_1_2_6__2",
+        "text": "2. Die erforderliche Risikovorsorge ist zeitnah zu ermitteln und fortzuschreiben. Ein erheblicher Risikovorsorgebedarf ist der Geschäftsleitung unverzüglich mitzuteilen.",
+        "class": ""
+      },
+      {
+        "id": "art_bto_1_2_6__3",
+        "text": "3. Das Institut hat die Methoden und Verfahren zur Risikovorsorge anhand von Rückvergleichen regelmäßig zu überprüfen, um Abweichungen zwischen den gebildeten Wertberichtigungen und den tatsächlich eingetretenen Verlusten bis zur vollständigen Ausbuchung des Engagements möglichst zu vermeiden.",
+        "class": ""
+      }
+    ]
+  },
+  {
+    "id": "art_bto_1_3_1",
+    "title": "BTO 1.3.1",
+    "heading": "Verfahren zur Früherkennung von Risiken",
+    "paragraphs": [
+      {
+        "id": "art_bto_1_3_1__1",
+        "text": "1. Das Verfahren zur Früherkennung von Risiken dient insbesondere der rechtzeitigen Identifizierung von Kreditnehmern, bei deren Engagements sich erhöhte Risiken abzuzeichnen beginnen. Damit soll das Institut in die Lage versetzt werden, in einem möglichst frühen Stadium Gegenmaßnahmen einleiten zu können (z. B. Durchführung von Forbearance-Maßnahmen, Intensivbetreuung von Engagements).",
+        "class": ""
+      },
+      {
+        "id": "art_bto_1_3_1__2",
+        "text": "2. Für diese Zwecke hat das Institut auf der Basis quantitativer und qualitativer Risikomerkmale Indikatoren für eine frühzeitige Risikoidentifizierung zu entwickeln. Dies schließt auch, soweit sinnvoll und möglich, die Berücksichtigung der Auswirkungen von ESG-Risiken ein. Es sind die Anforderungen der EBA-Leitlinien für die Kreditvergabe und Überwachung (EBA/GL/2020/06) des Abschnittes 8.5 (Verwendung von Frühwarnindikatoren/Watchlisten bei der Kontrolle der Kreditrisiken) zu beachten.",
+        "class": ""
+      },
+      {
+        "id": "art_bto_1_3_1__3",
+        "text": "3. Das Institut kann bestimmte, unter Risikogesichtspunkten festzulegende Arten von Kreditgeschäften oder Kreditgeschäfte unterhalb bestimmter Größenordnungen von der Anwendung des Verfahrens zur Früherkennung von Risiken ausnehmen. Die Funktion der Früherkennung von Risiken kann auch von einem Risikoklassifizierungsverfahren wahrgenommen werden, soweit es eine Früherkennung von Risiken ermöglicht.",
+        "class": ""
+      }
+    ]
+  },
+  {
+    "id": "art_bto_1_3_2",
+    "title": "BTO 1.3.2",
+    "heading": "Behandlung von Forbearance",
+    "paragraphs": [
+      {
+        "id": "art_bto_1_3_2__1",
+        "text": "1. Bei der Festlegung der Kriterien für den Übergang in die Intensivbetreuung und in die Problemkreditbearbeitung hat das Institut auch diejenigen Engagements zu berücksichtigen, bei denen Zugeständnisse zugunsten des Kreditnehmers gemacht wurden (Forbearance-Maßnahmen). Ziel von Forbearance-Maßnahmen ist ein tragfähiger, nicht notleidender Rückzahlungsstatus.",
+        "class": ""
+      },
+      {
+        "id": "art_bto_1_3_2__2",
+        "text": "2. Im Hinblick auf die Forbearance-Maßnahmen hat eine Richtlinie implementiert zu sein, die mindestens folgende Punkte beinhaltet:",
+        "class": ""
+      },
+      {
+        "id": "art_bto_1_3_2__2_a",
+        "text": "a) Prozesse und Verfahren zur Gewährung von Forbearance-Maßnahmen, einschließlich der Zuständigkeiten und Verfahren zur Entscheidungsfindung,",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_bto_1_3_2__2_b",
+        "text": "b) Beschreibung der verfügbaren Forbearance-Maßnahmen einschließlich der in den Verträgen enthaltenen Maßnahmen,",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_bto_1_3_2__2_c",
+        "text": "c) Informationsanforderungen zur Prüfung der Tragfähigkeit der Maßnahmen,",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_bto_1_3_2__2_d",
+        "text": "d) Dokumentation der gewährten Maßnahmen,",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_bto_1_3_2__2_e",
+        "text": "e) Prozess und Messgrößen für die Überwachung der Wirksamkeit.",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_bto_1_3_2__2_s2",
+        "text": "Die Richtlinie ist regelmäßig vom Institut zu überprüfen.",
+        "class": "subparagraph"
+      },
+      {
+        "id": "art_bto_1_3_2__3",
+        "text": "3. Das Institut hat Kriterien festzulegen, anhand derer eine angemessene Einstufung und ggf. Umgliederung von Forborne-Risikopositionen als notleidend oder nicht-notleidend möglich ist. Bei der Umgliederung von Forborne- und notleidenden Risikopositionen ist ein geeigneter Gesundungszeitraum zu berücksichtigen. Für eine Änderung bzw. einen Wechsel des Einstufungsstatus ist die Durchführung einer Analyse der finanziellen Lage des Kreditnehmers erforderlich.",
+        "class": ""
+      },
+      {
+        "id": "art_bto_1_3_2__4",
+        "text": "4. Die für die Durchführung von Forbearance-Maßnahmen erforderliche Beurteilung finanzieller Schwierigkeiten eines Kreditnehmers hat ausschließlich auf Grundlage seiner Situation und nicht unter Berücksichtigung von bereitgestellten Sicherheiten oder Garantien zu erfolgen.",
+        "class": ""
+      },
+      {
+        "id": "art_bto_1_3_2__5",
+        "text": "5. Das Institut hat Forbearance-Maßnahmen nach tragfähigen Maßnahmen, die zur Verringerung der Risikoposition des Kreditnehmers beitragen, und nach nicht tragfähigen Maßnahmen zu unterscheiden. Dabei können in Abhängigkeit von der Art und der Laufzeit der Kredite sowohl kurzfristige als auch langfristige Forbearance-Maßnahmen in Erwägung gezogen werden, wobei der Zeitraum von maximal zwei Jahren für die Durchführung der kurzfristigen Maßnahmen grundsätzlich nicht überschritten werden sollte.",
+        "class": ""
+      },
+      {
+        "id": "art_bto_1_3_2__6",
+        "text": "6. Der Prozess für die Gewährung der Forbearance-Maßnahmen und die Wirksamkeit der gewährten Maßnahmen sind vom Institut in angemessenen Abständen zu überwachen.",
+        "class": ""
+      }
+    ]
+  },
+  {
+    "id": "art_bto_1_4",
+    "title": "BTO 1.4",
+    "heading": "Risikoklassifizierungsverfahren",
+    "paragraphs": [
+      {
+        "id": "art_bto_1_4__1",
+        "text": "1. In jedem Institut sind aussagekräftige Risikoklassifizierungsverfahren für die erstmalige bzw. die turnusmäßige oder anlassbezogene Beurteilung der Adressenausfallrisiken sowie ggf. der Objekt-/Projektrisiken einzurichten. Es sind Kriterien festzulegen, die im Rahmen der Beurteilung der Risiken eine unverzügliche und nachvollziehbare Zuweisung in eine Risikoklasse gewährleisten.",
+        "class": ""
+      },
+      {
+        "id": "art_bto_1_4__2",
+        "text": "2. Die Verantwortung für Entwicklung, Qualität und Überwachung der Anwendung der Risikoklassifizierungsverfahren muss außerhalb des Bereichs Markt angesiedelt sein.",
+        "class": ""
+      },
+      {
+        "id": "art_bto_1_4__3",
+        "text": "3. Maßgebliche Indikatoren für die Bestimmung der Adressenausfallrisiken im Risikoklassifizierungsverfahren müssen neben quantitativen auch, soweit möglich, qualitative Kriterien sein. Es ist insbesondere zu berücksichtigen, inwieweit der Kreditnehmer in der Lage ist, künftig Erträge zu erwirtschaften, um den ausgereichten Kredit zurückzuführen.",
+        "class": ""
+      },
+      {
+        "id": "art_bto_1_4__4",
+        "text": "4. Die Klassifizierungsverfahren sind in angemessener Weise in die Prozesse des Kreditgeschäfts und ggf. die Kompetenzordnung einzubinden.",
+        "class": ""
+      }
+    ]
+  },
+  {
+    "id": "art_bto_2",
+    "title": "BTO 2",
+    "heading": "Handelsgeschäft",
+    "paragraphs": [
+      {
+        "id": "art_bto_2__1",
+        "text": "1. Dieses Modul stellt Anforderungen an die Ausgestaltung der Aufbau- und Ablauforganisation im Handelsgeschäft.",
+        "class": ""
+      }
+    ]
+  },
+  {
+    "id": "art_bto_2_1",
+    "title": "BTO 2.1",
+    "heading": "Funktionstrennung",
+    "paragraphs": [
+      {
+        "id": "art_bto_2_1__1",
+        "text": "1. Maßgeblicher Grundsatz für die Ausgestaltung der Prozesse im Handelsgeschäft ist die klare aufbauorganisatorische Trennung des Bereichs Handel von den Funktionen des Risikocontrollings sowie der Abwicklung und Kontrolle bis einschließlich der Ebene der Geschäftsleitung.",
+        "class": ""
+      },
+      {
+        "id": "art_bto_2_1__2",
+        "text": "2. Von der Trennung bis einschließlich der Ebene der Geschäftsleitung kann abgesehen werden, wenn sich die Handelsaktivitäten in ihrer Gesamtheit auf Handelsgeschäfte konzentrieren, die unter Risikogesichtspunkten als nicht wesentlich einzustufen sind („nicht-risikorelevante Handelsaktivitäten“).",
+        "class": ""
+      }
+    ]
+  },
+  {
+    "id": "art_bto_2_2_1",
+    "title": "BTO 2.2.1",
+    "heading": "Handel",
+    "paragraphs": [
+      {
+        "id": "art_bto_2_2_1__1",
+        "text": "1. Bei Abschluss von Handelsgeschäften müssen die Konditionen einschließlich der Nebenabreden vollständig vereinbart werden. Das Institut hat standardisierte Vertragstexte zu verwenden, soweit dies in Anbetracht der jeweiligen Geschäftsarten möglich und zweckmäßig ist. Interne Handelsgeschäfte dürfen nur auf der Basis klarer Regelungen abgeschlossen werden.",
+        "class": ""
+      },
+      {
+        "id": "art_bto_2_2_1__2",
+        "text": "2. Handelsgeschäfte zu nicht marktgerechten Bedingungen sind grundsätzlich unzulässig. Ausnahmen hiervon sind im Einzelfall möglich, wenn",
+        "class": ""
+      },
+      {
+        "id": "art_bto_2_2_1__2_a",
+        "text": "a) sie auf Kundenwunsch erfolgen, sachlich begründet sind und die Abweichung von den marktgerechten Bedingungen aus den Geschäftsunterlagen deutlich ersichtlich ist,",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_bto_2_2_1__2_b",
+        "text": "b) sie aufgrund von internen Vorgaben erfolgen, die die Geschäftsarten, den Kundenkreis, den Umfang und die Ausgestaltung dieser Handelsgeschäfte festlegen und",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_bto_2_2_1__2_c",
+        "text": "c) sie bei entsprechender Bedeutung an die Geschäftsleitung berichtet werden.",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_bto_2_2_1__3",
+        "text": "3. Geschäftsabschlüsse außerhalb der Geschäftsräume sind nur im Rahmen interner Vorgaben zulässig. Dabei sind insbesondere die Berechtigten, der Zweck, der Umfang und die Erfassung festzulegen. Auch soweit das Handelsgeschäft teilweise an häuslichen Arbeitsplätzen vorgenommen wird, ist stets eine ausreichende Präsenz anderer Händler in den Geschäftsräumen zu gewährleisten. Für Handelsgeschäfte, die nicht direkt in einem Abwicklungs- oder Bestätigungssystem der Bank erfasst werden, ist vom Kontrahenten eine unverzügliche Bestätigung in geeigneter Form (z.B. schriftlich oder elektronisch) zu verlangen. Diese Handelsgeschäfte sind, sofern keine direkte Erfassung dieser Geschäfte in bestandsführenden Buchungssystemen erfolgt, vom Händler unverzüglich in geeigneter Form dem eigenen Institut anzuzeigen und dem für den Handel zuständigen Geschäftsleiter bzw. einer von ihm autorisierten Organisationseinheit zur Kenntnis zur bringen. Sämtliche Geschäftsabschlüsse außerhalb der Geschäftsräume sind besonders zu kennzeichnen und spätestens am auf den Geschäftsabschluss folgenden Geschäftstag einem handelsunabhängigen Bereich, anhand von geeigneten Berichten, zur Kenntnis zu bringen.",
+        "class": ""
+      },
+      {
+        "id": "art_bto_2_2_1__4",
+        "text": "4. Die Geschäftsgespräche der Händler sollten im Telefonhandel grundsätzlich auf Tonträger aufgezeichnet werden und sind mindestens drei Monate aufzubewahren. Für die Dokumentation des Handels über Handelssysteme sind entsprechende Verfahren vorzuhalten.",
+        "class": ""
+      },
+      {
+        "id": "art_bto_2_2_1__5",
+        "text": "5. Handelsgeschäfte sind unverzüglich nach Geschäftsabschluss mit allen maßgeblichen Abschlussdaten zu erfassen, bei der Ermittlung der jeweiligen Position zu berücksichtigen (Fortschreibung der Bestände) und mit allen Unterlagen an die Abwicklung weiterzuleiten. Die Weiterleitung der Abschlussdaten kann auch automatisiert über ein Abwicklungssystem erfolgen.",
+        "class": ""
+      },
+      {
+        "id": "art_bto_2_2_1__6",
+        "text": "6. Bei Direkterfassung in den IT-Systemen muss sichergestellt sein, dass ein Händler nur unter seiner eigenen Händleridentifikation Handelsgeschäfte eingeben kann. Erfassungstag und -uhrzeit sowie fortlaufende Geschäftsnummern müssen automatisch vorgegeben werden und dürfen vom Händler nicht veränderbar sein.",
+        "class": ""
+      },
+      {
+        "id": "art_bto_2_2_1__7",
+        "text": "7. Handelsgeschäfte, die nach Erfassungsschluss der Abwicklung abgeschlossen werden (Spätgeschäfte), sind als solche zu kennzeichnen und bei den Positionen des Abschlusstages (einschließlich der Nacherfassung) zu berücksichtigen, wenn sie zu wesentlichen Veränderungen führen. Abschlussdaten und Unterlagen über Spätgeschäfte sind unverzüglich an einen Bereich außerhalb des Handels weiterzuleiten.",
+        "class": ""
+      },
+      {
+        "id": "art_bto_2_2_1__8",
+        "text": "8. Vor Abschluss von Verträgen im Zusammenhang mit Handelsgeschäften, insbesondere bei Rahmenvereinbarungen, Nettingabreden und Sicherheitenbestellungen, ist durch eine vom Handel unabhängige Stelle zu prüfen, ob und inwieweit sie rechtlich durchsetzbar sind.",
+        "class": ""
+      },
+      {
+        "id": "art_bto_2_2_1__9",
+        "text": "9. Organisatorisch dem Handelsbereich zugeordnete Mitarbeiter dürfen nur gemeinsam mit Mitarbeitern eines handelsunabhängigen Bereichs über Zeichnungsberechtigungen für Zahlungsverkehrskonten verfügen.",
+        "class": ""
+      },
+      {
+        "id": "art_bto_2_2_1__10",
+        "text": "10. Das Institut hat durch geeignete Maßnahmen sicherzustellen, dass die Positionsverantwortung von Händlern jährlich für einen ununterbrochenen Zeitraum von mindestens 10 Handelstagen an einen anderen Mitarbeiter übertragen wird. In diesem Zeitraum hat das Institut dafür Sorge zu tragen, dass kein Zugriff eines abwesenden Händlers auf die von ihm verantworteten Positionen erfolgt.",
+        "class": ""
+      }
+    ]
+  },
+  {
+    "id": "art_bto_2_2_2",
+    "title": "BTO 2.2.2",
+    "heading": "Abwicklung und Kontrolle",
+    "paragraphs": [
+      {
+        "id": "art_bto_2_2_2__1",
+        "text": "1. Bei der Abwicklung sind auf Basis der vom Handel erhaltenen Abschlussdaten die Geschäftsbestätigungen bzw. die Abrechnungen auszufertigen sowie daran anschließende Abwicklungsaufgaben durchzuführen.",
+        "class": ""
+      },
+      {
+        "id": "art_bto_2_2_2__2",
+        "text": "2. Grundsätzlich sind Handelsgeschäfte unverzüglich in geeigneter Form (z. B. schriftlich oder elektronisch) zu bestätigen. Die Bestätigung muss die erforderlichen Abschlussdaten enthalten. Bei Handelsgeschäften über Makler muss der Makler benannt werden. Der unverzügliche Eingang der Gegenbestätigungen ist zu überwachen, wobei sichergestellt sein muss, dass die eingehenden Gegenbestätigungen zuerst und direkt in die Abwicklung gelangen und nicht an den Handel adressiert sind. Fehlende bzw. unvollständige Gegenbestätigungen sind unverzüglich zu reklamieren, es sei denn, es handelt sich um ein Handelsgeschäft, das in allen Teilen ordnungsgemäß erfüllt ist.",
+        "class": ""
+      },
+      {
+        "id": "art_bto_2_2_2__3",
+        "text": "3. Bei Handelsgeschäften, die in einem Abwicklungs- oder Bestätigungssystem erfasst werden, das einen automatischen Abgleich der maßgeblichen Abschlussdaten gewährleistet (so genanntes Matching) und Handelsgeschäfte nur bei Übereinstimmung der Daten durchführt, kann auf das Bestätigungsverfahren verzichtet werden. Sofern kein automatischer Abgleich der maßgeblichen Abschlussdaten erfolgt, kann auf das Bestätigungsverfahren verzichtet werden, wenn das Abwicklungs- oder Bestätigungssystem beiden Kontrahenten den jederzeitigen Abruf der Abschlussdaten ermöglicht und eine Kontrolle dieser Daten vorgenommen wird.",
+        "class": ""
+      },
+      {
+        "id": "art_bto_2_2_2__4",
+        "text": "4. Die Handelsgeschäfte sind einer laufenden Kontrolle zu unterziehen. Dabei ist insbesondere zu kontrollieren, ob",
+        "class": ""
+      },
+      {
+        "id": "art_bto_2_2_2__4_a",
+        "text": "a) die Geschäftsunterlagen vollständig und zeitnah vorliegen,",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_bto_2_2_2__4_b",
+        "text": "b) die Angaben der Händler richtig und vollständig sind und, soweit vorhanden, mit den Angaben auf Maklerbestätigungen, Ausdrucken aus Handelssystemen oder Ähnlichem übereinstimmen,",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_bto_2_2_2__4_c",
+        "text": "c) die Abschlüsse sich hinsichtlich Art und Umfang im Rahmen der festgesetzten Limite bewegen,",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_bto_2_2_2__4_d",
+        "text": "d) marktgerechte Bedingungen vereinbart sind und",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_bto_2_2_2__4_e",
+        "text": "e) Abweichungen von vorgegebenen Standards (z. B. Stammdaten, Anschaffungswege, Zahlungswege) vereinbart sind.",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_bto_2_2_2__4_s2",
+        "text": "Änderungen und Stornierungen der Abschlussdaten oder Buchungen sind außerhalb des Bereichs Handel zu kontrollieren.",
+        "class": "subparagraph"
+      },
+      {
+        "id": "art_bto_2_2_2__5",
+        "text": "5. Für die Kontrolle der Marktgerechtigkeit von Geschäftsabschlüssen sind geeignete Verfahren, ggf. differenziert nach Handelsgeschäftsarten, einzurichten. Der für die Marktgerechtigkeitskontrolle zuständige Geschäftsleiter ist unverzüglich zu unterrichten, wenn abweichend von <a href=\"#a:act_de_marisk_2024_0006:art_bto_2_2_1\" class=\"ref\" data-article=\"BTO 2.2.1\">BTO 2.2.1</a> Tz. 2 Handelsgeschäfte zu nicht marktgerechten Bedingungen abgeschlossen werden.",
+        "class": ""
+      },
+      {
+        "id": "art_bto_2_2_2__6",
+        "text": "6. Unstimmigkeiten und Auffälligkeiten, die im Rahmen der Abwicklung und Kontrolle festgestellt wurden, sind unter der Federführung eines vom Handel unabhängigen Bereichs unverzüglich zu klären. Für Unstimmigkeiten und Auffälligkeiten, die nicht plausibel geklärt werden können, hat das Institut angemessene Eskalationsverfahren einzurichten.",
+        "class": ""
+      },
+      {
+        "id": "art_bto_2_2_2__7",
+        "text": "7. Die im Handel ermittelten Positionen sind regelmäßig mit den in den nachgelagerten Prozessen und Funktionen (z. B. Abwicklung, Rechnungswesen) geführten Positionen abzustimmen. In die Abstimmungsaktivitäten sind auch inaktive Portfolien („dormant portfolios“) und fiktive Kontrahenten („dummy counterparts“) einzubeziehen. Besonderes Augenmerk ist auf die Abstimmung von Zwischen- und Auffangkonten zu richten. Auffälligkeiten im Zusammenhang mit diesen Konten sind unverzüglich zu klären.",
+        "class": ""
+      }
+    ]
+  },
+  {
+    "id": "art_bto_2_2_3",
+    "title": "BTO 2.2.3",
+    "heading": "Abbildung im Risikocontrolling",
+    "paragraphs": [
+      {
+        "id": "art_bto_2_2_3__1",
+        "text": "1. Handelsgeschäfte einschließlich solcher Nebenabreden, die zu Positionen führen, sind unverzüglich im Risikocontrolling abzubilden.",
+        "class": ""
+      }
+    ]
+  },
+  {
+    "id": "art_bto_3",
+    "title": "BTO 3",
+    "heading": "Immobiliengeschäft",
+    "paragraphs": [
+      {
+        "id": "art_bto_3__1",
+        "text": "1. Dieses Modul stellt Anforderungen an die Ausgestaltung der Aufbau- und Ablauforganisation im Immobiliengeschäft.",
+        "class": ""
+      }
+    ]
+  },
+  {
+    "id": "art_bto_3_1",
+    "title": "BTO 3.1",
+    "heading": "Aufbauorganisation",
+    "paragraphs": [
+      {
+        "id": "art_bto_3_1__1",
+        "text": "1. Maßgeblicher Grundsatz für die Ausgestaltung der Prozesse im Immobiliengeschäft ist die klare aufbauorganisatorische Trennung der Bereiche Markt und Marktfolge bis einschließlich der Ebene der Geschäftsleitung.",
+        "class": ""
+      },
+      {
+        "id": "art_bto_3_1__2",
+        "text": "2. Die Entscheidung, ein Immobiliengeschäft einzugehen, erfordert zwei zustimmende Voten der Bereiche Markt und Marktfolge. Weitergehende Beschlussfassungsvor-schriften (z. B. KWG, Satzung) bleiben hiervon unberührt. Soweit die Entscheidungen von einem Ausschuss getroffen werden, sind die Mehrheitsverhältnisse innerhalb des Ausschusses so festzulegen, dass der Bereich Marktfolge nicht überstimmt werden kann. Bei der Initiierung von Immobiliengeschäften durch Dritte ist nur ein Votum aus dem Bereich Marktfolge notwendig.",
+        "class": ""
+      },
+      {
+        "id": "art_bto_3_1__3",
+        "text": "3. Das Institut hat eine klare und konsistente Kompetenzordnung für Entscheidungen im Immobiliengeschäft festzulegen. Für den Fall voneinander abweichender Voten sind in der Kompetenzordnung Entscheidungsregeln zu treffen: Das Immobiliengeschäft ist in diesen Fällen abzulehnen oder zur Entscheidung auf eine höhere Kompetenzstufe zu verlagern (Eskalationsverfahren).",
+        "class": ""
+      }
+    ]
+  },
+  {
+    "id": "art_bto_3_2",
+    "title": "BTO 3.2",
+    "heading": "Anforderungen an die Prozesse im Immobiliengeschäft",
+    "paragraphs": [
+      {
+        "id": "art_bto_3_2__1",
+        "text": "1. Das Institut hat Prozesse für das Immobiliengeschäft einzurichten und für diese Bearbeitungsgrundsätze zu formulieren.",
+        "class": ""
+      },
+      {
+        "id": "art_bto_3_2__2",
+        "text": "2. Bei der Festlegung der Verfahren zur Wertermittlung der Immobilien ist auf geeignete Wertermittlungsverfahren abzustellen. Der Wertansatz muss hinsichtlich wertbeeinflussender Umstände nachvollziehbar und in den Annahmen und Parametern begründet und dokumentiert sein. Im Rahmen der Wertermittlung ist eine Objektbesichtigung durchzuführen.",
+        "class": ""
+      },
+      {
+        "id": "art_bto_3_2__3",
+        "text": "3. Der Marktwert der Immobilie ist durch sachverständige Personen zu ermitteln. Diese Personen müssen über die notwendigen Qualifikationen und Erfahrungen, insbesondere bezüglich des jeweiligen Immobilienmarkts und der Objektart, die sie bewerten, verfügen. Mögliche Interessenkonflikte im Zusammenhang mit der Wertermittlung sind auszuschließen. Eine angemessene Rotation der für die Wertermittlung zuständigen Personen ist sicherzustellen.",
+        "class": ""
+      },
+      {
+        "id": "art_bto_3_2__4",
+        "text": "4. Werden für die Wertermittlung von Immobilien externe Sachverständige herangezogen, so hat das Institut die Immobilienwertermittlung zu plausibilisieren und dabei ggf. eigene Erkenntnisse und Informationen in die Beurteilung einfließen zu lassen.",
+        "class": ""
+      }
+    ]
+  },
+  {
+    "id": "art_bto_3_2_1",
+    "title": "BTO 3.2.1",
+    "heading": "Immobilienerwerb oder –errichtung",
+    "paragraphs": [
+      {
+        "id": "art_bto_3_2_1__1",
+        "text": "1. Die für das Risiko eines Immobiliengeschäfts bedeutsamen Aspekte sind vor Immobilienerwerb oder -errichtung zu analysieren und zu beurteilen, wobei die Intensität dieser Tätigkeiten vom Risikogehalt des Immobiliengeschäfts abhängt. Kritische Punkte des Immobiliengeschäfts sind hervorzuheben und ggf. unter der Annahme verschiedener Szenarien darzustellen.",
+        "class": ""
+      },
+      {
+        "id": "art_bto_3_2_1__2",
+        "text": "2. Vor Immobilienerwerb oder -errichtung hat das Institut die diesbezüglichen wirtschaftlichen Aspekte zu analysieren und insbesondere Risiken in die Beurteilung mit einzubeziehen. Bei Immobilienprojekten sind die technische Machbarkeit und Entwicklung sowie mit dem Objekt/Projekt verbundenen rechtlichen Risiken zu beurteilen. Soweit externe Personen für diese Zwecke herangezogen werden, ist vorher deren Eignung zu überprüfen.",
+        "class": ""
+      },
+      {
+        "id": "art_bto_3_2_1__3",
+        "text": "3. Der Marktwert der Immobilie ist vor Immobilienerwerb zu ermitteln. Bei zum Zeitpunkt des Erwerbs oder der Errichtung noch nicht fertiggestellten Immobilien ist der Marktwert unter der Annahme der Fertigstellung zu ermitteln. Die Ausführungen des <a href=\"#a:act_de_marisk_2024_0006:art_bto_3_2\" class=\"ref\" data-article=\"BTO 3.2\">BTO 3.2</a> Tzn. 2, 3 und 4 gelten entsprechend.",
+        "class": ""
+      }
+    ]
+  },
+  {
+    "id": "art_bto_3_2_2",
+    "title": "BTO 3.2.2",
+    "heading": "Weiterbearbeitung und Überwachung",
+    "paragraphs": [
+      {
+        "id": "art_bto_3_2_2__1",
+        "text": "1. In unter Risikogesichtspunkten festzulegenden Abständen sind während der Entwicklungsphase von Projekten Besichtigungen und Bautenstandskontrollen durchzuführen. Das Institut hat zudem bei Projekten eine laufende Kostenkontrolle durchzuführen.",
+        "class": ""
+      },
+      {
+        "id": "art_bto_3_2_2__2",
+        "text": "2. Der Wert von Immobilien ist jährlich zu überprüfen. Bei der Überprüfung kann auf bereits vorhandene Immobilienwerte zurückgegriffen werden, sofern keine Anhaltspunkte für Wertveränderungen vorliegen. Führt die Überprüfung zum Ergebnis, dass sich der Immobilienwert um mehr als 10 % verringert haben könnte, ist eine Neubewertung zwingend erforderlich. Die Ausführungen in <a href=\"#a:act_de_marisk_2024_0006:art_bto_3_2\" class=\"ref\" data-article=\"BTO 3.2\">BTO 3.2</a> Tzn. 2, 3 und 4 gelten entsprechend.",
+        "class": ""
+      },
+      {
+        "id": "art_bto_3_2_2__3",
+        "text": "3. Außerordentliche Überprüfungen sind zumindest dann unverzüglich durchzuführen, wenn dem Institut aus externen oder internen Quellen Informationen bekannt werden, die auf eine wesentliche negative Wertveränderung der Immobilie oder negative Entwicklungen des Immobilienprojektes hindeuten. Derartige Informationen sind unverzüglich an alle einzubindenden Organisationseinheiten weiterzuleiten.",
+        "class": ""
+      },
+      {
+        "id": "art_bto_3_2_2__4",
+        "text": "4. Mindestens jährlich ist ein Bericht über die Immobiliengeschäfte zu erstellen und der Geschäftsleitung zur Verfügung zu stellen. Im Bericht sind die ggf. festgestellten Wertänderungen der Immobilien aufzuführen und zu erläutern. Außerdem ist über Risiken der Immobilien und Projekte zu berichten.",
+        "class": ""
+      }
+    ]
+  },
+  {
+    "id": "art_bto_3_2_3",
+    "title": "BTO 3.2.3",
+    "heading": "Bearbeitungskontrollen",
+    "paragraphs": [
+      {
+        "id": "art_bto_3_2_3__1",
+        "text": "1. Für die Bearbeitung von Immobiliengeschäften sind prozessabhängige Kontrollen einzurichten, die gewährleisten, dass die Vorgaben der Organisationsrichtlinien eingehalten werden. Die Kontrollen können auch im Rahmen des üblichen Vier-Augen-Prinzips erfolgen. Insbesondere ist zu kontrollieren, ob die Entscheidung des Immobiliengeschäfts entsprechend der festgelegten Kompetenzordnung erfolgte.",
+        "class": ""
+      }
+    ]
+  },
+  {
+    "id": "art_btr",
+    "title": "BTR",
+    "heading": "Anforderungen an die Risikosteuerungs- und –controllingprozesse",
+    "paragraphs": [
+      {
+        "id": "art_btr__1",
+        "text": "1. Dieses Modul enthält unter Berücksichtigung von Risikokonzentrationen besondere Anforderungen an die Ausgestaltung der Risikosteuerungs- und -controllingprozesse (<a href=\"#a:act_de_marisk_2024_0006:art_at_4_3_2\" class=\"ref\" data-article=\"AT 4.3.2\">AT 4.3.2</a>) für",
+        "class": ""
+      },
+      {
+        "id": "art_btr__1_a",
+        "text": "a) Adressenausfallrisiken (<a href=\"#a:act_de_marisk_2024_0006:art_btr_1\" class=\"ref\" data-article=\"BTR 1\">BTR 1</a>),",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_btr__1_b",
+        "text": "b) Marktpreisrisiken (BTR 2),",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_btr__1_c",
+        "text": "c) Liquiditätsrisiken (BTR 3),",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_btr__1_d",
+        "text": "d) operationelle Risiken (<a href=\"#a:act_de_marisk_2024_0006:art_btr_4\" class=\"ref\" data-article=\"BTR 4\">BTR 4</a>) und",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_btr__1_e",
+        "text": "e) Kreditspreadrisiken im Anlagebuch.",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_btr__1_s2",
+        "text": "Dabei sind die Auswirkungen von ESG-Risiken angemessen zu berücksichtigen.",
+        "class": "subparagraph"
+      }
+    ]
+  },
+  {
+    "id": "art_btr_1",
+    "title": "BTR 1",
+    "heading": "Adressenausfallrisiken",
+    "paragraphs": [
+      {
+        "id": "art_btr_1__1",
+        "text": "1. Das Institut hat durch geeignete Maßnahmen sicherzustellen, dass Adressenausfallrisiken und damit verbundene Risikokonzentrationen unter Berücksichtigung der Risikotragfähigkeit begrenzt werden können. Dabei sind die Auswirkungen von ESG-Risiken angemessen zu berücksichtigen.",
+        "class": ""
+      },
+      {
+        "id": "art_btr_1__2",
+        "text": "2. Ohne kreditnehmerbezogenes Limit (Kreditnehmerlimit, Kreditnehmereinheitenlimit), also einen Kreditbeschluss, darf kein Kreditgeschäft abgeschlossen werden.",
+        "class": ""
+      },
+      {
+        "id": "art_btr_1__3",
+        "text": "3. Handelsgeschäfte dürfen grundsätzlich nur mit Vertragspartnern getätigt werden, für die Kontrahentenlimite eingeräumt wurden. Auf das einzelne Limit sind alle Handelsgeschäfte mit einer bestimmten Gegenpartei anzurechnen. Bei der Ermittlung der Auslastung der Kontrahentenlimite sind Wiedereindeckungsrisiken und Erfüllungsrisiken zu berücksichtigen. Die Positionsverantwortlichen sind über die für sie relevanten Limite und ihre aktuelle Ausnutzung zeitnah zu informieren.",
+        "class": ""
+      },
+      {
+        "id": "art_btr_1__4",
+        "text": "4. Darüber hinaus sind bei Handelsgeschäften grundsätzlich auch Emittentenlimite einzurichten. Soweit im Bereich Handel für Emittenten noch keine Limitierungen vorliegen, können auf der Grundlage klarer Vorgaben Emittentenlimite kurzfristig zu Zwecken des Handels eingeräumt werden, ohne dass vorab der jeweils unter Risikogesichtspunkten festgelegte Bearbeitungsprozess vollständig durchlaufen werden muss. Der jeweils festgelegte Bearbeitungsprozess muss spätestens nach drei Monaten durchgeführt sein. Die maßgeblichen Vorgaben müssen Risikogesichtspunkten Rechnung tragen. Sie müssen mit den in den Strategien niedergelegten Zielen im Einklang stehen.",
+        "class": ""
+      },
+      {
+        "id": "art_btr_1__5",
+        "text": "5. Die Geschäfte sind unverzüglich auf die kreditnehmerbezogenen Limite anzurechnen. Die Einhaltung der Limite ist zu überwachen. Limitüberschreitungen und die deswegen ggf. getroffenen Maßnahmen sind festzuhalten. Ab einer unter Risikogesichtspunkten festgelegten Höhe sind Überschreitungen von Kontrahenten- und Emittentenlimiten den zuständigen Geschäftsleitern täglich anzuzeigen.",
+        "class": ""
+      },
+      {
+        "id": "art_btr_1__6",
+        "text": "6. Risikokonzentrationen sind zu identifizieren. Gegebenenfalls vorhandene Abhängigkeiten sind dabei zu berücksichtigen. Bei der Beurteilung der Risikokonzentrationen ist auf qualitative und, soweit möglich, auf quantitative Verfahren abzustellen. Risikokonzentrationen sind mit Hilfe geeigneter Verfahren zu steuern und zu überwachen (z. B. Limite, Ampelsysteme oder auf Basis anderer Vorkehrungen).",
+        "class": ""
+      },
+      {
+        "id": "art_btr_1__7",
+        "text": "7. Das Institut hat eine angemessene Erfassung der Erlöse aus der Abwicklung von Kreditengagements sowie der zugehörigen historischen Werte der Kreditsicherheiten in einer Erlösquotensammlung zu gewährleisten. Die Erkenntnisse aus der Erlösquotensammlung sind bei der Steuerung der Adressenausfallrisiken angemessen zu berücksichtigen.",
+        "class": ""
+      }
+    ]
+  },
+  {
+    "id": "art_btr_2_1",
+    "title": "BTR 2.1",
+    "heading": "Allgemeine Anforderungen",
+    "paragraphs": [
+      {
+        "id": "art_btr_2_1__1",
+        "text": "1. Auf der Grundlage der Risikotragfähigkeit ist ein System von Limiten zur Begrenzung der Marktpreisrisiken unter Berücksichtigung von Risikokonzentrationen und der Auswirkungen von ESG-Risiken einzurichten.",
+        "class": ""
+      },
+      {
+        "id": "art_btr_2_1__2",
+        "text": "2. Ohne Marktpreisrisikolimit darf kein mit Marktpreisrisiken behaftetes Geschäft abgeschlossen werden.",
+        "class": ""
+      },
+      {
+        "id": "art_btr_2_1__3",
+        "text": "3. Die Verfahren zur Beurteilung der Marktpreisrisiken sind regelmäßig zu überprüfen. Es ist zu überprüfen, ob die Verfahren auch bei schwerwiegenden Marktstörungen zu verwertbaren Ergebnissen führen. Für länger anhaltende Fälle fehlender, veralteter oder verzerrter Marktpreise sind für wesentliche Positionen alternative Bewertungsmethoden festzulegen.",
+        "class": ""
+      },
+      {
+        "id": "art_btr_2_1__4",
+        "text": "4. Die im Rechnungswesen und Risikocontrolling ermittelten Ergebnisse sind regelmäßig zu plausibilisieren.",
+        "class": ""
+      }
+    ]
+  },
+  {
+    "id": "art_btr_2_2",
+    "title": "BTR 2.2",
+    "heading": "Marktpreisrisiken des Handelsbuches",
+    "paragraphs": [
+      {
+        "id": "art_btr_2_2__1",
+        "text": "1. Es ist sicherzustellen, dass die mit Marktpreisrisiken behafteten Geschäfte des Handelsbuches unverzüglich auf die einschlägigen Limite angerechnet werden und der Positionsverantwortliche über die für ihn relevanten Limite und ihre aktuelle Ausnutzung zeitnah informiert ist. Bei Limitüberschreitungen sind geeignete Maßnahmen zu treffen. Gegebenenfalls ist ein Eskalationsverfahren einzuleiten.",
+        "class": ""
+      },
+      {
+        "id": "art_btr_2_2__2",
+        "text": "2. Die mit Marktpreisrisiken behafteten Positionen des Handelsbuches sind täglich zu bewerten.",
+        "class": ""
+      },
+      {
+        "id": "art_btr_2_2__3",
+        "text": "3. Es ist täglich ein Ergebnis für das Handelsbuch zu ermitteln. Die bestehenden Risikopositionen sind mindestens einmal täglich zum Geschäftsschluss zu Gesamtrisikopositionen zusammenzufassen.",
+        "class": ""
+      },
+      {
+        "id": "art_btr_2_2__4",
+        "text": "4. Die modellmäßig ermittelten Risikowerte sind fortlaufend mit der tatsächlichen Entwicklung zu vergleichen.",
+        "class": ""
+      }
+    ]
+  },
+  {
+    "id": "art_btr_2_3",
+    "title": "BTR 2.3",
+    "heading": "Marktpreisrisiken des Anlagebuches (einschließlich Zinsänderungsrisiken)",
+    "paragraphs": [
+      {
+        "id": "art_btr_2_3__1",
+        "text": "1. Die mit Marktpreisrisiken behafteten Positionen des Anlagebuches sind mindestens vierteljährlich zu bewerten.",
+        "class": ""
+      },
+      {
+        "id": "art_btr_2_3__2",
+        "text": "2. Ebenfalls mindestens vierteljährlich ist ein Ergebnis für das Anlagebuch zu ermitteln.",
+        "class": ""
+      },
+      {
+        "id": "art_btr_2_3__3",
+        "text": "3. Durch geeignete Maßnahmen ist sicherzustellen, dass Limitüberschreitungen aufgrund zwischenzeitlicher Veränderungen der Risikopositionen vermieden werden können.",
+        "class": ""
+      },
+      {
+        "id": "art_btr_2_3__4",
+        "text": "4. Abhängig von Art, Umfang, Komplexität und Risikogehalt der Positionen im Anlagebuch kann auch eine tägliche, wöchentliche oder monatliche Bewertung, Ergebnisermittlung und Kommunikation der Risiken erforderlich sein.",
+        "class": ""
+      },
+      {
+        "id": "art_btr_2_3__5",
+        "text": "5. Die Verfahren und Methoden zur Beurteilung und Ermittlung der Zinsänderungsrisiken des Anlagebuches müssen die wesentlichen Ausprägungen der Zinsänderungsrisiken abdecken.",
+        "class": ""
+      },
+      {
+        "id": "art_btr_2_3__6",
+        "text": "6. Bei der Bestimmung der Zinsänderungsrisiken sind die Auswirkungen von Zinsänderungen sowohl auf das handelsrechtliche Ergebnis des Instituts, einschließlich zinsinduzierter Marktwertveränderungen, als auch auf die Markt- bzw. Barwerte der betroffenen Positionen zu betrachten. Institute sollten Zinsänderungsrisiken separat bewerten. Beide Perspektiven sind im Rahmen der Risikosteuerungs- und -controllingprozesse zu adressieren sowie beiden bei der Beurteilung der Risikotragfähigkeit Rechnung zu tragen.",
+        "class": ""
+      },
+      {
+        "id": "art_btr_2_3__7",
+        "text": "7. Hinsichtlich der Berücksichtigung von Positionen mit unbestimmter Kapital- oder Zinsbindung sind geeignete Annahmen festzulegen. Bei der Berücksichtigung von Positionen mit unbestimmter Kapital- oder Zinsbindung sind Einlagen von Finanzkunden nicht zu modellieren und als täglich fällig anzunehmen.",
+        "class": ""
+      },
+      {
+        "id": "art_btr_2_3__8",
+        "text": "8. Institute, die wesentliche Zinsänderungsrisiken in verschiedenen Währungen eingegangen sind, müssen die Zinsänderungsrisiken in jeder dieser Währungen ermitteln.",
+        "class": ""
+      },
+      {
+        "id": "art_btr_2_3__9",
+        "text": "9. Die internen Risikotransfers zwischen Anlage- und Handelsbuch sind zu dokumentieren.",
+        "class": ""
+      }
+    ]
+  },
+  {
+    "id": "art_btr_3_1",
+    "title": "BTR 3.1",
+    "heading": "Allgemeine Anforderungen",
+    "paragraphs": [
+      {
+        "id": "art_btr_3_1__1",
+        "text": "1. Das Institut hat sicherzustellen, dass es seine Zahlungsverpflichtungen jederzeit erfüllen kann. Das Institut hat dabei, soweit erforderlich, auch Maßnahmen zur Steuerung des untertägigen Liquiditätsrisikos zu ergreifen. Es ist eine ausreichende Diversifikation der Refinanzierungsquellen und der Liquiditätspuffer zu gewährleisten, wobei auch die Auswirkungen von ESG-Risiken angemessen zu berücksichtigen sind. Konzentrationen sind wirksam zu überwachen und zu begrenzen.",
+        "class": ""
+      },
+      {
+        "id": "art_btr_3_1__2",
+        "text": "2. Das Institut hat zu gewährleisten, dass ein sich abzeichnender Liquiditätsengpass frühzeitig erkannt wird. Hierfür sind Verfahren einzurichten, deren Angemessenheit regelmäßig, mindestens aber jährlich, zu überprüfen ist. Auswirkungen anderer Risiken auf die Liquidität des Instituts (z. B. Reputationsrisiken) sind bei den Verfahren zu berücksichtigen.",
+        "class": ""
+      },
+      {
+        "id": "art_btr_3_1__3",
+        "text": "3. Das Institut hat für einen geeigneten Zeitraum eine oder mehrere aussagekräftige Liquiditätsübersichten zu erstellen, in denen die voraussichtlichen Mittelzuflüsse den voraussichtlichen Mittelabflüssen gegenübergestellt werden. Die Liquiditätsübersichten müssen geeignet sein, um die Liquiditätslage im kurz-, mittel- und langfristigen Bereich darzustellen. Dies hat sich in den getroffenen Annahmen, die den Mittelzu- und –abflüssen zugrunde liegen, und in der Untergliederung in Zeitbändern angemessen widerzuspiegeln. Den auch in normalen Marktphasen üblichen Schwankungen der Zahlungsflüsse ist in den Liquiditätsübersichten angemessen Rechnung zu tragen.",
+        "class": ""
+      },
+      {
+        "id": "art_btr_3_1__4",
+        "text": "4. Es ist laufend zu überprüfen, inwieweit das Institut, auch bei angespanntem Marktumfeld, in der Lage ist, einen auftretenden Liquiditätsbedarf zu decken. Dabei ist insbesondere auch auf den Liquiditätsgrad der Vermögenswerte abzustellen. Der dauerhafte Zugang zu den für das Institut relevanten Refinanzierungsquellen ist regelmäßig zu überprüfen. Für kurzfristig eintretende Verschlechterungen der Liquiditätssituation hat das Institut ausreichend bemessene, nachhaltige Liquiditätspuffer (z. B. hochliquide, unbelastete Vermögensgegenstände) vorzuhalten.",
+        "class": ""
+      },
+      {
+        "id": "art_btr_3_1__5",
+        "text": "5. Das Institut hat ein geeignetes Verrechnungssystem zur verursachungsgerechten internen Verrechnung der jeweiligen Liquiditätskosten, -nutzen und –risiken einzurichten. Die Ausgestaltung des Verrechnungssystems ist abhängig von Art, Umfang, Komplexität und Risikogehalt der Geschäftsaktivitäten sowie der Refinanzierungsstruktur des Instituts. Das Verrechnungssystem ist von der Geschäftsleitung zu genehmigen.",
+        "class": ""
+      },
+      {
+        "id": "art_btr_3_1__6",
+        "text": "6. Große Institute mit komplexen Geschäftsaktivitäten haben ein Liquiditätstransferpreissystem zur verursachungsgerechten internen Verrechnung der jeweiligen Liquiditätskosten, -nutzen und –risiken zu etablieren. Die ermittelten Transferpreise sind im Rahmen der Ertrags- und Risikosteuerung zu berücksichtigen, indem die Verrechnung möglichst auf Transaktionsebene erfolgt. Dies gilt für bilanzwirksame und außerbilanzielle Geschäftsaktivitäten. Die Aspekte Haltedauer und Marktliquidität der Vermögensgegenstände sind bei der Ermittlung der jeweiligen Transferpreise zu berücksichtigen. Für unsichere Zahlungsströme sind geeignete Annahmen zu treffen. Das Liquiditätstransferpreissystem hat auch die Kosten für vorzuhaltende Liquiditätspuffer zu verrechnen.",
+        "class": ""
+      },
+      {
+        "id": "art_btr_3_1__7",
+        "text": "7. Die Verantwortung für die Entwicklung und Qualität sowie die regelmäßige Überprüfung des Liquiditätstransferpreissystems ist in einem vom Markt und Handel unabhängigen Bereich wahrzunehmen. Die jeweils gültigen Liquiditätstransferpreise sind den betroffenen Mitarbeitern transparent zu machen. Die Konsistenz der eingesetzten Liquiditätstransferpreissysteme innerhalb der Gruppe muss gewährleistet sein.",
+        "class": ""
+      },
+      {
+        "id": "art_btr_3_1__8",
+        "text": "8. Für Liquiditätsrisiken sind regelmäßig angemessene Stresstests durchzuführen. Dabei sind sowohl institutseigene als auch marktweite Ursachen für Liquiditätsrisiken in die Betrachtung einzubeziehen. Darüber hinaus sind beide Aspekte kombiniert zu betrachten. Das Institut hat die Stresstests individuell zu definieren. Dabei sind den Stresstests unterschiedlich lange Zeithorizonte zugrunde zu legen. Das Institut hat in den Stressszenarien seinen voraussichtlichen Überlebenshorizont zu ermitteln.",
+        "class": ""
+      },
+      {
+        "id": "art_btr_3_1__9",
+        "text": "9. Das Institut hat festzulegen, welche Maßnahmen im Fall eines Liquiditätsengpasses ergriffen werden sollen (Notfallplan für Liquiditätsengpässe). Dazu gehört auch die Darstellung der in diesen Fällen zur Verfügung stehenden Liquiditätsquellen unter Berücksichtigung etwaiger Mindererlöse. Die im Fall eines Liquiditätsengpasses zu verwendenden Kommunikationswege sind festzulegen. Die geplanten Maßnahmen sind regelmäßig auf ihre Durchführbarkeit zu überprüfen und ggf. anzupassen. Die Ergebnisse der Stresstests sind dabei zu berücksichtigen.",
+        "class": ""
+      },
+      {
+        "id": "art_btr_3_1__10",
+        "text": "10. Es ist zu überprüfen, inwieweit der Übertragung liquider Mittel und unbelasteter Vermögensgegenstände innerhalb der Gruppe gesellschaftsrechtliche, regulatorische und operationelle Restriktionen entgegenstehen.",
+        "class": ""
+      },
+      {
+        "id": "art_btr_3_1__11",
+        "text": "11. Ein Institut, das wesentliche Liquiditätsrisiken in Fremdwährungen aufweist, hat zur Sicherstellung seiner Zahlungsverpflichtungen angemessene Verfahren zur Steuerung der Fremdwährungsliquidität in den wesentlichen Währungen zu implementieren. Hierzu gehören für die jeweiligen Währungen zumindest eine gesonderte Liquiditätsübersicht, gesonderte Fremdwährungsstresstests sowie eine explizite Berücksichtigung im Notfallplan für Liquiditätsengpässe.",
+        "class": ""
+      },
+      {
+        "id": "art_btr_3_1__12",
+        "text": "12. Das Institut hat einen internen Refinanzierungsplan aufzustellen, der die Strategien, den Risikoappetit und das Geschäftsmodell angemessen widerspiegelt. Der Planungshorizont hat einen angemessen langen, in der Regel mehrjährigen Zeitraum zu umfassen. Dabei ist zu berücksichtigen, wie sich Veränderungen der eigenen Geschäftstätigkeit oder der strategischen Ziele sowie Veränderungen des wirtschaftlichen Umfelds auf den Refinanzierungsbedarf auswirken. Möglichen adversen Entwicklungen, die von den Erwartungen abweichen, ist bei der Planung angemessen Rechnung zu tragen.",
+        "class": ""
+      }
+    ]
+  },
+  {
+    "id": "art_btr_3_2",
+    "title": "BTR 3.2",
+    "heading": "Zusätzliche Anforderungen an kapitalmarktorientierte Institute",
+    "paragraphs": [
+      {
+        "id": "art_btr_3_2__1",
+        "text": "1. Das Institut muss in der Lage sein, den erforderlichen Liquiditätsbedarf, der sich aus den institutsindividuellen Stressszenarien über den Zeithorizont von mindestens einem Monat ergibt, mit den nach <a href=\"#a:act_de_marisk_2024_0006:art_btr_3_1\" class=\"ref\" data-article=\"BTR 3.1\">BTR 3.1</a> Tz. 4 vorzuhaltenden Liquiditätspuffern zu überbrücken, die in <a href=\"#a:act_de_marisk_2024_0006:art_btr_3_2\" class=\"ref\" data-article=\"BTR 3.2\">BTR 3.2</a> Tz. 2 näher spezifiziert sind.",
+        "class": ""
+      },
+      {
+        "id": "art_btr_3_2__2",
+        "text": "2. Zur Überbrückung des kurzfristigen Liquiditätsbedarfs von mindestens einer Woche hat das Institut neben Zentralbankgeld hochliquide Vermögensgegenstände vorzuhalten, die jederzeit ohne signifikante Wertverluste in privaten Märkten liquidiert werden können und zentralbankfähig sind. Für den weiteren Liquiditätsbedarf bis zum Ende des Zeithorizonts von mindestens einem Monat können andere Vermögensgegenstände als weitere Bestandteile der Liquiditätspuffer herangezogen werden, wenn diese ohne signifikante Wertverluste innerhalb des Zeithorizonts liquidiert werden können.",
+        "class": ""
+      },
+      {
+        "id": "art_btr_3_2__3",
+        "text": "3. Das Institut hat Stressszenarien zu betrachten, nach denen auch die Liquiditätspuffer gemäß Tz. 1 zu bemessen sind. Im Rahmen der Stresstests sind zum einen Stressszenarien zu betrachten, die auf institutseigenen Ursachen beruhen. Zum anderen sind getrennt davon Stressszenarien zu betrachten, die auf marktweite Ursachen zurückzuführen sind. Darüber hinaus sind beide Aspekte kombiniert zu betrachten.",
+        "class": ""
+      },
+      {
+        "id": "art_btr_3_2__3_s2",
+        "text": "Ein Szenario, das auf institutseigenen Ursachen beruht, hat auch eine signifikante Ratingverschlechterung",
+        "class": "subparagraph"
+      },
+      {
+        "id": "art_btr_3_2__3_dash",
+        "text": "– Abzug eines erheblichen Teils der unbesicherten Refinanzierung durch institutionelle Anleger mindestens innerhalb der ersten Woche des Stressszenarios, wobei für Unternehmen der Finanzbranche ein vollständiger Abzug dieser unbesicherten Refinanzierung innerhalb der ersten Woche anzunehmen ist,",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_btr_3_2__3_dash_2",
+        "text": "– Abzug eines Teils der Privatkundeneinlagen.",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_btr_3_2__3_s3",
+        "text": "Ferner sind für ein Szenario, das auf marktweiten Ursachen beruht, folgende Annahmen zu berücksichtigen:",
+        "class": "subparagraph"
+      },
+      {
+        "id": "art_btr_3_2__3_dash_3",
+        "text": "– Allgemeiner Kursverfall von marktgängigen Vermögensgegenständen, insbesondere Wertpapieren,",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_btr_3_2__3_dash_4",
+        "text": "– Allgemeine Verschlechterung der Refinanzierungsbedingungen.",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_btr_3_2__4",
+        "text": "4. Das Institut hat sicherzustellen, dass der Nutzung der Liquiditätspuffer keine rechtlichen, regulatorischen oder operationellen Restriktionen entgegenstehen. Die Diversifikation und die Aufteilung der Liquiditätspuffer auf verschiedene Jurisdiktionen müssen der Struktur und den Geschäftsaktivitäten des Instituts und der Gruppe entsprechen.",
+        "class": ""
+      }
+    ]
+  },
+  {
+    "id": "art_btr_4",
+    "title": "BTR 4",
+    "heading": "Operationelle Risiken",
+    "paragraphs": [
+      {
+        "id": "art_btr_4__1",
+        "text": "1. Das Institut hat den operationellen Risiken durch ein angemessenes Risikomanagement Rechnung zu tragen. Für diese Zwecke ist eine institutsintern einheitliche Festlegung und Abgrenzung der operationellen Risiken vorzunehmen und an die Mitarbeiter zu kommunizieren.",
+        "class": ""
+      },
+      {
+        "id": "art_btr_4__2",
+        "text": "2. Es muss gewährleistet sein, dass wesentliche operationelle Risiken zumindest jährlich identifiziert und beurteilt werden. Dabei sind die Auswirkungen von ESG-Risiken angemessen zu berücksichtigen.",
+        "class": ""
+      },
+      {
+        "id": "art_btr_4__3",
+        "text": "3. Das Institut hat eine angemessene Erfassung von Schadensfällen sicherzustellen. Bedeutende Schadensfälle sind unverzüglich hinsichtlich ihrer Ursachen zu analysieren.",
+        "class": ""
+      },
+      {
+        "id": "art_btr_4__4",
+        "text": "4. Die Verfahren zur Beurteilung der operationellen Risiken müssen die wesentlichen Ausprägungen operationeller Risiken erfassen.",
+        "class": ""
+      },
+      {
+        "id": "art_btr_4__5",
+        "text": "5. Auf Basis der identifizierten operationellen Risiken ist zu entscheiden, ob und welche Maßnahmen zur Beseitigung der Ursachen zu treffen oder welche Risikosteuerungsmaßnahmen zu ergreifen sind. Die Umsetzung der zu treffenden Maßnahmen ist zu überwachen.",
+        "class": ""
+      }
+    ]
+  },
+  {
+    "id": "art_btr_5",
+    "title": "BTR 5",
+    "heading": "Kreditspreadrisiken im Anlagebuch",
+    "paragraphs": [
+      {
+        "id": "art_btr_5__1",
+        "text": "1. Bei der Bestimmung der Kreditspreadrisiken im Anlagebuch sind die Auswirkungen von Kreditspreadänderungen sowohl auf das handelsrechtliche Ergebnis des Instituts, einschließlich kreditspreadinduzierter Marktwertveränderungen, als auch auf die Markt- bzw. Barwerte der betroffenen Positionen zu betrachten. Beide Perspektiven sind im Rahmen der Risikosteuerungs- und –controllingprozesse zu adressieren sowie beiden bei der Beurteilung der Risikotragfähigkeit Rechnung zu tragen.",
+        "class": ""
+      },
+      {
+        "id": "art_btr_5__2",
+        "text": "2. Für die Identifizierung und Beurteilung von Kreditspreadrisiken im Anlagebuch hat das Institut jene Positionen des Anlagebuches zu bestimmen, die einem Kreditspreadrisiko unterliegen. Die Nichtberücksichtigung von Positionen ist angemessen zu begründen und zu dokumentieren.",
+        "class": ""
+      },
+      {
+        "id": "art_btr_5__3",
+        "text": "3. Bei der Bestimmung von Kreditspreadrisiken im Anlagebuch können idiosynkratische Risikokomponenten berücksichtigt werden, wenn deren damit verbundene konservativere Bestimmung plausibel begründet werden kann.",
+        "class": ""
+      },
+      {
+        "id": "art_btr_5__4",
+        "text": "4. Die internen Risikotransfers zwischen Anlage- und Handelsbuch sind zu dokumentieren.",
+        "class": ""
+      }
+    ]
+  },
+  {
+    "id": "art_bt_2_1",
+    "title": "BT 2.1",
+    "heading": "Aufgaben der Internen Revision",
+    "paragraphs": [
+      {
+        "id": "art_bt_2_1__1",
+        "text": "1. Die Prüfungstätigkeit der Internen Revision hat sich auf der Grundlage eines risikoorientierten Prüfungsansatzes grundsätzlich auf alle Aktivitäten und Prozesse des Instituts zu erstrecken.",
+        "class": ""
+      },
+      {
+        "id": "art_bt_2_1__2",
+        "text": "2. Die Interne Revision hat unter Wahrung ihrer Unabhängigkeit und unter Vermeidung von Interessenkonflikten bei wesentlichen Projekten begleitend tätig zu sein.",
+        "class": ""
+      },
+      {
+        "id": "art_bt_2_1__3",
+        "text": "3. Im Fall von Auslagerungen auf ein anderes Unternehmen kann die Interne Revision des Instituts auf eigene Prüfungshandlungen verzichten, sofern die anderweitig durchgeführte Revisionstätigkeit den Anforderungen in <a href=\"#a:act_de_marisk_2024_0006:art_at_4_4_3\" class=\"ref\" data-article=\"AT 4.4.3\">AT 4.4.3</a> und BT 2 genügt. Die Interne Revision des auslagernden Instituts hat sich von der Einhaltung dieser Voraussetzungen regelmäßig zu überzeugen. Die für das Institut relevanten Prüfungsergebnisse sind an die Interne Revision des auslagernden Instituts weiterzuleiten.",
+        "class": ""
+      }
+    ]
+  },
+  {
+    "id": "art_bt_2_2",
+    "title": "BT 2.2",
+    "heading": "Grundsätze für die Interne Revision",
+    "paragraphs": [
+      {
+        "id": "art_bt_2_2__1",
+        "text": "1. Die Interne Revision hat ihre Aufgaben selbständig und unabhängig wahrzunehmen. Insbesondere ist zu gewährleisten, dass sie bei der Berichterstattung und der Wertung der Prüfungsergebnisse keinen Weisungen unterworfen ist. Das Direktionsrecht der Geschäftsleitung zur Anordnung zusätzlicher Prüfungen steht der Selbständigkeit und Unabhängigkeit der Internen Revision nicht entgegen.",
+        "class": ""
+      },
+      {
+        "id": "art_bt_2_2__2",
+        "text": "2. Die in der Internen Revision beschäftigten Mitarbeiter dürfen grundsätzlich nicht mit revisionsfremden Aufgaben betraut werden. Sie dürfen insbesondere keine Aufgaben wahrnehmen, die mit der Prüfungstätigkeit nicht im Einklang stehen. Soweit die Unabhängigkeit der Internen Revision gewährleistet ist, kann sie im Rahmen ihrer Aufgaben für die Geschäftsleitung oder andere Organisationseinheiten des Instituts beratend tätig sein.",
+        "class": ""
+      },
+      {
+        "id": "art_bt_2_2__3",
+        "text": "3. Mitarbeiter, die in anderen Organisationseinheiten des Instituts beschäftigt sind, dürfen grundsätzlich nicht mit Aufgaben der Internen Revision betraut werden. Das schließt jedoch nicht aus, dass in begründeten Einzelfällen andere Mitarbeiter aufgrund ihres Spezialwissens zeitweise für die Interne Revision tätig werden. Beim Wechsel von Mitarbeitern anderer Organisationseinheiten zur Internen Revision sind angemessene Übergangsfristen von in der Regel mindestens einem Jahr vorzusehen, innerhalb derer diese Mitarbeiter keine Tätigkeiten prüfen dürfen, die gegen das Verbot der Selbstprüfung und -überprüfung verstoßen. Erleichterungen hinsichtlich der Übergangsfristen sind für Institute in Abhängigkeit von der Art, dem Umfang, der Komplexität und dem Risikogehalt der betriebenen Geschäftsaktivitäten möglich.",
+        "class": ""
+      }
+    ]
+  },
+  {
+    "id": "art_bt_2_3",
+    "title": "BT 2.3",
+    "heading": "Prüfungsplanung und -durchführung",
+    "paragraphs": [
+      {
+        "id": "art_bt_2_3__1",
+        "text": "1. Die Tätigkeit der Internen Revision muss auf einem umfassenden und jährlich fortzuschreibenden Prüfungsplan basieren. Die Prüfungsplanung hat risikoorientiert zu erfolgen. Die Aktivitäten und Prozesse des Instituts sind, auch wenn diese ausgelagert sind, in angemessenen Abständen, grundsätzlich innerhalb von drei Jahren, zu prüfen. Wenn besondere Risiken bestehen, ist jährlich zu prüfen. Bei unter Risikogesichtspunkten nicht wesentlichen Aktivitäten und Prozessen kann vom dreijährigen Turnus abgewichen werden. Die Risikoeinstufung der Aktivitäten und Prozesse ist regelmäßig zu überprüfen.",
+        "class": ""
+      },
+      {
+        "id": "art_bt_2_3__2",
+        "text": "2. Die Risikobewertungsverfahren der Internen Revision haben eine Analyse des Risikopotenzials der Aktivitäten und Prozesse unter Berücksichtigung absehbarer Veränderungen zu beinhalten. Dabei sind die verschiedenen Risikoquellen und die Manipulationsanfälligkeit der Prozesse durch Mitarbeiter angemessen zu berücksichtigen.",
+        "class": ""
+      },
+      {
+        "id": "art_bt_2_3__3",
+        "text": "3. Die Prüfungsplanung, -methoden und -qualität sind regelmäßig und anlassbezogen auf Angemessenheit zu überprüfen und weiterzuentwickeln.",
+        "class": ""
+      },
+      {
+        "id": "art_bt_2_3__4",
+        "text": "4. Es muss sichergestellt sein, dass kurzfristig notwendige Sonderprüfungen, z. B. anlässlich deutlich gewordener Mängel oder bestimmter Informationsbedürfnisse, jederzeit durchgeführt werden können.",
+        "class": ""
+      },
+      {
+        "id": "art_bt_2_3__5",
+        "text": "5. Die Prüfungsplanung sowie wesentliche Anpassungen sind von der Geschäftsleitung zu genehmigen.",
+        "class": ""
+      }
+    ]
+  },
+  {
+    "id": "art_bt_2_4",
+    "title": "BT 2.4",
+    "heading": "Berichtspflicht",
+    "paragraphs": [
+      {
+        "id": "art_bt_2_4__1",
+        "text": "1. Über jede Prüfung muss von der Internen Revision zeitnah ein schriftlicher Bericht angefertigt und grundsätzlich den fachlich zuständigen Mitgliedern der Geschäftsleitung vorgelegt werden. Der Bericht muss insbesondere eine Darstellung des Prüfungsgegenstandes und der Prüfungsfeststellungen, ggf. einschließlich der vorgesehenen Maßnahmen, enthalten. Wesentliche Mängel sind besonders herauszustellen. Dabei sind die Prüfungsergebnisse zu beurteilen. Bei schwerwiegenden Mängeln muss der Bericht unverzüglich der Geschäftsleitung vorgelegt werden.",
+        "class": ""
+      },
+      {
+        "id": "art_bt_2_4__2",
+        "text": "2. Die Prüfungen sind durch Arbeitsunterlagen zu dokumentieren. Aus ihnen müssen die durchgeführten Arbeiten sowie die festgestellten Mängel und Schlussfolgerungen für sachkundige Dritte nachvollziehbar hervorgehen.",
+        "class": ""
+      },
+      {
+        "id": "art_bt_2_4__3",
+        "text": "3. Besteht hinsichtlich der zur Erledigung der Feststellungen zu ergreifenden Maßnahmen keine Einigkeit zwischen geprüfter Organisationseinheit und Interner Revision, so ist von der geprüften Organisationseinheit eine Stellungnahme hierzu abzugeben.",
+        "class": ""
+      },
+      {
+        "id": "art_bt_2_4__4",
+        "text": "4. Die Interne Revision hat zeitnah einen Quartalsberichtbericht über die von ihr seit dem Stichtag des letzten Quartalsberichts durchgeführten Prüfungen zu verfassen und zeitnah der Geschäftsleitung und dem Aufsichtsorgan vorzulegen. Der Quartalsbericht muss über die wesentlichen oder höher eingestuften Mängel, die beschlossenen Maßnahmen sowie den Status dieser Maßnahmen informieren. Es ist ferner darzulegen, ob und inwieweit die Vorgaben des Prüfungsplans eingehalten wurden. Die Interne Revision hat außerdem über die im Jahresablauf festgestellten schwerwiegenden sowie über die noch nicht behobenen wesentlichen Mängel in inhaltlich prägnanter Form an die Geschäftsleitung und das Aufsichtsorgan zu berichten (Jahresbericht). Die aufgedeckten schwerwiegenden Mängel, die beschlossenen Maßnahmen sowie der Status dieser Maßnahmen sind dabei besonders hervorzuheben. Über besonders schwerwiegende Mängel hat die Interne Revision unverzüglich zu berichten.",
+        "class": ""
+      },
+      {
+        "id": "art_bt_2_4__5",
+        "text": "5. Ergeben sich im Rahmen der Prüfungen schwerwiegende Feststellungen gegen Geschäftsleiter, so ist der Geschäftsleitung unverzüglich Bericht zu erstatten. Diese hat unverzüglich den Vorsitzenden des Aufsichtsorgans sowie die Aufsichtsinstitutionen (Bundesanstalt für Finanzdienstleistungsaufsicht, Deutsche Bundesbank) zu informieren. Kommt die Geschäftsleitung ihrer Berichtspflicht nicht nach oder beschließt sie keine sachgerechten Maßnahmen, so hat die Interne Revision den Vorsitzenden des Aufsichtsorgans zu unterrichten.",
+        "class": ""
+      },
+      {
+        "id": "art_bt_2_4__6",
+        "text": "6. Revisionsberichte und Arbeitsunterlagen sind sechs Jahre aufzubewahren.",
+        "class": ""
+      }
+    ]
+  },
+  {
+    "id": "art_bt_2_5",
+    "title": "BT 2.5",
+    "heading": "Reaktion auf festgestellte Mängel",
+    "paragraphs": [
+      {
+        "id": "art_bt_2_5__1",
+        "text": "1. Die Interne Revision hat die fristgerechte Beseitigung der bei der Prüfung festgestellten Mängel in geeigneter Form zu überwachen. Gegebenenfalls ist hierzu eine Nachschauprüfung anzusetzen.",
+        "class": ""
+      },
+      {
+        "id": "art_bt_2_5__2",
+        "text": "2. Werden die wesentlichen Mängel nicht in einer angemessenen Zeit beseitigt, so hat der Leiter der Internen Revision darüber zunächst den fachlich zuständigen Geschäftsleiter schriftlich zu informieren. Erfolgt die Mängelbeseitigung nicht, so ist die Geschäftsleitung spätestens im Rahmen des nächsten Gesamtberichts schriftlich über die noch nicht beseitigten Mängel zu unterrichten.",
+        "class": ""
+      }
+    ]
+  },
+  {
+    "id": "art_bt_3_1",
+    "title": "BT 3.1",
+    "heading": "Allgemeine Anforderungen an die Risikoberichte",
+    "paragraphs": [
+      {
+        "id": "art_bt_3_1__1",
+        "text": "1. Die Geschäftsleitung hat sich in angemessenen Abständen über die Geschäftslage und die Risikosituation berichten zu lassen. Die hierfür zu erstellenden Berichte sind in nachvollziehbarer, aussagefähiger Art und Weise zu verfassen. Die Berichterstattung hat neben einer Darstellung auch eine Beurteilung der Risikosituation zu enthalten. Die Berichte müssen auf vollständigen, genauen und aktuellen Daten beruhen. Die Risikoberichte müssen auch eine zukunftsorientierte Risikoeinschätzung abgeben und sich nicht ausschließlich auf aktuelle und historische Daten stützen. In die Risikoberichterstattung sind bei Bedarf auch Handlungsvorschläge, z. B. zur Risikoreduzierung, aufzunehmen.",
+        "class": ""
+      },
+      {
+        "id": "art_bt_3_1__2",
+        "text": "2. In den Risikoberichten sind insbesondere auch die Ergebnisse der Stresstests und deren potenzielle Auswirkungen auf die Risikosituation und das Risikodeckungspotenzial darzustellen. Ebenfalls darzustellen sind die den Stresstests zugrunde liegenden wesentlichen Annahmen. Darüber hinaus ist auch auf Risikokonzentrationen und deren potenzielle Auswirkungen gesondert einzugehen.",
+        "class": ""
+      },
+      {
+        "id": "art_bt_3_1__3",
+        "text": "3. Neben der turnusmäßigen Erstellung von Risikoberichten (Gesamtrisikobericht, Berichte über einzelne Risikoarten) muss das Institut in der Lage sein, ad hoc Risikoinformationen zu generieren, sofern dies aufgrund der aktuellen Risikosituation des Instituts oder der aktuellen Situation der Märkte, auf denen das Institut tätig ist, geboten erscheint.",
+        "class": ""
+      },
+      {
+        "id": "art_bt_3_1__4",
+        "text": "4. Die Risikoberichte sind in einem zeitlich angemessenen Rahmen zu erstellen, der eine aktive und zeitnahe Steuerung der Risiken auf der Basis der Berichte ermöglicht, wobei die Produktionszeit auch von der Art und der Volatilität der Risiken abhängt.",
+        "class": ""
+      },
+      {
+        "id": "art_bt_3_1__5",
+        "text": "5. Die Geschäftsleitung hat das Aufsichtsorgan mindestens vierteljährlich über die Risikosituation einschließlich vorhandener Risikokonzentrationen in angemessener Weise schriftlich zu informieren. Die Berichterstattung ist in nachvollziehbarer, aussagefähiger Art und Weise zu verfassen und hat neben der Darstellung auch eine Beurteilung der Risikosituation zu enthalten. Auf besondere Risiken für die Geschäftsentwicklung und dafür geplante Maßnahmen der Geschäftsleitung ist gesondert einzugehen. Für das Aufsichtsorgan unter Risikogesichtspunkten wesentliche Informationen sind von der Geschäftsleitung unverzüglich weiterzuleiten. Hierfür hat die Geschäftsleitung gemeinsam mit dem Aufsichtsorgan ein geeignetes Verfahren festzulegen.",
+        "class": ""
+      }
+    ]
+  },
+  {
+    "id": "art_bt_3_2",
+    "title": "BT 3.2",
+    "heading": "Berichte der Risikocontrolling-Funktion",
+    "paragraphs": [
+      {
+        "id": "art_bt_3_2__1",
+        "text": "1. Die Risikocontrolling-Funktion hat regelmäßig, mindestens aber vierteljährlich, einen Gesamtrisikobericht über die als wesentlich eingestuften Risikoarten unter Berücksichtigung der Auswirkungen von ESG-Risiken zu erstellen und der Geschäftsleitung vorzulegen. Mit Blick auf die einzelnen als wesentlich eingestuften Risikoarten kann in Abhängigkeit von der Risikoart, der Art, dem Umfang, der Komplexität, dem Risikogehalt und der Volatilität der jeweiligen Positionen sowie der Marktentwicklung auch eine monatliche, wöchentliche oder tägliche Berichterstattung über einzelne Risikoarten erforderlich sein.",
+        "class": ""
+      },
+      {
+        "id": "art_bt_3_2__2",
+        "text": "2. Der Gesamtrisikobericht hat neben den wesentlichen Informationen zu den einzelnen als wesentlich eingestuften Risikoarten, den Stresstestergebnissen und Informationen zu den Risikokonzentrationen auch Angaben zur Angemessenheit der Kapitalausstattung, zum aufsichtsrechtlichen und ökonomischen Kapital, zu den aktuellen Kapital- und Liquiditätskennzahlen sowie zu Refinanzierungspositionen zu enthalten. Ferner sind auch Prognosen zur Entwicklung der Kapital- und Liquiditätskennzahlen und der Refinanzierungspositionen aufzunehmen.",
+        "class": ""
+      },
+      {
+        "id": "art_bt_3_2__3",
+        "text": "3. In regelmäßigen Abständen, mindestens aber vierteljährlich, ist ein Risikobericht über die Adressenausfallrisiken, in dem die wesentlichen strukturellen Merkmale des Kreditgeschäfts enthalten sind, zu erstellen und der Geschäftsleitung zur Verfügung zu stellen. Der Risikobericht hat die folgenden Informationen zu umfassen:",
+        "class": ""
+      },
+      {
+        "id": "art_bt_3_2__3_a",
+        "text": "a) Die Entwicklung des Kreditportfolios, z. B. nach Branchen, Ländern, Risikoklassen und Größenklassen oder Sicherheitenkategorien, unter besonderer Berücksichtigung von Risikokonzentrationen,",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_bt_3_2__3_b",
+        "text": "b) den Umfang der vergebenen Limite und externen Linien; ferner sind Großkredite und sonstige bemerkenswerte Engagements (z. B. Sanierungs- und Abwicklungskredite von wesentlicher Bedeutung, Kredite in der Intensivbetreuung von wesentlicher Bedeutung) aufzuführen und ggf. zu kommentieren,",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_bt_3_2__3_c",
+        "text": "c) ggf. eine gesonderte Darstellung der Länderrisiken,",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_bt_3_2__3_d",
+        "text": "d) bedeutende Limitüberschreitungen (einschließlich einer Begründung),",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_bt_3_2__3_e",
+        "text": "e) den Umfang und die Entwicklung des Neugeschäfts,",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_bt_3_2__3_f",
+        "text": "f) die Entwicklung der Risikovorsorge des Instituts,",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_bt_3_2__3_g",
+        "text": "g) getroffene Kreditentscheidungen von wesentlicher Bedeutung, die von den Strategien abweichen,",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_bt_3_2__3_h",
+        "text": "h) Kreditentscheidungen im risikorelevanten Kreditgeschäft, die Geschäftsleiter im Rahmen ihrer Krediteinzelkompetenz beschlossen haben, soweit diese von den Voten abweichen, oder wenn sie von einem Geschäftsleiter getroffen werden, der für den Bereich Marktfolge zuständig ist und",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_bt_3_2__3_i",
+        "text": "i) bei Instituten mit hohem NPL-Bestand eine gesonderte Darstellung der notleidenden und Forborne-Risikopositionen sowie die Entwicklung der erworbenen Vermögenswerte (wenn Rettungserwerbe zur NPE-Strategie des Instituts gehören)",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_bt_3_2__4",
+        "text": "4. In regelmäßigen Abständen, mindestens aber vierteljährlich, ist ein Risikobericht über die vom Institut insgesamt eingegangenen Marktpreisrisiken einschließlich der Zinsänderungsrisiken zu erstellen und der Geschäftsleitung zur Verfügung zu stellen. Der Bericht hat unter Einbeziehung der internen Handelsgeschäfte folgende Informationen zu umfassen:",
+        "class": ""
+      },
+      {
+        "id": "art_bt_3_2__4_a",
+        "text": "a) Einen Überblick über die Risiko- und Ergebnisentwicklung der mit Marktpreisrisiken behafteten Positionen,",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_bt_3_2__4_b",
+        "text": "b) bedeutende Limitüberschreitungen,",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_bt_3_2__4_c",
+        "text": "c) Änderungen der wesentlichen Annahmen oder Parameter, die den Verfahren zur Beurteilung der Marktpreisrisiken zugrunde liegen,",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_bt_3_2__4_d",
+        "text": "d) Auffälligkeiten bei der Abstimmung der Handelspositionen (z. B. hinsichtlich der Handelsvolumina, GuV-Auswirkungen, Stornoquoten).",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_bt_3_2__4_i18",
+        "text": "Die nach <a href=\"#a:act_de_marisk_2024_0006:art_btr_2_2\" class=\"ref\" data-article=\"BTR 2.2\">BTR 2.2</a> Tz. 3 zu ermittelnden Gesamtrisikopositionen und Ergebnisse und die Limitauslastungen sind zeitnah am nächsten Geschäftstag dem für das Risikocontrolling zuständigen Geschäftsleiter zu berichten. Die Meldung ist mit dem Handelsbereich abzustimmen.",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_bt_3_2__4_i19",
+        "text": "Die Berichtspflichten aus <a href=\"#a:act_de_marisk_2024_0006:art_bto_2_2_1\" class=\"ref\" data-article=\"BTO 2.2.1\">BTO 2.2.1</a> Tz. 2 Buchstabe c (bedeutende Handelsgeschäfte zu nicht marktgerechten Bedingungen) bleiben unberührt.",
+        "class": "list-item-l1"
+      },
+      {
+        "id": "art_bt_3_2__5",
+        "text": "5. Es ist regelmäßig, mindestens aber vierteljährlich, ein Risikobericht über die Liquiditätsrisiken und die Liquiditätssituation zu erstellen und der Geschäftsleitung zur Verfügung zu stellen. Im Risikobericht sind auch die Ergebnisse der Stresstests und wesentliche Änderungen des Notfallplans für Liquiditätsengpässe darzustellen. Auf besondere Liquiditätsrisiken aus außerbilanziellen Gesellschaftskonstruktionen und aus verschiedenen Fremdwährungen sowie auf etwaige untertägige Liquiditätsrisiken ist gesondert einzugehen. Bedeutende oder kapitalmarktorientierte Institute haben den Risikobericht über die Liquiditätsrisiken und die Liquiditätssituation mindestens monatlich zu erstellen. Dabei ist zusätzlich über die Höhe, die Qualität und die Zusammensetzung der Liquiditätspuffer zu berichten.",
+        "class": ""
+      },
+      {
+        "id": "art_bt_3_2__6",
+        "text": "6. Die Geschäftsleitung ist mindestens jährlich über bedeutende Schadensfälle, wesentliche Schwächen sowie über wesentliche potenzielle Ereignisse (gem. <a href=\"#a:act_de_marisk_2024_0006:art_btr_4\" class=\"ref\" data-article=\"BTR 4\">BTR 4</a> Tz. 4 Erläuterungen) aus operationellen Risiken zu unterrichten. Die Berichterstattung hat die Art des Schadens bzw. Risikos, die Ursachen, das Ausmaß des Schadens bzw. Risikos und initiierte sowie bereits getroffene Gegenmaßnahmen zu umfassen.",
+        "class": ""
+      },
+      {
+        "id": "art_bt_3_2__7",
+        "text": "7. Die Geschäftsleitung ist mindestens vierteljährlich über die sonstigen vom Institut als wesentlich identifizierten Risiken zu unterrichten. Die Berichterstattung hat dabei das jeweilige Risiko, die Ursachen, die möglichen Implikationen und initiierte sowie bereits getroffene Gegenmaßnahmen zu umfassen. Aus den Berichten muss hervorgehen, wie sich die aktuelle Risikosituation darstellt und ggf. mit welchen Maßnahmen diesen Risiken begegnet wurde bzw. begegnet werden kann.",
+        "class": ""
+      }
+    ]
+  }
+]

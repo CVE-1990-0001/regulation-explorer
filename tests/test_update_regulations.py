@@ -188,6 +188,29 @@ def test_quality_gate_rejects_collapsed_list_regression(tmp_path):
     assert forced_payload is not None
 
 
+def test_newly_registered_act_is_imported_when_file_is_missing(tmp_path):
+    source = """<html><body><div class="jnnorm" title="Einzelnorm">
+      <div class="jnheader"><h3><span class="jnenbez">&#167; 1</span>
+      <span class="jnentitel">Anwendungsbereich</span></h3></div>
+      <div class="jurAbsatz">(1) Dieses Gesetz gilt.</div></div></body></html>"""
+    path = tmp_path / "new_act.json"
+    entry = {
+        "id": "act_de_new_2021",
+        "path": str(path),
+        "update": {
+            "url": "https://example.test/law.html",
+            "parser": "gesetze_im_internet",
+            "encoding": "latin-1",
+        },
+    }
+
+    result, payload, _ = updater.refresh_entry(entry, lambda *_: source.encode("latin-1"), 30)
+
+    assert result == "updated"
+    assert [article["id"] for article in payload] == ["art_1"]
+    assert not path.exists()  # refresh_entry only reports; main() writes the file
+
+
 def test_replace_articles_preserves_act_metadata():
     document = {
         "type": "act",
