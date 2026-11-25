@@ -48,12 +48,12 @@ test('tag popover opens with Jurisdiction and Topic facets and live counts', () 
   const deChip = getChip('jurisdiction', 'DE');
   const euChip = getChip('jurisdiction', 'EU');
   assert.ok(deChip && euChip, 'expected EU and DE jurisdiction chips');
-  assert.strictEqual(deChip.querySelector('.tag-option-count').textContent, '3');
+  assert.strictEqual(deChip.querySelector('.tag-option-count').textContent, '7');
   assert.strictEqual(euChip.querySelector('.tag-option-count').textContent, '21');
 
   const finChip = getChip('topic', 'financial-markets');
   assert.ok(finChip, 'expected Financial Markets topic chip');
-  assert.strictEqual(finChip.querySelector('.tag-option-count').textContent, '16');
+  assert.strictEqual(finChip.querySelector('.tag-option-count').textContent, '20');
 });
 
 test('multi-tag drill-down combines Jurisdiction + Topics with AND and prunes DORA folder tree', async () => {
@@ -63,7 +63,7 @@ test('multi-tag drill-down combines Jurisdiction + Topics with AND and prunes DO
   app.click(getChip('topic', 'incident-reporting'));
   await app.tick();
 
-  assert.strictEqual(app.doc.getElementById('listMessage').textContent, '8 of 24 regulations');
+  assert.strictEqual(app.doc.getElementById('listMessage').textContent, '8 of 28 regulations');
   assert.strictEqual(app.doc.getElementById('tagFilterCount').textContent, '1');
 
   // DORA bundle stays in the sidebar, pruned down to matching DORA members only
@@ -83,7 +83,7 @@ test('multi-tag drill-down combines Jurisdiction + Topics with AND and prunes DO
   app.click(getChip('jurisdiction', 'DE'));
   await app.tick();
 
-  assert.strictEqual(app.doc.getElementById('listMessage').textContent, '1 of 24 regulations');
+  assert.strictEqual(app.doc.getElementById('listMessage').textContent, '1 of 28 regulations');
   assert.deepStrictEqual(topSidebarTitles(), ['DEBSIG']);
 });
 
@@ -114,7 +114,7 @@ test('inline active pills, Backspace removal, and clickable act-header topic chi
   app.click(headerChips[1]);
   await app.tick();
 
-  assert.strictEqual(app.doc.getElementById('listMessage').textContent, '2 of 24 regulations');
+  assert.strictEqual(app.doc.getElementById('listMessage').textContent, '2 of 28 regulations');
   const pills = [...app.doc.querySelectorAll('#activeFilterPills .active-filter-pill')];
   assert.strictEqual(pills.length, 1);
   assert.match(pills[0].textContent, /Data & Privacy/);
@@ -126,6 +126,38 @@ test('inline active pills, Backspace removal, and clickable act-header topic chi
 
   assert.strictEqual(app.doc.getElementById('activeFilterPills').hidden, true);
   assert.strictEqual(app.doc.getElementById('listMessage').textContent, '');
+});
+
+test('legal entity chips and LE facet filter the sidebar to applicable regulations', async () => {
+  await app.openAct('act_eu_emir_2012_0648');
+
+  // Clicking an "Applies to" chip adds an LE filter: DORA family (12) + EMIR + GDPR apply to DBAG
+  const dbagChip = () => [...app.doc.querySelectorAll('#legalEntityApplicability .legal-entity-chip')]
+    .find((chip) => chip.textContent === 'DBAG');
+  assert.strictEqual(dbagChip().title, 'Deutsche Boerse AG');
+  app.click(dbagChip());
+  await app.tick();
+
+  assert.strictEqual(app.doc.getElementById('listMessage').textContent, '14 of 28 regulations');
+  const pills = [...app.doc.querySelectorAll('#activeFilterPills .active-filter-pill')];
+  assert.deepStrictEqual(pills.map((p) => p.querySelector('.active-filter-pill-label').textContent), ['LE: DBAG']);
+  assert.strictEqual(dbagChip().classList.contains('is-active'), true);
+  const titles = topSidebarTitles();
+  assert.ok(titles.some((t) => t.includes('EMIR')) && titles.some((t) => t.includes('GDPR')));
+  assert.ok(!titles.some((t) => t.includes('CSDR')), 'CSDR does not apply to DBAG');
+
+  // The Tags popover lists the entity as a facet and it combines with topics (AND)
+  openPopover();
+  assert.strictEqual(getChip('legal-entity', 'DBAG').getAttribute('aria-pressed'), 'true');
+  app.click(getChip('topic', 'data-privacy'));
+  await app.tick();
+  assert.strictEqual(app.doc.getElementById('listMessage').textContent, '1 of 28 regulations');
+
+  // Clicking the facet again removes the LE filter
+  openPopover();
+  app.click(getChip('legal-entity', 'DBAG'));
+  await app.tick();
+  assert.strictEqual(app.doc.getElementById('listMessage').textContent, '2 of 28 regulations');
 });
 
 test('cross-act reference to an act outside the active tag filter clears tags and navigates cleanly', async () => {

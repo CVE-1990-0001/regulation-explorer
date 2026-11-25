@@ -110,6 +110,32 @@ def test_boersg_skips_other_statute():
     assert "<a" not in out
 
 
+def test_two_letter_section_suffix_links_its_own_section():
+    # KWG has "§ 53c" and "§ 53ca"; the latter must not resolve to the former.
+    out = link("nach § 53ca Absatz 1", ids={"art_53c", "art_53ca"})
+    assert 'href="#a:act_eu_x_2020_0001:art_53ca"' in out
+    assert "art_53c\"" not in out
+    # "ff." means "and following", not a section suffix.
+    assert 'href="#a:act_eu_x_2020_0001:art_32"' in link("§§ 32ff.", ids={"art_32"})
+
+
+def test_marisk_module_self_reference():
+    out = link("gemäß AT 4.3.2 Tz. 1 und BTO 1.2", ids={"art_at_4_3_2"})
+    assert 'href="#a:act_eu_x_2020_0001:art_at_4_3_2"' in out
+    assert ">BTO 1.2<" not in out  # unknown module stays plain text
+
+
+def test_module_titles_do_not_alias_section_numbers():
+    # "AT 1" / "1.1" titles must not make "§ 1 Abs. 2 KWG" a dangling self-link.
+    ids = lr.self_article_ids([
+        {"id": "art_at_1", "title": "AT 1"},
+        {"id": "art_1_1", "title": "1.1"},
+        {"id": "art_5", "title": "Article 5"},
+        {"id": "x", "title": "§ 53ca"},
+    ])
+    assert ids == {"art_at_1", "art_1_1", "art_5", "x", "art_53ca"}
+
+
 # --------------------------------------------------------------------------- #
 # Idempotency: re-running the linker must not change already-linked text
 # --------------------------------------------------------------------------- #

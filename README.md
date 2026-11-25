@@ -148,6 +148,9 @@ automatically from each act's jurisdiction. In the UI, the **Tags** popover in
 the search bar filters regulations by Jurisdiction and Topics with live facet
 counts, prunes folder trees (`DORA`) down to matching member acts when browsing,
 and scopes keyword search strictly to acts matching the active tag filters.
+A **Legal entity** facet (CEAG, DBAG, …) is derived from
+`data/legal_entity_applicability.json`; clicking an entity in an act's
+"Applies to" row toggles the same `LE: <entity>` filter.
 `tools/build_index_db.py` mirrors registry tags into the SQLite `act_tag` table.
 
 ## Legal entity applicability
@@ -208,8 +211,12 @@ limit a run. Detailed function and update activity is written to
 `logs/update_regulations.log`; logs rotate at 100 MB.
 
 Non-EUR-Lex acts can define an `update` object in `data/index.json` with a
-`url` and parser name (`consolidated`, `oj`, `boersengesetz`, `nis2_bsig`, or
-`bsi_c3a`).
+`url` and parser name (`consolidated`, `oj`, `gesetze_im_internet` (alias
+`boersengesetz`), `marisk`, `nis2_bsig`, or `bsi_c3a`). `url` may be a list of
+sources tried in order: German federal laws list gesetze-im-internet.de first and
+the QuantLaw GitHub XML mirror as a fallback for hosts that cannot reach it.
+A newly registered act whose JSON file does not exist yet is imported from
+scratch, e.g. `python3 tools/update_regulations.py act_de_kwg_1961`.
 Set `status` to another schema-supported value (for example `Repealed`) to
 exclude an act from automatic updates; `dateInForce` is also mirrored into the
 generated database.
@@ -244,3 +251,12 @@ automatic updates refresh the JSON, not that snapshot.
 ```bash
 python3 tools/update_regulations.py --check act_de_bsi_c3a_2026
 ```
+
+### MaRisk
+
+BaFin's **Mindestanforderungen an das Risikomanagement** (circular 06/2024 (BA))
+is parsed from its HTML edition on bafin.de by `tools/parsers/parser_marisk.py`.
+Each AT/BT/BTO/BTR module is an article (`AT 4.3.2` -> `art_at_4_3_2`), each
+Textziffer a numbered paragraph, and in-text module references such as
+`AT 4.3.2` link within the act. The HTML edition contains the requirements only;
+the Erläuterungen (explanatory notes) are published in BaFin's PDF edition.
