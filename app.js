@@ -107,6 +107,7 @@ let actTagsById = {};
 let availableJurisdictions = [];
 let selectedJurisdictions = new Set();
 let selectedTags = new Set();
+let selectedLegalEntities = new Set();
 let actRegistryEntriesById = {};
 let activeSearchMarks = [];
 let currentSearchHitIndex = -1;
@@ -120,14 +121,36 @@ const JURISDICTION_NAMES = {
   DE: 'Germany',
 };
 
-const hasActiveTagFilters = () => selectedJurisdictions.size > 0 || selectedTags.size > 0;
+const hasActiveTagFilters = () => (
+  selectedJurisdictions.size > 0 || selectedTags.size > 0 || selectedLegalEntities.size > 0
+);
+
+const clearSelectedFilters = () => {
+  selectedJurisdictions.clear();
+  selectedTags.clear();
+  selectedLegalEntities.clear();
+};
 
 const getActTags = (actId) => (actId && actTagsById[actId]) ? actTagsById[actId] : [];
 
-const actMatchesTagCriteria = (act, jurisdictions = selectedJurisdictions, tags = selectedTags) => {
+const itemAppliesToLegalEntity = (itemId, shortName) => (
+  (legalEntitiesByItemId[itemId] || []).some((entity) => entity.shortName === shortName)
+);
+
+const actMatchesTagCriteria = (
+  act,
+  jurisdictions = selectedJurisdictions,
+  tags = selectedTags,
+  legalEntities = selectedLegalEntities,
+) => {
   if (!act) return false;
   if (jurisdictions.size > 0 && !jurisdictions.has(getJurisdiction(act))) {
     return false;
+  }
+  for (const shortName of legalEntities) {
+    if (!itemAppliesToLegalEntity(act.id, shortName)) {
+      return false;
+    }
   }
   if (tags.size > 0) {
     const actTags = getActTags(act.id);
@@ -323,103 +346,35 @@ const renderActTopicTags = (actId = null) => {
   });
 };
 
-const collectBundleActIds = (bundle, ids = new Set()) => {
-  (bundle?.members || []).forEach((member) => {
-    if (member?.type === 'bundle') collectBundleActIds(member, ids);
-    else if (member?.ref) ids.add(member.ref);
+// Every legal entity named in the applicability data, sorted by short name.
+const getKnownLegalEntities = () => {
+  const byShortName = new Map();
+  Object.values(legalEntitiesByItemId).forEach((entities) => {
+    (entities || []).forEach((entity) => {
+      if (entity?.shortName && !byShortName.has(entity.shortName)) {
+        byShortName.set(entity.shortName, entity);
+      }
+    });
   });
-  return ids;
+  return [...byShortName.values()].sort((a, b) => a.shortName.localeCompare(b.shortName));
 };
 
-// Popover entries for the hosted regulations (other than `itemId`) applicable to an
-// entity. Acts inside a folder such as DORA collapse into one link to that folder,
-// and the folder the current item belongs to is left out.
-const getLegalEntityPopoverEntries = (shortName, itemId) => {
-  const applies = (id) => (legalEntitiesByItemId[id] || []).some((e) => e.shortName === shortName);
-  const entries = [];
-  const bundledActIds = new Set();
-
-  allBundles.forEach((bundle) => {
-    const actIds = collectBundleActIds(bundle);
-    actIds.forEach((id) => bundledActIds.add(id));
-    if (bundle.id === itemId || actIds.has(itemId)) return;
-    const count = [...actIds].filter(applies).length;
-    if (count) {
-      entries.push({
-        href: `#bundle:${bundle.id}`,
-        title: bundle.title || bundle.id,
-        subtitle: `Folder · ${count} regulation${count === 1 ? '' : 's'}`,
-      });
-    }
-  });
-
-  allActs
-    .filter((act) => act.id !== itemId && !bundledActIds.has(act.id) && applies(act.id))
-    .forEach((act) => entries.push({
-      href: `#act:${act.id}`,
-      title: act.title || act.id,
-      subtitle: getHeadingText(act),
-    }));
-
-  return entries.sort((a, b) => a.title.localeCompare(b.title, undefined, { sensitivity: 'base' }));
-};
-
-const createLegalEntityChip = (entity, itemId) => {
-  const wrap = document.createElement('span');
-  wrap.className = 'legal-entity-chip-wrap';
-
-  const popoverId = `legal-entity-popover-${entity.shortName}`;
+// Clicking an entity toggles the "LE:<short name>" filter, like the topic tags.
+const createLegalEntityChip = (entity) => {
+  const isSelected = selectedLegalEntities.has(entity.shortName);
   const chip = document.createElement('button');
   chip.type = 'button';
   chip.className = 'legal-entity-chip';
+  chip.classList.toggle('is-active', isSelected);
   chip.textContent = entity.shortName;
-  chip.setAttribute('aria-label', `${entity.name}: show other applicable regulations`);
-  chip.setAttribute('aria-describedby', popoverId);
-  wrap.appendChild(chip);
-
-  const popover = document.createElement('div');
-  popover.className = 'legal-entity-popover';
-  popover.id = popoverId;
-  popover.setAttribute('role', 'tooltip');
-
-  const entries = getLegalEntityPopoverEntries(entity.shortName, itemId);
-  const heading = document.createElement('div');
-  heading.className = 'legal-entity-popover-heading';
-  heading.textContent = entity.name;
-  popover.appendChild(heading);
-
-  const caption = document.createElement('div');
-  caption.className = 'legal-entity-popover-caption';
-  caption.textContent = entries.length
-    ? 'Also applicable'
-    : 'No other regulations in RegBro apply to this entity';
-  popover.appendChild(caption);
-
-  if (entries.length) {
-    const list = document.createElement('ul');
-    list.className = 'legal-entity-popover-list';
-    entries.forEach((entry) => {
-      const item = document.createElement('li');
-      const link = document.createElement('a');
-      link.href = entry.href;
-      link.className = 'legal-entity-popover-link';
-      link.textContent = entry.title;
-      if (entry.subtitle && entry.subtitle !== entry.title) {
-        const sub = document.createElement('span');
-        sub.className = 'legal-entity-popover-sub';
-        sub.textContent = entry.subtitle;
-        link.appendChild(sub);
-      }
-      item.appendChild(link);
-      list.appendChild(item);
-    });
-    popover.appendChild(list);
-  }
-
-  wrap.appendChild(popover);
-  return wrap;
+  chip.title = entity.name;
+  chip.setAttribute('aria-pressed', String(isSelected));
+  chip.setAttribute('aria-label', isSelected
+    ? `${entity.name}: remove legal entity filter`
+    : `${entity.name}: show only regulations applicable to this entity`);
+  chip.addEventListener('click', () => toggleLegalEntityTag(entity.shortName));
+  return chip;
 };
-
 const renderLegalEntityApplicability = (itemId = null) => {
   if (!legalEntityApplicabilityElement) return;
 
@@ -435,7 +390,7 @@ const renderLegalEntityApplicability = (itemId = null) => {
   legalEntityApplicabilityElement.appendChild(label);
 
   entities.forEach((entity) => {
-    legalEntityApplicabilityElement.appendChild(createLegalEntityChip(entity, itemId));
+    legalEntityApplicabilityElement.appendChild(createLegalEntityChip(entity));
   });
 };
 
@@ -2638,8 +2593,7 @@ const selectArticle = (articleId, options = {}) => {
   if (!visibleArticles.some((item) => item.id === articleId && item._actId === parentActId)) {
     const targetAct = allActs.find((a) => a.id === parentActId);
     if (targetAct && !actMatchesTagCriteria(targetAct)) {
-      selectedJurisdictions.clear();
-      selectedTags.clear();
+      clearSelectedFilters();
     }
     searchInput.value = '';
     lastSearchQuery = '';
@@ -2738,8 +2692,7 @@ const handleRoute = (hashId) => {
       return true;
     }
     if (!actMatchesTagCriteria(act)) {
-      selectedJurisdictions.clear();
-      selectedTags.clear();
+      clearSelectedFilters();
       visibleSidebarItems = computeVisibleSidebarItems(lastSearchQuery);
       visibleArticles = allArticles.filter((a) => !lastSearchQuery || matchesItem(a, lastSearchQuery));
       renderTagFilterUI();
@@ -3020,7 +2973,7 @@ const countActsForProspectiveTopic = (tagId) => {
 };
 
 const renderTagFilterUI = () => {
-  const totalSelected = selectedJurisdictions.size + selectedTags.size;
+  const totalSelected = selectedJurisdictions.size + selectedTags.size + selectedLegalEntities.size;
 
   if (tagFilterCountElement) {
     tagFilterCountElement.textContent = String(totalSelected);
@@ -3068,6 +3021,15 @@ const renderTagFilterUI = () => {
       const label = tagLabelsById.get(tagId) || tagId;
       activeFilterPillsElement.appendChild(
         createPill(label, () => toggleTopicTag(tagId), `Remove tag filter ${label}`),
+      );
+    });
+    selectedLegalEntities.forEach((shortName) => {
+      activeFilterPillsElement.appendChild(
+        createPill(
+          `LE: ${shortName}`,
+          () => toggleLegalEntityTag(shortName),
+          `Remove legal entity filter ${shortName}`,
+        ),
       );
     });
   }
@@ -3163,6 +3125,27 @@ const renderTagFilterUI = () => {
       tagFilterPopover.appendChild(buildSection('Topics', topicChips));
     }
 
+    const legalEntities = getKnownLegalEntities();
+    if (legalEntities.length > 0) {
+      const entityChips = legalEntities.map((entity) => {
+        const nextEntities = new Set(selectedLegalEntities).add(entity.shortName);
+        const count = allActs.filter((act) => (
+          actMatchesTagCriteria(act, selectedJurisdictions, selectedTags, nextEntities)
+          && (!lastSearchQuery || matchesItem(act, lastSearchQuery))
+        )).length;
+        return buildOptionButton({
+          id: entity.shortName,
+          label: entity.shortName,
+          title: entity.name,
+          count,
+          active: selectedLegalEntities.has(entity.shortName),
+          kind: 'legal-entity',
+          onClick: () => toggleLegalEntityTag(entity.shortName),
+        });
+      });
+      tagFilterPopover.appendChild(buildSection('Legal entity', entityChips));
+    }
+
     if (totalSelected > 0) {
       const footer = document.createElement('div');
       footer.className = 'tag-popover-footer';
@@ -3182,6 +3165,11 @@ const renderTagFilterUI = () => {
   // Keep current act header tag state synced if an act overview is open
   if (currentSidebarSelectionKey && currentSidebarSelectionKey.startsWith('act:') && !currentArticleId) {
     renderActTopicTags(currentSidebarSelectionKey.slice(4));
+  }
+  // ...and the legal-entity chips' active state on act and folder overviews
+  if (currentSidebarSelectionKey && !currentArticleId) {
+    const [kind, ...rest] = currentSidebarSelectionKey.split(':');
+    if (kind === 'act' || kind === 'bundle') renderLegalEntityApplicability(rest.join(':'));
   }
 };
 
@@ -3221,10 +3209,19 @@ const toggleTopicTag = (tagId) => {
   applyFilter(searchInput ? searchInput.value : lastSearchQuery);
 };
 
+const toggleLegalEntityTag = (shortName) => {
+  if (!shortName) return;
+  if (selectedLegalEntities.has(shortName)) {
+    selectedLegalEntities.delete(shortName);
+  } else {
+    selectedLegalEntities.add(shortName);
+  }
+  applyFilter(searchInput ? searchInput.value : lastSearchQuery);
+};
+
 const clearTagFilters = () => {
   if (!hasActiveTagFilters()) return;
-  selectedJurisdictions.clear();
-  selectedTags.clear();
+  clearSelectedFilters();
   applyFilter(searchInput ? searchInput.value : lastSearchQuery);
 };
 
@@ -3677,8 +3674,10 @@ searchInput.addEventListener('keydown', (event) => {
     return;
   }
   if (event.key === 'Backspace' && !searchInput.value && hasActiveTagFilters()) {
-    // Remove the most recently added topic tag, or jurisdiction if no topic tags remain
-    if (selectedTags.size > 0) {
+    // Remove the most recently added entity filter, then topic tags, then jurisdictions
+    if (selectedLegalEntities.size > 0) {
+      toggleLegalEntityTag(Array.from(selectedLegalEntities).pop());
+    } else if (selectedTags.size > 0) {
       const lastTag = Array.from(selectedTags).pop();
       toggleTopicTag(lastTag);
     } else if (selectedJurisdictions.size > 0) {

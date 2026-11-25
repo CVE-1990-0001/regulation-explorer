@@ -128,6 +128,38 @@ test('inline active pills, Backspace removal, and clickable act-header topic chi
   assert.strictEqual(app.doc.getElementById('listMessage').textContent, '');
 });
 
+test('legal entity chips and LE facet filter the sidebar to applicable regulations', async () => {
+  await app.openAct('act_eu_emir_2012_0648');
+
+  // Clicking an "Applies to" chip adds an LE filter: DORA family (12) + EMIR + GDPR apply to DBAG
+  const dbagChip = () => [...app.doc.querySelectorAll('#legalEntityApplicability .legal-entity-chip')]
+    .find((chip) => chip.textContent === 'DBAG');
+  assert.strictEqual(dbagChip().title, 'Deutsche Boerse AG');
+  app.click(dbagChip());
+  await app.tick();
+
+  assert.strictEqual(app.doc.getElementById('listMessage').textContent, '14 of 24 regulations');
+  const pills = [...app.doc.querySelectorAll('#activeFilterPills .active-filter-pill')];
+  assert.deepStrictEqual(pills.map((p) => p.querySelector('.active-filter-pill-label').textContent), ['LE: DBAG']);
+  assert.strictEqual(dbagChip().classList.contains('is-active'), true);
+  const titles = topSidebarTitles();
+  assert.ok(titles.some((t) => t.includes('EMIR')) && titles.some((t) => t.includes('GDPR')));
+  assert.ok(!titles.some((t) => t.includes('CSDR')), 'CSDR does not apply to DBAG');
+
+  // The Tags popover lists the entity as a facet and it combines with topics (AND)
+  openPopover();
+  assert.strictEqual(getChip('legal-entity', 'DBAG').getAttribute('aria-pressed'), 'true');
+  app.click(getChip('topic', 'data-privacy'));
+  await app.tick();
+  assert.strictEqual(app.doc.getElementById('listMessage').textContent, '1 of 24 regulations');
+
+  // Clicking the facet again removes the LE filter
+  openPopover();
+  app.click(getChip('legal-entity', 'DBAG'));
+  await app.tick();
+  assert.strictEqual(app.doc.getElementById('listMessage').textContent, '2 of 24 regulations');
+});
+
 test('cross-act reference to an act outside the active tag filter clears tags and navigates cleanly', async () => {
   // Filter to "Data & Privacy" (GDPR + Data Act), open Data Act, then click a cross-ref if needed
   // or open DORA RTS 1 filtered to "Cybersecurity" then navigate via hash to EMIR (not Cybersecurity)

@@ -148,6 +148,9 @@ automatically from each act's jurisdiction. In the UI, the **Tags** popover in
 the search bar filters regulations by Jurisdiction and Topics with live facet
 counts, prunes folder trees (`DORA`) down to matching member acts when browsing,
 and scopes keyword search strictly to acts matching the active tag filters.
+A **Legal entity** facet (CEAG, DBAG, …) is derived from
+`data/legal_entity_applicability.json`; clicking an entity in an act's
+"Applies to" row toggles the same `LE: <entity>` filter.
 `tools/build_index_db.py` mirrors registry tags into the SQLite `act_tag` table.
 
 ## Legal entity applicability
